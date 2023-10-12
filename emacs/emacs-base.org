@@ -1,0 +1,58 @@
+* Emacs的常用操作
+
+** 常见命令
++ M-x 进入命令行
+    + C-g 取消命令
+    + C-h 帮助文档
+    + C-x-q 设置文件只读，重复可取消
+
++ M-x 可以输入函数命令
+  * C-x-s 保存文件
+  * C-x-c 退出emacs
+  * C-x b 切换buffer,输入名称打开
+  * C-x-b 打开buffer列表
+  * C-x d 打开目录，可以跳转打开目录
+
+
++ buffer list标记操作
+ * s 添加save标记
+ * d或者C-k 标记关闭标记
+ * o，C-o 打开buffer
+ * 1 当前widow打开buffer，evil下无效；
+ * x 执行标记操作 
+
+
++ 窗口操作
+  * C-x 0 关闭当前窗口
+  * C-x 1 只保留当前窗口
+  * 窗口大小调节 **C-x ^** 加高当前窗口
+  * **C-x {**变窄，**C-x }** 变宽
+
+** 操作技巧
+
++ tab折叠，可以将光标移到列表或者标题行，使用tab折叠，必须在evil-insert下
+
+** 打开文件
++ 常用操作
+  * C-x d 可以选择相应的目录，然后跳转打开文件；
+  * 或者在terminal emacs **文件名/目录**
+
+
+- 窗口操作
+  * 切换窗口光标 **C-x o**
+  * buffer list操作
+    * 移动光标RET打开文件
+    * 存在evil-mode使用o（open),打开文件
+    * 输入D标记文件要删除
+
+
+** emacs shell
+
+** emacs git
+
+** 插件
+
+*** evil
+
+
+**** evil配置
