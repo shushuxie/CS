@@ -39,7 +39,28 @@
 | C-c ^          | 表格排序                                                                  |
 
 
- 
+#+begin_src C :result output
+#include <stdio.h>
+int main(){
+
+  int a = 2;
+  int b =3;
+  printf("%d",a+b);
+  return 0;
+
+}
+
+#+end_src>
+
+
+* DONE iifj
+
+# +begin_src C++ :includes <stdio.h>
+  int a=1;
+  int b=1;
+  printf("%d\n", a+b);
+# +end_src
+
 *** 文本修饰
 
 ｜ 效果 ｜ 语法｜

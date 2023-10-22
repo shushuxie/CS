@@ -1,16 +1,34 @@
 * Emacs的常用操作
 
+| gdkjf       | kgjs   | gkso                           |
+| ksdgji      | kdjg   | djgksh                         |
+| h和坑道弄哦 |        |                                |
+|             | 矿工娜 |                                |
+|             |        | 工地肯哦重登计算多久佛送到fijs |
+|             |        |                                |
 
 ** 常见命令
+
 
 + 折叠
   * Tab放在标题行可以折叠子类
   * Shift-Tab 可以全局折叠
 
+
+1. 1dekjgk |
+2. kgj
+
+
+
 + M-x 进入命令行
-    + C-g 取消命令
-    + C-h 帮助文档
-    + C-x-q 设置文件只读，重复可取消
+  + C-g 取消命令
+  + C-h 帮助文档
+  + C-x-q 设置文件只读，重复可取消
+
+
+* TODO  kgjs
+
++ gskdj 
 
 + M-x 可以输入函数命令
   * C-x-s 保存文件
@@ -19,14 +37,13 @@
   * C-x-b 打开buffer列表
   * C-x d 打开目录，可以跳转打开目录
 
-
 + buffer list标记操作
   
- * s 添加save标记
- * d或者C-k 标记关闭标记
- * o，C-o 打开buffer
- * 1 当前widow打开buffer，evil下无效；
- * x 执行标记操作 
+  * s 添加save标记
+  * d或者C-k 标记关闭标记
+  * o，C-o 打开buffer
+  * 1 当前widow打开buffer，evil下无效；
+  * x 执行标记操作 
 
 
 + 窗口操作
@@ -81,6 +98,7 @@
 ** 插件
 
 *** evil
++ 使用C-z可以禁用evil插件
 
-ijkgdjki
 **** evil配置
+
