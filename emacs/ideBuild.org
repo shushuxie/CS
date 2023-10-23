@@ -1,0 +1,27 @@
+*** ide包含什么
+
+ide说白了就是一个集成的开发环境，开发环境一般包含什么呢？
+    + 编辑文件（编辑，保存，修改)
+    + 语法检查
+    + 代码补全
+    + 代码分析
+    + 代码模板
+    + 断点调试
+    + 编译
+    + 运行
+
+*** 一些概念
+
+**** llvm，clang，clangd，gcc，gdb
+
+***** gcc和clang
++ gcc和clang都是代码编译器，llvm属于clang的后端
++ clangd是一个语言服务，作为编辑器的插件来使用；
+  
+  clangd is a language server that provides IDE-like features to editors.
+
+  It should be used via an editor plugin rather than invoked directly.
++ gdb 是代码调试工具
+
+**** Lsp 和 Dap
+
