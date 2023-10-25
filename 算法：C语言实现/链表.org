@@ -1,0 +1,141 @@
+
+**** 链表--list
+
+***** 定义
+    链表是一组数据项的集合，其中每个数据项都是节点的一部分，每个节点都包含指向下一节点的链接
+    其中包含：数据项，节点，链接三部分；
+
+***** 链表末尾节点的规定
+****** 将其置为不指向任何节点的空链接;
+****** 使其指向不包含任何元素的哑元节点;
+****** 使其指向第一个节点（首节点），使链表成为循环链表；
+
+***** 两种声明方式
+
+****** 指针作为link
+    #+begin_src c++
+    //基本结构的实现；包含链接和节点两个部分
+    //链接是指向节点的指针，节点中包含链接；
+    //该方式不能写为一个声明，node必须声明出来才能声明后续指针
+    typedef struct node *link;
+    struct node{
+	int item;
+	link next;
+    };
+    二者等价
+    typedef struct node {
+	int item;
+	// 此处是struct node类型，没有使用lin；
+	struct node *next;
+
+    } *link2;
+
+    #+end_src>
+    
+****** 约瑟夫环实现
+
+    #+begin_src c++
+    #include <stdlib.h>
+    #include "stdio.h"
+
+    typedef struct node {
+        int item;
+	    // 此处是struct node类型，没有使用lin；
+	        struct node *next;
+		
+    } *link;
+
+    int main(){
+        // 初始化第一个节点
+	// 这里x作为临时变量十分重要，指代最新的节点
+    link t= malloc(sizeof (*t)), x=t;
+    t->item = 1;
+    t->next = t; // 指向自身
+    int i, N =5, M=3;
+    for (i = 2; i<=N; i++) {
+    // 两个作用，1.新的节点由上一个节点指代，形成链接
+    // 2. 返回值赋值给中间变量x，用来操作新的节点
+    x = (x->next = malloc(sizeof *x));
+    x->item = i;
+    x->next = t; // 新的节点指向首节点，形成圆环
+	}
+	 // 开始判断时：x指向最后一个节点
+	while (x != x->next)
+	  {
+	  for (i = 1; i<M; i++)
+	x = x->next; // 跳过M-1个节点
+        x->next = x->next->next; // 删除下一个节点
+        N--;
+    }
+    printf("%d \n",x->item);
+    
+    return 0;
+
+    }
+}
+
+    #+end_src>
+
+    
+****** 链表练习题-part1
+
+******* 1. 获取循环链表节点数的函数(3.24)
+	#+begin_src c++
+	int getLinkCount(link plink){
+	int i = 1;
+	link tmp = plink;// 临时变量存储初始值，然后循环对比
+	while (plink != tmp->next)
+	{
+	 i++;
+	 tmp = tmp->next;// 移动一位
+	   
+	}
+	    return i;
+	    })
+	}
+	#+end_src>
+	
+******* 2. 获取循环链表之间的节点数(3.25)
+	#+begin_src c++
+	int getTwoLinkLength(link x, link t) {
+	    // 返回的是 x-t之间的距离，还有t到x之间的距离没有计算
+	int m = 0;
+	while (x->next != t)
+	{
+	    m++;
+	    x = x->next;
+
+	}
+	    return m;
+	    })
+	}
+	#+end_src>
+
+******* 3. 两个链表插入合并（3.26）
+#+begin_src c++
+void mergeTwoLink(link x,link t) {
+    // 两个链表分开有四个点，然后按顺序连接
+    // 从x节点处断开
+    link xNext = x->next;
+    x->next = t;
+    // t的上一个节点和x的下一个相连 temp节点
+    link tPre = t;
+    while (1)
+    {
+        if (tPre->next == t)
+            break;
+        tPre = tPre->next;
+    }
+    tPre->next = xNext;
+
+    link tmp = x;// 临时变量为了锚定固定点，停止遍历
+    while (1)
+    {
+        if (x->next == tmp)
+            break;
+        printf("num = %d \n",x->item);
+        x = x->next;
+    }
+    printf("num = %d\n",x->item);
+}
+#+end_src>
