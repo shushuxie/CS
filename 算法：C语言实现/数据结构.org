@@ -229,8 +229,14 @@ a = Mon,b=Sun;
 	#+end_src>
 
 ******* 3. 两个链表插入合并（3.26）
-#+begin_src 
-
+#+begin_src c++
+void mergeTwoCircleLink(link x, link t) {
+ // 把链表从x处断开
+link xNext = x->next;
+ x->next = t;
+//需要找到t的pre
+		
+}
 #+end_src>
 **** 栈--Stack
 
