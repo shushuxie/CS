@@ -230,7 +230,31 @@ a = Mon,b=Sun;
 
 ******* 3. 两个链表插入合并（3.26）
 #+begin_src 
+void mergeTwoLink(link x,link t) {
+    // 两个链表分开有四个点，然后按顺序连接
+    // 从x节点处断开
+    link xNext = x->next;
+    x->next = t;
+    // t的上一个节点和x的下一个相连 temp节点
+    link tPre = t;
+    while (1)
+    {
+        if (tPre->next == t)
+            break;
+        tPre = tPre->next;
+    }
+    tPre->next = xNext;
 
+    link tmp = x;// 临时变量为了锚定固定点，停止遍历
+    while (1)
+    {
+        if (x->next == tmp)
+            break;
+        printf("num = %d \n",x->item);
+        x = x->next;
+    }
+    printf("num = %d\n",x->item);
+}
 #+end_src>
 **** 栈--Stack
 
