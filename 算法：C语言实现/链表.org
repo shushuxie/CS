@@ -139,3 +139,5 @@ void mergeTwoLink(link x,link t) {
     printf("num = %d\n",x->item);
 }
 #+end_src>
+
+kgjkkgjk = 1;
