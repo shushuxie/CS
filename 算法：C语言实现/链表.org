@@ -10,6 +10,10 @@
 ****** 使其指向不包含任何元素的哑元节点;
 ****** 使其指向第一个节点（首节点），使链表成为循环链表；
 
+* TODO 对比插入链表删除操作的不同
+
+* TODO todo2
+
 ***** 两种声明方式
 
 ****** 指针作为link
@@ -142,14 +146,102 @@ void mergeTwoLink(link x,link t) {
 #+end_src>
 
 
-****** 
-| 适用链表                   | 操作             | 代码实现                       |
-|----------------------------+------------------+--------------------------------|
-| 循环，永远非空（循环链表） | 头插入           | head->next = head              |
-|                            | x节点后插入t节点 | t->next = x->next, x->next = t |
-|                            | 删除x后的节点    | x->next = x->next->next        |
-|                            | 遍历循环         | t=head; do{...; t=t->next}     |
-|                            | 是否只有一个元素 | if(head->next == head)         |
 
-****** 
-****** 
+*****  链表常用的操作
+****** 1. 循环链表（没有空指针）
+	#+caption: 循环链表常用操作
+	#+begin_src c++
+	  // 循环链表常用操作
+	  // 1.头插入
+	  head->next = head;
+
+	  // 2. x节点后插入t节点
+	  t->next = x->next;
+	  x->next = t;
+
+	  // 3. 删除x后的节点
+	  x->next = x->next->next
+
+	  // 4. 遍历循环
+	  t=head;
+	  do{...t=t->next;
+	    }while(t!=head);
+
+	  // 5. 是否只有一个元素
+	  if(head->next == head)
+	#+end_src
+
+	#+caption: 
+	#+begin_src c++
+
+	#+end_src
+****** 2. 头指针，尾节点为空
+	#+begin_src c++
+	// 初始化
+	head = NULL;
+	// 在x节点后插入t节点
+	if (x == Null)
+	{
+	    head = t;
+	    head->next = NULL;
+	}
+	else
+	{
+	    t->next = x->next;
+	    x->next = t;
+	}
+	// 删除x后的节点
+	t = x -> next;
+	x -> next = t -> next;
+	// 遍历循环
+	for (t = head; t != NULL; t = t->next)
+	// 测试是否为空
+	if （head == NULL）
+	#+end_src>
+
+
+****** 3. 有哑远节点，尾节点为空
+	#+begin_src c++
+	// 初始化
+	head = malloc(sizeof *head);
+	head->next = NULL;
+
+	// 在x节点后插入t节点
+	t -> next = x -> next;
+	x -> next = t;
+
+	// 删除x后的节点
+	t = x -> next;
+	x -> next = t -> next;
+
+	// 遍历循环
+	for (t = head -> next; t != NULL; t = t -> next)
+
+	// 测试是否为空
+	if (head -> next == NULL)
+
+	#+end_src>
+****** 4. 有哑远节点，尾节点
+	#+begin_src c
+	//初始化
+	head = malloc (sizeof *head);
+	z = malloc (sizeof *z);
+	head->next = z;
+	z->next = z;
+	// 在x节点后插入t节点
+	t -> next = x;
+	x -> next = t;
+	// 删除x后的节点
+	x -> next = x->next->next;
+	// 遍历循环
+	for (t = head->next; t != z; t = t->next)
+	// 测试是否为空
+	if (head -> next == z)
+	#+end_src>
+
+
+
+
+* TODO todo3
+
+* TODO todo4
