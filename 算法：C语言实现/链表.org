@@ -31,9 +31,9 @@
 	int item;
 	// 此处是struct node类型，没有使用lin；
 	struct node *next;
-
+	
     } *link2;
-
+    
     #+end_src>
     
 ****** 约瑟夫环实现
@@ -242,6 +242,359 @@ void mergeTwoLink(link x,link t) {
 
 
 
-* TODO todo3
 
-* TODO todo4
+***** 链表接口
+#+begin_src c
+typedef struct node *link;
+struct node {ItemType item;link next;};
+typedef link Node;
+void initNode(int); //初始化链表
+link newNode(int);
+void freeNode(link);
+void insertNext(link,link);
+link deleteNode(link);
+link Next(link);
+int Item(link);
+#+end_src>
+
+
+
+***** 双向链表
+
+[[file:imags/Snipaste_2023-10-27_11-09-27.png][双向链表操作]]
+
+
+
+
+
+****** 链表练习-part2
+
+
+******* 1.把链表中最大数据移动到最后一位(3.34)
+#+begin_src c
+#include<stdlib.h>
+#include <printf.h>
+
+typedef struct node *link;
+struct node{
+int item;
+link next;
+
+};
+void mvMaxItemToEnd(link x) {
+// 确定最大数据的节点
+link t,u,end;
+t = x;
+int num = x->item;
+while (t != NULL)
+ {
+ if (t->item > num)
+ {
+num = t->item;
+
+}
+t = t->next;
+}
+ // 确定节点,前一个节点
+link pre;
+t = x;
+while (t != NULL)
+{
+ if (t->item == num)
+ {
+u = t;
+break;
+
+}
+t = t->next;
+}
+// 确定前一个节点
+if (u != x) // 不是首节点
+{
+if (t->next->item == num)
+pre = t;
+
+}
+// 确定尾节点
+   t = x;
+while( t != NULL)
+   {
+  if (t->next == NULL)
+   {
+end = t;
+ break;
+ }
+    t = t->next;
+	}
+    // 移动
+if (pre->next != NULL)
+   {
+   pre->next = u->next;
+   end->next = u;
+   u->next = NULL;
+
+} else {
+ x = x->next;
+ end->next = u;
+ u->next = NULL;
+
+}
+printf("num = %d\n",num);
+}
+
+int main() {
+    link x = malloc(sizeof *x),t;
+x->item = 66;
+    x->next = NULL;
+t = x;
+   for (int i = 0; i < 4; i++)
+
+t = (t->next = malloc(sizeof *t));
+t->item = rand() % 20 * 3;
+
+}
+    t->next = NULL;
+mvMaxItemToEnd(x);
+   return 0;
+
+
+}
+
+
+#+end_src>
+
+******* 2.最小数字移到头部节点(3.35)
+#+begin_src c
+void mvMinToFirst(link x) {
+    // 找到最小数字
+link t = x->next;
+int tmp = t->item;
+for ( ; t != NULL; t = t->next) {
+if (tmp > t->item)
+tmp = t->item;
+				      
+}
+    // 找到当前节点
+link curr;
+for (t = x->next; t != NULL; t = t->next) {
+if (t->item == tmp)
+curr = t;
+}
+// 找到前一个节点
+link pre;
+for (t = x; t != NULL; t = t->next) {
+if (t->next->item == tmp ) {
+pre = t;
+break;
+									        
+}
+    }
+// 移动
+if (pre != x) {
+pre->next = curr->next;
+curr->next = x->next;
+ x->next = curr;
+				        
+}
+}
+
+int main() {
+ // 带有哑元节点的链表
+ struct node head;
+ link x = &head, t;
+ t = x;
+ for (int i = 0; i < 5; i++)
+{
+t = (t->next = malloc(sizeof *t));
+t->item = rand() % 15 * 3;
+		    
+}
+    t->next = NULL;
+    mvMinToFirst(x);
+    return 0;
+}
+
+#+end_src>
+
+******* 偶数位置节点排在奇数节点之后，相对位置不变(3.36)
+int main() {
+    // 带有哑元节点的链表
+        struct node head;
+	    link x = &head, t;
+	        t = x;
+		    for (int i = 0; i < 5; i++)
+		        {
+			        t = (t->next = malloc(sizeof *t));
+				        t->item = rand() % 15 * 3;
+					    
+}
+    t->next = NULL;
+        mvMinToFirst(x);
+	    return 0;
+
+	    
+}
+
+#+begin_src c
+#include<stdlib.h>
+#include <printf.h>
+
+typedef struct node *link;
+struct node{
+    int item;
+        link next;
+	
+};
+void mvMaxItemToEnd(link x) {
+    // 确定最大数据的节点
+        link t,u,end;
+	    t = x;
+	        int num = x->item;
+		    while (t != NULL)
+		        {
+			        if (t->item > num)
+				        {
+					            num = t->item;
+						            
+}
+        t = t->next;
+	    }
+	        // 确定节点,前一个节点
+		    link pre;
+		        t = x;
+			    while (t != NULL)
+			        {
+				        if (t->item == num)
+					        {
+						            u = t;
+							                break;
+									        
+}
+        t = t->next;
+	    }
+	        // 确定前一个节点
+		    if (u != x) // 不是首节点
+		        {
+			        if (t->next->item == num)
+				            pre = t;
+					        
+}
+    // 确定尾节点
+        t = x;
+	    while( t != NULL)
+	        {
+		        if (t->next == NULL)
+			        {
+				            end = t;
+					                break;
+							        
+}
+        t = t->next;
+	    }
+	        // 移动
+		    if (pre->next != NULL)
+		        {
+			        pre->next = u->next;
+				        end->next = u;
+					        u->next = NULL;
+						    
+} else {
+        x = x->next;
+	        end->next = u;
+		        u->next = NULL;
+			    
+}
+    printf("num = %d\n",num);
+    }
+
+    void mvMinToFirst(link x) {
+        // 找到最小数字
+	    link t = x->next;
+	        int tmp = t->item;
+		    for ( ; t != NULL; t = t->next) {
+		           if (tmp > t->item)
+			              tmp = t->item;
+				          
+    }
+        // 找到当前节点
+	    link curr;
+	        for (t = x->next; t != NULL; t = t->next) {
+		        if (t->item == tmp)
+			            curr = t;
+				        }
+					    // 找到前一个节点
+					        link pre;
+						    for (t = x; t != NULL; t = t->next) {
+						          if (t->next->item == tmp ) {
+							            pre = t;
+								              break;
+									            
+    }
+        }
+	    // 移动
+	        if (pre != x) {
+		        pre->next = curr->next;
+			        curr->next = x->next;
+				        x->next = curr;
+					    
+    }
+    }
+    void sortNumtoRelationLocation(link x) {
+        // 找到最后一个奇数位置
+	    link t,u,p;
+	        int cNum,eNum; //遍历到的奇数位置，最后一位奇数位置
+		    for (t = x->next; t != NULL; t = t->next) {
+		            if (t->item %2 != 0) {
+			                u = t;
+					            eNum = u->item;
+						                printf("odd num = %d\n",u->item);
+								        
+    }
+        }
+	    // 遍历移动 p前一个位置，t遍历位置，u插入标记位置
+	        while (cNum != eNum) {
+		        for (p = x,t = x->next; t != NULL;p=p->next,t = t->next) {
+			            if (t->item %2 == 0) {
+				                    p->next = t->next;
+						                    t->next = u->next;
+								                    u->next = t;
+
+										                    u = u->next; //当前位置后移一位，方便后续插入
+												                    break;
+														                
+    } else {
+                    cNum = t->item;
+		                
+    }
+                if (cNum == eNum)
+		                break;
+				        
+    }
+        }
+	    printf("cNum = %d, eNum = %d\n",cNum,eNum);
+	    }
+	    int main() {
+	        // 带有哑元节点的链表
+		    struct node head;
+
+		        link x = &head, t;
+			    x->next = malloc(sizeof *x);
+			        x->next->item = 0;
+				    t = x;
+				        for (int i = 0; i <= 6; i++)
+					    {
+					            t = (t->next = malloc(sizeof *t));
+						            t->item = i;
+							        }
+								    t->next = NULL;
+								        sortNumtoRelationLocation(x);
+									    return 0;
+
+									    
+			}
+			>)
+    }
+
+#+end_src>
+
+
