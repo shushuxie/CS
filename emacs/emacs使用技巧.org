@@ -11,7 +11,7 @@
   C-c C-u 跳到上一级标题（upper）
 
 
-* TODO [66%] 测试添加任务名称
+* TODO [66%] 测试添加任务名称 <2023-10-27 五>
 ** TODO 
 - State "DONE"       from "TODO"       [2023-10-27 五 00:43]
 ** DONE idgi
@@ -37,7 +37,7 @@
 
 - State "DONE"       from "DOING"      [2023-10-27 五 00:26]
 - State "DOING"      from "TODO"       [2023-10-27 五 00:26]
-** WAITING                                                            :tab1:
+** WAITING <2023-10-27 五>                                                         :tab1:
 - State "WAITING"    from "DONE"       [2023-10-27 五 00:47] \\
   kkdgjksd
 - State "DONE"       from              [2023-10-27 五 00:26]
@@ -58,11 +58,13 @@
 
 * TODO []
 
-* TODO 234
-** [] gdjkh                                                          :d:
+* TODO 234 <2023-10-28 六 12:00>
+** 
+** [] gdjkh <2023-10-28 六>
+ - [] [2/3]
+   - [X] b
+   - [ ] back 
+   - [X] c
 
 
 
-
-1. [] gdoi
-2. [] gdjks
