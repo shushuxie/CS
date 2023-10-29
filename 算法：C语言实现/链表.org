@@ -1,18 +1,34 @@
+**** TODO [0%]orgmode使用技巧
+***** TODO [0/4] 基本实用
+****** TODO 基本语法
+****** TODO 标题
+****** TODO table
+****** TODO GTD
+***** TODO 高级用法
+
 
 **** 链表--list
-
 ***** 定义
     链表是一组数据项的集合，其中每个数据项都是节点的一部分，每个节点都包含指向下一节点的链接
     其中包含：数据项，节点，链接三部分；
+    
+***** 操作技巧
+1. 使用指针链接，用来指代各个位置，然后移动指代实现操作
+2. 把链表的操作想象为一个核糖的合成过程，然后在一个链上移动；
+3. 链表也没有几种：
+   + 循环链表，next指向首节点，没有NULL指针存在
+   + 首尾节点为空的链表，存在一个首节点指向空，要不尾节点为空
+   + 头哑元节点，为空指针；这种方便操作进行统一，哑元节点就是一个node节点；
+   + 头尾都是哑元节点；
+4. 注意操作顺序
+5. 操作链表大部分其实是在改变指针的指向链接而已；
+6. link是一个指针而已，指向一个node，link->next就是指向下一个node的指针；
+
 
 ***** 链表末尾节点的规定
 ****** 将其置为不指向任何节点的空链接;
 ****** 使其指向不包含任何元素的哑元节点;
 ****** 使其指向第一个节点（首节点），使链表成为循环链表；
-
-* TODO 对比插入链表删除操作的不同
-
-* TODO todo2
 
 ***** 两种声明方式
 
@@ -82,8 +98,149 @@
 
     
 
-****** 链表练习题-part1
 
+***** 链表常用的操作
+****** 1. 循环链表（没有空指针）
+	#+caption: 循环链表常用操作
+	#+begin_src c++
+	  // 循环链表常用操作
+	  // 1.头插入
+	  head->next = head;
+
+	  // 2. x节点后插入t节点
+	  t->next = x->next;
+	  x->next = t;
+
+	  // 3. 删除x后的节点
+	  x->next = x->next->next
+
+	  // 4. 遍历循环
+	  t=head;
+	  do{...t=t->next;
+	    }while(t!=head);
+
+	  // 5. 是否只有一个元素
+	  if(head->next == head)
+	#+end_src
+
+	#+caption: 
+	#+begin_src c++
+
+	#+end_src
+****** 2. 头指针，尾节点为空
+	#+begin_src c++
+	// 初始化
+	head = NULL;
+	// 在x节点后插入t节点
+	if (x == Null)
+	{
+	    head = t;
+	    head->next = NULL;
+	}
+	else
+	{
+	    t->next = x->next;
+	    x->next = t;
+	}
+	// 删除x后的节点
+	t = x -> next;
+	x -> next = t -> next;
+	// 遍历循环
+	for (t = head; t != NULL; t = t->next)
+	// 测试是否为空
+	if （head == NULL）
+	#+end_src>
+
+****** 3. 有哑远节点，尾节点为空
+	#+begin_src c++
+	// 初始化
+	head = malloc(sizeof *head);
+	head->next = NULL;
+
+	// 在x节点后插入t节点
+	t -> next = x -> next;
+	x -> next = t;
+
+	// 删除x后的节点
+	t = x -> next;
+	x -> next = t -> next;
+
+	// 遍历循环
+	for (t = head -> next; t != NULL; t = t -> next)
+
+	// 测试是否为空
+	if (head -> next == NULL)
+
+	#+end_src>
+****** 4. 有哑远节点，尾节点
+	#+begin_src c
+	//初始化
+	head = malloc (sizeof *head);
+	z = malloc (sizeof *z);
+	head->next = z;
+	z->next = z;
+	// 在x节点后插入t节点
+	t -> next = x;
+	x -> next = t;
+	// 删除x后的节点
+	x -> next = x->next->next;
+	// 遍历循环
+	for (t = head->next; t != z; t = t->next)
+	// 测试是否为空
+	if (head -> next == z)
+	#+end_src>
+
+***** 链表求逆
+****** 首节点，尾节点为NULL
+	#+begin_src c
+	link reverse(link x) {
+	    // t是标记第原链表第二个节点
+	    // y标记要反转链表的节点
+	    // r 返回链表的节点，从尾增长到头
+	    link t, y=x, r=NULL;
+	    while (y != NULL) {
+	    t = y->next; y->next = r; r = y; y = t;
+	    }
+	    return r;
+	}
+
+	#+end_src
+****** 哑元头节点，尾尾NULL
+	#+begin_src c
+	link reverse(link x) {
+	struct node head;
+	link t,y=x,r = &head,z = NULL;
+
+	while (y != NULL) {
+	    t = y->next; y->next = z;
+	    z = y; y = t;
+	}
+	r->next = z;
+	return r;
+	}
+
+	#+end_src
+***** 链表接口
+#+begin_src c
+typedef struct node *link;
+struct node {ItemType item;link next;};
+typedef link Node;
+void initNode(int); //初始化链表
+link newNode(int);
+void freeNode(link);
+void insertNext(link,link);
+link deleteNode(link);
+link Next(link);
+int Item(link);
+#+end_src>
+
+
+***** 双向链表
+    [[file:imags/Snipaste_2023-10-27_11-09-27.png][双向链表操作]]
+
+
+***** 练习题
+****** 链表练习题-part1
 ******* 1. 获取循环链表节点数的函数(3.24)
 	#+begin_src c++
 	int getLinkCount(link plink){
@@ -145,131 +302,7 @@ void mergeTwoLink(link x,link t) {
 }
 #+end_src>
 
-
-
-*****  链表常用的操作
-****** 1. 循环链表（没有空指针）
-	#+caption: 循环链表常用操作
-	#+begin_src c++
-	  // 循环链表常用操作
-	  // 1.头插入
-	  head->next = head;
-
-	  // 2. x节点后插入t节点
-	  t->next = x->next;
-	  x->next = t;
-
-	  // 3. 删除x后的节点
-	  x->next = x->next->next
-
-	  // 4. 遍历循环
-	  t=head;
-	  do{...t=t->next;
-	    }while(t!=head);
-
-	  // 5. 是否只有一个元素
-	  if(head->next == head)
-	#+end_src
-
-	#+caption: 
-	#+begin_src c++
-
-	#+end_src
-****** 2. 头指针，尾节点为空
-	#+begin_src c++
-	// 初始化
-	head = NULL;
-	// 在x节点后插入t节点
-	if (x == Null)
-	{
-	    head = t;
-	    head->next = NULL;
-	}
-	else
-	{
-	    t->next = x->next;
-	    x->next = t;
-	}
-	// 删除x后的节点
-	t = x -> next;
-	x -> next = t -> next;
-	// 遍历循环
-	for (t = head; t != NULL; t = t->next)
-	// 测试是否为空
-	if （head == NULL）
-	#+end_src>
-
-
-****** 3. 有哑远节点，尾节点为空
-	#+begin_src c++
-	// 初始化
-	head = malloc(sizeof *head);
-	head->next = NULL;
-
-	// 在x节点后插入t节点
-	t -> next = x -> next;
-	x -> next = t;
-
-	// 删除x后的节点
-	t = x -> next;
-	x -> next = t -> next;
-
-	// 遍历循环
-	for (t = head -> next; t != NULL; t = t -> next)
-
-	// 测试是否为空
-	if (head -> next == NULL)
-
-	#+end_src>
-****** 4. 有哑远节点，尾节点
-	#+begin_src c
-	//初始化
-	head = malloc (sizeof *head);
-	z = malloc (sizeof *z);
-	head->next = z;
-	z->next = z;
-	// 在x节点后插入t节点
-	t -> next = x;
-	x -> next = t;
-	// 删除x后的节点
-	x -> next = x->next->next;
-	// 遍历循环
-	for (t = head->next; t != z; t = t->next)
-	// 测试是否为空
-	if (head -> next == z)
-	#+end_src>
-
-
-
-
-
-***** 链表接口
-#+begin_src c
-typedef struct node *link;
-struct node {ItemType item;link next;};
-typedef link Node;
-void initNode(int); //初始化链表
-link newNode(int);
-void freeNode(link);
-void insertNext(link,link);
-link deleteNode(link);
-link Next(link);
-int Item(link);
-#+end_src>
-
-
-
-***** 双向链表
-
-[[file:imags/Snipaste_2023-10-27_11-09-27.png][双向链表操作]]
-
-
-
-
-
 ****** 链表练习-part2
-
-
 ******* 1.把链表中最大数据移动到最后一位(3.34)
 #+begin_src c
 #include<stdlib.h>
@@ -416,24 +449,7 @@ t->item = rand() % 15 * 3;
 
 #+end_src>
 
-******* 偶数位置节点排在奇数节点之后，相对位置不变(3.36)
-int main() {
-    // 带有哑元节点的链表
-        struct node head;
-	    link x = &head, t;
-	        t = x;
-		    for (int i = 0; i < 5; i++)
-		        {
-			        t = (t->next = malloc(sizeof *t));
-				        t->item = rand() % 15 * 3;
-					    
-}
-    t->next = NULL;
-        mvMinToFirst(x);
-	    return 0;
-
-	    
-}
+******* 3.偶数位置节点排在奇数节点之后，相对位置不变(3.36)
 
 #+begin_src c
 #include<stdlib.h>
@@ -445,156 +461,166 @@ struct node{
         link next;
 	
 };
-void mvMaxItemToEnd(link x) {
-    // 确定最大数据的节点
-        link t,u,end;
-	    t = x;
-	        int num = x->item;
-		    while (t != NULL)
-		        {
-			        if (t->item > num)
-				        {
-					            num = t->item;
-						            
-}
-        t = t->next;
-	    }
-	        // 确定节点,前一个节点
-		    link pre;
-		        t = x;
-			    while (t != NULL)
-			        {
-				        if (t->item == num)
-					        {
-						            u = t;
-							                break;
-									        
-}
-        t = t->next;
-	    }
-	        // 确定前一个节点
-		    if (u != x) // 不是首节点
-		        {
-			        if (t->next->item == num)
-				            pre = t;
-					        
-}
-    // 确定尾节点
-        t = x;
-	    while( t != NULL)
-	        {
-		        if (t->next == NULL)
-			        {
-				            end = t;
-					                break;
-							        
-}
-        t = t->next;
-	    }
-	        // 移动
-		    if (pre->next != NULL)
-		        {
-			        pre->next = u->next;
-				        end->next = u;
-					        u->next = NULL;
-						    
-} else {
-        x = x->next;
-	        end->next = u;
-		        u->next = NULL;
-			    
-}
-    printf("num = %d\n",num);
-    }
-
-    void mvMinToFirst(link x) {
-        // 找到最小数字
-	    link t = x->next;
-	        int tmp = t->item;
-		    for ( ; t != NULL; t = t->next) {
-		           if (tmp > t->item)
-			              tmp = t->item;
-				          
-    }
-        // 找到当前节点
-	    link curr;
-	        for (t = x->next; t != NULL; t = t->next) {
-		        if (t->item == tmp)
-			            curr = t;
-				        }
-					    // 找到前一个节点
-					        link pre;
-						    for (t = x; t != NULL; t = t->next) {
-						          if (t->next->item == tmp ) {
-							            pre = t;
-								              break;
-									            
-    }
-        }
-	    // 移动
-	        if (pre != x) {
-		        pre->next = curr->next;
-			        curr->next = x->next;
-				        x->next = curr;
-					    
-    }
-    }
     void sortNumtoRelationLocation(link x) {
         // 找到最后一个奇数位置
-	    link t,u,p;
-	        int cNum,eNum; //遍历到的奇数位置，最后一位奇数位置
-		    for (t = x->next; t != NULL; t = t->next) {
-		            if (t->item %2 != 0) {
-			                u = t;
-					            eNum = u->item;
-						                printf("odd num = %d\n",u->item);
+    link t,u,p;
+    int cNum,eNum; //遍历到的奇数位置，最后一位奇数位置
+    for (t = x->next; t != NULL; t = t->next) {
+    if (t->item %2 != 0) {
+       u = t;
+       eNum = u->item;
+       printf("odd num = %d\n",u->item);
 								        
     }
-        }
-	    // 遍历移动 p前一个位置，t遍历位置，u插入标记位置
-	        while (cNum != eNum) {
-		        for (p = x,t = x->next; t != NULL;p=p->next,t = t->next) {
-			            if (t->item %2 == 0) {
-				                    p->next = t->next;
-						                    t->next = u->next;
-								                    u->next = t;
-
-										                    u = u->next; //当前位置后移一位，方便后续插入
-												                    break;
+  }
+ // 遍历移动 p前一个位置，t遍历位置，u插入标记位置
+  while (cNum != eNum) {
+  for (p = x,t = x->next; t != NULL;p=p->next,t = t->next) {
+  if (t->item %2 == 0) {
+        p->next = t->next;
+	t->next = u->next;
+	u->next = t;
+        u = u->next; //当前位置后移一位，方便后续插入
+	break;
 														                
     } else {
-                    cNum = t->item;
-		                
+        cNum = t->item;
     }
-                if (cNum == eNum)
-		                break;
+       if (cNum == eNum)
+	break;
 				        
     }
         }
-	    printf("cNum = %d, eNum = %d\n",cNum,eNum);
-	    }
-	    int main() {
-	        // 带有哑元节点的链表
-		    struct node head;
+printf("cNum = %d, eNum = %d\n",cNum,eNum);
+    }
+   int main() {
+  // 带有哑元节点的链表
+  struct node head;
 
-		        link x = &head, t;
-			    x->next = malloc(sizeof *x);
-			        x->next->item = 0;
-				    t = x;
-				        for (int i = 0; i <= 6; i++)
-					    {
-					            t = (t->next = malloc(sizeof *t));
-						            t->item = i;
-							        }
-								    t->next = NULL;
-								        sortNumtoRelationLocation(x);
-									    return 0;
-
-									    
-			}
-			>)
+  link x = &head, t;
+  x->next = malloc(sizeof *x);
+  x->next->item = 0;
+  t = x;
+  for (int i = 0; i <= 6; i++)
+  {
+  t = (t->next = malloc(sizeof *t));
+  t->item = i;
+  }
+    t->next = NULL;
+    sortNumtoRelationLocation(x);
+    return 0;
     }
 
 #+end_src>
+
+******* 4.t和u两个链接指向的节点互换位置（首个node互换）（3.37）
+	#+begin_src c++
+	// 首节点位置互换
+	link tmp,tmp2;
+	tmp = t;// t的值存储起来
+	tmp2 = u->next;
+	t = u;
+	u -> next = tmp->next;
+
+	// t的节点放到u下面
+	u = tmp;
+	tmp -> next = tmp2;
+
+	总结其实是四个节点的互换，保证顺序和节点不丢失
+	t链表的前后指针，u链表的前后指针；
+	#+end_src>
+
+******* 5. 复制一个链表（3.38）
+	#+begin_src c
+	link copyLink(link x) {
+	link t,u,r;
+	// 遍历x
+	if (x != NULL) {
+	r = malloc(sizeof *r);
+	r->item = x->item;
+	for (t=x->next, u = r; t != NULL; t = t->next) {
+	u->next = malloc(sizeof *u);
+	u = u->next;
+	u->item = t->item;
+	}
+	u->next = NULL;
+	}
+	return r;
+		}
+	#+end_src>
+
+******* 6.一个参数为链表，另一个参数为包含一个函数作为参数的参数，删除，参数函数返回非零值的数据项
+         *大概意思是，参数函数返回非零值的数据项，然后由该函数进行删除，
+         最后返回该链表* 
+	 #+begin_src c
+	 int fetchNum(link x) {
+	 if (x != NULL) {
+         link t;
+         for (t = x; t != NULL; t = t->next) {
+         if (t->item < 100 && t->item != 0)
+         return t->item;
+							         
+	 }
+	 }
+	 }
+
+	 link fetchPoint(link x) {
+	 if (x != NULL) {
+         link t;
+         for (t = x; t != NULL; t = t->next) {
+         if (t->item < 100 && t->item != 0) {
+         return t;
+							             
+	 }
+	         
+	 }
+	 }
+	 }
+
+	 void removeNotZero(link x,int (*func_t)(link), link (*funt2_t)(link)) {
+	 int removeNum = func_t(x);
+	 // 移除第一个非零值
+	 link u = funt2_t(x);
+         link t;
+	 for (t = x; t != NULL; t = t->next) {
+         if (t->next == u) {
+         t->next = t->next->next;
+						         
+	 }
+	 }
+         printf("func point return num = %d",removeNum);
+	 
+	 }    
+	 }
+
+	 #+end_src>
+
+
+
+	 #+begin_src c
+	 void removeNotZero(link x,int (*func_t)(link), link (*funt2_t)(link)) {
+	 int removeNum = func_t(x);
+	 // 移除第一个非零值
+	 link u = funt2_t(x);
+	 link t;
+	 for (t = x; t != NULL; t = t->next) {
+	 if (t->next == u) {
+	 t->next = t->next->next;
+						         
+	 }
+	 }
+	 printf("func point return num = %d",removeNum);
+
+		 
+	 }
+
+	 #+end_src>
+
+******* 7.互换双向链表中的两个节点
+
+#+begin_src 
+
+#+end_src>
+
 
 
