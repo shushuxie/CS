@@ -233,7 +233,80 @@ link deleteNode(link);
 link Next(link);
 int Item(link);
 #+end_src>
+***** 接口实现
+#+begin_src c
+#include <stdlib.h>
+typedef int ItemType;
 
+typedef struct node *link;
+struct node {ItemType item;link next;};
+typedef link Node;
+
+link freeList;
+
+void initNode(int n); //初始化链表
+link newNode(int i);
+void freeNode(link x);
+void insertNext(link x,link t);
+link deleteNode(link);
+link Next(link x);
+int Item(link);
+
+int Item(link x) {
+    return x->item;
+    
+}
+
+link Next(link x) {
+    return x->next;
+    
+}
+
+// 初始化freelist，把next的值赋值
+void initNode(int N) {
+    freeList = malloc( (N+1) * sizeof (*freeList) );
+        int i;
+	    for(i = 0 ; i<N+1; i++) {
+	           freeList[i].next = &freeList[i+1];
+		          freeList[N].next = NULL;
+			      
+}
+}
+
+// x后面插入t
+void insertNext(link x, link t) {
+    t->next = x->next;
+        x->next = t;
+	
+}
+
+link deleteNode(link x) {
+    link t = x->next;
+        x->next = t->next;
+	    return t;
+	    
+}
+// 回收x节点，把节点插入打开总空闲列表中
+void freeNode(link x) {
+    insertNext(freeList,x);
+    
+}
+
+link newNode(int i) {
+    link x = deleteNode(freeList);
+        x->item = i; x->next = x;
+	    return x;
+	    
+}
+
+int main(){
+
+
+
+
+
+}
+#+end_src>
 
 ***** 双向链表
     [[file:imags/Snipaste_2023-10-27_11-09-27.png][双向链表操作]]

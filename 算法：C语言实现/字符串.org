@@ -1,0 +1,49 @@
+*** 字符串
+字符串需要存储空间，可以有两种实现方法；数组和动态内存分配（malloc），其中数组长度是固定
+的；*一定要为字符串分配空间才行* ；
+**** 基本操作实现方式
+| 功能                   | 操作 | 备注 |
+|------------------------+------+------|
+| strlen()               |      |      |
+| strcpy()               |      |      |
+| strcmp(a,b)            |      |      |
+| strncmp(a,b,strlen(a)) |      |      |
+| strcat()               |      | 追加 |
+
+#+caption: 索引数组版本
+#+begin_src c
+1. 字符串长度 strlen(a)
+   for (i=0; a[i] != 0; i++)
+   return i;
+2. 复制 strcpy(a,b)
+   for (i=0; a[i] = b[i] != 0; i++);   
+3. 比较 strcmp(a,b)
+   for (i=0; a[i] == b[i] ;i++)
+   if (a[i] = b[i]) return 0;
+   return a[i] - b[i];
+4. 比较前缀 strncmp(a,b,strlen(a))
+   for (i=0; a[i] == b[i]; i++)
+   // 完全相同的情况会来到这里，abc:abc
+   if (a[i] == 0) return 0;// 比较到结束，全部符合
+   // abc : abcd 比较到最后一位循环就结束了；
+   if (a[i] == 0) return 0;// 循环到0的时候，结束，没法进行后续判断，改为外部
+   return a[i] - b[i];
+5. 追加 strcat(a,b) a后面追加b
+   strcpy(a+strlen(a),b);//指针的算术运算，移动基础地址，然后拼接；   
+#+end_src>
+
+#+caption: 指针版本
+#+begin_src c
+1. 字符串长度 strlen(char *a);
+   b = a; while (*b++); return b-a-1;// -1 是最后多了一个++操作
+2. 复制 strcpy(char *a, char *b)
+   // 这个函数的判断条件是*a++的值，后面只是多了一个赋值操作
+   while (*a++ = *b++);
+3. 比较 strcmp(a,b)
+   int strcmp1(char *a, char *b) {
+       while(*a++ == *b++)
+               ;
+       if (*(a-1) == 0 && *(b-1) == 0) return 0;
+       return *(a-1) - *(b-1);
+    }
+#+end_src>
