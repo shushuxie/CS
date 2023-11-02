@@ -28,7 +28,8 @@
 	#+end_src
 
 ***** 常用函数
-	#+begin_src 
+
+#+begin_src 
 	*include <string.h>
 	1. int  strlen -- 求字符串长度；不包含‘\0’，字符数组必须包含，或者申请多余的空间才行；
 	2. char * strcat(char *s1,const char *s2) -- 拼接字符串；s1必须有足够的空间才能拼接，数组必须给出多余拼接空间，指针必须申请相应的空间才行；
@@ -36,6 +37,7 @@
 	4. char * strcpy(str *des,const char *s) -- 复制字符串，注意目标需要有足够的空间才行；
 	5. 字符串转数字 <stdlib.h> ;转int，float，double，atoi(),atof(),atod(),还有strtoi()等；
 	6. 批量初始化内存； memset(char *des,内容,空间大小）； 需要注意初始化之前必须有对应空间；
+
 	#+end_src>
 
 **** 数组--array
@@ -56,8 +58,8 @@
 	结构体分三个部分：定义，声明，初始化；
 	可以分单步也可以一下子完成；
 	声明的时候必须带上struct关键字；
-
-	```
+	
+	#+begin_src c
 	 // 定义一个名为point的结构体
 	    struct point {
 		int x;
@@ -95,20 +97,21 @@
 		    int a;
 		    int b;
 		} a,b,c;
-	```
+
+	#+end_src
 
 **** 联合--union
- **联合，也叫共用体，所有成员共用一段内存，内存中只报错最新的数据**
-	```
-	    union{
-		int a;
-		char b;
-	    }u1,u2;
-	    u1.a=97;
-	    printf("%d,%c\n",u1.a,u1.b); //97,a 说明共用一段内存，只是解析不同；
-	    u1.b = 98;
-	    printf("%d,%c\n",u1.a,u1.b); //98,b 说明使用最新的内存，进行了覆盖；
-	```
+ =联合，也叫共用体，所有成员共用一段内存，内存中只报错最新的数据= 
+ #+begin_src c
+    union{
+	int a;
+	char b;
+    }u1,u2;
+    u1.a=97;
+    printf("%d,%c\n",u1.a,u1.b); //97,a 说明共用一段内存，只是解析不同；
+    u1.b = 98;
+    printf("%d,%c\n",u1.a,u1.b); //98,b 说明使用最新的内存，进行了覆盖；
+ #+end_src	
 **** 枚举--enum
 相当于为一些量赋初始值，
 enum week{ Mon = 1, Tues = 2, Wed = 3, Thurs = 4, Fri = 5, Sat = 6, Sun = 7 };
@@ -116,3 +119,47 @@ enum week a,b;
 a = Mon,b=Sun;
 
 **** 抽象结构类型
+
+#+begin_src c
+    void printFileName(char *filePath) {
+	int len = strlen(filePath);
+	if (filePath[len-1] == '.')
+	    return;
+	if (filePath[len-1] == '..')
+	    return;
+
+	struct stat fileMsg;
+	stat(filePath,&fileMsg);
+	if (S_ISREG(fileMsg.st_mode)) {
+	    printf("%s\n",filePath);
+	} else {
+	    char absPath[100] = {'\0'};
+	    DIR *dp = opendir(filePath);
+	    struct dirent *d;
+	    while ((d = readdir(dp)) != NULL) {
+
+		strcat(absPath,filePath);
+		strcat(absPath,"/");
+		strcat(absPath,d->d_name);
+
+		struct stat buf;
+		stat(absPath,&buf);
+		if (S_ISDIR(buf.st_mode))
+		printf("%s\n",absPath);
+
+		printFileName(absPath);
+		for (int i = 0; i < 100; i++)
+		    absPath[i] = '\0';
+	    }
+	    closedir(dp);
+	}
+    }
+#+end_src>
+
+
+| kjgkd | gjkds |
+|-------+-------|
+| gjksd | gjskd |
+| jdskg | gjksd |
+|       |       |
+|       |       |
