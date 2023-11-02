@@ -1,3 +1,4 @@
+#+STARTUP showall
 *** 字符串
 字符串需要存储空间，可以有两种实现方法；数组和动态内存分配（malloc），其中数组长度是固定
 的；*一定要为字符串分配空间才行* ；
@@ -48,3 +49,54 @@
     }
 #+end_src>
 **** 查找字符串
+**** 练习题
+***** part1
+****** 统计读取字符的出现频率（3.56）
+#+begin_src c
+int main(int argc, char *argv[]){
+    char *str = "deeeeabccabde";
+        int i,k,m,z=0,len = strlen(str);
+	    char base[20] = {'\0'};
+	        for (i=0; i<len; i++) {
+		        int flag = 0;
+			        // 确定是否已打印
+				        for (k=0; k<strlen(base); k++) {
+					            if (base[k] == str[i])
+						                {
+								                flag = 1;
+										                break;
+												            }
+													            
+}
+        if (!flag) {
+	            base[z++] = str[i];
+		                int tmp = 0;
+				            for (m = 0; m<len; m++) {
+					                    if (base[z-1] == str[m]) {
+							                        tmp ++;
+										                
+}
+            
+}
+            printf("%c \t %d \n",base[z-1],tmp);
+	            }
+		        }
+			    return 0;
+			    })
+})
+})
+}
+
+#+end_src>
+****** 字符串是否是回文数据（3.57）
+#+begin_src c
+
+
+#+end_src>
+
+** This is a headline
+Still outside the drawer
+:DRAWERNAME:
+This is inside the drawer.
+:END:
+After the drawer.
