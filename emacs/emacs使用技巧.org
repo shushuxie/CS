@@ -15,72 +15,38 @@
 projectile是一个项目管理软件，一般情况下会自动识别项目；如果项目是git或svn或者别的工具管理的项目就会自动识别
 如果不行就在项目项目的根目录下添加一个 =.projectile= 的空白文件
 
-| 快捷键 | 功能                                                        |
-|--------+-------------------------------------------------------------|
-| C-c p  | 前置快捷键，配合后面的打开相应的功能                        |
-| f      | 查找项目中的文件，很方便                                    |
-| I      | 项目打开的buffer文件，也可以进行切换，和 =C-c b= 效果一样   |
-| k      | kill 所有buffer                                             |
-| SPC    | 使用counsel的切换文件或buffer，和=C-x b=类似                |
-| !      | run shell command                                           |
-| D      | dired by name 访问文件夹，在整个页面?                       |
-| b      | switch to buffer 和切换类似，上面的应该是projectile的buffer |
+| 快捷键 | 功能                                                     |
+|-------+---------------------------------------------------------|
+| C-c p | 前置快捷键，配合后面的打开相应的功能                          |
+| f     | 查找项目中的文件，很方便                                    |
+| I     | 项目打开的buffer文件，也可以进行切换，和 =C-c b= 效果一样     |
+| k     | kill 所有buffer                                          |
+| SPC   | 使用counsel的切换文件或buffer，和=C-x b=类似                |
+| !     | run shell command                                       |
+| D     | dired by name 访问文件夹，在整个页面?                       |
+| b     | switch to buffer 和切换类似，上面的应该是projectile的buffer |
 
 
-* TODO [66%] 测试添加任务名称 <2023-10-27 五>
-** TODO 
-- State "DONE"       from "TODO"       [2023-10-27 五 00:43]
-** DONE idgi
-- State "DONE"       from "TODO"       [2023-10-27 五 00:43]
-** DONE kk
-** DONE [100%]
-- State "DONE"       from "TODO"       [2023-10-27 五 00:43]
-*** DONE dkgj
-- State "DONE"       from "TODO"       [2023-10-27 五 00:42]
-*** DONE dkgj
-- State "DONE"       from "TODO"       [2023-10-27 五 00:42]
-*** DONE kdgj
-- State "DONE"       from "TODO"       [2023-10-27 五 00:42]
-** DONE kgjd
-- State "DONE"       from "TODO"       [2023-10-27 五 00:43]
-** TODO kgj 
+**** treemacs
+[[https://github.com/Alexander-Miller/treemacs#customizing-themes-and-icons][treemacs github地址]]
 
+1) =M-0= 光标切换到文件区
+2) =？= 查看命令
+3) 加载主题 treemacs-load-theme
+4) 更改图标大小 treemacs-resize-icons
+5) 添加项目 treemacs-edit-workspace
+6) 鼠标右键文件进行操作
+7) 拖动文件图标进行打开
+8) treemacs-indent-guid-mode 显示文件线
+9) git commit differ mode可以显示本地更改和远程的区别
+10) =快速预览= 首先打开treemacs-peek-mode 然后在文件去使用大写 *P* 即可
 
-- State "DONE"       from "TODO"       [2023-10-27 五 00:39]
-* DONE 1
-
-* 3                                                                   :tab1:
-
-- State "DONE"       from "DOING"      [2023-10-27 五 00:26]
-- State "DOING"      from "TODO"       [2023-10-27 五 00:26]
-** WAITING <2023-10-27 五>                                                         :tab1:
-- State "WAITING"    from "DONE"       [2023-10-27 五 00:47] \\
-  kkdgjksd
-- State "DONE"       from              [2023-10-27 五 00:26]
-
-** CANCELLED
-- State "CANCELLED"  from "WAITING"    [2023-10-27 五 00:28] \\
-  测试输入取消任务的理由
-
-[[id:gdjsk][kdgjs
-
-** 
-
-** 
-
-** 
-
-** ]]
-
-* TODO []
-
-* TODO 234 <2023-10-28 六 12:00>
-** 
-** [] gdjkh <2023-10-28 六>
- - [] [2/3]
-   - [X] b
-   - [ ] back 
-   - [X] c
-
+    | 快捷键 | 功能                         |
+    |-------+-----------------------------|
+    | H     | 关闭父类文件，从子项直接父类文件 |
+    | u     | 找到父类文件                  |
+    |      |                             |
+    |       |                             |
+   
 
 
