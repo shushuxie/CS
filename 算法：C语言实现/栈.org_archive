@@ -1,0 +1,17 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/xsq/Documents/CS/算法：C语言实现/栈.org
+
+
+* 表达式前后缀
+:PROPERTIES:
+:ARCHIVE_TIME: 2023-11-02 Thu 17:04
+:ARCHIVE_FILE: ~/Documents/CS/算法：C语言实现/栈.org
+:ARCHIVE_CATEGORY: 栈
+:END:
+数学计算表达式有前缀，中缀和后缀之分，常见的就是中缀，计算符号在两个数字之间，后缀就是在之后；
++ =5 * (9+3)= 中缀表达式
++ =5 9 3 + *= 后缀表达，和上面等价
+
+  

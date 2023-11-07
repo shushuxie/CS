@@ -232,7 +232,7 @@ Item STACKpop() {
   Item QUEUEget();
 #+end_src
 
-*** 链表实现
+*** 链表实现1
 =维护一个头部链接用来删除，维护一个尾部链接用来插入=
 
 #+begin_src c
@@ -290,6 +290,11 @@ int main(int argc,char *argv[]) {
 }
 #+end_src>
 
+*** 链表实现2
+#+begin_src c
+  
+
+#+end_src
 *** 数组实现
 =保存一个头部index用来删除，尾部index用来插入，走到末尾循环到头部继续=
 
@@ -302,4 +307,139 @@ int main(int argc,char *argv[]) {
 ** 复制和索引项
 不允许重复数据，及其一些是想方式
 
+
 *** 栈实现
+
+** 一级ADT                                                       :definition:
+=定义4.4 一级数据类型是一种我们可以有多种潜在实例的类型，可以把它赋给那些能够声明为保存这些实例的变量。=
+一级adt要足够抽象，不能在定义中实现数据结构，要提供一个handle（一般是一个指针），具体的实现在实现类中出现
+这样就会有更广的适用面；
+
+[[file:imags/Snipaste_2023-11-07_15-08-10.png][一级ADT]]
+
+#+begin_quote
+我们使用术语句柄(handle),来描述对抽象对象的引用。目标是使客户程序可以引用用于赋值语句中的抽象对象，以及向内置数据类型一样
+作为函数的参数和返回值，同时在客户程序中隐藏对象的表示；
+
+三个方面
+1) 方便引用抽象对象
+2) 和内置类型一样在函数中使用
+3) 客户程序中隐藏表示
+#+end_quote
+
+[[file:imags/Snipaste_2023-11-07_14-20-15.png][数据结构和抽象ADT区别]]
+
+
+*** 复数的数据结构
+
+#+begin_src c
+
+typedef struct {float Re; float Im;} Complex;
+Complex COMPLEXinit(float,float);
+float Re(Complex);
+float Im(Complex);
+Complex COMPLEXmult(Complex,Complex);
+
+typedef struct {float Re; float Im;} Complex;
+Complex COMPLEXinit(float,float);
+
+Complex COMPLEXinit(float Re, float Im) {
+    Complex t;
+    t.Im = Im;
+    t.Re = Re;
+    return t;
+}
+
+float Re(Complex t) {
+    return t.Re;
+}
+float Im(Complex t) {
+    return t.Im;
+}
+// ac - bd + (ad + bc)i
+//其中，ac和bd为实部，ad和bc为虚部。
+Complex COMPLEXmult(Complex a,Complex b) {
+    Complex t;
+    t.Re = a.Re * b.Re - a.Im*b.Im;
+    t.Im = a.Re*b.Im + a.Im*b.Re;
+    return t;
+}
+
+#+end_src>
+
+*** 复数的一级ADT
+#+begin_src c
+typedef struct complex *Complex;
+Complex COMPLEXinit(float,float);
+float Re(Complex);
+float Im(Complex);
+Complex COMPLEXmult(Complex,Complex);
+
+// 实现
+typedef struct complex *Complex;
+struct complex {float Re; float Im;};
+Complex COMPLEXinit(float Re,float Im) {
+    Complex t = malloc(sizeof *t);
+    t->Re = Re;
+    t->Im = Im;
+    return t;
+}
+float Re(Complex t) {return t->Re;}
+float Im(Complex t) { return  t->Im;}
+Complex COMPLEXmult(Complex a,Complex b) {
+    return COMPLEXinit(a->Re * b->Re - a->Im * b->Im,
+                       a->Re * b->Im + a->Im*b->Re);
+}
+#+end_src>
+
+*** 队列的一级ADT
+#+begin_src c
+typedef struct queue *Q;
+void QUEUEdump(Q);
+Q QUEUEinit(int MaxN);
+int QUEUEempty(Q);
+void QUEUEput(Q,Item);
+Item QUEUEget(Q);
+
+typedef int Item;
+// Q是指向链表的指针，链表是一个结构体，里面记录头和尾指针，存储数据使用链表；
+typedef struct queue *Q;
+typedef struct Qnode *link;
+struct Qnode {
+    Item item;
+    link next;
+};
+// 队列的操作方式插入到尾部，删除从头部开始
+struct queue {link head; link tail;};
+// new是从头部往后面添加链接
+link New (Item item,link next) {
+    link t = malloc(sizeof *t);
+    t->item = item;
+    t->next = next;
+    return t;
+}
+void QUEUEdump(Q);
+Q QUEUEinit(int MaxN) {
+    Q q = malloc(sizeof *q);
+    q->head = NULL;
+    return q;
+}
+int QUEUEempty(Q q) { return q->head == NULL;}
+void QUEUEput(Q q,Item item) {
+    if (q->head == NULL) {
+        q->tail = New(item,q->head);
+        q->head = q->tail;// 头和尾指向同一个
+        return;
+    }
+     q->tail->next = New(item,q->tail->next);
+     q->tail = q->tail->next; // 结尾更新为最新的节点
+}
+Item QUEUEget(Q q) {
+    link t = q->head->next;// 这里不写为q->head，后续free函数导致节点为null；
+    Item item = q->head->item;
+    free(q->head);
+    q->head = t;
+    return item;
+}
+
+#+end_src>
