@@ -1,0 +1,75 @@
+* 第四章练习
+
+** 4.32
+    #+begin_src c
+    #include <stdlib.h>
+    #include <printf.h>
+    // 数组实现链表
+    typedef int Item;
+    static Item *q;
+    static int N,tail,head;
+    // 实际申请空间比要求大1，刚好可以实现对队列边界的检查；
+    // 初始时一直放元素，tail差一个元素到head就是满了，实际可以放入元素的大小
+    // 仍旧是maxN；每次head取元素就先head = head%N，刚好可以拿到最先放入的元素；
+    void QUEUEinit(int maxN) {
+	N = maxN+1;
+	q = malloc(N * sizeof (Item));
+	head = N; tail = 0;// head=N和tail其实是指向同一个位置，0；
+	printf("N = %d",N);
+    }
+    int QUEUEempty() {
+	return head % N == tail;
+    }
+    void QUEUEerror() {
+	printf("put or get error\n");
+    }
+    void QUEUEput(Item item) {
+	// tail+1追上表示队列满了
+	if (tail+1 == head) {
+	    QUEUEerror();
+	    return;
+	}
+	q[tail++] = item;
+	tail = tail % N;
+    }
+
+    Item QUEUEget() {
+	if (QUEUEempty()) {
+	    QUEUEerror();
+	    return 0;
+	}
+	head = head % N;
+	Item  item = q[head++];
+	return item;
+    }
+    void writQueu() {
+	for (int i=0; i<4; i++)
+	    printf("%d  ",q[i]);
+	printf("\n");
+    }
+
+    int main(int argc,char *argv[]) {
+	QUEUEinit(3);
+	writQueu();
+	QUEUEput(1);
+	writQueu();
+	QUEUEput(2);
+	writQueu();
+	QUEUEput(3);
+	writQueu();
+	printf("get = %d\n",QUEUEget());
+	writQueu();
+	QUEUEput(4);
+	writQueu();
+	printf("get = %d\n",QUEUEget());
+	printf("get = %d\n",QUEUEget());
+	writQueu();
+	QUEUEput(5);
+	writQueu();
+	printf("get = %d\n",QUEUEget());
+	printf("get = %d\n",QUEUEget());
+	printf("get = %d\n",QUEUEget());
+	printf("get = %d\n",QUEUEget());
+
+    }
+    #+end_src>
