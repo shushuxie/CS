@@ -75,6 +75,8 @@ Item STACKpop();
 #+end_src>
 
 *** 数组实现
+*这里利用了一个性质，a%b当啊，b都大于等于0时。值的范围是[0,b-1],我们声明时刚好把实际大小增加1.那么可以使用的索引范围就是[0,maxN-1],
+这样很方便操作头尾指针同时满足head==tail那么为空，tail+1==head，此时为满，这也是为什么初始化head=N的原因*
 #+begin_src c
 typedef int Item;
 static int *s;
@@ -411,15 +413,193 @@ int main() {
     return 0;
 }
 #+end_src>
+*** 练习part2
+**** 4.32
+    #+begin_src c
+    #include <stdlib.h>
+    #include <printf.h>
+    // 数组实现链表
+    typedef int Item;
+    static Item *q;
+    static int N,tail,head;
+    // 实际申请空间比要求大1，刚好可以实现对队列边界的检查；
+    // 初始时一直放元素，tail差一个元素到head就是满了，实际可以放入元素的大小
+    // 仍旧是maxN；每次head取元素就先head = head%N，刚好可以拿到最先放入的元素；
+    void QUEUEinit(int maxN) {
+	N = maxN+1;
+	q = malloc(N * sizeof (Item));
+	head = N; tail = 0;// head=N和tail其实是指向同一个位置，0；
+	printf("N = %d",N);
+    }
+    int QUEUEempty() {
+	return head % N == tail;
+    }
+    void QUEUEerror() {
+	printf("put or get error\n");
+    }
+    void QUEUEput(Item item) {
+	// tail+1追上表示队列满了
+	if (tail+1 == head) {
+	    QUEUEerror();
+	    return;
+	}
+	q[tail++] = item;
+	tail = tail % N;
+    }
 
+    Item QUEUEget() {
+	if (QUEUEempty()) {
+	    QUEUEerror();
+	    return 0;
+	}
+	head = head % N;
+	Item  item = q[head++];
+	return item;
+    }
+    void writQueu() {
+	for (int i=0; i<4; i++)
+	    printf("%d  ",q[i]);
+	printf("\n");
+    }
 
+    int main(int argc,char *argv[]) {
+	QUEUEinit(3);
+	writQueu();
+	QUEUEput(1);
+	writQueu();
+	QUEUEput(2);
+	writQueu();
+	QUEUEput(3);
+	writQueu();
+	printf("get = %d\n",QUEUEget());
+	writQueu();
+	QUEUEput(4);
+	writQueu();
+	printf("get = %d\n",QUEUEget());
+	printf("get = %d\n",QUEUEget());
+	writQueu();
+	QUEUEput(5);
+	writQueu();
+	printf("get = %d\n",QUEUEget());
+	printf("get = %d\n",QUEUEget());
+	printf("get = %d\n",QUEUEget());
+	printf("get = %d\n",QUEUEget());
 
+    }
+    #+end_src>
+**** 4.33
+#+begin_src c
+#include <stdlib.h>
+#include <printf.h>
+typedef int Item;
+typedef struct node *link;
+struct node{
+    Item item;
+    link next;
+};
+static link head,tail;
+void QUEUEinit(int maxN) {
+    head = NULL;
+}
 
-** 复制和索引项
+int QUEUEempty() {
+    return head == tail;
+}
+
+link NEW(Item item,link next) {
+    link t = malloc(sizeof *t);
+    t->item = item;
+    t->next = next;
+    return t;
+}
+void QUEUEerror(){
+    printf("get wrong queue is empty");
+}
+
+void QUEUEput(Item item,link next) {
+    if (head==NULL) {
+        link t = NEW(item,tail);
+        if (t == NULL) {
+            QUEUEerror();
+            return;
+        }
+        head = (tail = t);
+        return;
+    }
+    //这里的tail->next分两种情况：前面表示当前最后节点下一个是新建节点，相当于拼接到了最后
+    // 函数参数里面的表示新节点的最后指向和原链表指向一致，其实就是指向NULL；
+    link t = NEW(item,tail->next);
+    if (t == NULL) {
+        QUEUEerror();
+        return;
+    }
+    tail->next = t;
+    tail = tail->next;
+}
+Item QUEUEget() {
+    if (head == NULL) {
+      QUEUEerror();
+        return -1;
+    }
+    Item  item = head->item;
+    link t = head->next;
+    free(head);
+    head = t;
+    return item;
+}
+
+int main(){
+    QUEUEinit(3);
+    QUEUEput(1,tail);
+    QUEUEput(2,tail->next);
+    QUEUEput(3,tail->next);
+    printf("%d  ",QUEUEget());
+    printf("%d  ",QUEUEget());
+    printf("%d  ",QUEUEget());
+    printf("%d  ",QUEUEget());
+
+}
+#+end_src>
+**** 4.34
+=EAs+Y+QUE**+st+*+lO*n++*=
+| opr | result    |
+|-----+-----------|
+| E   | E         |
+| A   | A E       |
+| s   | A E s     |
+| +   | E s       |
+| Y   | Y E s     |
+| +   | E s       |
+| Q   | Q E s     |
+| U   | U Q E s   |
+| E   | E U Q E s |
+| *   | E U Q E   |
+| *   | E U Q     |
+| +   | U Q       |
+| s   | U Q s     |
+| t   | U Q s t   |
+| +   | Q s t     |
+| *   | Q s       |
+| +   | s         |
+| l   | s l       |
+| O   | O s l     |
+| *   | s l       |
+| n   | s l n     |
+| +   | l n       |
+| +   | n         |
+| *   |           |
+
+**** 4.35
+#+begin_quote
+=E a s Y=
+1) E s a Y : E+as**Y+
+2) Y a s E : E a s Y+ ,Y最先弹出，后面只能跟着E或s，不能是a
+3) a Y s E : Ea*sY+*+
+4) a s Y E : Ea*s*Y++
+#+end_quote
+
+** TODO 复制和索引项
 不允许重复数据，及其一些是想方式
-
-
-*** 栈实现
 
 ** 一级ADT                                                       :definition:
 =定义4.4 一级数据类型是一种我们可以有多种潜在实例的类型，可以把它赋给那些能够声明为保存这些实例的变量。=
