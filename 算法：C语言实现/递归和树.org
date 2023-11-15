@@ -9,3 +9,105 @@
 递归程序满足两个基本属性
 + 它们必须明确地解决归纳基础（归纳的基本调节，结束调节）
 + 每一次递归调用，必须包括更小的参数值（可以回到归纳基础那边，结束递归）
+
+
+** 链表递归函数示例
+
+#+begin_src c
+  // 计算链表长度
+  int count (link x)
+    {
+      if (x == NULL) return 0;
+      return 1 + count(x -> next);
+    }
+#+end_src
+
+#+begin_src c
+    // 遍历链表
+  void traverse(link h, void (*visit)(link))
+    {
+      if (h == NULL) return;
+      (*visit)(h);
+      traverse(h->next, visit);
+    }
+#+end_src
+
+#+begin_src c
+  // 遍历链表
+  void traverseR(link h, void (*visit)(link))
+    {
+      if (h == NULL) return;
+      traverserR(h->next, visit);
+      (*visit)(h);
+    }
+#+end_src
+
+#+begin_src c
+  // 删除链表中对应的值
+  link delete(link x, Item v)
+    {
+      if (x == NULL) return NULL;
+      if (eq(x->item,v))
+	{
+	  link t = x->next; free(x); return t;
+	}
+      x -> next = delete(x-> next,v);
+      return x;
+
+    }
+#+end_src
+
+
+** 练习题
+
+*** part1
+
+**** 5.1
+#+begin_src c
+#include <math.h>
+#include <printf.h>
+
+int factorial(int N) {
+    if (N == 0) return 1;
+    return N * factorial(N-1);
+}
+// log计算 log(a*b) = log(a) + log(b)
+double logFactorial(int N) {
+    if (N == 0) return log10(1);
+    return log10(N) + logFactorial(N-1);
+}
+
+int main() {
+
+    double a = log10(6);
+    int b = factorial(3);
+    double c = logFactorial(3);
+
+    printf(" a = %f  \n b = %d \n c = %f\n",a,b,c);
+
+
+}
+#+end_src
+
+**** 5.2
+#+begin_src c
+#include <printf.h>
+
+//计算 N! % M  有如下性质
+// a * b % M = (a % M) * (b % M)%M;
+// N! % M = ((N%M)*(N-1 %M)... (1%M)) % M;
+int modFactorial(int N, int M) {
+    if (N == 1) return 1 % M;
+    return (N%M * modFactorial(N-1,M))%M;
+}
+
+int main() {
+
+    int a = modFactorial(5,7);
+    int b = 120 % 7;
+    printf(" a =%d\n b = %d\n",a,b);
+
+
+
+}
+#+end_src
