@@ -735,31 +735,3 @@ Item QUEUEget(Q q) {
 }
 
 #+end_src>
-
-
-** 双端队列
-双端队列的性质，可以从两端操作队列,从头部插入，头部删除，尾部插入尾部删除；即具有栈的性质--FILO，也有队列的性质--FIFO
-
-*** 双端队列ADT
-#+begin_src c
-  struct dqueue *dqueue;
-  void DqueueInit();
-  link headInsert(Item item, link next);
-  Item headOut(Link head);
-  link tailInsert(Item item,link next);
-  Item tailOut(Link tail);
-  int DqueueEmpty();
-#+end_src
-
-*** 链表实现双端队列
-
-*** 数组实现双端队列
-
-** 随机队列
-
-** 优先队列
-
-
-
-
-

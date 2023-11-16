@@ -11,6 +11,10 @@
 + 每一次递归调用，必须包括更小的参数值（可以回到归纳基础那边，结束递归）
 
 
+** 欧几里得-最大公约数（辗转相除法）
+
+
+
 ** 链表递归函数示例
 
 #+begin_src c
@@ -109,5 +113,57 @@ int main() {
 
 
 
+}
+#+end_src
+
+**** 5.5
+#+begin_src c
+int gcd(int m, int n) {
+    while (n != 0) {
+	n = m%n;
+	if (n != 0) {
+	    m = n;
+	}
+    }
+
+    return m;
+}
+#+end_src
+
+**** 5.6
+#+begin_example
+gcd(89,55)
+  gcd(55,34)
+    gcd(34,21)
+      gcd(21,13)
+        gcd(13,8)
+	  gcd(8,5)
+	    gcd(5,3)
+	      gcd(3,2)
+	        gcd(2,1)
+		  gcd(1,0)
+#+end_example
+
+**** 5.9
+#+begin_src c
+int stackTailCal(char *NRP) {
+    if (*NRP == '\0')
+        return pop();
+    if (*NRP == '*') {
+        push(pop() * pop());
+        return stackTailCal(++NRP);
+    }
+    if (*NRP == '+') {
+        push(pop()+pop());
+        return stackTailCal(++NRP);
+    }
+    push(*NRP - 48);
+    return stackTailCal(++NRP);
+}
+int main() {
+    char *str = "345*+";
+    printf("========%d\n", stackTailCal(str));
+
+    return 0;
 }
 #+end_src
