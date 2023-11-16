@@ -1,4 +1,10 @@
-**** evil冲突导致特殊用法
+
+* 常用技巧
+1) =C-x n s/w= 只显示该级标题；
+2) =C-c C-,= 插入各种块，更容易判定为block，方便折叠
+3) =C-c C-c= 重排表格，列表统一；todo百分比计算，标题上面可以插入标签等
+4) =M-0= 实现当前窗口和treemacs之间的光标切换 
+* evil冲突导致特殊用法
 + treemacs使用树，需要进入插入模式，或者n/p移动
 + dashboard也需要使用插入模式然后进入选择
 + org文档进行源码生成需要C-g来取消补全操作，然后TAB才可以使用
@@ -11,7 +17,7 @@
   C-c C-u 跳到上一级标题（upper）
 + *M-S-\* 可以格式化正文内容
 
-**** projectile 使用
+* projectile 使用
 projectile是一个项目管理软件，一般情况下会自动识别项目；如果项目是git或svn或者别的工具管理的项目就会自动识别
 如果不行就在项目项目的根目录下添加一个 =.projectile= 的空白文件
 
@@ -25,9 +31,15 @@ projectile是一个项目管理软件，一般情况下会自动识别项目；�
 | !     | run shell command                                       |
 | D     | dired by name 访问文件夹，在整个页面?                       |
 | b     | switch to buffer 和切换类似，上面的应该是projectile的buffer |
+| s g   | 使用grep搜索项目内容                                       |
+| s a   | 使用ack搜索项目内容                                        |
+| s A   | ag搜索                                                   |
+| s r   | rg搜索                                                   |
+
+*使用C-u 加上搜索命令可以设置一些额外的参数*
 
 
-**** treemacs
+* treemacs
 [[https://github.com/Alexander-Miller/treemacs#customizing-themes-and-icons][treemacs github地址]]
 
 1) =M-0= 光标切换到文件区

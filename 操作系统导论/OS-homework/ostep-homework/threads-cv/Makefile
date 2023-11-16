@@ -17,6 +17,5 @@ main-two-cvs-while: main-two-cvs-while.c $(HEADERS)
 	gcc -o main-two-cvs-while main-two-cvs-while.c -Wall -pthread
 
 main-two-cvs-while-extra-unlock: main-two-cvs-while-extra-unlock.c $(HEADERS)
-	gcc -o main-two-cvs-while-extra-unlock main-two-cvs-while-extra-unlock.c -Wall -pthread
-
+	gcc -o main-two-cvs-while-extra-unlock main-two-cvs-while-extra-unlock.c -Wall -pthreadq
 
