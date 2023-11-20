@@ -15,6 +15,13 @@
 + 等宽线 =等宽线=
 + 斜体 /斜体/
 + -代码- -code-
++ `=emacs=` 行内代码
++ 使用#插入行内代码
+  # pythone
+  print("Hello, World!")
+  #
+
+
 #+begin_quote
 加粗 *加粗*
 下划线 _下划线_
