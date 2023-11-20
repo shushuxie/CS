@@ -14,6 +14,47 @@
 + 波浪线 ～波浪线～
 + 等宽线 =等宽线=
 + 斜体 /斜体/
++ -代码- -code-
+#+begin_quote
+加粗 *加粗*
+下划线 _下划线_
+波浪线 ～波浪线～
+等宽线 =等宽线=
+斜体 /斜体/
+-代码- -code-
+#+end_quote
+
+** 各种引用块展示
+*快捷键* =C-c C-,=
+1. quote
+    #+begin_quote
+    这是一个引用块
+    #+end_quote
+2. src
+   #+begin_src c
+     // c语言渲染
+     int main(int argc, char *argv[]) {
+       printf("Hello Emacs");
+       }
+   #+end_src
+3. center
+   #+begin_center
+   center,不知道什么效果
+   #+end_center
+4. comment
+   #+begin_comment
+   comment展示
+   #+end_comment
+5. example
+   #+begin_example
+   example展示
+   #+end_example
+6. verse
+   #+begin_verse
+   verse展示
+   #+end_verse
+
+
 
 ** 大纲分级
 总共可以分10级，也可以有子类
