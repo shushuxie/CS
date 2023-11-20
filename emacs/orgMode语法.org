@@ -1,7 +1,4 @@
 #+COLUMNS: %25ITEM %TAGS %PRIORITY %TODO
-这里开始测试脚注[fn:1] , 这里是第二个脚注[fn:2]
-<<test>>
-[[*属性][属性]]
 ** org mode简介
 是一种文档形式，和markdown类似，但是比markdown复杂和强大；在org文档只在emacs中编辑；
 [[https:orgmode.org/orgguide.pdf][orgmode官方文档]]
@@ -129,7 +126,6 @@ C-c C-u Backward to higher level heading.
 
 
 ** 脚注
-就是引用内容,格式必须是fn开始，[fn:3]
 
 #+caption: 快捷键
 | 快捷键    | 功能                        |
@@ -138,10 +134,6 @@ C-c C-u Backward to higher level heading.
 | C-c C-c   | 脚注和引用之间跳转          |
 
 
-1. [fn:脚注名字]
-   [fn:脚注名字] 脚注内容
-2. [fn::脚注内容]
-3. [fn:脚注名字:脚注内容】
 
 
 
@@ -178,13 +170,6 @@ C-c C-u Backward to higher level heading.
 
   
 ** 链接
-声明方式[[test][内部链接跳转测试]]
-"[[link][description]"
-#+begin_quote
- '[[[#my-custom-id]]]’ which links to the entry with the
-‘CUSTOM_ID’ property ‘my-custom-id’.
-Links such as ‘[[My Target]]]’ or ‘[[My Target]][Find my target]]’ lead to a text
-#+end_quote
 
 + 网站https地址
 + 文件地址file
@@ -206,7 +191,6 @@ Links such as ‘[[My Target]]]’ or ‘[[My Target]][Find my target]]’ lead 
 [[file:README.org][readme文件]]
 [[https:www.google.com][谷歌网址]]
 [[https:www.baidu.com][百度网址]]
-[[test][test]]
 
 
 ** 属性
@@ -289,11 +273,6 @@ C-c C-c d Remove a property from the current entry.
 - State "DOING"      from "TODO"       [2023-10-31 二 21:59]
 * TODO [#B] 
 
-[fn:1] 第一个脚注
-* Footnotes
-DEADLINE: <2023-11-02 四>
-
-[fn:3]自动添加脚注 
 
 * TODO 链接地址[2023-10-31 二]
 DEADLINE: <2023-10-31 二 23:47>
