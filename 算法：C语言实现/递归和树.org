@@ -62,113 +62,6 @@
 #+end_src
 
 
-** 练习题
-
-*** part1
-
-**** 5.1
-#+begin_src c
-#include <math.h>
-#include <printf.h>
-
-int factorial(int N) {
-    if (N == 0) return 1;
-    return N * factorial(N-1);
-}
-// log计算 log(a*b) = log(a) + log(b)
-double logFactorial(int N) {
-    if (N == 0) return log10(1);
-    return log10(N) + logFactorial(N-1);
-}
-
-int main() {
-
-    double a = log10(6);
-    int b = factorial(3);
-    double c = logFactorial(3);
-
-    printf(" a = %f  \n b = %d \n c = %f\n",a,b,c);
-
-
-}
-#+end_src
-
-**** 5.2
-#+begin_src c
-#include <printf.h>
-
-//计算 N! % M  有如下性质
-// a * b % M = (a % M) * (b % M)%M;
-// N! % M = ((N%M)*(N-1 %M)... (1%M)) % M;
-int modFactorial(int N, int M) {
-    if (N == 1) return 1 % M;
-    return (N%M * modFactorial(N-1,M))%M;
-}
-
-int main() {
-
-    int a = modFactorial(5,7);
-    int b = 120 % 7;
-    printf(" a =%d\n b = %d\n",a,b);
-
-
-
-}
-#+end_src
-
-**** 5.5
-#+begin_src c
-int gcd(int m, int n) {
-    while (n != 0) {
-	n = m%n;
-	if (n != 0) {
-	    m = n;
-	}
-    }
-
-    return m;
-}
-#+end_src
-
-**** 5.6
-#+begin_example
-gcd(89,55)
-  gcd(55,34)
-    gcd(34,21)
-      gcd(21,13)
-        gcd(13,8)
-	  gcd(8,5)
-	    gcd(5,3)
-	      gcd(3,2)
-	        gcd(2,1)
-		  gcd(1,0)
-#+end_example
-
-**** 5.9
-#+begin_src c
-int stackTailCal(char *NRP) {
-    if (*NRP == '\0')
-        return pop();
-    if (*NRP == '*') {
-        push(pop() * pop());
-        return stackTailCal(++NRP);
-    }
-    if (*NRP == '+') {
-        push(pop()+pop());
-        return stackTailCal(++NRP);
-    }
-    push(*NRP - 48);
-    return stackTailCal(++NRP);
-}
-int main() {
-    char *str = "345*+";
-    printf("========%d\n", stackTailCal(str));
-
-    return 0;
-}
-#+end_src
-
-
 
 ** 分治法
 #+begin_quote
@@ -281,3 +174,114 @@ $2^{n}-1$
    #+end_src
 
   
+
+
+
+** 练习题
+
+*** part1
+
+**** 5.1
+#+begin_src c
+#include <math.h>
+#include <printf.h>
+
+int factorial(int N) {
+    if (N == 0) return 1;
+    return N * factorial(N-1);
+}
+// log计算 log(a*b) = log(a) + log(b)
+double logFactorial(int N) {
+    if (N == 0) return log10(1);
+    return log10(N) + logFactorial(N-1);
+}
+
+int main() {
+
+    double a = log10(6);
+    int b = factorial(3);
+    double c = logFactorial(3);
+
+    printf(" a = %f  \n b = %d \n c = %f\n",a,b,c);
+
+
+}
+#+end_src
+
+**** 5.2
+#+begin_src c
+#include <printf.h>
+
+//计算 N! % M  有如下性质
+// a * b % M = (a % M) * (b % M)%M;
+// N! % M = ((N%M)*(N-1 %M)... (1%M)) % M;
+int modFactorial(int N, int M) {
+    if (N == 1) return 1 % M;
+    return (N%M * modFactorial(N-1,M))%M;
+}
+
+int main() {
+
+    int a = modFactorial(5,7);
+    int b = 120 % 7;
+    printf(" a =%d\n b = %d\n",a,b);
+
+
+
+}
+#+end_src
+
+**** 5.5
+#+begin_src c
+int gcd(int m, int n) {
+    while (n != 0) {
+	n = m%n;
+	if (n != 0) {
+	    m = n;
+	}
+    }
+
+    return m;
+}
+#+end_src
+
+**** 5.6
+#+begin_example
+gcd(89,55)
+  gcd(55,34)
+    gcd(34,21)
+      gcd(21,13)
+        gcd(13,8)
+	  gcd(8,5)
+	    gcd(5,3)
+	      gcd(3,2)
+	        gcd(2,1)
+		  gcd(1,0)
+#+end_example
+
+**** 5.9
+#+begin_src c
+int stackTailCal(char *NRP) {
+    if (*NRP == '\0')
+        return pop();
+    if (*NRP == '*') {
+        push(pop() * pop());
+        return stackTailCal(++NRP);
+    }
+    if (*NRP == '+') {
+        push(pop()+pop());
+        return stackTailCal(++NRP);
+    }
+    push(*NRP - 48);
+    return stackTailCal(++NRP);
+}
+int main() {
+    char *str = "345*+";
+    printf("========%d\n", stackTailCal(str));
+
+    return 0;
+}
+#+end_src
+
+
+*** part2
