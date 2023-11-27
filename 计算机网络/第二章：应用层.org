@@ -69,5 +69,139 @@
 + 目录服务,DNS
 + 流式视频和P2P
 
-
 * 2.2 Web和HTTP
+
+** 2.2.1 HTTP概况
+
+=超文本传输协议（HyperText Transfer Protocol，HTTP）= 主要是为了传输网页的
+应用层使用HTTP协议，运输层使用TCP或UDP，通过套接字进行传输数据；
+HTTP是一个无状态协议，不会记录客户的任何信息，因此后面才有了cookie等功能
+
+** 2.2.2 非持续性连接和持续性连接
+
+HTTP可以记录一个状态，该连接是不是持续的，如果不是请求一次后就会断开，下次需要重新连接
+持续性连接就是一直连接 keep-alive；
+
+** 2.2.3 HTTP报文格式
+
+HTTP有两种报文： =请求报文= 和 =响应报文=
+
+1. HTTP请求报文
+   #+begin_src http
+     GET /somedir/page.html HTTP/1.1
+     Host: www.someschool.edu
+     Connection: close
+     User-agent: Mozilla/5.0
+     Accept-language: fr
+   #+end_src
+   上面报文第一行叫做 =请求行= ，后面的叫做 =首部行（Header line）=
+   请求行有3个字段： =方法字段= 、 =URL字段= 和 =HTTP版本字段= ;
+   方法包括GET、POST、HEAD、PUT、和DELETE；大部分是GET然后是post；
+
+   #+: caption
+   [[file:imag/Snipaste_2023-11-24_22-58-49.png]]
+
+2. HTTP响应报文
+   #+begin_src HTTp
+     HTTP/1.1 200 ok
+     Connection close
+     Date Tue, 18 Aug 2015 15:44:04 GMT
+     Server: Apache/2.2.3 (Centos)
+     Last-Modified: Tue, 18 Aug 2015 15:11:03 GMT
+     Content-Length: 6821
+     Content-Type: text/html
+
+     (data data data data data ...)
+   #+end_src
+
+   #+: caption 响应报文格式
+   [[file:imag/Snipaste_2023-11-24_23-04-07.png]]
+
+
+
+
+** 2.2.4 用户与服务器交互：Cookie
+
+cookie是有服务器设置的，用户访问服务器，服务器会设置cookie返回，然后就对这次连接有了记录，
+HTTP是一个无状态协议，这样就可以保存状态了
+
+** 2.2.5 Web缓存
+=Web缓存也叫代理服务器= 代理的意思就是代替原来的web服务器完成工作，所有叫代理
+代理服务器缓存一些常用的请求，距离用户更近，请求响应更快；
+
+#+caption: 缓存服务器图
+[[file:imag/Snipaste_2023-11-25_12-11-28.png]]
+
+缓存更新：缓存服务器上面会记录一下最后更新时间，一段时间请求时缓存服务器会询问源服务器对比最后资源的修改时间
+如果没有更改就返回原来的，如果更改就替换副本，返回正确资源；
+
+* 2.3 因特网中的电子邮件
+#+caption: 电子邮件系统整体描述
+[[file:imag/Snipaste_2023-11-25_13-03-39.png]]
+
+邮件代理就是我们的客户端，相当于代替我们发邮件，服务器是邮件服务器，通过SMTP协议进行发邮件；
+这个是整体结构，现在我们使用的不是个人服务器，大都用的是公司或者公共服务器。outlook。gmali、foxmail、163、qq等
+
+=邮件访问的流程=
+*A通过邮件代理（SMTP）--> 公共邮件服务器（outlook）SMTP--> 公共邮件服务器（gmail）pop3，IMAP--> B邮件代理；*
+#+begin_quote
+当 Alice 使用 Outlook 发送邮件给 Bob，而 Bob 使用 Gmail 邮箱，并且双方都使用 Outlook 客户端时，整个邮件传递过程可以分为几个步骤：
+
+1. 编写邮件： Alice 打开 Outlook 客户端，创建一封邮件，输入收件人（Bob 的邮箱地址）、主题和正文，然后点击发送。
+2. 发件服务器处理： Outlook 客户端通过 SMTP 协议将邮件发送到 Alice 所使用的邮件服务提供商的发件服务器。这个发件服务器负责将邮件传递给 Bob 所使用的邮件服务提供商的服务器。
+3. 发件服务器之间的传递： Alice 的邮件服务提供商的发件服务器使用 SMTP 协议将邮件传递给 Bob 所使用的邮件服务提供商的接收服务器。这个过程可能涉及到 MX 记录的查找，以确定接收服务器的地址。
+4. 接收服务器接收邮件： Bob 的邮件服务提供商的接收服务器接收到 Alice 发送的邮件，并将其存储在 Bob 的邮箱中。这个过程可以使用协议如 IMAP 或 POP3。
+5. Bob 收取邮件： 当 Bob 打开他的 Outlook 客户端时，它会通过 IMAP 或 POP3 协议连接到 Gmail 服务器，从服务器上拉取新的邮件。这样，Bob 就能看到 Alice 发送的邮件。
+
+整个过程中，SMTP（发件服务器之间的传递）和 IMAP/POP3（Bob 收取邮件）是关键的协议。在这个过程中，邮件经过多个服务器的传递，确保了安全、可靠的邮件传递。需要注意的是，Gmail 使用加密（例如 TLS）来保护邮件的传递过程中的数据安全性。
+#+end_quote
+** 2.3.1 SMTP协议
+
+1. SMTP协议是邮件推送，一个邮件服务器推送到另一个邮件服务器；
+2. 协议出现的日期早于HTTP
+3. 可以在本地服务器安装postfix软件，形成本地服务器；通过 =telnet 127.0.0.1 25= 进行发邮件
+
+
+** 2.3.2 与HTTP对比
+
+=相同点= 二者都是传送文件，http是从服务器传送到客户端，邮件是从一个邮件服务器到另一个服务器；
+=不同点=
+1. http整体来说是一个 =拉协议= ，把文件从服务器拉取到本地，邮件服务是一个 =推协议= ，从一个服务器推到另一个；
+2. SMTP要求每个报文采取7bit编码，正常的是8bit；
+3. 如何处理一个即包含文本又包含图像的文档；http是把每个对象封装到它自己的http报文中，单独封装；SMTP是把所有对象封装到一个报文当中
+
+   
+** 2.3.3 邮件报文格式
+#+caption: 报文格式
+#+begin_src mail
+  From: alice@crepes.fr
+  To: bob@hamburger.edu
+  Subject: Searching for the metting of life.
+#+end_src
+
+** 2.3.4 邮件访问协议
+
+1. SMTP（不是访问协议，是发送协议）
+   邮件推送协议，一般是代理用户把邮件推送到邮件服务器，服务器把邮件推送到别的平台服务器上面；
+2. =pop3=
+   极为简单的邮件访问协议📧；简单但是功能有限；当用户打开代理，就会启用pop3进行拉取邮件
+   有两种拉取方式，拉取并删除，拉取并保留，删除会删除原服务器上面的邮件；这样只能有一个移动平台可以获取
+   邮件了；
+3. =IMAP=
+   比pop3有更多功能，更复杂；IMAP把每个报文和一个文件夹联系起来；这样就可以为邮件创建文件夹，
+   还有一个重要的功能是允许用户 =获取部分邮件内容=
+4. 基于WEB的电子邮件
+   用户代理就是浏览器，通过HTTP通信；用户推送邮件到自己的服务器提供商也是使用http，服务器之间仍旧使用SMTP通信；
+
+  
+   
+
+
+
+
+
+
+
+
+* 2.4 DNS: 因特网目录服务
+

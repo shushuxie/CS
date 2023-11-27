@@ -1,0 +1,34 @@
+常用的一些命令
+
+1. 查询电脑IP
+   #+begin_src markdown
+     在macOS上，你可以使用Terminal（终端）应用程序执行以下命令来查询IP地址：
+
+1. 查询本地 IP 地址：
+
+   ipconfig getifaddr en0
+
+这会返回连接到网络的第一个接口（通常是Wi-Fi）的IP地址。如果你使用的是以太网连接，可能需要替换 en0 为 en1 或其他合适的接口标识符。
+
+2. 查询公共 IP 地址：
+
+   curl ifconfig.me
+
+或者
+   curl icanhazip.com
+
+这些命令通过使用curl工具从特定的在线服务获取公共IP地址。
+
+3. 查询域名的 IP 地址：
+
+   nslookup example.com
+
+或者
+   dig example.com
+
+替换 example.com 为你要查询的域名。这将返回该域名的IP地址。
+请注意，实际命令的输出可能因你的网络配置和连接方式而有所不同。确保在Terminal中执行这些命令。
+   #+end_src
+
+2. 连接邮件服务器
+   telnet 邮件服务器IP 25（端口号）
