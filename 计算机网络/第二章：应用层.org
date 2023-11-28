@@ -204,4 +204,247 @@ HTTP是一个无状态协议，这样就可以保存状态了
 
 
 * 2.4 DNS: 因特网目录服务
+DNS是一个域名服务系统，信息在互联网中传递需要知道具体的主机，主机IP又难以记忆，因此需要一个hostname来标识，这个就是域名；
+但是域名和主机不是一一对应的，一个域名是对应多个主机的，需要看具体的配置。
+对于人类提供域名，对路由器提供IP，DNS就是协调二者工作的系统；
+#+caption: DNS基本概念
+#+begin_quote
+DNS（Domain Name System）是一个用于将域名（例如 www.example.com）转换为相应 IP 地址的分布式数据库系统。它充当互联网上地址簿的角色，为用户提供了更容易记忆的域名，而不是直接使用 IP 地址连接到网络资源。
+以下是DNS的一些关键概念：
 
+1. 域名（Domain Name）： 域名是人们更容易理解和记忆的网站地址，例如 www.example.com。每个域名对应一个唯一的 IP 地址。
+2. IP 地址（Internet Protocol Address）： 每个连接到互联网的设备都有一个唯一的 IP 地址，它用于在网络中标识该设备。
+3. DNS服务器： DNS 服务器是存储了域名与对应 IP 地址映射关系的服务器。当用户在浏览器中输入一个域名时，计算机首先会查询 DNS 服务器以获取相应的 IP 地址。
+4. 域名解析（Domain Resolution）： 这是将用户输入的域名转换为相应 IP 地址的过程。这个过程涉及到查询 DNS 服务器，获取域名与 IP 地址的映射关系。
+5. 域名系统层次结构： 域名系统采用了分层次的结构。顶级域（Top-Level Domain，TLD）包括通用顶级域（gTLD）如 ".com"、".org"、国家代码顶级域（ccTLD）如 ".us"、".uk"，以及更低级的域。
+6. 域名注册商： 这些是授权注册特定顶级域的机构。用户通过域名注册商注册域名，并且可以通过域名注册商进行域名管理。
+7. 递归解析与迭代解析： 递归解析是指 DNS 客户端向 DNS 服务器提出查询请求，并由 DNS 服务器负责查询直到找到所需的信息。迭代解析是指 DNS 客户端向 DNS 服务器提出查询请求，DNS 服务器要么返回所需的信息，要么指导客户端到其他 DNS 服务器查询。
+8. DNS缓存： 为了提高性能和减轻 DNS 服务器的负担，DNS 服务器会缓存之前查询的结果，以便在以后的查询中更快地返回结果。
+
+DNS在互联网中扮演着至关重要的角色，它使得用户能够使用易记的域名而不是记住复杂的 IP 地址。
+#+end_quote
+
+#+caption: 域名的层级
+#+begin_quote
+域名系统（Domain Name System，DNS）采用了分层次的结构，这种层次结构使得域名管理和解析更加高效和可扩展。域名系统层次结构的不同部分提供了有关特定域的信息。以下是域名层次结构的主要部分：
+
+1. 根域（Root Domain）：
+    根域是DNS层次结构的最高级别。在根域下，没有具体的域名，而是由根服务器（Root Servers）管理。这些根服务器维护了顶级域名服务器（Top-Level Domain Servers）的信息，它们负责管理顶级域名（Top-Level Domains，TLDs）的域名服务器信息。
+2. 顶级域（Top-Level Domains，TLDs）：
+    顶级域是根域下一级的域名。它们是域名系统中的最高级别的域。TLD可以分为两种主要类型：
+3. 通用顶级域（gTLDs）： 通用顶级域包括像.com、.org、.net这样的域名。它们通常代表着某种类别、行业或组织类型。
+4. 国家代码顶级域（ccTLDs）： 国家代码顶级域是代表特定国家或地区的域名，例如.us（美国）、.uk（英国）、.cn（中国）等。每个国家都有自己的ccTLD。
+5. 第二级域名（Second-Level Domains）：
+    第二级域名是位于顶级域下的域名级别。它们是在特定顶级域之下的子域。例如，在.com顶级域下，"example"是一个第二级域名。
+6. 子域（Subdomains）：
+    子域是位于域名结构更低级别的部分。它们是在较高级别域名之下创建的，用于组织和管理网络资源。例如，在一个网站域名（如www.example.com）中，"www"就是一个子域。
+
+域名系统的这种分层结构允许域名在全球范围内分配并管理，同时也为用户提供了更好的组织和识别网络资源的方式。每个层级都有相应的域名服务器，负责管理和提供对应层级的域名解析服务。
+这种结构的灵活性和可伸缩性使得互联网上数以亿计的域名得以顺利运行和管理。
+----------
+域名www.baidu.com是一个典型的域名，它的结构可以分为以下几个部分：
+
+1.子域（Subdomain）： 在这个域名中，"www"是一个子域。子域通常用于标识特定的服务或资源，例如"www"通常用于指示网站的主页。
+2.第二级域名（Second-Level Domain，SLD）： 在这个域名中，"baidu"是第二级域名。第二级域名是域名结构中的核心部分，它通常用于标识特定的组织、品牌或实体。
+3.顶级域（Top-Level Domain，TLD）： 在这个域名中，".com"是顶级域。顶级域通常代表着域名的类型、性质或所属国家/地区。".com"是通用顶级域（gTLD），它通常用于商业目的。
+
+因此，域名www.baidu.com的结构可以总结为：
+
+4.子域： www
+5.第二级域名： baidu
+6.顶级域： .com
+整体而言，www.baidu.com代表百度公司的网站，"www"是用于访问其主页的子域，".com"表示这是一个商业性质的域名。这种结构使得用户能够通过易于记忆的方式访问互联网上的不同资源。
+#+end_quote
+
+#+caption: 计算机如何获取DNS服务器地址
+#+begin_quote
+在 macOS 上，您可以使用终端（Terminal）应用程序来查询当前配置的 DNS 服务器地址。以下是一些步骤：
+
+1.打开终端： 您可以在“应用程序” -&gt; “实用工具”文件夹中找到终端，或者使用Spotlight（按下Command + Space，然后输入Terminal）来搜索并打开终端。
+2.输入命令： 在终端中，输入以下命令并按回车键：
+
+   scutil --dns
+
+这个命令将显示系统当前的 DNS 配置信息。
+
+3.查看DNS服务器地址： 在输出中，找到 "nameserver" 字段，后面的 IP 地址就是您当前使用的 DNS 服务器的地址。示例输出如下：
+
+   DNS configuration
+
+   resolver #1
+     nameserver[0] : 192.168.1.1
+
+在这个示例中，DNS 服务器的地址是 192.168.1.1。
+注意：上述命令会显示系统当前的 DNS 配置，但实际上，macOS 通常通过 DHCP（Dynamic Host Configuration Protocol）从您的路由器或网络提供商那里获取 DNS 服务器的信息。因此，如果您的网络使用 DHCP，那么您看到的 DNS 服务器地址可能是由 DHCP 分配的。
+如果您希望查看更详细的网络配置信息，您还可以使用以下命令：
+networksetup -getdnsservers Wi-Fi
+
+这个命令将显示当前 Wi-Fi 网络连接的 DNS 服务器地址。您可以将 "Wi-Fi" 替换为您正在使用的网络接口的名称，例如 "Ethernet"。
+
+-----
+
+在 Windows 操作系统中，您可以通过几种方式来获取当前配置的 DNS 服务器地址。以下是两种常用的方法：
+方法一：使用命令提示符（Command Prompt）
+
+1.打开命令提示符： 您可以按下 Win + R 键，在弹出的运行窗口中输入 cmd，然后按下 Enter 键打开命令提示符。
+2.输入命令： 在命令提示符中，输入以下命令并按下 Enter 键：
+
+   ipconfig /all
+
+这个命令将显示当前网络连接的详细信息。
+
+3.查看DNS服务器地址： 在输出中，找到您当前网络适配器的信息（例如以太网适配器、无线局域网适配器等），在其中寻找 "DNS 服务器" 字段，后面的地址即为您当前使用的 DNS 服务器地址。
+
+方法二：使用网络连接设置
+
+4.打开网络连接设置： 点击任务栏右下角的网络图标，选择 "网络和Internet设置"，然后选择 "更改适配器选项"。
+5.查看网络适配器属性： 右键点击当前使用的网络适配器（例如 Wi-Fi 或以太网），然后选择 "属性"。
+6.查看DNS设置： 在适配器属性窗口中，找到并双击 "Internet 协议版本 4（TCP/IPv4）" 或 "Internet 协议版本 6（TCP/IPv6）"，然后选择 "属性"。
+7.查看DNS服务器地址： 在弹出的窗口中，您将看到手动设置的 DNS 服务器地址，或者选择 "自动获取 DNS 服务器地址" 选项，此时将显示从 DHCP 获取的 DNS 服务器地址。
+
+以上方法可以帮助您在 Windows 操作系统中找到当前配置的 DNS 服务器地址。请注意，实际 DNS 服务器地址可能因网络配置方式（手动配置或从 DHCP 自动获取）而有所不同。
+#+end_quote
+
+#+caption: msc获取地址例子
+#+begin_example
+DNS configuration
+
+resolver #1
+  search domain[0] : hz.ali.com
+  nameserver[0] : 30.30.30.30
+  timeout  : 30
+  if_index : 6 (en0)
+  flags    : Request A records
+  reach    : 0x00000002 (Reachable)
+
+resolver #2
+  domain   : local
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300000
+
+resolver #3
+  domain   : 254.169.in-addr.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300200
+
+resolver #4
+  domain   : 8.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300400
+
+resolver #5
+  domain   : 9.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300600
+
+resolver #6
+  domain   : a.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300800
+
+resolver #7
+  domain   : b.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 301000
+
+DNS configuration (for scoped queries)
+
+resolver #1
+  search domain[0] : hz.ali.com
+  nameserver[0] : 30.30.30.30
+  timeout  : 30
+  if_index : 6 (en0)
+  flags    : Scoped, Request A records
+  reach    : 0x00000002 (Reachable)
+#+end_example
+
+** 2.4.1 DNS提供的服务
+1. =DNS是什么=
+   1. 一个由分层的DNS服务器实现的分布式数据库；
+   2. 一个使得主机能够查询分布式数据库的应用层协议，DNS通常是运行BIND软件的Unix机器；使用UDP协议，53 port；
+2. =提供服务=
+   *DNS通常是由其他应用层协议所使用，如HTTP、SMTP和FTP；*
+   1) =HTTP域名解析= ，在浏览器输入一个域名地址，会自动解析找到对于ip然后发送请求；
+   2) =主机别名= 可以为主机添加别名方便记忆，主机规范名不容易记忆，可以调用DNS系统获取主机别名对应的规范名和IP；
+   3) =邮件服务器别名= 个人方便记忆的邮件地址，bob@yahooh.com可以进行DNS解析获取对于服务器的规范名和IP地址方便推送；
+      #+begin_quote
+      当涉及到邮箱名的DNS解析以获取邮件服务器信息时，系统会执行MX（Mail Exchange）记录的DNS查询。MX记录指定了处理特定域名电子邮件流量的邮件服务器。
+	下面是解析邮箱名获取邮件服务器的大致流程：
+
+	1.查询MX记录： 当您发送电子邮件到某个域名时，您的邮件客户端或邮件服务器会进行DNS查询以查找目标域的MX记录。这通常涉及向目标域的DNS服务器发送查询请求，询问关于MX记录的信息。
+	2.MX记录内容： MX记录指定了邮件服务器的优先级和域名。优先级用于标识多个邮件服务器之间的首选顺序，数字越低表示优先级越高。域名部分则是指定处理该域名邮件的邮件服务器的地址。
+	3.邮件服务器地址： DNS解析返回MX记录，提供一个或多个邮件服务器的域名。接收方的邮件服务器将根据这些记录，按照优先级连接到相应的邮件服务器来接收邮件。
+	4.连接至邮件服务器： 邮件服务器会使用获取到的邮件服务器域名，通过SMTP（Simple Mail Transfer Protocol）协议与目标邮件服务器建立连接，以便发送或接收邮件。
+
+	总体而言，邮箱名的DNS解析涉及查询目标域的MX记录，这些记录指定了处理特定域名电子邮件的邮件服务器地址和优先级，从而确保邮件能够正确传递到相应的接收方邮件服务器。
+      #+end_quote
+   4) =负载分配= 一个IP集合配置在DNS服务器上，每次查询会返回域名对应的不同IP，缓解服务器压力；
+
+      
+
+
+
+
+
+** 2.4.2 DNS工作机理概述
+DNS数据库不能由一个服务器提供所有服务，距离，服务器崩溃，数据库压力都不允许，因此采用了分布式的服务；
+
+1. 分布式、层次数据库
+    #+caption: 分布式、层次数据库
+    [[file:imag/Snipaste_2023-11-28_15-31-01.png]]
+
+   + *根(DNS)服务器*
+   =根名字服务器提供TLD服务器IP地址= ；400多个根服务器分布在全世界，由13个机构管理；
+   + *顶级域(DNS)服务器*
+   =TLD服务器提供了权威DNS服务器 IP地=
+       对于每个顶级域(如com org net edu和gov)和所有国家的顶级域(如uk fr ca和jp), 有TLD服务器(或服务器集群)。Verisign
+       Global Registry Services公司 护com顶级域 TLD服务器 Educause公司 护edu顶级域TLD服务器。
+   + *权威DNS服务器*
+       在因特网上具有公共可访问主机 如Web服务器和邮件服务器 *每个组织机构必须提供公共可访问的DNS记录*  这些记录将这些主机名
+       字映射为IP地址。一个组织机构 权威DNS服务器收 了 些DNS 录。一个组织机构 能够选 择实现 它自 己的 权威DNS服务器以保存 这些记 录，另一方法
+       是 该组织能够支付费用 让这些 录存储在某个服务提供商 一个权威DNS服务器中。多数大学和大公司实 和 护它们 己基本和 助 备份 权威DNS
+       服务器。
+   + *本地NDS服务器*
+   本地服务器不在层级里面，但是也十分重要； *每个ISP都有一个本地DNS服务器* 也叫默认名服务器，连接时通过DHCP获取DNS解析
+
+   #+caption: DNS服务器查询方式
+   [[file:imag/Snipaste_2023-11-28_15-49-09.png]]
+
+   图中使用了 *递归查询* 和 *迭代查询* ；1和8是对贵查询，后面三个主机查询是迭代查询
+   二者都可能有，下图是递归查询
+
+   #+caption: DNS递归查询
+   [[file:imag/Snipaste_2023-11-28_16-33-18.png]]
+
+   =基本方式就是：首先查询本地，然后从根服务器一级一级迭代查询，直至获取到正确的IP地址=
+
+2. DNS缓存
+   常用的ip一般已经缓存服务器里面了，服务器大概两天会过期缓存；可以使用 =dig www.baidu.com= 或 =nslookup www.baidu.com= 等工具查看路由过程；
+   #+begin_src bash
+     dig example.com
+     nslookup example.com
+     traceroute example.com
+   #+end_src
+
+
+
+** 2.4.3 DNS记录和报文
+DNS服务器存储了 *资源记录(Resource Record,RR)*, RR提供了主机名到IP地址的映射;
