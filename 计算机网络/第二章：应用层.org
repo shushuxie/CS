@@ -200,7 +200,6 @@ HTTP是一个无状态协议，这样就可以保存状态了
 
 
 
-
 * 2.4 DNS: 因特网目录服务
 DNS是一个域名服务系统，信息在互联网中传递需要知道具体的主机，主机IP又难以记忆，因此需要一个hostname来标识，这个就是域名；
 但是域名和主机不是一一对应的，一个域名是对应多个主机的，需要看具体的配置。
@@ -463,7 +462,6 @@ TTL是记录的生存时间，决定记录从缓存中删除的时间。Name和v
        
 
 
-
 * 2.5 P2P文件分发
 P2P(peer to peer),点对点文件分发；每个对等方可以接收或分发文件的任何部分；
 现在使用最多的p2p协议是 =BitTorrent=
@@ -483,16 +481,14 @@ P2P(peer to peer),点对点文件分发；每个对等方可以接收或分发�
    每个洪流都有一个基础设施称为 *追踪器（tracker）* 一个新加入的洪流向tracker注册自己，并周期性的报告自己是否仍在洪流中；
    对等方通过tracker就可以知道有哪些对等方，然后就通过P2P协议加入洪流进行文件传输；
 
-
 * 2.6 视频流和内容分发网
  CDN网络分发系统，就是租用ISP的服务器，把分发的内容存储那里，然后从那里发送到用户的请求当中；
  视频提供商会在服务器中提供不同的清晰度版本，然后根据用户的请求发送不同的版本；
 
- 
 * 2.7 套接字编程：生成网络应用
-
 ** 2.7.1 UDP套接字编程
  UDP不需要提前建立连接，服务器运行，直接接收client发送的请求即可；
+ 通过socket获取的连接可以得到发送请求主机的IP和Port；
  =java idea 打包方式=
  1. idea streature 添加Artifacts jar，给定main位置；源代码模块
  2. 选择artifacts打包（build菜单栏）
@@ -583,3 +579,83 @@ P2P(peer to peer),点对点文件分发；每个对等方可以接收或分发�
     #+end_src
 
  2. =JAVA程序实现TCP=
+    #+caption: server
+    #+begin_src java
+    package org.example;
+
+    import java.io.*;
+    import java.net.ServerSocket;
+    import java.net.Socket;
+
+    public class TCPServer {
+	public static void main(String[] args) {
+	    try {
+		// 创建一个 ServerSocket 对象，监听指定端口
+		ServerSocket serverSocket = new ServerSocket(8888);
+
+		System.out.println("Server listening on port 8888...");
+
+		// 服务器进入监听状态，等待客户端的连接
+		Socket clientSocket = serverSocket.accept();
+
+		// 获取输入流和输出流
+		BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+		PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+
+		// 读取客户端发送的数据
+		String clientMessage = in.readLine();
+		System.out.println("Received from client: " + clientMessage);
+
+		// 发送响应给客户端
+		out.println("Hello from Server!");
+
+		// 关闭连接
+		in.close();
+		out.close();
+		clientSocket.close();
+		serverSocket.close();
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+	}
+    }
+    #+end_src
+
+    
+    #+caption: client
+    #+begin_src java
+    package org.example;
+
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    import java.io.PrintWriter;
+    import java.net.Socket;
+
+    public class TCPClient {
+	public static void main(String[] args) {
+	    try {
+		// 创建一个 Socket 对象，连接到服务器的指定端口
+		Socket socket = new Socket("localhost", 8888);
+
+		// 获取输入流和输出流
+		BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+
+		// 发送数据给服务器
+		out.println("Hello from Client!");
+
+		// 读取服务器的响应
+		String serverMessage = in.readLine();
+		System.out.println("Received from server: " + serverMessage);
+
+		// 关闭连接
+		in.close();
+		out.close();
+		socket.close();
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+	}
+    }
+    #+end_src
