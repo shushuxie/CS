@@ -1,0 +1,46 @@
+* ssh
+可以和服务器建立连接，一般默认是 *22* 端口；
+
+1. 基本命令
+   #+begin_src shell
+     // 基础命令
+     ssh username@remote_host
+
+     // 指定端口
+     ssh -p port_number username@remote_host
+   #+end_src
+
+2. 获取userName
+  #+begin_quote
+  1. =whoami=
+  2. =echo $USER=
+  3. =logname=
+  4. =who= 这个命令将列出当前登录系统的用户信息，包括用户名。
+     xsq              console      11 28 10:02
+     xsq              ttys000      11 29 13:48
+     xsq              ttys001      11 29 14:23
+  5. =w=
+     14:37  up 1 day,  4:36, 3 users, load averages: 3.70 3.03 2.81
+     USER     TTY      FROM              LOGIN@  IDLE WHAT
+     xsq      console  -                二10   28:35 -
+     xsq      s000     -                13:48       - w
+     xsq      s001     -                14:23      14 -zsh
+  #+end_quote
+
+3. 获取hostIP，IP地址
+   #+begin_quote
+   1. =ifconfig | grep inet=
+      eth0中的inet字段
+   2. =ip addr=
+   3. =ipconfig getifaddr en0=
+   4. =curl ipinfo.io/ip= 或者 =curl ifconfig.me= *查看公网IP*
+   #+end_quote
+
+4. 后端运行的服务
+   #+begin_quote
+   1. systemctl命令
+      =systemctl list-units --type=service --state=running=
+   2. service命令
+      =service --status-all=
+   #+end_quote
+
