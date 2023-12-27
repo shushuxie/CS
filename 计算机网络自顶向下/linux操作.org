@@ -44,3 +44,73 @@
       =service --status-all=
    #+end_quote
 
+
+* 本地文件传送到远程服务器
+#+begin_quote
+你可以使用多种方法将本地文件传输到远程服务器。以下是几种常用的方法：
+1. SCP（Secure Copy）
+SCP 是在 SSH 协议基础上进行的文件传输工具，它能够安全地将文件从本地传输到远程服务器，也可以从远程服务器传输文件到本地。
+将本地文件传输到远程服务器的命令示例：
+scp /path/to/local/file username@remote_host:/path/to/remote/location
+
+其中：
+
+1./path/to/local/file 是本地文件路径；
+2.username 是你在远程服务器上的用户名；
+3.remote_host 是远程服务器的地址或主机名；
+4./path/to/remote/location 是文件要存储在远程服务器上的目标路径。
+
+2. SFTP（SSH File Transfer Protocol）
+SFTP 是基于 SSH 安全连接的文件传输协议，提供了类似 FTP 的功能，但是在安全性上更可靠。
+连接远程服务器并上传文件的示例：
+sftp username@remote_host
+put /path/to/local/file /path/to/remote/location
+
+这将通过 SFTP 连接到远程服务器，然后使用 put 命令将本地文件上传到远程服务器指定的路径。
+3. FTP（File Transfer Protocol）
+FTP 是一种常见的文件传输协议，但通常不是安全的，因为它在传输过程中不加密数据。如果你选择使用 FTP，请确保对传输的数据进行了加密或采取其他安全措施。
+4. 使用云服务或工具
+另一种方法是使用云服务（如 Google Drive、Dropbox）或专门的文件传输工具（如 rsync）来实现文件的本地到远程服务器的传输。
+以上方法提供了多种途径，你可以根据实际情况选择最适合你需求和安全性要求的方法来传输文件到远程服务器。注意，在传输文件时，确保考虑到文件的安全性和传输的加密问题。
+#+end_quote
+
+** SFTP
+#+begin_quote
+SFTP 的用法与一般的命令行工具相似，它通常通过命令行或脚本来执行。以下是一些基本的 SFTP 用法示例：
+1. 从本地上传文件到远程服务器：
+sftp username@remote_host
+put /path/to/local/file /path/on/remote/server
+
+这个例子中，username 是你在远程服务器上的用户名，remote_host 是远程服务器的地址或主机名，/path/to/local/file 是本地文件的路径，/path/on/remote/server 是远程服务器上保存文件的路径。
+2. 从远程服务器下载文件到本地：
+sftp username@remote_host
+get /path/on/remote/server/file /path/to/local/directory
+
+这个例子中，get 命令用于从远程服务器下载文件。同样，指定远程文件的路径以及本地保存文件的目录。
+3. 列出远程服务器上的文件和目录：
+sftp username@remote_host
+ls
+
+这个例子中，ls 命令用于列出远程服务器上当前目录的文件和目录列表。
+4. 删除远程服务器上的文件：
+sftp username@remote_host
+rm /path/on/remote/server/file
+
+使用 rm 命令可以删除远程服务器上的文件。
+5. 创建远程目录：
+sftp username@remote_host
+mkdir /path/on/remote/server/new_directory
+
+使用 mkdir 命令可以在远程服务器上创建新的目录。
+6. 同步本地和远程目录：
+sftp username@remote_host
+put -r /path/to/local/directory /path/on/remote/server
+
+使用 -r 选项可以递归地将本地目录上传到远程服务器，实现目录的同步。
+7. 断点续传：
+sftp username@remote_host
+reput /path/to/local/file /path/on/remote/server
+
+reput 命令可以用于断点续传，即在传输中断的地方继续上传。
+这些只是一些基本的 SFTP 用法示例。具体的命令和选项可能会因 SFTP 客户端的不同而有所差异。在实际使用中，你可能需要查阅相关文档或使用 -h 或 --help 选项来获取更详细的帮助信息。
+#+end_quote
