@@ -421,9 +421,6 @@ MSS一般是1460字节；
    ACK是什么呢，是客户端或服务器需要的下一个字节的号；
    [[file:imag/Snipaste_2023-12-28_15-28-48.png]]
 
-[[file:imag/Snipaste_2023-12-27_17-27-18.png]]
-
-[[file:imag/Snipaste_2023-12-27_17-25-14.png]]
 
 
 *** 3.5.3 往返时间和超市重传
@@ -462,7 +459,29 @@ TCP连接过程分三步
 第一个是syn，然后是SYNACK，最后是ACK
 
 **** tcp断开
-TCP的断开过程分四步进行，
+TCP的断开过程分四步进行，首先是客户端发起断开请求 =FIN-1= 然后服务器返回 ACK，再是服务器发起断开，服务器进行确认；
+
+[[file:imag/Snipaste_2023-12-27_17-27-18.png]]
+
+[[file:imag/Snipaste_2023-12-27_17-25-14.png]]
+
+1. 过程描述
+   + 第一步由client发起断开请求，然后进入 *FIN-WAIT-1* 阶段
+   + 第二步server收到请求，发送ACK，进入 *CLOSE-WAIR* 阶段，client收到ACK进入 *FIN-WAIR-2* 阶段
+   + 第三步server发送FIN，进入 *LAST-ACK* 阶段，clent收到fin进入 *TIME-WAIT* 阶段
+   + 第四步client发送ACK，进入等待计时，如果没有收到FIN重传，就会close，server收到ACK后执行close
+2. 为什么需要四步，二三步不能合并吗？
+   + 二三步不能合并，server收到FIN请求，需要做一些善后工作才行，有可能自己要发送到client的数据还没传完
+     或者需要和上层Application进行交互，准备断开工作
+   + 二三步不能省略，二三步中间是间隔一大段时间完成的，不能合并
+   + 断开是双方约定的过程，你告诉我进行断开，我反馈知道这个消息，我告诉你要断开
+     你反馈收到消息，这样双方都确定后断开，不会形成clent没有断开，发送请求告知没法连接
+     server没有断开，等待client发送消息，浪费资源的情况
+3. *实际例子*
+   terminal连接remote server SSH protocol
+   [[file:imag/Snipaste_2023-12-29_16-13-50.png]]
+   断开过程分了四步进行，client发起；
+
 
 *** QUESTIONS
 1. tcp数据流序号seq和ACK含义
