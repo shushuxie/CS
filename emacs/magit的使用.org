@@ -18,7 +18,8 @@ magit是一个emacs上面的git管理工具，很好用的工具
 ** 全部命令
 =？= 可以显示命令，根据命令做操作； =Q= 可以使用传统的git命令
 ** 界面
-一个文件历程 *Unstaged changes* -> *Staged changeds* -> *Unmerged changes* -> *Recent commits*
+一个文件历程 *Unstaged changes* -> *Staged changeds* -> *Unmerged into* -> *Recent commits*
+git add --patch
 界面分好几个部分
 1. 最上面是指代各个指针情况，Head指代当前版本位置，代表本地版本;
    Merge指代远程origin仓库和分支的当前情况
@@ -26,3 +27,8 @@ magit是一个emacs上面的git管理工具，很好用的工具
 2. Ustaged changes 是没有进行追踪的文件，没有执行add操作，commit不会进行提交
 3. Staged changes 追踪的文件，没有进行commit
 4. Recent commits 最近提交日志，可以看到index也可 =Enter= 查看提交详细信息
+
+
+dkgjkdg
+kdgjsdnfn
+gjksdjfakl
