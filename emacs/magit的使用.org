@@ -20,4 +20,9 @@ magit是一个emacs上面的git管理工具，很好用的工具
 ** 界面
 
 界面分好几个部分
-1. 最上面是指代各个指针情况，Head指代当前版本位置，代表本地版本
+1. 最上面是指代各个指针情况，Head指代当前版本位置，代表本地版本;
+   Merge指代远程origin仓库和分支的当前情况
+   Push是本地仓库的情况
+2. Ustaged changes 是没有进行追踪的文件，没有执行add操作，commit不会进行提交
+3. Staged changes 追踪的文件，没有进行commit
+4. Recent commits 最近提交日志，可以看到index也可 =Enter= 查看提交详细信息
