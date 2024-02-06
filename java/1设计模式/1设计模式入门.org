@@ -69,3 +69,77 @@ definition： *抽象工厂模式提供一个接口，用来创建相关或依�
 
 ** 单例模式
 definition： *单例模式，确保一个类只有一个实例，并提供全局访问* 
+
+有些对象我们有时候只需要一个，例如：线程池，日志对象，缓存对象等
+
+[[file:imag/Snipaste_2024-02-06_14-57-40.png]]
+
+*** 懒加载
+#+begin_src java
+  public class SingleTon {
+      private static SingleTon uniqueInstance;
+      // 私有的构造器，无法通过外部构建对象
+      private SingleTon(){
+
+      }
+      // 只能通过方法获取对象，该方法返回唯一的对象
+      public static getInstance() {
+	  if (uniqueInstance == null) {
+	      uniqueInstance = new SingleTon();
+      }
+	      return uniqueInstance;
+	  }
+      }
+#+end_src
+
+*** 懒加载，线程安全
+#+begin_src java
+  public class SingleTon {
+      private static SingleTon uniqueInstance;
+      // 私有的构造器，无法通过外部构建对象
+      private SingleTon(){
+
+      }
+      // 只能通过方法获取对象，该方法返回唯一的对象
+      public static synchronized getInstance() {
+	  if (uniqueInstance == null) {
+	      uniqueInstance = new SingleTon();
+      }
+	      return uniqueInstance;
+	  }
+      }
+  
+#+end_src
+
+*** 提前创建实例
+#+begin_src java
+  public class SingleTon {
+      private static SingleTon uniqueInstance = new SingleTon();
+      private SingleTon() {}
+      public static getInstance() {
+	  return uniqueInstance;
+      }
+  }
+#+end_src
+
+*** 双重校验
+#+begin_src java
+  public class SingleTon {
+      private volatile static SingleTon uniqueInstance;
+      private SingleTon(){}
+      public static getInstance(){
+	  // 第一次检查，如果已有对象，防止进入加锁影响效率；
+	  if (uniqueInstance == null) {
+	      synchronized(SingleTon.class) {
+		  // 二次检查,防止一个线程创建出实例后，其他线程仍然进行创建
+		  // 虽然有synchronized关键字，但是只是为了防止两个线程同时操作，
+		  // 仍然可以一个操作后new对象，另一个继续new
+		  if (uniqueInstance == null) {
+		      uniqueInstance = new SingleTon();
+		  }
+	      }
+	  }
+	  return uniqueInstance;
+      }
+  }
+#+end_src
