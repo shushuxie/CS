@@ -1,0 +1,87 @@
+*** 认识注解
+注解是一种注释机制，就像给代码中的类提供说明文档一样，注解可以对：类、方法、属性、参数、变量、包等提供说明注释，并且我们可以利用这些注释；
+
+*** 基本构成
+1. 声明注解
+   #+begin_src java
+    @Target({ElementType.TYPE})
+    @Retention(RetentionPolicy.RUNTIME)
+    @Documented
+    public @interface myAnnotion{
+	String name() default "";
+	int age() default 10;
+
+	}
+   #+end_src
+
+   可以看到注解构成分，声明语法 =@interface= ，属性 =int age（）= ，注解上面的注解 =元注解=
+   注解的属性可以有默认值；
+
+2. 属性
+   注解可以有属性，并且有特定的声明方式；并且可以有特定值；在注解引用的时候就可以为这些属性赋值；
+   如果一个注解的属性名为value，则这个单独为这个属性赋值时可以省略名称，多个必须进行区分
+   #+begin_src java
+     @myAnnotion(name = "xiaoming",age = 10)
+     public void test(){}
+   #+end_src
+
+
+
+*** 注解分类
+按照来源划分有三类，JDK注解，框架注解，自定义注解；使用最多的是框架注解，例如spring；@Controller，@Service
+
+1. JDK内置注解
+   5 个基本注解：@Override、@Deprecated、@SuppressWarnings、@SafeVarargs、@FunctionalInterface
+   * @Override
+     子类是否重写父类的方法，英文含义就是覆盖
+   * @Deprecated
+     jdk自带的方法是否弃用，弃用方式不建议再使用，会有安全隐患
+   * @SuppressWarnings
+     @SuppressWarnings 是一个Java注解，用于告诉编译器在编译时忽略特定类型的警告信息。它可以应用在类、方法、变量等元素上。
+
+     该注解的作用是抑制编译器产生警告信息，通常是因为一些不符合规范或潜在的风险操作而引起的。在某些情况下，程序员可能知道某个操作是安全的，但编译器无法静态地验证这一点，
+     因此可以使用 @SuppressWarnings 来抑制相关的警告。
+     #+begin_src java
+       import java.util.List;
+
+	public class Example {
+
+	    @SuppressWarnings("unchecked")
+	    public void exampleMethod() {
+		List<String> myList = (List<String>) getRawList(); // 忽略未检查的转型警告
+	    }
+
+	    private List getRawList() {
+		// some implementation
+		return null;
+	    }
+	}
+
+     #+end_src
+   * @SafeVarargs
+     @SafeVarargs 是 JDK 7 专门为抑制堆污染警告提供的。
+   * @FunctionalInterface
+     在Java中，@FunctionalInterface 是一个特殊的注解，用于标识一个接口是函数式接口。函数式接口是Java 8引入的一个概念，它是一个只包含一个抽象方法的接口，可以使用Lambda表达式或方法引用来创建该接口的实例。
+	@FunctionalInterface 注解有以下作用：
+	标识接口：通过使用 @FunctionalInterface 注解，可以明确地标识一个接口是函数式接口。编译器会检查被标注的接口，确保其满足函数式接口的定义，即只包含一个抽象方法。
+	编译器检查：@FunctionalInterface 注解可以帮助编译器检查接口是否符合函数式接口的规范。如果一个接口被标注为 @FunctionalInterface，但它包含多于一个的抽象方法，编译器将会报错。
+	Lambda表达式和方法引用：函数式接口可以使用Lambda表达式或方法引用来创建实例。这使得代码更加简洁和易读，尤其在处理函数式编程的场景下。
+
+2. 元注解
+   元注解是注解的注解，用来标识注解的一些属性：例如作用范围，生效范围；
+   * @Retention：
+     指定被注解的注解在被反射时的保留策略。它有三个值：RetentionPolicy.SOURCE、RetentionPolicy.CLASS 和 RetentionPolicy.RUNTIME，分别表示注解保留在源代码、编译后的字节码文件和运行时。
+     * @Target
+       指定被注解的注解可以应用的目标元素类型，例如类、方法、字段等。它使用 ElementType 枚举来指定目标元素类型。
+     * @Documented
+       指定被注解的注解是否会出现在 Java 文档中。
+     * @Inherited
+       指定被注解的注解是否会被子类继承。
+     * @Repeatable
+       指定被注解的注解是否可以多次应用于同一元素。在Java 8中引入。
+
+
+*** 注解使用
+注解就是为了解析，大部分情况下我们使用反射来解析注解；一般情况是再runnig条件下进行解析，可以拿到值，进行相应的处理；
+例如Spring框架中的@Service注解，启动项目的时候，会对类进行扫描，扫描到该注解就会进行IOC把类放入容器中;
+
