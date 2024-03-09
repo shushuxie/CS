@@ -1,0 +1,127 @@
+*** 范型是什么
+范型是为了更好的适用，多个类型入参，java中的范型可以用在类和方法上面；
+在类中用在类名的后面，方法中要在返回值前面指定参数
+#+begin_src java
+  // 在类名后面使用，可以指定多个
+  public class MyGenerics <T,K extends Vical> {
+
+  }
+#+end_src
+
+**** 范型中的参数含义
+一般有T-type，K-key，V-value等参数； =？= 代表通配符，什么都可以；
+#+begin_example
+在Java的泛型中，通常会使用K和V来表示“键”和“值”，比如在Map&lt;K, V&gt;中，K代表键的类型，
+V代表值的类型。这两个符号通常用于表示泛型参数的具体类型。
+而在一些情况下，我们可能会看到?符号，它代表通配符，用于表示未知类型。通配符主要有以下几种用法：
+
+1. <?> 代表未知类型，通配符的上界为Object。例如，List&lt;?&gt;表示一个元素类型未知的List。
+2. &lt;? extends T&gt;： 表示类型的上界为T，其中T是某个类的子类（包括T本身）的泛型类型。
+    例如，List&lt;? extends Number&gt;表示一个元素类型为Number或者Number的子类的List。
+3. <? super T> 表示类型的下界为T，其中T是某个类的父类（包括T本身）的泛型类型。
+    例如，List&lt;? super Integer&gt;表示一个元素类型为Integer或者Integer的父类的List。
+
+通配符的使用可以增加泛型的灵活性，使得我们能够编写更通用的代码。但是需要注意的是，在使用通配符时，通常不能向其添加元素，因为无法确定具体的类型。
+#+end_example
+
+**** 上下界限
+一般中的界限是指对传入参数的限制
+1. <T extends Animals> 代表T是Animal的子类，那么类型必须在Animal的下面，就是上界，
+   同理 Sper就是下界，指代的就是继承关系而已；
+   #+begin_src
+     1. 上界（Upper Bound）：
+	上界指定了泛型类型参数可以是某个类或其子类。在泛型声明中，通过使用extends关键字来指定上界。
+	当指定上界时，表示泛型类型参数必须是指定类的子类，或者就是该指定类本身。
+	例如，<T extends Number>表示泛型类型参数T可以是Number类或其子类。在这个范围内，可以使用任何Number类型的子类作为实际类型参数。
+    2. 下界（Lower Bound）：
+	下界指定了泛型类型参数可以是某个类或其父类。在泛型声明中，通过使用super关键字来指定下界。
+	当指定下界时，表示泛型类型参数必须是指定类的父类，或者就是该指定类本身。
+	例如，<T super Integer>表示泛型类型参数T可以是Integer类或其父类。在这个范围内，可以使用任何Integer类型的父类作为实际类型参数。
+   #+end_src
+
+
+
+**** 举例
+#+begin_src java
+  package org.generic;
+
+/**
+ * java范型， extens关键字可以指定特殊的类型，称为有界范型
+ * 同时可以有限定接口，Things，但是不使用implements关键字
+ *< T extends Viceal & Thing> 的意思是传入的类型是vical的子类，并且实现了Thing的接口
+ * 本质上还是Vical子类
+ * @param <T>
+ */
+public class Printer<T extends Viceal & Thing>{
+
+    T content;
+
+    public Printer(T content) {
+        this.content = content;
+    }
+
+    public void printer() {
+        System.out.println(content);
+    }
+}
+#+end_src
+
+#+begin_src java
+  package org.generic;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        MilkThing milkThing = new MilkThing();
+        // 限定了 car extends vical & implants Thing
+        Printer<Car> printer = new Printer<>(new Car());
+        // 限定了子类为一个接口
+        Printer2<MilkThing> printer2 = new Printer2<>(milkThing);
+        printer.printer();
+
+        // 范型函数
+        List<Car> list = new ArrayList();
+        List list2 = new ArrayList();
+        list.add(new Car());
+        list2.add("hahaha");
+        mainPrintList3(list);
+        mainPrintList4(list2);
+
+    }
+
+    /**
+     * static 后面的T告诉方法传入了范型参数
+     * 范型前置声明只能在返回参数之前
+     */
+    public static <T,K> void mainPrinter(T content,K content2) {
+        System.out.println(content);
+    }
+
+    public static <T> void mainPrintList(List<T> content) {
+        System.out.println(content);
+    }
+
+    /**
+     * ?是通配符，代表可以传入任何类型，也可以对通配符进行限定
+     * List<? extends Vicial> 表示传入的对象必须为vical的子类
+     * List<? super Car> 限制为其本身或者其父类才行
+     */
+    public static void mainPrintList2(List<? extends Viceal> content) {
+        System.out.println(content);
+    }
+
+    public static void mainPrintList3(List<? super Car> content) {
+        System.out.println(content);
+    }
+
+
+    public static void mainPrintList4(List<?> content) {
+        System.out.println(content);
+    }
+}
+#+end_src
