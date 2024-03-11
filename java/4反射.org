@@ -1,0 +1,189 @@
+*** 反射-reflect
+反射是java中的一种技术手段，是通过一个CLASS类来实现的；在我们程序运行的过程中， =每个类都会被加载到JVM中
+加载过去的类，会生成一个CLASS 对象；每个类对应一个；==
+
+#+begin_src
+  在Java中，每个类都有一个对应的Class对象，它代表了在运行时的类的定义和结构。这两者之间有着紧密的关系，可以通过Class对象来获取关于类的各种信息，并且在一些情况下，可以通过Class对象来操作类。
+具体来说，类和Class对象之间的关系有以下几个方面：
+
+1.类是Class对象的实例： 在Java中，每个类在加载时都会有一个对应的Class对象被创建。这个Class对象是由Java虚拟机在加载类时自动创建的，并且每个类在内存中只有一个对应的Class对象。可以使用getClass()方法来获取对象的Class对象。
+
+   MyClass obj = new MyClass();
+   Class&lt;?&gt; clazz = obj.getClass();
+
+
+2.Class对象提供了关于类的元数据信息： 通过Class对象，可以获取关于类的各种信息，比如类名、包名、父类、实现的接口、字段、方法等。
+
+   Class&lt;MyClass&gt; clazz = MyClass.class;
+   String className = clazz.getName();
+   Class&lt;?&gt; superClass = clazz.getSuperclass();
+   Class&lt;?&gt;[] interfaces = clazz.getInterfaces();
+   Field[] fields = clazz.getDeclaredFields();
+   Method[] methods = clazz.getDeclaredMethods();
+
+
+3.Class对象可以用于动态创建类的实例： 通过Class对象的newInstance()方法可以动态地创建类的实例。
+
+   Class&lt;MyClass&gt; clazz = MyClass.class;
+   MyClass obj = clazz.newInstance();
+
+
+4.Class对象可以用于访问和操作类的静态成员： 通过Class对象可以访问和操作类的静态字段和静态方法。
+
+   Class&lt;MyClass&gt; clazz = MyClass.class;
+   Field staticField = clazz.getDeclaredField("staticField");
+   staticField.setAccessible(true);
+   staticField.set(null, "new value");
+
+   Method staticMethod = clazz.getDeclaredMethod("staticMethod");
+   staticMethod.invoke(null);
+
+总的来说，类和Class对象是紧密相关的，Class对象提供了一种反射机制，允许在运行时检查类的结构、获取类的信息，并且可以动态地操作类和对象。
+#+end_src
+
+*** 反射对象的3中获取方式
+1. 类名.class方法
+2. 对象.getclass()方法
+3. Class.forname方法
+#+begin_src java
+package org.reflect;
+
+public class Main {
+
+    public static void main(String[] args) throws ClassNotFoundException {
+        // 通过类名.class获取class对象，这种情况不会触发静态块
+        // 还没有实例化对象
+        Class<User> clazz = User.class;
+
+        // 通过getclass方法获取
+        // 范型必须为通配符
+        User user = new User("xie");
+        Class<?> clazz3 = user.getClass();
+
+        // 通过类名获取，这时可以触发静态代码块，实例化了对象
+        // class类中的范型可以省略，或者为通配符？，不能指定为User，这时候的对象只能在running时才可以确定
+        // 编译阶段无法确定，语法检查也是基于编译阶段
+        Class<?> clazz2 =  Class.forName("org.reflect.User");
+    }
+}
+#+end_src
+
+*** 反射中常用的一些方法
+1. 带有Declared的方法用于获取类中所有，包括private和public
+2. 不带Declared的方法可以获取公共public，包含自身和父类
+3. private属性访问必须设置setAccessale（true）
+4. 属性操作
+   #+begin_src java
+     package org.reflect;
+
+import java.lang.reflect.Field;
+
+public class Main {
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+        Class<?> clazz = User.class;
+        // getDeclaredFields只能获取本类的属性，包含private和public
+        Field[] fields = clazz.getDeclaredFields();
+        for (Field field : fields) {
+            System.out.println(field.getName());
+        }
+        System.out.println("===============");
+
+        // 可以获取自身和父类的属性，但是只能是public
+        Field[] fields1 = clazz.getFields();
+        for (Field field: fields1) {
+            System.out.println(field.getName());
+        }
+        System.out.println("===============");
+
+        // 可以获取父类，然后获取父类的所有属性
+        Field[] fields2 = clazz.getSuperclass().getDeclaredFields();
+        for (Field field: fields2) {
+            System.out.println(field.getName());
+        }
+        System.out.println("===============");
+
+        // 获取单个字段
+        // 对于private字段必须要设置一下访问权限才行
+        // 对于static的方法，get方法可以name.get(null)或者name.get(clazz),静态的不需要对象也能获取
+        Field name = clazz.getDeclaredField("privatStaticValue");
+        name.setAccessible(true);
+        System.out.println(name.get(clazz));
+        name.set(clazz,"100");
+        System.out.println(name.get(clazz));
+
+
+
+    }
+}
+   #+end_src
+5. Method操作
+   #+begin_src java
+     package org.reflect;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class Main {
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        Class<?> clazz = User.class;
+        // 获取所有方法
+        Method[] declaredMethods = clazz.getDeclaredMethods();
+        for (Method method : declaredMethods) {
+            System.out.println(method.getName());
+        }
+        // 特定方法,可以有参数，使用invoke调用
+        Method declaredMethod = clazz.getDeclaredMethod("myPrivateStaticMethod");
+        declaredMethod.setAccessible(true);
+        declaredMethod.invoke(clazz);
+
+        Method method1 = clazz.getDeclaredMethod("myPrivateStaticMethod", String.class);
+        method1.setAccessible(true);
+        method1.invoke(null,"invoke call");
+
+
+    }
+}
+   #+end_src
+6. 构造实例
+   #+begin_src java
+     package org.reflect;
+
+    import java.lang.reflect.Constructor;
+    import java.lang.reflect.Field;
+    import java.lang.reflect.InvocationTargetException;
+    import java.lang.reflect.Method;
+
+    public class Main {
+
+	public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException, InstantiationException {
+	    Class<?> clazz = User.class;
+	    // 通过clazz对象获取构造器，然后实例化对象
+	    // 如果传参数需要给定类型
+	    Constructor<?> constructor = clazz.getDeclaredConstructor(String.class);
+	    Object obj = constructor.newInstance("xie");
+
+	    // 实例属性的操作
+	    Field field = clazz.getDeclaredField("name");
+	    field.setAccessible(true);
+	    System.out.println(field.get(obj));
+	    field.set(obj,"zhang");
+	    System.out.println(field.get(obj));
+
+	    // 方法操作
+	    Method method = clazz.getDeclaredMethod("myPrivateStaticMethod", String.class);
+	    method.setAccessible(true);
+	    method.invoke(obj,"method test");
+
+
+    }
+}
+
+   #+end_src
+7. 实际应用举例
+   
+   
+
+   
