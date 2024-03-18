@@ -183,7 +183,259 @@ public class Main {
 
    #+end_src
 7. 实际应用举例
-   
+   通过注册服务，从container类中获取依赖服务的实例，不用通过new参数进行注入
+   实现自动的依赖注入
+
+   Order类包好customer和address类，后者是前面所依赖的服务
+   #+begin_src java
+		    package org.reflect;
+
+	       public class Address {
+		   private String street;
+		   public String postCode;
+
+		   public Address() {
+
+		   }
+
+		   public Address(String street, String postCode) {
+		       this.street = street;
+		       this.postCode = postCode;
+		   }
+
+		   public void printAddress() {
+		       System.out.println("address street"+street+"-----"+postCode);
+		   }
+	       }
+	       =====================================================================
+		   package org.reflect;
+
+	  public class Customer {
+	      private String name;
+	      private String email;
+
+	      public Customer() {
+
+	      }
+	      public Customer(String name,String email) {
+		  this.name = name;
+		  this.email = email;
+	      }
+	      public void printCustomer() {
+		  System.out.println("customer"+name+"====="+email);
+	      }
+
+	      @ReflectAutowired
+	      public void printAble() {
+		  System.out.println("customer"+name+"====="+email);
+	      }
+	  }
+	       =====================================================================
+	      package org.reflect;
+
+     public class Order {
+	     private Customer customer;
+	     private Address address;
+
+	     @ReflectAutowired
+	     public Order(Customer customer,Address address) {
+		 this.customer = customer;
+		 this.address = address;
+	     }
+
+	     public Order(){
+
+	     }
+
+	 public Customer getCustomer() {
+	     return customer;
+	 }
+
+	 public void setCustomer(Customer customer) {
+	     this.customer = customer;
+	 }
+
+	 public Address getAddress() {
+	     return address;
+	 }
+
+	 public void setAddress(Address address) {
+	     this.address = address;
+	 }
+     }
+      ==========================依赖的自定义注解=========================
+	 package org.reflect;
+
+	import java.lang.annotation.ElementType;
+	import java.lang.annotation.Retention;
+	import java.lang.annotation.RetentionPolicy;
+	import java.lang.annotation.Target;
+
+	@Target({ElementType.CONSTRUCTOR,ElementType.FIELD,ElementType.METHOD})
+	@Retention(RetentionPolicy.RUNTIME)
+	public @interface ReflectAutowired {
+	}
+
+   #+end_src
+
+   #+begin_src java
+	       package org.reflect;
+
+	  import javax.xml.ws.Action;
+
+	  /**
+	   ,* config 方法用来注册一些服务
+	   ,*/
+	  public class Config {
+
+	      @ReflectAutowired
+	      public Customer customer() {
+		  return new Customer("kill","333333");
+	      }
+
+	      @ReflectAutowired
+	      public Address address() {
+		  return new Address("address","post code");
+	      }
+
+	      public Message message() {
+		  return new Message("content");
+	      }
+	  }
+	  =======================containter,用来获依赖服务的对象，实现自动的依赖注入===================
+	      package org.reflect;
+
+     import javax.xml.ws.Action;
+     import java.lang.reflect.Constructor;
+     import java.lang.reflect.InvocationTargetException;
+     import java.lang.reflect.Method;
+     import java.util.HashMap;
+     import java.util.Map;
+
+     /**
+      ,* continer类用来存储服务的方法
+      ,*/
+     public class Continer {
+
+	 // 存储注册的服务
+	 Map<Class<?>, Method> methodMap;
+	 // config类用来充当invoke的入参
+	 private Object config;
+
+	 // 存储已经创建的服务实例
+	 Map<Class<?>,Object> services;
+
+	 // 初始化方法，获取所有服务
+	 public void init() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+	     // 初始化方法容器
+	     this.methodMap = new HashMap<>();
+	     this.services = new HashMap<>();
+	     Class clazz = Class.forName("org.reflect.Config");
+	     Method[] methods = clazz.getDeclaredMethods();
+	     for (Method method : methods) {
+		 if (method.getDeclaredAnnotation(ReflectAutowired.class) != null) {
+		     // 放入方法返回类型和方法
+		     methodMap.put(method.getReturnType(), method);
+		     System.out.println(method.getReturnType());
+		 }
+		 this.config = clazz.getConstructor().newInstance();
+	     }
+	 }
+
+	 /**
+	  ,* 获取config中的注册实例
+	  ,* 提供一服务对象的生成
+	  ,* @param clazz
+	  ,*/
+	 public Object getServiceInstanceByClass(Class<?> clazz) throws InvocationTargetException, IllegalAccessException {
+	     // 先检查是否创建了对象
+	     if(this.services.containsKey(clazz)) {
+		 return this.services.get(clazz);
+	     } else {
+		 if(this.methodMap.containsKey(clazz)) {
+		     Method method = this.methodMap.get(clazz);
+		     // 参数是方法所属的对象，这里传入了一个object对象
+		     // 返回值也使用Object对象接收
+		     Object obj = method.invoke(this.config);
+		     this.services.put(clazz,obj);
+		     // 我们注册的服务返回的刚好是服务实例
+		     return obj;
+		 }
+	     }
+	     return null;
+	 }
+
+	 /**
+	  ,*创建普通实例，实例所依赖的对象通过注册好的服务获取
+	  ,* @param clazz
+	  ,*/
+	 public Object creatInstance(Class<?> clazz) throws InvocationTargetException, IllegalAccessException, InstantiationException, NoSuchMethodException {
+	     // 获取所有的构造器
+	     Constructor<?>[] constructors = clazz.getDeclaredConstructors();
+	     for (Constructor<?> constructor : constructors) {
+		 if (constructor.getDeclaredAnnotation(ReflectAutowired.class) != null) {
+		     // 获取构造器的所有参数
+		     Class<?>[] parameterTypes = constructor.getParameterTypes();
+		     // 存放所有参数的对象数组
+		     Object[] arguments = new Object[parameterTypes.length];
+		     for (int i=0; i<parameterTypes.length; i++) {
+			 // 实例依赖的服务通过该方法获取
+			 // 实现了自动注入依赖的对象
+			 arguments[i] = getServiceInstanceByClass(parameterTypes[i]);
+		     }
+		     return constructor.newInstance(arguments);
+		 }
+	     }
+	     // 默认返回无参数构造的对象
+	     return clazz.getConstructor().newInstance();
+	 }
+     }
+
+   #+end_src
+
+   #+begin_src java
+     package org.reflect;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class Main {
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException, InstantiationException {
+        // 普通方式获取方法
+        Address address = new Address("nan jing Road","3321" );
+        Customer customer = new Customer("xie","xxx@outlook.com");
+        Order order = new Order(customer,address);
+        order.getCustomer().printCustomer();
+        order.getAddress().printAddress();
+        
+        
+        // 框架方式获取
+        Continer continer = new Continer();
+        continer.init();
+        // 通过构造器获取对象实例
+        String className = "org.reflect.Order";
+        String field = "customer";
+        Class<?> orderClass = Class.forName(className);
+        Object obj = continer.creatInstance(orderClass);
+        // 获取普通实例中自动注入的属性对象
+        Field customer1 = orderClass.getDeclaredField(field);
+        customer1.setAccessible(true);
+        Object o = customer1.get(obj);
+        Method[] methods = o.getClass().getMethods();
+        // 调用服务中的方法
+        for (Method method : methods) {
+            if (method.getDeclaredAnnotation(ReflectAutowired.class) != null) {
+                method.invoke(o);
+            }
+
+        }
+
+    }
+}
+   #+end_src
    
 
    
