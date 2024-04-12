@@ -43,13 +43,13 @@ projectile是一个项目管理软件，一般情况下会自动识别项目；�
 [[https://github.com/Alexander-Miller/treemacs#customizing-themes-and-icons][treemacs github地址]]
 
 1) =M-0= 光标切换到文件区
-2) =？= 查看命令
+2) =？= 查看命令,切换到treemaccs工作区中，或者 =/= 查看文件命令
 3) 加载主题 treemacs-load-theme
 4) 更改图标大小 treemacs-resize-icons
 5) 添加项目 treemacs-edit-workspace
 6) 鼠标右键文件进行操作
 7) 拖动文件图标进行打开
-8) treemacs-indent-guid-mode 显示文件线
+8) treemacs-indent-guid-mode 显示文件夹等级虚线
 9) git commit differ mode可以显示本地更改和远程的区别
 10) =快速预览= 首先打开treemacs-peek-mode 然后在文件去使用大写 *P* 即可
 
