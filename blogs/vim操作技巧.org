@@ -11,3 +11,10 @@
 3. [[https://harttle.land/vim-practice.html]]
 
 4. [[https://yianwillis.github.io/vimcdoc/doc/usr_29.html]]
+
+5. https://github.com/oldratlee/vim-practice/blob/master/README.md
+
+** 窗口
+** 搜索替换
+** 代码跳转
+** 实用技巧
