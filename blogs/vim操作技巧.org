@@ -1,0 +1,13 @@
+* 资料收集
+1. %     跳转到配对的括号处
+    [[    跳转到代码块的开头(但要求代码块中'{'必须单独占一行)
+    gD    跳转到局部变量的定义处
+    ''    跳转到光标上次停靠的地方（是两个', 而不是一个"）
+    mx    设置书签，x是书签名，其只能是a-z的26个字母
+    `x    跳转到书签x处("`"是1左边的键)
+
+2. [[https://harttle.land/2016/08/08/vim-search-in-file.html]]
+
+3. [[https://harttle.land/vim-practice.html]]
+
+4. [[https://yianwillis.github.io/vimcdoc/doc/usr_29.html]]
