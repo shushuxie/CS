@@ -12,16 +12,96 @@ ide说白了就是一个集成的开发环境，开发环境一般包含什么�
 
 *** 一些概念
 
+*** 编译器的前后端
+    现代编译器都使用前后端分离架构，前端负责把源代码编译为一个中间语言，后端负责把中间语言编译为机器码；这样可以实现前后端分离开发；
+    不同的前端可以生成相同的中间代码，然后由后端进行解析；
+    前端语言不同，语法不同，后端可以适配更多的芯片架构，更多的指令集
+    将编译器分为前端和后端有几个好处：
+    1.模块化和可维护性： 分离前端和后端使得编译器的不同部分更容易理解和维护。前端负责处理语言特定的语法和语义，而后端负责将中间表示翻译为目标代码。
+	这种模块化设计使得开发人员可以更容易地修改和优化每个部分。
+    2.跨平台性： 前端可以处理不同编程语言的语法和语义，而后端可以针对不同的目标平台生成优化的目标代码。
+	这种分离允许编译器在不同的平台上共享相同的前端，同时为每个平台提供专门的后端。
+    3.灵活性和可移植性：
+	分离前端和后端允许编译器在不同的环境中灵活运行。例如，可以将相同的前端与不同的后端组合，以便在不同的操作系统或硬件架构上生成代码。
+
+    直接从源代码翻译为机器码可能会限制编译器的灵活性和可维护性。分离前端和后端允许编译器针对不同的需求进行优化，
+	并且更容易适应不断变化的硬件和软件环境。
 **** llvm，clang，clangd，gcc，gdb
+    + llvm全称是 Low Level Virtual Machine（低级虚拟机）的缩写，但现在已经演变成一个不再仅仅限于虚拟机的项目，
+      而是一个广泛应用于编译器技术和程序分析领域的项目
+    + gcc和clang都是代码编译器,clang是一个编译器的前端，还有llvm后端来支持，gcc是前后端都有的，GNU项目
+    + clangd是一个语言服务，采用clang的语法，词法分析功能开发出来的一款工具；
+    + gdb 是代码调试工具,但是只能是x86平台,arm架构是不可以用的
+    + lldb是macos下面的调试工具
 
-***** gcc和clang
-+ gcc和clang都是代码编译器，llvm属于clang的后端
-+ clangd是一个语言服务，作为编辑器的插件来使用；
-  
-  clangd is a language server that provides IDE-like features to editors.
+    #+caption: gcc和clang的区别
+    #+begin_src 
+    GCC (GNU Compiler Collection) 是一个包含多种编程语言的编译器套件，其中最常见的是用于 C 语言的 gcc（GNU C Compiler）和用于 C++ 语言的 g++（GNU C++ Compiler）。GCC 是由 GNU 项目开发和维护的，它支持多种编程语言，包括 C、C++、Objective-C、Fortran、Ada 等。
+    Clang 是 LLVM 项目中的一个子项目，它是一个 C/C++/Objective-C 编译器前端。
+    与 GCC 不同，Clang 不是一整个编译器套件，而是专注于提供高质量的语法分析和语义分析，以及更好的诊断能力。Clang 的设计注重可读性、可维护性和性能。
+    以下是它们之间的一些区别和联系：
 
-  It should be used via an editor plugin rather than invoked directly.
-+ gdb 是代码调试工具
+    1. 开发背景：
+	GCC 是 GNU 项目的一部分，由自由软件基金会开发和维护。
+	Clang 是 LLVM 项目的一部分，由苹果公司开发，但也得到了广泛的社区支持。
+    2. 编译速度：
+	Clang 通常比 GCC 更快，尤其是在大型代码库的编译时。
+	GCC 在某些情况下可能更慢，尤其是在处理复杂的模板和嵌套代码时。
+    3. 诊断能力：
+	Clang 提供了更好的诊断能力，包括更清晰的错误消息和警告。
+	GCC 的错误消息和警告通常比较晦涩。
+    4. 标准支持：
+	两者都支持最新的 C 和 C++ 标准，但在实现细节上可能会有差异。
+	Clang 通常更快地跟上新标准的支持。
+    5. IDE 支持：
+	Clang 提供了更好的 IDE 集成支持，例如通过 clangd 提供的语言服务器功能。
+	GCC 也有一些插件和工具，但通常不如 Clang 那么完善。
+    虽然 Clang 和 GCC 在很多方面有相似之处，但它们也有各自的优势和特点，具体使用取决于项目的需求和开发者的偏好。
+    #+end_src
 
+    #+captions: 不同系统编译器区别
+    #+begin_src
+    在不同的操作系统下，有一些常用的代码调试工具。以下是针对 Linux、macOS 和 Windows 的常见调试器：
+    Linux：
+	1.GDB (GNU Debugger): 是 Linux 下最常用的调试器，支持多种编程语言，如 C、C++、Objective-C 等。
+	2.Valgrind: 虽然主要是一个内存分析工具，但也提供了调试功能，可以检测内存泄漏、越界访问等问题。
+
+    macOS：
+	3.LLDB (LLVM Debugger): macOS 的默认调试器，与 GDB 类似，但具有更现代化的设计和更好的用户体验。
+	4.GDB: 也可以在 macOS 上使用，但需要额外安装。
+
+    Windows：
+	5.WinDbg: 是 Windows 平台上的主要调试器，由 Microsoft 提供，支持多种编程语言。
+	6.Visual Studio Debugger: 集成在 Visual Studio IDE 中的调试器，提供了丰富的功能和图形界面。
+	7.GDB: 通过 MinGW 或 Cygwin 可以在 Windows 上使用 GDB。
+
+    除了上述的专用调试工具外，还有一些通用的 IDE（集成开发环境）提供了内置的调试功能，例如：
+	8.Visual Studio: Windows 平台的主流 IDE，具有强大的调试功能。
+	9.CLion: 支持多种平台的 C/C++ IDE，内置了 GDB 和 LLDB 调试器。
+	10.Xcode: macOS 平台的开发工具，内置了 LLDB 调试器。
+    这些调试工具提供了一系列的功能，如断点设置、变量查看、堆栈跟踪、内存检查等，可以帮助开发人员有效地诊断和修复代码中的问题。
+	    选择哪个调试工具取决于个人的偏好、项目需求和所用的编程语言。
+    #+end_src
+
+    #+caption: MinGw和cygWin的区别
+    #+begin_src text
+      MinGW 和 Cygwin 都是用于在 Windows 环境下提供类 Unix 操作系统环境的工具集，它们有着不同的设计和目的：
+    MinGW（Minimalist GNU for Windows）：
+	1.MinGW 是一个轻量级的开发环境，旨在为 Windows 平台提供 GNU 工具集的实现。
+	2.它包括一系列 GNU 工具，如 GCC 编译器、GNU Binutils、MSYS（Minimal SYStem）等，用于编译和运行基于 POSIX 标准的应用程序。
+	3.MinGW 的目标是提供一个纯粹的 Windows 平台本地开发环境，不依赖于额外的运行时库或模拟器。
+
+    Cygwin：
+	4.Cygwin 是一个在 Windows 下运行类 Unix 操作系统环境的兼容层。
+	5.它提供了大量的 POSIX 兼容性，并支持许多 Unix 工具和应用程序。
+	6.Cygwin 包含了一个动态链接的运行时库，它模拟了 Linux/Unix 环境的 API，并提供了一个类似于 Linux 的终端环境。
+	7.Cygwin 的目标是让在 Windows 上编译的应用程序在类 Unix 环境下运行，而不需要对源代码进行太多的修改。
+
+    在选择使用 MinGW 还是 Cygwin 时，可以根据项目的需求和个人偏好进行选择：
+
+    8.如果需要在 Windows 下编译和运行原生的 Windows 应用程序，使用 MinGW 是一个不错的选择。
+    9.如果需要在 Windows 下运行类 Unix 环境的应用程序，并且希望获得更完整的 Unix 兼容性和功能，可以选择使用 Cygwin。
+
+    #+end_src
 **** Lsp 和 Dap
 
