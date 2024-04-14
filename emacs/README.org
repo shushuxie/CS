@@ -1,1 +1,28 @@
 项目用来记录Emacs的学习情况
+
+** emacs 配置文件模块划分
+
+1. init-packages.el #插件管理
+2. init-ui.el #视觉层配置，高亮，theme
+3. init-better-default.el #增强内置功能
+4. init-org.el #orgmode相关配置
+5. custome.el #存放使用编辑器接口产生的配置信息
+
+   init.el 引入文件语法
+ (setq custome-file (expand-file-name "file-dir"))
+ (load custome-file 'no-error 'no-message)
+
+ 模块引入语法
+ (add-to-list 'load-path "config file dired")
+ (provide '文件名) 不需要带.el
+ (require '文件名)
+
+
+** 基础
+C-h f 搜索命令含义
+C-g 取消命令
+*在代码块中，=C-c ’= 会进入到单独src窗口，按相同的按键结束输入*
+#+begin_src emacs-lisp
+  
+  (setq find-file-path "kdgjk")
+#+end_src
