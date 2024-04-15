@@ -119,7 +119,6 @@ p1和e1都是一个list表达式
 
 
 ** 实例：采用牛顿法求平方根
-
 #+begin_src lisp
 ;;求x的开方y的值
 ;; 像是自然逻辑语言描述过程，然后该过程拆分为许多小的过程
@@ -149,8 +148,7 @@ p1和e1都是一个list表达式
 (improve_guss 1.0 2)
 (square 2)
 (square 9)
-
-#+end_src>
+#+end_src
 
 ** 练习1.7 过大或过小的值影响计算
 
@@ -164,4 +162,110 @@ p1和e1都是一个list表达式
 | 10000000000000 | escessive-lisp-nesting 1602 |   3162277.66 |
 
 可以看到，对于小数0.001就开始出问题，大数超过了嵌套极限
+改进后的计算为
+#+begin_src lisp
+(defun good_enough? (guss x)
+  "更改为本次和下次比率"
+  (<= (abs (/ (- (improve_guss guss x) guss) guss)) 0.01))
+#+end_src
+
+** 练习1.8
+改善一下import里面的计算公式即可
+#+begin_src lisp
+  (/ (+ (/ x (square y)) (* 2 y))
+   3)
+#+end_src
+
+** 内部定义和块结构
+前面求平方根的函数，有许多关联的函数，我们可以把那些辅助过程放入主过程内部，实现
+块结构,也就是一个嵌套结构，同时拥有共同参数x只需要在外部定义即可，里面的值可以
+引用到；
+#+begin_src lisp
+  ;; 块结构，单独参数
+    (defun square (x)
+	(defun squrt-iter (guss x)
+	  (if (good_enough? guss x)
+		guss
+		(squrt-iter (improve_guss guss x)
+			    x)))
+	(defun good_enough? (guss x)
+	  "guss value 平方和x的误差绝对值是否小于0.01"
+	  (< (abs (- (* guss guss) x)) 0.001))
+
+	(defun improve_guss (guss x)
+	  "改善下次预测值"
+	  (average (/ x guss) guss))
+
+	(defun average (a b)
+	"a和b的平均值"
+	(/ (+ a b) 2))
+      "初始预测值为1.0"
+      (squrt-iter 1.0 x))
+  ;; 块结构，共享参数
+    (defun square (x)
+      (defun squrt-iter (guss)
+	  (if (good_enough? guss)
+		guss
+		(squrt-iter (improve_guss)
+			    x)))
+	(defun good_enough? (guss)
+	  "guss value 平方和x的误差绝对值是否小于0.01"
+	  (< (abs (- (* guss guss) x)) 0.001))
+
+	(defun improve_guss (guss)
+	  "改善下次预测值"
+	  (average (/ x guss) guss))
+
+	(defun average (a b)
+	"a和b的平均值"
+	(/ (+ a b) 2))
+      "初始预测值为1.0"
+      (squrt-iter 1.0 x))
+
+    (good_enough? 1.5 2)
+    (improve_guss 1.0 2)
+    (square 2)
+    (square 9)
+#+end_src
+
+* 1.2过程及其产生的计算
+
+** 线性的递归和迭代
+=递归= 计算过程由一个推迟的计算链条⛓进行刻画；
+=线性递归= 计算链条的长度随着计算值线性增长
+=迭代计算过程= 迭代计算过程就是那种其状态可以用固定数目的 *状态变量* 描述的计算过程
+同时存在者一套规则描述这些状态变量更新的方式；
+=线性迭代= 计算步骤是线性增长的；
+ 下面给出一个阶乘计算的两种形式
+
+ #+caption: 两种递归方式递归
+ #+begin_src lisp
+;; 线性递归 n!
+;; 计算方式为 n! = n * (n-1)!
+(defun factorial (n)
+       (if (= n 1)
+       n
+       (* n (factorial (- n 1)))))
+
+(factorial 6)
+
+;; 迭代递归 n!
+;; 计算方式为 n! = 1x2x3...xN,需要使用变量保存计算过程
+;; product 每次步骤计算的值, count,下次需要乘的值
+(defun factorial_v2 (product count n)
+       (if (> count n)
+       product
+       (factorial_v2
+	    (* product count)
+	    (+ 1 count)
+	    n)))
+
+(factorial_v2 1 1 6)
+ #+end_src
+
+
+
+
+
+
 
