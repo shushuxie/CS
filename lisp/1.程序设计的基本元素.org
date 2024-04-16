@@ -263,6 +263,56 @@ p1和e1都是一个list表达式
 (factorial_v2 1 1 6)
  #+end_src
 
+ 
+*** 练习1.9
+
+#+begin_src lisp
+(defun my-inc (number)
+  "将NUMBER增加1并返回结果."
+    (setq number (1+ number)))
+
+(defun my-dec (number)
+  "将NUMBER减少1并返回结果."
+    (setq number (1- number)))
+
+(defun my-add (a b)
+  "自定义加法函数，返回A和B的和."
+    (if (= 0 a)
+          b
+	  (my-inc (my-add (my-dec a) b))))
+=======================进行求值=======
+(my-add 4 5)
+(my-inc (my-add 3 5))
+(my-inc (my-inc (my-add 2 5)))
+(my-inc (my-inc (my-inc (my-add 1 5))))
+(my-inc (my-inc (my-inc (my-inc (my-add (0 5))))))
+(my-inc (my-inc (my-inc (my-inc (5)))))
+(my-inc (my-inc (my-inc 6)))
+(my-inc (my-inc 7))
+(my-inc 8)
+9
+最后的结果是9，是先展开后收缩，线性递归过程
+#+end_src>
+
+#+begin_src lisp
+(defun plus (a b)
+    (defun dec (x)
+	(- x 1))
+    (defun inc (y)
+	    (+ 1 y))
+(if (= 0 a)
+    b
+    (plus (dec a) (inc b))))
+==========================进行求值=================
+(plus 4 5)
+(plus 3 6)
+(plus 2 7)
+(plus 1 8)
+(plus 0 9)
+9
+最后的结果是9，属于迭代过程
+#+end_src>
+
 
 
 
