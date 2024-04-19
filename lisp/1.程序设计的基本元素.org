@@ -458,3 +458,12 @@ b <-- a
   (FN 4) 
   (FN 5) 
 #+end_src
+
+*** 练习1.12
+杨辉三角，
+#+begin_src lisp
+;; 把各个位置的元素分别看待，col，row 列行表示坐标，有如下性质
+;; pscal(row,col) = pscal(row-1,)
+
+#+end_src>
+
