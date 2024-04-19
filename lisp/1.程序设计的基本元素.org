@@ -263,7 +263,6 @@ p1和e1都是一个list表达式
 
 (factorial_v2 1 1 6)
  #+end_src
-
  
 *** 练习1.9
 #+begin_src lisp
@@ -461,9 +460,47 @@ b <-- a
 
 *** 练习1.12
 杨辉三角，
+#+caption: 递归实现
 #+begin_src lisp
-;; 把各个位置的元素分别看待，col，row 列行表示坐标，有如下性质
-;; pscal(row,col) = pscal(row-1,)
+  ;; 把各个位置的元素分别看待，col，row 列行表示坐标，有如下性质
+  ;; ps(row,col) = ps(row-1,col-1) + ps(row-1,col)
+  ;; ps(0,col)或者pa(row,0) 都等于1 ,row=col也为1
+  ;; row和col都从1开始
 
-#+end_src>
+  (defun ps (x y)
+    (if (or (= 1 x) (= 1 y) (= x y))
+	1
+	(+ (ps (- x 1) (- y 1))
+	   (ps (- x 1) y)))) 
 
+  (ps 3 3)
+  (ps 2 1)
+  (ps 3 2)
+  (ps 7 4);20
+
+  ;; 真正有意思的是我们只是总结了一些三角形的规律,然后很自然的翻译为过程就可以实现了
+#+end_src
+
+#+caption: 迭代实现
+#+begin_src lisp
+    ;; 迭代版本的计算公式
+    ;;阶乘计算公式
+  (defun facial (n)
+    (fac-iter 1 1 n))
+  (defun fac-iter (product count n)
+	  (if (> count n)
+	  product
+	  (factorial_v2
+	      (* product count)
+	      (+ 1 count)
+	      n)))
+  ;; 计算公式
+  ;;	(rowcol)=row!/col!⋅(row−col)!
+ 
+  (defun yhs (x y)
+    (/ (facial (- x 1))
+	       (* (facial (- y 1))
+		  (facial (- x y)))))  
+
+  (yhs 5 3);6
+#+end_src
