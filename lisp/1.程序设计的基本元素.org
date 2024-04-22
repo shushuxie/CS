@@ -510,3 +510,108 @@ b <-- a
 描述的计算过程随着计算数值的增大,所需要的资源的变化量;这里资源是动态的,可以是内存,计算的步骤,需要的cpu等等
 
 ** 求幂
+根据公式 =b^n = b*b^(n-1)= 可以有下面的递归计算方法
+b^0=1
+#+begin_src lisp
+  (defun M (a n)
+    (if (= n 0)
+	1
+	(* a (M a (- n 1)))))
+
+
+  (M 2 3)
+  (M 4 3)
+  ;;下面是一个迭代版本,需要迭代n次,每次迭代的值使用一个变量存储
+
+  (defun MD (b n)
+    (M-iter b n 1))
+
+  (defun M-iter (b count product)
+    (if (= 0 count)
+	product
+	(M-iter b
+		(- count 1)
+		(* b product))))
+
+  (MD 2 3)
+  (MD 3 3)
+#+end_src
+
+有一个更加边界的计算方式,b8 = b4*b4 = b2*b2 * b2* b2 = b*b;
+
+#+begin_src lisp
+  (defun fast-expt ( b n)
+    (cond ((= n 0) 1)
+	  ((even? n) (square (fast-expt b (/ n 2))))
+	  (t (* b (fast-expt b (- n 1))))))
+
+  (defun even? (n)
+    (if (= 0 (% n 2))
+	t
+	nil))
+  (defun square (a)
+    (* a a))
+
+  (even? 3)
+  (even? 4)
+  (fast-expt 2 4)
+  (fast-expt 2 5)
+  (fast-expt 2 10)
+
+#+end_src
+
+*** 练习1.16
+#+begin_src lisp
+  ;; 把迭代和log(n)计算幂的方式结合起来
+
+  (defun fast-expect (b n)
+    (fast-iter b n 1))
+
+  (defun fast-iter (b n a)
+    (cond ((= n 0) a)
+	  ((even? n) (square (fast-iter b
+					(/ n 2)
+					a)))
+	  (t (* b (fast-iter b
+			     (- n 1)
+			     a)))))
+  (defun even? (n)
+    (if (= 0 (% n 2))
+	t
+	nil))
+
+  (defun square (a)
+    (* a a))
+
+  (fast-expect 2 3)
+  (fast-expect 2 6)
+#+end_src
+
+*** 练习1.17
+#+begin_src lisp
+  ;; 使用加法的过程计算乘法
+  ;; 迭代方式
+
+  ;; cal a*b
+  (defun fast-plus (a b)
+    (plus-iter a b 0))
+
+  (defun plus-iter (a b result)
+    (cond ((= 0 b) result)
+	  ((even? b) (double (plus-iter a
+					(half b)
+					result)))
+	  (t (+ a (plus-iter a
+			     (- b 1)
+			     result)))))
+
+  (defun double (x)
+    (+ x x))
+
+  (defun half (x)
+    (/ x 2))
+
+  (fast-plus 3 4) 
+  (fast-plus 4 9)
+
+#+end_src
