@@ -615,3 +615,105 @@ b^0=1
   (fast-plus 4 9)
 
 #+end_src
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+** 最大公约数
+根据一个思想,a%b = r 那么 GCD(a,b) = GCD(b,r)两个数的公约数等于余数和除数的公约数;
+GCD(206,40) = GCD(40,6)
+            = GCD(6,4)
+	    = GCD(4,2)
+	    = GCD(2,0)
+	    = 2;
+整体看下来就是根据上面的算法不断的进行迭代;
+
+#+begin_src lisp
+  (defun GCD (a b)
+    (if (= 0 b)
+	a
+	(GCD b (% a b))))
+  
+  (GCD 206 40)
+  (GCD 64 128)
+#+end_src
+
+*** 练习1.20
+#+begin_src lisp
+  ;; 正则序求值,函数的参数需要的时候才会求值
+  (GCD 206 (GCD 40 (GCD 6 (GCD 4 (GCD 2 0)))))
+  可以看出最后一次没有进行remind运算,总共是4次调用
+#+end_src
+
+** 1.2.6:素数检测
+素数是只有被1和自身整除的数,如果有别的因子那么这个数就不是素数;
+1. =寻找因子=
+   通过从2开始慢慢的一个一个寻找是否有对应的因子存在,找到的最大数是根号n;
+   #+begin_src lisp
+
+     (defun square (x)
+	 (defun squrt-iter (guss x)
+	 (if (good_enough? guss x)
+		 guss
+		 (squrt-iter (improve_guss guss x)
+			     x)))
+	 (defun good_enough? (guss x)
+	 "guss value 平方和x的误差绝对值是否小于0.01"
+	 (< (abs (- (* guss guss) x)) 0.01))
+
+	 (defun improve_guss (guss x)
+	 "改善下次预测值"
+	 (average (/ x guss) guss))
+
+	 (defun average (a b)
+	 "a和b的平均值"
+	 (/ (+ a b) 2))
+       "初始预测值为1.0"
+       (squrt-iter 1.0 x))
+
+
+     (defun myformat (x)
+       "取小数点后两位"
+       (format "%.2f" x))
+     (myformat (square 9));3.00
+
+     ;; 从2开始寻找最小因子
+     (defun smallest-divisor (n)
+       (find-divisor n 2))
+
+     (defun find-divisor (n test-divisor)
+	     "余数为0,代表可以除尽"
+       (cond ((> (square test-divisor) n) n)
+	     ((divides? test-divisor n) test-divisor)
+	     (t (find-divisor n (+ test-divisor 1)))))
+
+     (defun divides? (a b)
+       (= (% b a) 0))
+
+     (defun prime? (n)
+       (= n (smallest-divisor n)))
+
+     (divides? 2 8)
+     (prime? 8);nil
+     (prime? 7)
+   #+end_src
+   
+
+
