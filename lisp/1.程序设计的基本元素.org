@@ -713,7 +713,52 @@ GCD(206,40) = GCD(40,6)
      (divides? 2 8)
      (prime? 8);nil
      (prime? 7)
+     (smallest-divisor 199);199
+     (smallest-divisor 1999);1999
+     (smallest-divisor 19999);7
    #+end_src
+
+
+1. =费马小定理=
+   同余,有a,b两个数和素数p.如果两个数处以p的余数相同那么a,b就mol p 同余;
+   a==b(mol p) <=等价于=> p可以整除(a-b);这是显然的,ab的余数相同,那么a-b的值就是p的倍数;
+   同余类的一些性质,两对同余的数的加减,乘,n次方也同余
+
+   #+begin_export latex
+   \begin{align}已知有a\equiv b (mod \;p) \\ c\equiv d (mod\; p) \\
+   可以推导出以下关系\\\Rightarrow a\pm c\equiv  b \pm (mod\; p) \\
+   a\cdot c\equiv b\cdot d  (mod \;p) \\a^{n}\equiv b^{n} (mod\; p) \end{align}
+   #+end_export
    
+   #+begin_src lisp
+     ;; n为素数,a是小于n的正整数,a的n次方与a模n同余
+     ;; a = 3 n = 5
+     (* 3 3 3 3 3);243
+     (mod 243 5);3
+     (mod 3 5);3
+   #+end_src
+
+*** 练习1.21
+
+#+begin_src lisp
+(smallest-divisor 199);199
+(smallest-divisor 1999);1999
+(smallest-divisor 19999);7
+#+end_src
+
+*** 练习1.22
+
+#+begin_src lisp
+  ;; 精确到us级别的格式化字符串
+  (defun format-current-time-us ()
+    "Format the current time as a human-readable string."
+    (let ((current-time (current-time)))
+      (format-time-string "%Y-%m-%d %H:%M:%S.%6N" current-time)))
+
+  (format-current-time) 
+
+
+#+end_src
+
 
 
