@@ -1,0 +1,123 @@
+* Elisp语法
+
+** 基本语法
+    1. 定义普通过程
+    =defun= 关键字,参数使用括号包裹,过程体也用括号包裹
+	#+begin_src lisp
+	(defun <function-name> (<arg1> <arg2> ... <argn>)
+	    (<function-body>))
+	#+end_src
+
+    2. boolean判断
+	表示真假分别使用 =t= and =nil=
+
+	1) cond,可以判断多个条件
+	    #+begin_src lisp
+		;; 方法体中以cond开头,后面跟的是成组的表达式(<exp1> <sta1>)
+		;; 一个小括号就代表一组
+		(defun add (a)
+		(cond ((< 0 a) (+ a 1))
+			((= 0 a) a)
+			(t (- a 1))))
+
+		(add 3)
+	    #+end_src
+
+	2) =if表达式= 用于两种情况判断,像三目运算符
+	    #+begin_src lisp
+		;; if后面直接跟判断表达式,如果为真就输出下一个表达式
+		;; 否则就是最后一个表达式结果
+		(defun if-stat (a)
+		(if (= 0 a)
+		    a
+		    (* a a)))
+
+		(if-stat 3);9
+	    #+end_src
+
+	3) =and,or= 多个条件并联判断
+	    这两个一般用于 判断表达式真假,相当于 && 和 ||
+	    可以和cond搭配或者单独使用,返回bool结果
+	    #+begin_src lisp
+		(defun and-or (a b)
+		(if (and (> a 0) (= 0 b))
+		    0
+		    -3))
+
+		(and-or 3 0) ;0
+
+		(defun ors (a b)
+		(or (> a 0) (< b 0)))
+
+		(ors 3 1);t
+		(ors -1 -3);t
+		(ors -1 0);nil
+	    #+end_src
+
+
+    3. 高阶过程,过程作为参数或者返回值
+	#+caption: 高阶抽象过程
+	#+begin_src emacs-lisp
+	;; 递归中调用的时候不用加上funcall关键字
+	;; 这时只是参数传递,没有调用,只有在调用的时候才加上关键字
+
+	(defun sum (term a next b)  
+	    "Sums the results of applying TERM to a sequence of numbers from A to B,  
+	inclusive, using NEXT to generate the next number in the sequence."  
+	    (if (> a b)  
+		0  
+	    (+ (funcall term a)  
+		(sum term (funcall next a) next b))))  
+
+	(defun inc (a)  
+	    (+ a 1))  
+
+	(defun cube (a)  
+	    (* a a a))  
+
+	(defun sum-cubs (a b)  
+	    (sum #'cube a #'inc b))  ; 注意这里使用了 #' 前缀来获取函数对象  
+
+	;; 调用 sum-cubs 函数计算 1 到 10 的立方和  
+	(sum-cubs 1 10);3025
+	#+end_src
+
+	上述例子中的sum就是一个高阶抽象,可以适用不同的sum情形,只是term和next函数适配一下即可
+	像是一个公有的框架,填充进自己的工具即可;
+
+	#+caption: 两个数之间的整数之和
+	#+begin_src lisp
+	;; 框架
+	(defun sum (term a next b)
+	    (if (> a b)
+		0
+		(+ (funcall term a)
+		(sum term (funcall next a) next b))))
+
+	(defun inc (x)
+	    (+ x 1))
+
+	(defun identity (x)
+	    x)
+	(identity 3) 
+
+	(defun sum-identity (a b)
+	    "表示函数引用的符号"
+	    (sum 'identity a 'inc b))
+
+	(sum-identity 1 4);10
+	(sum-identity 1 10);55
+	#+end_src
+
+** 注意事项
+    1. 括号匹配
+    2. cond使用括号匹配
+    3. 过程名字结尾最好不要有小数点
+    4. =eval-buff= 可以装载该文件的所有过程,过程修改了要重新装载
+    5. =(defun return-x (x) x)=  后面的方法体不需要加括号
+
+
+
+
+
+
