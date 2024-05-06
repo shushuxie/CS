@@ -773,6 +773,10 @@ GCD(206,40) = GCD(40,6)
 我们还需要一种过程,能以过程作为参数或者返回值,这类能操作过程的过程称为 =高阶过程=
 在引用高阶过程的时候,可以使用 ='函数名 或者 #'函数名= 表示高阶过程此处是一个过程参数
 
+=funcall关键字=
+如果方法体中调用了参数中的函数(需要调用函数得到结果),需要使用funcall关键字表明是函数调用
+否则只需要当作参数往下传入即可
+
 #+begin_src lisp
   (defun cube (x)  
     "计算 x 的立方。"  
@@ -890,23 +894,67 @@ GCD(206,40) = GCD(40,6)
   (integral 'cube 0 1 0.001); wrong 
 #+end_src
 
-*高阶过程,当作参数传入,如果要在后面引用该参数,还是当作普通参数看待,只能通过调用过程标识出参数标识*
+*高阶过程,当作参数传入,如果要在方法体中使用该参数,还是当作普通参数看待,because是从方法中传入的参数,只能通过调用过程标识出参数标识*
+#+begin_src elisp
+   ;; 这里的f虽然是个过程参数,但是后面用作方法体中,没法标识为参数,是当作普通参数看待的
+   ;; 只能在使用integral过程的时候把f重新标识为函数才行
+   (defun integral (f a b dx)
+     (* dx
+	(sum f (+ a (/ dx 2.0)) 'add-dx b)));这里f是一个过程
+
+  ;; 这里的pi-term也是过程,但是没有作为pi-sum的参数,是独立于 =pi-sum=过程的
+  ;; 因此可以识别为参数
+   (defun pi-sum (a b)
+     (sum 'pi-term a 'pi-next b))
+#+end_src
 
 ** 练习
 
 *** 1.29
+#+caption: 个人错误练习
 #+begin_src lisp
-	;; 利用辛普森方法的积分计算过程
-	(defun cube (x) (8 x x x))
-	(defun h-v (a b) (/ (- b a) 3))
-	;; 调用的过程
-	(defun xps-dx (f a b n)
-	  "f是积分的函数,ab是上下界限,n精度"
-	  (* (h-v a b)
-	     (sum f a b n)))
-	(defun sum (term a b n)
-	  (if (> a b)
-	      0
-	      (???y-k的计算过程????))
+  ;; 利用辛普森方法的积分计算过程
+  (defun cube (x) (* x x x))
+  (cube 3)
+
+  (defun h-value (a b n)
+    "计算h的值"
+    (/ (- b a) n))
+  (h-value 2 7 2.0)
+
+  (defun yk (f a b n k)
+    "计算yk的值,f是函数"
+    (funcall f (+ a (* k (h-value a b n)))))
+  (yk 'cube 2 7 2.0 0)
+
+    (defun jiFen (f a b n)
+      (* (/ (h-value a b n) 3)
+	 (sum f a b n)))
+
+    (defun sum (f a b n)
+      (if (= 0 n)
+	  (yk f a b n 0)
+	  (yk-sum f a b n))) 
+  (defun yk-sum (f a b n)
+      (+ (yk f a b n 0) (yk f a b n n) (yk-loop-sum f a b n 1 0)))
+
+    (defun yk-loop-sum (f a b n i count)
+      (cond ((= i n) count)
+	    ((even i) (yk-loop-sum f a b n (+ i 1) (+ count (* 4 (yk f a b n i)))))
+	    (t (yk-loop-sum f a b n (+ i 1) (+ count (* 2 (yk f a b n i)))))))
+
+    (defun even (i)
+      (if (= 0 (% i 2))
+	  t
+	  nil))
+
+    (even 3)
+
+  (jiFen 'cube 0 1 1000)
+#+end_src
+
+#+caption: 逻辑化思考
+#+begin_src lisp
+
 #+end_src
 
