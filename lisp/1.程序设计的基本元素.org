@@ -955,6 +955,30 @@ GCD(206,40) = GCD(40,6)
 
 #+caption: 逻辑化思考
 #+begin_src lisp
+  ;; 清醒的思考
 
+
+#+end_src
+
+
+** 1.3.2 用lambda构造过程
+
+lambda构造就是匿名函数,不需要定义函数,因为函数在参数中直接使用,可以直接使用lambda进行构造
+不惜使用defun定义一个新的函数;
+表达式最好在高阶过程中使用,作为匿名函数更有意义;
+
+#+begin_src lisp
+
+  (defun double (x)
+    (* 2 x))
+  (defun add (a b)
+    (+ (double a) b))
+
+  ;; 上面的方法中需要定一个double函数,如果改用lambda
+  ;; 完全不需要
+  (defun add3 (a b)  
+    (funcall (lambda (x) (+ (* 2 x) b)) a))
+
+  (add3 2 4)
 #+end_src
 
