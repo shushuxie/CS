@@ -1003,14 +1003,80 @@ let可以创建局部变量,就是把一个表达式对应为一个变量而已 
     <body>)
     body就是要使用表达式的体
 #+end_center
-
+方法体也包含在let表达式中,和lambda一样,如果是定义别的函数,也是使用这方法体
 
 #+begin_src lisp
   (let ((a 5)  
 	(b 10))  
     (message "The sum of %d and %d is %d" a b (+ a b)))
+
+  (defun test (a b)
+    (let ((a (+ 2 a))
+	  (b (+ 3 b)))
+      (+ a b)))
+
+  (test 2 3)
+
+  (defun tt (a b)
+    (let ((a (+ a 3)))
+      (+ a b)))
+
+  (tt 3 4)
 #+end_src
 
 
 
 ** 1.3.3过程作为一般性的方法
+
+*** 通过区间折半寻找方程的根
+在一个连续的函数中如果f(a)<0 f(b)>0 那么在[a,b]区间一定有f(x) = 0;
+
+问题分析: 并不一定会找到一个值恰好等于0,因此要找到一个合适的误差;
+
+#+begin_src lisp
+  (defun search (f neg-point pos-point)
+      (defun close-enough? (x y)
+      (< (abs (- x y)) 0.001))
+
+      (defun average (x y)
+      (/ (+ x y) 2))
+
+    (let ((midpoint (average neg-point pos-point)))
+      (if (close-enough? neg-point pos-point) ;;这行是方法体
+	  midpoint
+	  (let ((test-value (funcall f midpoint))) ;; 这是方法体
+	    (cond ((positive? test-value)
+		   (search f neg-point midpoint))
+		  ((negative? test-value)
+		   (search f midpoint pos-point))
+		  (t midpoint))))))
+  (defun positive? (x)
+  (> x 0))
+  (defun negative? (x)
+  (< x 0))
+
+  (defun f (x)
+    (+ x 2))
+  (defun f2 (x)
+    (- (* x x) 8))
+  (defun f3 (x)
+    (- (* x x x) (* 2 x) 3))
+
+  (search 'f3 1.0 2.0);1.89306640625
+  (search 'sin 2.0 4.0);2.000
+  (search 'sin 4.0 2.0); 3.14
+
+  ;;上述方法对neg 和pos有限制并不完善
+  (defun half-fun-mehod (f a b)
+    (let ((a-value (funcall f a))
+	  (b-value (funcall f b)))
+      (cond ((and (negative? a-value) (positive? b-value));;方法体
+	     (search f a b))
+	    ((and (negative? b-value) (positive? a-value))
+	     (search f b a))
+	    (t (error "values are not opposite sign" )))))
+
+  (half-fun-mehod 'sin 2.0 4.0)
+  (half-fun-mehod 'sin 3.2 4.0)
+  (sin 3.2)
+#+end_src
