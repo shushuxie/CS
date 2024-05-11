@@ -1029,54 +1029,79 @@ let可以创建局部变量,就是把一个表达式对应为一个变量而已 
 ** 1.3.3过程作为一般性的方法
 
 *** 通过区间折半寻找方程的根
-在一个连续的函数中如果f(a)<0 f(b)>0 那么在[a,b]区间一定有f(x) = 0;
+    在一个连续的函数中如果f(a)<0 f(b)>0 那么在[a,b]区间一定有f(x) = 0;
 
-问题分析: 并不一定会找到一个值恰好等于0,因此要找到一个合适的误差;
+    问题分析: 并不一定会找到一个值恰好等于0,因此要找到一个合适的误差;
+
+    #+begin_src lisp
+    (defun search (f neg-point pos-point)
+	(defun close-enough? (x y)
+	(< (abs (- x y)) 0.001))
+
+	(defun average (x y)
+	(/ (+ x y) 2))
+
+	(let ((midpoint (average neg-point pos-point)))
+	(if (close-enough? neg-point pos-point) ;;这行是方法体
+	    midpoint
+	    (let ((test-value (funcall f midpoint))) ;; 这是方法体
+		(cond ((positive? test-value)
+		    (search f neg-point midpoint))
+		    ((negative? test-value)
+		    (search f midpoint pos-point))
+		    (t midpoint))))))
+    (defun positive? (x)
+    (> x 0))
+    (defun negative? (x)
+    (< x 0))
+
+    (defun f (x)
+	(+ x 2))
+    (defun f2 (x)
+	(- (* x x) 8))
+    (defun f3 (x)
+	(- (* x x x) (* 2 x) 3))
+
+    (search 'f3 1.0 2.0);1.89306640625
+    (search 'sin 2.0 4.0);2.000
+    (search 'sin 4.0 2.0); 3.14
+
+    ;;上述方法对neg 和pos有限制并不完善
+    (defun half-fun-mehod (f a b)
+	(let ((a-value (funcall f a))
+	    (b-value (funcall f b)))
+	(cond ((and (negative? a-value) (positive? b-value));;方法体
+		(search f a b))
+		((and (negative? b-value) (positive? a-value))
+		(search f b a))
+		(t (error "values are not opposite sign" )))))
+
+    (half-fun-mehod 'sin 2.0 4.0)
+    (half-fun-mehod 'sin 3.2 4.0)
+    (sin 3.2)
+    #+end_src
+
+
+
+
+    
+*** 寻找函数的不动点
+函数的不动点就是f(x) = x的点也就是函数和 y=x直线的交点;
 
 #+begin_src lisp
-  (defun search (f neg-point pos-point)
-      (defun close-enough? (x y)
-      (< (abs (- x y)) 0.001))
+  ;; 设置全局变量
+  (setq tolerance 0.00001)
 
-      (defun average (x y)
-      (/ (+ x y) 2))
+  (defun fixed-point (f first-guess)
+    (defun close-enough? (v1 v2)
+      (< (abs (- v1 v2)) tolerance))
+    (defun try (guess)
+      (let ((next (funcall f guess)))
+	(if (close-enough? guess next);;方法体
+	    next
+	    (try next))))
+    (try first-guess));;方法体
 
-    (let ((midpoint (average neg-point pos-point)))
-      (if (close-enough? neg-point pos-point) ;;这行是方法体
-	  midpoint
-	  (let ((test-value (funcall f midpoint))) ;; 这是方法体
-	    (cond ((positive? test-value)
-		   (search f neg-point midpoint))
-		  ((negative? test-value)
-		   (search f midpoint pos-point))
-		  (t midpoint))))))
-  (defun positive? (x)
-  (> x 0))
-  (defun negative? (x)
-  (< x 0))
+  (fixed-point 'cos 1.0);;.739
 
-  (defun f (x)
-    (+ x 2))
-  (defun f2 (x)
-    (- (* x x) 8))
-  (defun f3 (x)
-    (- (* x x x) (* 2 x) 3))
-
-  (search 'f3 1.0 2.0);1.89306640625
-  (search 'sin 2.0 4.0);2.000
-  (search 'sin 4.0 2.0); 3.14
-
-  ;;上述方法对neg 和pos有限制并不完善
-  (defun half-fun-mehod (f a b)
-    (let ((a-value (funcall f a))
-	  (b-value (funcall f b)))
-      (cond ((and (negative? a-value) (positive? b-value));;方法体
-	     (search f a b))
-	    ((and (negative? b-value) (positive? a-value))
-	     (search f b a))
-	    (t (error "values are not opposite sign" )))))
-
-  (half-fun-mehod 'sin 2.0 4.0)
-  (half-fun-mehod 'sin 3.2 4.0)
-  (sin 3.2)
 #+end_src

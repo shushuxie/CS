@@ -2,58 +2,57 @@
 
 ** 基本语法
     1. 定义普通过程
-    =defun= 关键字,参数使用括号包裹,过程体也用括号包裹
-	#+begin_src lisp
-	(defun <function-name> (<arg1> <arg2> ... <argn>)
-	    (<function-body>))
-	#+end_src
+	=defun= 关键字,参数使用括号包裹,过程体也用括号包裹
+	    #+begin_src lisp
+	    (defun <function-name> (<arg1> <arg2> ... <argn>)
+		(<function-body>))
+	    #+end_src
 
     2. boolean判断
 	表示真假分别使用 =t= and =nil=
 
-	1) cond,可以判断多个条件
-	    #+begin_src lisp
-	      ;; 方法体中以cond开头,后面跟的是成组的表达式(<exp1> <sta1>)
-	      ;; 一个小括号就代表一组
-	      (defun add (a)
-		(cond ((< 0 a) (+ a 1))
-		      ((= 0 a) a)
-		      (t (- a 1))))
+       1) cond,可以判断多个条件
+	   #+begin_src lisp
+	     ;; 方法体中以cond开头,后面跟的是成组的表达式(<exp1> <sta1>)
+	     ;; 一个小括号就代表一组
+	     (defun add (a)
+	       (cond ((< 0 a) (+ a 1))
+		     ((= 0 a) a)
+		     (t (- a 1))))
 
-	      (add 0)
-	    #+end_src
+	     (add 0)
+	   #+end_src
 
-	2) =if表达式= 用于两种情况判断,像三目运算符
-	    #+begin_src lisp
-		;; if后面直接跟判断表达式,如果为真就输出下一个表达式
-		;; 否则就是最后一个表达式结果
-		(defun if-stat (a)
-		(if (= 0 a)
-		    a
-		    (* a a)))
+       2) =if表达式= 用于两种情况判断,像三目运算符
+	   #+begin_src lisp
+	       ;; if后面直接跟判断表达式,如果为真就输出下一个表达式
+	       ;; 否则就是最后一个表达式结果
+	       (defun if-stat (a)
+	       (if (= 0 a)
+		   a
+		   (* a a)))
 
-		(if-stat 3);9
-	    #+end_src
+	       (if-stat 3);9
+	   #+end_src
 
-	3) =and,or= 多个条件并联判断
-	    这两个一般用于 判断表达式真假,相当于 && 和 ||
-	    可以和cond搭配或者单独使用,返回bool结果
-	    #+begin_src lisp
-		(defun and-or (a b)
-		(if (and (> a 0) (= 0 b))
-		    0
-		    -3))
+       3) =and,or= 多个条件并联判断
+	   这两个一般用于 判断表达式真假,相当于 && 和 ||
+	   可以和cond搭配或者单独使用,返回bool结果
+	   #+begin_src lisp
+	       (defun and-or (a b)
+	       (if (and (> a 0) (= 0 b))
+		   0
+		   -3))
 
-		(and-or 3 0) ;0
+	       (and-or 3 0) ;0
 
-		(defun ors (a b)
-		(or (> a 0) (< b 0)))
+	       (defun ors (a b)
+	       (or (> a 0) (< b 0)))
 
-		(ors 3 1);t
-		(ors -1 -3);t
-		(ors -1 0);nil
-	    #+end_src
-
+	       (ors 3 1);t
+	       (ors -1 -3);t
+	       (ors -1 0);nil
+	   #+end_src
 
     3. 高阶过程,过程作为参数或者返回值
 	#+caption: 高阶抽象过程
@@ -109,6 +108,29 @@
 	(sum-identity 1 10);55
 	#+end_src
 
+    4. lambda表达式 
+       lambda表达式可以定义匿名函数,方便直接调用
+       #+begin_src elisp
+	 ;; 这个方法里面调用了一个匿名方法,并且把参数x传入
+	 ;; 然后进行加法运算
+	 (defun add (x)
+	   (+ (funcall (lambda (y) (* y y)) x)
+	      5))
+
+	 (add 3)
+       #+end_src
+
+    5. =let=
+       let可以很好的代替lambda,是lambda的封装
+       #+begin_src elisp
+	 ;; let是变量赋值,可以是过程,也可以是具体数字
+	 (defun add (x)
+	   (let ((fun-add (* x x)))
+	     (+ fun-add 5)))
+
+	 (add 3);14
+       #+end_src
+
 ** 注意事项
     1. 括号匹配
     2. cond使用括号匹配
@@ -121,3 +143,43 @@
 
 
 
+
+
+
+    
+** let & cond 语法比较
+1. let本身是一个函数,包含一个方法体
+
+2. 使用方法都是在括号中但是有一点区别
+   1) =(let ((var1 exp1) (var2 exp2) (var3 exp3)) (body))=
+      可以看到前面是一个总括号,里面包含多个变量赋值,每对赋值用括号分割
+
+   2) =(cond (cond1 exp1) (cond1 exp1)(cond3 exp3))=
+      cond只是各个执行分支判定,没有let方法体的概念
+
+   3) 具体例子
+      #+begin_src lisp
+	(defun add (x y)
+	  "let赋值了两个变量"
+	  (let ((x1 (- x 3)) (y1 (- y 2)))
+	    (+ x1 y1)))
+	(add 3 2);0
+
+	(defun add2 (x y)
+	  (cond ((= x 3) (+ x 2))
+		((> y 1) (- y 1))
+		(t 8)))
+
+	(add2 4 2);1
+	(add2 3 0);5
+	(add2 0 1);8
+      #+end_src
+
+
+#+begin_src lisp
+  (defun s (x y)
+    (cond ((> x 3) (+ x2))
+	  ((= y 1) 88)
+	  (t 99)))
+  (s 1 1)
+#+end_src
