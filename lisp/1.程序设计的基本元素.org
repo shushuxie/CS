@@ -1195,17 +1195,15 @@ let可以创建局部变量,就是把一个表达式对应为一个变量而已 
   ;; d的值是固定的1,n也是1,只是每次调用都不一样的D+N
   ;; 循环k-1次, k=1时结束
   ;; 可以转换成以下等价的除法计算序列：
-
   ;;N1/(D1+(N2/(D2+⋯+(Nk/Dk))))
   ;;而这个除法序列又可以用一个递归表达式来表示：
-
   ;;                              cf(1)
   ;;                      N1/(D1+cf(2))
   ;;            N1/(D1+(N2/(D2+cf(3))))
   ;;  N1/(D1+(N2/(D2+(N3/(D3+cf(4))))))
   ;;                                 ⋯
   ;;N1/(D1+(N2/(D2+(N3/(D3+⋯+(Nk/Dk))))))
- 
+
 
   (defun cont-frac (N D k)
     "cf单独计算整体分子函数"
@@ -1238,5 +1236,66 @@ let可以创建局部变量,就是把一个表达式对应为一个变量而已 
 
 #+caption: 递归版本
 #+begin_src lisp
+  (defun cont-frac (N D k)
+    (defun iter (i result)
+      (if (= i 0)
+	  result
+	  (iter (- i 1)
+		(/ (funcall N i)
+		   (+ (funcall D i) result)))))
+    "这里调用迭代,传入初始值"
+    (iter (- k 1)
+	  (/ (funcall N k) (funcall D k))))
+
+
+  (cont-frac (lambda (x) 1.0)
+	     (lambda (x) 1.0)
+	     6)
 
 #+end_src
+
+
+
+**** 练习1.38
+    #+begin_src lisp
+    ;; 1 2 1 1 4 1 1 6 1 1 8 1
+    ;; 可以把三个数字看为一组,121 141 161 181
+    ;; 中间的数字是 2*组数 前后都是1
+
+    (defun D (i)
+	(let ((num (+ 1 (/ i 3))))
+	(if (or (= 0 (% i 3)) (= 1 (% i 3)))
+	    1
+	    (* num 2))))
+
+    (defun N (i)
+	1.0)
+
+    (defun cont-frac (N D k)
+	(defun iter (i result)
+	(if (= i 0)
+	    result
+	    (iter (- i 1)
+		    (/ (funcall N i)
+		    (+ (funcall D i) result)))))
+	"这里调用迭代,传入初始值"
+	(iter (- k 1)
+	    (/ (funcall N k) (funcall D k))))
+
+    (defun e (k)
+	(+ 2 (cont-frac 'N 'D k)))
+
+    (e 16);2.71828
+    #+end_src
+
+
+
+
+
+
+
+
+
+
+
+
