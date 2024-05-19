@@ -1,0 +1,192 @@
+* gtd是什么
+DEADLINE: <2024-05-14 Tue>
+
+GTD 指的是 "Getting Things Done"，是一种由 David Allen 提出的时间管理方法。
+它旨在帮助人们更有效地组织任务、管理项目和掌控生活。GTD 的核心理念是将所有任务和想法记录下来，
+并在适当的时间进行处理，从而减少心理负担，提高生产效率。
+
+* org-mode gtd流程
+** gtd 的一般流程步骤
+    1. 创建任务收集箱：
+	使用 Emacs 中的 Org 模式创建一个任务收集箱（也称为 Inbox）。这个收集箱用来收集你的所有任务、想法和待办事项。
+
+    2. 任务分类和组织:
+	将任务从收集箱移动到适当的项目或上下文中。可以使用 Org 模式的大纲功能来组织任务，创建项目清单、项目大纲等。
+
+    3. 设置任务状态:
+	使用 Org 模式的 TODO 关键字来设置任务的状态，如待办、进行中和已完成等。
+
+    4. 设置任务属性:
+	使用 Org 模式的属性来设置任务的其他属性，如截止日期、优先级等。
+
+    5. 使用日程安排:
+	将任务与日程安排相结合，使用 Org 模式的日程视图来查看并管理任务的截止日期和安排。
+
+    6. 定期审查和更新:
+	定期打开任务清单，审查和更新任务的状态、优先级和截止日期。确保任务清单始终与你的当前需求和目标保持一致。
+
+    7. 增加笔记和附件:
+	在任务清单中添加相关的笔记、文档或附件，以便于任务的执行和跟踪。
+
+    8.  持续改进:
+	根据实际使用情况不断调整和改进你的 GTD 管理系统，以适应你的需求和习惯。
+** 基本操作
+    追踪项目或者取消追踪,统计里面的内容 =C-c [/]= 
+    通过 =C-c a= 可以打开agenda菜单,里面可以进行添加todo任务,日志记录等东西
+    通过 =C-c C-t= 切换任务状态,或者通过 Shift+左右箭头调整状态
+    通过 =C-c C-d= 设置deadline
+    在页面按 g 可以刷新gtd列表,保证最新的todo可以查到
+    
+    C-S-return	在当前新建todoj 和 M-S-return
+*** agenda视图操作
+1) =/= 可以搜索相应的标签
+2) 光标处 =C-c / d或m= 切换day视图或者week视图
+3) =j= 跳转视图日期
+** 状态变化
+添加笔记和状态变更信息(包括时间信息)，用"@"表示
+只添加状态变更信息，用"!"表示
+
+DONE(d@)       ; 进入时添加笔记
+DONE(d/!)      ; 离开时添加变更信息
+DONE(d@/!)     ; 进入时添加笔记，离开时添加变更信息
+
+checkbox 任务相对来说更轻量、简洁一些，自然也会有人群更倾向于使用这种方式进行任务管理。不过就我个人而言，基于 headline 的任务管理可以设置 deadline，
+可以设置为周期循环任务，还可以计时统计，这些功能是更有吸引力而且有必要的
+
+对包含子任务的任务，可以在该任务中加入 "[\/]" 或者 "[\%]" 来实时展现该任务的完成进度跟踪，在用快捷键来改变子任务的状态时，父任务的完成进度会被自动更新，当然，也可以执行函数
+org-update-statistics-cookies 来手动更新，默认情况下，这个函数被绑定到快捷键 "C-c #" 上。
+// 组织子任务没有完成,赋任务结束
+(setq org-enforce-todo-dependencies t)
+
+** capture 捕捉
+DEADLINE: <2024-05-05 Sun>
+
+可以设置不同的模板,进行捕捉不同的内容,例如 todo,journal,note等等,随意配置
+=C- c c= 可以打开捕捉,按不同的配置按键进行捕捉操作
+一般我们有两种使用方式
+1. 在笔记中添加
+2. 打开cature添加
+ 
+
+** todo权重
+=C-c ,= 为todo添加重要性 A,B
+   
+** TODO 时间戳
+在一个headline中添加激活的时间戳会进行统计当前文件,相当于是一个todo
+这样添加的时间会在agenda视图里面显示出来,但是不属于todo项
+打开日历可以使用 pagedown或者pageup翻页查看日历
+
+
+| 快捷键           | 时间戳                                       | 备注                           |
+|------------------+----------------------------------------------+--------------------------------|
+| C-c .            | <2024-5-19>                                  | 激活状态时间戳                 |
+| C-c !            | [2024-5-22]                                  | inactive                       |
+| C-c <            | <2024-05-19 日>                              | 插入当前时间                   |
+| C-c >            | --                                           | 打开日历,如果有时间戳,跳转那里 |
+| C-c C-o          | --                                           | 打开链接                       |
+| Shift-left/right | 时间戳日期加减                               |                                |
+| Shift-down/up    | 修改时间类型,年月日?                         |                                |
+| C-c C-y          | 计算日期范围 <2024-05-19 日>-<2024-05-22 三> | 3days                          |
+
+** 通过提示prompt调整时间
+    并非所有日期都可以在给定的 Emacs 实现中表示。默认情况下，组织模式强制日期进入兼容范围 1970–2037，这适用于所有 Emacs 实现。
+    如果要使用超出此范围的日期，请阅读变量 org-read-date-force-compatible-dates 的文档字符串。
+    #+caption: 具体日期
+    | 快捷键盘         | 含义                                      |
+    |----------------+------------------------------------------|
+    | ‘3-2-5’        | ⇒ 2003-02-05                             |
+    | ‘2/5/3’        | ⇒ 2003-02-05                             |
+    | ‘14’           | ⇒ 2006-06-14                             |
+    | ‘12’           | ⇒ 2006-07-12                             |
+    | ‘2/5’          | ⇒ 2007-02-05                             |
+    | ‘Fri’          | ⇒ nearest Friday (default date or later) |
+    | ‘sep 15’       | ⇒ 2006-09-15                             |
+    | ‘feb 15’       | ⇒ 2007-02-15                             |
+    | ‘sep 12 9’     | ⇒ 2009-09-12                             |
+    | ‘12:45’        | ⇒ 2006-06-13 12:45                       |
+    | ‘22 sept 0:34’ | ⇒ 2006-09-22 0:34                        |
+    | ‘w4’           | ⇒ ISO week for of the current year 2006  |
+    | ‘2012 w4 fri’  | ⇒ Friday of ISO week 4 in 2012           |
+    | ‘2012-w04-5’   | ⇒ Same as above                          |
+
+    #+caption: 调整日期
+    | 快捷键盘  | 含义                           |
+    |---------+-------------------------------|
+    | ‘+0’    | ⇒ today                       |
+    | ‘.’     | ⇒ today                       |
+    | ‘+2h’   | ⇒ two hours from now          |
+    | ‘+4d’   | ⇒ four days from today        |
+    | ‘+4’    | ⇒ same as +4d                 |
+    | ‘+2w’   | ⇒ two weeks from today        |
+    | ‘++5’   | ⇒ five days from default date |
+    | ‘+2tue’ | ⇒ second Tuesday from now     |
+
+    #+caption: 具体时间,范围
+    | 快捷键          |  含义           |
+    |----------------+-----------------|
+    | ‘11am-1:15pm’  | ⇒ 11:00-13:15   |
+    | ‘11h-13h15’    | ⇒ same as above |
+    | ‘11am--1:15pm’ | ⇒ same as above |
+    | ‘11am+2:15’    | ⇒ same as above |
+
+
+    
+** 通过快捷键调整日历显示
+
+    | 快捷键     | 含义                                    |
+    |-----------+----------------------------------------|
+    | RET       | Choose date at point in calendar.      |
+    | mouse-1   | Select date by clicking on it.         |
+    | S-RIGHT   | One day forward.                       |
+    | S-LEFT    | One day backward.                      |
+    | S-DOWN    | One week forward.                      |
+    | S-UP      | One week backward.                     |
+    | M-S-RIGHT | One month forward.                     |
+    | M-S-LEFT  | One month backward.                    |
+    | >         | Scroll calendar forward by one month.  |
+    | <         | Scroll calendar backward by one month. |
+    | M-v       | Scroll calendar forward by 3 months.   |
+    | C-v       | Scroll calendar backward by 3 months.  |
+    | C-.       | Select today’s                         |
+
+    
+** 自定义时间格式
+组织模式使用 ISO 8601 中定义的标准 ISO 表示法来表示日期和时间。如果您无法习惯这一点，并且需要日期和时间的另一种表示形式来让您满意，
+您可以通过自定义变量 org-display-custom-times 和 org-time-stamp-custom-formats 来获得它。
+=C-c C-x C-t=
+
+** TODO 截止和日期安排
+通过 =DEADLINE= & =SCHEDULED= 前面是截止日期,后面是计划开始的日期
+schedule在今天的编译中会出现一个提醒，提醒计划日期已过，直到条目被标记为完成，即任务会自动转发，直到完成
+如果要延迟此任务在议程中的显示，请使用 ' SCHEDULED: <2004-12-25 Sat -2d> '：该任务仍安排在 25 日，但会在两天后出现。
+如果任务包含中继器，则延迟被视为影响所有事件;如果希望延迟仅影响任务的第一次计划发生，请改用 ' --2d ' 。
+有关如何全局或按议程控制此内容的详细信息，请参阅 org-scheduled-delay-days 和 org-agenda-skip-scheduled-delay-if-deadline 。
+| key         | means                   |
+|-------------+-------------------------|
+| C-c C-d     | DEADLINE                |
+| C-c C-s     | SCHEDULED               |
+| C-c / d     | 创建deadline的日稀疏树    |
+| C-1 C-c / d | 可以查看截止日期,截止前一天 |
+| C-c / b     | 查看给的日期之前的树       |
+| C-c / a     | after某个日期             |
+| C-c / t     | 筛选todo                 |
+| C-c / D     | data range              |
+| C-c / c     | 定义筛选的条件            |
+|             |                         |
+
+
+
+** 归档
+DEADLINE: <2024-05-23 Thu> SCHEDULED: <2024-05-22 Wed>
+
+标记为完成或者取消,不需要进行的任务都会进行归档,也可以主动进行归档
+
+<2024-05-19 Sun>
+<2024-05-23 Thu>
+<2024-05-19 Sun>
+
+
+
+
+
+

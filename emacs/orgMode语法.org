@@ -25,15 +25,15 @@
 ** 各种引用块展示
 *快捷键* =C-c C-,=
 1. quote
-    #+begin_quote
-    这是一个引用块
-    #+end_quote
+   #+begin_quote
+   这是一个引用块
+   #+end_quote
 2. src
    #+begin_src c
      // c语言渲染
      int main(int argc, char *argv[]) {
        printf("Hello Emacs");
-       }
+     }
    #+end_src
 3. center
    #+begin_center
@@ -257,7 +257,11 @@ C-c C-c d Remove a property from the current entry.
 
 
 
-** 标签
+** TODO 标签                                                   :tagss:ATTACH:
+DEADLINE: <2024-05-19 Sun>
+:PROPERTIES:
+:ID:       27A5C447-C112-4B63-90D2-B3C32068950D
+:END:
 标签具有继承作用，子类拥有父类标签,标签只能在标题上才会生效，正文不行 
 | 快捷键  | 作用               |
 |---------+--------------------|
@@ -280,3 +284,4 @@ DEADLINE: <2023-10-31 二 23:47>
 
 
 * TODO 文件为什么无法添加到agendfile了
+

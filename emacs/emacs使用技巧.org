@@ -1,5 +1,8 @@
 
-* 常用技巧
+* TODO 常用技巧
+
+- State "DOING"      from "WAITING"    [2024-05-19 Sun 10:37]
+- State "DOING"      from "TODO"       [2024-05-19 Sun 10:37]
 1) =C-x n s/w= 只显示该级标题；
 2) =C-c C-,= 插入各种块，更容易判定为block，方便折叠
 3) =C-c C-c= 重排表格，列表统一；todo百分比计算，标题上面可以插入标签等
@@ -40,6 +43,7 @@ projectile是一个项目管理软件，一般情况下会自动识别项目；�
 
 
 * treemacs
+DEADLINE: <2024-05-12 Sun>
 [[https://github.com/Alexander-Miller/treemacs#customizing-themes-and-icons][treemacs github地址]]
 
 1) =M-0= 光标切换到文件区
@@ -54,7 +58,6 @@ projectile是一个项目管理软件，一般情况下会自动识别项目；�
 10) =快速预览= 首先打开treemacs-peek-mode 然后在文件去使用大写 *P* 开启预览模式，在文件目录区移动光标就会自动预览文件
     当按下enter时，会打开文件，同时预览也关闭了，需要再次开启才能预览；
 11) =q= 可以关闭窗口
-
    
 
 

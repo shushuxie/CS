@@ -1,4 +1,0 @@
-* Tasks
-** TODO  ceshi
- 
- [[file:~/Documents/CS/emacs/org-mode-grammer.org::*org mode简介][org mode简介]]

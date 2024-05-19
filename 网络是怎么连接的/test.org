@@ -1,0 +1,3 @@
+(setq size 10)
+(message "size 的值为：%s" size)
+
