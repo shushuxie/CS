@@ -1,4 +1,7 @@
-* gtd是什么
+#+TODO: TODO(t) DOING(i!) WAITING(w@/!) | DONE(d!) CANCELLED(c@))
+
+* ROUTINE gtd是什么
+
 DEADLINE: <2024-05-14 Tue>
 
 GTD 指的是 "Getting Things Done"，是一种由 David Allen 提出的时间管理方法。
@@ -212,3 +215,6 @@ schedule在今天的编译中会出现一个提醒，提醒计划日期已过，
 6. wiki 类似一些百科性质的东西,bug的由来等等,可以很简短但是觉得增长了见识
    
 ** 模板配置
+
+* TODO                                                                :todos:
+* ROUTINE 待办事项
