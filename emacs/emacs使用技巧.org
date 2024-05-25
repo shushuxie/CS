@@ -21,12 +21,12 @@
 | C-h k   | 查看快捷键的含义     | 触发之后输入快捷键即可              |
 | C-h c   | 简介描述快捷键含义   |                                 |
 | C-h v   | 查看定义的varible   | 搜索想要查看的veribal内容          |
-| C-h m   | 查看mode快捷键      | 在org,agenda,package视图下都能查看 |
+| C-h m   | 查看mode快捷键      | 在org,agenda,package,dird视图下都能查看 |
 | C-h P   | 包描述             |                                 |
 | C-h L   |                   |                                 |
 | C-h R   | package文档        |                                 |
 | C-c C-d | debugging 配置,技巧 |                                 |
-| C-h r   | emacs使用           |                                 |
+| C-h r   | emacs使用          |                                 |
 
 
 

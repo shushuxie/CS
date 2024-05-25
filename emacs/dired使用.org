@@ -1,0 +1,30 @@
+* dired 是什么?
+dired是emacs内置的一个功能,拥有 一个特定的MODE, *DIRED-MODE*
+我们可以通过很多方式操作文件
+
+* 快捷键
+
+| 快捷键   | 含义                                       |
+|---------+-------------------------------------------|
+| *C-x [* | 文件VIEW top                               |
+| *C-x ]* | file view button                          |
+| d       | flag a file                               |
+| D       | delete 'd' mark                           |
+| m       | mark a file                               |
+| u       | unmark a file                             |
+| U       | unmark all files                          |
+| o       | open a file/dired in another window       |
+| i       | reflict with EVIL                         |
+| R       | rename filer or =move marked file=        |
+| C       | copy file                                 |
+| s       | sort file by name/date                    |
+| g       | refersh dired buffer                      |
+| SPC/DEL | up/down move                              |
+| C-x-f   | new file                                  |
+| q       | return up level                           |
+| Enter   | open file in current windw or enter dired |
+| *!*     | shell command                             |
+| +       | create dired all privliage                |
+| =       | 对比两个文件夹文件不同                        |
+| *>/<*   | 找到上一或下一个文件夹                        |
+|         |                                           |
