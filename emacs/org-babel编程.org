@@ -1,0 +1,289 @@
+* what is org babel
+Babel是巴别塔,讲的是一个语言分裂人类合作的寓言,刚好对应多语言支持编程;
+就是一种编程模式,可以在org文件中运行源码,而不用费心的在别的
+编辑器中运行,对于一些小的算法十分有用只能这么说;
+
+使用也十分简单,编写好代码之后执行 =C-c C-c= 即可
+运行
+
+* 快捷键
+
+1. *C-c C-c* 运行代码,并进行输出
+2. *C-c C-v v* 展示要运行的源码,不输出
+
+
+* 相关链接🔗
+1. [[https://orgmode.org/worg/org-contrib/babel/languages/index.html][org-babel官方文档]]
+2. [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-C.html][C,C++配置]]
+
+* cofig org 
+在配置文件中加入相应语言的开启就行,如果找不到环境变量需要手动添加
+=$PATH= 可以查看系统环境变量
+
+#+begin_src lisp
+;; 设置支持的语言
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((python . t)
+     (shell . t)
+     (C .t)))
+;; 如果不能找到系统变量需要手动配置
+  (setq org-babel-python-command "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3")
+
+#+end_src
+
+** 各种代码运行
+*** shell
+    #+begin_src shell
+    pwd
+    #+end_src
+
+    #+RESULTS:
+    : /Users/xieshuqiang/Documents/typora/emacs
+*** C语言
+    #+begin_src C :includes <stdio.h>
+    int a=1;
+    int b=1;
+    printf("%d\n", a+b);
+    #+end_src
+
+    #+RESULTS:
+    : 2
+
+*** C++
+    #+begin_src C++ :includes <iostream>
+    std::cout<<"Hello World!\n";
+    #+end_src
+
+    #+RESULTS:
+    : Hello World!
+
+
+
+
+
+
+
+
+ 
+
+    
+*** 带有外部变量的C
+#+header: :var mystring="Sunday" :var myint=145 :var mydouble=3.14
+#+BEGIN_SRC C :includes <stdio.h>
+  printf ("mystring %s\n", mystring);
+  printf ("myint    %d\n", myint);
+  printf ("mydouble %g\n", mydouble);
+#+END_SRC
+
+#+RESULTS:
+| mystring | Sunday |
+| myint    |    145 |
+| mydouble |   3.14 |
+
+
+** C语言的一些支持
+
+*** header支持
+org-babel 支持一些头部设置,帮助我们设置一些变量,引用等
+在源码上面引入 =#+header:= 可以把这些设置引入程序中;
+1) =:var=
+   VAEIABLE=VALUE,支持以下类型
+   #+begin_src C
+int,
+double,
+string or const char*,
+type[]    // type = int, double, string, const char*
+type[][]  // type = int, double, string, const char*
+   #+end_src
+   其中type[][]用于存储org-table的变量
+2) =:cmdline=
+   传递可执行文件的命令行参数
+3) =:flages=
+   传递给编译器的标志
+4) =:main=
+   可以设置为“no”以禁止在 main 函数调用中包装代码块。
+5) =:includes=
+   代码引用的外部包
+6) =:defines=
+   程序中的#define
+7) =libs=
+   链接库
+
+#+header: :includes <stdio.h>
+#+BEGIN_SRC C 
+  printf ("hello babel ");
+#+END_SRC
+
+#+RESULTS:
+: hello babel
+
+*** 示例程序
+
+**** include
+
+    1) 包含多个库,应该使用列表
+    #+begin_src C++ :includes '(<iostream> <stdio.h>) :results output
+    std::cout<<"Hello World!\n";
+    printf("%d\n", 2+2);
+    #+end_src
+
+    #+RESULTS:
+    : Hello World!
+    : 4
+
+**** 标量变量
+
+    #+header: :includes <stdio.h>
+    #+header: :var mystring="Sunday" :var myint=145 :var mydouble=3.14
+    #+BEGIN_SRC C
+      printf ("mystring %s\n", mystring);
+      printf ("myint    %d\n", myint);
+      printf ("mydouble %g\n", mydouble);
+    #+END_SRC
+
+    #+RESULTS:
+    | mystring | Sunday |
+    | myint    |    145 |
+    | mydouble |   3.14 |
+
+    
+**** org-table的处理
+可以把table中的数据读入,然后进行处理
+#+name: somedata
+| nb    | sqr | noise |
+|-------+-----+-------|
+| zero  |   0 |  0.23 |
+| one   |   1 |  1.31 |
+| two   |   4 |  4.61 |
+| three |   9 |  9.05 |
+| four  |  16 | 16.55 |
+
+*表单内容总是以字符串进行输入,如果是数据需要提起进行类型转化*
+上面的代码在C语言中转化为下面的输入
+#+begin_src C
+const char* somedata[5][3] = {...};  // in C & C++
+//类型转化
+int    cell = atoi(somedata_h(4,"sqr"));        // integer conversion in C & C++
+double cell = atof(somedata_h(4,"noise"));      //  double conversion in C & C++
+#+end_src
+
+#+name: c-table
+#+header: :exports results
+#+begin_src C++ :var somedata=somedata
+  #include "stdlib.h"
+  #include "stdio.h"
+  int main()
+  {
+    for (int i=0; i<somedata_rows; i++) {
+      printf ("%2d ", i);
+      for (int j=1; j<somedata_cols; j++) {
+        const char* cell = somedata[i][j];
+        printf ("%5s %5g ", cell, 1000*atof(cell));
+      }
+      printf("\n");
+    }
+    return 0;
+  }
+#+end_src
+
+#+RESULTS: c-table
+| 0 |  0 |     0 |  0.23 |   230 |
+| 1 |  1 |  1000 |  1.31 |  1310 |
+| 2 |  4 |  4000 |  4.61 |  4610 |
+| 3 |  9 |  9000 |  9.05 |  9050 |
+| 4 | 16 | 16000 | 16.55 | 16550 |
+
+#+caption: 运行的源码
+#+begin_src C
+const char* somedata[5][3] = {
+ {"zero","0","0.23"},
+ {"one","1","1.31"},
+ {"two","4","4.61"},
+ {"three","9","9.05"},
+ {"four","16","16.55"}
+};
+const int somedata_rows = 5;
+const int somedata_cols = 3;
+
+#ifndef _STRING_H
+#include <string.h>
+#endif
+int get_column_num (int nbcols, const char** header, const char* column)
+{
+  int c;
+  for (c=0; c<nbcols; c++)
+    if (strcmp(header[c],column)==0)
+      return c;
+  return -1;
+}
+
+const char* somedata_header[3] = {"nb","sqr","noise"};
+const char* somedata_h (int row, const char* col) { return somedata[row][get_column_num(3,somedata_header,col)]; }
+#include "stdlib.h"
+#include "stdio.h"
+int main()
+{
+  for (int i=0; i<somedata_rows; i++) {
+    printf ("%2d ", i);
+    for (int j=1; j<somedata_cols; j++) {
+      const char* cell = somedata[i][j];
+      printf ("%5s %5g ", cell, 1000*atof(cell));
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+#+end_src
+
+
+
+** 个人C代码运行示例
+
+#+begin_src C
+  #include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+/**
+   难度：简单
+ * 两数之和
+ */
+
+int* twoSum(int* nums, int numsSize, int target, int* returnSize);
+
+int main(int argc,char *argv[]) {
+
+    int nums[5] = {2,4,6,9,5};
+    int *returnSize = malloc(sizeof(int));
+    int *resul = malloc(sizeof(int)*2);
+    int *returnResul = twoSum(nums, 5, 8, returnSize);
+    printf("Indices of the two numbers are: %d and %d\n", returnResul[0], returnResul[1]);
+    return 0;
+}
+
+
+int* twoSum(int* nums, int numsSize, int target, int* returnSize){
+
+    for (int i=0; i<numsSize; i++)
+    {
+        for (int m=i+1; m<numsSize; m++)
+            if (target == nums[i] + nums[m])
+            {
+                int * ret = malloc(sizeof(int) * 2);
+                // 这样也能给指针赋值
+                ret[0] = i;
+                ret[1] = m;
+                // *point 才是给指针赋值
+                *returnSize = 2;
+                return ret;
+            }
+    }
+    *returnSize = 0;
+    return returnSize;
+}
+#+end_src
+
+#+RESULTS:
+: Indices of the two numbers are: 0 and 2

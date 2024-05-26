@@ -20,8 +20,9 @@ org-update-statistics-cookies 来手动更新，默认情况下，这个函数�
 // 组织子任务没有完成,赋任务结束
 (setq org-enforce-todo-dependencies t)
 
-** capture 捕捉
+** DONE capture 捕捉
 DEADLINE: <2024-05-05 Sun>
+- State "DONE"       from              [2024-05-26 Sun 12:44]
 - Note taken on [2024-05-22 Wed 21:55] \\
   what is notes
 :DRAW:

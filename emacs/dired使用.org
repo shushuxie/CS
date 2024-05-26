@@ -1,30 +1,62 @@
 * dired 是什么?
 dired是emacs内置的一个功能,拥有 一个特定的MODE, *DIRED-MODE*
 我们可以通过很多方式操作文件
+文件的操作无非就是,复制,删除,新建,编辑,权限;
+
+** 技巧
+1. *~* 可以快速的标记备份文件;
+2. 可以使文件buffer可编辑,然后结合EVIL批量修改文件名,删除,更改权限
+3. =* /= 标记所有文件夹, =t= 进行切换标记,标记所有文件
+4. =A= 可以搜索所有标记文件的关键字;
+5. =v= read-only =e= editable
+6. =!= 和 =X= 都能运行shell命令
+7. =y= 展示文件信息
+8. =w= 复制文件名
+9. =C-x C-f= 可以打开dired也可以进行新建文件
+10. =C-x d= open dired buffer
+11. =^= 可以进入上层文件夹
+12. =o= 在别的窗口打开文件, =enter= 本窗口
+13. =D= 直接删除光标处的文件
 
 * 快捷键
 
-| 快捷键   | 含义                                       |
-|---------+-------------------------------------------|
-| *C-x [* | 文件VIEW top                               |
-| *C-x ]* | file view button                          |
-| d       | flag a file                               |
-| D       | delete 'd' mark                           |
-| m       | mark a file                               |
-| u       | unmark a file                             |
-| U       | unmark all files                          |
-| o       | open a file/dired in another window       |
-| i       | reflict with EVIL                         |
-| R       | rename filer or =move marked file=        |
-| C       | copy file                                 |
-| s       | sort file by name/date                    |
-| g       | refersh dired buffer                      |
-| SPC/DEL | up/down move                              |
-| C-x-f   | new file                                  |
-| q       | return up level                           |
-| Enter   | open file in current windw or enter dired |
-| *!*     | shell command                             |
-| +       | create dired all privliage                |
-| =       | 对比两个文件夹文件不同                        |
-| *>/<*   | 找到上一或下一个文件夹                        |
-|         |                                           |
+| 快捷键     | 含义                                       |
+|-----------+-------------------------------------------|
+| *C-x [*   | 文件VIEW top                               |
+| *C-x ]*   | file view button                          |
+| d         | flag a file                               |
+| D         | delete cursor file                        |
+| m         | mark a file                               |
+| u         | unmark a file                             |
+| U         | unmark all files                          |
+| o         | open a file/dired in another window       |
+| i         | reflict with EVIL                         |
+| R         | rename filer or =move marked file=        |
+| C         | copy file                                 |
+| s         | sort file by name/date                    |
+| g         | refersh dired buffer                      |
+| SPC/DEL   | up/down move                              |
+| C-x-f     | new file                                  |
+| q         | return up level                           |
+| Enter     | open file in current windw or enter dired |
+| *!*       | shell command                             |
+| +         | create dired all privliage                |
+| =         | 对比两个文件夹文件不同                        |
+| *>/<*     | 找到上一或下一个文件夹                        |
+| v         | 文件只读                                    |
+| e,f       | 文件可编辑                                  |
+| w         | 剪贴板复制文件名                             |
+| x         | 执行flag delete                            |
+| y         | show file type                            |
+| * /       | mark all dired* /                         |
+| *C-x C-q* | edit dired buffer like a normal buffer    |
+
+
+/xieti/ =eiwe=
++xiahuaxian+ _xiahuaxian_ *xkdfj*
+
+
+#+begin_src python
+  print("hello world");
+#+end_src
+
