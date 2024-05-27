@@ -1,4 +1,4 @@
-* ROUTINE gtd是什么
+* gtd是什么
     GTD 指的是 "Getting Things Done"，是一种由 David Allen 提出的时间管理方法。
 agenda视图操作
 1) =/= 可以搜索相应的标签

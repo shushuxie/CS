@@ -287,3 +287,15 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
 
 #+RESULTS:
 : Indices of the two numbers are: 0 and 2
+
+
+#+begin_src C
+  #include <stdio.h>
+  int main() {
+    printf("hello bable");
+    return 0;
+  }
+#+end_src
+
+#+RESULTS:
+: hello bable
