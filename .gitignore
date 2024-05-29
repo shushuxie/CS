@@ -2,3 +2,4 @@ misc.xml
 *.org_archive
 *.DS_Store
 *.org#
+*.~undo-tree~
