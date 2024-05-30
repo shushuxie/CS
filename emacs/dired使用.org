@@ -54,9 +54,22 @@ dired是emacs内置的一个功能,拥有 一个特定的MODE, *DIRED-MODE*
 
 /xieti/ =eiwe=
 +xiahuaxian+ _xiahuaxian_ *xkdfj*
+=ejri= /jrei/  
 
 
 #+begin_src python
-  print("hello world");
+  # print("hello world");
 #+end_src
+
+*kfj,bb*   
+
+#+begin_src java
+    public static void main() {
+
+    // sout("hello emacs javakk");
+
+  }
+#+end_src
+
+
 

@@ -79,8 +79,8 @@ DEADLINE: <2024-05-12 Sun>
     当按下enter时，会打开文件，同时预览也关闭了，需要再次开启才能预览；
 11) =q= 可以关闭窗口
    
+#+begin_src lisp
 
-
-
-
-
+  woeirnvc
+  
+#+end_src
