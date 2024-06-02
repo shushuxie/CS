@@ -7,6 +7,7 @@
 - ~运行~ 编译器支持
 - ~调试~ 调试器支持
 
+
 ** what is lsp
 lsp的全称是language server protocol,也就是语言服务协议,现在的语言补全包括检查都可以通过这个来实现
 具体来说,就是前端,我们自己的文件可以使用任何的语言进行编写,JAVA,C,RUST,PYTHON whatever,然后会有一
@@ -170,13 +171,16 @@ Eclipse Debugger：
 
 *** DAP-依赖的调试器
 和lsp一样,dap协议也需要一个服务的支持,也就是调试器,相当于后端服务
+但是dapmode需要依赖lldb调试,而且是一个能和dap交互的lldb,因此不能是纯lldb,
+一般是vscode专用的lldb,这里使用codelldb,but no use;
+
 
 ** C语言常用操作
 1. lsp-rename 重命名光标下的符号
 2. 实现函数原型实现
 3. 代码调试
 4. 打断点
-   代码编译
+   代码编
 5. 代码运行
 
    #+begin_quote
@@ -236,3 +240,30 @@ Eclipse Debugger：
 快捷键：M-x shell-command
 函数：shell-command 
    #+end_quote
+
+
+#+begin_src C
+  #include <stdio.h>
+
+  int main() {
+  
+      printf("hello world");
+      printf("hello world2");
+      printf("hello world3");
+
+  }
+#+end_src
+
+#+RESULTS:
+: hello worldhello world2hello world3
+
+
+** 代码调试解决方案
+由于没发正确和lldb配合,M1芯片也没发安装gdb就进入了一个很尴尬的境地;要么我使用window环境搭建一套emacs,但是会耗费更多时间,而且不知道效果如何
+或者使用Linux环境,或许有时间再进行尝试,最近一段时间也不会进行c开发,只有再专门的ide上面完成了;编辑器的配置也就先暂停,继续lisp的学习;
+
+只能手动原生在shell界面使用lldb进行调试,下面记录一下基本的流程;
+
+放弃了macOS下面的emacs调试,真的得不偿失,试了很多方案,自己编译lldb-mi vscode插件的lldb,codelldb但是都不理想,没发好好的进行交互
+那就先这样吧, 也没有办法,后续调试只能使用别的专业的编辑器了;
+

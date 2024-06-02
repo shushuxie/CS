@@ -9,6 +9,9 @@ int main() {
 
   int aix = 3;
   printf("hello %d \n", aix);
+  printf("hello world");
 }
+
+
 
 int testMethod() { return 3 + 4; }
