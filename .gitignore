@@ -3,3 +3,4 @@ misc.xml
 *.DS_Store
 *.org#
 *.~undo-tree~
+.ccls-cache/
