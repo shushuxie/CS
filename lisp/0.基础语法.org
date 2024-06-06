@@ -913,3 +913,135 @@ Elisp提供了一些机制来捕获和处理运行时错误，以提高程序的
 	(prog-mode)  ;; 启动prog-mode，执行钩子函数
       #+end_src
 
+      
+
+** 交互和命令的绑定
+
+~在Emacs中，交互命令（Interactive Commands）是用户可以通过键盘快捷键或 M-x 命令调用的函数。~
+~键绑定（Key Bindings）则是将函数绑定到特定的按键或按键组合，以便用户快速调用这些函数。~
+
+1. 交互命令
+    要定义一个交互命令，可以使用 *interactive* 特性。
+    interactive 指示函数可以通过 M-x 命令调用，并指定如何读取函数参数。
+
+    - 定义交互命令
+      #+begin_src lisp
+	使用 interactive 定义一个交互命令：
+
+	(defun my-hello-command ()
+	  "Display a greeting message."
+	  (interactive)
+	  (message "Hello, Emacs!"))
+	在这个例子中，my-hello-command 是一个简单的交互命令，调用时会在迷你缓冲区显示 "Hello, Emacs!"。
+      #+end_src
+
+    - interactive 代码
+      #+begin_src lisp
+	    interactive 特性可以接受一个字符串参数，用于指定如何读取函数的参数。
+	    例如：
+	    "n"：读取一个数字。
+	    "s"：读取一个字符串。
+	    "f"：读取一个文件名。
+
+	示例：
+	(defun my-square-number (number)
+	  "Square the given NUMBER and display the result."
+	  (interactive "nEnter a number: ")
+	  (message "The square of %d is %d" number (* number number)))
+      #+end_src
+2. 键绑定
+    键绑定是将按键或按键组合映射到特定的函数，以便用户可以通过这些按键快速调用函数。
+
+    - 全局键绑定
+      #+begin_src lisp
+	使用 global-set-key 定义全局键绑定：
+	(global-set-key (kbd "C-c h") 'my-hello-command)
+	在这个例子中，C-c h 被绑定到 my-hello-command 函数。按 C-c h 将调用 my-hello-command。
+      #+end_src
+
+    - 模式特定键绑定
+      #+begin_src lisp
+	使用 define-key 在特定模式中定义键绑定：
+
+	(define-key emacs-lisp-mode-map (kbd "C-c e") 'my-hello-command)
+	在这个例子中，C-c e 被绑定到 my-hello-command 函数，但仅在 emacs-lisp-mode 中有效。
+      #+end_src
+
+    - 修改现有键绑定
+      #+begin_src lisp
+	使用 global-unset-key 取消现有的全局键绑定：
+
+	(global-unset-key (kbd "C-x C-c"))  ;; 取消退出命令的键绑定
+	使用 substitute-key-definition 替换现有的键绑定：
+
+	(substitute-key-definition 'previous-line 'my-custom-previous-line global-map)
+      #+end_src
+
+3. 示例
+   #+begin_src lisp
+     定义一个带参数的交互命令
+     创建一个交互命令，读取一个字符串并显示：
+     (defun my-display-string (input-string)
+       "Display the given INPUT-STRING."
+       (interactive "sEnter a string: ")
+       (message "You entered: %s" input-string))
+
+     ;; 测试命令
+     (my-display-string)
+
+     ;=======================================================
+     创建一个全局键绑定
+     创建一个全局键绑定，将 C-c d 绑定到 my-display-string 命令：
+
+     (global-set-key (kbd "C-c d") 'my-display-string)
+     ;=======================================================
+     创建一个模式特定键绑定
+
+     在 emacs-lisp-mode 中创建一个键绑定，将 C-c l 绑定到 my-hello-command：
+
+     elisp
+     复制代码
+     (define-key emacs-lisp-mode-map (kbd "C-c l") 'my-hello-command)
+   #+end_src
+   #+begin_export latex
+   #+end_export
+
+4. 练习
+   #+begin_src lisp
+     定义一个带有多个参数的交互命令
+     创建一个交互命令，读取两个数字并显示它们的和：
+
+     (defun my-add-numbers (a b)
+       "Add two numbers A and B, and display the result."
+       (interactive "nEnter first number: \nnEnter second number: ")
+       (message "The sum of %d and %d is %d" a b (+ a b)))
+
+     ;; 测试命令
+     (my-add-numbers)
+     ;=============================================
+
+     创建多个全局键绑定
+
+     创建两个全局键绑定，将 C-c a 绑定到 my-add-numbers 命令，将 C-c s 绑定到 my-square-number 命令：
+
+     (global-set-key (kbd "C-c a") 'my-add-numbers)
+     (global-set-key (kbd "C-c s") 'my-square-number)
+     ;=============================================
+
+     创建一个自定义模式，并添加键绑定
+
+     创建一个自定义模式 my-custom-mode，并在该模式中添加键绑定，将 C-c c 绑定到 my-hello-command：
+
+     (define-derived-mode my-custom-mode text-mode "CustomMode"
+       "A custom major mode."
+       (define-key my-custom-mode-map (kbd "C-c c") 'my-hello-command))
+
+     ;; 测试自定义模式
+     (my-custom-mode)
+   #+end_src
+
+
+
+
+
+
