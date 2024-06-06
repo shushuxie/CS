@@ -129,3 +129,787 @@
 	    (multiply 3 4)  ;; 结果：12
     #+end_src
 
+
+
+
+
+** 条件和循环
+    
+1. 条件语句
+    1. if 语句
+	*if 语句用于在条件为真时执行一个表达式，在条件为假时执行另一个表达式*
+
+	#+begin_src elisp
+	(if condition
+	    then-part
+	    else-part)
+
+	condition：要测试的条件表达式。
+	then-part：如果条件为真时执行的表达式。
+	else-part：如果条件为假时执行的表达式（可选）。
+	#+end_src
+
+    2. cond 语句
+	*cond 语句用于多个条件的情况下，可以看作是多重的 if-else*
+	#+begin_src elisp
+	(cond
+	(condition1 action1)
+	(condition2 action2)
+	...
+	(t default-action))
+	每个条件-动作对表示一个条件和相应的动作。
+	t 作为最后一个条件，表示默认情况。
+
+	(setq x 10)
+	(cond
+	((< x 5) (message "x is less than 5"))
+	((= x 5) (message "x is equal to 5"))
+	(t (message "x is greater than 5")))
+	在这个示例中，x 等于 10，所以输出 "x is greater than 5"。
+	#+end_src
+
+
+2. 循环结构
+    1. while 循环
+	while 循环在条件为真时反复执行一个表达式
+
+	#+begin_src elisp
+	(while condition
+	    body)
+	condition：要测试的条件表达式。
+	body：循环体，在条件为真时反复执行。
+
+	(setq x 1)
+	(while (< x 5)
+	    (message "x is %d" x)
+	    (setq x (1+ x)))
+	在这个示例中，x 从 1 开始，每次循环增加 1，直到 x 不再小于 5。
+	这里的“1+”是一个函数,可以使值加1返回
+	#+end_src
+
+    2. dotimes 循环
+	*dotimes 循环执行指定次数的循环*
+	#+begin_src lisp
+	(dotimes (variable count)
+	    body)
+	variable：循环变量。
+	count：循环次数。
+	body：循环体，执行 count 次。
+
+	(dotimes (i 5)
+	    (message "Iteration %d" i))
+	在这个示例中，循环体执行 5 次，i 从 0 递增到 4。
+	#+end_src
+
+
+    3. dolist 循环
+	*dolist 循环用于遍历列表中的每个元素*
+
+	#+begin_src elisp
+	(dolist (variable list)
+	    body)
+	variable：循环变量，每次循环赋值为列表中的一个元素。
+	list：要遍历的列表。
+	body：循环体，遍历列表的每个元素时执行。
+
+	(setq my-list '(1 2 3 4 5))
+	(dolist (element my-list)
+	    (message "Element: %d" element))
+	在这个示例中，循环体遍历 my-list 中的每个元素并输出。
+	#+end_src
+
+
+
+
+** 高级数据结构
+1. 哈希表（Hash Tables）
+    哈希表是一种用于存储键值对的数据结构。它的查找、插入和删除操作在平均情况下都是常数时间（O(1)）。
+    在Elisp中，哈希表提供了一种高效的键值对存储和访问方式。
+
+   1. 创建和初始化哈希表 
+      #+begin_src lisp
+	使用 make-hash-table 创建一个新的哈希表：
+
+	(setq my-hash (make-hash-table :test 'equal))
+	:test 参数指定键的比较函数，可以是 eq、eql、equal 或 eqv。
+      #+end_src
+
+   2. 操作哈希表
+       #+begin_src lisp
+	   插入和更新键值对
+	   使用 puthash 插入或更新哈希表中的键值对：
+	   (puthash "name" "Alice" my-hash)
+	   (puthash "age" 30 my-hash)
+
+	   读取键值对
+	   使用 gethash 获取键对应的值：
+	   (gethash "name" my-hash)  ;; 返回 "Alice"
+	   (gethash "age" my-hash)   ;; 返回 30
+
+	   删除键值对
+	   使用 remhash 删除键值对：
+	   (remhash "age" my-hash)
+       #+end_src
+
+   3. 遍历哈希表
+       #+begin_src lisp
+       使用 maphash 遍历哈希表中的所有键值对：
+
+	   (maphash (lambda (key value)
+		       (message "Key: %s, Value: %s" key value))
+		   my-hash)
+
+       示例:
+	   (setq student-scores (make-hash-table :test 'equal))
+	   (puthash "Alice" 85 student-scores)
+	   (puthash "Bob" 90 student-scores)
+	   (puthash "Charlie" 95 student-scores)
+
+	   (message "Alice's score: %d" (gethash "Alice" student-scores))  ;; 输出 "Alice's score: 85"
+
+	   (remhash "Bob" student-scores)
+
+	   (maphash (lambda (key value)
+		       (message "Student: %s, Score: %d" key value))
+		   student-scores)
+       #+end_src
+
+2. 数组（Arrays）
+    数组是一种用于存储固定数量元素的集合，元素可以通过索引快速访问。
+
+   1. 创建和初始化数组
+       *使用 vector 创建一个数组*
+       #+begin_src lisp
+	 (setq my-array (vector 1 2 3 4 5))
+	 也可以使用 make-vector 创建指定长度的数组，并初始化每个元素：
+
+	 (setq my-array (make-vector 5 0))  ;; 创建一个长度为5的数组，每个元素初始化为0
+       #+end_src
+
+   2. 操作数组
+      - 访问数组元素
+	#+begin_src lisp
+	  使用 aref 访问数组中的元素：
+
+	  elisp
+	  复制代码
+	  (aref my-array 0)  ;; 返回第一个元素
+	#+end_src
+      - 修改数组元素
+	#+begin_src lisp
+	使用 aset 修改数组中的元素：
+
+	elisp
+	复制代码
+	(aset my-array 0 10)  ;; 将第一个元素修改为10
+	#+end_src
+      - 获取数组长度
+	#+begin_src lisp
+	  使用 length 获取数组的长度：
+
+	  (length my-array)  ;; 返回数组的长度
+
+	  示例
+	  (setq my-array (vector "a" "b" "c" "d" "e"))
+
+	  (message "First element: %s" (aref my-array 0))  ;; 输出 "First element: a"
+
+	  (aset my-array 1 "z")
+	  (message "Modified array: %s" my-array)  ;; 输出 "Modified array: [a z c d e]"
+
+	  (message "Array length: %d" (length my-array))  ;; 输出 "Array length: 5"
+	#+end_src
+3. 练习
+    1. 哈希表练习
+       #+begin_quote
+	创建一个包含学生姓名和成绩的哈希表。
+	插入三名学生及其成绩。
+	打印所有学生的姓名及其成绩。
+	删除其中一名学生的记录。
+	打印剩余学生的姓名及其成绩。
+       #+end_quote
+
+       #+caption: 答案
+       #+begin_src lisp
+	 (setq students (make-hash-table :test 'equal))
+	 (puthash "Alice" 90 students)
+	 (puthash "Bob" 85 students)
+	 (puthash "Charlie" 95 students)
+
+	 (maphash (lambda (key value)
+		    (message "Student: %s, Score: %d" key value))
+		  students)
+
+	 (remhash "Bob" students)
+
+	 (maphash (lambda (key value)
+		    (message "Student: %s, Score: %d" key value))
+		  students)
+       #+end_src
+    2. 数组练习
+       #+begin_quote
+	创建一个包含数字的数组。
+	修改数组中的某个元素。
+	打印数组的长度。
+	打印数组中的所有元素。
+       #+end_quote
+       #+begin_src lisp
+	 (setq numbers (vector 1 2 3 4 5))
+
+	 (aset numbers 2 10)
+
+	 (message "Array length: %d" (length numbers))
+
+	 (dotimes (i (length numbers))
+	   (message "Element %d: %d" i (aref numbers i)))
+       #+end_src
+
+
+** 宏
+    *宏是用来生成代码的代码，可以在编译时动态地构造新的代码片段。*
+    ~宏在某些情况下比函数更强大，因为它们可以操纵未求值的表达式，从而实现代码的重用和简化。~
+
+1. 定义宏
+   *使用 defmacro 来定义一个宏。宏的语法和函数类似，但宏会在执行之前进行代码展开。*
+
+    #+begin_src lisp
+    (defmacro my-macro (arg)
+	"A simple macro that prints the given argument."
+	`(message "Argument is: %s" ,arg))
+    宏参数：宏参数用来接收传入的表达式。
+    反引号（`）和逗号（,）：反引号用于引导一个模板，逗号用于插入宏参数的值。
+
+    示例
+    (my-macro "Hello, Macro!")  ;; 输出 "Argument is: Hello, Macro!"
+    在这个示例中，宏 my-macro 接收一个参数，并生成一个 message 函数调用的代码。
+    #+end_src
+
+2. 使用宏
+    =宏的强大之处在于它可以操纵未求值的表达式，并在展开时插入特定的代码片段。=
+
+3. 条件宏
+    使用宏来简化条件语句的编写：
+    #+begin_src lisp
+      (defmacro my-unless (condition &rest body)
+	"Execute BODY unless CONDITION is true."
+	`(if (not ,condition)
+	     (progn ,@body)))
+
+      (my-unless t
+	(message "This will not print."))
+      (my-unless nil
+	(message "This will print."))
+      &rest：用于接受任意数量的参数。
+      progn：用于包含多个表达式的代码块。
+      @：用于解包参数列表，将其插入到代码中。
+    #+end_src
+
+4. 常见宏
+
+   - when 宏
+    =when 宏用于在条件为真时执行一个或多个表达式=
+    #+begin_src lisp
+    (when (> 5 3)
+	(message "5 is greater than 3"))
+    等同于：
+
+    elisp
+    复制代码
+    (if (> 5 3)
+	(progn
+	    (message "5 is greater than 3")))
+    #+end_src
+   - unless 宏
+     =unless 宏用于在条件为假时执行一个或多个表达式=
+     #+begin_src lisp
+       (unless (< 5 3)
+	 (message "5 is not less than 3"))
+       等同于：
+
+       elisp
+       复制代码
+       (if (not (< 5 3))
+	   (progn
+	     (message "5 is not less than 3")))
+       
+     #+end_src
+
+5. 宏展开和调试
+    =宏的代码在执行前需要展开，有时我们需要查看宏展开后的代码来进行调试。=
+    #+begin_src lisp
+      macroexpand
+      使用 macroexpand 查看宏展开后的代码：
+
+      (macroexpand '(my-unless t (message "This will not print.")))
+
+      输出类似于：
+      (if (not t)
+	  (progn (message "This will not print.")))
+    #+end_src
+
+6. 练习
+   #+begin_src lisp
+	  定义一个简单的宏
+	  定义一个宏 my-when，它在条件为真时执行给定的表达式：
+
+	  (defmacro my-when (condition &rest body)
+	    "Execute BODY when CONDITION is true."
+	    `(if ,condition
+		 (progn ,@body)))
+
+	  ;; 测试宏
+	  (my-when (> 10 5)
+	    (message "10 is greater than 5"))
+
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	  定义一个调试打印的宏
+	  定义一个宏 debug-print，在调试模式下打印表达式的值：
+	  (defmacro debug-print (expr)
+	    "Print the value of EXPR if debugging is enabled."
+	    `(when debug-mode
+	       (message "Value of %s: %s" ',expr ,expr)))
+
+	  ;; 启用调试模式
+	  (setq debug-mode t)
+
+	  ;; 测试宏
+	  (debug-print (+ 1 2))  ;; 输出 "Value of (+ 1 2): 3"
+
+     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	  定义一个计时宏
+
+	  定义一个宏 measure-time，用来测量表达式的执行时间：
+
+	  (defmacro measure-time (&rest body)
+	    "Measure the time it takes to evaluate BODY."
+	    `(let ((start-time (current-time)))
+	       ,@body
+	       (message "Elapsed time: %.06f seconds"
+			(float-time (time-since start-time)))))
+
+	  ;; 测试宏
+	  (measure-time
+	   (dotimes (i 1000000)
+	     (+ i i)))  ;; 输出执行时间
+   #+end_src
+
+
+** 输入与输出
+~在Emacs Lisp中，输入与输出（I/O）操作是编写实用工具和插件时经常需要处理的部分。
+主要包括读取用户输入和处理文件I/O。~
+
+1. 读取输入
+    =read 函数用于从用户输入读取一个Lisp表达式=
+    - /read/
+	#+begin_src lisp
+	    (read)
+	    调用时会等待用户输入一个Lisp表达式，并返回其解析结果。例如：
+
+	    (read)  ;; 用户输入: '(1 2 3)
+		    ;; 返回: (1 2 3)
+
+	#+end_src
+
+    - read-string
+      #+begin_src lisp
+	read-string 函数用于读取用户输入的字符串：
+
+	(read-string "Enter your name: ")
+	调用时会显示提示信息，并等待用户输入一个字符串。例如：
+
+	(setq name (read-string "Enter your name: "))  ;; 用户输入: Alice
+						       ;; 返回: "Alice"
+      #+end_src
+
+    - completing-read
+      #+begin_src lisp
+	completing-read 函数用于从一组选项中让用户选择：
+
+	(completing-read "Choose a color: " '("red" "green" "blue"))
+	调用时会显示提示信息，并提供选项供用户选择。例如：
+
+	(setq color (completing-read "Choose a color: " '("red" "green" "blue")))
+      #+end_src
+
+2. 输出
+    - message
+      #+begin_src lisp
+	message 函数用于在Emacs的迷你缓冲区显示信息：
+
+	(message "Hello, %s!" "world")
+
+	输出：
+	"Hello, world!"
+      #+end_src
+
+3. 文件I/O
+    - 读取文件内容
+      #+begin_src lisp
+	insert-file-contents 函数用于将文件内容插入到当前缓冲区中：
+
+	(insert-file-contents "path/to/file.txt")
+	如果需要读取文件的内容并存储到变量中，可以使用以下方法：
+
+	(defun read-file-to-string (filepath)
+	  "Read the contents of FILEPATH and return as a string."
+	  (with-temp-buffer
+	    (insert-file-contents filepath)
+	    (buffer-string)))
+
+	(setq file-content (read-file-to-string "path/to/file.txt"))
+      #+end_src
+
+    - 写入文件内容
+      #+begin_src lisp
+	write-region 函数用于将内容写入到文件中：
+
+	(write-region "Hello, world!" nil "path/to/file.txt")
+
+	可以将缓冲区内容写入到文件中：
+	(write-region (point-min) (point-max) "path/to/file.txt")
+      #+end_src
+      
+4. 文件路径操作
+    ~Emacs Lisp提供了许多用于操作文件路径的函数~
+
+    - expand-file-name =相对路径转化为绝对路径=
+      #+begin_src lisp
+	expand-file-name 函数用于将相对路径转换为绝对路径：
+
+	(expand-file-name "file.txt" "/home/user")
+	;; 返回: "/home/user/file.txt"
+      #+end_src
+    - file-name-directory =获取文件路径中的目录部分=
+      #+begin_src lisp
+	file-name-directory 函数用于获取文件路径中的目录部分：
+
+	(file-name-directory "/home/user/file.txt")
+	;; 返回: "/home/user/"
+      #+end_src
+    - file-name-nondirectory =获取文件名部分=
+      #+begin_src lisp
+	file-name-nondirectory 函数用于获取文件路径中的文件名部分：
+
+	(file-name-nondirectory "/home/user/file.txt")
+	;; 返回: "file.txt"
+      #+end_src
+      
+5. 练习
+    - 读取用户输入并显示
+	创建一个函数，读取用户的姓名并在消息缓冲区中显示：
+	#+begin_src lisp
+	  (defun greet-user ()
+	    "Greet the user by their name."
+	    (interactive)
+	    (let ((name (read-string "Enter your name: ")))
+	      (message "Hello, %s!" name)))
+
+	  ;; 测试函数
+	  (greet-user)
+	#+end_src
+
+    - 读取文件内容并显示
+	创建一个函数，读取指定文件的内容并在消息缓冲区中显示：
+	#+begin_src lisp
+	  (defun show-file-content (filepath)
+	    "Read and display the content of FILEPATH."
+	    (interactive "fEnter file path: ")
+	    (let ((content (read-file-to-string filepath)))
+	      (message "File content:\n%s" content)))
+
+	  ;; 测试函数
+	  (show-file-content "path/to/file.txt")
+	#+end_src
+
+    - 将输入写入文件
+	创建一个函数，读取用户输入的字符串并将其写入到指定文件中：
+	#+begin_src lisp
+	  (defun write-input-to-file (filepath)
+	    "Read a string from the user and write it to FILEPATH."
+	    (interactive "FEnter file path: ")
+	    (let ((input (read-string "Enter text to write to file: ")))
+	      (write-region input nil filepath)
+	      (message "Text written to %s" filepath)))
+
+	  ;; 测试函数
+	  (write-input-to-file "path/to/file.txt")
+	#+end_src
+
+
+
+** 错误处理
+在编写Elisp代码时，处理可能出现的错误是非常重要的。
+Elisp提供了一些机制来捕获和处理运行时错误，以提高程序的健壮性。
+
+1. condition-case
+    =condition-case 是Elisp中用于捕获和处理错误的主要机制。
+    它允许你在特定的代码块中捕获错误，并定义相应的处理方法。=
+    #+begin_src lisp
+      基本用法
+      condition-case 的基本语法如下：
+
+      (condition-case var
+	  (protected-form)
+	(error-type handler-form))
+      var：用于存储捕获的错误信息。
+      protected-form：需要保护的代码，即可能会引发错误的代码块。
+      error-type：要捕获的错误类型，例如 error、arith-error、file-error 等。
+      handler-form：当捕获到指定类型的错误时执行的代码。
+
+      示例
+      (condition-case err
+	  (progn
+	    ;; 可能引发错误的代码
+	    (/ 1 0))  ;; 这里会引发除零错误
+	(arith-error  ;; 捕获算术错误
+	 (message "Caught an arithmetic error: %s" err)))
+      在这个示例中，(/ 1 0) 会引发一个 arith-error 错误，该错误会被 condition-case 捕获并执行相应的处理代码。
+    #+end_src
+
+
+2. 抛出和捕获错误
+    =Elisp中可以使用 signal 函数主动抛出错误，
+    使用 catch 和 throw 实现非本地跳转。=
+    #+begin_src lisp
+      signal
+      signal 函数用于主动抛出错误：
+      (signal 'my-error '("An error occurred"))
+
+      catch
+      catch 用于定义一个标签，捕获使用 throw 抛出的值：
+      (catch 'my-tag
+	(throw 'my-tag "Jump to catch"))
+
+      throw
+      throw 用于非本地跳转到匹配的 catch 标签，并传递一个值：
+      (defun test-throw-catch ()
+	(catch 'my-tag
+	  (message "Before throw")
+	  (throw 'my-tag "Jumped to catch")
+	  (message "After throw")))  ;; 这行不会执行
+
+      (test-throw-catch)  ;; 输出 "Before throw"，然后 "Jumped to catch"
+    #+end_src
+
+练习
+1. 捕获文件读取错误
+
+    创建一个函数，尝试读取文件内容，如果文件不存在或无法读取，则捕获错误并显示相应信息：
+    #+begin_src lisp
+      (defun read-file-safe (filepath)
+	"Read the content of FILEPATH safely."
+	(interactive "fEnter file path: ")
+	(condition-case err
+	    (let ((content (with-temp-buffer
+			     (insert-file-contents filepath)
+			     (buffer-string))))
+	      (message "File content:\n%s" content))
+	  (file-error
+	   (message "Error reading file: %s" err))))
+
+      ;; 测试函数
+      (read-file-safe "path/to/nonexistent-file.txt")
+    #+end_src
+
+2. 使用 signal 抛出错误
+    创建一个函数，根据输入的参数抛出错误，并使用 condition-case 捕获错误：
+    #+begin_src lisp
+      (defun test-signal (n)
+	"Signal an error if N is zero."
+	(if (zerop n)
+	    (signal 'my-error '("N cannot be zero"))
+	  (message "N is %d" n)))
+
+      (condition-case err
+	  (test-signal 0)
+	(my-error
+	 (message "Caught an error: %s" err)))
+
+      ;; 测试函数
+      (test-signal 1)  ;; 输出 "N is 1"
+      (test-signal 0)  ;; 抛出错误并捕获 "Caught an error: (my-error \"N cannot be zero\")"
+    #+end_src
+
+3. 使用 catch 和 throw 实现非本地跳转
+    创建一个函数，在满足特定条件时跳转到 catch 标签，并传递一个值：
+    #+begin_src lisp
+      (defun test-catch-throw (n)
+	"Use catch and throw to handle a condition."
+	(catch 'exit
+	  (dotimes (i n)
+	    (when (> i 3)
+	      (throw 'exit (format "Exited at i=%d" i)))
+	    (message "i=%d" i))
+	  (message "Completed without exit")))
+
+      ;; 测试函数
+      (test-catch-throw 2)  ;; 输出 "i=0" "i=1" "Completed without exit"
+      (test-catch-throw 5)  ;; 输出 "i=0" "i=1" "i=2" "i=3" 然后 "Exited at i=4"
+    #+end_src
+
+
+** 模式与钩子,hook
+在Emacs中，“模式”（mode）是用于配置编辑器行为的一种机制。
+主要有两种模式： *主模式（major mode）和辅模式（minor mode）。*
+              *“钩子”（hook）是用于在特定事件发生时运行自定义代码的一种机制。*
+
+1. 主模式（Major Modes）
+    每个缓冲区都有一个主模式，主模式决定了缓冲区的基本编辑行为。
+    常见的主模式有 text-mode、prog-mode（编程模式的基础）以及特定编程语言的模式如 emacs-lisp-mode、python-mode 等。
+
+    - 定义主模式
+      #+begin_src lisp
+	使用 define-derived-mode 定义一个新主模式：
+
+	(define-derived-mode my-mode text-mode "MyMode"
+	
+	  "A simple major mode."
+	  ;; 模式的初始化代码
+	  (setq my-mode-custom-variable t))
+	在这个例子中，my-mode 继承自 text-mode，并设置了一个自定义变量。
+      #+end_src
+
+    - 启用主模式
+      #+begin_src lisp
+    通过 M-x 命令或编程方式启用主模式
+    (my-mode)
+      #+end_src
+
+2. 辅模式（Minor Modes）
+    辅模式用于提供额外的、可选的功能，可以与主模式一起使用。
+    一个缓冲区可以同时启用多个辅模式。
+
+    - 定义辅模式
+      #+begin_src lisp
+	使用 define-minor-mode 定义一个新辅模式：
+
+	(define-minor-mode my-minor-mode
+	  "A simple minor mode."
+	  :lighter " MyMode"  ;; 模式行上的指示符
+	  ;; 模式的初始化代码
+	  (if my-minor-mode
+	      (message "My minor mode enabled")
+	    (message "My minor mode disabled")))
+	在这个例子中，my-minor-mode 是一个简单的辅模式，当启用或禁用时会显示提示信息。
+      #+end_src
+
+3. 启用和禁用辅模式
+   #+begin_src lisp
+     可以通过 M-x 命令或编程方式启用或禁用辅模式：
+
+     (my-minor-mode 1)  ;; 启用
+     (my-minor-mode 0)  ;; 禁用
+   #+end_src
+
+4. 钩子（Hooks）
+    =钩子是用于在特定事件发生时执行自定义代码的机制。
+    钩子通常是一个函数列表，这些函数会在特定事件发生时依次执行。=
+
+    - 使用钩子
+      #+begin_src lisp
+	常见的钩子有 mode-hook（模式钩子），用于在特定模式启动时运行代码。
+	例如，emacs-lisp-mode-hook 在 emacs-lisp-mode 启动时运行：
+
+	(defun my-elisp-setup ()
+	  "Custom setup for Emacs Lisp mode."
+	  (setq-local my-custom-variable t))
+
+	(add-hook 'emacs-lisp-mode-hook 'my-elisp-setup)
+      #+end_src
+    - 删除钩子
+      #+begin_src lisp
+	使用 remove-hook 删除钩子：
+
+	elisp
+	复制代码
+	(remove-hook 'emacs-lisp-mode-hook 'my-elisp-setup)
+      #+end_src
+      
+5. 示例
+   #+begin_src lisp
+     定义一个简单的主模式
+
+     创建一个名为 my-custom-mode 的主模式，继承自 text-mode：
+
+     (define-derived-mode my-custom-mode text-mode "CustomMode"
+       "A custom major mode."
+       (setq my-custom-variable t))
+
+     ;; 测试主模式
+     (my-custom-mode)
+;===============================================================
+     定义一个简单的辅模式
+     创建一个名为 my-toggle-mode 的辅模式，带有一个指示符：
+
+     (define-minor-mode my-toggle-mode
+       "A toggleable minor mode."
+       :lighter " Toggle"
+       (if my-toggle-mode
+	   (message "My toggle mode enabled")
+	 (message "My toggle mode disabled")))
+
+     ;; 测试辅模式
+     (my-toggle-mode 1)  ;; 启用
+     (my-toggle-mode 0)  ;; 禁用
+;===============================================================
+     使用钩子自定义模式
+     创建一个钩子函数，在 text-mode 启动时运行：
+
+     (defun my-text-mode-setup ()
+       "Custom setup for text mode."
+       (setq-local my-custom-variable t)
+       (message "Text mode setup complete"))
+
+     (add-hook 'text-mode-hook 'my-text-mode-setup)
+
+     ;; 测试钩子
+     (text-mode)  ;; 启动text-mode，执行钩子函数
+   #+end_src
+
+6. 练习
+    - 创建一个自定义主模式
+	创建一个自定义主模式 my-log-mode，用于查看日志文件，并设置特定的字体锁定规则：
+	#+begin_src lisp
+	(define-derived-mode my-log-mode text-mode "LogMode"
+	"Major mode for viewing log files."
+	(font-lock-add-keywords nil
+				'(("\\[ERROR\\]" . font-lock-warning-face)
+				    ("\\[INFO\\]" . font-lock-keyword-face)
+				    ("\\[DEBUG\\]" . font-lock-comment-face))))
+
+	;; 测试主模式
+	(my-log-mode)
+	#+end_src
+
+    - 创建一个自定义辅模式
+      #+begin_src lisp
+	创建一个自定义辅模式 my-highlight-mode，用于高亮当前行：
+
+	(define-minor-mode my-highlight-mode
+	  "Minor mode to highlight the current line."
+	  :lighter " Highlight"
+	  (if my-highlight-mode
+	      (hl-line-mode 1)
+	    (hl-line-mode -1)))
+
+	;; 测试辅模式
+	(my-highlight-mode 1)  ;; 启用
+	(my-highlight-mode 0)  ;; 禁用
+      #+end_src
+
+    - 使用钩子设置编程模式
+      #+begin_src lisp
+	创建一个钩子函数，在 prog-mode 启动时设置特定的编程环境：
+
+	(defun my-prog-mode-setup ()
+	  "Custom setup for programming modes."
+	  (setq show-trailing-whitespace t)
+	  (electric-pair-mode 1)
+	  (linum-mode 1))
+
+	(add-hook 'prog-mode-hook 'my-prog-mode-setup)
+
+	;; 测试钩子
+	(prog-mode)  ;; 启动prog-mode，执行钩子函数
+      #+end_src
+
