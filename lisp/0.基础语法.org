@@ -60,7 +60,8 @@
 
 
 ** 函数
-    1. 函数的定义和调用
+
+*** 函数的定义和调用
        1. 定义函数
 	   在Elisp中，使用 defun 来定义函数。基本语法如下：
 	   #+begin_src lisp
@@ -92,46 +93,237 @@
 	   (funcall my-func 2 3)  ;; 结果：5
 	   在这个示例中，我们定义了一个匿名函数并将其赋值给变量 my-func，然后使用 funcall 来调用它。
 	   #+end_src
-
-	    
-    2. 函数参数和返回值
+*** 函数参数和返回值
 	*函数可以接受多个参数，也可以有可选参数和可变参数。*
 
-	1. 可选参数
-	    #+begin_src lisp
-	    (defun add-numbers (x y &optional z)
-	    "Add two or three numbers."
-	    (if z
-		(+ x y z)
-		(+ x y)))
+       1. 可选参数
+	   #+begin_src lisp
+	   (defun add-numbers (x y &optional z)
+	   "Add two or three numbers."
+	   (if z
+	       (+ x y z)
+	       (+ x y)))
 
-	    (add-numbers 1 2)      ;; 结果：3
-	    (add-numbers 1 2 3)    ;; 结果：6
-	    &optional  表示可选参数。如果未提供 z，则其值为 nil。
-	    #+end_src
-	2. 可变参数
-	    *使用 &rest 来表示可变参数，可以传递任意数量的参数*
-	    #+begin_src lisp
-	    (defun sum-all (&rest numbers)
-	    "Sum all the NUMBERS."
+	   (add-numbers 1 2)      ;; 结果：3
+	   (add-numbers 1 2 3)    ;; 结果：6
+	   &optional  表示可选参数。如果未提供 z，则其值为 nil。
+	   #+end_src
+       2. 可变参数
+	   *使用 &rest 来表示可变参数，可以传递任意数量的参数*
+	   #+begin_src lisp
+	   (defun sum-all (&rest numbers)
+	   "Sum all the NUMBERS."
+	   (apply '+ numbers))
+
+	   (sum-all 1 2 3 4)  ;; 结果：10
+	   &rest 参数将所有传递的参数收集到一个列表中。
+	   #+end_src
+       3. 函数返回值
+	   函数的返回值是最后一个表达式的值。你也可以显式地使用 return 来返回某个值。
+	   #+begin_src lisp
+	   (defun multiply (x y)
+	   "Multiply two numbers."
+	   (* x y))
+
+	   (multiply 3 4)  ;; 结果：12
+   #+end_src
+
+*** apply && funcall
+      
+    *apply 和 funcall 都是用来调用函数的，但它们的使用场景有所不同。*
+
+    1. funcall
+	funcall 用于调用一个函数，并直接传递函数的参数。参数以普通形式传递。
+	#+begin_src lisp
+	语法
+	(funcall FUNCTION &rest ARGUMENTS)
+
+	示例
+	(defun add (a b)
+	    "Return the sum of A and B."
+	    (+ a b))
+
+	(funcall 'add 2 3)  ;; 返回 5
+	在这个例子中，funcall 调用了函数 add，并传递了参数 2 和 3。
+	#+end_src
+
+
+    2. apply
+	apply 也用于调用一个函数，但它要求参数以列表形式传递。即最后一个参数是一个包含所有实际参数的列表。
+	#+begin_src lisp
+	语法
+	(apply FUNCTION ARGUMENTS-LIST)
+
+	示例
+	(defun multiply (a b)
+	    "Return the product of A and B."
+	    (* a b))
+
+	(apply 'multiply '(4 5))  ;; 返回 20
+	在这个例子中，apply 调用了函数 multiply，并传递了参数列表 (4 5)。
+	#+end_src
+
+
+    3. 区别与用法
+	#+begin_src lisp
+	funcall 适用于直接传递参数的情况。
+	apply 适用于参数以列表形式存在的情况，特别是参数数量不确定时。
+
+	示例：结合使用
+	假设你有一个函数 sum，你希望通过 apply 和 funcall 调用它。
+
+	(defun sum (&rest numbers)
+	    "Return the sum of NUMBERS."
 	    (apply '+ numbers))
 
-	    (sum-all 1 2 3 4)  ;; 结果：10
-	    &rest 参数将所有传递的参数收集到一个列表中。
-	    #+end_src
-	3. 函数返回值
-	    函数的返回值是最后一个表达式的值。你也可以显式地使用 return 来返回某个值。
-	    #+begin_src lisp
-	    (defun multiply (x y)
-	    "Multiply two numbers."
-	    (* x y))
+	(funcall 'sum 1 2 3 4 5)     ;; 返回 15
+	(apply 'sum '(1 2 3 4 5))    ;; 返回 15
+	#+end_src
 
-	    (multiply 3 4)  ;; 结果：12
+    4. 实践项目
+	通过这些示例和项目，你应该能够掌握 apply 和 funcall 的基本用法，并理解它们在不同场景中的应用。希望这些内容对你有帮助！ 
+	#+begin_src lisp
+	通过一个具体的例子来演示 apply 和 funcall 的实际应用。
+
+	项目：动态调用函数
+	创建一个函数 dynamic-invoke，接受一个函数和参数列表，动态调用该函数。
+
+	步骤
+	定义函数
+
+	(defun dynamic-invoke (func &rest args)
+	    "Dynamically invoke FUNC with ARGS."
+	    (apply func args))
+	测试函数
+
+	定义一些简单的函数进行测试：
+
+	(defun add (a b)
+	    "Return the sum of A and B."
+	    (+ a b))
+
+	(defun greet (name)
+	    "Return a greeting message for NAME."
+	    (concat "Hello, " name "!"))
+	调用测试
+
+	elisp
+	复制代码
+	(dynamic-invoke 'add 10 20)         ;; 返回 30
+	(dynamic-invoke 'greet "Alice")     ;; 返回 "Hello, Alice!"
+	代码完整性
+	elisp
+	复制代码
+	(defun dynamic-invoke (func &rest args)
+	    "Dynamically invoke FUNC with ARGS."
+	    (apply func args))
+
+	(defun add (a b)
+	    "Return the sum of A and B."
+	    (+ a b))
+
+	(defun greet (name)
+	    "Return a greeting message for NAME."
+	    (concat "Hello, " name "!"))
+
+	;; 测试
+	(dynamic-invoke 'add 10 20)         ;; 返回 30
+	(dynamic-invoke 'greet "Alice")     ;; 返回 "Hello, Alice!"
+	#+end_src
+
+*** 返回值为函数
+1. 定义一个简单的函数
+    #+begin_src elisp
+    ;; -*- lexical-binding: t; -*-
+	(defun make-adder (x)
+	"Return a function that adds X to its argument."
+	(lambda (y)
+	    (+ x y)))
+	(setq add5 (make-adder 5))
+	(funcall add5 3)  ;; 返回 8
+
+	(setq add10 (make-adder 10))
+	(funcall add10 7) ;; 返回 17
+
     #+end_src
 
+2. 动态生成函数
+   函数返回函数的一个典型应用是动态生成函数。这对于创建具有某些特定行为的函数特别有用。
+   #+begin_src lisp
+     根据条件动态生成函数
+     (defun make-operator (op)
+     "Return a function that performs the specified operation OP."
+     (cond
+     ((eq op 'add) (lambda (a b) (+ a b)))
+     ((eq op 'subtract) (lambda (a b) (- a b)))
+     ((eq op 'multiply) (lambda (a b) (* a b)))
+     ((eq op 'divide) (lambda (a b) (/ a b)))
+     (t (error "Unknown operator"))))
 
+     (setq add-fn (make-operator 'add))
+     (funcall add-fn 2 3) ;; 返回 5
 
+     (setq sub-fn (make-operator 'subtract))
+     (funcall sub-fn 10 4) ;; 返回 6
 
+     (setq mul-fn (make-operator 'multiply))
+     (funcall mul-fn 6 7) ;; 返回 42
+
+     (setq div-fn (make-operator 'divide))
+     (funcall div-fn 20 4) ;; 返回 5
+
+   #+end_src
+
+3. 组合函数
+   你还可以创建函数返回函数以实现函数的组合。例如，创建一个函数，将两个函数组合成一个新的函数。
+   #+begin_src elisp
+     (defun compose (f g)
+       "Return a function that is the composition of F and G."
+       (lambda (x)
+	 (funcall f (funcall g x))))
+
+     ;; 定义两个函数,下面的组合函数调用
+	 (defun square (x)
+     "Return the square of X."
+     (* x x))
+
+     (defun increment (x)
+     "Return X incremented by 1."
+     (+ x 1))
+
+     (setq square-after-increment (compose 'square 'increment))
+     (funcall square-after-increment 3) ;; 返回 16 ((3 + 1) ^ 2)
+
+   #+end_src
+
+4. 立即调用生成的函数
+   #+begin_src lisp
+     (defun make-adder (x)
+     "Return a function that adds X to its argument."
+      (lambda (y)
+      (+ x y)))
+
+     ;; 直接生成并调用函数
+     (funcall (make-adder 5) 3)  ;; 返回 8
+     (funcall (make-adder 10) 7) ;; 返回 17
+     ;;=======================================
+
+     (defun make-operator (op)
+     "Return a function that performs the specified operation OP."
+     (cond
+     ((eq op 'add) (lambda (a b) (+ a b)))
+     ((eq op 'subtract) (lambda (a b) (- a b)))
+     ((eq op 'multiply) (lambda (a b) (* a b)))
+     ((eq op 'divide) (lambda (a b) (/ a b)))
+     (t (error "Unknown operator"))))
+
+     ;; 直接生成并调用函数
+     (funcall (make-operator 'add) 2 3)         ;; 返回 5
+     (funcall (make-operator 'subtract) 10 4)   ;; 返回 6
+     (funcall (make-operator 'multiply) 6 7)    ;; 返回 42
+     (funcall (make-operator 'divide) 20 4)     ;; 返回 5
+
+   #+end_src
 
 ** 条件和循环
     
@@ -1040,6 +1232,154 @@ Elisp提供了一些机制来捕获和处理运行时错误，以提高程序的
      (my-custom-mode)
    #+end_src
 
+
+
+
+
+
+
+
+
+** 宏与代码生成
+    =宏（Macros）是Elisp中非常强大的特性，允许你生成和操作代码。=
+    =在某些情况下，宏可以用来减少代码的重复，简化复杂的代码结构。=
+
+1. 宏的定义
+    宏的定义使用 *defmacro* 其语法与 defun 类似，但宏在执行时会生成新的代码，并将其插入到调用宏的位置。
+
+    - 基本语法
+      #+begin_src lisp
+	(defmacro my-macro (arg1 arg2)
+	  "A simple macro example."
+	  `(message "arg1: %s, arg2: %s" ,arg1 ,arg2))
+	在这个例子中，my-macro 是一个简单的宏，接受两个参数，并生成一个 message 调用。
+      #+end_src
+
+    - 使用宏
+      #+begin_src lisp
+	定义宏后，可以像函数一样调用它，但宏会在调用时生成代码：
+
+	(my-macro "Hello" "World")
+	;; 生成的代码相当于:
+	(message "arg1: Hello, arg2: World")
+      #+end_src
+      
+    - 宏生成代码
+	=宏最强大的地方在于它们可以生成和操作代码。使用反引号（`）和逗号（,）可以轻松生成代码结构。=
+	#+begin_src lisp
+	  示例
+	  (defmacro my-when (condition &rest body)
+	    "Evaluate CONDITION, and if it's true, execute BODY."
+	    `(if ,condition
+		 (progn ,@body)))
+
+	  ;; 使用宏
+	  (my-when t
+	    (message "This is true")
+	    (message "And this will be executed"))
+	  在这个例子中，my-when 宏接受一个条件和一系列表达式，如果条件为真，执行这些表达式。宏生成的代码如下：
+
+	  elisp
+	  复制代码
+	  (if t
+	      (progn
+		(message "This is true")
+		(message "And this will be executed")))
+	#+end_src
+
+    - macroexpand
+      #+begin_src lisp
+	使用 macroexpand 查看宏展开后的代码，有助于调试宏：
+
+	elisp
+	复制代码
+	(macroexpand '(my-when t
+			       (message "This is true")
+			       (message "And this will be executed")))
+	;; 输出:
+	;; (if t
+	;;     (progn
+	;;       (message "This is true")
+	;;       (message "And this will be executed")))
+      #+end_src
+
+2.  高级宏技巧
+    - 生成循环
+      #+begin_src lisp
+	宏可以用来生成复杂的循环结构：
+
+	elisp
+	复制代码
+	(defmacro my-for (var from to &rest body)
+	  "Loop from FROM to TO with VAR, executing BODY."
+	  `(let ((,var ,from))
+	     (while (<= ,var ,to)
+	       ,@body
+	       (setq ,var (1+ ,var)))))
+
+	;; 使用宏
+	(my-for i 1 5
+	  (message "i = %d" i))
+      #+end_src
+    - 使用 gensym 避免变量冲突
+      #+begin_src lisp
+	gensym 用于生成唯一的符号，避免变量名冲突：
+
+	elisp
+	复制代码
+	(defmacro with-gensym-example ()
+	  "Example using gensym to avoid variable conflicts."
+	  (let ((temp (gensym)))
+	    `(let ((,temp 42))
+	       (message "Temp is %d" ,temp))))
+
+	;; 使用宏
+	(with-gensym-example)
+      #+end_src
+
+3. 练习
+    - 定义一个简单的宏
+	创建一个宏 my-unless，如果条件为假，则执行给定的表达式：
+	    #+begin_src lisp
+	    (defmacro my-unless (condition &rest body)
+		"Evaluate CONDITION, and if it's false, execute BODY."
+		`(if (not ,condition)
+		    (progn ,@body)))
+
+	    ;; 测试宏
+	    (my-unless nil
+		(message "This is false")
+		(message "And this will be executed"))
+	    #+end_src
+
+    - 创建一个宏生成函数
+	创建一个宏 my-repeat，重复执行给定的表达式指定次数：
+	#+begin_src lisp
+	  (defmacro my-repeat (n &rest body)
+	    "Repeat BODY N times."
+	    `(dotimes (_ ,n)
+	       ,@body))
+
+	  ;; 测试宏
+	  (my-repeat 3
+	    (message "This is repeated"))
+	#+end_src
+
+    - 使用宏生成代码
+	创建一个宏 my-let，模仿 let 绑定局部变量，并执行表达式：
+	#+begin_src lisp
+	  (defmacro my-let (bindings &rest body)
+	    "Bind variables according to BINDINGS and execute BODY."
+	    `(let ,bindings
+	       ,@body))
+
+	  ;; 测试宏
+	  (my-let ((x 1)
+		   (y 2))
+	    (message "x = %d, y = %d" x y))
+	#+end_src
+
+	
 
 
 
