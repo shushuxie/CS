@@ -274,6 +274,34 @@
 
    #+end_src
 
+   #+caption: 函数作为入参
+   #+begin_src emacs-lisp
+    (defun create-adder (func)
+  "返回一个函数，这个函数接受一个参数并返回它与func计算结果相加的结果。"
+  (lambda (y)
+    (+ (funcall func y) y)))
+
+;; 使用示例
+(setq add-func (create-adder (lambda (x) (* 2 x))))
+(funcall add-func 3) ;; 结果是 9
+   #+end_src
+
+   #+begin_src emacs-lisp
+    ;; 定义外部函数
+(defun double (x)
+  "返回x的两倍。"
+  (* 2 x))
+
+(defun create-adder (func)
+  "返回一个函数，这个函数接受一个参数并返回它与func计算结果相加的结果。"
+  (lambda (y)
+    (+ (funcall func y) y)))
+
+;; 使用示例
+(setq add-func (create-adder 'double))
+(funcall add-func 3) ;; 结果是 9
+   #+end_src
+
 3. 组合函数
    你还可以创建函数返回函数以实现函数的组合。例如，创建一个函数，将两个函数组合成一个新的函数。
    #+begin_src elisp

@@ -1301,29 +1301,60 @@ let可以创建局部变量,就是把一个表达式对应为一个变量而已 
 把过程作为返回值,可以获得进一步的表达能力?
 
 #+begin_src elisp
-  ;(defun average-damp (f)
-    ;(defun average (a b)
-      ;(/ (+ a b) 2))
-    ;(lambda (x) (average x (funcall f x))))
-  ;
-  ;(defun f (x)
-    ;(+ 2 x))
-  ;
-  ;((average-damp 'f) 3)
+    ;; 确保启用词法作用域
+  (setq lexical-binding t)
+
+      (defun average (x y)
+      "计算x和y的平均值。"
+      (/ (+ x y) 2.0)) ;; 使用2.0确保返回浮点数
+
+    (defun average-damp (f)
+      "返回一个函数，该函数接受一个参数x，并返回x与f(x)的平均值。"
+      (lambda (x) 
+	(average x (funcall f x))))
+
+    (defun add3 (a)
+      "返回a加3的结果。"
+      (+ a 3))
+
+    ;; 可以通过高阶函数返回一个函数
+    (setq ave-add3 (average-damp #'add3)) ;; 使用#'确保传递函数对象
+
+    ;; 使用关键字调用函数
+    (funcall ave-add3 6) ;; 结果是7.5
+
+#+end_src
 
 
-  (defun average-damp (f)
-    (let ((average (lambda (a b) (/ (+ a b) 2))))
-      (lambda (x) (funcall average x (funcall f x)))))
+#+begin_src emacs-lisp
+ ;; 定义外部函数
+(defun double (x)
+  "返回x的两倍。"
+  (* 2 x))
 
-  (defun f (x)
-    (+ 2 x))
+(defun average (x y)
+  "计算x和y的平均值。"
+  (/ (+ x y) 2.0)) ;; 使用2.0确保返回浮点数
 
-  ((average-damp #'f) 3)
+(defun average-damp (f)
+  "返回一个函数，该函数接受一个参数x，并返回x与f(x)的平均值。"
+  (lambda (x) 
+    (average x (funcall f x))))
+
+(defun add3 (a)
+  "返回a加3的结果。"
+  (+ a 3))
+
+;; 可以通过高阶函数返回一个函数
+(setq ave-add3 (average-damp 'add3)) ;; 使用'确保传递函数符号
+
+;; 使用关键字调用函数
+(funcall ave-add3 6) ;; 结果是7.5
+ 
 #+end_src
 
 
 #+RESULTS:
-: f
+: 9
 
 
