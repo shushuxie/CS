@@ -4,3 +4,4 @@ misc.xml
 *.org#
 *.~undo-tree~
 .ccls-cache/
+/lisp/ltximg/

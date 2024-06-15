@@ -1,0 +1,117 @@
+** 数据抽象
+就像过程一样可以实现复用构造更加抽象的,高阶的过程,甚至还能返回过程; 同样数据也可以实现高阶数据抽象;
+使用基本的运算构造出更加高阶的运算; 层层抽象.
+
+** 2.1 数据抽象导引
+通过 *选择函数* 和 *构造函数* 构建出一个复合数据结构; 每层只管使用当前的类型就好不用考虑别的影响.
+
+*** 2.1.1 实例: 有理数的算数运算
+我们定义一个新的有理数的表示计算方式,一个有理数的表示方式是通过 =分子/分母= 得到的.下面我们定义三个过程
+
+     - =(make-rat <n> <d>)= 返回一个有理数,分子是整数呢n,分母是整数d;
+     - =(number <x>)= 返回有理数x的分子
+     - =(denom <x>)= 返回有理数x的分母
+
+
+  
+**** 基本运算的表示
+~现在并不去考虑上面三个函数的实现方式,假设我们已经实现了上面的函数~ 这是一种称为 *按愿望思维* 的方式方式
+
+    1) 加法
+    2) 减法
+    3) 乘法
+    4) 除法
+    5) 相等
+
+**** 规则表示为相应的过程
+
+#+caption: 加法
+#+begin_src emacs-lisp
+  (defun add-rat (x y)
+      (make-rat (+ (* (number x) (denom y))
+                   (* (number y) (denom x))) ;分子
+                (* (denom x) (denom y)))) ;分母
+
+#+end_src
+
+#+caption: 减法
+#+begin_src emacs-lisp
+  (defun sub-rat (x y)
+    (make-rat (- (* (number x) (denom y))
+		 (* (number y) (denom x)))
+	      (* (denom y) (denom x))))
+#+end_src
+
+#+caption: 乘法
+#+begin_src emacs-lisp
+  (defun mul-rat (x y)
+    (make-rat (* (number x) (number y))
+	      (* (denom x) (denom y))))
+#+end_src
+
+#+caption: 除法
+#+begin_src emacs-lisp
+  (defun div-rat (x y)
+    (make-art (* (number x) (denom y))
+	      (* (denom x) (number y))))
+#+end_src
+
+#+caption: 相等
+#+begin_src emacs-lisp
+  (defun equal-rat? (x y)
+    (= (* (number x) (denom y))
+       (* (denom x) (number y))))
+#+end_src
+
+$$fdjsk$$ veui 
+$E=M^3$ haha 
+$E=M^3$ haha 
+
+\begin{equation*}
+
+$E = m^2$ 这是一个行内公式
+
+$$E=MC^2$$
+
+	\[ \sum_{i=1}^{n} i = \frac{n(n+1)}{2} \]
+
+
+$$
+\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$$
+
+\[ x = \textcolor{red}{\Large \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}} \]
+
+					\begin{align*}
+					f(x) &= \int_{-\infty}^x e^{-t^2} dt \\
+					g(x) &= \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n
+					\end{align*}
+
+$e=mc^2$ 
+
+					$$e=mc^2$$
+
+
+\begin{array}{l}   a\mathop{{x}}\nolimits^{{2}}+bx+c=0 方程有两个不相等的是跟\\   \Delta =\mathop{{b}}\nolimits^{{2}}-4ac \\   \left\{\begin{matrix}   \Delta \gt 0\text{方程有两个不相等的实根} \\   \Delta = 0\text{方程有两个相等的实根} \\   \Delta \lt 0\text{方程无实根} \end{matrix}\right.    \end{array} 
+
+这是一个行间公式：
+$$
+E=mc^2
+$$ gjdkrwe
+
+
+
+$$E=E^3$$
+
+
+ \(hahdfdsdf\) 
+
+\begin{equation}                        % arbitrary environments,
+x=\sqrt{b} \text{方程有两个不相等的实根}   % even tables, figures, etc
+\end{equation} 
+
+If $a^2=b$ and \( b=2 \), then the solution must be
+either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
+
+ veui$abc$ fjdsk $$dfjsk$$ \(fjdskf\) 
+ $hfds$ $gsdi$  dfs $fjdk$ gd哈哈
