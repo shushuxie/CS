@@ -115,3 +115,24 @@ either $$ a=+\sqrt{2} $$ or \[ a=-\sqrt{2} \].
 
  veui$abc$ fjdsk $$dfjsk$$ \(fjdskf\) 
  $hfds$ $gsdi$  dfs $fjdk$ gd哈哈
+
+\begin{table}[htbp]
+\centering
+\caption{Example LaTeX Table}
+\label{tab:example}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\ \hline
+Row 1, Column 1   & Row 1, Column 2   & Row 1, Column 3   \\ \hline
+Row 2, Column 1   & Row 2, Column 2   & Row 2, Column 3   \\ \hline
+\end{tabular}
+\end{table}
+
+| d      | jfskdf | fjsk  |
+|--------+--------+-------|
+| fjskdf | fjdsk  | fjskd |
+| fjsdkf | fdjsk  | d     |
+
+
+
+  

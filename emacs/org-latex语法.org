@@ -1,0 +1,114 @@
+** orgmode使用latex
+优秀的排版工具可以和org模式兼容预览,插入数学公式并且可以预览,还能支持
+latex表格,非常好看; 使用的功能主要是latex preview,是一个内置的功能;
+
+** 使用方法
+
+*** method 1 preview-latex
+
+    1. 系统安装latex支持,macOS可以安装 =mactex= ,这是为了可以编译latex语法;
+    2. 展示,使用 ~dvipng~ 或者 ~dsvisvg~ 或者 ~image~ svg效果更好;
+    3. 安装好之后调用预览函数即可,会把内容进行替换,svg是把png进一步变为svg进行展示;
+    
+***  使用prettify
+这个原理是吧相应的字符进行替换,不是上面的生成png图片替换;
+首先需要配置一下symbole-list映射关系,然后就会自动进行替换了
+| 映射展示       | 效果 | 映射展示 | 效果  |
+|--------------+-----+--------+------|
+| lambda            | ->   | map    | /=    |
+| !=            | ==   | <=      | >=    |
+| ...            | \alpha   | \beta      | \gamma    |
+| \epsilon            | \delta   | \zeta      | \lambda    |
+| \rho            | \forall   | \Gamma      | \Delta    |
+| \infty            | \times   | \tau      | \not |
+| \times            | \div   | \longleftrightarrow      | \pm \mp  |
+| \cup            | \langle   | \leftarrow \rightarrow    |      |
+| \todo \done |     |        | \done  |
+
+*16进制配置,需要去unicode码表值,以 #x开头* 例如 对号就是 =#x2705= 
+
+$\not$ $\langle$ $\approx$  \rangle $\rangle$
+$\prime$ $\wedge$   \Lambda  \Lambda \Pi \Phi \sigma \emptyset \Longleftarrow \Longrightarrow
+\Leftarrow \subset \supset \leftarrow  $\Leftarrow$  \iff \implies 
+\longleftrightarrow \Longleftrightarrow \longleftarrow \longrightarrow \leftarrow \rightarrow \Leftarrow \Rightarrow
+$\leftarrow \rightarrow  \Leftarrow \Rightarrow \subset \supset$
+$\leftarrow \rightarrow  \Leftarrow \Rightarrow \subset \supset$
+$\longleftarrow \Leftarrow$
+$\Leftrightarrow \leftrightarrow$
+$\min \max$ $\mapsto$ $\ln$
+
+*** $CDLatex$ 帮助输入数学公式
+    [[https://orgmode.org/manual/CDLaTeX-mode.html][CDLatex参考文档]]
+    - 按反引号可以帮助弹出latex输入语法,同时继续按可以进入到下一级别的符号;
+    - *C-c {* 弹出环境模板页面,可以选择;
+    - *TAB* 帮助编辑移动
+    - 箭头技巧,在二级选项上面是长箭头,一级是短箭头
+      *<或>* 是短箭头左右
+      *[或]* 双箭头
+      *-或=* 单双箭头左右方向
+      #+begin_example
+      \leftarrow \rightarrow \Leftarrow \Rightarrow \leftrightarrow \Leftrightarrow
+      \longleftarrow \longrightarrow \Longleftarrow \Longrightarrow \longleftrightarrow \Longleftrightarrow
+      #+end_example
+
+
+\lambda  \lambda 
+$\to$ 
+  lambda
+  \beta 
+->  \pi 
+\longrightarrow 
+>= <= \alpha   
+  $\xi$
+\begin{equation}                        % arbitrary environments,
+x=\sqrt{b}                              % even tables, figures, etc
+\end{equation} 
+\begin{equation}
+\label{eq:1}
+x=\sqrt{b}
+\end{equation}
+
+$dsfj$ 
+
+$\alpha$
+
+\begin{table}[htbp]
+\caption[]{\label{tab:hahatable} }
+\vspace{4mm}
+
+\end{table}
+
+
+$$E=E^3$$ 
+
+
+\begin{array}{l} 
+  a\mathop{{x}}\nolimits^{{2}}+bx+c=0 \\ 
+  \Delta =\mathop{{b}}\nolimits^{{2}}-4ac \\ 
+  \left\{\begin{matrix} 
+  \Delta \gt 0\text{方程有两个不相等的实根} \\ 
+  \Delta = 0\text{方程有两个相等的实根} \\ 
+  \Delta \lt 0\text{方程无实根} 
+\end{matrix}\right.    
+\end{array} 
+
+
+lambda
+map -> 
+
+
+
+\Pi 
+
+\todo \done  :smile: 
+
+\alpha 
+
+
+
+
+
+\done 
+
+
+
