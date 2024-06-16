@@ -50,7 +50,7 @@ $\min \max$ $\mapsto$ $\ln$
       \leftarrow \rightarrow \Leftarrow \Rightarrow \leftrightarrow \Leftrightarrow
       \longleftarrow \longrightarrow \Longleftarrow \Longrightarrow \longleftrightarrow \Longleftrightarrow
       #+end_example
-
+\alpha 
 
 \lambda  \lambda 
 $\to$ 
@@ -109,6 +109,290 @@ map ->
 
 
 \done 
+
+
+
+
+
+** Latex语法
+1. 行内公式
+    *行内公式是在正文中嵌入的数学表达式，使用 $...$ 或 \(...\) 包围公式内容。*
+    这是一个行内公式：$E=mc^2$。
+    这是一个行内公式：\( E = mc^2 \)。
+
+2. 独立公式
+    *独立公式单独成行，使用 \[...\] 或 equation 环境。*
+
+    示例（使用 \[...\]）
+    这是一个独立公式：
+	\[ E = mc^2 \]  
+    示例（使用 equation 环境）：
+	    \begin{equation}
+	    E = mc^2
+	    \end{equation}
+
+3. 多行公式
+    用于显示多行数学表达式的环境。
+    常用环境有 align、gather 和 multline。
+
+   1) align 环境：
+       #+begin_src latex
+	   \begin{align}
+	   a & = b + c \\
+	   d & = e + f
+	   \end{align}
+
+
+	   \begin{equation}
+	   a & = b + c \\
+	   d & = e + f
+	   \end{equation}
+       #+end_src
+	   \begin{align}
+	   a & = b + c \\
+	   d & = e + f
+	   \end{align}
+
+	   \begin{equation}
+	   a & = b + c \\
+	   d & = e + f
+	   \end{equation}
+   2) gather 环境：
+       #+begin_src latex
+       \begin{gather}
+       a = b + c \\
+       d = e + f
+       \end{gather}
+       #+end_src
+       \begin{gather}
+       a = b + c \\
+       d = e + f
+       \end{gather}
+   3) multline 环境：
+       #+begin_src latex
+       \begin{multline}
+       a + b + c + d + e + f + g + h + i + j + k + l + m \\
+       = n + o + p + q + r + s + t + u + v + w + x + y + z
+       \end{multline}
+       #+end_src
+       \begin{multline}
+       a + b + c + d + e + f + g + h + i + j + k + l + m \\
+       = n + o + p + q + r + s + t + u + v + w + x + y + z
+       \end{multline}
+
+4. 分组公式
+    用于显示一组相关公式的环境，如 alignat 和 cases。
+
+   1) alignat 环境：
+      #+begin_src latex
+       \begin{alignat}{2}
+       a & = b + c & \quad & \text{(公式1)} \\
+       d & = e + f & \quad & \text{(公式2)}
+       \end{alignat}
+      #+end_src
+
+       \begin{alignat}{2}
+       a & = b + c & \quad & \text{(公式1)} \\
+       d & = e + f & \quad & \text{(公式2)}
+       \end{alignat}
+   2) cases 环境：
+       #+begin_src latex
+	   \begin{equation}
+	   f(x) = 
+	   \begin{cases} 
+	   x^2 & \text{if } x \geq 0 \\
+	   -x^2 & \text{if } x < 0 
+	   \end{cases}
+	   \end{equation}
+       #+end_src
+       \begin{equation}
+       f(x) = 
+       \begin{cases} 
+       x^2 & \text{if } x \geq 0 \\
+       -x^2 & \text{if } x < 0 
+       \end{cases}
+       \end{equation}
+
+5. 矩阵
+    用于显示矩阵的环境，
+    如 matrix、bmatrix、pmatrix、vmatrix 和 Vmatrix。
+
+   1) matrix 环境：
+       #+begin_src latex
+       \begin{matrix}
+       1 & 2 \\
+       3 & 4
+       \end{matrix}
+       #+end_src
+       \begin{matrix}
+       1 & 2 \\
+       3 & 4
+       \end{matrix}
+   2) bmatrix 环境（带方括号）：
+      #+begin_src latex
+       \begin{bmatrix}
+       1 & 2 \\
+       3 & 4
+       \end{bmatrix}
+      #+end_src
+       \begin{bmatrix}
+       1 & 2 \\
+       3 & 4
+       \end{bmatrix}
+   3) pmatrix 环境（带圆括号）：
+      #+begin_src latex
+       \begin{pmatrix}
+       1 & 2 \\
+       3 & 4
+       \end{pmatrix}
+      #+end_src
+       \begin{pmatrix}
+       1 & 2 \\
+       3 & 4
+       \end{pmatrix}
+   4) vmatrix 环境（带竖线）：
+      #+begin_src latex
+       \begin{vmatrix}
+       1 & 2 \\
+       3 & 4
+       \end{vmatrix}
+      #+end_src
+       \begin{vmatrix}
+       1 & 2 \\
+       3 & 4
+       \end{vmatrix}
+   5) Vmatrix 环境（带双竖线）：
+      #+begin_src latex
+       \begin{Vmatrix}
+       1 & 2 \\
+       3 & 4
+       \end{Vmatrix}
+      #+end_src
+       \begin{Vmatrix}
+       1 & 2 \\
+       3 & 4
+       \end{Vmatrix}
+
+6. 数学模式中的命令
+    除了上述环境，LaTeX 还提供了许多命令来处理数学符号和格式。例如：
+   1) 分数：\frac{a}{b}
+       $\frac{a}{b}$
+   2) 上标和下标：a^2 和 a_1
+      $a^2, a_1$
+   3) 根号：\sqrt{x}
+      $\sqrt{x}$
+
+7. 文字加粗
+   可以使用 *mathbf* or *boldsymbol*
+
+   1) =mathbf=
+    #+begin_src latex
+	\begin{document}
+
+	这是一个行内公式：$\mathbf{E=mc^2}$。
+
+	这是一个独立公式：
+	\[
+	\mathbf{E = mc^2}
+	\]
+
+	\end{document}
+
+
+	这是一个行内公式：$\mathbf{E=mc^2}$。
+    #+end_src
+	    \begin{document}
+
+	    这是一个行内公式：$\mathbf{E=mc^2}$。
+
+	    这是一个独立公式：
+	    \[
+	    \mathbf{E = mc^2}
+	    \]
+
+	    \end{document}
+
+    这是一个行内公式：$\mathbf{E=mc^2}$。
+   2) =boldsymbol=
+	#+begin_src latex
+	  \begin{document}
+
+	  这是一个行内公式：$\boldsymbol{\alpha + \beta = \gamma}$。
+
+	  这是一个独立公式：
+	  \[
+	  \boldsymbol{\alpha + \beta = \gamma}
+	  \]
+
+	  \end{document}
+
+	  这是一个行内公式：$\boldsymbol{\alpha + \beta = \gamma}$。
+	  这是一个行内公式：$\boldsymbol{E = mc^2}$。
+	  这是一个行内公式：$\mathbf{\alpha + \beta = \gamma}$。
+	#+end_src
+	\begin{document}
+
+	这是一个行内公式：$\boldsymbol{\alpha + \beta = \gamma}$。
+
+	这是一个独立公式：
+	\[
+	\boldsymbol{\alpha + \beta = \gamma}
+	\]
+
+	\end{document}
+	这是一个行内公式：$\boldsymbol{\alpha + \beta = \gamma}$。
+	这是一个行内公式：$\boldsymbol{E = mc^2}$。
+	这是一个行内公式：$\mathbf{\alpha + \beta = \gamma}$。
+
+	  \begin{document}
+
+	  这是一个行内公式：$\boldsymbol{\alpha + \beta = \gamma}$。
+
+	  这是一个独立公式：
+	  \[
+	  \boldsymbol{\alpha + \beta = \gamma}
+	  \]
+
+	  \[
+	  \boldsymbol{\Delta + \beta = \gamma}
+	  \]
+	  \end{document}
+
+8. 编写技巧
+   - 公式换行 *\\*
+这是一个带有换行的行内公式：$a = b + c \\ d = e + f$。
+
+   - 
+2. 添加空格
+在 LaTeX 中，可以使用以下命令来添加空格：
+
+\, ：表示一个很小的空格。
+\: ：表示一个中等大小的空格。
+\; ：表示一个大的空格。
+\quad：表示一个四分之一的空格。
+\enspace 
+\qquad：表示一个二分之一的空格。
+#+begin_latex
+$a\!b$
+$a\,b$
+$a\:b$
+$a\;b$
+$a\enspace b$
+$a\quad b$
+===================
+$a\!b$
+$a\,b$
+$a\:b$
+$a\quad b$
+$a\;b$
+$a\enspace b$
+$a\quad b$
+$a\qquad b$
+#+end_latex
+
+
+
+
 
 
 
