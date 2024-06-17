@@ -1,0 +1,7 @@
+
+** org文件可以导出为多种
+PDF,icalendar,odt,htm等
+
+** 常用导出
+org-latex-export-to-pdf
+org-export-dispatch

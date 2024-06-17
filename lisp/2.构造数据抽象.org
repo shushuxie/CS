@@ -16,12 +16,15 @@
   
 **** 基本运算的表示
 ~现在并不去考虑上面三个函数的实现方式,假设我们已经实现了上面的函数~ 这是一种称为 *按愿望思维* 的方式方式
-
-    1) 加法
-    2) 减法
-    3) 乘法
-    4) 除法
-    5) 相等
+#+begin_latex
+\begin{align}
+    &  \frac{\boldsymbol{n_{1}}}{\boldsymbol{d_{1}}} + \frac{\boldsymbol{n_{2}}}{\boldsymbol{d_{2}}} = \frac{\boldsymbol{n_1}\boldsymbol{d_2}+\boldsymbol{n_2}\boldsymbol{d_1}}{\boldsymbol{d_1}\boldsymbol{d_2}} \\ % add
+    &  \frac{\boldsymbol{n_{1}}}{\boldsymbol{d_{1}}} - \frac{\boldsymbol{n_{2}}}{\boldsymbol{d_{2}}} = \frac{\boldsymbol{n_1}\boldsymbol{d_2}-\boldsymbol{n_2}\boldsymbol{d_1}}{\boldsymbol{d_1}\boldsymbol{d_2}} \\ % sub
+    &  \frac{\boldsymbol{n_{1}}}{\boldsymbol{d_{1}}} \cdot \frac{\boldsymbol{n_{2}}}{\boldsymbol{d_{2}}} = \frac{\boldsymbol{n_1}\boldsymbol{n_2}}{\boldsymbol{d_1}\boldsymbol{d_2}} \\ % mul
+    &  \frac{\frac{\boldsymbol{n_1}}{\boldsymbol{d_1}}}{\frac{\boldsymbol{n_2}}{\boldsymbol{d_2}}} = \frac{\boldsymbol{n_1}\boldsymbol{d_2}}{\boldsymbol{d_1}\boldsymbol{n_2}} \\ % div
+    &  \frac{\boldsymbol{n_1}}{\boldsymbol{d_1}} = \frac{\boldsymbol{n_2}}{\boldsymbol{d_1}} \iff \boldsymbol{n_1}\boldsymbol{d_2} = \boldsymbol{n_2}\boldsymbol{d_1} % if and only if
+\end{align}
+#+end_latex
 
 **** 规则表示为相应的过程
 
@@ -62,6 +65,9 @@
     (= (* (number x) (denom y))
        (* (denom x) (number y))))
 #+end_src
+
+#+caption: 举例
+#+begin_latex
 
 $$fdjsk$$ veui 
 $E=M^3$ haha 
@@ -127,11 +133,8 @@ Row 1, Column 1   & Row 1, Column 2   & Row 1, Column 3   \\ \hline
 Row 2, Column 1   & Row 2, Column 2   & Row 2, Column 3   \\ \hline
 \end{tabular}
 \end{table}
+#+end_latex
 
-| d      | jfskdf | fjsk  |
-|--------+--------+-------|
-| fjskdf | fjdsk  | fjskd |
-| fjsdkf | fdjsk  | d     |
 
 
 
