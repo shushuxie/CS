@@ -54,7 +54,18 @@ dired是emacs内置的一个功能,拥有 一个特定的MODE, *DIRED-MODE*
 
 /xieti/ =eiwe=
 +xiahuaxian+ _xiahuaxian_ *xkdfj*
-=ejri= /jrei/  
+  =ejri= /jrei/  
+
+#+caption: 测试
+#+begin_src 
+哈哈
+#+end_src
+
+
+
+
+
+
 
 
 

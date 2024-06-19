@@ -136,6 +136,4 @@ Row 2, Column 1   & Row 2, Column 2   & Row 2, Column 3   \\ \hline
 #+end_latex
 
 
-
-
-  
+[[file:~/Documents/typora/lisp/images/2024-06-19_23-48-03_screenshot.png]]
