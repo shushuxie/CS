@@ -135,5 +135,19 @@ Row 2, Column 1   & Row 2, Column 2   & Row 2, Column 3   \\ \hline
 \end{table}
 #+end_latex
 
+#+caption: tupian
+#+begin_example
 
-[[file:~/Documents/typora/lisp/images/2024-06-19_23-48-03_screenshot.png]]
+[[file:~/Documents/typora/lisp/images/2024-06-19_23-52-09_screenshot.png]]
+
+#+end_example
+
+
+[[file:./images/20240620_000147.png]]
+
+
+
+[[file:./images/20240620_000446.png]]
+
+
+[[file:~/Documents/typora/lisp/images/2024-06-20_00-05-00_screenshot.png]]
