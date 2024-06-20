@@ -143,11 +143,31 @@ Row 2, Column 1   & Row 2, Column 2   & Row 2, Column 3   \\ \hline
 #+end_example
 
 
-[[file:./images/20240620_000147.png]]
 
 
 
-[[file:./images/20240620_000446.png]]
+**** 序对
+序对是lisp语言提供的一种数据结构,通过 *const* 关键字
 
+    - cons只能有两个参数,称为点对
+    - cons is ~construct~ 构造
+    - car是寄存器的地址部分, ~Contents of Address part of Register~
+    - cdr 是寄存器减量部分 ~Contents of Decrement part of Register~  
 
-[[file:~/Documents/typora/lisp/images/2024-06-20_00-05-00_screenshot.png]]
+  
+#+caption: base use
+#+begin_src emacs-lisp
+(setq x (cons 1 2))
+(car x)
+(cdr x)
+
+#+end_src
+
+#+caption: 嵌套用法
+#+begin_src 
+(setq x (cons 1 2)) 
+(setq y (cons 3 4))
+(setq z (cons x y))
+(car (car z))
+(cdr (cdr z))
+#+end_src
