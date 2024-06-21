@@ -171,3 +171,32 @@ Row 2, Column 1   & Row 2, Column 2   & Row 2, Column 3   \\ \hline
 (car (car z))
 (cdr (cdr z))
 #+end_src
+
+**** 序对表示有理数
+
+#+begin_src emacs-lisp
+  (defun make-rat (n d)
+     (cons n d))
+
+  (defun nmuer (x) 
+   (cons car x))
+
+  (defun denom (x)
+    (cdr x))
+
+  (defun print-rat (x)
+  (newline)
+  (display (numer x))
+  (display "/")
+  (display (denom x))
+  )
+
+
+#+end_src
+
+
+
+
+
+
+
