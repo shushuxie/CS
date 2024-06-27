@@ -1,0 +1,26 @@
+** 搜索什么?
+搜索也就两类,文字内容和文件
+
+** 文字搜索
+
+*** 当前buffer
+    - swipper
+    - vim search
+
+*** 所有打开buffer
+  - swipper-all 函数
+  
+*** 当前项目
+    - *C-c p s g* 
+
+
+** 文件搜索
+
+*** 按文件名进行搜索
+    - *C-x C-f* =counsel-find-file= ,当前目录
+    - *C-c p f* 当前项目文件
+      
+
+*** 打开的buffer
+    - multi-occur
+      

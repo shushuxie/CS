@@ -3,7 +3,7 @@
 使用基本的运算构造出更加高阶的运算; 层层抽象.
 
 ** 2.1 数据抽象导引
-通过 *选择函数* 和 *构造函数* 构建出一个复合数据结构; 每层只管使用当前的类型就好不用考虑别的影响.
+***** 过 *选择函数* 和 *构造函数* 构建出一个复合数据结构; 每层只管使用当前的类型就好不用考虑别的影响.
 
 *** 2.1.1 实例: 有理数的算数运算
 我们定义一个新的有理数的表示计算方式,一个有理数的表示方式是通过 =分子/分母= 得到的.下面我们定义三个过程
@@ -174,25 +174,166 @@ Row 2, Column 1   & Row 2, Column 2   & Row 2, Column 3   \\ \hline
 
 **** 序对表示有理数
 
+    #+begin_src emacs-lisp
+    (defun make-rat (n d)
+	(cons n d))
+
+    (defun nmuer (x) 
+    (cons car x))
+
+    (defun denom (x)
+	(cdr x))
+
+    (defun print-rat (x)
+    (newline)
+    (princ (numer x))
+    (princ "/")
+    (princ(denom x))
+    )
+
+
+    #+end_src
+
+    #+caption: GCD最大公约数
+    #+begin_src emacs-lisp
+    (defun GCD (a b)
+	(if (= 0 b)
+	    a
+	    (GCD b (% a b))))
+    #+end_src
+
+
+    
+**** 练习2.1
+   =定义一个make-rat更好的版本可以处理,正数和负数,负数,分母为负数= 
+   #+caption:  可以表示负数
+   #+begin_src emacs-lisp
+     (defun make-rat (n d)
+	  (cons n d))
+
+     (defun numer (x)
+	 (abs (car x)));取绝对值
+
+     (defun denom (x)
+       (cond ((and (> (car x) 0) (> (cdr x) 0)) (cdr x))
+	     ((and (> (car x) 0) (< (cdr x) 0)) (cdr x))
+	     ((and (< (car x) 0) (> (cdr x) 0)) (-(cdr x)))
+	     ((and (< (car x) 0) (< (cdr x) 0)) (-(cdr x)))
+	     ))
+
+     (setq test1 (make-rat -1 3))
+     (numer test1)
+     (denom test1)
+
+   #+end_src
+
+
+*** 2.1.2抽象屏障
+    抽象屏障是这样的, 一层的数据依赖另一层的抽象, 例如: *cons --> make-rat --> add-rat --> 使用数据的程序* 
+
+#+caption: 抽象屏障
+[[file:~/Documents/typora/lisp/images/2024-06-22_12-13-25_screenshot.png]]
+
+**** 练习2.2
+#+caption:  练习2.2
 #+begin_src emacs-lisp
-  (defun make-rat (n d)
-     (cons n d))
+  ;;; code
+  (defun make-segment (start-point end-point)
+    "定义表达式,嵌套序点"
+    (cons start-point end-point))
 
-  (defun nmuer (x) 
-   (cons car x))
+  (defun start-segment (segment)
+    "得到开始的点"
+    (car segment))
 
-  (defun denom (x)
+  (defun end-segment (segment)
+    "得到结束的点"
+    (cdr segment))
+
+  ;;;点的构造
+  (defun make-point (x y)
+    "构造一个点"
+    (cons x y))
+
+  (defun x-point (x)
+    (car x))
+
+  (defun y-point (x)
     (cdr x))
 
-  (defun print-rat (x)
-  (newline)
-  (display (numer x))
-  (display "/")
-  (display (denom x))
+  (defun print-point (p)
+    (newline)
+    (princ "(")
+    (princ (x-point p))
+    (princ ",")
+    (princ (y-point p))
+    (princ ")")
+    )
+
+  (setq pa (make-point 3 6))
+  (setq pb (make-point 2 8))
+  (setq segment-a-b (make-segment pa pb))
+
+  (print-point (start-segment segment-a-b)
   )
 
+  (print-point (end-segment segment-a-b)
+  )
 
 #+end_src
+
+
+**** 练习2.3
+实现一种平面矩形的表示,构造和选择函数;
+
+#+caption:  2.3
+#+begin_src emacs-lisp
+
+  (defun make-point (x y)
+    "构造一个点"
+    (cons x y))
+
+  (defun x-point (x)
+    (car x))
+
+  (defun y-point (x)
+    (cdr x))
+  ;; 用一个复合的点表示矩形
+  (defun ju-xing (x y)
+    "矩形的表示,只需要两个个对角的点即可"
+    (make-point x y))
+  ;; 两个选择函数,确定长和宽
+  (defun length (a)
+    (abs (- (x-point (x-point a))
+	    (x-point (y-point a)))))
+  (defun weight (a)
+    (abs (- (y-point (x-point a))
+	    (y-point (y-point a)))))
+  ;; 求矩形的面具 axb
+  (defun mianji (a)
+    (* (length a) (weight a)))
+  ;; 求矩形的周长
+  (defun circle-length (a)
+    (* 2 (+ (length a) (weight a))))
+
+  ;; 测试
+  (setq x (make-point 2 4))
+  (setq y (make-point 4 7))
+  (setq a (ju-xing x y))
+  (mianji a)
+  (abs (- (x-point (x-point a)) (x-point (y-point a))))
+  (y-point (x-point a))
+  (y-point a)
+  (abs (- (x-point (y-point a)) (y-point (y-point a))))
+
+  (circle-length a)
+
+#+end_src
+
+
+
+
+
 
 
 
