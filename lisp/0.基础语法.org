@@ -234,16 +234,16 @@
 *** 返回值为函数
 1. 定义一个简单的函数
     #+begin_src elisp
-    ;; -*- lexical-binding: t; -*-
-	(defun make-adder (x)
-	"Return a function that adds X to its argument."
-	(lambda (y)
-	    (+ x y)))
-	(setq add5 (make-adder 5))
-	(funcall add5 3)  ;; 返回 8
+      ;; -*- lexical-binding: t; -*-
+	  (defun make-adder (x)
+	  "Return a function that adds X to its argument."
+	  (lambda (y)
+	      (+ x y)))
+	  (setq add5 (make-adder 5))
+	  (funcall add5 3)  ;; 返回 8
 
-	(setq add10 (make-adder 10))
-	(funcall add10 7) ;; 返回 17
+	  (setq add10 (make-adder 10))
+	  (funcall add10 7) ;; 返回 17
 
     #+end_src
 

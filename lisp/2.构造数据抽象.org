@@ -332,12 +332,31 @@ Row 2, Column 1   & Row 2, Column 2   & Row 2, Column 3   \\ \hline
 
 
 
+*** 2.1.3 数据意味着什么
+数据到底是如何表示的,不仅是别的,同样也能够通过过程来表示数据,这样数据就是对象,对象是过程实现的;
+我们给自己定义的有理数下一个定义,对于任意的 ,n,d和选择函数,满足
+
+$$\frac{(numer\: x)}{denom\:x} = \frac{n}{d}$$
+只要满足这个公式就是我们定义的有理数,无论底层是如何实现的;
 
 
+#+begin_src elisp
+(setq lexical-binding t)
 
+(defun cons2 (x y)
+  (lambda (m)
+    (cond ((equal m 0) x)
+          ((equal m 1) y))))
 
+(defun car2 (z)
+  (funcall z 0))
 
+(defun cdr2 (z)
+  (funcall z 1))
 
+(setq test (cons2 24 23))
 
-
+(message "car: %d" (car2 test))  ; 输出 24
+(message "cdr: %d" (cdr2 test))  ; 输出 23
+#+end_src
 
