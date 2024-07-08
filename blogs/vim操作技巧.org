@@ -15,8 +15,22 @@
 5. https://github.com/oldratlee/vim-practice/blob/master/README.md
 
 ** 窗口
+1. 新窗口
+ =:vsp= 命令行，垂直分割
+ =:sp= 水平分割窗口
+2. 关闭窗口
+ =:q=  =:close= close window
+ =:only= current windwo 
+3. 窗口跳转
+   =Ctrl + w + h/j/k/l=
+   =Ctrl + w + w= 窗口之间循环
+4. 窗口调整
+   =Ctrl + w + +/-= 高度
+   =Ctrl + w + </>= 宽度
+   
 ** 搜索替换
 ** 代码跳转
+
 ** 实用技巧
 1. =gd= 可以跳转到函数，变量的定义，也可以看函数的引用
 2. =zz,zt,zb= 光标行定位到屏幕的中央，上方，下方
