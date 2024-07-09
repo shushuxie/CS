@@ -1,5 +1,6 @@
 *** 范型是什么
 范型是为了更好的适用，多个类型入参，java中的范型可以用在类和方法上面；
+范围： *类，接口，方法*
 在类中用在类名的后面，方法中要在返回值前面指定参数
 #+begin_src java
   // 在类名后面使用，可以指定多个
@@ -43,31 +44,31 @@ V代表值的类型。这两个符号通常用于表示泛型参数的具体类�
 
 **** 举例
 #+begin_src java
-  package org.generic;
+    package org.generic;
 
-/**
- * java范型， extens关键字可以指定特殊的类型，称为有界范型
- * 同时可以有限定接口，Things，但是不使用implements关键字
- *< T extends Viceal & Thing> 的意思是传入的类型是vical的子类，并且实现了Thing的接口
- * 本质上还是Vical子类
- * @param <T>
- */
-public class Printer<T extends Viceal & Thing>{
+  /**
+   ,* java范型， extens关键字可以指定特殊的类型，称为有界范型
+   ,* 同时可以有限定接口，Things，但是不使用implements关键字
+   ,*< T extends Viceal & Thing> 的意思是传入的类型是vical的子类，并且实现了Thing的接口
+   ,* 本质上还是Vical子类
+   ,* @param <T>
+   ,*/
+  public class Printer<T extends Viceal & Thing>{
 
-    T content;
+      T content;
 
-    public Printer(T content) {
-        this.content = content;
-    }
+      public Printer(T content) {
+	  this.content = content;
+      }
 
-    public void printer() {
-        System.out.println(content);
-    }
-}
+      public void printer() {
+	  System.out.println(content);
+      }
+  }
 #+end_src
 
 #+begin_src java
-  package org.generic;
+package org.generic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -125,3 +126,16 @@ public class Main {
     }
 }
 #+end_src
+
+
+
+**** 注意点
+
+1. 范型类
+   范型类是在类名后面生命范型变量，例如 =List<E>= =Map<K,V>=
+2. 范型接口
+3. 范型方法
+   a. 提前给出类型限制，编译器需要
+   b. extense 需要在类型限制中给出，或者使用通配符用在参数中
+   c. ~public <T,R,K> void test(List<T> code, HashMap<K, R> map,List<? extends String> name) 
+      public <T extends String,R,K> void test2(List<T> code, HashMap<K, R> map,List<T> name)~
