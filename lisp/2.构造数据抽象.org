@@ -747,6 +747,9 @@ console.log(counter.decrement()); // 输出 0
 
 *** 2.2.1 序列的表示
 list 是一个列表，由cons构成，最后一个元素指向nil，car取元素，cdr取剩余元素
+
+[[file:~/Documents/typora/lisp/images/2024-07-11_23-11-28_screenshot.png]]
+
 #+begin_src elisp
   (setq mylist (list 1 2 3 4))  ;; 创建一个列表并将其赋值给变量 `mylist`
   (car mylist)                  ;; 获取 `mylist` 的第一个元素
@@ -930,5 +933,52 @@ list 是一个列表，由cons构成，最后一个元素指向nil，car取元�
 	      (scale-list (cdr item) factor))))
   (setq test (list 1 3 5 7 9))
   (scale-list test 3)
-
 #+end_src
+
+=高阶映射= 
+#+begin_src elisp
+  (defun map (proc items)
+    "所有的元素执行proc函数,so cool"
+    (if (null items)
+	nil
+      (cons (funcall proc (car items))
+	    (map proc (cdr items)))))
+  (map #'abs (list -10 2.5 -11.6 17))
+  ;; 匿名函数
+  (map (lambda (x) (* x x))
+	 (list 1 2 3 4))
+  ;; scale-list新的定义,使用map映射
+  (defun scale-list (items factor)
+    (map (lambda (x) (* x factor))
+	 items))
+  (scale-list (list 1 2 3 4) 3)
+#+end_src
+
+map帮助我们建立了一个抽象屏障,把对单个元素的思考转化为,程序对列表整体的控制
+map就是一个框架,我们可以自己进行更改相应的实现,map的实现是自由的,不止有一种方式;
+
+***** 练习
+1. (2.21)补充squre-list的两个实现定义
+#+begin_src elisp
+  (defun square-list (items)
+   (if (null items)
+      nil
+      (cons (* (car items) (car items))
+	      (square-list (cdr items)))))
+
+  (square-list (list 1 2 3 8))
+
+  (defun map (proc items)
+  "所有的元素执行proc函数,so cool"
+  (if (null items)
+      nil
+      (cons (funcall proc (car items))
+	  (map proc (cdr items)))))
+
+  (defun square-list2 (items)
+      (map (lambda (x) (* x x))
+	    items))
+
+  (square-list2 (list 1 2 3 8))
+#+end_src
+
