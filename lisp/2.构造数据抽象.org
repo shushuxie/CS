@@ -809,33 +809,32 @@ list 是一个列表，由cons构成，最后一个元素指向nil，car取元�
      (cons 44 square)
    #+end_src
 
-
-**** 练习
+***** 练习
 1. =2.17last-pair函数，返回list最后一个元素=
     #+begin_src elisp
-	;; 可以通过length和item拿到
-	(defun length (item)
-		(if (null item)
-		    0
-		    (+ 1 (length (cdr item)))))
-	(defun list-ref (item n)
-	    (if (= n 0)
-		(car item)
-		(list-ref (cdr item) (- n 1))))
+      ;; 可以通过length和item拿到
+      (defun length (item)
+	      (if (null item)
+		  0
+		  (+ 1 (length (cdr item)))))
+      (defun list-ref (item n)
+	  (if (= n 0)
+	      (car item)
+	      (list-ref (cdr item) (- n 1))))
 
-	(defun last-pair (item)
-		(if (null item)
-		    nil
-		    (list-ref item (- (length item) 1))))
-	(last-pair (list 123 434 532 34))
-	(last-pair (list 12))
-	;; 上面的方法太麻烦，需要多次遍历，理论上一次就行了，不需要调用多个
-	(defun last-pair2 (item)
-	    (if (null (cdr item))
-		(car item)
-		(last-pair2 (cdr item))))
-	(last-pair2 (list 123 434 532 34))
-	(last-pair2 (list 12))
+      (defun last-pair (item)
+	      (if (null item)
+		  nil
+		  (list-ref item (- (length item) 1))))
+      (last-pair (list 123 434 532 34))
+      (last-pair (list 12))
+      ;; 上面的方法太麻烦，需要多次遍历，理论上一次就行了，不需要调用多个
+      (defun last-pair2 (item)
+	  (if (null (cdr item))
+	      (car item)
+	      (last-pair2 (cdr item))))
+      (last-pair2 (list 123 434 532 34))
+      (last-pair2 (list 12))
     #+end_src
 
 2. =revser函数，元素反转=
@@ -850,8 +849,86 @@ list 是一个列表，由cons构成，最后一个元素指向nil，car取元�
       (reverse (list 1 4 9 16 25))
     #+end_src
 
-3. 
+3. =不定参数，使用尾部".",&rest,挨个匹配=
+
+    #+begin_src elisp
+      (defun f (x &rest z)
+	"Prints x and z."
+	(message "x: %s, z: %s" x z))
+      ;; 空参数或者多个参数
+      (defun g (&rest w)
+	(message "w %s" w))
+      (setq test (list 1 2 3 4 5 6))
+      (f test)  ;; 传入一个参数
+      (f 'a 'b 'c 'd 'e 'f 'g)
+      (g 11 22 33 44)
+    #+end_src
+
+    #+caption: 输出奇数或偶数
+    #+begin_src elisp
+      (defun oushu (z)
+	"Return a list of even numbers from the list z."
+	(if (null z)
+	    nil
+	  (let ((head (car z))
+		(tail (cdr z)))
+	    (if (= 0 (% head 2))
+		(cons head (oushu tail))
+	      (oushu tail)))))
+
+      (defun oushu2 (z)
+	  (when z
+	      (let ((head (car z))
+		    (tail (cdr z)))
+		   (if (= 0 (% head 2))
+		       (cons head tail)
+		       tail))))
+      (defun even-num(z)
+	"Filter and return a list of even numbers from the list z."
+	(when z
+	  (let ((head (car z))
+		(tail (even-num (cdr z))))
+	    (if (= 0 (% head 2))
+		(cons head tail)
+	      tail))))
+
+      (defun odd-num(z)
+	"Filter and return a list of even numbers from the list z."
+	(when z
+	  (let ((head (car z))
+		(tail (odd-num (cdr z))))
+	    (if (not (= 0 (% head 2)))
+		(cons head tail)
+	      tail))))
+
+      ;; 测试
+      (setq test-list '(1 2 3 4 5 6))
+      (even-num (list 1 2 3 4 5 6))  ;; 返回 (2 4 6)
+      (odd-num test-list)  ;; 返回 (1 3 5)
+
+      ;; 返回和列表第一项相同的奇数或者偶数列表
+      (defun same-parity (x &rest z)
+	  (if (= 0 (% x 2))
+	      (even-num z)
+	      (odd-num z)))
+      (same-parity 1 2 3 4 5 6 77 88)
+      (same-parity 2 3 4 5 6 77 88)
+
+    #+end_src
 
 
    
    
+
+**** 表的映射
+某个操作应用于表的所有元素；将表映射为一个新的表
+#+begin_src elisp
+  (defun scale-list (item factor)
+    (if (null item)
+	nil
+	(cons (* (car item) factor)
+	      (scale-list (cdr item) factor))))
+  (setq test (list 1 3 5 7 9))
+  (scale-list test 3)
+
+#+end_src
