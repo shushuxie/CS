@@ -1413,3 +1413,49 @@ Elisp提供了一些机制来捕获和处理运行时错误，以提高程序的
 
 
 
+
+
+* 常用操作
+
+** 打印方法
+在 Emacs Lisp (elisp) 中，有几种常用的打印和输出的方法。以下是一些常见的例子：
+
+message:
+
+message 是最常用的用于输出文本的函数。它会将信息显示在 Emacs 的迷你缓冲区（mini-buffer）。
+
+   (message "Hello, World!")
+      (message "The value is: %d" 42)
+      print:
+
+print 将对象打印到当前输出流（通常是 *Messages* 缓冲区或其他指定缓冲区），并返回该对象。输出会带有换行符。
+
+(print "Hello, World!")
+(print 42)
+prin1 和 princ:
+
+prin1 和 princ 都会将对象打印到当前输出流，但 prin1 会在字符串周围加上双引号（如果对象是字符串的话），而 princ 不会。
+
+(prin1 "Hello, World!")   ; 输出 "Hello, World!"
+(princ "Hello, World!")   ; 输出 Hello, World!
+
+(prin1 '(1 2 3))          ; 输出 (1 2 3)
+(princ '(1 2 3))          ; 输出 (1 2 3)
+format:
+
+format 类似于 message，但它不会将结果显示在迷你缓冲区，而是返回一个格式化的字符串。你可以将返回值传递给其他函数。
+
+(format "Hello, %s!" "World")   ; 返回 "Hello, World!"
+terpri 和 newline:
+
+terpri（简称“terminate printing”）和 newline 都会在当前输出流中插入一个换行符。
+
+    (terpri)
+	(newline)
+	with-output-to-temp-buffer:
+
+    这个宏将输出定向到一个临时缓冲区，允许你在缓冲区中显示临时信息。
+
+	(with-output-to-temp-buffer "*My Temp Buffer*"
+	    (princ "This is a temporary buffer."))
+	    这些函数和宏提供了丰富的选项来在 Emacs 中进行打印和输出操作，可以根据具体需求选择合适的函数。)
