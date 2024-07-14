@@ -815,39 +815,41 @@ list 是一个列表，由cons构成，最后一个元素指向nil，car取元�
 
 ***** 练习
 1. =2.17last-pair函数，返回list最后一个元素=
-    #+begin_src elisp
-      ;; 可以通过length和item拿到
-      (defun length (item)
-	      (if (null item)
-		  0
-		  (+ 1 (length (cdr item)))))
-      (defun list-ref (item n)
-	  (if (= n 0)
-	      (car item)
-	      (list-ref (cdr item) (- n 1))))
+   #+begin_src elisp
+    ;; 可以通过length和item拿到
+    (defun length (item)
+	    (if (null item)
+		0
+		(+ 1 (length (cdr item)))))
+    (defun list-ref (item n)
+	(if (= n 0)
+	    (car item)
+	    (list-ref (cdr item) (- n 1))))
 
-      (defun last-pair (item)
-	      (if (null item)
-		  nil
-		  (list-ref item (- (length item) 1))))
-      (last-pair (list 123 434 532 34))
-      (last-pair (list 12))
-      ;; 上面的方法太麻烦，需要多次遍历，理论上一次就行了，不需要调用多个
-      (defun last-pair2 (item)
-	  (if (null (cdr item))
-	      (car item)
-	      (last-pair2 (cdr item))))
-      (last-pair2 (list 123 434 532 34))
-      (last-pair2 (list 12))
-    #+end_src
+    (defun last-pair (item)
+	    (if (null item)
+		nil
+		(list-ref item (- (length item) 1))))
+    (last-pair (list 123 434 532 34))
+    (last-pair (list 12))
+    ;; 上面的方法太麻烦，需要多次遍历，理论上一次就行了，不需要调用多个
+    (defun last-pair2 (item)
+	(if (null (cdr item))
+	    (car item)
+	    (last-pair2 (cdr item))))
+    (last-pair2 (list 123 434 532 34))
+    (last-pair2 (list 12))
+   #+end_src
+
 
 2. =revser函数，元素反转=
     #+begin_src elisp
-      ;; 可以倒序取值，拼接为一个新的list
+	    ;; 可以倒序取值，拼接为一个新的list
       (defun reverse (item)
 	  (if (null (cdr item))
 	      (cons (cdr item) (car item))
 	      (reverse (cdr item))))
+
       (reverse (list 1 2 3 4))
       (reverse (list 11 22 33 44))
       (reverse (list 1 4 9 16 25))
@@ -1016,13 +1018,158 @@ map就是一个框架,我们可以自己进行更改相应的实现,map的实现
 
 
 
-
-
-
-
-
-
-
 *** 2.2.2 层次性结构
+列表之间是可以嵌套的, $(cons (list 1 2) 3 4)$
+=sequence predicate= 序列判定的意思
+
+
+计算子叶树的方法很有意思,三种情况,空,单个叶子和最后统计,只要把
+序列分开计算递归记可以了; 思想决定了计算;
+
+#+begin_src elisp
+  (sequencep 3) ;nil
+  (sequencep (list 1 2)) ;t
+
+  ;; 判定一个元素的子页数量
+  (defun count-leaves (x)
+    (cond ((null x) 0)
+	  ((not (sequencep x)) 1)
+	   (t (+ (count-leaves (car x))
+		 (count-leaves (cdr x))))))
+  (setq test (list (list 1 2) 3 4))
+  (setq test2 (list (list 1 2 7 (list 1 2)) 3 4))
+  (sequencep (list (list 1 2) 3 4))
+  (sequencep test)
+  (count-leaves test) ;4
+  (count-leaves test2) ;7
+#+end_src
+
+
+**** 练习
+1. (2.24)
+    #+begin_src 
+    (1 (2 (3 4)))       ((2 (3 4)))
+    [*]---------------> [*]
+    |                   |
+    |                   |
+    v                   v (2 (3 4))         ((3 4))
+    1                  [*]---------------> [*]
+			|                   |
+			|                   |
+			v                   v (3 4)             (4)
+			2                  [*]---------------> [*]---------------> '()
+					    |                   |
+					    |                   |
+					    v                   v
+					    3                   4
+    #+end_src
+
+    #+begin_quote
+    (1 (2 (3 4)))
+    *
+    / \
+    /   \  (2 (3 4))
+    1     *
+	/ \
+	/   \  (3 4)
+    2     *
+	    / \
+	/   \
+	3     4
+    #+end_quote
+
+2. 获取7的组合
+   #+begin_src elisp
+	(1 3 (5 7) 9)
+	(setq list1 (list 1 3 (list 5 7) 9))
+	((7))
+	(setq list2 (list(list 7)))
+	(1 (2 (3 (4 (5 (6 (7)))))))
+	(setq list3 (list 1 (list 2 (list 3 (list 4 (list 5 (list 6 (list 7))))))))
+
+     (car (cdr (car (cdr (cdr list1)))))   
+     (car (cdr (cdr list1))) ;(5 7)
+     (cdr(car (cdr (cdr list1)))) ;(7)
+     (car (car list2))
+
+     ;; 有点难取
+     (car (cdr list3))
+     (car (cdr (car (cdr list3))))
+     (car (cdr (car (cdr (car (cdr (car (cdr (car (cdr list3)))))))))); (6 (7))
+     (car (car (cdr (car (cdr (car (cdr (car (cdr (car (cdr (car (cdr list3)))))))))))));7
+
+   #+end_src
+
+3. (2.26)
+   #+begin_src elisp
+     (setq x (list 1 2 3))
+     (setq y (list 4 5 6))
+
+     (append x y);(1 2 3 4 5 6)
+     (cons x y) ;((1 2 3) 4 5 6)
+     (cdr (cons x y));(4 5 6)
+     (list x y) ;((1 2 3) (4 5 6))
+   #+end_src
+
+   #+begin_src lisp
+(1 2 3 4 5 6)     (2 3 4 5 6)      (3 4 5 6)     (4 5 6)      (5 6)     (6)
+[*]-------------> [*]------------> [*]---------> [*]--------> [*]-----> [*]---> nil
+ |                 |                |             |            |         |
+ v                 v                v             v            v         v
+ 1                 2                3             4            5         6 
+   #+end_src
+
+   #+caption: cons结构
+   #+begin_src elisp
+ ((1 2 3) 4 5 6)     (4 5 6)      (5 6)       (6)
+[*]---------------> [*]--------> [*]-------> [*]---> nil
+ |                   |            |           |
+ |                   v            v           v
+ |                   4            5           6
+ |
+ | (1 2 3)     (2 3)         (3)
+[*]---------> [*]---------> [*]-----> nil
+ |             |             |
+ v             v             v
+ 1             2             3
+   #+end_src
+   
+   #+caption: list结构
+   #+begin_src elisp
+ ((1 2 3) (4 5 6))      ((4 5 6))
+[*]------------------> [*]------------> nil
+ |                      |
+ |                      |
+ |                      | (4 5 6)      (5 6)      (6)
+ |                     [*]----------> [*]------> [*]---> nil
+ |                      |              |          |
+ |                      v              v          v
+ |                      4              5          6
+ |
+ | (1 2 3)      (2 3)        (3)
+[*]----------> [*]--------> [*]----> nil
+ |              |            |
+ v              v            v
+ 1              2            3
+   #+end_src
+
+4. (2.27)deep-reverse反转子树
+   #+begin_src elisp
+     ;; 迭代版本
+     (defun reverse (lst)
+	     (iter lst nil))
+
+
+     (defun iter (remained-items result)
+	 (if (null remained-items)
+	     result
+	     (iter (cdr remained-items)
+		 (cons (car remained-items) result))))
+     (reverse (list 1 2 3 4))
+
+     ;; 递归版本
+
+   #+end_src
+
 
 

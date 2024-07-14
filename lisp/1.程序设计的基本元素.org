@@ -1377,3 +1377,23 @@ lambda匿名函数,let绑定局部变量,可以绑定为变量或者过程都行
     + 换硬币问题
     + 牛顿法求平方根
     + 高阶抽象的计算框架
+
+
+
+#+DOWNLOADED: screenshot @ 2024-07-13 10:51:39
+[[file:1.3_用高阶函数做抽象/2024-07-13_10-51-39_screenshot.png]] 
+
+#+begin_src elisp
+  (message "org-download-image-dir: %s" org-download-image-dir)
+
+   (setq org-download-method 'directory)
+ 
+#+end_src
+
+#+DOWNLOADED: screenshot @ 2024-07-13 10:57:11
+[[file:../images/1.3_用高阶函数做抽象/2024-07-13_10-57-11_screenshot.png]]
+
+
+
+#+DOWNLOADED: screenshot @ 2024-07-13 10:59:11
+[[file:images/1.3_用高阶函数做抽象/2024-07-13_10-59-11_screenshot.png]]
