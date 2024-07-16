@@ -1459,3 +1459,52 @@ terpri（简称“terminate printing”）和 newline 都会在当前输出流�
 	(with-output-to-temp-buffer "*My Temp Buffer*"
 	    (princ "This is a temporary buffer."))
 	    这些函数和宏提供了丰富的选项来在 Emacs 中进行打印和输出操作，可以根据具体需求选择合适的函数。)
+
+
+	    
+** interacative
+在 Emacs Lisp 中，(interactive) 是一个特别的 Lisp 表达式，它使一个函数能够作为交互命令运行。也就是说，通过 M-x 命令调用、通过键绑定、或者其他交互方式调用时，使函数可以接受用户输入。没有这个表达式的函数只能在Lisp代码中调用。
+
+作用和用法
+使函数变为交互命令：当一个函数包含 (interactive) 表达式时，它就成为一个交互命令。这样的命令可以通过 M-x_COMMAND_NAME 来调用，也可以绑定到一个键。
+
+接收用户输入：(interactive) 可以通过各种方式接受用户输入，它支持许多不同的标志（通常是字符串）来指定输入的形式。
+
+示例
+一个简单的例子，包含 interactive 表达式的命令:
+
+(defun my-hello-world ()
+  "Print Hello, World! in the minibuffer."
+    (interactive)
+      (message "Hello, World!"))
+      将上述代码添加到你的 Emacs 配置文件中后，可以通过 M-x my-hello-world 来调用这个命令，并在迷你缓冲区（minibuffer）中看到 "Hello, World!"。
+
+      接受输入参数
+      为了让命令接受用户输入，可以在 (interactive) 后面添加参数描述符。
+
+      例如：
+
+      (defun my-insert-string (str)
+        "Insert a given string at point."
+	  (interactive "sEnter a string: ")
+	    (insert str))
+	    在这个例子中，"sEnter a string: " 表示 Emacs 应该提示用户输入一个字符串（在迷你缓冲区中显示提示信息 "Enter a string: "），并将这个字符串传递给函数 my-insert-string 作为参数 str。
+
+	    interactive 参数细节
+	    一些常见的 interactive 参数描述符：
+
+	    "s"：提示用户输入一个字符串。
+	    "n"：提示用户输入一个数字。
+	    "r"：获取当前选区的起点和终点作为参数传递。
+	    "b"：提示用户选择一个缓冲区。
+	    "f"：提示用户选择一个文件。
+	    更复杂的交互输入可以结合使用多个描述符。例如：
+
+	    (defun my-copy-file (src dst)
+	      "Copy a file SRC to DST."
+	        (interactive "fSource file: \nFDestination: ")
+		  (copy-file src dst))
+		  在这个例子中，"fSource file: \nFDestination: " 表示函数需要两个文件路径，分别作为源文件和目标文件。
+
+		  总结
+		  (interactive) 是把 Emacs Lisp 函数变成命令、并允许用户输入的机制。它使得函数不仅能在 Lisp 代码中调用，还可以与用户进行交互。通过理解和使用 interactive，可以编写与用户互动的强大 Emacs 扩展功能。

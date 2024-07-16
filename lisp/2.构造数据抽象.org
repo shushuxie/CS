@@ -1159,6 +1159,7 @@ map就是一个框架,我们可以自己进行更改相应的实现,map的实现
      (defun reverse (lst)
 	     (iter lst nil))
 
+     
 
      (defun iter (remained-items result)
 	 (if (null remained-items)
@@ -1171,5 +1172,16 @@ map就是一个框架,我们可以自己进行更改相应的实现,map的实现
 
    #+end_src
 
+#+begin_src elisp
+  (defun goto-last-closing-parenthesis ()
+    "Move cursor to the last closing parenthesis ')' on the current line."
+      (interactive)
+	(end-of-line)
+	  (search-backward ")" (line-beginning-position) t))
+#+end_src
+
+	   
+
+	   
 
 
