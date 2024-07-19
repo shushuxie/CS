@@ -1022,7 +1022,6 @@ map就是一个框架,我们可以自己进行更改相应的实现,map的实现
 列表之间是可以嵌套的, $(cons (list 1 2) 3 4)$
 =sequence predicate= 序列判定的意思
 
-
 计算子叶树的方法很有意思,三种情况,空,单个叶子和最后统计,只要把
 序列分开计算递归记可以了; 思想决定了计算;
 
@@ -1154,34 +1153,94 @@ map就是一个框架,我们可以自己进行更改相应的实现,map的实现
    #+end_src
 
 4. (2.27)deep-reverse反转子树
+   #+caption: 普通的reverse
    #+begin_src elisp
      ;; 迭代版本
      (defun reverse (lst)
-	     (iter lst nil))
+	(defun iter (remained-items result)
+	    (if (null remained-items)
+		result
+		(iter (cdr remained-items)
+		    (cons (car remained-items) result))))
+	(iter lst nil))
 
-     
-
-     (defun iter (remained-items result)
-	 (if (null remained-items)
-	     result
-	     (iter (cdr remained-items)
-		 (cons (car remained-items) result))))
      (reverse (list 1 2 3 4))
+     工作原理示例：
+
+     第一次调用iter时，remained-items是 (1 2 3 4)，result是 nil。
+     第二次调用时，remained-items是 (2 3 4)，result是 (1)。
+     第三次调用时，remained-items是 (3 4)，result是 (2 1)。
+     第四次调用时，remained-items是 (4)，result是 (3 2 1)。
+     第五次调用时，remained-items是 nil，result是 (4 3 2 1)。
 
      ;; 递归版本
+     (defun reverse (lst)
+       (if (null lst)
+	   nil
+	   (append (reverse (cdr lst)) (list (car lst)))))
+     
+     (reverse (list 1 2 3 4))
 
    #+end_src
 
+   #+caption: 反转子树
+   #+begin_src elisp
+     (defun reverse (lst)
+	(defun iter (remained-items result)
+	    (if (null remained-items)
+		result
+		(iter (cdr remained-items)
+		    (cons (car remained-items) result))))
+	(iter lst nil))
+
+     (reverse (list 1 2 3 4))
+     (reverse (list 1 2 (list 3 4) 5 6)) ;(6 5 (3 4) 2 1)
+
+
+     (defun reverse-deep (lst)
+	(defun iter-deep (remained-items result)
+	    (if (null remained-items)
+		result
+		(iter-deep (cdr remained-items)
+		    (cons (if (sequencep reamined-items)
+			      (iter-deep (remained-items result)
+					(car remained-items))) result))))
+	(iter-deep lst nil))
+
+     (defun reverse-deep (lst)
+	 (defun iter-deep (remained-items result)
+	       (if (null remained-items)
+			   result
+			 (iter-deep (cdr remained-items)
+			(cons (if (sequencep (car remained-items)) ; 单个拼接判断是否为子树，如果符合进行深层调用
+			          (iter-deep (car remained-items) nil)
+				  (car remained-items))
+			result))))
+	   (iter-deep lst nil))
+     
+
+     (reverse-deep (list 1 2 (list 3 4) 5 6)) ;(6 5 (4 3) 2 1)
+     (reverse-deep (list 1 2 (list 3 4 (list 5  6)) 7 8)) ;(8 7 ((6 5) 4 3) 2 1)
+   #+end_src
+
+5. (2.28) 返回所有树叶
 #+begin_src elisp
-  (defun goto-last-closing-parenthesis ()
-    "Move cursor to the last closing parenthesis ')' on the current line."
-      (interactive)
-	(end-of-line)
-	  (search-backward ")" (line-beginning-position) t))
+    ;; 判定一个元素的子页数量
+    (defun count-leaves (x)
+      (cond ((null x) 0)
+	    ((not (sequencep x)) 1)
+	     (t (+ (count-leaves (car x))
+		   (count-leaves (cdr x))))))
+
+    (defun frige (item)
+      (cond ((null item) '())
+	    (t ?)))
+
+    (frige (list))
+
 #+end_src
 
 	   
 
-	   
 
 
