@@ -1,0 +1,15 @@
+** 这是什么？
+这是一个浏览器的插件，可以让我们使用键盘操作浏览器
+[[https://github.com/gdh1995/vimium-c/blob/master/README-zh.md][vimium插件介绍]]
+[[https://github.com/philc/vimium#keyboard-bindings][快捷键操作技巧]]
+
+** 常用技巧
+1. =?= 打开帮助文档
+2. =yt= 复制网页
+3. =yy= 复制网页链接到剪贴板
+4. =v/V= 进入选择模式，可以复制网页内容
+5. =H/L= 网页前进或后退
+6. =T= 在所有打开的tab页中搜索
+7. =o/O= 搜索历史记录或新的内容
+8. =b/B= 在收藏夹中搜索
+9. =Alt-p= 固定tab页
