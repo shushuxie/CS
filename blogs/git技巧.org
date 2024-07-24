@@ -1,0 +1,23 @@
+** 撤销
+** 合并
+** worktree
+git worktree可以实现同一个项目不同的分支，使用的是同一套代码
+#+caption: 常用操作
+#+begin_src git
+  // 展示所有工作树
+  git worktree list 
+ // 添加工作树，在项目外的平级目录
+  git worktree add ../workDir  featre/branch
+ // 移除工作树
+ git worktree remove worktreeDir
+#+end_src
+
+** cherry-pick 摘取某些提交
+把一个分支里面的某些提交合并到另一个分支里面，
+首先找到需要摘取提交的commit hashcode，然后切换到需目的分支
+通过 $git cherrypick commit-code$ 即可；
+
+** diff branch
+git 里面有很多对比，可以对比单个文件的提交，同样也能对比某些分支；
+在 ~IDEA~ 里面选中右侧的某个文件夹，模块或者项目根目录，然后找到 ~commpare with branch~
+然后选择需要对比的分支；

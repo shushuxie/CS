@@ -1277,56 +1277,81 @@ map就是一个框架,我们可以自己进行更改相应的实现,map的实现
       (setq x (list (list 1 3) (list 2 4)))
       (left-branch x)
       (right-branch x)
-
-
-
     #+end_src
 
    2. total-weight
       #+begin_src elisp
-		;; 遍历整个tree,重量相加返回
-		(defun total-weight (tree)
-		    (cond ((null tree) 0)
-			    ((numberp tree) tree)
-			    (t (+ (total-weight (car tree))
-				(total-weight (cdr tree))))))
-		(total-weight (list 1 2 (list 3 4) (list (list 5 6))))
+	(defun left-branch (tree)
+	(car tree))
 
-		;; 只计算weitght,left代表的是length
-		(defun total-weight (tree)
-		    (cond ((null tree) 0)
-			    ((numberp (cdr tree)) (cdr tree))
-			    (t (+ (total-weight (car tree))
-				(total-weight (cdr tree))))))
-		(total-weight (list 3 4))
+	(defun right-branch (tree)
+	(cadr tree))
 
-		(defun right-side-weight (tree)
-		    (cond ((null tree) 0)  ;; 如果树为空，返回0
-			    ((numberp tree) tree)  ;; 如果树是一个数字，返回数字
-			    ((listp tree) (+ (right-side-weight (car (cdr tree)))  ;; 递归地计算右子树的权重
-					    (if (and (numberp (car tree)) (null (cdr tree))) (car tree) 0)))  ;; 如果当前节点是一个数字并且没有右子树，添加当前节点的值
-			    (t 0)))  ;; 其他情况，返回0
+	(defun branch-structure (tree)
+	(cadr tree)) 
 
-	;; 示例调用
-	(right-side-weight (list (list 3 1) (list 2 9)))
+	(defun total-weight (mobile)
+	    (+ (branch-weight (left-branch mobile))    ; 计算左右两个分支的重量之和
+	       (branch-weight (right-branch mobile))))
 
-	(defun right-side-weight (tree)
-  (cond ((null tree) 0)  ;; 如果树为空，返回0
-        ((numberp tree) tree)  ;; 如果树是一个数字，返回该数字
-        ((listp tree) (+ (right-side-weight (car (cdr tree)))  ;; 递归计算右子树的权重
-                         (right-side-weight (cdr (cdr tree)))))  ;; 递归计算右子树的右子树
-        (t 0)))  ;; 其他情况，返回0
+	(defun branch-weight (branch)
+	    (if (hangs-another-mobile? branch)         ; 如果分支吊着另一个活动体
+		(total-weight (branch-structure branch)) ; 那么这个活动体的总重量就是这个分支的重量
+		(branch-structure branch)))              ; 否则， 分支的 structure 部分就是分支的重量
 
-;; 示例调用
-(right-side-weight (list (list 3 1) (list 2 9)))  ;; 结果应该是10
+	(defun hangs-another-mobile? (branch)        ; 检查分支是否吊着另一个活动体
+	    (consp (branch-structure branch)))
 
 
+	 ;; 示例调用
+	 (total-weight (list (list 3 1) (list 2 9)));10
 
       #+end_src
 
    3. 活动体是否balance
       #+begin_src elisp
-	
+	(defun left-branch (tree)
+	(car tree))
+
+	(defun right-branch (tree)
+	(cadr tree))
+
+	(defun branch-structure (tree)
+	(cadr tree)) 
+
+	(defun hangs-another-mobile? (branch)        ; 检查分支是否吊着另一个活动体
+	    (consp (branch-structure branch)))
+
+	(defun total-weight (mobile)
+	    (+ (branch-weight (left-branch mobile))    ; 计算左右两个分支的重量之和
+	       (branch-weight (right-branch mobile))))
+
+	(defun branch-weight (branch)
+	    (if (hangs-another-mobile? branch)         ; 如果分支吊着另一个活动体
+		(total-weight (branch-structure branch)) ; 那么这个活动体的总重量就是这个分支的重量
+		(branch-structure branch)))              ; 否则， 分支的 structure 部分就是分支的重量
+
+	;; 左右两侧的力矩相等 length*total-weight
+	(defun baranch-torque (branch)
+	    (* (branch-length branch)
+	       (total-weight branch)))
+
+	(defun mobile-balance? (mobile)
+	  (let ((left (left-branch mobile))
+		(right (right-branch mobile)))
+	    (and                                         ; 必须同时满足以下三个条件，才是平衡的活动体
+	     (same-torque? left right)
+	     (branch-balance? left)
+	     (branch-balance? right))))
+
+	(defun same-torque? (left right)
+	  (= (branch-torque left)
+	     (branch-torque right)))
+
+	(defun branch-balance? (branch)
+	  (if (hangs-another-mobile? branch)              ; 如果分支上有子活动体
+	      (mobile-balance? (branch-structure branch)) ; 那么(递归地)检查子活动体的平衡性
+	    t))                                           ; 否则，返回 t
       #+end_src
 
     
