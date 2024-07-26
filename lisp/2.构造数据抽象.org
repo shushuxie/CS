@@ -1384,6 +1384,12 @@ map就是一个框架,我们可以自己进行更改相应的实现,map的实现
 ***** 练习
 1. (2.30)square-tree
    #+begin_src elisp
-     
+     (defun squqre-tree (tree)
+	 (cond ((null tree) nil)
+	       ((not (consp tree)) (* tree tree))
+	       (cons (square-tree (car tree))
+		     (square-tree (cdr tree)))))
+     (square-tree (list 1 2 3 4))
+
    #+end_src
 
