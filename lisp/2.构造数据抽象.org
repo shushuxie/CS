@@ -1418,3 +1418,18 @@ map就是一个框架,我们可以自己进行更改相应的实现,map的实现
 
 
 *** 2.2.3 序列作为一种约定的界面
+这里的界面是指一种抽象，可以隔离实现的细节，这里主要讨论序列处理的流程分割为各个界面来实现
+以下讨论  ~sum-odd-squares~ 列表中的奇数平方求和
+#+begin_src elisp
+  (defun odd? (x)
+    (if (= (% x 2) 0) nil t)) 
+  (defun sum-odd-squares (items)
+    (cond ((null items) 0)
+	      ((not (consp items))
+		    (if (odd? items) (* items items) 0))
+	      (t (+ (sum-odd-squares (car items))
+		    (sum-odd-squares (cdr items))))))
+  (sum-odd-squares (list 1 2 3 4 5))
+#+end_src
+
+上面的方式可以解决问题，但是没法进行流程处理就各种界面每种界面处理一种情况；
