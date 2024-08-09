@@ -1444,3 +1444,16 @@ um—odd—squares过程，就会发现其中的枚举工作部分地由检查nu
 如果我们能够重新组织这一程序，使得信号流结构明显表现在写出的过程中，将会大大提高结果代码的清晰性。
 #+end_quote
 
+#+begin_src elisp
+	  sum-odd-squares 分为几种操作，映射为square，filter，求和
+	  (defun square (x) (* x x))
+	;; 树的映射
+	(defun tree-map (functions tree)
+	(cond ((null tree) nil)  ;; 如果树为空，返回nil
+		((not (consp tree)) (funcall functions tree))  ;; 如果树是一个数字，返回该数字的平方
+		(t (cons (tree-map functions (car tree))  ;; 递归地对左子树进行平方处理
+			(tree-map functions (cdr tree))))))  ;; 递归地对右子树进行平方处理
+	;; 过滤奇数
+	(defun filter (predicate items)
+	  ())
+#+end_src
