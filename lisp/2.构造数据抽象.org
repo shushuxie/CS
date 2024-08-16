@@ -1445,15 +1445,43 @@ um—odd—squares过程，就会发现其中的枚举工作部分地由检查nu
 #+end_quote
 
 #+begin_src elisp
-	  sum-odd-squares 分为几种操作，映射为square，filter，求和
-	  (defun square (x) (* x x))
-	;; 树的映射
-	(defun tree-map (functions tree)
-	(cond ((null tree) nil)  ;; 如果树为空，返回nil
-		((not (consp tree)) (funcall functions tree))  ;; 如果树是一个数字，返回该数字的平方
-		(t (cons (tree-map functions (car tree))  ;; 递归地对左子树进行平方处理
-			(tree-map functions (cdr tree))))))  ;; 递归地对右子树进行平方处理
-	;; 过滤奇数
-	(defun filter (predicate items)
-	  ())
+    sum-odd-squares 分为几种操作，映射为square，filter，求和
+    (defun square (x) (* x x))
+  ;; 树的映射
+  (defun tree-map (functions tree)
+  (cond ((null tree) nil)  ;; 如果树为空，返回nil
+	  ((not (consp tree)) (funcall functions tree))  ;; 如果树是一个数字，返回该数字的平方
+	  (t (cons (tree-map functions (car tree))  ;; 递归地对左子树进行平方处理
+		  (tree-map functions (cdr tree))))))  ;; 递归地对右子树进行平方处理
+  (tree-map 'square (list 1 2 3 4 5))
+  ;; 过滤
+  (defun odd? (num)
+    (if (= (% num 2) 0)
+	nil
+	t))
+  (odd? 3) ;t
+  (odd? 8) ;nil
+  (defun filter (predicate items)
+    (cond ((null items) nil)
+	  ((funcall predicate (car items))
+	       (cons (car items) (filter predicate (cdr items))))
+	  (t (filter  predicate (cdr items)))))
+  (filter 'odd? (list 1 2 3 4 5))
+  (filter 'odd? '(1 2 3 4 5))
+
+  ;; 累计求和
+  (defun accumulate (from items)
+      (if (null items)
+		from
+	      (accumulate (+ from (car items)) (cdr items))))
+
+  (accumulate  0 (list 1 2 3))
+
+  ;; 奇数平方求和
+  (defun odd-square-sum (items)
+    (accumulate 0 (filter 'odd? (tree-map 'square items))))
+  (odd-square-sum (list 1 2 3 4 5))
+
 #+end_src
+
+上面的代码对流程进行了拆解,方便按流处理数据,可以对流程的不同部分进行不同的实现,具备了更高的复用能力,除了增加代码量
