@@ -1470,18 +1470,46 @@ um—odd—squares过程，就会发现其中的枚举工作部分地由检查nu
   (filter 'odd? '(1 2 3 4 5))
 
   ;; 累计求和
-  (defun accumulate (from items)
+
+  (defun accumulate (op from items)
       (if (null items)
 		from
-	      (accumulate (+ from (car items)) (cdr items))))
+	      (funcall op (car items)
+		  (accumulate op from (cdr items)))))
 
-  (accumulate  0 (list 1 2 3))
+  (accumulate '+ 6 (list 1 2 3))
 
   ;; 奇数平方求和
   (defun odd-square-sum (items)
-    (accumulate 0 (filter 'odd? (tree-map 'square items))))
-  (odd-square-sum (list 1 2 3 4 5))
+    (accumulate '+ 0 (filter 'odd? (tree-map 'square items)))) 
 
+  (odd-square-sum (list 1 2 3 4 5)) 
+  
 #+end_src
 
 上面的代码对流程进行了拆解,方便按流处理数据,可以对流程的不同部分进行不同的实现,具备了更高的复用能力,除了增加代码量
+
+**** 练习
+1. 2.33完善代码,通过累计代码的补充
+    #+begin_src lisp
+      (defun accumulate (op from items)
+	(if (null items)
+	    from
+	    (funcall op (car items) (accumulate op from (cdr items)))))
+      ;; 给出的例子
+      (defun map (p sequence)
+	  (accumulate (lambda (x y)  <??>)
+		      '()
+		      sequence))
+      ;; 我们需要补充accumulate的实现,完成map方法的正确表达
+      ;; map函数是对后面的list的一个映射,所有映射通过p函数的运算
+      (defun map (p sequence)
+	(accumulate (lambda (x y) (cons (funcall p x) y)) nil sequence))
+
+      (defun square (x) (* x x))
+
+      (map (square (list 1 2 3 4)))
+
+    #+end_src
+
+
