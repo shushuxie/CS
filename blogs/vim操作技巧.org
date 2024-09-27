@@ -29,6 +29,39 @@
    =Ctrl + w + </>= 宽度
    
 ** 搜索替换
+vim 搜索替换模式 基本语法: =:[range]s/pattern/replacement/[flags]=
+[range]：指定要替换的范围（可选）。
+pattern：要搜索的模式（正则表达式）。
+replacement：替换的内容。
+[flags]：替换命令的标志（可选）。
+
+范围（Range）
+:s：仅替换当前行。
+:%s：替换整个文件。
+:n,m s：替换第 n 行到第 m 行之间的内容。
+:'<,'>s：替换视觉模式选中的内容。
+
+标志（Flags）
+g：~global~ 全局替换，即在每行中多次匹配和替换该模式。
+c：confirm在每次替换前进行确认。
+n：count 仅统计匹配到的次数，不进行实际替换。
+i：ignorecase忽略大小写。
+I：noignorecase区分大小写。
+
+
+确认替换：
+使用 c 标志可以在每次替换前进行确认，这在进行模替换时非常有用。
+你可以按 y 确认替换，按 n 跳过，按 a 确认所有替换，按 q 退出替换模式。
+
+举例:
+#+begin_example
+:s/foo/bar/：替换当前行中的第一个 foo 为 bar。
+:%s/foo/bar/g：替换整个文件中的所有 foo 为 bar。
+:'<,'>s/foo/bar/g：替换选中范围内的所有 foo 为 bar。
+:%s/foo/bar/gc：替换整个文件中的所有 foo 为 bar，并在每次替换前进行确认。
+:%s/foo//gn：统计整个文件中 foo 出现的次数，而不进行实际替换。
+#+end_example
+
 ** 代码跳转
 
 ** 实用技巧
