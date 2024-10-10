@@ -1,2 +1,451 @@
 1. dto和do对象区别
-   
+
+2. 幂等
+   重复操作不影响系统的最终状态
+   #+begin_quote
+   在电商交易系统中，幂等性是一个非常重要的概念，尤其是在处理支付、订单创建、库存更新等关键操作时。幂等性（Idempotency）指的是一个操作可以重复执行多次，但其结果是相同的，即无论执行多少次，系统的状态都不会改变。
+
+   幂等性的概念
+   幂等性可以用一个数学公式来表示：对于一个操作
+   f(f(x))=f(x)，那么这个操作就是幂等的。换句话说，重复执行这个操作不会改变系统的最终状态。
+
+   为什么幂等性重要
+   在电商交易中，网络请求可能会因为各种原因（如网络抖动、服务器超时等）导致重复发送。如果一个操作不是幂等的，那么重复执行可能会导致系统状态的不一致，进而引发严重的问题。例如：
+
+   重复扣款
+   重复创建订单
+   重复减少库存
+   幂等性的例子
+   例子1：订单创建
+   假设你在电商平台上提交了一个订单请求，但由于网络问题，你不确定请求是否成功，于是你再次提交了相同的请求。
+
+   非幂等操作：
+
+   如果订单创建操作不是幂等的，每次提交请求都会创建一个新的订单，导致用户下了多个相同的订单。
+   幂等操作：
+
+为了实现幂等性，可以在订单创建请求中加入一个唯一的请求ID（如UUID）。服务器在处理订单请求时，首先检查这个请求ID是否已经处理过。如果是，则直接返回之前的处理结果；如果不是，则创建一个新订单并记录请求ID。
+public class OrderService {
+private Map<String, Order> processedRequests = new HashMap<>();
+
+public synchronized Order createOrder(String requestId, OrderRequest orderRequest) {
+if (processedRequests.containsKey(requestId)) {
+return processedRequests.get(requestId);
+}
+
+Order newOrder = new Order(orderRequest);
+// 创建订单逻辑
+processedRequests.put(requestId, newOrder);
+    return newOrder;
+	}
+	}
+例子2：支付处理
+假设用户在电商平台上进行支付操作，但由于网络问题，支付请求被重复发送。
+
+非幂等操作：
+
+如果支付操作不是幂等的，每次提交请求都会导致用户账户被重复扣款。
+幂等操作：
+
+为了实现幂等性，可以在支付请求中加入一个唯一的支付ID。服务器在处理支付请求时，首先检查这个支付ID是否已经处理过。如果是，则直接返回之前的处理结果；如果不是，则进行支付操作并记录支付ID。
+public class PaymentService {
+private Map<String, PaymentResult> processedPayments = new HashMap<>();
+
+public synchronized PaymentResult processPayment(String paymentId, PaymentRequest paymentRequest) {
+if (processedPayments.containsKey(paymentId)) {
+return processedPayments.get(paymentId);
+}
+
+PaymentResult paymentResult = new PaymentResult();
+// 支付处理逻辑
+processedPayments.put(paymentId, paymentResult);
+return paymentResult;
+}
+}
+例子3：库存更新
+假设用户在电商平台上购买商品，系统需要更新库存数量。
+
+非幂等操作：
+
+如果库存更新操作不是幂等的，每次提交请求都会导致库存被重复减少，可能导致库存信息错误。
+幂等操作：
+
+为了实现幂等性，可以使用数据库的乐观锁或悲观锁机制，确保每次库存更新操作都是原子的，并且不会因为重复请求导致库存信息错误。
+public class InventoryService {
+public synchronized void updateInventory(String productId, int quantity) {
+// 获取当前库存数量
+int currentStock = getCurrentStock(productId);
+
+// 更新库存数量
+int newStock = currentStock - quantity;
+if (newStock < 0) {
+throw new IllegalStateException("库存不足");
+}
+
+// 保存更新后的库存数量
+saveNewStock(productId, newStock);
+}
+}
+总结
+幂等性在电商交易系统中至关重要，它能有效防止由于网络抖动或重复请求导致的系统状态不一致问题。通过引入唯一请求ID、使用数据库锁机制等方法，可以确保关键操作的幂等性，从而提高系统的可靠性和稳定性。)}}
+#+end_quote
+
+3. 乐观锁,悲观锁
+#+begin_quote
+乐观锁和悲观锁是两种常见的并发控制机制，用于解决多线程或多进程环境下的数据一致性问题。它们既是概念，也可以通过具体的技术手段实现。下面我将详细介绍这两种锁的概念及其实现方法。
+
+乐观锁 (Optimistic Locking)
+概念
+乐观锁基于一种假设，即大多数情况下数据竞争不会发生，因此不需要在每次操作时都加锁。乐观锁通常使用版本号或时间戳来实现，当更新数据时，先检查数据的版本号或时间戳是否与读取时的一致，如果一致则进行更新，否则认为数据已经被其他事务修改，操作失败。
+
+实现方法
+乐观锁通常通过数据库的版本号机制或CAS（Compare-And-Swap）操作来实现。
+
+数据库版本号实现：
+
+在数据库表中添加一个版本号字段。
+每次读取数据时，获取当前版本号。
+更新数据时，检查当前版本号是否与读取时的一致，如果一致则更新数据并将版本号加1，否则更新失败。
+示例代码（使用版本号）：
+
+public class InventoryService {
+public void updateInventory(String productId, int quantity) {
+// 获取当前库存和版本号
+Inventory inventory = getInventory(productId);
+int currentStock = inventory.getStock();
+int currentVersion = inventory.getVersion();
+
+// 更新库存数量
+int newStock = currentStock - quantity;
+if (newStock < 0) {
+throw new IllegalStateException("库存不足");
+}
+
+// 更新数据库中的库存和版本号
+int rowsUpdated = updateInventoryInDatabase(productId, newStock, currentVersion);
+if (rowsUpdated == 0) {
+throw new IllegalStateException("更新失败，数据可能已被修改");
+}
+}
+
+private Inventory getInventory(String productId) {
+// 查询数据库获取库存和版本号
+// ...
+}
+
+private int updateInventoryInDatabase(String productId, int newStock, int currentVersion) {
+// 执行SQL更新语句，带上版本号条件
+																					    // UPDATE inventory SET stock = ?, version = version + 1 WHERE product_id = ? AND version = ?
+																						    // 返回更新的行数
+// ...
+}
+}
+悲观锁 (Pessimistic Locking)
+概念
+悲观锁基于一种假设，即数据竞争会频繁发生，因此在每次操作数据时都加锁，以防止其他事务对数据进行修改。悲观锁通常通过数据库的锁机制来实现，如行锁、表锁等。
+
+实现方法
+悲观锁通常通过数据库的锁机制来实现，可以使用SQL语句直接加锁。
+
+数据库行锁实现：
+
+在读取数据时，使用锁定语句将数据锁定，防止其他事务修改。
+直到事务提交或回滚后，锁才被释放。
+示例代码（使用行锁）：
+
+public class InventoryService {
+public void updateInventory(String productId, int quantity) {
+// 开始事务
+try {
+// 获取当前库存并加锁
+Inventory inventory = getInventoryWithLock(productId);
+int currentStock = inventory.getStock();
+
+// 更新库存数量
+int newStock = currentStock - quantity;
+if (newStock < 0) {
+throw new IllegalStateException("库存不足");
+}
+
+// 更新数据库中的库存
+updateInventoryInDatabase(productId, newStock);
+
+// 提交事务
+} catch (Exception e) {
+// 回滚事务
+throw e;
+}
+}
+
+private Inventory getInventoryWithLock(String productId) {
+// 查询数据库获取库存并加锁
+																																																			    // SELECT * FROM inventory WHERE product_id = ? FOR UPDATE
+// ...
+}
+
+private void updateInventoryInDatabase(String productId, int newStock) {
+// 执行SQL更新语句
+																																																							    // UPDATE inventory SET stock = ? WHERE product_id = ?
+// ...
+}
+}
+总结
+乐观锁：假设数据竞争不频繁，通过版本号或时间戳来实现。适用于读多写少的场景，避免了频繁加锁带来的性能开销。
+悲观锁：假设数据竞争频繁，通过数据库的锁机制来实现。适用于写多读少的场景，确保数据一致性但可能带来较高的锁开销。
+这两种锁机制都是并发控制的重要手段，具体选择哪一种需要根据实际应用场景和系统需求来决定。}}>}}}})}>)}}
+#+end_quote
+
+除了乐观锁和悲观锁，开发中还有其他多种锁机制，如读写锁、自旋锁、可重入锁等。每种锁都有其特定的应用场景和特点。下面我将介绍一些常见的锁机制，以及分布式锁的概念和实现方式，并说明它们之间的区别。
+
+常见的锁机制
+1. 读写锁 (Read-Write Lock)
+读写锁允许多个线程同时读取共享资源，但在写操作时会独占锁，防止其他线程读取或写入。读写锁适用于读多写少的场景。
+
+实现方式：
+
+Java中的ReentrantReadWriteLock类提供了读写锁的实现。
+
+ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+Lock readLock = lock.readLock();
+Lock writeLock = lock.writeLock();
+
+// 读操作
+readLock.lock();
+try {
+// 执行读操作
+} finally {
+readLock.unlock();
+}
+
+// 写操作
+writeLock.lock();
+try {
+// 执行写操作
+} finally {
+writeLock.unlock();
+}
+2. 自旋锁 (Spin Lock)
+自旋锁在获取锁时不会立即阻塞线程，而是通过不断循环尝试获取锁。自旋锁适用于锁持有时间很短的场景，可以减少线程切换的开销。
+
+实现方式：
+
+Java中的AtomicReference类可以用来实现自旋锁。
+
+class SpinLock {
+private AtomicReference<Thread> owner = new AtomicReference<>();
+
+public void lock() {
+Thread currentThread = Thread.currentThread();
+while (!owner.compareAndSet(null, currentThread)) {
+// 自旋等待
+}
+}
+
+public void unlock() {
+Thread currentThread = Thread.currentThread();
+owner.compareAndSet(currentThread, null);
+}
+}
+3. 可重入锁 (Reentrant Lock)
+可重入锁允许同一个线程多次获取同一个锁，防止死锁。Java中的ReentrantLock类提供了可重入锁的实现。
+
+实现方式：
+
+ReentrantLock lock = new ReentrantLock();
+
+lock.lock();
+try {
+// 执行操作
+} finally {
+lock.unlock();
+}
+分布式锁 (Distributed Lock)
+概念
+分布式锁是一种在分布式系统中控制共享资源访问的机制，用于确保在多个节点之间对共享资源的互斥访问。分布式锁的设计和实现比单机锁复杂得多，因为需要考虑网络分区、节点故障等问题。
+
+实现方式
+分布式锁通常通过以下几种方式实现：
+
+基于数据库：
+使用数据库表来记录锁的状态，通过事务机制确保锁的互斥性。
+-- 创建锁表
+CREATE TABLE distributed_lock (
+lock_name VARCHAR(255) PRIMARY KEY,
+    locked_by VARCHAR(255),
+	locked_at TIMESTAMP
+	);
+
+	-- 获取锁
+	INSERT INTO distributed_lock (lock_name, locked_by, locked_at)
+	VALUES ('my_lock', 'node1', NOW())
+	ON DUPLICATE KEY UPDATE
+	locked_by = VALUES(locked_by), locked_at = VALUES(locked_at);
+
+	-- 释放锁
+	DELETE FROM distributed_lock WHERE lock_name = 'my_lock' AND locked_by = 'node1';
+	基于Redis：
+	使用Redis的原子操作和过期时间来实现分布式锁。
+	String lockKey = "my_lock";
+	String lockValue = UUID.randomUUID().toString();
+	boolean acquired = redisTemplate.opsForValue().setIfAbsent(lockKey, lockValue, 10, TimeUnit.SECONDS);
+
+if (acquired) {
+try {
+// 执行操作
+} finally {
+// 释放锁
+if (lockValue.equals(redisTemplate.opsForValue().get(lockKey))) {
+redisTemplate.delete(lockKey);
+}
+}
+}
+基于Zookeeper：
+使用Zookeeper的临时节点和监视机制来实现分布式锁。
+CuratorFramework client = CuratorFrameworkFactory.newClient("localhost:2181", new ExponentialBackoffRetry(1000, 3));
+client.start();
+
+InterProcessMutex lock = new InterProcessMutex(client, "/my_lock");
+
+if (lock.acquire(10, TimeUnit.SECONDS)) {
+try {
+// 执行操作
+} finally {
+lock.release();
+}
+}
+区别
+使用场景：
+
+单机锁（如乐观锁、悲观锁、读写锁、自旋锁、可重入锁）适用于单机环境，用于多线程之间的同步。
+分布式锁适用于分布式系统，用于多个节点之间的同步。
+实现复杂度：
+
+单机锁的实现相对简单，主要依赖于语言和操作系统提供的同步机制。
+分布式锁的实现较复杂，需要考虑网络延迟、节点故障、数据一致性等问题。
+性能：
+
+单机锁的性能通常较高，因为不涉及网络通信。
+分布式锁的性能相对较低，因为需要通过网络进行通信，并且需要处理更多的故障场景。
+总结
+锁机制在并发编程中扮演着关键角色，选择合适的锁机制需要根据具体的应用场景和系统需求。单机锁适用于单机环境下的多线程同步，而分布式锁适用于分布式系统中的多节点同步。理解和合理使用这些锁机制，可以有效提高系统的并发性能和数据一致性。
+* 分库分表
+
+分库分表是一种常见的数据库水平拆分技术，主要用于解决单个数据库或单张表在高并发、大数据量场景下的性能瓶颈问题。通过将数据分散到多个数据库或多个表中，可以提高系统的性能和扩展性。
+
+分库分表的概念
+分库：将数据分散到多个数据库实例中，每个数据库实例可以独立处理一部分数据请求。
+分表：将数据分散到多个表中，每个表只存储一部分数据。
+分库分表的目的
+提高性能：通过分散数据和请求，减少单个数据库实例或单张表的负载，提高系统的响应速度。
+提高扩展性：可以通过增加数据库实例或表来扩展系统的容量，适应数据量和并发量的增长。
+提高可用性：通过分库分表，可以实现数据的分布式存储和管理，提高系统的容错能力和可用性。
+什么时候需要分库分表
+分库分表通常在以下几种情况下考虑：
+
+单表数据量过大：当单张表的数据量达到数百万甚至数亿条时，查询和更新操作的性能会显著下降。
+单库并发量过高：当单个数据库实例的并发请求量过高，导致数据库连接池耗尽，响应时间变长。
+扩展性需求：当系统需要水平扩展以应对数据量和并发量的增长时，分库分表是一个有效的解决方案。
+数据隔离需求：为了满足业务需求，需要将不同类型的数据分开存储和管理。
+分库分表的策略
+分库分表的策略主要有以下几种：
+
+按范围分表：根据数据的某个字段的范围进行分表，例如按日期范围分表。
+按哈希分表：根据数据的某个字段的哈希值进行分表，将数据均匀分散到多个表中。
+按模块分库：根据业务模块将数据分散到不同的数据库实例中，例如用户数据、订单数据分别存储在不同的数据库中。
+按哈希分库：根据数据的某个字段的哈希值进行分库，将数据均匀分散到多个数据库实例中。
+分库分表的例子
+例子1：电商系统中的订单数据
+假设一个电商系统中有一个订单表orders，随着业务的发展，订单数量迅速增长，单张表的数据量达到了数千万条，查询和更新操作变得非常慢。
+
+解决方案：分库分表
+
+按哈希分表：
+将订单表按订单ID的哈希值进行分表，例如分成10张表：orders_0、orders_1、orders_2、...、orders_9。
+-- 创建分表
+CREATE TABLE orders_0 LIKE orders;
+CREATE TABLE orders_1 LIKE orders;
+-- 依次创建 orders_2 到 orders_9
+按哈希分库：
+将订单数据按订单ID的哈希值进行分库，例如分成2个数据库实例：db1和db2，每个数据库实例包含5张表。
+// 分库分表策略
+public class OrderService {
+    private static final int DB_COUNT = 2;
+        private static final int TABLE_COUNT = 10;
+
+	    public void saveOrder(Order order) {
+	            int dbIndex = order.getOrderId().hashCode() % DB_COUNT;
+		            int tableIndex = order.getOrderId().hashCode() % TABLE_COUNT;
+
+			            String dbName = "db" + dbIndex;
+				            String tableName = "orders_" + tableIndex;
+
+					            // 保存订单到对应的数据库和表
+						            saveOrderToDatabase(dbName, tableName, order);
+							        
+	    }
+
+	        private void saveOrderToDatabase(String dbName, String tableName, Order order) {
+		        // 连接到指定的数据库和表，执行插入操作
+			        // ...
+				    
+		}
+		
+}
+例子2：社交网络中的用户数据
+假设一个社交网络系统中有一个用户表users，随着用户数量的增长，单个数据库实例的并发请求量越来越高，导致响应时间变长。
+
+解决方案：分库
+
+按模块分库：
+将用户数据和其他业务数据分开存储，例如将用户数据存储在user_db，将帖子数据存储在post_db。
+-- 创建用户数据库和表
+CREATE DATABASE user_db;
+USE user_db;
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+        username VARCHAR(255),
+	    email VARCHAR(255),
+	        -- 其他字段
+		
+);
+
+-- 创建帖子数据库和表
+CREATE DATABASE post_db;
+USE post_db;
+CREATE TABLE posts (
+    post_id INT PRIMARY KEY,
+        user_id INT,
+	    content TEXT,
+	        -- 其他字段
+		
+);
+按哈希分库：
+将用户数据按用户ID的哈希值进行分库，例如分成4个数据库实例：user_db1、user_db2、user_db3、user_db4。
+// 分库策略
+public class UserService {
+    private static final int DB_COUNT = 4;
+
+        public void saveUser(User user) {
+	        int dbIndex = user.getUserId().hashCode() % DB_COUNT;
+
+		        String dbName = "user_db" + dbIndex;
+
+			        // 保存用户到对应的数据库
+				        saveUserToDatabase(dbName, user);
+					    
+	}
+
+	    private void saveUserToDatabase(String dbName, User user) {
+	            // 连接到指定的数据库，执行插入操作
+		            // ...
+			        
+	    }
+	    
+}
+总结
+分库分表是解决高并发和大数据量场景下数据库性能瓶颈的重要手段。通过将数据分散到多个数据库实例或多个表中，可以提高系统的性能和扩展性。选择合适的分库分表策略，需要根据具体的业务需求和数据特点来决定。
+
+
+
+
+
