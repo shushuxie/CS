@@ -1,0 +1,64 @@
+
+** rpc是什么
+rpc说白了就是一个协议,remote procedure call -- 远程过程调用; 为了实现调用某个服务,接口像是在本地调用
+一样,为了实现这样就需要实现网络通信,必然有一个请求一个应答的过程,大致过程如下
+#+begin_example
+ 消费端代码--> 调用某个接口(服务) --> 服务发送网络请求 -->
+ 服务端接收请求 --> 解析请求 --》 调用对应的服务 --》返回服务结果--》
+ 消费端接收结果 --》完成调用
+#+end_example
+
+这里有几个关键点
+1. 服务端调用接口是如何转化为网络请求的?
+   这里使用了一种动态代理的方式,接口调用的时候就是代理对象,然后实现invoke方法,就会调用方法的时候
+   调用invoke方法,然后在invoke里面实现网络请求,把类信息,方法,参数等信息传到服务器;
+#+begin_src java
+   // 动态代理获取对对象进行操作
+  HelloService helloService = ProxyFactory.getProxy(HelloService.class);
+  String result = helloService.sayHello("xie");
+
+   public static <T> T getProxy(Class interfaceClass) {
+       Object proxyInstance = Proxy.newProxyInstance(interfaceClass.getClassLoader(),
+               new Class[]{interfaceClass},
+               new InvocationHandler() {
+                   // invoke对应的方法,只有在代理对调用时会调用行对应的invoke方法
+                   @Override
+                   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                       Invocation invocation = new Invocation(interfaceClass.getName(),
+                               method.getName(),
+                               method.getParameterTypes(),
+                               args);
+                       HttpClient httpClient = new HttpClient();
+                       // 服务发现
+                       List<URL> urls = MapRemoteRegister.get(interfaceClass.getName());
+                       // 负载均衡
+                       URL url = LoadBalance.random(urls);
+                       // 服务调用,发起网络请求,
+                       String result= httpClient.send(url.getHostname(), url.getPort(), invocation);
+                       return result;
+                   }
+               });
+       return (T) proxyInstance;
+
+   }
+#+end_src
+
+2. 如何确定网络请求的地址的?
+   必须有一个交互中心,使服务和消费都能请求到进行交换信息
+   这里会提供服务器的地址,调用类的实现,版本等信息
+
+3. 如何确定网络请求的具体调用类?
+   通过注册中心,注册中心里面有根据服务了获取对应的类实现信息
+   
+4. 请求接收后服务端如何做?
+   服务提供方会接收到一个网络请求,请求里面有调用类,方法参数等信息,然后在提供方那里是真正的方法调用
+   得到结果后返回给请求方;
+
+   =总结一句话就是:网络请求被包装为了方法调用=
+
+
+** 一个简单的rpc框架包含什么?
+1. 服务注册
+2. 负载均衡
+3. 服务处理
+4. 动态代理
