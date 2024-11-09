@@ -1,0 +1,183 @@
+* jvm介绍-- Java Virtual Machine
+java虚拟机,所有的java程序都在这里运行,这里接收的是java字节码,也就是class文件,java文件也会编译为class文件在这里执行,
+虚拟机会把class文件再进行翻译给处理器进行执行; java所谓的跨平台就是又虚拟机实现的; =一次编译,到处运行= 虽然java文件是
+同一份;
+   除了java语言,所有可以编译为字节码的文件其实都能在jvm上面运行
+   jvm有一套自己的内存管理,原来的程序都是直接在内存中管理,各种堆栈,现在是虚拟机来管理同时垃圾回收也由jvm来做;
+
+#+DOWNLOADED: screenshot @ 2024-11-09 10:25:03
+[[file:images/jvm介绍--_Java_Virtual_Machine/2024-11-09_10-25-03_screenshot.png]] 
+
+
+#+DOWNLOADED: screenshot @ 2024-11-09 10:36:54
+[[file:images/jvm介绍--_Java_Virtual_Machine/2024-11-09_10-36-54_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-09 10:41:34
+[[file:images/jvm介绍--_Java_Virtual_Machine/2024-11-09_10-41-34_screenshot.png]]
+
+~三大虚拟机~
+1. hotpot
+2. JRockit
+3. J9
+
+
+** 虚拟机介绍
+计算机的功能的代替,分为系统虚拟机,parallel,vm等等;
+程序虚拟机,例如jvm;字节码就是二进制数据,送入jvm进行运行;
+
+
+#+DOWNLOADED: screenshot @ 2024-11-09 11:08:01
+[[file:images/jvm介绍--_Java_Virtual_Machine/2024-11-09_11-08-01_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-09 11:13:19
+[[file:images/jvm介绍--_Java_Virtual_Machine/2024-11-09_11-13-19_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-09 11:21:51
+[[file:images/jvm介绍--_Java_Virtual_Machine/2024-11-09_11-21-51_screenshot.png]]
+
+*** jvm的声明周期
+1. 启动
+   通过引导类加载器-bootstrap class loaser 创建一个初始类(initial claa)来完成的,
+   这个类是由虚拟机的具体实现指定的;
+2. 执行
+   程序执行虚拟机运行,程序停止他就停止,
+   执行程序其实就是在执行一个JAVA虚拟机的进程;
+3. 退出
+   正常结束
+   异常,错误
+   exit方法调用
+
+
+*** jvm介绍
+
+**** sun Classic VM
+     只提供了解释器部分,没有JIT功能,如果进行了外挂二者并不能并行存在,只能使用其中一个;
+     很影响体验;
+     
+**** Exact VM
+     准确式内存管理器;可以知道内存中某个位置的数据是什么类型,
+     编译器解释器混合工作
+     
+**** Oracle HotSpot VM -- 热点探测
+      JDK默认虚拟机;独有的方法区概念,服务器,桌面,移动端;
+      
+**** Oracle JRockit VM
+      专注于服务器端应用. 不包含解释器,启动慢一点; =世界上最快的JVM=
+
+**** IBM J9      
+      Open J9 Eclisp基金会; 三大商用虚拟机之一;
+
+      
+*** jvm系统变量
+在 Java 中，系统配置（System Properties） 是 JVM 启动时加载的一组键值对，提供了系统环境、JVM 配置信息、文件路径等内容。
+这些属性对程序开发和运行非常重要，很多 JVM 或应用参数都可以通过系统配置来查询和设置
+#+begin_src java
+    public class SystemPropertiesExample {
+      public static void main(String[] args) {
+	  System.getProperties().forEach((key, value) -> {
+	      System.out.println(key + ": " + value);
+	  });
+      }
+  }
+
+sun.cpu.isalist: 
+ftp.nonProxyHosts: 192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com
+socksNonProxyHosts: 192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com
+https.proxyPort: 7890
+sun.io.unicode.encoding: UnicodeBig
+sun.cpu.endian: little
+java.vendor.url.bug: http://www.azul.com/support/
+file.separator: /
+java.specification.maintenance.version: 4
+java.vendor: Azul Systems, Inc.
+sun.boot.class.path: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/cat.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/classes
+http.proxyHost: 127.0.0.1
+java.ext.dirs: /Users/xieshuqiang/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.version: 1.8.0_362
+java.vm.info: mixed mode
+awt.toolkit: sun.lwawt.macosx.LWCToolkit
+user.language: zh
+java.specification.vendor: Oracle Corporation
+sun.java.command: org.example.ClassLoaderTest2
+java.home: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+sun.arch.data.model: 64
+java.vm.specification.version: 1.8
+socksProxyHost: 127.0.0.1
+java.class.path: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/cat.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/crs-agent.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/rt.jar:/Users/xieshuqiang/IdeaProjects/JVM-Demo/chapter1/target/classes:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+user.name: xieshuqiang
+file.encoding: UTF-8
+java.specification.version: 1.8
+java.awt.printerjob: sun.lwawt.macosx.CPrinterJob
+user.timezone: 
+user.home: /Users/xieshuqiang
+http.nonProxyHosts: 192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com
+os.version: 15.2
+sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+java.specification.name: Java Platform API Specification
+java.class.version: 52.0
+java.library.path: /Users/xieshuqiang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+http.proxyPort: 7890
+sun.jnu.encoding: UTF-8
+os.name: Mac OS X
+https.proxyHost: 127.0.0.1
+java.vm.specification.vendor: Oracle Corporation
+socksProxyPort: 7890
+java.io.tmpdir: /var/folders/8d/4yqbrfpx0f94mcmkrfhs1ljh0000gn/T/
+line.separator: 
+
+java.endorsed.dirs: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/endorsed
+os.arch: aarch64
+java.awt.graphicsenv: sun.awt.CGraphicsEnvironment
+java.runtime.version: 1.8.0_362-b09
+java.vm.specification.name: Java Virtual Machine Specification
+user.dir: /Users/xieshuqiang/IdeaProjects/JVM-Demo
+user.country: CN
+sun.java.launcher: SUN_STANDARD
+sun.os.patch.level: unknown
+java.vm.name: OpenJDK 64-Bit Server VM
+file.encoding.pkg: sun.io
+path.separator: :
+java.vm.vendor: Azul Systems, Inc.
+java.vendor.url: http://www.azul.com/
+jdk.vendor.version: Zulu 8.68.0.21-CA-macos-aarch64
+gopherProxySet: false
+sun.boot.library.path: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib
+java.vm.version: 25.362-b09
+java.runtime.name: OpenJDK Runtime Environment
+#+end_src
+
+     
+
+* 常用命令
+1. javap -v class文件名 编译
+2. jps java程序进程
+#+begin_src shell
+ ﬦ ~                                                                                                         127    
+  jps
+12738 Jps
+12722 Launcher
+12723 Main
+11877 RemoteMavenServer36
+11692 
+
+ﬦ ~                                                                                                                
+ jps
+12722 Launcher
+11877 RemoteMavenServer36
+11692 
+12749 Jps
+
+#+end_src
+
+
+* 四部分介绍
+
+** 内存与垃圾回收
+
+** 字节码与类加载
+
+** 性能监控与调优
+
+** 大厂面试
