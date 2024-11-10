@@ -1,0 +1,13 @@
+* 介绍
+
+#+DOWNLOADED: screenshot @ 2024-11-10 10:17:35
+[[file:images/介绍/2024-11-10_10-17-35_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-10 10:19:36
+[[file:images/介绍/2024-11-10_10-19-36_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-10 10:29:39
+[[file:images/介绍/2024-11-10_10-29-39_screenshot.png]]
+并行 vs 串行
+并发: 多个线程都在执行;

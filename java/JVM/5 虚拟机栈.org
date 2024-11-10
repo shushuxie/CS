@@ -1,0 +1,112 @@
+* 概述
+
+** 出现背景
+#+DOWNLOADED: screenshot @ 2024-11-10 10:44:35
+[[file:images/概述/2024-11-10_10-44-35_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-10 10:45:23
+[[file:images/概述/2024-11-10_10-45-23_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-10 10:54:38
+[[file:images/概述/2024-11-10_10-54-38_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-10 10:51:14
+[[file:images/概述/2024-11-10_10-51-14_screenshot.png]]
+
+
+
+#+DOWNLOADED: screenshot @ 2024-11-10 10:58:42
+[[file:images/概述/2024-11-10_10-58-42_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-10 11:01:26
+[[file:images/概述/2024-11-10_11-01-26_screenshot.png]]
+
+
+
+#+DOWNLOADED: screenshot @ 2024-11-10 18:48:50
+[[file:images/概述/2024-11-10_18-48-50_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-10 18:55:46
+[[file:images/概述/2024-11-10_18-55-46_screenshot.png]]
+
+方法的结束分两种: 1. 正常return
+               2. 异常结束;如果对异常进行捕获处理就会按要求结束;
+
+
+
+
+#+DOWNLOADED: screenshot @ 2024-11-10 19:08:18
+[[file:images/概述/2024-11-10_19-08-18_screenshot.png]]
+在debug的时候就能看到栈帧,和栈帧里面的各种数据;
+	       
+** 栈帧的内部结构
+
+#+DOWNLOADED: screenshot @ 2024-11-10 22:57:55
+[[file:images/概述/2024-11-10_22-57-55_screenshot.png]]
+
+*** 局部变量表
+
+    #+DOWNLOADED: screenshot @ 2024-11-10 23:08:46
+    [[file:images/概述/2024-11-10_23-08-46_screenshot.png]]
+
+
+    #+DOWNLOADED: screenshot @ 2024-11-10 23:18:31
+    [[file:images/概述/2024-11-10_23-18-31_screenshot.png]]
+
+
+    
+*** clsslib类信息查看
+
+[[file:images/概述/2024-11-10_23-43-07_screenshot.png]]
+
+*** slot的理解
+
+#+DOWNLOADED: screenshot @ 2024-11-10 23:46:13
+[[file:images/概述/2024-11-10_23-46-13_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-10 23:47:27
+[[file:images/概述/2024-11-10_23-47-27_screenshot.png]]
+static方法局部变量是固定的,其他的方法会有一个this变量作为局部变量表引入;
+因此static方法没发使用this关键字;
+
+slot是存储的最小单位,因此不能由slot数量确定变量数量,long类型等会占用两个slot;
+
+#+DOWNLOADED: screenshot @ 2024-11-10 23:56:41
+[[file:images/概述/2024-11-10_23-56-41_screenshot.png]]
+
+*** 静态变量和局部变量的对比
+
+
+#+DOWNLOADED: screenshot @ 2024-11-11 00:06:14
+[[file:images/概述/2024-11-11_00-06-14_screenshot.png]]
+#+DOWNLOADED: screenshot @ 2024-11-11 00:02:50
+[[file:images/概述/2024-11-11_00-02-50_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 00:04:15
+[[file:images/概述/2024-11-11_00-04-15_screenshot.png]]
+
+*** 操作数栈
+
+#+DOWNLOADED: screenshot @ 2024-11-11 00:08:57
+[[file:images/概述/2024-11-11_00-08-57_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 00:12:02
+[[file:images/概述/2024-11-11_00-12-02_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 00:12:43
+[[file:images/概述/2024-11-11_00-12-43_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 00:15:37
+[[file:images/概述/2024-11-11_00-15-37_screenshot.png]]
+    
+*** 方法返回地址
+
+
+
+
+
+
+
