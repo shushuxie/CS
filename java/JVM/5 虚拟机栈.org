@@ -101,7 +101,76 @@ slot是存储的最小单位,因此不能由slot数量确定变量数量,long类
 
 #+DOWNLOADED: screenshot @ 2024-11-11 00:15:37
 [[file:images/概述/2024-11-11_00-15-37_screenshot.png]]
-    
+
+*** 动态链接
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:02:22
+[[file:images/概述/2024-11-11_22-02-22_screenshot.png]]
+java文件编译为字节码的时候,会生成一个常量池,jvm加载class文件之后会把常量池
+放在方法区中,栈帧中存有方法常量池的引用方便的引用变量或对象;
+
+之所以称为“动态链接”，是因为在运行时，JVM 需要根据当前执行的上下文动态地解析和确定符号引用对应的实际内存地址。这一过程是“动态”的，因为与“静态链接”相比，它并不是在编译期间完成的，而是要等到运行时，根据调用对象的实际类型等上下文信息来确定。
+动态链接的“动态”之处
+
+    运行时解析：
+        Java 程序在编译阶段，方法和字段的调用只是存储为符号引用（符号引用是指类、方法和字段的名称及描述符）。
+        JVM 在方法首次调用时才会去解析这些符号引用，将它们转化为具体的内存地址。这个解析是运行时进行的，因此称为“动态”。
+
+    支持多态和动态分派：
+        在 Java 中，方法调用的多态性（如父类引用指向子类对象）使得具体调用的方法实现并不能在编译期间确定，而要根据实际对象的类型在运行时决定。例如：
+
+        Animal animal = new Dog();
+        animal.speak();  // 动态链接到 Dog 类的 speak() 方法
+
+        animal 引用的实际类型是 Dog，而非 Animal，因此 speak() 方法的具体实现是在运行时才解析到 Dog 的 speak() 方法。这种基于对象的动态分派和解析正是动态链接的主要表现。
+
+    按需链接：
+        在 Java 中，不是所有方法和字段在程序启动时就链接，而是“按需”进行的：只有当方法真正被调用或字段被访问时，JVM 才会进行动态链接。这种懒加载式的链接减少了不必要的加载和内存占用。
+
+动态链接和静态链接的对比
+
+    静态链接：在编译期间就将所有符号引用解析为具体的内存地址，并打包到最终生成的可执行文件中。C/C++ 等语言一般使用静态链接。
+    动态链接：在运行时根据上下文动态解析符号引用。Java、Python 等语言使用动态链接，支持灵活的动态分派、继承、多态等特性，尤其适用于运行时可变的对象体系。
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:10:23
+[[file:images/概述/2024-11-11_22-10-23_screenshot.png]]
+
+
+*** 方法的调用
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:20:29
+[[file:images/概述/2024-11-11_22-20-29_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:20:55
+[[file:images/概述/2024-11-11_22-20-55_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:29:51
+[[file:images/概述/2024-11-11_22-29-51_screenshot.png]]
+
+=虚方法=?
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:31:26
+[[file:images/概述/2024-11-11_22-31-26_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:34:49
+[[file:images/概述/2024-11-11_22-34-49_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:53:03
+[[file:images/概述/2024-11-11_22-53-03_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 22:54:51
+[[file:images/概述/2024-11-11_22-54-51_screenshot.png]]
+
+**** 方法重写的本质
+
+#+DOWNLOADED: screenshot @ 2024-11-11 23:04:49
+[[file:images/概述/2024-11-11_23-04-49_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-11 23:10:56
+[[file:images/概述/2024-11-11_23-10-56_screenshot.png]]
+
+
+
 *** 方法返回地址
 
 
