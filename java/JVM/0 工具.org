@@ -80,3 +80,12 @@ jclasslib 多平台支持,带UI
 1. *Ctrl+h* 插件类的继承关系图
 2. 右键 DIagrams查看依赖的图,该图还能进行编辑,查看方法,删除不想看到的信息等等;
 3. Strutch面板查看该类的方法,子类等信息 *Cmd+7* 打开
+
+
+** vm监测工具
+
+#+DOWNLOADED: screenshot @ 2024-11-12 23:53:02
+[[file:images/二进制文件反编译工具/2024-11-12_23-53-02_screenshot.png]]
+1. Java自带的工具,jdk的bin目录下面
+   1) jconsole 可以查看vm信息;功能少
+   2) jvisualvm 功能多 

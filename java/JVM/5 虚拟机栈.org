@@ -47,7 +47,7 @@
 #+DOWNLOADED: screenshot @ 2024-11-10 22:57:55
 [[file:images/概述/2024-11-10_22-57-55_screenshot.png]]
 
-*** 局部变量表
+**** 局部变量表
 
     #+DOWNLOADED: screenshot @ 2024-11-10 23:08:46
     [[file:images/概述/2024-11-10_23-08-46_screenshot.png]]
@@ -58,11 +58,12 @@
 
 
     
-*** clsslib类信息查看
+**** clsslib类信息查看
 
 [[file:images/概述/2024-11-10_23-43-07_screenshot.png]]
 
-*** slot的理解
+
+**** slot的理解
 
 #+DOWNLOADED: screenshot @ 2024-11-10 23:46:13
 [[file:images/概述/2024-11-10_23-46-13_screenshot.png]]
@@ -77,7 +78,8 @@ slot是存储的最小单位,因此不能由slot数量确定变量数量,long类
 #+DOWNLOADED: screenshot @ 2024-11-10 23:56:41
 [[file:images/概述/2024-11-10_23-56-41_screenshot.png]]
 
-*** 静态变量和局部变量的对比
+
+**** 静态变量和局部变量的对比
 
 
 #+DOWNLOADED: screenshot @ 2024-11-11 00:06:14
@@ -87,6 +89,7 @@ slot是存储的最小单位,因此不能由slot数量确定变量数量,long类
 
 #+DOWNLOADED: screenshot @ 2024-11-11 00:04:15
 [[file:images/概述/2024-11-11_00-04-15_screenshot.png]]
+
 
 *** 操作数栈
 
@@ -101,6 +104,7 @@ slot是存储的最小单位,因此不能由slot数量确定变量数量,long类
 
 #+DOWNLOADED: screenshot @ 2024-11-11 00:15:37
 [[file:images/概述/2024-11-11_00-15-37_screenshot.png]]
+
 
 *** 动态链接
 
@@ -172,6 +176,19 @@ java文件编译为字节码的时候,会生成一个常量池,jvm加载class文
 
 
 *** 方法返回地址
+#+DOWNLOADED: screenshot @ 2024-11-12 20:55:48
+[[file:images/概述/2024-11-12_20-55-48_screenshot.png]]
+方法返回地址是前一个方法结束后给出下一个执行方法的地址;
+
+#+DOWNLOADED: screenshot @ 2024-11-12 21:00:23
+[[file:images/概述/2024-11-12_21-00-23_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-12 21:05:22
+[[file:images/概述/2024-11-12_21-05-22_screenshot.png]]
+
+*** 一些附加信息
+可能会包含一些调试信息之类的;
 
 
 
@@ -179,3 +196,12 @@ java文件编译为字节码的时候,会生成一个常量池,jvm加载class文
 
 
 
+** 小结
+1. 虚拟机栈中包含一个个的栈帧,栈帧里面是方法的执行信息
+2. 栈帧包含四部分,局部变量表,动态链接,方法返回地址,操作数栈,附加信息
+   1) 局部变量表是对参数的汇总
+   2) 动态链接是存储常量池的引用
+   3) 返回地址是下一个方法执行的PC地址,并把返回值返回;
+   4) 操作数栈是执行引擎进行操作的栈
+   5) 附加信息一般用不到;
+   
