@@ -10,3 +10,72 @@
 ** 内存细分
 #+DOWNLOADED: screenshot @ 2024-11-13 00:11:30
 [[file:images/概述/2024-11-13_00-11-30_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-13 22:18:13
+[[file:images/概述/2024-11-13_22-18-13_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-13 22:18:50
+[[file:images/概述/2024-11-13_22-18-50_screenshot.png]]
+
+
+
+
+** 设置堆空间内存大小
+
+
+#+DOWNLOADED: screenshot @ 2024-11-13 22:23:50
+[[file:images/概述/2024-11-13_22-23-50_screenshot.png]]
+
+-Xms 堆空间起始大小
+    -X JVM设置参数
+    ms memory star
+-Xmx 堆空间最大值
+    mx memory max
+
+
+
+#+DOWNLOADED: screenshot @ 2024-11-13 22:29:22
+[[file:images/概述/2024-11-13_22-29-22_screenshot.png]]
+
+
+** 年轻代和老年代
+
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:04:15
+[[file:images/概述/2024-11-13_23-04-15_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:06:46
+[[file:images/概述/2024-11-13_23-06-46_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:10:19
+[[file:images/概述/2024-11-13_23-10-19_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:15:47
+[[file:images/概述/2024-11-13_23-15-47_screenshot.png]]
+
+
+** 对象的分配过程
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:18:32
+[[file:images/概述/2024-11-13_23-18-32_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:32:54
+[[file:images/概述/2024-11-13_23-32-54_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:21:02
+[[file:images/概述/2024-11-13_23-21-02_screenshot.png]]
+首先在Eden里面放对象,full 触发Minor GC,把还在使用的对象放入S0,并且 age+1
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:24:41
+[[file:images/概述/2024-11-13_23-24-41_screenshot.png]]
+再次Eden full 剩余对象放入S1 age+1,S1此时为空;然后S0也放入S1 age+1
+
+
+[[file:images/概述/2024-11-13_23-28-59_screenshot.png]]
+age15后面就会进入old
+
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:34:04
+[[file:images/概述/2024-11-13_23-34-04_screenshot.png]]

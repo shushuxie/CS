@@ -88,4 +88,35 @@ jclasslib 多平台支持,带UI
 [[file:images/二进制文件反编译工具/2024-11-12_23-53-02_screenshot.png]]
 1. Java自带的工具,jdk的bin目录下面
    1) jconsole 可以查看vm信息;功能少
-   2) jvisualvm 功能多 
+   2) jvisualvm 功能多,macos下面是visualVM,其中GC可以从插件里面安装;
+   3)
+
+
+** 命令行
+1. 查看进程和监控jvm
+#+begin_src shell
+     ﬦ ~                                                                                                                                                                               
+    jps
+  5760
+  35750 Launcher
+  35751 HeapDeom
+  34155 Main
+  35836 Jps
+
+    jstat -gc 35751
+   S0C    S1C    S0U    S1U      EC       EU        OC         OU       MC     MU    CCSC   CCSU   YGC     YGCT    FGC    FGCT    CGC    CGCT     GCT
+  512.0  512.0   0.0    0.0    4096.0   1672.4   11264.0      0.0     4480.0 800.1  384.0   77.0       0    0.000   0      0.000   -          -    0.000
+
+  S代表survive s0c是survive0 count
+  EU eden user
+  OC old count
+
+#+end_src
+
+
+
+
+#+DOWNLOADED: screenshot @ 2024-11-13 23:44:23
+[[file:images/二进制文件反编译工具/2024-11-13_23-44-23_screenshot.png]]
+
+
