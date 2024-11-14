@@ -79,3 +79,51 @@ age15后面就会进入old
 
 #+DOWNLOADED: screenshot @ 2024-11-13 23:34:04
 [[file:images/概述/2024-11-13_23-34-04_screenshot.png]]
+
+
+** minor GC major GC & full GC
+1. minor gc
+   也叫young GC,Eden 满了之后触发
+2. major GC old 满了之后触发
+3. full gc
+
+#+DOWNLOADED: screenshot @ 2024-11-14 22:19:25
+[[file:images/概述/2024-11-14_22-19-25_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-14 22:21:44
+[[file:images/概述/2024-11-14_22-21-44_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-14 22:24:38
+[[file:images/概述/2024-11-14_22-24-38_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-14 22:26:04
+[[file:images/概述/2024-11-14_22-26-04_screenshot.png]]
+
+
+** 内存分配策略
+
+#+DOWNLOADED: screenshot @ 2024-11-14 22:52:15
+[[file:images/概述/2024-11-14_22-52-15_screenshot.png]]
+#+DOWNLOADED: screenshot @ 2024-11-14 22:51:19
+[[file:images/概述/2024-11-14_22-51-19_screenshot.png]]
+
+** 内存的TLAB
+
+#+DOWNLOADED: screenshot @ 2024-11-14 23:11:22
+[[file:images/概述/2024-11-14_23-11-22_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-14 23:12:28
+[[file:images/概述/2024-11-14_23-12-28_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-14 23:12:47
+[[file:images/概述/2024-11-14_23-12-47_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-14 23:13:42
+[[file:images/概述/2024-11-14_23-13-42_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-14 23:14:35
+
+[[file:images/概述/2024-11-14_23-14-35_screenshot.png]]
+
+
+** 堆空间参数设置小结
