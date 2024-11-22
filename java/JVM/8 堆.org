@@ -127,3 +127,58 @@ age15后面就会进入old
 
 
 ** 堆空间参数设置小结
+
+#+DOWNLOADED: screenshot @ 2024-11-16 09:48:58
+[[file:images/概述/2024-11-16_09-48-58_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-16 09:59:23
+[[file:images/概述/2024-11-16_09-59-23_screenshot.png]]
+
+** 堆是分配空间的唯一选择吗?
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:06:57
+[[file:images/概述/2024-11-16_10-06-57_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:11:02
+[[file:images/概述/2024-11-16_10-11-02_screenshot.png]]
+对象在外部被使用就发生逃逸
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:17:15
+[[file:images/概述/2024-11-16_10-17-15_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:18:04
+[[file:images/概述/2024-11-16_10-18-04_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:19:00
+[[file:images/概述/2024-11-16_10-19-00_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:19:35
+[[file:images/概述/2024-11-16_10-19-35_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:20:36
+[[file:images/概述/2024-11-16_10-20-36_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:21:12
+[[file:images/概述/2024-11-16_10-21-12_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:29:38
+[[file:images/概述/2024-11-16_10-29-38_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:33:04
+[[file:images/概述/2024-11-16_10-33-04_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:35:36
+[[file:images/概述/2024-11-16_10-35-36_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:35:50
+[[file:images/概述/2024-11-16_10-35-50_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:38:59
+[[file:images/概述/2024-11-16_10-38-59_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:39:22
+[[file:images/概述/2024-11-16_10-39-22_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 10:43:03
+[[file:images/概述/2024-11-16_10-43-03_screenshot.png]]

@@ -1,0 +1,82 @@
+** 栈堆方法区的交互
+
+#+DOWNLOADED: screenshot @ 2024-11-16 23:18:12
+[[file:images/栈堆方法区的交互/2024-11-16_23-18-12_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 23:19:16
+[[file:images/栈堆方法区的交互/2024-11-16_23-19-16_screenshot.png]]
+
+** 方法区的理解
+
+#+DOWNLOADED: screenshot @ 2024-11-16 23:44:38
+[[file:images/栈堆方法区的交互/2024-11-16_23-44-38_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-16 23:52:05
+[[file:images/栈堆方法区的交互/2024-11-16_23-52-05_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-16 23:56:52
+[[file:images/栈堆方法区的交互/2024-11-16_23-56-52_screenshot.png]]
+
+** 设置方法区大小和OOM
+
+#+DOWNLOADED: screenshot @ 2024-11-17 00:00:01
+[[file:images/栈堆方法区的交互/2024-11-17_00-00-01_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 00:03:39
+[[file:images/栈堆方法区的交互/2024-11-17_00-03-39_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:09:59
+[[file:images/栈堆方法区的交互/2024-11-17_10-09-59_screenshot.png]]
+
+** 方法区的内部结构
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:12:58
+[[file:images/栈堆方法区的交互/2024-11-17_10-12-58_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:14:23
+[[file:images/栈堆方法区的交互/2024-11-17_10-14-23_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:16:37
+[[file:images/栈堆方法区的交互/2024-11-17_10-16-37_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:17:12
+[[file:images/栈堆方法区的交互/2024-11-17_10-17-12_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:18:17
+[[file:images/栈堆方法区的交互/2024-11-17_10-18-17_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:28:47
+[[file:images/栈堆方法区的交互/2024-11-17_10-28-47_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:30:14
+[[file:images/栈堆方法区的交互/2024-11-17_10-30-14_screenshot.png]]
+普通的static是先声明然后在init阶段才会进行赋值
+
+** 运行时常量池
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:41:06
+[[file:images/栈堆方法区的交互/2024-11-17_10-41-06_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:44:16
+[[file:images/栈堆方法区的交互/2024-11-17_10-44-16_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:45:23
+[[file:images/栈堆方法区的交互/2024-11-17_10-45-23_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:51:31
+[[file:images/栈堆方法区的交互/2024-11-17_10-51-31_screenshot.png]]
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:52:08
+[[file:images/栈堆方法区的交互/2024-11-17_10-52-08_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-11-17 10:53:40
+[[file:images/栈堆方法区的交互/2024-11-17_10-53-40_screenshot.png]]  
+
+** 方法区使用举例
+
+
