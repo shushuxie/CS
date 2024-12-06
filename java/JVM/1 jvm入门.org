@@ -175,6 +175,29 @@ java.runtime.name: OpenJDK Runtime Environment
 * 四部分介绍
 
 ** 内存与垃圾回收
+内存结构
+    * jvmStack
+
+      * stack fram
+
+	* PC-process count
+
+	* method return address
+
+	* operate stack
+
+	* 局部变量表
+
+	* 动态链接
+
+	* append message附加信息
+    * metaSpace
+
+      * method message
+
+      * runtime constants pool
+      
+    * heap
 
 ** 字节码与类加载
 
