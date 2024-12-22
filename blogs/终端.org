@@ -252,3 +252,18 @@ cmd 和 PowerShell 都可以通过编写脚本来自动化任务和执行一系�
 
 ** 参考
 [[https://www.rectcircle.cn/posts/terminal-history/][终端的发展历史]]
+
+** 使用技巧
+
+*** 1. p10k主题
+可以通过网上brew或者别的安装这个主题,很好用的主题 $$p10k configure$$ 可以进行设置,这个需要特殊的主题才行;
+
+*** the fuck 命令纠错工具
+#+begin_src shell
+  brew install thefuck
+#+end_src
+
+*** yazi 中的文件管理工具
+可以用vim的方式管理文件,还能预览,很好用;
+
+

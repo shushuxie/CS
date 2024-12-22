@@ -80,6 +80,17 @@
 ** 方法区使用举例
 
 
+** 演进细节
+#+DOWNLOADED: screenshot @ 2024-12-07 11:51:58
+[[file:images/栈堆方法区的交互/2024-12-07_11-51-58_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2024-12-07 11:58:23
+[[file:images/栈堆方法区的交互/2024-12-07_11-58-23_screenshot.png]]
+
+[[file:images/栈堆方法区的交互/2024-12-07_12-04-45_screenshot.png]]
+
+
 ** 小结
 1. 方法区也叫元空间,metaSpace
 2. 里面包含类型的信息,运行时的常量池信息
