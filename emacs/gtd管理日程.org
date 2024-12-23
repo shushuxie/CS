@@ -3,10 +3,34 @@
 CLOCK: [2024-05-29 Wed 23:38]--[2024-05-29 Wed 23:54] =>  0:16
 :END:
     GTD 指的是 "Getting Things Done"，是一种由 David Allen 提出的时间管理方法。
-agenda视图操作
-1) =/= 可以搜索相应的标签
-2) 光标处 =C-c / d或m= 切换day视图或者week视图
-3) =j= 跳转视图日期
+* agenda视图
+agenda视图操作是什么？ agenda的含义是 *会议议程* 其实就是相当于我们的一个计划
+这个视图里面包含什么呢？ 肯定就是我们自己的议程，也就是文章中的todo事项、headline tag、
+计划表，可以查看我们为某天设置的计划，计划的截止时间，执行时间，执行的状态，过程记录等等；
+
+#+begin_src
+   Press key for an agenda command:
+  --------------------------------        <   Buffer, subtree/region restriction
+  a   Agenda for current week or day      >   Remove restriction
+  t   List of all TODO entries            e   Export agenda views
+  m   Match a TAGS/PROP/TODO query        T   Entries with special TODO kwd
+  s   Search for keywords                 M   Like m, but only TODO entries
+  /   Multi-occur                         S   Like s, but only TODO entries
+  ?   Find :FLAGGED: entries              C   Configure custom agenda commands
+  *   Toggle sticky agenda views          #   List stuck projects (!=configure)
+ 
+  n   Agenda and all TODOs
+#+end_src
+
+上面是agenda的视图可以操作的命令，进行一些简单的分析
+1. a可以查看本周或当天的aennda计划
+2. t todo list
+3. m 查询标签
+4. s关键字搜索
+
+   1) =/= 可以搜索相应的标签
+   2) 光标处 =C-c / d或m= 切换day视图或者week视图
+   3) =j= 跳转视图日期
 ** 状态变化
 添加笔记和状态变更信息(包括时间信息)，用"@"表示
 只添加状态变更信息，用"!"表示
@@ -247,21 +271,6 @@ D：删除当前任务。
   - [ ]
     - [ ]
 
-
-                            键盘对照表:
- ┏━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┓
- ┃Ｑ  ┃Ｗ  ┃Ｅ  ┃Ｒ  ┃Ｔ  ┃Ｙ  ┃Ｕsh┃Ｉch┃Ｏ  ┃Ｐ  ┃
- ┃  iu┃  ua┃   e┃ uan┃  ue┃ uai┃   u┃   i┃   o┃  un┃
- ┃    ┃  ia┃    ┃ van┃  ve┃ ing┃    ┃    ┃  uo┃  vn┃
- ┗┳━┻┳━┻┳━┻┳━┻┳━┻┳━┻┳━┻┳━┻┳━┻┳━┛
-   ┃Ａ  ┃Ｓ  ┃Ｄ  ┃Ｆ  ┃Ｇ  ┃Ｈ  ┃Ｊ  ┃Ｋ  ┃Ｌ  ┃
-   ┃   a┃iong┃uang┃  en┃ eng┃ ang┃  an┃  ao┃  ai┃
-   ┃    ┃ ong┃iang┃    ┃  ng┃    ┃    ┃    ┃    ┃
-   ┗┳━┻┳━┻┳━┻┳━┻┳━┻┳━┻┳━┻┳━┻┳━┻┳━━┓
-     ┃Ｚ  ┃Ｘ  ┃Ｃ  ┃Ｖzh┃Ｂ  ┃Ｎ  ┃Ｍ  ┃，  ┃．  ┃ ／ ┃
-     ┃  ei┃  ie┃ iao┃  ui┃  ou┃  in┃ ian┃前页┃后页┃符号┃
-     ┃    ┃    ┃    ┃   v┃    ┃    ┃    ┃    ┃    ┃    ┃
-     ┗━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┛
 
      
    

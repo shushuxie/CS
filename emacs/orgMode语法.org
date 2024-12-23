@@ -22,6 +22,7 @@
 +delete+
 #+end_src
 
+
 ** 各种引用块展示
 *快捷键* =C-c C-,=
 1. quote
@@ -106,6 +107,7 @@ C-c C-u Backward to higher level heading.
 
 
 
+
 ** 稀疏树
 对org文档进行搜索，显示，可以显示大纲，todo列表，时间线；
 
@@ -122,20 +124,18 @@ C-c C-u Backward to higher level heading.
 | 快捷键 | 功能                       |
 |--------+----------------------------|
 | C-c -  | 列表在-，+，1，1）之间切换 |
-   
 
+1. haha
+2. haha
+   1) haha
+   2) haha
 
 ** 脚注
-
 #+caption: 快捷键
 | 快捷键    | 功能                        |
 |-----------+-----------------------------|
 | C-c C-x f | 自动添加脚注,如果有就会跳转 |
 | C-c C-c   | 脚注和引用之间跳转          |
-
-
-
-
 
 ** 表格
 可以有两种实现方法
@@ -170,11 +170,14 @@ C-c C-u Backward to higher level heading.
 *** 内部链接
 "<<>>"包裹的链接，可以在需要跳转的地方添加一个链接
 [[*稀疏树][跳转到稀疏树]]
-
 [[file:~/Documents/typora/算法：C语言实现/imags/Snipaste_2023-10-27_11-09-27.png][图片链接]]
 [[file:README.org][readme文件]]
 [[https:www.google.com][谷歌网址]]
 [[https:www.baidu.com][百度网址]]
+
+
+
+
 
 
 ** 属性
@@ -189,8 +192,9 @@ C-c C-c d Remove a property from the current entry.
 可以线上大纲条目的一下信息，首先要在文件定义显示内容
 =#+COLUMNS: %25ITEM %TAGS %PRIORITY %TODO=
 *C-c C-x C-c* 打开视图
-** todo作用
+** DONE todo作用
 
+- State "DONE"       from "TODO"       [2024-12-23 一 11:42]
 | 快捷键       | 作用                          |
 |--------------+-------------------------------|
 | C-c C-t      | 添加大纲todo列表,或者切换状态 |
@@ -241,11 +245,12 @@ C-c C-c d Remove a property from the current entry.
 
 
 
-** TODO 标签                                                   :tagss:ATTACH:
+** DONE 标签                                                  :tagss:ATTACH:
 DEADLINE: <2024-05-19 Sun>
 :PROPERTIES:
 :ID:       27A5C447-C112-4B63-90D2-B3C32068950D
 :END:
+- State "DONE"       from "TODO"       [2024-12-23 一 11:42]
 标签具有继承作用，子类拥有父类标签,标签只能在标题上才会生效，正文不行 
 | 快捷键  | 作用               |
 |---------+--------------------|
@@ -255,17 +260,21 @@ DEADLINE: <2024-05-19 Sun>
 | C-c / m | 标签构成树显示     |
 
 
-* WAITING todolist
+* DONE todolist
 
+- State "DONE"       from "WAITING"    [2024-12-23 一 11:42]
 - State "DOING"      from "TODO"       [2023-10-31 二 21:59]
 - State "DOING"      from "TODO"       [2023-10-31 二 21:59]
-* TODO [#B] 
+* DONE [#B] 
 
 
-* TODO 链接地址[2023-10-31 二]
+- State "DONE"       from "TODO"       [2024-12-23 一 11:42]
+* DONE 链接地址[2023-10-31 二]
 DEADLINE: <2023-10-31 二 23:47>
+- State "DONE"       from "TODO"       [2024-12-23 一 11:42]
 [[*标签][标签地址]]
 
 
-* TODO 文件为什么无法添加到agendfile了
+* DONE 文件为什么无法添加到agendfile了
 
+- State "DONE"       from "TODO"       [2024-12-23 一 11:42]
