@@ -1,0 +1,87 @@
+** IOC
+Spring IoC（Inversion of Control，控制反转）是 Spring 框架的核心概念，是用于实现对象之间的解耦和依赖关系管理的机制。通过 Spring IoC 容器，可以更容易地管理对象的创建、依赖注入以及生命周期，从而减少代码的耦合性，提高代码的可维护性和可测试性。
+
+什么是控制反转（IoC）？
+控制反转指的是将对象创建和依赖设置的控制权从应用代码中移交给容器（即 Spring 容器），由容器负责管理对象的生命周期和依赖关系。这意味着，应用程序不再自己主动地创建和管理对象，而是由 Spring 容器来注入这些依赖。
+
+依赖注入（Dependency Injection）
+依赖注入是实现控制反转的具体手段。在 Spring 中，依赖注入主要有三种形式：
+
+构造器注入：通过构造函数注入依赖对象。
+Setter 方法注入：通过 Setter 方法注入依赖对象。
+字段注入：通过注解直接在字段上注入依赖对象。
+Spring IoC 容器
+Spring IoC 容器是管理 Bean（即 Spring 容器管理的对象）的工厂。它负责实例化、配置、组装 Bean，并管理它们的生命周期。Spring 提供了两种主要的 IoC 容器实现：
+
+BeanFactory：最基本的 IoC 容器，提供了基本的依赖注入功能。
+ApplicationContext：BeanFactory 的扩展，提供更多企业级特性，例如事件发布、声明式方法注解等等。
+
+** 结合策略模式使用
+基本用法是 通过定义一个接口,需要不同的类实现该接口; 然后使用的时候通过
+spring的依赖注入可以循环调用这些子类,然后实现不同的逻辑;
+例如一个handler,Adapter
+#+begin_src java
+    public interface ErpIface {
+	<T extends BaseCmiocResponse> T execute(BaseCmiocRequest<T> request);
+
+    }
+
+    public class ErpImplOne implements ErpIface {
+    @Override
+    public <T extends BaseCmiocResponse> T execute(BaseCmiocRequest<T> request) {
+	// 具体业务实现
+	System.out.println("Executing in ErpImplOne");
+	return null;
+
+}
+
+}
+
+	    public class ErpImplTwo implements ErpIface {
+	    @Override
+	    public <T extends BaseCmiocResponse> T execute(BaseCmiocRequest<T> request) {
+		// 具体业务实现
+		System.out.println("Executing in ErpImplTwo");
+		return null;
+
+	}
+
+	}
+
+	@Configuration
+	public class ErpConfig {
+	@Bean(name = "erpImplOneAdapter")
+	public ErpIface erpImplOne() {
+	    return new ErpImplOne();
+
+    }
+
+	@Bean(name = "erpImplTwoAdapter")
+	public ErpIface erpImplTwo() {
+	return new ErpImplTwo();
+
+}
+
+	}
+
+    public class GeneralAdapter implements ErpAdapter {
+	@Resource
+	private Map<String, ErpIface> map;
+	private String adapter = "Adapter";
+
+	@Override
+	public <T extends BaseCmiocResponse> T execute(BaseCmiocRequest<T> request) {
+	String erpIfaceName = request.getPlatformEnum().name().toLowerCase() + request.getMethodEnum().getCode() + adapter;
+	ErpIface authIface = map.get(erpIfaceName);
+	if (Objects.nonNull(authIface)) {
+	    return authIface.execute(request);
+
+}
+	System.err.println("authIface is null: " + erpIfaceName);
+	return null;
+
+    }
+
+      }
+  
+#+end_src

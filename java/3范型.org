@@ -2,6 +2,53 @@
 范型是为了更好的适用，多个类型入参，java中的范型可以用在类和方法上面；
 范围： *类，接口，方法*
 在类中用在类名的后面，方法中要在返回值前面指定参数
+
+**** 声明方式
+疑惑的很大一部分原因就是声明方式, 也就是对范型的语法陌生导致不知道怎么
+主要是使用 =<T,K,V>= 最主要是尖角富豪榜,这个就是声明的过程
+
+1. 类 就在类名后面添加
+2. 方法 就在返回值前添加
+3. 接口也在接口名称后面添加
+
+**** 为什么要使用范型
+泛型的主要目的是提供类型安全，增强代码的通用性和复用性，从而适应更多的情况。
+通过使用泛型，我们可以避免根据具体类型写大量冗余的代码，同时保持类型检查的安全性。
+泛型可以用于方法的参数类型、返回类型，类的继承关系等。
+
+**** 范型类
+#+begin_src java
+  public class GenericBox<T> {
+     // 类名后面的<T>,只是一种声明,表面这个类是一个范型类
+     // 这个声明是为了下面的 content类型做的提前声明,为了编译使用
+     // 这个T限制了后面Box对象的接受类型,声明的时候需要传入对应的参数
+      private T content;
+
+	  public void setContent(T content) {
+	      this.content = content;
+
+	  }
+
+	  public T getContent() {
+	  return content;
+
+	  }
+
+      public static void main(String[] args) {
+	  GenericBox<String> stringBox = new GenericBox<>();
+	  stringBox.setContent("Hello Generic");
+	  System.out.println(stringBox.getContent());  // Output: Hello Generic
+
+	  GenericBox<Integer> integerBox = new GenericBox<>();
+	  integerBox.setContent(100);
+	  System.out.println(integerBox.getContent());  // Output: 100
+
+
+      }
+
+  }
+
+#+end_src
 #+begin_src java
   // 在类名后面使用，可以指定多个
   public class MyGenerics <T,K extends Vical> {
@@ -9,6 +56,92 @@
   }
 #+end_src
 
+**** 范型方法
+#+begin_src java
+  public class GenericMethodExample {
+      // 泛型方法，接收一个泛型数组并打印数组中的所有元素
+      // <T> 的作用是声明范型方法,这样方便方法中的参数使用,否则会报错
+      public static <T> void printArray(T[] array) {
+	  for (T element : array) {
+	      System.out.println(element);
+	  }
+
+       }
+
+      public static void main(String[] args) {
+	   Integer[] intArray = {1, 2, 3, 4, 5};
+	   String[] strArray = {"A", "B", "C", "D"};
+	   // 调用泛型方法
+	   printArray(intArray);
+	   printArray(strArray);
+      }
+
+  }
+
+
+#+end_src
+
+**** 范型接口
+#+begin_src java
+public interface GenericRepository<T> {
+    void add(T item);
+    T get(int id);
+
+}
+
+    public class GenericRepositoryImpl<T> implements GenericRepository<T> {
+	private List<T> items = new ArrayList<>();
+
+	@Override
+	public void add(T item) {
+	items.add(item);
+
+    }
+
+	@Override
+	public T get(int id) {
+	  return items.size() > id ? items.get(id) : null;
+
+  }
+
+      public static void main(String[] args) {
+	  GenericRepository<String> stringRepo = new GenericRepositoryImpl<>();
+	  stringRepo.add("Hello");
+	  System.out.println(stringRepo.get(0));  // Output: Hello
+
+	  GenericRepository<Integer> intRepo = new GenericRepositoryImpl<>();
+	  intRepo.add(100);
+	  System.out.println(intRepo.get(0));  // Output: 100
+
+      }
+  }
+  
+#+end_src
+
+**** 有界范型
+#+begin_src java
+  public class BoundedGenericExample {
+
+	  // 设定上界为 Number 类型，T 必须是 Number 或其子类
+	  public static <T extends Number> double sum(T[] numbers) {
+	      double sum = 0;
+	      for (T number : numbers) {
+		  sum += number.doubleValue();
+	      }
+	      return sum;
+	  }
+
+	  public static void main(String[] args) {
+	    Integer[] intNumbers = {1, 2, 3, 4, 5};
+	    Double[] doubleNumbers = {1.1, 2.2, 3.3};
+	    // 调用有界泛型方法
+	    System.out.println(sum(intNumbers));  // Output: 15.0
+	    System.out.println(sum(doubleNumbers));  // Output: 6.6
+	  }
+
+  }
+  
+#+end_src
 **** 范型中的参数含义
 一般有T-type，K-key，V-value等参数； =？= 代表通配符，什么都可以；
 #+begin_example
@@ -28,7 +161,7 @@ V代表值的类型。这两个符号通常用于表示泛型参数的具体类�
 **** 上下界限
 一般中的界限是指对传入参数的限制
 1. <T extends Animals> 代表T是Animal的子类，那么类型必须在Animal的下面，就是上界，
-   同理 Sper就是下界，指代的就是继承关系而已；
+   同理 Super就是下界，指代的就是继承关系而已；
    #+begin_src
      1. 上界（Upper Bound）：
 	上界指定了泛型类型参数可以是某个类或其子类。在泛型声明中，通过使用extends关键字来指定上界。
