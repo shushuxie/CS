@@ -1,0 +1,154 @@
+
+** 多线程的常用创建方式
+一般情况下说是有3种创建方式,但是本质上只有一种方式创建多线程,就是 =new Thread=
+然后 *Thread.start()* 让JVM帮你创建一个新的线程,执行相应的方法,下面的例子有体现
+
+*** 继承Thread
+#+begin_src java
+  package org.example.thread;
+  public class MyThread extends Thread {
+      @Override
+      public void run() {
+      System.out.println("Hello world!");
+
+      }
+
+	  public static void main(String[] args) {
+           // 这个标准的方式
+	    MyThread myThread = new MyThread();
+	    myThread.start();
+
+    }
+
+
+}
+#+end_src
+
+*** 实现Runnable接口
+这种方式本质上也是创建了一个线程,只是吧runnable对象放到线程中去执行任务
+#+begin_src java
+public class MyRunnable implements Runnable {
+	  public void run() {
+	    System.out.println("MyRunnable is running...");
+
+	}
+
+	public static void main(String[] args) {
+	  Thread thread = new Thread(new MyRunnable());
+	  thread.start(); // 启动线程
+	}
+
+}
+  
+#+end_src
+
+
+*** 实现Callable接口
+*可以抛异常,接收返回值* 只是一个可调用的接口而已,要结合线程池或FutreTask使用
+#+begin_src java
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+public class MyCallable implements Callable<Integer> {
+	public Integer call() throws Exception {
+	    return 123;
+
+	}
+
+	public static void main(String[] args) {
+	ExecutorService executor = Executors.newSingleThreadExecutor();
+	Future<Integer> future = executor.submit(new MyCallable());
+
+	try {
+	    Integer result = future.get(); // 获取结果
+	    System.out.println("Callable result: " + result);
+
+	} catch (InterruptedException | ExecutionException e) {
+		    e.printStackTrace();
+	} finally {
+		executor.shutdown();
+	}
+
+	}
+
+}
+  
+#+end_src
+
+*** ExecutorService
+ExecutorService 提供了一个框架来处理线程。可以使用 Executors 工具类来创建不同类型的线程池。
+
+#+begin_src java
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+    public class MyExecutorService {
+	public static void main(String[] args) {
+	  ExecutorService executor = Executors.newFixedThreadPool(2);
+
+	  Runnable task1 = () -> System.out.println("Task 1 is running...");
+	  Runnable task2 = () -> System.out.println("Task 2 is running...");
+
+	  executor.execute(task1);
+	  executor.execute(task2);
+
+	  executor.shutdown(); // 关闭线程池
+
+    }
+
+}
+  
+#+end_src
+
+*** FutureTask
+FutureTask 可以用来包装 Runnable 或 Callable 对象。本质不会执行线程,只是包装,配置线程池使用;
+#+begin_src java
+  public static void main(String[] args) throws ExecutionException, InterruptedException {
+     // 只是负责包装一下对象
+      FutureTask<Integer> futureTask = new FutureTask<>(() -> {
+	      return 456;
+	  });
+
+      ExecutorService executor = Executors.newSingleThreadExecutor();
+      executor.execute(futureTask);
+
+      try {
+	  Integer result = futureTask.get(); // 获取结果
+	  System.out.println("FutureTask result: " + result);
+
+      } catch (InterruptedException | ExecutionException e) {
+	      e.printStackTrace();
+      } finally {
+	  executor.shutdown();
+      }
+  }
+#+end_src
+
+
+
+** 常用方式
+除了上面的方法,还有其他方式
+
+*** CompletableFuture  
+#+begin_src java
+	    import java.util.concurrent.CompletableFuture;
+
+	    public class CompletableFutureExample {
+	     public static void main(String[] args) {
+		CompletableFuture.supplyAsync(() -> {
+		  System.out.println("Running in CompletableFuture");
+		  return 42;
+	      }).thenAccept(result -> System.out.println("Result: " + result));
+      
+      }
+    }
+  )
+	}
+	  }
+#+end_src
+
+
+*** ForkJoinPool 并行分治任务执行
