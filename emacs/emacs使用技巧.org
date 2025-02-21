@@ -1,5 +1,5 @@
 
-* DONE 常用技巧
+* 常用技巧
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2024-05-22 Wed 22:43]
 - State "DOING"      from "WAITING"    [2024-05-19 Sun 10:37]
@@ -59,10 +59,7 @@ projectile是一个项目管理软件，一般情况下会自动识别项目；�
 *使用C-u 加上搜索命令可以设置一些额外的参数*
 
 
-* DONE treemacs
-DEADLINE: <2024-05-12 Sun>
-- State "DONE"       from              [2024-05-21 Tue 23:29]
-[[https://github.com/Alexander-Miller/treemacs#customizing-themes-and-icons][treemacs github地址]]
+* treemacs
 
 1) =M-0= 光标切换到文件区
 2) =？= 查看命令,切换到treemaccs工作区中，或者 =/= 查看文件命令
@@ -82,3 +79,10 @@ DEADLINE: <2024-05-12 Sun>
   woeirnvc
   
 #+end_src
+
+
+* 常用的使用方式
+1. [[*=C-h= help操作][查看帮助文档]]
+2. 添加项目到treemacs =,ta ,td=
+3. 快速查找历史文件，不同项目里的
+4. 搜索技巧
