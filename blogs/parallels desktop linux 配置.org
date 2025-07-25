@@ -1,0 +1,25 @@
+* 忘记密码问题
+自己忘记了密码，一些sudo命令无法使用，尝试了好多次终于解决了；最主要的是
+重置密码的时候要找到正确的用户名称，然后就可以了；
+
+[[https://kb.parallels.com/cn/114193][解决方案官方文档]]
+
+* linux用户切换
+从parallels新建的用户里面原来是没有root用户的，需要我们手动切换才行，有下面的操作，输入当前用户
+的密码即可
+
+ $$ sudo su - root $$
+
+#+begin_src shell
+  sudo su - root
+#+end_src
+
+切换为普通用户的操作
+
+#+begin_src 
+  su username
+
+  su - username
+  这个操作会进行用户环境变量的切换，完全代表当前用户登陆
+#+end_src
+
