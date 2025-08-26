@@ -1,0 +1,51 @@
+
+   刷了一些简单的题目，有的题目觉得很简单但就是没法好好的完成，总是碰到某个部分弄不好；
+   也知道了一个技巧，就是先确定好步骤然后再开始写，不然最后没法好好的完成；还有就是多
+   使用一些现有的工具。例如排序，建立对象等等
+* 算法语法问题
+** 二分查找算法
+    主要是在一个数组中找寻某个值，对于某个排序数组真的很好用，效率很高
+    注意点：
+    1. 确定区间，[] or [ )
+    2. 根据区间确定middle的走向
+       #+begin_src java
+	 public int findTarget (int target,int[] nums) {
+        // 左闭右闭的写法
+        int left = 0;
+        int right = nums.length - 1; // 这里为了对应真实的index -1
+        while (left <= right) { // 两边都是闭区间，left可以等于right
+            int mid = left + ((right - left) >> 2);
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] > target) {
+                // 收缩右区间
+                right = mid - 1;// 因为mid已经计算过
+            } else {
+                // 收缩做区间
+                left = mid + 1; // mid已经计算过了
+            }
+        }
+        return -1;
+    }
+
+    public int findTarget2 (int target,int[] nums) {
+        // left[ right)
+        int left = 0;
+        int right = nums.length;
+        while (left < right) {// 因为是开区间，实际上达不到right的位置
+            int mid = left + ((right - left) >> 2);
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] > target) {
+                // 收缩右区间
+                right = mid;// 这里要等于，开区间实际上掠过了mid了
+            } else {
+                left = mid + 1; // 左闭，这里已经计算过应该略过
+            }
+        }
+        return -1;
+    } 
+    #+end_src
+       
+
+：
