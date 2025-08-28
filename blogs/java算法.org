@@ -46,6 +46,84 @@
         return -1;
     } 
     #+end_src
-       
+
+虚拟机分配
+ int[] dispatchRequests(int[] capacities, int[] requests) {
+        int[] result = new int[requests.length];
+        Comparator<int[]> comparator = (a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0];
+
+        // TreeMap 按容量降序排列
+        TreeMap<Integer, PriorityQueue<int[]>> map = new TreeMap<>(Comparator.reverseOrder());
+
+        // 初始化：将所有服务器按容量分组
+        for (int i = 0; i < capacities.length; i++) {
+            map.computeIfAbsent(capacities[i], k -> new PriorityQueue<>(comparator))
+                    .offer(new int[]{0, i}); // [部署数量, 服务器索引]
+        }
+
+        for (int i = 0; i < requests.length; i++) {
+            Map.Entry<Integer, PriorityQueue<int[]>> entry = map.firstEntry();
+            if (entry == null || entry.getKey() < requests[i]) {
+                result[i] = -1;
+                continue;
+            }
+
+            int cap = entry.getKey();
+            PriorityQueue<int[]> queue = entry.getValue();
+            if (queue.isEmpty()) {
+                result[i] = -1;
+                map.remove(cap);
+                continue;
+            }
+
+            int[] server = queue.poll();
+            server[0]++; // 增加部署数量
+            result[i] = server[1]; // 记录服务器索引
+
+            int newCap = cap - requests[i];
+            map.computeIfAbsent(newCap, k -> new PriorityQueue<>(comparator))
+                    .offer(server);
+
+            // 如果原容量队列为空，移除
+            if (queue.isEmpty()) {
+                map.remove(cap);
+            }
+        }
+
+        return result;
+    }
+
+ int[] dispatchRequest(int[] capacities, int[] requests) {
+        // [cap, queue<id>] 容量 - 相同容量的id集合
+        TreeMap<Integer, PriorityQueue<Integer>> mp = new TreeMap<>();
+        for (int i = 0; i < capacities.length; i++) {
+            mp.computeIfAbsent(capacities[i], k -> new PriorityQueue<>()).offer(i);
+        }
+
+        int[] ans = new int[requests.length];
+        Arrays.fill(ans, -1);
+
+        for (int i = 0; i < requests.length; i++) {
+            // 返回大于并且最接近request[i]的值 >=
+            Map.Entry<Integer, PriorityQueue<Integer>> entry = mp.ceilingEntry(requests[i]);
+            if (entry == null) {  // 没有足够空间
+                continue;
+            }
+
+            int cap = entry.getKey();
+            PriorityQueue<Integer> q = entry.getValue();
+            ans[i] = q.poll();
+
+            if (q.isEmpty()) {
+                mp.remove(cap); // 没有对应容量的机器，删除key
+            }
+
+            // 更新新的容量对象
+            int nextCap = cap - requests[i];
+            mp.computeIfAbsent(nextCap, k -> new PriorityQueue<>()).offer(ans[i]);
+        }
+
+        return ans;
+    }
 
 ：
