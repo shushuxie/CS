@@ -47,12 +47,40 @@
     } 
     #+end_src
 
+#+begin_src java
 虚拟机分配
- int[] dispatchRequests(int[] capacities, int[] requests) {
-        int[] result = new int[requests.length];
-        Comparator<int[]> comparator = (a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0];
+int[] dispatchRequests(int[] capacities, int[] requests) {
+int[] result = new int[requests.length];
+Comparator<int[]> comparator = (a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0];
+#+end_src
 ** 双指针
 窗口滑动起始也是双指针的一种，通过控制形成一个窗口然后进行操作；
+滑动窗口本质上是用两个指针（通常称为 left 和 right）来维护一个区间。两个指针一起在数组/字符串上“滑动”，每次窗口都只移动一格或按需缩小/扩大。窗口中的状态（如区间和、元素种类等）通过增量更新，避免重复遍历。
+滑动窗口的基本套路
+	1	初始化：left/right 都指向起点，窗口为空。
+	2	扩展右边界：不断右移 right，扩大窗口，直到窗口内满足某个条件。
+	3	收缩左边界：当窗口满足条件时，尝试右移 left，缩小窗口，直到不满足条件。
+	4	记录最优答案（如窗口长度、最大/最小值等）。
+	5	重复2-4步，直到 right 到达末尾。
+
+*** 滑动窗口
+
+public int minSubArrayLen(int target, int[] nums) {
+    int n = nums.length;
+    int left = 0, sum = 0;
+    int minLen = Integer.MAX_VALUE;
+    for (int right = 0; right < n; right++) {
+        sum += nums[right];
+        while (sum >= target) {
+            minLen = Math.min(minLen, right - left + 1);
+            sum -= nums[left];
+            left++;
+        }
+    }
+    return minLen == Integer.MAX_VALUE ? 0 : minLen;
+}
+
+
 *** 实现元元素覆盖/删除
        #+begin_src java
     static public int removeElement2(int[] nums, int val) {
@@ -69,3 +97,70 @@
         return nums.length - k;
     }
     #+end_src
+
+
+    
+** 字符串
+
+*** 大数相加
+#+begin_src java
+  public int[] addArrays(int[] arr1, int[] arr2) {
+    int i = arr1.length - 1;
+    int j = arr2.length - 1;
+    int carry = 0;
+    List<Integer> result = new ArrayList<>();
+    while (i >= 0 || j >= 0 || carry != 0) {
+        int x = i >= 0 ? arr1[i] : 0;
+        int y = j >= 0 ? arr2[j] : 0;
+        int sum = x + y + carry;
+        result.add(sum % 10);
+        carry = sum / 10;
+        i--;
+        j--;
+    }
+    // 逆序输出
+    int[] resArr = new int[result.size()];
+    for (int k = 0; k < result.size(); k++) {
+        resArr[k] = result.get(result.size() - 1 - k);
+    }
+    return resArr;
+}
+#+end_src
+
+** 数组
+
+*** 螺旋填充
+#+begin_src java
+public int[][] generateMatrix(int n) {
+    int[][] matrix = new int[n][n];
+    int num = 1;
+    int top = 0, bottom = n - 1, left = 0, right = n - 1;
+    while (top <= bottom && left <= right) {
+        // 从左到右
+        for (int i = left; i <= right; i++) matrix[top][i] = num++;
+        top++;
+
+        // 从上到下
+        for (int i = top; i <= bottom; i++) matrix[i][right] = num++;
+        right--;
+
+        // 从右到左（可能已无底行）
+        if (top <= bottom) {
+            for (int i = right; i >= left; i--) matrix[bottom][i] = num++;
+            bottom--;
+        }
+
+        // 从下到上（可能已无左列）
+        if (left <= right) {
+            for (int i = bottom; i >= top; i--) matrix[i][left] = num++;
+            left++;
+        }
+    }
+    return matrix;
+}  
+#+end_src
+
+**** 注意点
+    1. 判断收缩会不会导致重复填充
+    2. 使用边界作为while的循环条件
+    3. 边界指的是一条线，向内收缩
