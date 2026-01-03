@@ -130,12 +130,14 @@ C-c C-u Backward to higher level heading.
    1) haha
    2) haha
 
+
 ** 脚注
 #+caption: 快捷键
 | 快捷键    | 功能                        |
 |-----------+-----------------------------|
 | C-c C-x f | 自动添加脚注,如果有就会跳转 |
 | C-c C-c   | 脚注和引用之间跳转          |
+
 
 ** 表格
 可以有两种实现方法
@@ -167,6 +169,7 @@ C-c C-u Backward to higher level heading.
 | C-c C-x C-n/p | 跳转到第下一个，上一个链接                |
 | C-c l         | 在当前光标处存储一个标签，方便文件引用，跳转 |
 
+
 *** 内部链接
 "<<>>"包裹的链接，可以在需要跳转的地方添加一个链接
 [[*稀疏树][跳转到稀疏树]]
@@ -188,10 +191,12 @@ C-c C-c d Remove a property from the current entry.
 :CUSTOM_ID: cust_id
 :END:
 
+
 ** 列视图
 可以线上大纲条目的一下信息，首先要在文件定义显示内容
 =#+COLUMNS: %25ITEM %TAGS %PRIORITY %TODO=
 *C-c C-x C-c* 打开视图
+
 ** DONE todo作用
 
 - State "DONE"       from "TODO"       [2024-12-23 一 11:42]
@@ -201,6 +206,7 @@ C-c C-c d Remove a property from the current entry.
 | S-Left/Right | 切换todo状态                  |
 | C-c / t      | 稀疏树显示todo项              |
 | C-c a t      | 显示所有todo列表，全局的     |
+
 
 *** 优先级
     *C-c ,* a-c三种，可以修改添加,使用SPC取消优先级标记
@@ -215,12 +221,15 @@ C-c C-c d Remove a property from the current entry.
 
     #+end_quote>
 
+
 *** 任务进度
     在todo标签后面添加[/]或者[%],可以显示进度，如果计算错误使用'C-c C-c’重新计算
+
 
 **** TODO [#B] [0/2]
 ***** TODO 任务分解2
 ***** TODO 3
+
 *** 复选框 
 添加的时候必须在中间留有空格，C-c C-c可以更了状态,也可以添加进度，拥有层级
 - [-] [50%]
@@ -239,10 +248,6 @@ C-c C-c d Remove a property from the current entry.
 | t/T    | todo列表,T可以输入关键字搜索，例如DOING |
 | m/M    | 标签，M可以制定关键字                   |
 | n      | 所有todo和时间视图                      |
-
-
-
-
 
 
 ** DONE 标签                                                  :tagss:ATTACH:
@@ -265,10 +270,12 @@ DEADLINE: <2024-05-19 Sun>
 - State "DONE"       from "WAITING"    [2024-12-23 一 11:42]
 - State "DOING"      from "TODO"       [2023-10-31 二 21:59]
 - State "DOING"      from "TODO"       [2023-10-31 二 21:59]
+
 * DONE [#B] 
 
 
 - State "DONE"       from "TODO"       [2024-12-23 一 11:42]
+
 * DONE 链接地址[2023-10-31 二]
 DEADLINE: <2023-10-31 二 23:47>
 - State "DONE"       from "TODO"       [2024-12-23 一 11:42]

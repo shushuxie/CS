@@ -1,28 +1,20 @@
+#+TAGS: { 日志(l) 阅读(r) 思考(s) }
+#+TAGS: { 技术(t) emacs技巧(e) 社会(h) 个人(p) }
+#+TAGS: { 卡住(k) 有感(g) }
 
-* 常用技巧
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2024-05-22 Wed 22:43]
-- State "DOING"      from "WAITING"    [2024-05-19 Sun 10:37]
-- State "DOING"      from "TODO"       [2024-05-19 Sun 10:37]
-:END:
 
-1) =C-x n s/w= 只显示该级标题；
-2) =C-c C-,= 插入各种块，更容易判定为block，方便折叠
-3) =C-c C-c= 重排表格，列表统一；todo百分比计算，标题上面可以插入标签等
-4) =M-0= 实现当前窗口和treemacs之间的光标切换
+* 常用技术
 
-** =C-h= help操作
-
-    | key     | means                     | mark                                 |
-    | C-h k   | 查看快捷键的含义             | 触发之后输入快捷键即可                   |
-    | C-h c   | 简介描述快捷键含义           |                                      |
-    | C-h v   | 查看定义的varible           | 搜索想要查看的veribal内容               |
-    | C-h m   | 查看mode快捷键              | 在org,agenda,package,dird视图下都能查看 |
-    | C-h P   | 包描述                     |                                      |
-    | C-h R   | package文档                |                                      |
-    | C-c C-d | debugging 配置,技巧         |                                      |
-    | C-h r   | emacs使用                  |                                      |
-    | C-h i   | emacs 文档,可以搜索相应的部分 |                                      |
+** =C-h= help操作                                                   :emacs技巧:
+ | C-h k   | 查看快捷键的含义             | 触发之后输入快捷键即可                   |
+ | C-h c   | 简介描述快捷键含义           |                                      |
+ | C-h v   | 查看定义的 varible           | 搜索想要查看的 veribal 内容               |
+ | C-h m   | 查看 mode 快捷键              | 在 org,agenda,package,dird 视图下都能查看 |
+ | C-h P   | 包描述                     |                                      |
+ | C-h R   | package 文档                |                                      |
+ | C-c C-d | debugging 配置,技巧         |                                      |
+ | C-h r   | emacs 使用                  |                                      |
+ | C-h i   | emacs 文档,可以搜索相应的部分 |                                      |
 
 
 * evil冲突导致特殊用法
@@ -37,6 +29,7 @@
   C-c C-b 跳到上一个标题（同层级）
   C-c C-u 跳到上一级标题（upper）
 + *M-S-\* 可以格式化正文内容
+
 
 * projectile 使用
 projectile是一个项目管理软件，一般情况下会自动识别项目；如果项目是git或svn或者别的工具管理的项目就会自动识别
@@ -60,7 +53,6 @@ projectile是一个项目管理软件，一般情况下会自动识别项目；�
 
 
 * treemacs
-
 1) =M-0= 光标切换到文件区
 2) =？= 查看命令,切换到treemaccs工作区中，或者 =/= 查看文件命令
 3) 加载主题 treemacs-load-theme
@@ -86,3 +78,19 @@ projectile是一个项目管理软件，一般情况下会自动识别项目；�
 2. 添加项目到treemacs =,ta ,td=
 3. 快速查找历史文件，不同项目里的
 4. 搜索技巧
+
+   
+
+* snippet 输入模板
+可以有的操作, *tsgo* yas函数
++ 查询所有可以的模板
++ 添加模板
++ 查询模板通过快捷键
+可以方便的在输入模式下插入固定的文字，并且可以控制光标
+十分好用
+1. *** , *~* , *=* 
+
+
+
+
+

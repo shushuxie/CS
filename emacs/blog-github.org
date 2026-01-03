@@ -26,4 +26,6 @@ github上面可以进行个人博客搭建，如果配合emacs可以实现更加
 
 看了下用orgmode写博客并没有自己想的那么简单，后续再看吧
 
-* TODO [#B] 博客配置
+* CANCELLED [#B] 博客配置
+- State "CANCELLED"  from "TODO"       [2026-01-03 六 22:09] \\
+  后面再说吧

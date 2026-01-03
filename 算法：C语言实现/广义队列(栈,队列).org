@@ -220,9 +220,11 @@ Item STACKpop() {
     #+end_src>
 
 
-** TODO 本章和第一章联系算法：连通性，二分算法
+** CANCELLED 本章和第一章联系算法：连通性，二分算法
 
 
+- State "CANCELLED"  from "TODO"       [2026-01-03 六 22:07] \\
+  太乱了，后续重新整理
 ** 队列                                                          :definition:
 队列是和栈相似的一种数据结构，但是符合FIFO，先进先出的特性；
 =性质4.2:我们可以在常数时间内实现FIFO队列ADT的get和put操作，不论使用数组还是链表=
