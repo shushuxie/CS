@@ -4,14 +4,14 @@
 ** 文字搜索
 
 *** 当前buffer
-    - swipper
-    - vim search
+| 软件       | 快捷键 | 作用范围       |
+|------------+--------+----------------|
+| swipper    | ,ss    | 当前buffer     |
+| swiper     | ,sa    | 所有打开buffer |
+| vim        | /      | 当前buffer     |
+| projectile | ,pg    | 当前项目       |
 
-*** 所有打开buffer
-  - swipper-all 函数
-  
-*** 当前项目
-    - *C-c p s g* 
+
 
 
 ** 文件搜索

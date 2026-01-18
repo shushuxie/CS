@@ -600,7 +600,7 @@ int main(){
 4) a s Y E : Ea*s*Y++
 #+end_quote
 
-** TODO 复制和索引项
+** 复制和索引项
 不允许重复数据，及其一些是想方式
 
 ** 一级ADT                                                       :definition:

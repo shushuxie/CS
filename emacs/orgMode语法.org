@@ -197,7 +197,7 @@ C-c C-c d Remove a property from the current entry.
 =#+COLUMNS: %25ITEM %TAGS %PRIORITY %TODO=
 *C-c C-x C-c* 打开视图
 
-** DONE todo作用
+** todo作用
 
 - State "DONE"       from "TODO"       [2024-12-23 一 11:42]
 | 快捷键       | 作用                          |
@@ -226,9 +226,9 @@ C-c C-c d Remove a property from the current entry.
     在todo标签后面添加[/]或者[%],可以显示进度，如果计算错误使用'C-c C-c’重新计算
 
 
-**** TODO [#B] [0/2]
-***** TODO 任务分解2
-***** TODO 3
+**** DONE [#C] [2/2]
+***** DONE 任务分解2
+***** DONE 3
 
 *** 复选框 
 添加的时候必须在中间留有空格，C-c C-c可以更了状态,也可以添加进度，拥有层级
@@ -250,7 +250,7 @@ C-c C-c d Remove a property from the current entry.
 | n      | 所有todo和时间视图                      |
 
 
-** DONE 标签                                                  :tagss:ATTACH:
+** 标签                                                        :tagss:ATTACH:
 DEADLINE: <2024-05-19 Sun>
 :PROPERTIES:
 :ID:       27A5C447-C112-4B63-90D2-B3C32068950D
@@ -265,23 +265,4 @@ DEADLINE: <2024-05-19 Sun>
 | C-c / m | 标签构成树显示     |
 
 
-* DONE todolist
 
-- State "DONE"       from "WAITING"    [2024-12-23 一 11:42]
-- State "DOING"      from "TODO"       [2023-10-31 二 21:59]
-- State "DOING"      from "TODO"       [2023-10-31 二 21:59]
-
-* DONE [#B] 
-
-
-- State "DONE"       from "TODO"       [2024-12-23 一 11:42]
-
-* DONE 链接地址[2023-10-31 二]
-DEADLINE: <2023-10-31 二 23:47>
-- State "DONE"       from "TODO"       [2024-12-23 一 11:42]
-[[*标签][标签地址]]
-
-
-* DONE 文件为什么无法添加到agendfile了
-
-- State "DONE"       from "TODO"       [2024-12-23 一 11:42]

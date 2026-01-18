@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <msa.h>
+#include <stdint.h>
 
 void halo();
 
