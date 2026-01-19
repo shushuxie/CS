@@ -4,26 +4,14 @@
 ** 文字搜索
 
 *** 当前buffer
-| 软件       | 快捷键 | 作用范围       |
-|------------+--------+----------------|
-| swipper    | ,ss    | 当前buffer     |
-| swiper     | ,sa    | 所有打开buffer |
-| vim        | /      | 当前buffer     |
-| projectile | ,pg    | 当前项目       |
+| 软件                 | 快捷键 | 作用范围       |
+|----------------------+--------+----------------|
+| swipper              | ,ss    | 当前buffer     |
+| swiper               | ,sa    | 所有打开buffer |
+| vim                  | /      | 当前buffer     |
+| projectile           | ,pg    | 当前项目       |
+| *counsel-find-file*    | ,ff    |                |
+| *projectile-fine-file* | ,pf    | 项目搜索文件   |
 
 
 
-
-** 文件搜索
-
-*** 按文件名进行搜索
-    - *C-x C-f* =counsel-find-file= ,当前目录
-    - *C-c p f* 当前项目文件
-      
-
-*** 打开的buffer
-    - multi-occur
-
-      jfefwfsdf
-      ddfsd
-      niwefdsfasd

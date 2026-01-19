@@ -51,15 +51,56 @@ dired是emacs内置的一个功能,拥有 一个特定的MODE, *DIRED-MODE*
 | * /       | mark all dired* /                         |
 | *C-x C-q* | edit dired buffer like a normal buffer    |
 
+#+begin_quote
+既然你对 Dired 产生了兴趣，那我强烈建议你尝试 Dirvish。它是目前 Emacs 社区公认的“Dired 终极增强版”，能让这个 40 多年的老工具瞬间拥有类似 macOS Finder 或 Ranger 的现代体验。
 
-/xieti/ =eiwe=
-+xiahuaxian+ _xiahuaxian_ *xkdfj*
-  =ejri= /jrei/  
+一、 什么是 Dirvish？
+Dirvish 是一个对 Dired 进行现代封装的插件。它保留了 Dired 的所有核心逻辑，但视觉和交互上做了极大提升：
 
-#+caption: 测试
-#+begin_src 
-哈哈
-#+end_src
+实时预览：鼠标划过文件时，右侧自动弹出内容预览（图片、代码、PDF、甚至 Zip 压缩包内容）。
+
+多栏布局：类似 macOS Finder 的分栏，让你一眼看到父目录和子目录。
+
+侧边栏模式：它可以完全替代 Treemacs，作为一个轻量级的项目侧边栏。
+
+属性显示：自动集成文件大小、修改时间、Git 状态等。
+
+二、 Dired / Dirvish 核心快捷键
+无论你用不用 Dirvish，这些 Dired 的核心快捷键都是通用的。熟练掌握它们后，你会发现操作文件的效率比鼠标快几倍。
+
+1. 基础导航
+j / k：上下移动（Vim 模式）或 n / p。
+
+Enter：进入目录或打开文件。
+
+^：退回到上一级目录。
+
+g：刷新当前目录。
+
+2. 标记与批量操作（Dired 的灵魂）
+m：Mark（标记）当前文件。
+
+u：Unmark（取消标记）。
+
+U：取消所有标记。
+
+% m：按正则表达式标记（例如输入 \.jpg$ 标记所有图片）。
+
+D：删除标记的所有文件。
+
+C：复制（Copy）标记的文件到目标路径。
+
+R：移动/重命名（Rename）标记的文件。
+
+3. 神技：Wdired（像编辑文本一样改名）
+C-x C-q：进入“可编辑模式”。
+
+此时你可以使用全局替换（M-%）或搜索（C-s）来修改屏幕上的文件名。
+
+C-c C-c：保存修改，所有文件会被批量重命名。
+
+C-c C-k：放弃修改。
+#+end_quote
 
 
 
@@ -70,6 +111,19 @@ dired是emacs内置的一个功能,拥有 一个特定的MODE, *DIRED-MODE*
 
 
 
+
+
+
+
+* dirvish 插件
+
+一个对dird的增强插件
+| 快捷键 | 功能      |
+|--------+-----------|
+| ^      | 上级目录  |
+| j      | jump file |
+| f      | file msg  |
+| o      | open file |
 
 
 
