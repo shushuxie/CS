@@ -6,16 +6,17 @@
 * 常用技术
 
 ** =C-h= help操作                                                   :emacs技巧:
- | C-h k   | 查看快捷键的含义             | 触发之后输入快捷键即可                   |
- | C-h c   | 简介描述快捷键含义           |                                      |
- | C-h v   | 查看定义的 varible           | 搜索想要查看的 veribal 内容               |
+ | C-h k   | 查看快捷键的含义              | 触发之后输入快捷键即可                    |
+ | C-h c   | 简介描述快捷键含义            |                                           |
+ | C-h v   | 查看定义的 varible            | 搜索想要查看的 veribal 内容               |
+ | C-h b   | 快捷键和函数绑定              |                                           |
  | C-h m   | 查看 mode 快捷键              | 在 org,agenda,package,dird 视图下都能查看 |
- | C-h P   | 包描述                     |                                      |
- | C-h R   | package 文档                |                                      |
- | C-c C-d | debugging 配置,技巧         |                                      |
- | C-h r   | emacs 使用                  |                                      |
- | C-h i   | emacs 文档,可以搜索相应的部分 |                                      |
-
+ | C-h P   | 包描述                        |                                           |
+ | C-h R   | package 文档                  |                                           |
+ | C-c C-d | debugging 配置,技巧           |                                           |
+ | C-h r   | emacs 使用                    |                                           |
+ | C-h i   | emacs 文档,可以搜索相应的部分 |                                           |
+ 
 
 * evil冲突导致特殊用法
 + treemacs使用树，需要进入插入模式，或者n/p移动
@@ -78,6 +79,10 @@ projectile是一个项目管理软件，一般情况下会自动识别项目；�
 2. 添加项目到treemacs =,ta ,td=
 3. 快速查找历史文件，不同项目里的
 4. 搜索技巧
+5. M-；在末尾添加注释                                                :工具:
+    有选区时：注释或取消注释选中的代码块。
+    没选区时：在当前行末尾添加注释。
+    在空行按：在当前行开头生成注释。
 
    
 

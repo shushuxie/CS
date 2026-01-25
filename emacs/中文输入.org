@@ -12,3 +12,55 @@
 
    可以说到此为止中文输入终于告一段落了，后面进行一些todo的优化方式；
 
+
+* vim配合的一些设置，
+
+费了好大的力气终于安装上了emacs-rime。
+仍旧没有实现eac清空输入发加上回到normal
+反而是有一点收获，关于ai的使用；
+
+1. 真的不能太依赖回答，自己还需要加以辨别并且进行思考；
+    或许最好的办法就是先让 *AI* 给我们确定一个正确的方向
+    例如RIME和eamcs是如何配合的，插件又是怎么生效的，
+    这样我们才能继续进行判断
+2. 文档终究还是第一要点，AI 的思考是通过现有信息的，但是
+   如果自己没有最新的信息呢，如果没有看到 ~github~ 上面的内容呢
+   终究还是要靠自己 =使用AI不是为了代替我们，是省力气，没有AI 我仍然可以才行=
+
+
+* 断言机制
+    现在添加了 *断言机* 制，让 =在英文相关的= 直接英文，不用再手动切换输入发了*
+越来越好用了
+
+
+* 文字渲染优化 M+b/u/v/i/k
+*样式*	语法	渲染效果示例~~	=用途建议=
+加粗	*text*	Bold	强调重点
+斜体	/text/	Italic	术语、外语词汇
+下划线	_text_	<u>Underline</u>	=强调或书籍名=
+删除线	+text+	~~Strike-through~~	任务废弃、更正
+等宽 (Code)	~text~	Monospace	代码片段、指令
+等宽 (Verbatim)	=text=	Verbatim	原始文字（不解释内部语法
+
+
+* evil-surround 插件
+记忆口诀：
+*y = you(add) c = change d = delete s = surround*
+
+🟢 Normal 模式
+
+| 快捷键    | 含义助记                | 操作说明           | 实际效果（       | 为光标）          | 使用场景 |
+|-----------+-------------------------+--------------------+------------------+-------------------+----------|
+| *y s i w )* | you surround inner word | 给当前单词加括号   | word → (word)   | 快速包裹单词      |          |
+| *y s i w (* | you surround inner word | 用带空格的括号包裹 | word → ( word ) | Lisp / 可读性友好 |          |
+| *y s s )*   | you surround sentence   | 包裹整行           | text → (text)   | 快速包裹当前行    |          |
+| *c s " '*   | change surround         | 替换包裹符号       | "word" → 'word' | 切换引号 / 括号   |          |
+| *d s "*     | delete surround         | 删除外层包裹       | "word" → word   | 快速去壳          |          |
+
+1. 总共就三种命令 ~ys cs ds~ 对应添加，修改，删除
+2. iw in word
+3. 不能选中，只能在normal 模式下自动修改行后面的部分
+4. 左侧括号会加空格，右侧紧贴
+
+
+ hello print("hewere") hello word("nfiewerewf")
