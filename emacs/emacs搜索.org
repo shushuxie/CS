@@ -1,6 +1,7 @@
 ** 搜索什么?
 搜索也就两类,文字内容和文件
 
+
 ** 文字搜索
 
 *** 当前buffer
@@ -13,5 +14,35 @@
 | *counsel-find-file*    | ,ff    |                |
 | *projectile-fine-file* | ,pf    | 项目搜索文件   |
 
+projectile
+swipper
+    
+swiperk
+log    
+:LOGTIME:
+插入时间
+:END:
+        
+ *nihk* 
+ :LOGTIME:
+ nihk
+ :END:
 
+        
+             
+
+:LOGTIME:
+ 插入时间
+:END:
+
+
+ini
+n
+kkkkk
+ninikkk
+        
+=        
+
+
+，
 
