@@ -14,6 +14,172 @@ ollama run qwen2.5-coder:7b
 #+end_src
 
 
+* Claude Code（Anthropic 官方终端 agent）
+  开篇说「没有让 AI 帮我进行任何的编码帮助，一次都没有」—— Claude Code
+  就是补这一课最正统的入口。它是 Anthropic 家的闭源终端 coding agent，
+  也是这类工具的祖师爷（2025 年初就有了）。
+
+  它有一个关键特性：**只认一种协议** —— Anthropic Messages API
+  （=POST /v1/messages=）。反过来说，**谁能提供这个接口，谁就能当它的后端**。
+  官方、阿里百炼、智谱、Kimi、甚至本地 Ollama，全都是从这条路接进去的。
+  换后端 = 改一个环境变量（=ANTHROPIC_BASE_URL=），思路和 opencode 换
+  provider 一样，只是 Claude Code 只留了「换 base URL」这一道口子。
+
+** 安装（含踩坑实录）
+   #+begin_src shell
+   # 方式一：官方原生安装脚本（推荐）
+   curl -fsSL https://claude.ai/install.sh | bash
+
+   # 方式二：npm 全局安装
+   npm install -g @anthropic-ai/claude-code
+
+   # 验证
+   claude --version
+   #+end_src
+
+   ⚠️ **npm 装的坑（macOS arm64 亲踩）**：
+   - npm 包只是个「外壳」，真正的原生二进制由 postinstall 去下载
+   - 网络不稳时下载会被**截断**（本例只下到 44MB，完整应是 255.5MB）
+   - Apple Silicon 上，**损坏/未签名的 arm64 二进制会被内核直接 SIGKILL**
+     （退出码 137），报错是 =code object is not signed at all= 或
+     =main executable failed strict validation= —— 很容易误判成「签名问题」
+   - 它还会把半成品塞进 =~/.claude/downloads/*.zst=，那个文件同样是截断的
+   - **正解**：直接从 npm registry 断点续传重下平台包，校验 sha512 再解压：
+
+   #+begin_src shell
+   URL=https://registry.npmjs.org/@anthropic-ai/claude-code-darwin-arm64/-/claude-code-darwin-arm64-<版本>.tgz
+   curl -L --retry 10 --retry-all-errors -C - -o /tmp/cc.tgz "$URL"
+   # 与 registry 元数据里的 dist.integrity 比对（sha512 → base64）
+   openssl dgst -sha512 -binary /tmp/cc.tgz | openssl base64 -A
+   tar -xzf /tmp/cc.tgz -C /tmp/cc
+   cp /tmp/cc/package/claude ~/.local/bin/claude && chmod +x ~/.local/bin/claude
+   #+end_src
+   =~/.local/bin= 通常已在 PATH 里，放这儿最省事。以后自动更新若又失败，
+   八成还是下载被截断，重跑一遍官方安装脚本即可。
+
+** 接入后端一：阿里云百炼（国内最省心）
+   不用梯子，按量计费或套餐都行。
+   **Key 和 Base URL 必须配套，错配就是 401。**
+
+   | 计费方式   | ANTHROPIC_BASE_URL                                    | Key 形态          |
+   |------------+-------------------------------------------------------+-------------------|
+   | 按量计费   | =https://dashscope.aliyuncs.com/apps/anthropic=       | =sk-= / =sk-ws-=  |
+   | Coding Plan| =https://coding.dashscope.aliyuncs.com/apps/anthropic=| =sk-sp-=          |
+   | Token Plan | =https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic= | 套餐专属 |
+
+   配置要填**四个 tier** —— Claude Code 内部把请求分成快/中/强三档，
+   少填一个会在会话中途报 =model not found=：
+
+   #+begin_src json
+   {
+     "env": {
+       "ANTHROPIC_BASE_URL": "https://dashscope.aliyuncs.com/apps/anthropic",
+       "ANTHROPIC_AUTH_TOKEN": "sk-你的key",
+       "ANTHROPIC_API_KEY": "",
+       "ANTHROPIC_MODEL": "qwen3.7-plus",
+       "ANTHROPIC_DEFAULT_HAIKU_MODEL": "qwen3.6-flash",
+       "ANTHROPIC_DEFAULT_SONNET_MODEL": "qwen3.7-plus",
+       "ANTHROPIC_DEFAULT_OPUS_MODEL": "qwen3.7-max"
+     }
+   }
+   #+end_src
+   - =ANTHROPIC_API_KEY= 要**显式置空**：只要它非空，就会盖掉你登录的订阅
+   - token 走 =ANTHROPIC_AUTH_TOKEN=（对应 =Authorization: Bearer=）；
+     用 =ANTHROPIC_API_KEY= 则对应 =x-api-key=。百炼两种都收
+   - 配好后在 Claude Code 里 =/status= 能看到 base URL
+
+   🔴 **安全**：key 别写进这个笔记仓库（要推 GitHub 的）。
+   本机自用，放 =~/.zshenv= 就行。
+
+** 接入后端二：本地 Ollama（零成本验证通路）
+   Ollama ≥ 0.14 起**原生实现**了 Anthropic Messages API
+   （=POST /v1/messages=），所以**不需要任何代理/转换器**：
+
+   #+begin_src shell
+   # 用行内环境变量试一发（不改任何配置文件）
+   ANTHROPIC_BASE_URL=http://localhost:11434 \
+   ANTHROPIC_AUTH_TOKEN=ollama \
+   ANTHROPIC_API_KEY="" \
+   claude --model qwen2.5-coder:7b
+   #+end_src
+   =ANTHROPIC_AUTH_TOKEN= 的值是假的（本地不校验），但**必须非空**，
+   否则 Anthropic SDK 不肯发请求。
+
+   两个要点：
+   - **上下文**：Ollama 默认按显存给 4k/32k，而 Claude Code 建议 ≥64k，
+     否则系统提示一进去就撑爆。改法：Ollama App 设置里拉 Context 滑块，
+     或退出 App 后 =OLLAMA_CONTEXT_LENGTH=64000 ollama serve=
+   - **模型选择**（M1 Pro 32GB 参考）：=qwen3.6:27b-mlx=（~19GB，MLX 优化）、
+     =gpt-oss:20b=（~14GB，给上下文留内存多）、=qwen3-coder:30b=（MoE，出字最快）。
+     0.5B 那种只能验证「通不通」，干不了活
+
+   实测协议层是通的（以下三项都验过）：
+   - 带 =tools= 的请求 → 返回 =stop_reason: tool_use=、content 块类型 =tool_use=
+   - 带 =stream: true= → 标准 =message_start / content_block_delta / message_stop= 事件流
+   - 报错格式与 Anthropic 一致（=not_found_error=），Claude Code 能识别
+
+** ⚠️ 环境变量放哪里（最坑的一处）
+   同一套变量、同一个终端，**放错文件就是怎么都不生效**。
+
+   | 放在哪           | 谁加载                        | 裸 =claude= 能否用上        |
+   |------------------+-------------------------------+-----------------------------|
+   | =~/.zshrc=       | 只有**交互式** shell          | 新终端 ✅ / IDE、脚本 ❌    |
+   | =~/.zshenv=      | 所有 zsh（含非交互）          | ✅ 一律生效                 |
+   | =settings.json= 的 =env= | Claude Code 自己读   | ✅ 但**会盖掉 shell 变量**  |
+
+   两条硬规则：
+   - **=~/.zshrc= 只对交互式 shell 生效**。从 IDE 内置终端、脚本、GUI 启动时
+     拿不到 → 必须放 =~/.zshenv=。
+     （典型症状：命令行里好好的，一进 IDE 就打回官方）
+   - **=settings.json= 的 =env= 优先级高于 shell 变量**。官方文档原话：
+     "the settings file value applies in most sessions... replacing the
+     value inherited from the shell"。所以一旦写进 settings.json，
+     行内 =ANTHROPIC_BASE_URL=xxx claude= **也顶不掉它** → 本地 Ollama
+     就用不了了。想两边并存，就让 settings.json 保持干净。
+
+   还有个反直觉点：**改完配置，已经开着的终端不会自动刷新** ——
+   当前 shell 的环境是它启动那一刻定死的。必须 =source ~/.zshenv=
+   或干脆新开一个终端窗口。
+
+** 多后端并存：用别名
+   环境变量放 =~/.zshenv= 定「默认后端」，别名负责临时切换：
+
+   #+begin_src shell
+   # ~/.zshenv：默认后端（这里以百炼为例）
+   export ANTHROPIC_BASE_URL="https://dashscope.aliyuncs.com/apps/anthropic"
+   export ANTHROPIC_AUTH_TOKEN="sk-你的key"
+   export ANTHROPIC_API_KEY=""
+   export ANTHROPIC_MODEL="qwen3.7-plus"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="qwen3.6-flash"
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="qwen3.7-plus"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="qwen3.7-max"
+
+   # ~/.zshrc：别名（行内变量会覆盖 .zshenv 里的 export）
+   alias claude-local='ANTHROPIC_BASE_URL="http://localhost:11434" ANTHROPIC_AUTH_TOKEN="ollama" claude --model qwen2.5-coder:7b'
+   alias claude-anthropic='env -u ANTHROPIC_BASE_URL -u ANTHROPIC_AUTH_TOKEN -u ANTHROPIC_MODEL -u ANTHROPIC_DEFAULT_HAIKU_MODEL -u ANTHROPIC_DEFAULT_SONNET_MODEL -u ANTHROPIC_DEFAULT_OPUS_MODEL claude'
+   #+end_src
+   原理：=FOO=bar 命令= 是 shell 基本语义 —— 只为这一条命令设值，
+   会覆盖同名的 export。所以 =claude= 走默认、=claude-local= 走本地。
+   （别名只注册在交互式 shell，这没问题 —— 你本来就是手敲的）
+
+** 会话内切模型
+   - **同一后端内**：直接 =/model qwen3.7-max= 就能切，随时切
+   - **跨后端**（百炼 ↔ 本地 ↔ 官方）：切不了，因为 =ANTHROPIC_BASE_URL=
+     是**启动时定死**的 —— 退出，换别名重开
+
+** 排错对照表
+   | 症状                                              | 原因                             |
+   |---------------------------------------------------+----------------------------------|
+   | =Credit balance too low=；明明用百炼却显示 Opus   | 环境变量没生效，实际连的还是官方 |
+   | =401 invalid_api_key=                             | Key 和 Base URL 不配套           |
+   | =Unable to connect to api.anthropic.com=          | 同上，没切到第三方端点           |
+   | =model not found=（会话中途才报）                 | 三个 tier 没填全                 |
+   | 命令行好使、IDE 里不行                            | 变量在 =~/.zshrc=，该挪到 =~/.zshenv= |
+   | 命令突然起不来（exit 137 / 签名报错）             | 二进制下载被截断，按上面重装     |
+
+   启动横幅会显示当前模型名 —— 这是最快的「我到底连的哪家」判据。
+
+
 * opencode 的使用
   opencode 是一个开源的 AI 编码 agent，跑在终端里（TUI），也有桌面端和 IDE 插件。
   可以直接读写项目文件、跑命令、改代码，比单纯的对话框交互强大很多。
