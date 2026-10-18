@@ -35,6 +35,10 @@ zhihu CLI 里，直接用 CLI 读取收藏、归档、删收藏。
    #+begin_src shell
    $ZHIHU interact collect view <收藏夹ID> --json -n <BATCH>
    #+end_src
+   - 解析提示：CLI 会在 JSON 前先打印一行进度（如
+     `Fetching collections for …`），直接 json.load 会失败；
+     需跳过首个非 JSON 行（例如从第一个 `[` 起截取）再解析。
+     第 2 步的 collect list 同理。
    从 JSON 里取每条的 标题、URL、类型（answer/article/pin），
    向用户展示「本批将处理 N 条」的清单。
 
@@ -94,7 +98,7 @@ zhihu CLI 里，直接用 CLI 读取收藏、归档、删收藏。
           :PROPERTIES:
           :链接:  <URL>
           :作者:  <作者>
-          :原文:  原文/<归档文件名>.org
+          :原文:  [[file:原文/<归档文件名>.org][本地原文]]
           :抓取:  $TODAY
           :END:
 
