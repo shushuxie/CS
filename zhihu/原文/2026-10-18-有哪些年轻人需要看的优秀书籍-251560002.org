@@ -1,0 +1,117 @@
+#+TITLE: 有哪些年轻人需要看的优秀书籍？
+#+LINK: https://www.zhihu.com/answer/251560002
+#+AUTHOR: 猪八戒
+#+CREATED: 2017-10-28
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+让开让开，这道题我一定要答，和楼上所有推荐看具体书目的都不一样，这是一篇方法论的总结。
+
+*授人以鱼不如授人以渔！！！*
+
+这篇文章教你如何充分利用牛剑常春藤等名校资源，去获得阅读指导，也是对自己的阅读的一个反思和未来阅读的指导。即使没有过人的天才，找到合适的方法，在正确的道路上也能走得更远一些。
+
+至于这些书的资源，大部分是英文，部分也有中文翻译。书的资源还在搜集当中，整理好了会陆续在我的个人公众号后台发布的，而按学科划分的阅读书单，也会在后续陆续更新。
+
+*Part 1*
+
+*不知道读什么书？这里有从剑桥，哈佛的官方推荐专业读书目录*
+
+三年前，我处于人生的一种低谷状态的时候，第一次想要求助于心理学，自己瞎找的情况下购买了被媒体吵得很火的《遇见更好的自己》。看完之后，更郁闷了，满满的槽点无从下口。这是一本完全是外行人写的不伦不类的二手甚至三手信息，里面充斥了大量的心灵鸡汤，以及没有完整的学科知识支撑的作者臆想。而这样的书籍，在对心理学没有基本的科学认识的时候，是很容易没误导的，读了书浪费时间还好，如果读歪了，走上所谓的心灵灵修的道路，那真的是得不偿失了。
+
+现在看来，如果我对心理学有基本的兴趣，并且认为自己有阅读的必要，以帮助我实现更好的自我认识和成长，那么我会去读比如：
+
+Damasio, A. (2010). Self comes to mind: constructing the conscious brain. (Vintage Books).
+
+这本书是剑桥大学的心理和行为学专业推荐给本科入学新生的读物。官网上也说了，对于新被录取的学生，并不需要他们提前具备相关专业方面的各种知识来读这些书。也就是说，这些书单，对于没有阅读基础的你我来说，应该是不构成专业上的阅读障碍的。而这本书京东上就有原版英语的出售。
+
+*从各大名校挂出来的给本科生的阅读清单入手，用这种方法去获得认知一个学科的基础，构建知识体系，应该是最安全便捷的途径了。* 与其被网络上各种卖成功学和畅销鸡汤的书单坑，不如直接去各大名校官网去搜好了。名校给本科生开的书单，既保证了科学性和严谨性，并且还不要求学科基础。
+
+下面列出几个主要名校的reading list 的链接，今天只是把几个重点的书单网址贴出来，大家可以自己去搜，不需要翻墙。书单的整理，我自己会慢慢整理，在公众号上推送。
+
+*1. King’s college（剑桥大学国王学院）推荐阅读书单：*
+
+[[http://www.kings.cam.ac.uk/study/undergraduate/offerholders/reading-lists/index.html][http://www.kings.cam.ac.uk/study/undergraduate/offerholders/reading-lists/index.html]]
+
+*2. Downing college Combridge 的阅读推荐*
+
+不仅有按学科的本科新生阅读书，还有培养计划呢，可以看看剑桥的本科培养大概是什么样子的，比如，我还在他们的哲学院系下找到了一份官方的写作训练资料，是为了培养本科生的学术写作能力用的，真的很棒啊。
+
+[[http://www.dow.cam.ac.uk/join-downing/information-new-students/undergraduates-reading-lists][http://www.dow.cam.ac.uk/join-downing/information-new-students/undergraduates-reading-lists]]
+
+*3. Wolfson College（学科基本和国王学院重合）*
+
+[[https://www.wolfson.cam.ac.uk/applying/undergraduate/offerholders/reading][https://www.wolfson.cam.ac.uk/applying/undergraduate/offerholders/reading]]
+
+*4. 牛津大学的各个学科reading list*
+
+[[http://www.oxbridgeapplications.com/resources_category/reading-lists/?gclid=CPbQupzFzNYCFdgnvQodlZcAIQ][http://www.oxbridgeapplications.com/resources_category/reading-lists/?gclid=CPbQupzFzNYCFdgnvQodlZcAIQ]]
+
+[[https://picx.zhimg.com/50/v2-1816b409a930bd2cb6acecb19e411552_720w.jpg?source=2c26e567]]
+
+（这张截图放的是数学这门学科的reading list的推荐，点开进去要简单注册一下…）
+
+*5. 哈佛最新放出来的夏季假期阅读清单* ，什么学科的都有，真的是，很长…..
+
+[[https://sites.fas.harvard.edu/~sica/reading.htm][https://sites.fas.harvard.edu/~sica/reading.htm]]
+
+还有一个JULY版本的阅读推荐，发现这些学校的图书馆的官网还会定期发布阅读推荐，也是一个寻找阅读信息的好的地方啊。 [[https://gsas.harvard.edu/news/colloquy/summer-2017/reading-list-july-2017][https://gsas.harvard.edu/news/colloquy/summer-2017/reading-list-july-2017]]
+
+*总结：*
+
+以reading list+university为关键字去google上搜索，便能轻易获得这些书籍阅读推荐的链接。如果再加上“library+大学名称” 便可以获得名校图书馆的书籍目录和阅读推荐更新。像我的学校邮箱就会定期收到学校图书馆发布的最新书籍目录，是很好的阅读资料。
+
+*分享一波当当的优惠码：*
+
+*满200立减30 优惠码是 FJ8YCC*
+
+*有效期到4月 9 号，可以叠加使用官方的活动*
+
+*Part 2.*
+
+*中文阅读，搜索学术大牛的非学术类书籍，绕过英语阅读障碍*
+
+鉴于part 1里面推荐的内容都是英文阅读，对大部分人来说还是有一定障碍的，那么还有一个方法，就是搜索经典教材的作者的相关非学术类著作，就可以获得高质量的阅读啦。
+
+还是以上面Part 1提到的剑桥推荐的那本行为心理学的推荐阅读教材为例子，去搜作者Antonio Damasio（安东尼奥•达马西奥），会发现他是一位神经和行为学上的超级大牛，著名的“吊桥理论”就是他提出来的。搜他的英文名字在京东上会发现一系列他的著作，当然，即使是中文的书籍也有不少，比如《笛卡尔的错误》，《悲伤和感受着的脑》，优酷上还可以搜到他的演讲视频。
+
+[[https://pic1.zhimg.com/50/v2-55bfe8df238cc902f57a625ad82e369b_720w.jpg?source=2c26e567]]
+
+这样的搜索并不会花去太多的时间，尤其是和浪费在读烂书的时间相比，这点信息的搜索，可以帮你排除大量的嘈杂的信息杂音。
+
+还有，对于在校学生来说，学校的数据库是最好的一个资源了，通过搜索阅读综述类的学术文章，可以迅速知道这个领域的研究课题思路以及最新的发展方向。利用好这些资源，养成了高质量的阅读习惯和品位，以后面对市面上五花八门的书籍，自然就能从容分辨出了。
+
+*Part 3.*
+
+*当牛津为了人类科普操碎了心，就有了这套此生不读会后悔的书*
+
+这里要给大家安利一套超级神奇的书，属于你不读此生会后悔，而我不安利会不心安系列那种 ——《牛津通识读本系列》（Very Short Introduction series,后面简称VSI 系列）。
+
+[[https://picx.zhimg.com/50/v2-e4c884dd2283b04677c7efd2a223273d_720w.jpg?source=2c26e567]]
+
+这一套书的每一本都对一个特定的主题内容进行简洁而精炼的介绍，几乎所有读本都是由该领域公认的大牛们来写的，深入浅出，覆盖全面，而且每一本真的真的非常非常short！就像上图那样！大概就是A5小册子那样的纸张100页左右的吧，并且每本书后面都给了长长的深度阅读的建议！
+
+这就相当于，全世界每个领域的顶尖大牛，给你做了每个领域的大纲梳理，用他们研究探索了几十年的积累和沉淀，把最精华的内容的框架梳理出来，然后再写成简单的文字，给大家科普。
+
+到2014年9月的时候，该系列已经出版书目达401本，并且给每一本书记都编号了，内容包括：历史，神学，科学哲学，经济学，后现代主义，情绪，莎士比亚，休谟，西班牙内战，计算机科学等等。官方的宣言是：这套书籍基本涵盖了从计算机科学到社会科学到自然科学的所有的主要学科，为所有读者提供一个可读性强且包罗万千的工具图书馆。官网最新还持续有新书发布出来，比如最新的《天主教》：
+
+[[https://picx.zhimg.com/50/v2-ae9d2e9d1ac38b9ed2e7d84d81cdfe7d_720w.jpg?source=2c26e567]]
+
+这里的每一本书都可以作为一个学科入门了解的纲领性阅读资料，都是学科大牛的精心之作，比市面上任何的三四手阅读资料都要好上许多。亚马逊就有中文版的卖，当然有些系列还没有翻译出来，感兴趣的可以找资源阅读第一手英文的。不过官方网站要翻墙，尴尬...链接就不放了...
+
+阅读是一项很艰难的活动，尤其是阅读专业书籍，更遑论用英语阅读了。高质量的阅读是需要大量的时间精力去磨练的，但是年轻的时候能够培养出这些阅读能力和信息搜集能力，甚至是独立思考的能力，是受益终生的事情。至少，等老了的时候，不会被朋友圈的不转不是中国人的劣质信息欺骗。
+
+更重要的是，相比较于推荐某些具体的书籍，这个方法可以让你一直和经典以及前沿的学科知识保持更新和同步，现在的书单商业软文多如牛毛，很难分辨，不如跟着学校走，远比鸡汤书单文来得好。
+
+[[https://mp.weixin.qq.com/s?__biz=MzI0NzU1MjcxNg==&tempkey=OTI4XzdLbmRScWVxaVI3RnIydGItRkc3SHZjdUhKb2gtNm42ODd3ZnFuOHdvRXlHS3gwSF9YdEh3ZjRBWVp5bjFFXzRVZTNUUmJnOEJ3cFRwQXRQODFUNjNTWU9EdWFmNzBVbENQTHRiZkgtcTdOeUszYlJFWXFTYzg2REc2MVF0cnF1SHFBbnpYbHlFQmFubWRvb3NEaDVpd2VzOTJYSW11RDFrMTR2ZVF%2Bfg%3D%3D&chksm=69af0c1f5ed8850905005e28016878838bfe7c70c523d0c9e4bab16fec053afb3d261db1486d#rd][这应该是最值得读的书的目录整理文章，来自牛津剑桥和哈佛的书单]]
+
+ 感谢阅读~如果文章对你有启发， *可以顺手点个赞嘛！ *）**
+
+
+ *推荐阅读：*
+
+*—END—*
+
+[[https://www.zhihu.com/question/305507128/answer/650633064][什么能力很重要，但大多数人却没有？]]
+
+[[https://www.zhihu.com/question/22867272/answer/112739101][如何变得会聊天？]]

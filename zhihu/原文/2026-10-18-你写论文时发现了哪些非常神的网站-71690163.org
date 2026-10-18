@@ -1,0 +1,18 @@
+#+TITLE: 你写论文时发现了哪些非常神的网站？
+#+LINK: https://www.zhihu.com/answer/71690163
+#+AUTHOR: 匿名用户
+#+CREATED: 2015-11-11
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+来个数学的，虽然目前在搞CS。
+
+做PDE作业时发现的网站，专门用来对复杂式子求积分、求导，写好后一丢就行了。对于我这种记不住积分公式的简直是福音。
+
+[[http://www.derivative-calculator.net/][http://www.derivative-calculator.net/]]
+
+
+[[http://www.integral-calculator.com/][http://www.integral-calculator.com/]]
+
+
+[[https://picx.zhimg.com/50/cf65f80ecb7216d7e246dc2dd2643164_720w.jpg?source=2c26e567]]

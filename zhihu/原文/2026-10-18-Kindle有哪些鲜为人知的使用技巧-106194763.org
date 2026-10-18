@@ -1,0 +1,152 @@
+#+TITLE: Kindle 有哪些鲜为人知的使用技巧？
+#+LINK: https://www.zhihu.com/answer/106194763
+#+AUTHOR: 七兜兜
+#+CREATED: 2016-06-16
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+欢迎关注我的微博获取最新Kindle选购流程图。有何问题也欢迎在知乎微博私信我。
+
+微博：
+
+[[http://weibo.com/chenweipapapa][我的微博]]
+
+现在Reabble已经支持自动下载推送订阅内容和字典了。
+
+*不是鲜为人之吗，我觉得我的回答才应该叫鲜为人知！*
+
+
+ *竟然没有人说Reabble!*
+
+#+begin_quote
+你觉得Kindle的内置浏览器是花瓶吗？
+
+答案是No!
+#+end_quote
+
+Reabble是为Kindle电纸书设计的RSS新闻阅读器， *没有任何滑动操作，全程点击操作* ，响应速度也很快。
+
+*优点：可以自由订阅想看的RSS*
+ *缺点：只能在有网络链接的时候阅读*
+
+官方介绍：Kindle上的RSS聚合阅读应用，专为电子墨水屏特性设计，让你可以心无旁骛地沉浸于资讯阅读。也能用于其它带浏览器的设备如手机、Nook、Kobo、博阅等。
+
+#+begin_quote
+*官方网站：*
+[[http://reabble.com][http://reabble.com]]
+*详情见Reable官网帮助页：*
+[[http://reabble.com/help][http://reabble.com/help]]
+#+end_quote
+
+*使用步骤*
+
+1. 用电脑登录 [[http://Reabble.com][http://Reabble.com]] ，注册一个 [[http://Inoreader.com][http://Inoreader.com]] 帐号，并在里面添加一些订阅。
+
+2. 本答案部有一些热门的订阅资源可以直接把对应网址输入到inoreader左上角的订阅框里订阅。
+
+3. 打开 [[http://reabble.com][http://reabble.com]] ，点击「用Inoreader帐号登录」，用刚才注册的Inoreader帐号登录 [[http://reabble.com][http://reabble.com]] 。
+
+4. 打开 [[http://reabble.com/code][http://reabble.com/code]] ，得到12个字母的登录码。
+
+5. 打开你的Kindle主屏右上角的菜单，选择“体验版网页浏览器”并打开网址“reabble.com”，点「登录」按钮，用上一步得到的登录码登录。以后每次打开Kindle的浏览器都会保持登录状态。
+
+6. 以后需要更改订阅去 [[http://inoreader.com][http://inoreader.com]] 。
+
+
+[[https://picx.zhimg.com/50/dc75c6b163da44ebb424b6f75592c3b4_720w.jpg?source=2c26e567]]
+
+*读中文订阅感觉棒棒的！*
+
+[[https://pic1.zhimg.com/50/6aa50f10abb85227019da0ba413cfea7_720w.jpg?source=2c26e567]]
+
+*还能调节字体！*
+
+[[https://pic1.zhimg.com/50/863efe1118dbb23c035cefb5083553ea_720w.jpg?source=2c26e567]]
+
+*看英文也不错！*
+
+[[https://pica.zhimg.com/50/6bcaa8d6582a8111fdcc3301227578f9_720w.jpg?source=2c26e567]]
+
+*技巧和注意点*
+
+- 由于Kindle浏览器的特性，你不能做双击动作，否则会放大界面和文字，你可以再次双击或用双指捏合来缩回原来的大小。
+
+- 在阅读时，你会发现有些源的文章不完整（比如腾讯新闻），这时你可以点击Reabble阅读界面的左上角来加载全文。
+
+- 在阅读界面，点击界面的不同区域会有不同的功能：左上角是加载全文，上中是打开文章列表，右上角是转到下一篇文章，左边1/5屏幕是上翻一页，右边4/5屏幕是下翻一页，点击左下角会出现菜单。
+
+- 偶尔Kindle的屏幕底下会出现滚动条，你可以不用管它，强迫症患者可以双击屏幕左上角来去掉它。
+
+- 如果Kindle浏览器频繁崩溃退出或反应非常慢可以试试重启一下Kindle，或者发现在打开特定文章崩溃时跳过这个文章。 建议每二周重启一次Kindle。
+
+*使用Inoreader管理订阅源*
+
+电脑登陆 [[http://www.inoreader.com/][Inoreader - The content reader for power users who want to save time.]] 管理你的订阅呀
+
+[[https://picx.zhimg.com/50/cf986b3ee111817b78dd9da8ce33665c_720w.jpg?source=2c26e567]]
+
+*我用它来练习英语听力，具体怎么做呢？*
+
+[[https://pic1.zhimg.com/50/v2-ffc407d60fd78ed8708103ffcd24e498_720w.jpg?source=2c26e567]]
+
+首先在我的iPhone的Podcasts上订阅60-SECOND Science栏目（被广大TOEFL考生成为SSS，是提高听力水平的绝佳材料）。
+
+[[https://picx.zhimg.com/50/v2-187b24ea4b1afcf99b2a120c347607bb_720w.jpg?source=2c26e567]]
+
+然后在Innoreader搜索并订阅60-SECOND Science，订阅数最多的就是该听力材料的官方文本RSS。
+
+接下来打开在Kindle上打开Reabbe。
+
+[[https://pic1.zhimg.com/50/v2-3bd36f8aca288b00425caff9c0978466_720w.jpg?source=2c26e567]]
+
+于是大家看到Kinlde上的文本和Podcasts听力材料是一一对应的，而且文本和听力都是同时发布。
+
+*注意：* 免费版每天只能看15篇文章，收费服务官方淘宝店一年只要9块，购买永久服务是27块！对你没看错是人民币！真的不是广告……
+
+-----
+
+*补充一个：用Kindle看图！（貌似很多人反应此方法已经不能使用了）*
+
+Kindle连接电脑，在你的Kindle目录下新建一个文件夹命名为image，你的Kindle上就会自动出现一个图片文件夹。讲图片放进去就能用Kindle看图啦！那么有人会问我为什么要用KIndle看图呢？别急往下看！
+
+[[https://picx.zhimg.com/50/2529955d5b7f68b152b623e25bfc4bb4_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/eed5d1f08c95b73bbf8ae5ff718d7f32_720w.jpg?source=2c26e567]]
+
+我可以把课程表做成图片放到图片文件夹里。
+
+忽然突发奇想，用迷宫软件生成几个迷宫图片，无聊的时候玩迷宫嘿嘿嘿~
+
+[[https://pic1.zhimg.com/50/a33fc75198e8e45bd3625b69cf995f18_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/cb7961a706edd44255bf71deb2d1a605_720w.jpg?source=2c26e567]]
+
+欢迎大家在评论里开脑洞！
+
+-----
+
+KPW3、KPW2、Oasis、Voyage、Kindle7、Kindle8 最新固件版本为 [[https://kindlefere.com/post/464.html][5.8.7.0.1]] ，可以越狱！于是自己改了这样的屏保，是不是很好看~
+
+越狱教程： [[https://kindlefere.com/post/409.html][Kindle 特制固件文件下载：不拆机降级固件]]
+
+[[https://picx.zhimg.com/50/3d470bd7e25a0e5cba57ca9c18429c5d_720w.jpg?source=2c26e567]]
+
+屏保插件 [[http://www.mobileread.com/forums/showthread.php?t=195474][K5 FW 5.x ScreenSavers Hack]] 支持Overflow模式，就是可以在锁屏最后的画面上叠加一个部分透明的图层，于是我做了这个，仿纸破洞的屏保。
+
+[[https://pic1.zhimg.com/50/856f9cb2ce50867f756e8005d6fa07d5_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/5a70f152434953dfbdf390dce17019ef_720w.jpg?source=2c26e567]]
+
+-----
+
+今天忽然开发出了Kindle的画画功能！
+
+安装了插件 [[https://www.mobileread.com/forums/showthread.php?t=186645][K5 Kindle Touch/PW1/PW2 5.0.x]] ，具体可以打开原链接查看。
+
+很没用，笔的粗细不能调整，没有撤销，只能按电源键关闭程序。看了下源码，实在简陋。
+
+[[https://pic1.zhimg.com/50/16f16c6a532da4d6b664093c53faa052_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/0be3c678baef4c714668968776125a94_720w.jpg?source=2c26e567]]
+
+以上。

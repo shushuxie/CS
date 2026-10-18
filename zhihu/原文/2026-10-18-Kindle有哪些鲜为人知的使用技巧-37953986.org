@@ -1,0 +1,8 @@
+#+TITLE: Kindle 有哪些鲜为人知的使用技巧？
+#+LINK: https://www.zhihu.com/answer/37953986
+#+AUTHOR: 七兜兜
+#+CREATED: 2015-01-24
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+把PDF发送到Kindle的时候，邮件主题写convert，这样系统会自动把PDF转换成适合Kindle阅读的格式。

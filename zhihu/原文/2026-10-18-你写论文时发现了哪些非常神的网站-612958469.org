@@ -1,0 +1,32 @@
+#+TITLE: 你写论文时发现了哪些非常神的网站？
+#+LINK: https://www.zhihu.com/answer/612958469
+#+AUTHOR: 匿名用户
+#+CREATED: 2019-03-03
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+*这是我用过最好用的、堪称完美的公式编辑工具。*
+
+*这是我用过最好用的、堪称完美的公式编辑工具。*
+
+*这是我用过最好用的、堪称完美的公式编辑工具。*
+
+可以在线免费使用其开发者版本，也可以付费使用其离线版本。开发者版本链接如下：
+
+[[http://www.wiris.com/editor/demo/en/developers][MathType demo - For Developers]]
+
+我们来直观感受一下：
+
+[[https://picx.zhimg.com/50/v2-ad5924099aa60eaedb423a40238984db_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-8209b5db433387e7ceb7a765a6183793_720w.jpg?source=2c26e567]]
+
+公式直接可视化编辑，操作非常简单，一分钟即可上手。编辑完成后可以自动生成latex、png等多种格式，应有尽有。
+
+写论文时再也不用一步一步繁琐地编辑调试latex公式啦。
+
+祝大家毕业顺利。
+
+[]()
+
+[]()

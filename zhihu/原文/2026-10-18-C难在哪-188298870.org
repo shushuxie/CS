@@ -1,0 +1,141 @@
+#+TITLE: C++ 难在哪？
+#+LINK: https://www.zhihu.com/answer/188298870
+#+AUTHOR: 咩咩羊
+#+CREATED: 2017-06-24
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+来对比下呗，
+
+大概是这样的
+
+*/** 入门阶段 **/*
+
+c：对于这个问题我也很绝望啊。
+
+
+[[https://pic1.zhimg.com/50/v2-470191e85112424f5786395ddfdb0dcc_720w.jpg?source=2c26e567]]
+
+
+c++：这片新大陆到处是陨石坑
+
+[[https://pic1.zhimg.com/50/v2-ec67ad43978fc2dd4d3da5a593ed429d_720w.jpg?source=2c26e567]]
+
+
+java：每一个大厨都是从洗盘子开始的，呸！
+
+[[https://pica.zhimg.com/50/v2-e748f17cd1d7fc399b602bfda2701a3e_720w.jpg?source=2c26e567]]
+
+
+c sharp ：爸爸的腿，巨硬
+
+[[https://pica.zhimg.com/50/v2-c52ec7603d995afadae3b1c8407d97a5_720w.jpg?source=2c26e567]]
+
+
+python ：哇塞
+
+[[https://pica.zhimg.com/50/v2-61e4fc9ec63e00382f3e04cb5636bb48_720w.jpg?source=2c26e567]]
+
+
+javascript：这是什么新玩具，es6嘛
+
+[[https://picx.zhimg.com/50/v2-68e4861c1092d0c9a28f29eea2de19e2_720w.jpg?source=2c26e567]]
+
+
+*/** 使用阶段 **/*
+
+c：人生如雕刻，是个细致而漫长的过程
+
+[[https://picx.zhimg.com/50/v2-06596053ab31192467f6ab9114f12184_720w.jpg?source=2c26e567]]
+
+
+c++：为什么有这么多东西要学，这种奇奇怪怪的东西到底是干嘛的
+
+[[https://pic1.zhimg.com/50/v2-2e8da02e0ebd99a7856fd88c547266c5_720w.jpg?source=2c26e567]]
+
+
+java：没错这就是编程的真相！
+
+[[https://picx.zhimg.com/50/v2-1e54c0be41de28a9440bce3f74a7c319_720w.jpg?source=2c26e567]]
+
+
+csharp：这就是爸爸的爱
+
+[[https://pic1.zhimg.com/50/v2-ace091bbf92c2e44ba2a8fe479c62cbe_720w.jpg?source=2c26e567]]
+
+
+python：哇塞！
+
+[[https://picx.zhimg.com/50/v2-61e4fc9ec63e00382f3e04cb5636bb48_720w.jpg?source=2c26e567]]
+
+
+javascript：当然编程也可以是轻松愉快的
+
+[[https://pic1.zhimg.com/50/v2-68e4861c1092d0c9a28f29eea2de19e2_720w.jpg?source=2c26e567]]
+
+
+*/** 第一次做出了小成果 **/*
+
+c：简直像个工艺品！
+
+[[https://picx.zhimg.com/50/v2-28458846ce22a7ceb3d0dbc60f3173ec_720w.jpg?source=2c26e567]]
+
+
+c++ ：时速1000，我就没见过能开这么快的车
+
+[[https://picx.zhimg.com/50/v2-4fcf978e49f73fa6c468fa8994fb6288_720w.jpg?source=2c26e567]]
+
+
+java ：实用才是硬道理，速度党一边玩，反正上高速你也只能跑100
+
+[[https://pic1.zhimg.com/50/v2-ae507f2ac613e17410afb461a628e74a_720w.jpg?source=2c26e567]]
+
+
+csharp：功能强大，实用性强，手动档操作
+
+[[https://pica.zhimg.com/50/v2-840c8f0ec6a9bf4cf73738b673938a9b_720w.jpg?source=2c26e567]]
+
+
+python：哇塞！
+
+[[https://picx.zhimg.com/50/v2-5deec4a3dd8a0c43be54cd750bffded1_720w.jpg?source=2c26e567]]
+
+
+javascript：不吹不黑，不散架是硬道理
+
+[[https://picx.zhimg.com/50/v2-32ccc36de4d8d5fc75efbcdcba92ab88_720w.jpg?source=2c26e567]]
+
+
+*/** 经验不足，实力有限，一意孤行，结果翻车 **/*
+
+c：啊啊啊啊啊。啊？
+
+[[https://picx.zhimg.com/50/v2-58024e97f4f4198e845e1b4ddf1f5e92_720w.jpg?source=2c26e567]]
+
+
+c++：......错的不是我，是世界（编译器）！一定是这样的！...好吧...好像是我自己忘安刹车了
+
+[[https://picx.zhimg.com/50/v2-fca687fbc06ab888345844b373848909_720w.jpg?source=2c26e567]]
+
+
+java：纯属自己作
+
+[[https://pic1.zhimg.com/50/v2-7b1ec329659cd4b82392d21c761ad50e_720w.jpg?source=2c26e567]]
+
+
+csharp：还是自己作
+
+[[https://picx.zhimg.com/50/v2-b9b58787923e22e7e006e82678ceed21_720w.jpg?source=2c26e567]]
+
+
+javascript：出问题了再拼一个呗....
+
+[[https://picx.zhimg.com/50/v2-68e4861c1092d0c9a28f29eea2de19e2_720w.jpg?source=2c26e567]]
+
+
+python：
+
+还在学习阶段，还没遇到过致命问题......
+
+
+--------图片来自网络，侵权就删------

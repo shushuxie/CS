@@ -1,0 +1,565 @@
+
+* 普通人怎么使用AI
+    有几种方法呢，刚开始的时候还是有购买API，后面是很火的open claw，养龙虾
+现在我神么都没有使用过，仅仅是使用了一些对话框交互，没有让AI帮我进行任何的
+编码帮助一次都没有，也没有在电脑上面搭建过什么，看来是时候进行一些操作了
+
+* 本地部署AI模型
+#+begin_src shell
+# 安装ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# 下载千问的大模型
+ollama run qwen2.5-coder:7b
+#+end_src
+
+
+* opencode 的使用
+  opencode 是一个开源的 AI 编码 agent，跑在终端里（TUI），也有桌面端和 IDE 插件。
+  可以直接读写项目文件、跑命令、改代码，比单纯的对话框交互强大很多。
+
+** 安装
+   #+begin_src shell
+   # 方式一：官方安装脚本（最简单）
+   curl -fsSL https://opencode.ai/install | bash
+
+   # 方式二：npm 全局安装
+   npm install -g opencode-ai
+
+   # 方式三：macOS / Linux 用 Homebrew
+   brew install anomalyco/tap/opencode
+   #+end_src
+
+** 配置供应商 API
+   opencode 支持任意 LLM 供应商，配置好 API key 即可使用。
+   #+begin_src shell
+   # 在 TUI 里输入，选择供应商并粘贴自己的 API key
+   /connect
+
+   # 或者在命令行登录，凭证保存在 ~/.local/share/opencode/auth.json
+   opencode auth login
+   opencode auth list      # 查看已登录的供应商
+   #+end_src
+   新手推荐用官方的 OpenCode Zen（已验证过的模型列表），
+   也可以选 anthropic、openai 等其它供应商。
+
+** 配置本地模型（ollama）
+   不想用云端、想跑本地千问，可以把 ollama 接进 opencode。
+
+*** 1. 准备本地模型
+    先确保 ollama 在运行，并拉取一个模型：
+    #+begin_src shell
+    # 确认 ollama 服务在跑（默认 11434 端口）
+    curl http://localhost:11434/api/tags
+
+    # 拉模型：编码建议用 coder 版，7b 起步
+    ollama pull qwen2.5-coder:7b
+
+    # 看看本地都有哪些模型，记下准确名字（含 :tag）
+    ollama list
+    #+end_src
+    注意 =ollama list= 里的名字要原样记下，比如 =qwen2.5:0.5b=、
+    =qwen2.5-coder:7b=，配置时模型 ID 必须完全一致。
+
+*** 2. 写 opencode 配置
+    编辑全局配置 =~/.config/opencode/opencode.json=
+    （或项目级 =./opencode.json=）：
+    #+begin_src json
+    {
+      "$schema": "https://opencode.ai/config.json",
+      "model": "ollama/qwen2.5-coder:7b",
+      "provider": {
+        "ollama": {
+          "npm": "@ai-sdk/openai-compatible",
+          "name": "Ollama (local)",
+          "options": {
+            "baseURL": "http://localhost:11434/v1"
+          },
+          "models": {
+            "qwen2.5-coder:7b": {
+              "name": "Qwen2.5 Coder 7B (local)"
+            }
+          }
+        }
+      }
+    }
+    #+end_src
+    - =npm= 用 =@ai-sdk/openai-compatible=，因为 ollama 提供 OpenAI 兼容接口
+    - =baseURL= 固定是 =http://localhost:11434/v1=（末尾带 =/v1=）
+    - =models= 里的 key 要和 =ollama list= 的名字一字不差
+    - 顶层 =model= 用 =provider/模型ID= 格式，这里是 =ollama/qwen2.5-coder:7b=
+
+*** 3. 重启并验证
+    配置只在启动时加载，改完必须重启 opencode：
+    #+begin_src shell
+    # 命令行验证是否识别到本地模型
+    opencode models | grep ollama
+    #+end_src
+    或在 TUI 里 =/exit= 退出重开，再用 =/models= 搜 =ollama= 选中即可。
+
+*** 踩过的坑
+    - 顶层 key 是 =provider=（单数），写成 =providers= 整段会被忽略，
+      导致 =/models= 里死活搜不到本地模型。
+    - 模型 ID 必须精确匹配，包括 =:0.5b=、=:7b= 这种 tag 后缀。
+    - 改配置后不重启，当前会话仍用旧配置，=ollama models=（新进程）能看到、
+      但 TUI 里 =/models= 看不到，就是这个原因。
+    - =qwen2.5:0.5b= 只有 0.5B，太小基本没法做编码 agent，
+      本地跑建议至少 =qwen2.5-coder:7b=。
+
+** 基本使用
+   #+begin_src shell
+   cd /path/to/project     # 进入项目目录
+   opencode                # 启动 TUI
+   opencode /path/to/project  # 或直接指定项目目录
+   #+end_src
+   进入后先用 =/init= 让它分析项目、生成 =AGENTS.md=（建议提交到 git），
+   这样它能更好地理解项目结构和编码风格。
+
+   输入消息时有两个实用前缀：
+   - =@文件名= :: 模糊搜索并引用项目里的文件，文件内容自动加入上下文
+   - =!命令= :: 直接执行 shell 命令，输出作为工具结果加入对话
+   #+begin_example
+   @src/api/index.ts 这个文件的鉴权是怎么处理的？
+   !ls -la
+   #+end_example
+
+** 常用 TUI 斜杠命令
+   | 命令         | 作用                                       |
+   |--------------+--------------------------------------------|
+   | /connect     | 添加供应商、配置 API key                   |
+   | /init        | 生成 / 更新 AGENTS.md                       |
+   | /models      | 列出可用模型                               |
+   | /new         | 新建会话（别名 /clear）                    |
+   | /sessions    | 列出并切换会话（别名 /resume、/continue）  |
+   | /compact     | 压缩当前会话上下文（别名 /summarize）      |
+   | /undo        | 撤销上一条消息及其文件改动                 |
+   | /redo        | 重做被撤销的改动                           |
+   | /export      | 导出当前对话为 Markdown                    |
+   | /editor      | 用外部编辑器（$EDITOR）写消息              |
+   | /themes      | 切换主题                                   |
+   | /help        | 帮助                                       |
+   | /exit        | 退出（别名 /quit、/q）                     |
+
+   多数命令有快捷键，默认 leader 键是 =ctrl+x=，例如 =ctrl+x u= 撤销、
+   =ctrl+x m= 切换模型。
+
+   注意：=/undo=、=/redo= 靠 git 管理文件改动，所以项目必须是 git 仓库。
+
+** Plan / Build 两种模式
+   按 =Tab= 在两种模式间切换（右下角有指示）：
+   - Plan 模式：只出方案不动代码，先让它讲清楚打算怎么实现
+   - Build 模式：真正动手改代码
+   建议复杂功能先进 Plan 模式讨论清楚方案，再切回 Build 模式执行。
+   还可以把图片拖进终端作为参考（比如设计稿）。
+
+** 命令行常用子命令
+   #+begin_src shell
+   # 非交互模式，直接给个 prompt，适合脚本 / 自动化
+   opencode run "解释一下 Go 里 context 的用法"
+
+   # 启动无界面 HTTP 服务，供 API 调用
+   opencode serve
+
+   # 启动带 Web 界面的服务
+   opencode web
+
+   # 列出所有可用模型（provider/model 格式）
+   opencode models
+   opencode models anthropic   # 按供应商过滤
+
+   # 会话管理
+   opencode session list       # 列出会话
+   opencode stats              # 查看 token 用量和花费
+
+   # 管理 MCP 服务器
+   opencode mcp add
+   opencode mcp list
+
+   # 升级到最新版
+   opencode upgrade
+   #+end_src
+
+** 自定义
+   配置分两个文件：
+   - =opencode.json= :: 服务端 / 运行时行为（模型、权限、MCP、格式化等）
+   - =tui.json= :: TUI 界面（主题、快捷键、滚动、光标、提示音等）
+   可以自定义主题、快捷键、代码格式化工具、自定义命令等。
+
+* Harness、Model 和 opencode 的关系
+  一句话：=模型= 是大脑，=harness= 是装着大脑的整辆车，=opencode= 是其中
+  专给写代码造的一辆车。
+
+** Model（模型）：只会说话的大脑
+   模型（qwen、glm、deepseek…）本质就是“读一坨文字 → 吐一坨文字”：
+   - 没有记忆：每次调用都是失忆的，之前聊过啥它自己不知道
+   - 没有手脚：不能自己打开文件、跑命令，它只会“说”该做什么
+   - API 卖的就是这个裸大脑
+
+** Harness（骨架）：给大脑配上身体和工具箱
+   harness 是包在模型外面的那层“脚手架”，负责所有模型不会干的事：
+   - 给模型装工具：读写文件、执行命令、搜索、改代码……
+   - 管理对话：维护上下文、会话历史，把工具执行结果再喂回模型
+   - 做成循环：模型说“我要读这个文件” → harness 真去读 → 把内容还回去
+     → 模型接着想下一步 → 直到任务完成
+   - 管安全和钱：权限审批（改文件要不要问你）、撤销 undo/redo、算 token 花费
+   Claude Code、opencode 的 agent 部分，本质都是不同的 harness。
+
+** 合起来类比
+   | 角色     | 类比               | 例子                          |
+   |----------+--------------------+-------------------------------|
+   | 模型     | 发动机 / 大脑      | qwen3.8-max、glm-5.3          |
+   | harness  | 整辆车（轮子方向盘）| opencode、Claude Code         |
+   | 你       | 司机               | 发指令的人                    |
+
+   - 只换模型不换 harness = 同一辆车换发动机
+     （opencode 里 /models 切 qwen↔glm↔deepseek）
+   - 只换 harness 不换模型 = 同一个脑子换车开
+     （qwen API 可以接 opencode，也可以接别的 agent 工具）
+
+** 亲身体验
+   此刻你正在用的就是：=opencode（harness）+ 阿里百炼 qwen3.8-max（model）=。
+   你发的消息由 harness 收集上下文/工具结果发给模型，模型决定改哪个文件，
+   harness 真正动手改并等你批准。模型只出主意，harness 替它出手。
+
+** 为什么这个概念有用
+   - 明白为什么 opencode 可以随便换模型：换发动机而已，车还是那辆车
+   - 明白为什么其各家 API 只按 token 收费：卖的是大脑，工具箱是
+     harness 白送的
+   - 选型时分开看：模型好 = 主意准；harness 好 = 手脚利索、花钱清楚
+
+* 各家 agent 一图流（OpenClaw / Claude Code / opencode / Cursor / Codex）
+  前三者都是 harness，但赛道不同；后两个是 coding agent 赛道的竞品。
+
+** OpenClaw vs Claude Code vs opencode
+   | | Claude Code | opencode | OpenClaw |
+   |---+-------------+----------+----------|
+   | 定位 | 写代码 | 写代码（开源） | 私人助理 |
+   | 工作方式 | 进项目干活 | 进项目干活 | 7x24 常驻，主动干 |
+   | 内存 | 无持久记忆 | 无持久记忆 | 持久记忆（Soul.md） |
+   | 入口 | 终端 | 终端/IDE | WhatsApp、Telegram |
+   | 权限 | 项目目录 | 项目目录 | 整台电脑+生活系统 |
+   | 闭源/开源 | 闭源 | 开源 | 开源 |
+
+   - Claude Code / opencode：=你找它干活=（代码-miner）
+   - OpenClaw：=它主动找活干=（数字管家），权限更大风险更高
+   - “养龙虾”梗：OpenClaw 图标是红龙虾，装+调教+喂 token 的过程
+     像养宠物，戏称养龙虾；2026 初靠“人人养只 AI 打工”叙事破圈，
+     衍生出上门装虾/课程/一体机，后因费 token、风险高（工信部预警）
+     开始退烧，付费“卸虾”业务都火了
+   - 时间线：Claude Code 最早（2025 初，coding agent 鼻祖，
+     但只在程序员圈火）→ opencode 年中 → OpenClaw 最晚（2025.11）
+     却最出圈。破圈靠梗，不靠资历
+
+** coding agent 全景（写代码工具向）
+   #+begin_example
+   coding agent
+   ├─ 终端形态
+   │   ├─ Claude Code   ← Anthropic（闭源标杆）
+   │   ├─ Codex         ← OpenAI（直接对头，同定位不同模型）
+   │   └─ opencode      ← 开源，模型随便换
+   └─ IDE 形态（agent 装进编辑器）
+       ├─ Cursor        ← AI-native 编辑器（VS Code 魔改）
+       ├─ Windsurf      ← 同类
+       └─ Copilot       ← 微软老牌，后补的 agent 模式
+   #+end_example
+
+** 选型一句话
+   - 后台模型组织 → Claude Code / Codex 二选一比后台实力
+   - 编辑器 UX 流 → Cursor
+   - 模型自由度 → opencode（不绑定任何一家）
+   - 能力高度重合，会一个就懂一整类，无需囤积多套
+
+* 自建 opencode 命令（以 /summary-zhihu 为例）
+  定位：command = 自己造的快捷按钮（预写好的 prompt 模板），
+  和 skill 的区别——command 你主动敲 /名字 触发；skill 是模型
+  判断任务相关时自己加载的“说明书”。固定流程用 command 就够。
+
+** 新建步骤
+   1. 项目级：建文件 =.opencode/command/summary-zhihu.md=
+      （全局级则放在 =~/.config/opencode/command/=）
+   2. 文件 = frontmatter + 模板正文：
+      #+begin_src org
+      ---
+      description: 命令描述（补全列表里显示）
+      agent: [可选] 用哪个 agent，如 build
+      model:    [可选] 指定模型
+      ---
+
+      模板正文 = 按命令时要执行的完整 prompt，
+      $ARGUMENTS 会替换成 /名字 后面敲的所有内容，
+      $1 $2 可取第 N 个参数
+      #+end_src
+   3. 重启 opencode（命令启动时才加载），输入 / 补全列表里就能选
+   4. 用法：命令后加参数，多参数空格隔开；
+      模板开头写好“参数为空时回复用法”，避免手滑空跑
+
+** 实战笔记（/summary-zhihu）
+   模板要点：
+   - 指明用 webfetch 逐条抓取 $ARGUMENTS 里的链接取正文
+   - 限定输出格式：套自己的三段式（论点/比喻/原话），org 格式
+   - 存档规则：追加到 =zhihu/总结-<日期>.org=，只增不删
+   - 防幻觉：抓取失败标“需手动粘贴全文”，禁止凭链接编内容
+   实际文件：.opencode/commands/summary-zhihu.md
+
+** Command and skill 怎么选
+   - 重复固定流程 → command（一次配好，调参数就行）
+   - 复杂流程规范希望模型随时想起来 → skill
+   - 两者不互斥：命令模板里可以引用 skill
+
+* opencode 系统手册（能力全景 + 配置结构）
+   （安装、API 配置、本地模型、基础用法见前面章节，这里补全系统层面）
+
+** 能力全景
+   - 多模型接入：75+ 供应商（models.dev 统一目录），云端/本地都能接；
+     =/connect= 或 =opencode auth login= 配置 key
+   - 会话管理：多会话进行互不干扰，=/new= 开新、=/sessions= 切换、
+     =opencode -c= 接着上次聊
+   - 上下文注入：=@文件= 引用、=!命令= 跑 shell、拖图片进终端、
+     =AGENTS.md= 项目说明书（=/init= 自动生成）
+   - 双模式：Plan（只出方案）/ Build（动手改），Tab 切换
+   - 安全回滚：基于 git 快照，=/undo= /  =/redo=  能回滚整个
+     会话的文件改动
+   - 用量统计：=/stats= 看 token 用量和花费
+   - 可扩展面：agent、command、skill、plugin、MCP、formatter、
+     LSP、references 全部可自定义
+
+** 配置文件体系
+   | 层级 | 位置 | 说明 |
+   |------+------+------|
+   | 全局配置 | =~/.config/opencode/opencode.json= | 注意！不是 =~/.opencode= |
+   | 项目配置 | =./opencode.json= 或 =.opencode/opencode.json= | 放项目根 |
+   | 向上查找 | 从 cwd 向上一路找到 git worktree 根 | |
+   | 合并规则 | 各层深度合并，项目覆盖全局 | |
+   | TUI 配置 | =tui.json= | 主题/键位，和主配置分开 |
+   | 凭证 | =~/.local/share/opencode/auth.json= | API key 存这里 |
+   | 会话数据 | =~/.local/share/opencode/= 和 =.opencode/opencode.db= | |
+
+   硬规则：
+   - 顶层必须带 =$schema=，未知顶层键会报 =ConfigInvalidError=
+     直接拒绝启动（之前 =providers= 写复数就踩过）
+   - 配置启动时读一次，改完必须重启
+
+** 常用顶层字段速查
+   #+begin_src jsonc
+   {
+     "model": "provider/model-id",     // 默认模型，必须带 provider 前缀
+     "small_model": "provider/model",  // 小任务模型（生成标题等）
+     "default_agent": "build",
+     "instructions": ["AGENTS.md"],    // 额外加载的说明文件
+     "provider": { },                  // 各供应商配置（单数！）
+     "agent": { },                     // 内联 agent 定义
+     "command": { },                   // 内联命令
+     "mcp": { },                       // MCP 服务器
+     "plugin": [ ],                    // 插件（数组！）
+     "permission": { },                // 权限规则
+     "disabled_providers": ["openai"],
+     "share": "disabled",              // 会话分享
+     "skills": { "paths": [ ] }        // 非默认位置的 skill 目录
+   }
+   #+end_src
+   形状记忆：mcp/agent/command/skill/references 是**对象**，plugin 是**数组**，写反即报错
+
+** Agent 配置（自定义子代理）
+   - 两种写法：=opencode.json= 里内联，或文件 =.opencode/agent/<名字>.md=
+   - 文件构成 = frontmatter + 正文，**正文就是 prompt**（不要再写 prompt: 前缀）
+   #+begin_src org
+   ---
+   description: 这个 agent 干什么（必写）
+   mode: primary | subagent | all
+   model: provider/model-id   [可选，指定模型]
+   permission:
+     edit: deny               [可选，本 agent 权限]
+   ---
+   正文：你是一个……（角色提示词）
+   #+end_src
+   - 内置：=build=（动手）、=plan=（出方案）、=general=、=explore=，
+     同名覆盖即可修改或禁用（=disable: true=）
+   - 用途：提审员、测试工、维护性子任务等专职角色
+
+** Skill 配置（给模型的岗位手册）
+   - 位置：=.opencode/skill/<名字>/SKILL.md=（项目）
+     =~/.config/opencode/skill/=（全局）
+   - 不用配置文件，直接放文件夹即被发现，结构：
+   #+begin_src markdown
+   ---
+   name: my-skill        // 必须小写-连字符，与文件夹同名
+   description: 只有什么时候用 + 做什么，关键词前置（没写会被过滤掉）
+   ---
+   # 手册正文：具体流程、示例、注意事项
+   #+end_src
+   - 加载机制：启动只登记 name+description，模型**判断任务匹配时自己**
+     读全文 —— description 写得准不准决定它会不会被用起来
+   - 额外躲藏点：=~/.claude/skills=、=~/.agents/skills= 会被自动扫描；
+     自定义目录用 =skills.paths= 注册
+   - 与 command 的分工：command 人敲触发，skill 模型自动取用
+
+** 权限（permission）
+   #+begin_src jsonc
+   "permission": {
+     "edit": "deny",
+     "bash": { "*": "ask", "git status": "allow" },
+     "external_directory": { "~/secrets/**": "deny" }
+   }
+   #+end_src
+   - 动作：=allow= / =ask= / =deny=
+   - 规则取**最后匹配**的那条，广规则写前、窄规则写后
+   - agent 文件里的 permission 覆盖顶层全局设置
+
+** MCP 和插件
+   #+begin_src jsonc
+   "mcp": {
+     "本地服务器": { "type": "local", "command": ["npx", "-y", "包名"], "enabled": true },
+     "远程服务器": { "type": "remote", "url": "https://..." }
+   },
+   "plugin": ["opencode-插件包", "./本地插件.ts"]
+   #+end_src
+   - =opencode mcp add / list= 命令行管理
+   - =.opencode/plugin/*.ts= 会被自动发现，不用登记
+   - 插件 = 返回 hooks 的函数：tool 执行前后、chat 消息等拦截点
+
+** 启动不开时的逃生舱
+   | 环境变量 | 作用 |
+   |--------------------------------|--------------------------|
+   | =OPENCODE_DISABLE_PROJECT_CONFIG=1= | 跳过项目配置，只按全局起 |
+   | =OPENCODE_CONFIG=/path/to.json= | 手动指定配置文件 |
+   | =OPENCODE_CONFIG_CONTENT='{}'= | 内联合法配置项顶替 |
+   | =OPENCODE_PURE=1= | 屏蔽所有外部插件 |
+   | =OPENCODE_DISABLE_EXTERNAL_SKILLS=1= | 不扫 ~/.claude/skills |
+   场景：项目配置写坏了 opencode 起不来，先一只腿进后台改文件
+
+** /summary-zhihu 进化史（踩坑实录）
+   - v1：webfetch 直接抓 → 403。知乎反爬（zse-ck JS 挑战），
+     连 curl 带浏览器 UA 都过不去
+   - v2：本地 Playwright + 真实 Chrome 弹窗抓。登录墙判定要靠
+     「匹配到正文容器」（div.Post-RichTextContainer /
+     div.QuestionAnswer-content / div.RichContent-inner）才算成功——
+     登录页光页脚文字就超过 300 字符，只看长度会被骗
+   - v3（现行）：弹窗太骚扰 → 改成「cookie 在前、链接在后」两参数：
+     #+begin_example
+     /summary-zhihu z_c0=xxx; d_c0=yyy; https://.../answer/MMM
+     #+end_example
+     脚本默认 headless 无窗，失败自动弹窗兜底重试一次
+   - 工具文件：
+     - =zhihu/fetch_zhihu.py=（抓取脚本，--cookie/--dump/--no-window）
+     - =zhihu/.venv/=（playwright，已 gitignore）
+     - =zhihu/.browser-profile/=（弹窗兜底时存登录态，已 gitignore）
+   - 安全：cookie 是完整登录凭证，别贴进笔记/git；会留在会话记录里，
+     本机自用知悉即可；过期就重新复制一份
+    - 取 cookie：知乎网页版 → DevTools>F12 → Network → 任意请求 →
+      复制 Cookie 请求头
+    - v4 结论（2026-10-17）：自己造轮子打不过知乎风控。社区实测--bare
+      requests ❌ 403（WAF）；匿名 cookie ❌（缺 d_c0，__zse_ck 还每请求
+      签名）；官方 API ❌（要 x-zse-96 签名）；**headless 浏览器 ❌ 被检测**；
+      ✅ 只剩两条路：真实登录浏览器的完整 cookie，或有头真浏览器。
+      所以换赛道：接现成知乎 MCP Server
+
+* opencode 接入 MCP 实战速查
+** MCP 是什么（30 秒版）
+   - MCP = Model Context Protocol，"AI 界的 USB 口"：
+     工具方做一个符合协议的 server，任何 MCP 客户端（opencode、Claude
+     Code、Cursor…）都能插上用，不用各自写插件
+   - 两种形态：
+     - *local*：opencode 在本地起一个进程，通过 stdio 通信（知乎
+       MCP、filesystem、playwright 这些都是）
+     - *remote*：连一个 HTTPS 上的服务（Sentry、Context7 这些），支持
+       OAuth 或 headers 认证
+   - 装好后 agent 会多出一批前缀化的工具（如 =get_fulltext(url)=、
+     =zhihu_get_content(url)=），模型自己学会挑着调
+
+** 三种安装方式
+*** 方式一：交互式向导（新手推荐）
+    #+begin_example
+    opencode mcp add          # 依次问：放项目还是全局 → 名字 →
+                              # local/remote → 命令或 URL
+    #+end_example
+*** 方式二：命令行一步到位
+    #+begin_example
+    # 本地 MCP：注意 -- 之后的整条命令；用绝对路径最稳
+    opencode mcp add zhihu -- /绝对路径/.venv/bin/python /绝对路径/mcp_server.py
+    # 环境变量用 --env 可重复
+    opencode mcp add xx --env KEY=value -- command...
+    # 远程 MCP
+    opencode mcp add context7 --url https://mcp.context7.com/mcp
+    opencode mcp add context7 --global --url https://mcp.context7.com/mcp
+    # remote 请求头
+    opencode mcp add x --header 'API_KEY={env:API_KEY}'
+    #+end_example
+    - =--global= 写进全局配置（所有项目可用），不写默认进项目配置
+*** 方式三：手动改配置文件
+    在 =opencode.json=（项目）或 =~/.config/opencode/opencode.json=（全局）：
+    #+begin_src jsonc
+    {
+      "$schema": "https://opencode.ai/config.json",
+      "mcp": {
+        "zhihu-scraper": {
+          "type": "local",
+          "command": ["/绝对路径/.venv/bin/python", "/绝对路径/mcp_server.py"],
+          "environment": { "ZHIHU_COOKIE": "{env:ZHIHU_COOKIE}" }
+        },
+        "context7": {
+          "type": "remote",
+          "url": "https://mcp.context7.com/mcp",
+          "oauth": false,        // 用 API key 形态时关掉自动 OAuth
+          "headers": { "Authorization": "Bearer {env:CONTEXT7_API_KEY}" }
+        }
+      }
+    }
+    #+end_src
+    陷阱备忘：
+    - =command= 是**数组**，参数逐个拆开，不要拼成一整个字符串
+    - 密钥不要明文进配置，用 ={env:VAR}= 引用环境变量
+    - 改完配置**必须重启 opencode** 才生效（配置启动时读一次）
+
+** 验证与日常管理
+   #+begin_example
+   opencode mcp list      # 看连接状态：connected / needs authentication /
+                          # failed（failed 会带错误原因）
+   opencode mcp auth 名字  # remote 型手动触发 OAuth（浏览器跑一遍）
+   opencode mcp logout 名字 # 清掉已存 token
+   #+end_example
+   - TUI 里用 =/mcps=：查看、连接、断开、补认证
+   - 状态图标：✓ 已连 / ⚠ 待认证 / ✗ 失败（看 error）
+   - 工具可以按名禁用：=tools= 里 glob 匹配（如 ="my-mcp*"=: false）
+   - MCP 工具会占模型上下文，**只装自己真正要用的**
+
+** 待选的知乎 MCP（watchlist，2026-10 调研）
+   | 项目 | 特点 |
+   |-------------------|----------------------------------------------|
+   | zhihu-scraper-mcp | 传 URL 拿全文 Markdown + 评论树 + 分类搜索；cookie 用 `auth paste` 配一次，存本地 |
+   | WloBy-Labs/ZhihuMCP | 有头浏览器扫码登录一次；读想法/文章/回答/评论 |
+   | Zhihu-Collections-Saver | 非单人接 MCP 版，是整收藏夹批量导出 md（去重、图片本地化），适合存量清仓 |
+   | astron-zhihu-mcp | 纯游客态公开接口，无需登录，公开内容够用就选它 |
+   | zhihu-fetch-skill | agent skill 形态（非 MCP），API 优先 + Playwright 降级 + 断点续传，可借脚本 |
+   下一步：装 zhihu-scraper-mcp → /summary-zhihu 简化为「链接 → MCP 拿正文 →
+   三段式总结 → 写 总结-日期.org」，cookie 不再进聊天记录
+
+** 实装记录：zhihu-scraper-mcp（2026-10-17，已通）
+   位置：~/Documents/mcp/zhihu-scraper-mcp（笔记仓库外，不污染 git）
+   四步：
+   1. =curl -LsSf https://astral.sh/uv/install.sh | sh= 装 uv
+      （装时往 ~/.profile 写 PATH 权限被拒提示可忽略，开新 shell 即可）
+   2. git clone → =uv sync --locked= —— uv 会自己下载它要的 Python
+      3.13，绕开了系统只有 3.11 的坑；产物 =.venv/bin/zhihu=（CLI 后端）
+      和 =.venv/bin/zhihu-scraper-mcp=（MCP 入口）
+   3. 认证（登录态只存本机 =~/.zhihu-cli/=）：终端跑
+      =.venv/bin/zhihu auth paste= 后浏览器 F12 → Network → 任意请求 →
+      Copy as cURL → 粘贴。=auth status= 见 =Cookie: present= + 用户名即成
+   4. 写进全局 opencode.json 的 mcp 块（command 数组、绝对路径），
+      重启 opencode 生效
+   /summary-zhihu 已简化成单链接：调 MCP 的 =get_fulltext(url)= 拿全文，
+   三段式总结后追加到 zhihu/总结-日期.org。URL 要传完整正文页
+   （回答带 /question/<id>/answer/<id>）
+   实测：此前 Playwright 三连败的那条回答，CLI 一条
+   =browse answer <URL> --json= 就返回 1940 字符正文；搜索走签名
+   API（x-zse-93/96），不用碰单篇 HTML 端点
+   #+begin_quote
+   auth paste 的三个真坑：
+   - Ctrl+D 退出不了：程序就是朴素的 sys.stdin.read()，EOF 要求光标
+     在空行开头。粘贴后先敲回车再 Ctrl+D
+   - 「哔哔」声：在非空行按 Ctrl+D 的终端响铃，无害
+   - 新版 Chrome 的 Copy as cURL 把 Cookie 放在 =-b= 参数里，解析器只
+     认 =-H=，于是永远「No Cookie header found」。终极大招：
+     复制 cURL 后直接管道 =pbpaste | zhihu auth paste=，若仍提示无
+     Cookie（批量复制的 cURL 合集更是整筐命令），用一行 sed/python 把
+     =-b 'xxx'= 转成 =-H 'Cookie: xxx'= 再喂进去
+   #+end_quote

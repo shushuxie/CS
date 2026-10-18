@@ -1,0 +1,251 @@
+#+TITLE: 怎样快速扫描一本书并做成电子版？
+#+LINK: https://www.zhihu.com/answer/561958940
+#+AUTHOR: 下流的星辰
+#+CREATED: 2018-12-29
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+*写在前面*
+
+未经授权翻印图书是触犯法律的，传播出去更是有巨大的法律风险，请注意图书的版权页申明。本文展示的图片仅为展示效果，以分享经验为目的。如果涉及侵权，请联系我，我将及时删除。
+
+-----
+
+我最近扫了一本1260页的书，最终制作成了具有文本检索功能的pdf和djvu格式。整个过程大约花费一整天时间（主要是查找各种方法消耗时间，下次再扫估计要求低点两个小时可以搞定），费用为零。（不用扫描仪，仅使用手机+电脑）。
+
+效果大概像这样：
+
+[[https://pic1.zhimg.com/50/v2-02b6f5c78110ca62dafb31201446e18b_720w.jpg?source=2c26e567]]
+
+实际操作非常简单，不过有很多小trick，特别分享给有需要的人士。大致流程是：
+
+- （用手机）拍照
+- 照片效果优化，例如裁剪、转成黑白图、调明暗对比等（扫描全能王一键搞定）（Edit: 后来发现了一款更牛逼的开源软件，见下文）
+- 在电脑端将大量图片组合成pdf或djvu文档
+- 对pdf和djvu文档做OCR，并将结果嵌入对应的文档中，这样就可以在阅读的时候选中文字进行拷贝
+
+下面逐一详细讲解：
+
+** 问题分析
+
+我的需求是，从图书馆借了一本在网上找不到的经典图书，由于太过经典，想要保留一份电子档。碰到这个需求时，我第一反应是在网上搜到了包含本帖的若干个提问。总结一下网友提出的方案和我认为的弊端：
+
+- 买一个传统扫描仪，很多二手货很便宜。譬如这里提到的中晶V700Plus，淘宝二手标价才168起。弊端包括：1. 二手不敢信（十几年的老机器了），新的又不合算。2.扫描速度好像也不是很快。3. 一次性使用，浪费了资源。
+- 有好几家创业公司推出了专用的拍照式书籍专用扫描仪。弊端是：更贵、评价似乎也不是很好、浪费资源
+- 淘宝上有不少书籍扫描服务商。我问了其中一家，不破坏图书的情况下需要两毛钱/页。扫我那本书要花200+软妹？算了吧
+
+由于早就听说了“扫描全能王”这款神级手机APP，下载先试用了一下，效果非常令我满意。不仅自动查找书籍边缘自动裁剪，还能自动优化图像。
+
+最难的问题——扫描，都能这么轻松的解决，其它步骤不就简单多了吗？动手吧！
+
+** 拍照
+
+由于页数比较多，端着手机拍又慢，效果又不好，一个人还不好操作。
+
+因此你需要一个工作台：
+
+[[https://pica.zhimg.com/50/v2-878d77f8ad83e66245b32f3a8ffe76e4_720w.jpg?source=2c26e567]]
+
+如上图所示，关键点在于：
+
+- 给手机接上有线耳机，这样耳机上的音量键就可以当做快门键
+- 把手机架高（例如放纸箱上，用重物把手机下巴压住，这样摄像头能外伸出来很多）
+- 书最好放在深色的桌子上，这样扫描程序能更好的自动获取边界
+- 书的两侧架两盏台灯（由于条件简陋，仅拿了个白色的箱子当反光板用，好在扫描全能王能自动去除黑白图中的阴影。彩色扫描的话，仍然需要很好的光源，并用白纸包住光源，保证光是柔和的散射光。当然，找个阴天在室外操作是最佳方案）
+- 先拍奇数页，再拍偶数页。如此操作可以加快翻页速度
+
+在这台架子的辅助下，我扫描（拍照）的平均速度大约能达到3秒/页
+
+** 裁剪与优化
+
+---------------- edit ----------------
+
+原先使用的“扫描全能王”确实不错，但是今天发现了一个更牛逼的开源软件 [[https://github.com/4lex4/scantailor-advanced][Scan Tailor Advanced]] 。
+
+Windows安装包原始链接见下文。为答谢大家支持，已汉化该软件，下载地址：链接: [[https://pan.baidu.com/s/1hYNKpS-oG6MS3DP2tcZigg][https://pan.baidu.com/s/1hYNKpS-oG6MS3DP2tcZigg]] 提取码: vnt7。github连接不畅的童鞋可以在我的网盘下载。里面还有个文件夹叫“中文语言包”。其中的文件：
+
+- scantailor_cn.qm：编译好的汉化语言文件
+- scantailor_cn.ts：翻译的源文件，macOS和Linux用户可以下载这个文件放在translations目录里，这样编译之后就能有中文。
+- 使用说明.txt：里面讲了简单的操作步骤。
+- 如果操作正确，在软件的设置页面里可以把语言改成中文。（语言显示为“C”，正不知道为啥呢）
+
+它可以实现的功能有（全都带* *自动* *批处理）：
+
+- 90/180/270°旋转图像，所以横竖拍都没事
+
+[[https://picx.zhimg.com/50/v2-b6ba76e59e4ae1c02692e13171effd94_720w.jpg?source=2c26e567]]
+
+- 切割页面，所以可以双面拍摄（双面时页面通常展不平，需要用到下文会讲的去畸变）
+
+[[https://pic1.zhimg.com/50/v2-c9e96e447257faeaf4a685d136cafe72_720w.jpg?source=2c26e567]]
+
+- 纠偏，拍斜了能自动检测并纠回来
+
+[[https://pic1.zhimg.com/50/v2-58095037c3d524547485280188843dda_720w.jpg?source=2c26e567]]
+
+- 检测页面内容范围，只取有效文字范围
+
+[[https://picx.zhimg.com/50/v2-71db0304fc26d76fe47a94b507b13c3b_720w.jpg?source=2c26e567]]
+
+- 增加边距
+
+[[https://pic1.zhimg.com/50/v2-76a70513f9c8c12bb0860201dc302fdc_720w.jpg?source=2c26e567]]
+
+- 图像增强（阴影、杂点去除）
+
+[[https://picx.zhimg.com/50/v2-4e72a71b1b4723cf9543cf1d244270fa_720w.jpg?source=2c26e567]]
+
+- 去畸变（这个有点屌）
+
+Edit: 实测双面拍摄之后畸变太大，自动去畸变效果并不好，不过可以手动一张一张的调，这样有点费事我不推荐。最好还是展平一次一页的拍，有块玻璃压住页面就更棒了！（淘宝几十块钱定做一块加厚钢化玻璃。推荐雾面的，普通光面玻璃容易反光，像镜子一样）
+
+[[https://picx.zhimg.com/50/v2-6dbe20490ae789bf82d723ef073278a3_720w.jpg?source=2c26e567]]
+
+上文已经提供了github源代码链接，Windows还提供了安装包： [[https://github.com/4lex4/scantailor-advanced/releases/download/v1.0.16/scantailor-advanced-1.0.16-win64.exe][64位]] ， [[https://github.com/4lex4/scantailor-advanced/releases/download/v1.0.16/scantailor-advanced-1.0.16-win32.exe][32位]] 。Linux和macOS需要自行下载编译哦。我在macOS和Ubuntu 16.04下测试通过。win安装包是github官方提供的，我并没有为大家打包哈。
+
+编译所需依赖项的不完整列表：
+
+- cmake >= 3.9.6
+
+- boost >=1.60
+
+- libjpeg
+
+- libtiff
+
+- libpng
+
+- qt5 >= 5.6
+
+- zlib
+
+注：ubuntu 16.04编译Scan Tailor Advanced稍微费劲点，主要是gcc，boost，qt5的版本都老掉牙，需要手动安装boost和qt5，并改一点点代码照顾老黄历的gcc。
+
+-----
+
+以下为原方案，比Scan Tailor效果差不少。
+
+全部由“扫描全能王”在手机（后来换到iPad，因为屏幕大好操作）上操作实现。由于这款软件的帮助实在太大，特意给它打个广告。本人与该公司全无瓜葛，利益无关。
+
+具体操作可以自行去应用商店里下载后体验。简单说就是：
+
+从相册导入照片 => 逐张照片处理（多数工作自动化一键搞定）=> 把处理后的图再导出到手机相册
+
+这款APP有直接导出为PDF的功能。由于如下原因，我没有这么做：
+
+- 我是奇偶页分开拍照的，导入APP之后不能调节顺序，只能按照导入的顺序处理和导出至PDF。我那本书页数非常多，光是调节顺序就得累死我呀
+
+- 免费版在PDF页面右下角会有水印，去除起来相对较麻烦。（也有简单的办法，就是再加个纯白的水印在原水印的位置，但是有点丑陋，会加大页边距。碰到彩色扫描更是行不通）
+
+- 收费版是会员制的，一个月会员30，一年会员200+。喜欢简单省事的同学可以考虑一下。
+
+** 在电脑端组合成PDF/DJVU
+
+注：以下有些步骤可以用命令行的开源软件提高效率，安装方式（由于不太懂Windows，只提供Ubuntu和macOS的操作指南）：
+
+Ubuntu 16.04下
+
+#+begin_src bash
+sudo add-apt-repository spa:alex-p/tesseract-ocr
+sudo apt update
+sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-sim imagemagick pdf2djvu djvu2pdf
+#+end_src
+
+macOS下
+
+#+begin_src text
+brew install tesseract imagemagick djvu2pdf
+#+end_src
+
+很多操作我是在Ubuntu下完成的，mac版并没有测试。另外macOS可以使用automator完成差不多功能。
+
+- 调节顺序
+
+导入电脑后，碰到的第一个问题是怎么排序。用批量重命名工具即可，把原来的"IMG_1327.JPG"重命名成类似这样：奇数页"book-0001.jpg", "book-0003.jpg"，偶数页"book-0002.jpg"。。。然后再扔进同一个文件夹
+
+要是你找不到合适的重命名工具，要么手工一个个改，要么懂一点编程，参考如下Python代码：
+
+#+begin_src python
+#!env python
+import os
+
+def rename(dirname, start_with):
+    files = os.listdir(dirname)
+    files.sort()
+    for f in files:
+        if f.endswith('jpg'):
+            output_name = dirname + 'book-{0:04d}.JPG'.format(start_with)
+            os.rename(dirname + f, output_name)
+            start_with += 2
+    print('DONE')
+
+rename('/path/to/odd/images/directory', 1)   # 指定奇数页图片文件夹位置，并重命名
+rename('/path/to/even/images/directory', 2)  # 指定偶数页图片文件夹位置，并重命名
+#+end_src
+
+- （可选）微调图像
+
+这是因为原始图片分辨率不一致，先转换一下比较好。另外，图像边缘不可避免还是有些黑色的阴影痕迹需要去除。
+
+我从扫描全能王导出的图片多数分辨率在1500x2336左右（其实是可以调高的，我后来才发现）。所以我打算把图片统一分辨率到1550x2336（注意不是缩放，而是不足1550白色背景来补，多了裁掉）
+
+将所有图片放在同一文件夹下，执行如下shell（zsh）命令：
+
+#+begin_src bash
+for file in ./*(.); do convert $file -background white -gravity center -extent 1550x2336 -sharpen 0x3 $file; echo "finished $file"; done;
+#+end_src
+
+要去除黑边的话，先制作一张1550x2336的png图片，中间部分扣空，仅保留很窄的白色边框，然后跟每张图片组合一下就能盖住黑色阴影了，就像加了个白色的相框。
+
+假设这个边框png文件叫做'/tmp/frame.png'，也是一条命令搞定（可以和上一条命令组合成一条命令）
+
+#+begin_src bash
+for file in ./*(.); do composite $file /tmp/frame.png -dissolve "0.01" $file; echo "finished $file"; done;
+#+end_src
+
+- 转成PDF
+
+两条命令搞定（并且同时搞定OCR）
+
+#+begin_src bash
+ls . > file_list.txt
+tesseract file_list.txt book pdf
+#+end_src
+
+注意：
+
+- 'book'和'pdf'之间有一个空格，不要以为是'book.pdf'
+- tesseract是一个开源的OCR库，默认识别英文，实测4.0.0版本以上英文识别 *非常完美* 。因为从这一版本开始加入了基于神经网络的检测算法。4.0.0版本以下就不要尝试了，效果只能说很烂，这也是为什么安装tesseract要用ppa。
+- 由于我正好是扫英文书，所以没试中文效果。如果要做中文OCR识别，大概的操作需要对应替换成（记得先安装中文识别库）：
+
+#+begin_src bash
+tesseract  -l chi_sim  file_list.txt book pdf
+#+end_src
+
+** 结语
+
+写这篇回答之后，发现这个主题在国外一点也不新鲜，还有一个专门的网站 [[http://www.diybookscanner.org/][www.diybookscanner.org]] ，欢迎入坑。
+
+举个例子：
+
+[[https://pic1.zhimg.com/50/v2-b9b4c412cd0a4f565eeec651d431931d_720w.jpg?source=2c26e567]]
+
+原文链接在此：
+
+[[https://forum.diybookscanner.org/viewtopic.php?t=3401][Original ~600pg/hr, very portable scanner now achieving ~900pg-1100pg/hr]]
+
+本想分享点经验，发现门槛还是有点高。就不分享djvu转换的方法了。英文好可以参考
+
+[[https://en.wikisource.org/wiki/Help:DjVu_files][这篇文档]]
+
+[[https://en.wikisource.org/wiki/Help:DjVu_files][Help:DjVu files - Wikisource, the free online library]]
+
+[[https://en.wikisource.org/wiki/Help:DjVu_files][这篇文档]]
+
+以及这个OCR脚本
+
+[[https://en.wikisource.org/wiki/User:Inductiveload/Scripts/DJVU_OCR][User:Inductiveload/Scripts/DJVU OCR]]
+
+以及 [[https://en.wikisource.org/wiki/User:Inductiveload/Scripts/DJVU_OCR][这个脚本]]
+
+写得有点极客，其实不懂的话只是稍微麻烦一点。或者花点钱买一个月会员省事。

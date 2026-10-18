@@ -17,32 +17,8 @@
 projectile
 swipper
     
-swiperk
-log    
-:LOGTIME:
-插入时间
-:END:
-        
- *nihk* 
- :LOGTIME:
- nihk
- :END:
-
-        
-             
-
-:LOGTIME:
- 插入时间
-:END:
 
 
-ini
-n
-kkkkk
-ninikkk
-        
-=        
 
 
-，
-
+apple ok ni hk apple

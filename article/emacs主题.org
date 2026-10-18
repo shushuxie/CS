@@ -1,0 +1,24 @@
+* emacs 主题尝试
+    试了挺多的主题，白色的其实很喜欢，但是晚上看着不舒服；
+
+    尝试让AI 帮忙推荐了一些 很好看
+
+   | 主题           | 描述               |
+   |----------------+--------------------|
+   | modus-vivendi  | 深色，整体性很统一 |
+   | Modus Operandi | 极简白             |
+   | Doom One       |                    |
+   | Gruvbox        | (复古、温暖、耐看) |
+   | Solarized      | 经典               |
+   | monokai        | classic 经典紫色   |
+   |                | mochai 耐看        |
+   |                | spectrum           |
+   | tomorrow       | 适合写代码         |
+   | solarlize      | 舒服               |
+
+   
+* 技巧
+    terminal 主题尽量和 emacs 这样就不会凸显出背景不同了
+    行号可以关闭了，没有什么作用，占用了太多的空间
+    
+    

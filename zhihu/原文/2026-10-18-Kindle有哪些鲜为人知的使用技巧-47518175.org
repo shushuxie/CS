@@ -1,0 +1,86 @@
+#+TITLE: Kindle 有哪些鲜为人知的使用技巧？
+#+LINK: https://www.zhihu.com/answer/47518175
+#+AUTHOR: 七兜兜
+#+CREATED: 2015-05-12
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+kindle是最牛逼的rss阅读器。微信订阅号，知乎日报，知乎专栏，博客，果壳精选。。。全用kindle看。高效、简洁。
+
+被kindle的阅读体验惯坏后，根本受不了不断上拉、不断上拉、不断上拉的阅读方式，最受不了的是在微信里看一篇文章的时候，来了一条消息，是退回去看消息呢，还是接着读完呢。。太操蛋了。
+
+所以现在，微信订阅号都用kindle或者kindle App来看了。而且把所有的订阅号更新一起看，平时不受微信推送的影响。爽了。
+
+比如：
+
+[[https://picx.zhimg.com/50/de980080dbb0f69e2674ebe1f44efb93_720w.jpg?source=2c26e567]]
+
+我是这么看张公子的微信的：
+
+[[https://picx.zhimg.com/50/5388207520886fd80593f2b6da99548b_720w.jpg?source=2c26e567]]
+
+是这么看知乎吐槽的：
+
+[[https://pica.zhimg.com/50/fc095a54dfd20a2895dc73e2c8f1e52c_720w.jpg?source=2c26e567]]
+
+总之我把所有要看的都制作成rss用kindle来看了。每天早上浏览，颇像秘书给奥巴马送来的信息简报。。。
+
+以下是这么做的教程和工具，分推送工具和rss制作教程。
+ ==============================================================
+ 推送工具：免费的有readcola ， [[http://readcola.com/feed][Readcola - Sign in账户]] ；还可以保存到evernote，instapaper；收费的有kindle4rss，狗耳朵等。
+
+rss制作教程：
+ 可以将任何不提供rss源的网站制作成rss的工具： [[http://feed43.com/][Feed43 : Convert any web page to news feed on the fly]]
+ 附教程： [[http://feed43.com/step-by-step.html][Feed43 : Step-by-step example]]
+
+可以将摘要转成全文的工具： [[http://pipes.yahoo.com/pipes/][Pipes: Rewire the web]]
+ 参考这个教程： [[http://jandan.net/2008/11/15/yahoo-pipes.html][如何用 Yahoo Pipes 制作牛博网全文 RSS]]
+ 这两个结合基本无敌了。。。但这这两个网站的使用都比较麻烦
+
+以下是一些已经制作好的rss：
+ ==============================================================
+ 知乎日报： [[http://miantiao.me/zhihu-daily-rss.html][知乎日报 RSS]]
+
+一些专栏：
+
+- 谢熊猫君知乎专栏 [[http://zhihurss.miantiao.me/zhihuzhuanlan/xiepanda][http://zhihurss.miantiao.me/zhihuzhuanlan/xiepanda]]
+- 采铜的知乎专栏 [[http://zhihurss.miantiao.me/zhihuzhuanlan/xiepanda][http://zhihurss.miantiao.me/zhihuzhuanlan/]] intelligence
+- 刘念的知乎专栏 [[http://zhihurss.miantiao.me/zhihuzhuanlan/xiepanda][http://zhihurss.miantiao.me/zhihuzhuanlan/]] zazaza
+- 唐僧先生： [[http://zhihurss.miantiao.me/zhihuzhuanlan/xiepanda][http://zhihurss.miantiao.me/zhihuzhuanlan/]] majin
+- 梁边妖： [[http://zhihurss.miantiao.me/zhihuzhuanlan/xiepanda][http://zhihurss.miantiao.me/zhihuzhuanlan/bianzhongqingnianxingdongzhinan]]
+- 波旬： [[http://zhihurss.miantiao.me/zhihuzhuanlan/xiepanda][http://zhihurss.miantiao.me/zhihuzhuanlan/]] boxun
+- 菠菜 [[http://zhihurss.miantiao.me/zhihuzhuanlan/xiepanda][http://zhihurss.miantiao.me/zhihuzhuanlan/]] huanhuan
+
+一些微信订阅号：（在狗耳朵里可以直接搜索订阅，不用制作rss）
+
+- 寒江雪 [[http://pipes.yahoo.com/pipes/pipe.run?_id=8dc1c233d54b9713afc48e9d8d4c1cf6&_render=rss][http://pipes.yahoo.com/pipes/pipe.run?_id=8dc1c233d54b9713afc48e9d8d4c1cf6&amp;_render=rss]]
+- walfalcon [[http://pipes.yahoo.com/pipes/pipe.run?_id=f17b27f409e73a27e57bfa3ebed071cf&_render=rss][http://pipes.yahoo.com/pipes/pipe.run?_id=f17b27f409e73a27e57bfa3ebed071cf&amp;_render=rss]]
+- Gayscript [[http://pipes.yahoo.com/pipes/pipe.run?_id=d3cfd5abe501dcf51840d7ffa5731963&_render=rss][http://pipes.yahoo.com/pipes/pipe.run?_id=d3cfd5abe501dcf51840d7ffa5731963&amp;_render=rss]]
+- 算了太多了
+
+一些博客：
+
+- 韩寒博客： [[http://blog.sina.com.cn/rss/twocold.xml][http://blog.sina.com.cn/rss/twocold.xml]]
+- 月光博客： [[http://feed.williamlong.info/][http://feed.williamlong.info/]]
+- 降级论作者Meditic： [[http://feeds.feedburner.com/meditic][http://feeds.feedburner.com/meditic]]
+- 菠菜163 [[http://blog.163.com/sising_zhu/rss/][http://blog.163.com/sising_zhu/rss/]]
+- Ben Horowitz博客： [[http://feedex.net/feed/www.bhorowitz.com/blog.rss][http://feedex.net/feed/www.bhorowitz.com/blog.rss]]
+- 汪丁丁博客 [[http://wangdingdingblog.blog.163.com/rss][http://wangdingdingblog.blog.163.com/rss]]
+
+补充：看评论里大家关注的重点很多微信公众号的推送,下面说下微信公众号的rss制作和推送。
+ ==============================================================
+ 1.如果用狗耳朵 [[http://www.dogear.cn/][狗耳朵 - 全文RSS和微信公众号推送服务]] 的收费服务，狗耳朵提供一些有名的公众号的订阅。缺点是不全，不一定包含你需要的。最近服务器不稳定。
+ 2.有专门针对微信订阅号推送到kindle的收费服务， [[http://www.weikindle.com/na/home.htm][WeiKindle - 提供为Amazon Kindle推送微信公众号文章的服务]] 和 [[http://www.taorenqi.com/][TaoRenQi - 为Amazon Kindle订阅推送微信公众订阅号文章服务]] 但是貌似都不成熟，还都不能用。
+ 3.有些你喜欢的微信订阅号，需要自己制作了。主要是在第三方的微信平台上找，看有没有收录你需要的订阅号。制作的方法就是feed43+yahoo pipes。这些平台有：
+ 微广场： [[http://www.iwgc.cn/][微信公众号列表]] [[http://www.vccoo.com/][微口网 - 热门微信文章和公众号大全]] 本身提供rss摘要。
+ 爱微帮 [[http://www.aiweibang.com/][微信运营，自媒体社交媒体运营好帮手]] [[http://www.lewuxian.com/][乐无线-微信公众平台精品内容聚合服务]] [[http://chuansong.me/][传送门 -- 微信公众账号和文章的导航及推荐]] 这个问过开发者了，不允许rss订阅
+
+补充2：微信公众账号的rss哪里找？我主要用微口网和微广场： [[http://www.vccoo.com/][微口网 - 热门微信文章和公众号大全]] [[http://www.iwgc.cn/][微信公众号列表]] [[https://chi.miantiao.me/zhihu-daily-rss/][知乎日报 RSS]]
+
+补充3：评论里好多人说看不懂，彻底的小白这么做：
+
+1. 要么选择kindle4rss的服务 [[https://kindle4rss.com/][Kindle4RSS: RSS Feed Reader for Kindle]] ，要么选择狗耳朵的服务： [[http://www.dogear.cn/][狗耳朵 - Kindle推送服务]] （两个都收费，一个月几块吧很便宜），注册一个kindle4rss或者狗耳朵的帐号
+2. 然后把kindle4rss或者狗耳朵给你的推送邮箱添加到亚马逊的邮箱信任列表里kindle4rss的设置页面：狗耳朵的设置页面如下亚马逊的设置页面，在 [[http://www.amazon.cn/][亚马逊(中国)]] 注册一个帐号，并在你的Kindle上用这个帐号登录。在亚马逊网站打开我的帐户下拉菜单 -> [[https://www.amazon.cn/mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment][管理我的内容和设备]] , 点击设置
+3. 找一个rss，添加到你的kindle4rss或者狗耳朵账户，手动推送一下，成功的话，就添加自己喜欢的rss地址吧
+
+欢迎顺便关注的我专栏： [[https://zhuanlan.zhihu.com/c_135063823][读书这件小事]] 目前关注0(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)
