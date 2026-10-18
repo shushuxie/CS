@@ -1,0 +1,93 @@
+#+TITLE: 有哪些拥有特别令人印象深刻的技能的生物？
+#+LINK: https://www.zhihu.com/answer/811009004
+#+AUTHOR: 章彦博
+#+CREATED: 2019-09-02
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+1832年，达尔文正在「小猎犬号」上担任博物学家。一日，他在甲板上发现了件怪事——一夜之间，甲板上多了上千只小红蜘蛛。
+
+*此时，「小猎犬号」距离海岸足足有60英里，蜘蛛是怎么过来的呢？*
+
+一个自然的想法，便是认为蜘蛛靠着海风，「御风而行」，抵达船上。
+
+蜘蛛翘起腹部， *射出* 蛛丝，然后风拉着蛛丝、拖着蜘蛛，漂洋过海：
+
+[[https://pic1.zhimg.com/50/v2-5b65109da0386006f0f57150bebf6d71_720w.gif?source=2c26e567]]
+
+但达尔文却发现了疑点—— *不论有风无风，或是在极其微弱的海风之下，船上的蜘蛛都能腾空而起；而且，蜘蛛似乎只在微风之时起飞；同时它也不会将蛛丝射出来……*
+
+达尔文没有给出解答，直到最近，布里斯托大学的两位科学家，Erica L. Morley 和 Daniel Robert，给出了解答：
+
+** 蜘蛛利用电场飞行！
+
+*御电而行，蜘蛛如何做到？电场又从何而来呢？*
+
+其实，大气层中存在着强烈的电场， *地面带负电，云层带正电。* 这一电场平时有 $100\text V/\text{m}$ ，阴雨天气时甚至能达到 $10,000 \text V / \text m$ 。
+
+#+begin_quote
+我们之所以难以感知，是因为空气的电容很小，我们自身就可以改变周边电场的分布，使得我们周边的电场减弱。参见《费恩曼物理学讲义》，电磁学部分
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-c3682a92802db9bcd85e2df4deb4814f_720w.jpg?source=2c26e567]]
+*地球上的电荷，以及大气中的电场*
+
+*蜘蛛靠近地面，蛛丝就会带上负电，从而被天空的正电吸引，从而飞向天空。*
+
+但蜘蛛身上的电荷足够吗？不够也不要紧，蜘蛛可以爬上树冠、枝桠，这些尖锐的地方，使得自身所带的电荷更多。
+
+[[https://picx.zhimg.com/50/v2-f486a0587733c6e5bc34c3ee561678d3_720w.jpg?source=2c26e567]]
+*导体尖端带电会更多*
+
+此时，蜘蛛翘起腹部，分泌蛛丝，就可以靠着地球的电场，御电而行。
+
+理论上看起来没有毛病，但科学需要实验验证。
+
+Erica L. Morley 和 Daniel Robert设计了一个实验：
+
+[[https://picx.zhimg.com/50/v2-9984be741b9e1c670cc9b8b82c8977f8_720w.jpg?source=2c26e567]]
+*实验容器的电势分布（左）与场强分布（右）*
+
+将蜘蛛放在密闭的容器中，隔绝空气流动、外部电场，然后，再在里面施加电场，强度与自然环境下一致。
+
+蜘蛛果然飞了起来！而且，如果调整电场的强度，他们还可以控制蜘蛛的飞行速度！
+
+[[https://picx.zhimg.com/50/v2-092f896cfa918e8bb1f9414db3a41ddf_720w.gif?source=2c26e567]]
+
+*这是个巧合吗？还是蜘蛛有意为之呢？*
+
+要回答这个问题，首先要回答的，就是「蜘蛛能否感知到电场」？
+
+答案是肯定的，而且方式颇为有趣
+
+*蜘蛛用腿毛感知电场*
+
+[[https://pic1.zhimg.com/50/v2-bd8ad711302b6fd7ed019f30c2793f63_720w.jpg?source=2c26e567]]
+
+不同的电场强度，会使得蜘蛛的腿毛朝向产生巨大的变化，从而能被蜘蛛感知到。
+
+而且，蜘蛛在起飞之前，会有一个独一无二的动作：踮脚（tiptoeing）。这个动作，只有起飞之前会观察到，说明蜘蛛确是有意为之。
+
+电场强度不同，「准备起飞」的蜘蛛数量也大不相同：
+
+[[https://pic1.zhimg.com/50/v2-338ca82a79bdf557595b3a2a9e341f17_720w.jpg?source=2c26e567]]
+
+如图中C、D两幅，就显示了不同场强下，蜘蛛踮脚次数的差异。很明显，蜘蛛不光感知到了电场，还能对它作出反应。
+
+故曰：「列子御风而行，泠然善也；蜘蛛御电而行，犹亦善也」
+
+** 参考文献
+
+Morley, Erica L., and Daniel Robert. “Electric Fields Elicit Ballooning in Spiders.” *Current Biology* 28, no. 14 (July 2018): 2324-2330.e2. [[https://doi.org/10.1016/j.cub.2018.05.057][https://doi.org/10.1016/j.cub.2018.05.057]] .
+
+ED YONG. “Spiders Can Fly Hundreds of Miles Using Electricity.” *The Atlantic* (blog), July 5, 2018. [[https://www.theatlantic.com/science/archive/2018/07/the-electric-flight-of-spiders/564437/][https://www.theatlantic.com/science/archive/2018/07/the-electric-flight-of-spiders/564437/]] .
+
+-----
+
+*文章/回答精选集：*
+
+[[https://www.zhihu.com/collection/353568064][复杂性科学]] - [[https://www.zhihu.com/collection/353566001][生活×物理]] - [[https://www.zhihu.com/collection/353567373][艺术×数理]] - [[https://www.zhihu.com/collection/353566695][科研评论]]
+
+*公众号/微博：* 「复杂鱼塘」，complex-zyb
+
+*Bilibili：* [[https://space.bilibili.com/50155611][复杂鱼塘]]

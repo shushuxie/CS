@@ -1,0 +1,18 @@
+#+TITLE: 高中生对哥德巴赫猜想的证明有哪些错误？
+#+LINK: https://www.zhihu.com/answer/563754000
+#+AUTHOR: 柒佰萬比基尼
+#+CREATED: 2019-01-01
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+我觉得他是：书读的少而想得太多。
+
+他的想法和这个图差不多
+
+[[https://picx.zhimg.com/50/v2-cf4bceb3b2b5b63a93a710297fc5789e_720w.jpg?source=2c26e567]]
+
+如果说高中生叫有天赋的话，参考我这条回答
+
+-----
+
+[[https://www.zhihu.com/question/269393288/answer/541819993][高中生什么叫有天赋]]

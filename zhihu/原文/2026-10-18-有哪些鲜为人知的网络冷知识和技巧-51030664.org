@@ -1,0 +1,70 @@
+#+TITLE: 有哪些鲜为人知的网络冷知识和技巧？
+#+LINK: https://www.zhihu.com/answer/51030664
+#+AUTHOR: 黄海
+#+CREATED: 2015-06-11
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+*6.16更新*
+
+*1.鼠标的滚轮，我们都用它来滚上，滚下，有想过它有其他的用处吗？*
+
+[[https://picx.zhimg.com/50/a78ff7d43e8b03293281951ce347a184_720w.jpg?source=2c26e567]]
+
+其实它还有其他的用处。
+
+1.想在新的标签上打开网页，直接点击鼠标滚轮即可，不用再：鼠标右键，“在新标签页打开”。
+
+2.想关闭网页的标签，不用再按那个“×”，直接点击鼠标滚轮即可关闭网页标签。
+
+3.在浏览器书签栏上，为你经常要打开的网址建立一个文件夹，只要点击鼠标滚轮即可一次性打开文件夹里面所有的网址。
+
+*2.Office中的剪贴板*
+
+很多人应该都用过Office办公软件中的剪贴板功能
+
+[[https://pic1.zhimg.com/50/55d0e34c23efc1a17eef16c42b67c807_720w.jpg?source=2c26e567]]
+
+- 无论你在哪里复制的东西，它会存储。
+- 它最多可以存储24个复制的内容
+- 打开剪贴板，按键盘中截图的按键——PrtScSysRq，它就会存储屏幕截取的快照。
+
+
+*3.如何快速将其他窗口最小化？*
+
+[[https://picx.zhimg.com/50/b923a4f3defdad92eb95dac0125e71ef_720w.jpg?source=2c26e567]]
+
+只需选择其中的一个窗口，并快速地抖动，即可将该窗口背后的活动窗口最小化。
+
+链接：
+
+[[http://9gag.com/gag/abymwz9][Shake your active window to close others. You sneaky Microsoft.]]
+
+
+*4.快速进入PPT的放映模式*
+
+有两种方法
+
+- 将PPT另存为“ **.PPS* ”格式即可。
+
+[[https://pica.zhimg.com/50/29c756fa4360a456a41f9ec741cb4aec_720w.jpg?source=2c26e567]]
+
+版本有点旧，勿喷
+
+- 直接选中PPT文件，按鼠标的右键，点击“显示“即可进入PPT的放映模式。
+
+*5.当然还有Chrome断网情况下萌萌哒的霸王龙。*
+
+[[https://picx.zhimg.com/50/fed18415847cbf5d695973c3e22d2116_720w.jpg?source=2c26e567]]
+
+是不是搞不懂Chrome没有网络时会出现这只小霸王龙？
+
+只要按空格键就能和它愉快地玩耍。手机端一样通用。
+
+[[https://picx.zhimg.com/50/25b5ba5afec497796bd17add0f3c6d63_720w.jpg?source=2c26e567]]
+
+我不会告诉你：小霸王龙还会飞 ！ 跳起来后，迅速切换到另外一个网页，再切回，小家伙就飞起来了！
+
+更多关于Chrome的小技能请查看我的这个回答
+
+[[http://www.zhihu.com/question/20894671/answer/33871712?group_id=594066205179559936][日常生活中有哪些十分钟就能学会并可以终生受用的技能？ - 曾少贤的回答]]
