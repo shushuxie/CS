@@ -1,0 +1,66 @@
+#+TITLE: 是什么原因让你一定要用 iPhone？
+#+LINK: https://www.zhihu.com/answer/2084208283523592918
+#+AUTHOR: 英语大队长
+#+CREATED: 2026-09-18
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+因为苹果Safari浏览器的阅读器模式可以直接免费阅读《纽约时报》、《大西洋月刊》、《路透社》、《纽约客》等付费报刊。
+
+这个阅读器模式本来是想简化文本，剔除不必要的干扰，增强阅读性。
+
+但是没想到，用力过猛了？？？
+
+很多人因为订阅费用的问题无法批判性阅读这些假新闻制造者，但是苹果给大家考虑到了，Safari的阅读器就行！
+
+从Safari输入这些报刊的网址然后打开苹果自带的阅读器就好了。
+
+步骤如下：
+
+IOS 27 更新了操作界面，我也更新一下。
+
+1. 进入网站，点击某一篇文章，然后点击地址栏左端的扩展图标：
+
+[[https://picx.zhimg.com/50/v2-9d2629f75a39eb23e631aef31a9f9d6e_720w.jpg?source=2c26e567]]
+
+2. 进入之后点击显示阅读器就好了：
+
+[[https://picx.zhimg.com/50/v2-8f432f72314ddaa73fc48fb4c1fdaccf_720w.jpg?source=2c26e567]]
+
+或者进入设置，把所有网站都设置成自动打开阅读器，这样更丝滑。
+
+1. 打开设置，拉到最后找到APP：
+
+[[https://pic1.zhimg.com/50/v2-1f300c4aca3b50f0e07053969f52f3cc_720w.jpg?source=2c26e567]]
+
+2. 然后点击并进入Safari，找到阅读器：
+
+[[https://picx.zhimg.com/50/v2-2abcf68aef0444e843f563bf7f1a8265_720w.jpg?source=2c26e567]]
+
+3. 然后把这些都打开自动使用阅读器就行了：
+
+[[https://picx.zhimg.com/50/v2-ef0bed20ffc443110f0fa64a8df99edf_720w.jpg?source=2c26e567]]
+
+旧版IOS系统的操作如下：
+
+1. 进入报社网站，然后随便点一篇文章，再点击地址栏左边：
+
+[[https://picx.zhimg.com/50/v2-a7fd66735d5e91ca5627a324ed332763_720w.jpg?source=2c26e567]]
+
+2. 然后点击右边三个点：
+
+[[https://pic1.zhimg.com/50/v2-67990f8daae147848b94921d66536ebf_720w.jpg?source=2c26e567]]
+
+3. 拉到下面打开自动使用阅读器就行了：
+
+[[https://picx.zhimg.com/50/v2-1600c4b9fa0d010fafb502c007697437_720w.jpg?source=2c26e567]]
+
+Mac和Ipad上也是一样的道理，打开阅读器就行！
+
+这样就能直接读取藏在后面的新闻了~~~
+
+当然，不是所有的都可以！
+
+目前来看，可以的有：Nytimes，Reuters，the Atalantic，Fortune，Foreign Policy，Foreign Affairs，New Yorker……
+
+其他的大家可以试一下！
