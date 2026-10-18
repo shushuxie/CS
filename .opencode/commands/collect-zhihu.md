@@ -1,14 +1,17 @@
 ---
-description: 自动清理知乎收藏夹：取全文→原文归档+主类聚合总结→逐条确认后删除收藏（参数：可选每批条数，默认 20）
+description: 自动清理知乎收藏夹：取全文→原文归档+主类聚合总结→确认后删除收藏（参数：可选每批条数，默认 20，可传任意条数如 50/100）
 ---
 
 任务：全自动处理知乎收藏夹——不需要用户粘贴链接。Cookie 已缓存在本机
 zhihu CLI 里，直接用 CLI 读取收藏、归档、删收藏。
 
-输入：$ARGUMENTS 可以为空或一个数字（本批处理条数，无参数默认 20）：
+输入：$ARGUMENTS 可以为空或一个正整数（本批处理条数，无参数默认 20，
+条数不设上限）：
 
-   /collect-zhihu        → 一批 20 条
+   /collect-zhihu        → 一批 20 条（默认）
    /collect-zhihu 10     → 一批 10 条
+   /collect-zhihu 50     → 一批 50 条
+   /collect-zhihu 100    → 一批 100 条
 
 约定本目录：下文 ZHIHU = ~/Documents/mcp/zhihu-scraper-mcp/.venv/bin/zhihu
 
@@ -16,7 +19,8 @@ zhihu CLI 里，直接用 CLI 读取收藏、归档、删收藏。
 
 1. 初始化
    - bash 执行 `date +%Y-%m-%d`，记为 $TODAY。
-   - 解析 $ARGUMENTS 里的数字为 BATCH（没有则 20）。
+   - 解析 $ARGUMENTS 里的正整数为 BATCH（没有则 20）；不设上限，
+     50 / 100 等任意条数都支持。非数字或非正数时提示后回退 20。
 
 2. 列出收藏夹：
    #+begin_src shell
@@ -33,16 +37,26 @@ zhihu CLI 里，直接用 CLI 读取收藏、归档、删收藏。
 
 3. 枚举本批条目：
    #+begin_src shell
-   $ZHIHU interact collect view <收藏夹ID> --json -n <BATCH>
+   $ZHIHU interact collect view <收藏夹ID> --json --limit 20 -n <BATCH>
    #+end_src
+   - 必须显式给 `--limit 20`（每页条数），CLI 才会按页瀑布式翻页，
+     从而取满 -n 指定的任意条数（实测 -n 50 可返回 50 条）。
    - 解析提示：CLI 会在 JSON 前先打印一行进度（如
      `Fetching collections for …`），直接 json.load 会失败；
      需跳过首个非 JSON 行（例如从第一个 `[` 起截取）再解析。
      第 2 步的 collect list 同理。
+   - 不要把 stderr 丢掉（不要 `2>/dev/null`）：当可列出的条目少于
+     收藏夹总数时，CLI 会在 stderr 打印
+     `API reported X total items but only Y were returned (missing Z)`；
+     把这 Z 条如实记为「不可列出（多为已删除回答）」并在汇报中说明。
+   - 若返回条数 < BATCH，按实际条数处理，不报错。
    从 JSON 里取每条的 标题、URL、类型（answer/article/pin），
    向用户展示「本批将处理 N 条」的清单。
 
 4. 逐条流水线（每条做完这四步再进下一条）：
+   - BATCH ≥ 30 时自动分片：按每 20~25 条一个子批轮转推进
+     （子批内逐条跑 a→b→c，子批做完再进下一子批），避免一次性
+     把上百篇原文读进上下文；收尾汇报时仍合并为一个「本批」。
 
    a. 取全文（同 /summary-zhihu 的规则）：
       - 优先 MCP 工具 get_fulltext（zhihu-scraper），回答要传
@@ -119,7 +133,9 @@ zhihu CLI 里，直接用 CLI 读取收藏、归档、删收藏。
           ／ ⚠️ <标题>（失败原因）
 
    d. 删除收藏（逐条确认）：向用户展示刚写入的标题 + 分类标签 +
-      要点，问「确认已归档，删除这条收藏？」：
+      要点，问「确认已归档，删除这条收藏？」。本批条目较多时（如
+      ≥10 条），可改为先列出全部清单，再用一次 question 总询问
+      「全部确认 / 逐条确认 / 全部保留」，避免逐条打扰：
       - 确认 → 执行：
         #+begin_src shell
         $ZHIHU interact collect remove <条目URL> -c <收藏夹ID>

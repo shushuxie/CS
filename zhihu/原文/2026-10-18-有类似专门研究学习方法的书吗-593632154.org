@@ -1,0 +1,137 @@
+#+TITLE: 有类似专门研究学习方法的书吗?
+#+LINK: https://www.zhihu.com/answer/593632154
+#+AUTHOR: warfalcon
+#+CREATED: 2019-02-10
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+个人爱好是研究有效的学习方法，基本上阅读过国内市场上出版的绝大多数学习方法类书籍，以前还写一个Blog：战隼的学习探索 推荐了几十本书学习方法书籍，先把以前在公众号上推荐过的几本书放上来，剩下的找时间慢慢更新，这个书单可能会比较长。
+
+** 学习之道(第2版)
+
+[[https://pica.zhimg.com/50/v2-1e2fe88f7d1b7e6d5c8aa2fdeb478806_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+作者: [美] 乔希·维茨金 (Josh Waitzkin)
+出版社: 中国青年出版社
+原作名: The Art of Learning
+译者: 苏鸿雁 / 谢京秀
+出版年: 2011-4
+ISBN: 9787500679240
+#+end_quote
+
+这本书是乔希·维茨金自己写的，76年出生，在13岁就获得象棋大师头衔，在20岁的写了一个 “象棋大师”的程序，同时还学了太极，参加台湾的世界太极推手大赛，并获得冠军。他最擅长的领域是学习，就是分享他对学习的观点。
+
+读者@楝砉　分享过这本书的读书笔记，推荐去读一下。
+
+*扩展阅读：*
+
+- [[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=404995638&idx=1&sn=d8426a6d6e2009a05201fdad4baa39ce&scene=21#wechat_redirect][国际象大师、太极推手世界冠军的《学习之道》（1）]]
+- [[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=404995638&idx=2&sn=eec01c1e18ae5fad726ccac467eab500&scene=21#wechat_redirect][国际象大师、太极推手世界冠军的《学习之道》（2）]]
+- [[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=404995638&idx=3&sn=97434858f1052f9198858460a00cf7e8&scene=21#wechat_redirect][附录一：我关于练习合气道践行《学习之道》的手记]]
+- [[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=404995638&idx=4&sn=a54994cc15359024f863d32fa32b4fdb&scene=21#wechat_redirect][附录二：我关于视觉化的理解和应用]]
+
+
+** 学习之道
+
+[[https://pic1.zhimg.com/50/v2-7b09354a2309c49a647468a6006c3208_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+作者: [美] 芭芭拉·奥克利（Barbara Oakley）
+出版社: 机械工业出版社
+原作名: ：A Mind for Numbers: How to Excel at Math and Science (Even If You Flunked Algebra)
+出版年: 2016-11
+页数: 304
+ISBN: 9787111552062
+#+end_quote
+
+这本书是去年年底出的，给这本书写过推荐，非常值得一读，从脑科学和心理学的最新研究出发，对学习方法和思维介绍的非常全面。找时间，把这本书的读书笔记发在微信上。
+
+** 如何学习
+
+[[https://pic1.zhimg.com/50/v2-1341522bb4f4084f9fd666ec17545571_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+作者: 亚当·罗宾逊
+出版社: 中国青年出版社
+副标题: 用更短的时间达到更佳效果和更好成绩
+原作名: What Smart Students Know: MaximumGrades. Optimum Learning. Minimum Time
+出版年: 2016-1-1
+ISBN: 9787515334844
+#+end_quote
+
+这本书中的赛博学习法，让你通过回答12个问题就掌握掌握科教书的要点
+
+*扩展阅读：* [[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=403475231&idx=1&sn=bbf21f2e37e91fc10d1a48285e8abefd&scene=21#wechat_redirect][用更短的时间达到更佳效果和更好成绩]]
+
+** 如何高效学习
+
+[[https://pic1.zhimg.com/50/v2-d9809b4006aa0aa7b589fac68871a2c9_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+作者: [美]斯科特·扬
+出版社: 机械工业出版社
+副标题: 1年完成麻省理工4年33门课程的整体性学习法
+原作名: Learn More Study Less
+ISBN: 9787111444008
+#+end_quote
+
+跟作者在北京见了一面，聊了一整天，很有意思的一个人。以前写过书评
+
+*扩展阅读：*
+
+- <u>[[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=201463498&idx=1&sn=e7d469f239e9bd761735f36efffdb53b&scene=21#wechat_redirect][怎样成为一个高效率的学习者]]</u>
+- <u>[[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=206447048&idx=1&sn=9f8f6afbf12839b127f335e5aa65f686&scene=21#wechat_redirect][如何象Scott H. Young一样在 12 个月内自学完成 4 年麻省理工学院计算机科学的 33 门课程]]</u>
+- <u>[[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=2655710226&idx=1&sn=05b3655b4635d1c894b77df43d11b966&chksm=bd50ff918a2776872e7376d692a44f2ce4c1e062b0221dbe64567c669a71e9d8df00e63ebd71&scene=21#wechat_redirect][简单三步，掌握任何一门学科]]</u>
+
+** 怎样解题
+
+[[https://pica.zhimg.com/50/v2-3e350db2a0b7bcf1ff0deade589c6c94_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+作者: [美] G. 波利亚
+出版社: 上海科技教育出版社
+副标题: 数学思维的新方法
+原作名: How to Solve It : A New Aspect of Mathematical Method
+译者: 涂泓 / 冯承天
+出版年: 2007-5
+ISBN: 9787542843876
+#+end_quote
+
+很多人都对如何学习数学都非常头疼，强烈推荐这本书，表面上解决数学问题，实际上讲的怎样提高解决问题的能力，讨论的全部都是解决问题的基本规则，包括怎样解决学习、生活方面的问题。
+
+** 阿哈！灵机一动
+
+[[https://pic1.zhimg.com/50/v2-cfa94e4dd7b3966376519fdc5611a5a9_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+作者: (美)马丁·加德纳(Martin Gardner)
+出版社: 湖南教育出版社
+副标题: 世界科普名著精选
+原作名: Aha! Insight
+译者: 刘正新 / 李建臣
+出版年: 2002-12
+ISBN: 9787535538352
+#+end_quote
+
+也是很老的一本书，作者是非常有名的数学家，而且科普功能深厚，教你怎样打破解题常规，学会变换角度思考，产生特殊洞察力，出现“阿哈反应”。
+
+要是你有机会在上中学的时候读到这本书，会受益无穷的。
+
+** 考无不胜
+
+[[https://picx.zhimg.com/50/v2-c06b08c838be4fcf9272b5c9a5c8bd3e_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+作者: 陈祥星
+出版社: 华文出版社
+出版年: 2002-1-1
+ISBN: 9787507512519
+#+end_quote
+
+对学生来说，最头疼的就是考试，推荐一本《考无不胜》，这本书很老了，估计你买不到，作者是考试高手，有10多个专家技术证书。
+
+*扩展阅读：*
+
+- [[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=403309882&idx=1&sn=afa5308f185acdf8b36f7b61311f3429&scene=21#wechat_redirect][一个考证牛人的考试秘籍]]
+- [[http://mp.weixin.qq.com/s?__biz=MjM5NjA3OTM0MA==&mid=204352631&idx=1&sn=f87c1fe1e5c99dff9444298881447f1d&scene=21#wechat_redirect][离考试只有几天怎样学习效果会更好]]
