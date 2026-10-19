@@ -1,0 +1,48 @@
+#+TITLE: 函数式编程该怎么学呀？
+#+LINK: https://www.zhihu.com/question/664311077/answer/1958875444326675007
+#+AUTHOR: LMY150
+#+CREATED: 2025-10-07
+#+TYPE: answer
+#+DATE: 2026-10-18
+
+不妨去steam上把《 */Recursed/* 》这个游戏通关，只需几块钱，对一些“箱子”进行来回倒腾，你自然就学会了函数式编程，同时对递归的理解也会更加深刻。但凡接触过这个游戏的都知道，这并非是哗众取宠，市面上那些零零散散的专业书籍可能还不如一个益智解谜游戏，能够把FP演绎得既深入浅出又极具挑战。
+
+《 */Recursed/* 》的核心机制灵感来源于函数调用和栈帧的可视化，它用一些具体的物品将FP中的抽象概念进行了模拟，把抽象的控制流机制，转化成了空间层次的物理动作，实际上很多从来都不了解过这些编程概念的玩家都能乐在其中：
+
+[[https://pic1.zhimg.com/50/v2-ec1c35e7bbbe1f8cbccdafdfe68c63fc_720w.jpg?source=2c26e567]]
+
+以下是我自己的感受和总结：
+
+1）chest 箱子：带有一个任意类型入参和一个任意类型返回参数的 */高阶函数/* （附带隐式参数“水”，可将箱子淹没），每次跳入一个箱子，空间里面的物品都会初始化，恢复成初始的状态。同时也是天然的 *Generator* / *Constructor* / *Factory，* 里面的物品是取之不尽的 *。*
+
+2）jar 罐子：对应的是 */Continuation/* ，也可以理解成用完即碎的 *匿名函数* 或者 *lambda表达式* ，具有 *闭包* 的特性，可以保存状态。解谜的过程非常接近于在编写 */CPS/* (Continuation-Passing-Style) 风格的代码。还可以体现出 */Partial Application。*
+
+[[https://www.zhihu.com/video/1958872686269794146][Payload and Partial Application]]
+
+3）cauldron 大锅：对应的是 */Thread Context/* ，是玩家从当前线程A切换到另一个线程B的入口，大锅保存了它所属线程被挂起时的状态。
+
+4）包括上述在内的所有物品都有一个“绿光”附魔的版本，是 */全局静态引用/* ，利用 */副作用/* 和回溯实现teleport，在这个游戏中极其常见，比如：
+
+[[https://www.zhihu.com/video/1958850656585650476][“梯云纵”递归版]]
+
+[[https://www.zhihu.com/video/1958865996317193765][Airborne trick]]
+
+当“函数”处于半空中时，通过“回溯”操作，可以直接从“函数”中跳出，到达一些去不了的地方。
+
+5） */exception/* 的递归
+
+悖论空间 (paradox) / 故障空间 (glitch) / 无效空间 (invalidity)：分别对应的是三种异常，类似于下面这种语义：
+
+(paradox) ReturnAddressNotFoundException：函数的返回地址失效了，这个游戏是可以打断函数的调用链的，是一个十分常见的解题trick。会被丢进paradox room，去完成diamond谜题。
+
+(glitch) */NullPointerException/* ：Jar罐子作为continuation或者说lambda块，一旦从里面退出就会马上被销毁，再次尝试访问被销毁的空间，玩家会被丢进glitch room这个公用的垃圾堆，是一个用于传递物品的trick。
+
+(invalidity) ThreadContextInvalidException：两个线程之间断开了联系，这个游戏是可以屏蔽另一个线程的。会被丢进invalidity room，去完成ruby谜题。
+
+这些异常一旦被try catch就会进入上述的三种特殊空间，并且可以携带一个参数，即exception对象，通过这个ex对象，可以选择恢复到原来的正常空间。在异常处理中，为了解开当前的异常谜题，有时需要进一步潜入更深层次的异常空间去寻找缺失的物品，也就是 */try catch可以递归和嵌套/* 。
+
+-----
+
+说那么多，不如亲身去感受一下。如果感觉游戏本篇学得不过瘾，社区的DLC，Ice Palace和One Day Out会让人有一种寸步难行的感觉。
+
+最后，有兴趣可以阅读一下MIT的这篇论文： [[https://arxiv.org/pdf/2002.05131][《Recursed》is not Recursive: A Jarring Result]]
