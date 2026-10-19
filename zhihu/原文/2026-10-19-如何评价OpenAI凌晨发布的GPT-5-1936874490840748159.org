@@ -1,0 +1,154 @@
+#+TITLE: 如何评价 OpenAI 凌晨发布的 GPT-5？
+#+LINK: https://www.zhihu.com/question/1936601885311239615/answer/1936874490840748159
+#+AUTHOR: 安小强
+#+CREATED: 2025-08-07
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+更新：已经发布了，熬了个大夜。说实话很强，但不及预期。
+
+看看这些测试吧:
+
+** 小球游戏：
+
+#+begin_src text
+提示： 在一个 HTML 文件中创建一个单页应用程序，满足以下要求：
+- 名称：跳跃球跑者
+- 目标：跳跃越过障碍物，尽可能长时间生存。
+- 特点：速度递增、高分记录、重试按钮，以及动作和事件相关的趣味音效。
+- 界面应色彩丰富，带有视差滚动背景。
+- 人物应该看起来像卡通一样，观看起来很有趣。
+- 游戏应该让每个人都感到愉快。
+
+#+end_src
+
+[[https://pic1.zhimg.com/50/v2-ab21447e9ff3e766e480d787e3a382e8_720w.jpg?source=2c26e567]]
+
+** 像素艺术
+
+#+begin_src text
+创建一个单页面应用程序，在一个 HTML 文件中，提供复古像素绘画体验。
+- 画布：固定像素网格，支持缩放；提供铅笔、橡皮擦、填充、线条、矩形、圆形等工具；网格切换功能。
+- 调色板：16色色板，含两个自定义槽位；吸管工具；前景色/背景色切换。
+- 编辑功能：撤销/重做，复制/粘贴选区，翻转/旋转选区，清空画布；状态栏显示光标坐标。
+- 界面外壳：仿操作系统窗口（90年代风格），带可拖动标题栏、工具栏图标、提示信息。
+- 导入/导出：导入 PNG（量化为调色板）并导出 PNG/SpriteSheet + JSON；从 localStorage 保存/加载。
+- 快捷键：数字键用于工具，+/-用于缩放；可访问的标签和焦点顺序。
+- 响应式布局；无需上传到服务器。
+#+end_src
+
+[[https://pic1.zhimg.com/50/v2-cda61c7acfb002b4984a0ac134373f0c_720w.jpg?source=2c26e567]]
+
+** 打字游戏
+
+#+begin_src text
+在一个 HTML 文件中创建一个单页应用程序，满足以下要求：
+- 名称：打字速度赛
+- 目标：在限时打字挑战中测试 WPM（每分钟字数）和准确率。
+- 功能：随机段落生成器、错误高亮显示、实时 WPM 显示、倒计时动画、历史图表。
+- 界面应简洁，采用高对比度文字和大型打字区域。
+#+end_src
+
+[[https://picx.zhimg.com/50/v2-6b2186d052792540b5d9b75fe6e34c05_720w.jpg?source=2c26e567]]
+
+** 虚拟打鼓
+
+#+begin_src text
+在一个 HTML 文件中创建一个单页应用程序，满足以下要求：
+- 名称：虚拟鼓组
+- 目标：使用键盘或点击来演奏鼓组。
+- 功能：多种鼓声，录音和回放模式。
+- UI 应采用音乐工作室风格，精致，现代。尽可能使其美观。
+#+end_src
+
+[[https://picx.zhimg.com/50/v2-42946a733e1f5784bbbe17c62993b512_720w.jpg?source=2c26e567]]
+
+** 低保真可视化
+
+#+begin_src text
+生成一个 React + Canvas“低保真可视化器”，将条形和波浪动画与蒸汽波音乐结合（无需文件上传，使用捆绑的音调）；
+提供 3 种视觉风格（条形、点、网格）以及速度、密度和发光效果的滑块；
+用 Windows-’96 风格的铬色（类似文件资源管理器界面）包围，添加像素按钮和色轮来重新着色场景。
+#+end_src
+
+[[https://picx.zhimg.com/50/v2-5961907fa80b6e915c0c167539305af3_720w.jpg?source=2c26e567]]
+
+** 2D空战游戏
+
+#+begin_src text
+Make a 2d space game, in which I can fly a ship, avoid and blow up asteroids, and dogfight with other computer-controlled AI. 
+Be creative with the design of the ships. Ensure the gameplay works and is fun. 
+Output code in a single next.js page.tsx file, which can be pasted directly into a next.js app created by create-next-app, alongside any context or instructions needed to run it.
+#+end_src
+
+[[https://pic1.zhimg.com/50/v2-d569e14b4948d015c7095a4245953dd7_720w.jpg?source=2c26e567]]
+
+** 网站Landing页面
+
+#+begin_src text
+Please generate a beautiful, realistic landing page for a service that provides the ultimate coffee enthusiast a $200/month subscription that provides equipment rental and coaching for coffee roasting and creating the ultimate espresso. 
+The target audience is a bay area middle-aged person who might work in tech and is educated, has disposable income, and is passionate about the art and science of coffee. 
+Optimize for conversion for a 6 month signup.
+#+end_src
+
+[[https://picx.zhimg.com/50/v2-692fe383189bb0f089e1ebb5e0d89e32_720w.jpg?source=2c26e567]]
+
+---
+
+** 下面是benchmark：
+
+[[https://pic1.zhimg.com/50/v2-78c2d81c338869d3b742dcd9e98b9c1e_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-303435fdc806e02d53caaba16cb146f4_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-5dc1c3f3a40eadbaa5a5204a5140a614_720w.jpg?source=2c26e567]]
+
+** 原回答：
+
+就等今晚了，期待。 
+ 
+ 我先整理一些泄露的信息吧，含信息源，供大家快速浏览： 
+ *leak – GPT-5 Pro is coming out too!* 
+ Reddit /r/OpenAI 贴主称 Pro 版本将短期免费开放，以对抗 Claude／Gemini，评论区普遍认为是“用户留存”策略。 
+
+
+[[https://picx.zhimg.com/50/v2-94c8b9e144662c05a07bd5de054daf3a_720w.jpg?source=2c26e567]]
+
+信息源： [https://www.reddit.com/r/OpenAI/comments/1mjt2fi/leak_gpt5_pro_is_coming_out_too/](https://www.reddit.com/r/OpenAI/comments/1mjt2fi/leak_gpt5_pro_is_coming_out_too/)
+
+---
+
+*** Google just leaked the GPT‑5 docs page
+
+有用户发现 Google 索引了 OpenAI 官网的 /docs/guides/gpt‑5 页面，这是 GPT‑4o 发布前也出现过的迹象，被视为官宣前奏。
+
+[[https://picx.zhimg.com/50/v2-1769e355b2f24750740efec51d9c23b6_720w.jpg?source=2c26e567]]
+
+
+ 链接： [https://www.reddit.com/r/ChatGPT/comments/1mgdam0/google_just_leaked_the_gpt5_docs_pagethe_same/](https://www.reddit.com/r/ChatGPT/comments/1mgdam0/google_just_leaked_the_gpt5_docs_pagethe_same/)
+
+---
+
+*** GPT‑5 announcement just leaked
+
+X 用户 @deedydas 放出疑似官方直播倒计时截图，称 OpenAI 官宣页面被提前泄露，引发大量关注。
+
+[[https://picx.zhimg.com/50/v2-de92f64a4baf7538aff0caf3b9512c44_720w.jpg?source=2c26e567]]
+
+
+ 链接： [https://x.com/deedydas/status/1953319878733045787](https://x.com/deedydas/status/1953319878733045787)
+
+---
+
+*** GPT‑5 variants leaked by GitHub
+
+X 用户 @mark_k 分享 GitHub 上误传的 System Card 内容，曝光 GPT‑5 系列模型包含 gpt‑5、mini、nano、pro 四个版本。
+
+[[https://pic1.zhimg.com/50/v2-d1082807d5a1aba33be19825e9123497_720w.jpg?source=2c26e567]]
+
+
+ 链接： [https://x.com/mark_k/status/1953341891736424463](https://x.com/mark_k/status/1953341891736424463)
+
+---
+
+*** 如有更多爆料我会持续更新，也欢迎补充～

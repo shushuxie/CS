@@ -1,0 +1,45 @@
+#+TITLE: 你的低成本爱好是什么？
+#+LINK: https://www.zhihu.com/question/1897959255778231029/answer/1912524446750704244
+#+AUTHOR: 低学历公知
+#+CREATED: 2025-06-01
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+[[https://picx.zhimg.com/50/v2-6aaab375b5d8373ea50914034d282bc3_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-b7498638fe1b252751a5926f9d770609_720w.jpg?source=2c26e567]]
+
+爱好折腾单片机吧，二十块钱的esp32,七十块钱的stm32开发板，搭一块3寸屏幕跑各种有意思的东西，以上加起来160块钱。
+
+如果玩单片机还想压低预算，只买esp32就行，24块钱，有蓝牙和WiFi功能，比STM32系列好很多。
+
+这么多人收藏，那我就放个大招吧，告诉大家一个真正零成本入门玩单片机的办法，那就是使用网站模拟器，介绍一个可以模拟arduino，esp32，stm32，pi pico单片机功能的网站，免费用户功能也还行，玩起来体验也还不错，还有各种组件，可以搭一下自己的项目，然后写个代码运行起来模拟，像入门点个灯这种初级体验，就不用急着考虑买实体硬件了，链接在结尾送上。
+
+[[https://picx.zhimg.com/50/v2-5510cbdadcffa913b2904fcfc6418153_720w.jpg?source=2c26e567]]
+
+[wokwi](https://wokwi.com/)
+
+---
+
+一千赞了，再送大家一个Keil MDK5激活工具， *音量警告* ，注册机有音乐，调低音响和你的耳机。
+
+[https://wwea.lanzoue.com/i5RsH37k6v1e](https://wwea.lanzoue.com/i5RsH37k6v1e)
+
+---
+
+收藏的人数增加了，那么再添加两个零成本学习单片机的模拟网站吧！ 
+
+
+[[https://pic1.zhimg.com/50/v2-7f9eae21bf0683e847c9b4675ea0dd62_720w.jpg?source=2c26e567]]
+
+[https://app.cirkitdesigner.com/](https://app.cirkitdesigner.com/)
+
+网站有集成AI协助布线和出代码，免费用户可用的AI不多，但是聊胜于无，主打一个能薅羊毛就薅羊毛。
+
+---
+
+[[https://picx.zhimg.com/50/v2-1a37e3cad74aeaba486540fcfa22ea25_720w.jpg?source=2c26e567]]
+
+[https://velxio.dev/editor](https://velxio.dev/editor)
+
+优势，模拟MCU更贴近实际的硬件，编译快，不像wokwi现在用的人多了高峰时间要等待编译而且编译还慢。

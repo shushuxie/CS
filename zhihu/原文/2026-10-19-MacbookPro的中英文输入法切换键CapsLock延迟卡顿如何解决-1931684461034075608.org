@@ -1,0 +1,25 @@
+#+TITLE: Macbook Pro的中英文输入法切换键(CapsLock)延迟卡顿如何解决？
+#+LINK: https://www.zhihu.com/question/478402271/answer/1931684461034075608
+#+AUTHOR: 杨延景
+#+CREATED: 2025-07-24
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+chatgpt给的方法很有效，直接关闭延迟
+
+#+begin_quote
+macOS 自带了一个隐藏的 HID 属性，可以彻底移除 Caps Lock 的按键延迟，无需依赖任何第三方工具：
+#+end_quote
+
+#+begin_src bash
+hidutil property --set '{"CapsLockDelayOverride":0}'
+#+end_src
+
+#+begin_quote
+1. 直接在 “终端” 中执行即可立即生效； 2. 重启后可将该命令加入你的 shell 启动脚本（如 =~/.zshrc= 或 =~/.bash_profile= ），实现开机自动应用
+#+end_quote
+
+
+ P.S. 开慢速键不好用，删除和光标移动都会变得很慢
+
+[[https://github.com/gkpln3/CapsLockNoDelay?utm_source=chatgpt.com]]
