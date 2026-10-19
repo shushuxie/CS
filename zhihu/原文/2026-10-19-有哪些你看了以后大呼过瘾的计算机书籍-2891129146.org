@@ -1,0 +1,109 @@
+#+TITLE: 有哪些你看了以后大呼过瘾的计算机书籍？
+#+LINK: https://www.zhihu.com/question/531662635/answer/2891129146
+#+AUTHOR: 码农出击
+#+CREATED: 2023-02-13
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+*这是一本在国内外都被称为技术书籍巅峰之作的神书！*
+
+国内的豆瓣评分 9.7（满分 10.00），接近 90% 的人为这本书打了五星好评。
+
+[[https://picx.zhimg.com/50/v2-7bc669afe1b4674c5abcdfe86f0bb4a9_720w.jpg?source=2c26e567]]
+
+国外的 Goodreads（类似于豆瓣） 评分 4.72（满分 5.00） ，接近 80% 的人为这本书打了五星好评。
+
+[[https://picx.zhimg.com/50/v2-63b6552a8e3e9fcb835ef5524a9fc56c_720w.jpg?source=2c26e567]]
+
+这本书就是 [《Designing Data-Intensive Application》](https://javaguide.cn/) ，也被简称为 DDIA ，在国内通常被翻译为 [《数据密集型应用系统设计》](https://javaguide.cn/) 。
+
+我一直觉得这是一本有点被书名耽误的神书，大家千万不要被书名给“欺骗”了。
+
+单看书名，很多人估计觉得这就是一本专门为数据处理相关工作的程序准备的书籍。我当时在第一眼看这本书的书名的时候就是这种感觉。
+
+实际不然，这本书适合每一位做 后端开发 的程序员阅读，尤其适合每一位 CRUD 程序员阅读！ 
+ 这本书的主要讲了 分布式数据库 、数据分区、事务、 分布式系统 等内容。从 数据模型 与查询语言， [数据编码](https://www.zhihu.com/search?q=%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2803941218%7D) 到数据复制和分区，再到事务，一致性共识，分布式系统面临的一些挑战（如故障与部分失效、不可靠网络和时钟），作者都结合实例提供了有深度的讲解，在工业与学术之间平衡的很好。
+
+就比如在讲 快照隔离 实现技术多版本 并发控制 （MVCC, multi-version concurrentcy control）的时候，作者就图解了 PostgreSQL 如何实现基于 MVCC 实现的快照级别隔离。
+
+[[https://pic1.zhimg.com/50/v2-405ad741af19be1fc87f1aa607109c64_720w.jpg?source=2c26e567]]
+
+作者认为：
+
+- 数据是后端系统的核心，我们所做的任何事情都是围绕着数据来展开的；
+- 现在的大部分应用程序都是 *数据密集型（data-intensive）* 而非 *计算密集型（compute-intensive）* ，也就是说系统的瓶颈通常来自于对数据的处理而非 CPU ；
+- 数据库、 消息队列 、缓存等中间件/软件可以被统称为 *数据系统（data system）* ，它们之间的界限越来越模糊，例如：数据存储可以被当成消息队列用（Redis），消息队列则带有类似数据库的持久保证（Apache Kafka）。
+
+这本书介绍的很多概念你可能之前都听过，但是在看了书中的内容之后，你可能会豁然开朗：“哇塞！原来是这样的啊！这不是某技术的原理么？”。
+
+下图是我在第二次看这本书的时候做的笔记 ：
+
+[[https://picx.zhimg.com/50/v2-cdd39036a79a2f5840391b42ab5ce12b_720w.jpg?source=2c26e567]]
+
+第一次看这本书的时候还在读大三，那时候读这本书只觉得内容很干，但是很多地方自己看不懂。等到第二次再读就好多了，很多不太能理解的概念也能搞清了。
+
+看了这本书你会发现国内外的非常多的系统设计课程以及和数据相关的课程里面的很多内容在这本书中都有提到。
+
+这本书有很多地方的讲解都能让你对这个知识点有新的认识。
+
+就比如在介绍事务的 ACID 特性的时候，这本书中如是说： 
+ Atomicity, isolation, and durability are properties of the database, whereas consis‐ tency (in the ACID sense) is a property of the application. The application may rely on the database’s atomicity and isolation properties in order to achieve consistency, but it’s not up to the database alone.
+
+翻译过来的意思是：原子性，隔离性和持久性是数据库的属性，而一致性（在 ACID 意义上）是应用程序的属性。应用可能依赖数据库的原子性和隔离属性来实现一致性，但这并不仅取决于数据库。因此，字母 C 不属于 ACID 。 
+ 
+ 看了之后是不是感觉自己被 ACID 这个概念被误导了很久？
+
+再比如说在介绍数据复制这部分内容的时候，这本书介绍了三种常见的复制方案及其优点和缺点。
+
+主从复制 非常流行，主要是因为它很容易理解，也不需要担心冲突问题。而万 一出现节点失效、网络中断或者延迟抖动等情况，多主节点和无主节点复制方案会更加可靠，不过背后的代价则是系统的复杂性和弱一致性。
+
+[[https://picx.zhimg.com/50/v2-59342b29ab54d083b80de692c9d79242_720w.jpg?source=2c26e567]]
+
+看这本书的时候，你可以结合 MIT6.824 分布式系统课程。油管上这门课程的视频版本，地址： [https://www.youtube.com/channel/UC_7WrbZTCODu1o_kfUMq88g/videos](https://www.youtube.com/channel/UC_7WrbZTCODu1o_kfUMq88g/videos) 。 
+
+
+[[https://pic1.zhimg.com/50/v2-6772b7ff597ba025a8fd73a1746ab124_720w.jpg?source=2c26e567]]
+
+这这门课程是全英文的，英语能力不够好的同学很难坚持学习下来。
+
+不过，不用担心！B 站有这个课程的中文翻译版合集，地址： [https://www.bilibili.com/video/av91748150](https://www.bilibili.com/video/av91748150) 。国内也有小伙伴还提供了这门课程的中文 文字版 ，地址： [https://mit-public-courses-cn-translatio.gitbook.io/mit6-824/](https://mit-public-courses-cn-translatio.gitbook.io/mit6-824/) 。 
+
+
+[[https://picx.zhimg.com/50/v2-f1f855807ad53f91391bfc54953d6769_720w.jpg?source=2c26e567]]
+
+看了之后表示：“真羡慕 MIT 的学生，在大学能有这么好的学习方式和实践！”。我特么可太羡慕了！这门课的 Lab 非常不错！
+
+另外，这本书的作者 Martin Kleppmann（马丁·科勒普曼）是剑桥 大学计算机 科学与技术系的噶几研究助理和讲师，是一位在工业界和 学术界 的大牛，参与了多个知名 开源项目 包括 Automerge 、 Apache Avro 和 Apache Samza 。Martin Kleppmann 的 个人博客 地址： [https://martin.kleppmann.com/](https://martin.kleppmann.com/) 。 
+
+
+[[https://pica.zhimg.com/50/v2-3803b35ed40fd2a1e96b2f732594845a_720w.jpg?source=2c26e567]]
+
+考虑到版权问题，这里就不分享这本书籍的 PDF 版本了。感兴趣的小伙伴，可以自己购买纸质书或者找一下这本书的开源翻译版本。
+
+[Java 八股文 113 道（背诵版）](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247486440&idx=2&sn=db73aa811408cc91c711a472f935d127&chksm=fdb3f536cac47c2021424abf115925226106ecdcf527b0b314e8bd3de1eb6bc0dd9f0e2e834b#rd)
+
+#+begin_quote
+作者：JavaGuide 
+ 链接： [https://www.zhihu.com/question/50408698/answer/2278198495](https://www.zhihu.com/question/50408698/answer/2278198495) 
+ 来源：知乎
+#+end_quote
+
+*最近很多同学问我大厂面试的核心知识点，东哥熬夜整理出来了9大核心知识点，需要的自取:*
+
+[校招进大厂，9大核心课程知识，熬夜整理成思维导图送给大家​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd)
+
+[BAT大佬整理的进大厂必看秘籍!​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd)
+
+另外，我当初在准备各大公司技术笔试的时候刷了大量的算法题，其中就是参考了 *一本谷歌大神的LeetCode刷题笔记* ，帮我整理了解题思路，归纳了出刷题方法，非常不出错，转给需要的同学：
+
+[BAT大佬写的Leetcode刷题笔记，看完秒杀90%的算法题！​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd)
+
+最后给大家介绍一份计算机经典书籍，送大家一份硬核书籍资源：读大学跟工作期间，我买了很多书，大部分是一些技术书籍，也收集了这些书籍的电子版，都在这里，现在免费share给大家， *包括了计算机类常用电子书，包括C，C++，Java，Python，Java，Linux，Go* 等，希望大家能认真阅读。 *点击下方链接直达获取：*
+
+[计算机经典必读书单(含下载方式)​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd)
+
+*码字不易，硬核码字更难，希望大家不要吝啬自己的鼓励，给我 ：*
+
+[@码农出击](https://www.zhihu.com/people/654c3abe48a76ba5ac3c116813806075)
+
+*一个点赞，鼓励下我！*

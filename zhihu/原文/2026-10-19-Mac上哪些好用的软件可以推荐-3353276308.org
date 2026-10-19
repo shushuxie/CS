@@ -1,0 +1,26 @@
+#+TITLE: Mac 上哪些好用的软件可以推荐？
+#+LINK: https://www.zhihu.com/question/558056930/answer/3353276308
+#+AUTHOR: 泥给鹿打油
+#+CREATED: 2024-01-07
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+这就要提到Git上的一个项目了。
+
+这个项目就是收集各类好用的Mac应用软件和工具等等。
+
+目前已经有67.5k stars，收集到的工具也出了分类目录，几乎覆盖了各个行业所需要的软件。
+
+[[https://picx.zhimg.com/50/v2-5a0938a38512331aec49591afe45c4ca_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-6dd627e30cc99710eb085cd1d07f7e27_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-f7c3fa0179a7a00ccf1ec37985c146be_720w.jpg?source=2c26e567]]
+
+以上的只是其中截取的一小部分，具体可以去Git上自己看。
+
+[awesome-mac](https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md)
+
+神奇的一点是， 项目表示拒绝盗版从我做起，然后列出了非常多的Mac盗版软件网站（大家千万千万千万不要去访问啊啊啊）
+
+[[https://picx.zhimg.com/50/v2-920e12a88335be79146ff9f656d61c9a_720w.jpg?source=2c26e567]]

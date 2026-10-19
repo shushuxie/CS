@@ -1,0 +1,59 @@
+#+TITLE: Windows 上有什么实用的必备软件？
+#+LINK: https://www.zhihu.com/question/470082569/answer/1891415369845027475
+#+AUTHOR: 愤怒的偏口钳
+#+CREATED: 2025-04-04
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+换机器，每次都必装这几个
+
+** chrome，没办法，实在太好用了，必用插件，插件-proxy switch omega（原项目不维护了，有人fork了一个分支改的，好像叫zero switchomega）；
+
+*** 插件-infinity，我感觉这个书签比较好用；
+
+*** 插件-沉浸式翻译，谁用谁知道，开启鼠标左键按住自动翻译，还有中英文对照，完美。
+
+*** 插件-ublock，屏蔽广告神器。
+
+*** 插件-宽乎:地址: [https://github.com/ATX735/KuanHu](https://github.com/ATX735/KuanHu) ，拯救pc端刷知乎的体验。
+
+** obsidian，配合github，记笔记唯一的真神，丰富的插件可以使用，连同插件保存在git上，迁移机器太容易了。
+
+** everything，不说了，好多人都推荐了。
+
+** vscode，宇宙第一ide，我习惯给插件那个目录搞个软链接，链接到d盘一个目录下
+
+** notepad++，作者有点sb.可以用notepad--
+
+** wsl，这个墙裂推荐，默认安装在c盘，我也喜欢迁移到d盘。并且我都写好了一些脚本，直接将开发常用的中间件，使用systemd的方式跑在wsl里面，平时要调试了，我就打开wsl，需要的中间件就都启动了。注意，梯子不要开全局模式，不然主机跟wsl通信不能使用localhost.(这个有个解决办法[ [https://github.com/microsoft/WSL/issues/10753](https://github.com/microsoft/WSL/issues/10753) ])
+
+** snipaste，开机启动项，截图必备。可以修改快捷键，我喜欢用alt+a，跟微信会冲突---这个好多同学说，pixpin更好用，试了下，确实是好用，建议替换成pixpin,主要是带OCR，有时候确实有识别图片文字的需求
+
+** wiztree:硬盘分析工具，感觉硬盘东西有点多，拿这个扫扫看看，到底是什么在占用。
+
+** 7zip：免费好用
+
+我看很多人收藏，再推荐几个
+
+** QuickLook: 开源的一款，预览文档的软件，功能类似mac的文件预览，只需要轻安空格，立马可以预览其中内容。地址: [https://github.com/QL-Win/QuickLook/releases](https://github.com/QL-Win/QuickLook/releases)
+
+** Motrix: 下载工具，替代迅雷
+
+** LocalSend:今天又发现个好东西，LocalSend,这个是个手机端、电脑端相互传文件的，为什么不用微信、QQ呢，主要我的工作电脑上不想装微信/QQ,而且微信对文件大小有限制，这个界面干净，开源！开源！项目地址: [GitHub - localsend/localsend: An open-source cross-platform alternative to AirDrop](https://github.com/localsend/localsend)
+
+** Scoop：windows下的包管理神器，用惯了 yum/apt/brew,windows下也有替代的，scoop
+
+安装方法很简单，下面的挨个贴到Powershell里面执行下，安装目录可以自己选，建议不要放C盘
+
+#+begin_src powershell
+ # 1. 先指定安装目录（在安装之前设置！）
+ $env:SCOOP='D:\software\scoop'
+ # 2. 允许执行脚本
+ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+ # 3. 安装 
+ irm get.scoop.sh | iex
+#+end_src
+
+比如你要装git-crypt,就可以直接 ~scoop install git-crypt~ ,然会就会安装到这个目录`D:\software\scoop\shims\git-crypt.exe`,这个已经加到系统的PATH变量了，可以直接使用
+
+** 另外推荐一款手机浏览器:Alook浏览器 没广告，没广告！！

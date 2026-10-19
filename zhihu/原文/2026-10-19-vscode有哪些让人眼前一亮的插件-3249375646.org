@@ -1,0 +1,77 @@
+#+TITLE: vscode 有哪些让人眼前一亮的插件?
+#+LINK: https://www.zhihu.com/question/311803609/answer/3249375646
+#+AUTHOR: 一只方橙
+#+CREATED: 2023-10-14
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+** 智能切换中英输入法
+
+[[https://picx.zhimg.com/50/v2-d19413e55245691fbd2495dc8907aa63_720w.jpg?source=2c26e567]]
+
+Smart IME 是一款 VS Code 插件，用于根据上下文智能地切换输入法，部分灵感来自 idea 的 Smart Input。
+
+解决了两类用户的痛点：
+
+- *使用中文写注释的程序员* ，可以进入注释块时自动切换为中文输入法，离开时切换为英文输入法；
+- *用得到数学公式的中文写作者* ，可以避免在中文和数学公式之间频繁切换输入法。
+
+[[https://pic1.zhimg.com/50/v2-fd24fd66635e9a97d4d82bf7c24c5b3f_720w.gif?source=2c26e567]]
+
+*** 特性
+
+- 检测到前一个字符是中文时切换到中文输入法（默认开启）；
+- 在中文后输入一个空格自动切换到英文输入法（默认开启）；
+- 在英文后输入两个空格自动切换到中文输入法（默认未开启）；
+- 进入到注释场景时，自动切换为中文输入法，离开时自动切换为英文输入法（参考插件配置里的 comment 相关内容）；
+- 进入到数学公式时，自动切换为英文输入法，离开时自动切换为中文输入法（参考插件配置里的 markup.math 相关内容）；
+- 如果当前文档拥有超过 n 个英文字符且没有中文字符，则禁用插件；
+- 可配置能力极强，可以通过 TextMate Scopes 来添加你自己的配置。（该插件的注释和数学公式功能即是配置得到的）；
+
+*** 鸣谢
+
+该插件依赖于 [@北山愚夫](https://www.zhihu.com/people/22b9cb48aa770e2a98fdb66c24876c69) 的 IME and Cursor 插件。
+
+---
+
+** 数学公式计算器插件
+
+*Latex Sympy Calculator* 是一款 VSCode 插件, 它能够帮助你在 VSCode 写 Latex 或 Markdown 的时候, 一键计算 Latex 书写的数学公式.
+
+[[https://pica.zhimg.com/50/v2-efebb5656c06fb94635f4cb82f82000e_720w.jpg?source=2c26e567]]
+
+*当前支持的功能:*
+
+1. *算术:* 加 (+), 减 (-), 点乘 (·), 叉乘 (×), 除法 (/), 乘方 (^), 绝对值 (|x|), 开方 (√), 虚数 (i)...
+2. *字母表:* 英文字母 a - z, A - Z, 希腊字母 α - ω, 下标 (x_1), 重音符 (ā)...
+3. *常见函数:* 最大公约数 (gcd), 最小公倍数 (lcm), 下界 (floor), 上届 (ceil), 最大值 (max), 最小值 (min), 取对数 (log), 自然对数 (ln), 指数 (exp), 三角函数 (sin, cos, tan, csc, sec, cot, arcsin, sinh, arsinh)...
+4. *微积分:* 求极限 ($lim_{n\to\infty}$), 求导/求微分 ($\frac{d}{dx}(x^2+x)$), 求积分 ($\int xdx$)...
+5. *线性代数:* 矩阵 (Matrix), 行列式 (Determinant), 转置 (Transpose), 求逆 (Inverse), 初等变换 (Elementary Transformation)...
+6. *关系符:* 大于 (>), 小于 (<), 大于等于 (≥), 小于等于 (≤), 相等 (=)...
+7. *其他:* 二项式...
+
+也有 Typst 的版本： *Typst Sympy Calculator*
+
+[[https://picx.zhimg.com/50/v2-0c67d103e2625ca38e502880b16f9735_720w.jpg?source=2c26e567]]
+
+---
+
+** 自动补全插件
+
+也许你曾经看过这篇文章：
+
+[世界上最好的编辑器Vim：1700多页数学笔记是如何实时完成的](https://zhuanlan.zhihu.com/p/61036165)
+
+然后就被 Vim 和 Latex 给劝退了。
+
+但是实际上，VSCode 也有类似的插件。通过 VSCode 插件 HyperSnips for Math，你就可以像用 UtliSnips 一样使用各种神奇的 Snippets。
+
+插件安装： [HyperSnips for Math - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=OrangeX4.hsnips)
+
+[[https://picx.zhimg.com/50/v2-f9d96f22a34351d73eaa8cfe3447df68_720w.jpg?source=2c26e567]]
+
+安装完成后，按下快捷键 ~Ctrl + Shift + P~ , 输入命令 ~Open Snippets Directory~ , 就可以打开一个文件夹. 在该文件夹新建一个文件 ~markdown.hsnips~ , 并将 [这个网址](https://github.com/OrangeX4/OrangeX4-HyperSnips/blob/main/markdown.hsnips) 里面的内容输入进去, 保存, 就可以使用了.
+
+---
+
+*各位不要只是收藏啊，点个赞同呗！*

@@ -1,0 +1,32 @@
+#+TITLE: 适合程序员的数学书？
+#+LINK: https://www.zhihu.com/question/34017873/answer/1890047031050993739
+#+AUTHOR: CodeCrafter
+#+CREATED: 2025-03-31
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+这本书很有用啊！最近翻了这本刚开源的《Mathematics for Computer Science》，547 页的干货。
+
+[[https://pica.zhimg.com/50/v2-1c406afa64bdf3afa909bafcf7aa7bce_720w.jpg?source=2c26e567]]
+
+它不是那种干巴巴的数学书，而是专门为想搞懂计算机科学背后数学原理的人写的。 *什么离散数学、概率、图论这些硬核内容，讲得特别接地气，例子也贴近编程实际，学起来不费劲* 。
+
+篇幅虽然不短，但内容安排得很有条理，从基础到进阶一步步来，新手也能跟得上。总之，想打好计算机的数学底子，这本书绝对值得入手，随手一翻就能学到真东西。
+
+*书籍免费PDF下载地址* ： [离散数学+概率+图论！这本547页数学书让程序员的数学底子稳如磐石！](https://mp.weixin.qq.com/s/fLnJRYGagBczoOrk5sLQ4w)
+
+*** 书籍目录
+
+[[https://pic1.zhimg.com/50/v2-3c64642853215b5f94b9115861902c42_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-7b19e2fde01ac8636165a550a4ede83a_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-04837258bbc39719b46efcf5df51746a_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-c35c5086c0aac43358da5fd6e411aaea_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-9e46332ad5a0d75a87abc1f65ca97c81_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-118969938ae17184276a100cd1d9ddcf_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-a38c1ba4d820cf6d00634f66eda0c411_720w.jpg?source=2c26e567]]

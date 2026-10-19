@@ -945,3 +945,61 @@
   这是一本关于自我成长的书，它是一面镜子，让我们看清自己内心的恐惧与障碍。只有突破内心的"山"，我们才能走向更好的自己。
   #+end_quote
   【我的想法】
+
+* vscode 有哪些让人眼前一亮的插件?  :推荐:VSCode:插件:效率工具:写作:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/311803609/answer/3249375646
+  :作者:  一只方橙
+  :原文:  [[file:原文/2026-10-19-vscode有哪些让人眼前一亮的插件-3249375646.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-vscode有哪些让人眼前一亮的插件-3249375646.org][打开本地归档]]
+  - 一句话概括：推荐三款让 VSCode 更适合中文写作与数学输入的插件——按上下文自动切换中英输入法的 Smart IME、一键计算 Latex 公式的 Latex Sympy Calculator，以及用 Snippets 打公式的 HyperSnips for Math（附完整配置步骤）。
+  【方法/论点要点】
+  - 插件一 · 智能切换中英输入法（Smart IME）：用于根据上下文智能地切换输入法，部分灵感来自 idea 的 Smart Input。解决两类用户的痛点——用中文写注释的程序员可以进入注释块时自动切换为中文输入法、离开时切回英文；用得到数学公式的中文写作者可以避免在中文和数学公式之间频繁切换输入法。
+  - Smart IME 的特性（照录）：① 检测到前一个字符是中文时切换到中文输入法（默认开启）；② 在中文后输入一个空格自动切换到英文输入法（默认开启）；③ 在英文后输入两个空格自动切换到中文输入法（默认未开启）；④ 进入到注释场景时，自动切换为中文输入法，离开时自动切换为英文输入法（参考插件配置里的 comment 相关内容）；⑤ 进入到数学公式时，自动切换为英文输入法，离开时自动切换为中文输入法（参考插件配置里的 markup.math 相关内容）；⑥ 如果当前文档拥有超过 n 个英文字符且没有中文字符，则禁用插件；⑦ 可配置能力极强，可以通过 TextMate Scopes 来添加你自己的配置（该插件的注释和数学公式功能即是配置得到的）。鸣谢：该插件依赖北山愚夫的 IME and Cursor 插件。
+  - 插件二 · 数学公式计算器（Latex Sympy Calculator）：帮助你在 VSCode 写 Latex 或 Markdown 的时候，一键计算 Latex 书写的数学公式。
+  - 支持的功能（照录）：① 算术：加 ~+~、减 ~-~、点乘 ~·~、叉乘 ~×~、除法 ~/~、乘方 ~^~、绝对值 ~|x|~、开方 ~√~、虚数 ~i~……；② 字母表：英文字母 a - z、A - Z，希腊字母 α - ω，下标 ~x_1~，重音符 ~ā~……；③ 常见函数：最大公约数 gcd、最小公倍数 lcm、下界 floor、上界 ceil、最大值 max、最小值 min、取对数 log、自然对数 ln、指数 exp、三角函数 sin/cos/tan/csc/sec/cot/arcsin/sinh/arsinh……；④ 微积分：求极限、求导/求微分、求积分等；⑤ 线性代数：矩阵 Matrix、行列式 Determinant、转置 Transpose、求逆 Inverse、初等变换 Elementary Transformation……；⑥ 关系符：大于 ~>~、小于 ~<~、大于等于 ~≥~、小于等于 ~≤~、相等 ~=~……；⑦ 其他：二项式……。也有 Typst 的版本：Typst Sympy Calculator。
+  - 插件三 · 自动补全（HyperSnips for Math）：也许你曾看过「世界上最好的编辑器 Vim：1700 多页数学笔记是如何实时完成的」那篇文章，然后被 Vim 和 Latex 劝退；其实 VSCode 也有类似插件——通过 HyperSnips for Math，你就可以像用 UltiSnips 一样使用各种神奇的 Snippets。
+  - HyperSnips for Math 使用步骤（照录）：安装完成后，按下快捷键 ~Ctrl + Shift + P~，输入命令 ~Open Snippets Directory~，就可以打开一个文件夹；在该文件夹新建一个文件 ~markdown.hsnips~，并将 GitHub 上 OrangeX4-HyperSnips 仓库中 markdown.hsnips 的内容输入进去，保存，就可以使用了。
+  - 结尾：作者顺带提醒「各位不要只是收藏啊，点个赞同呗！」
+  【原文摘录】
+  #+begin_quote
+  Smart IME 是一款 VS Code 插件，用于根据上下文智能地切换输入法，部分灵感来自 idea 的 Smart Input。
+  #+end_quote
+  #+begin_quote
+  使用中文写注释的程序员，可以进入注释块时自动切换为中文输入法，离开时切换为英文输入法；用得到数学公式的中文写作者，可以避免在中文和数学公式之间频繁切换输入法。
+  #+end_quote
+  #+begin_quote
+  Latex Sympy Calculator 是一款 VSCode 插件，它能够帮助你在 VSCode 写 Latex 或 Markdown 的时候，一键计算 Latex 书写的数学公式。
+  #+end_quote
+  #+begin_quote
+  通过 VSCode 插件 HyperSnips for Math，你就可以像用 UtliSnips 一样使用各种神奇的 Snippets。
+  #+end_quote
+  #+begin_quote
+  安装完成后，按下快捷键 Ctrl + Shift + P，输入命令 Open Snippets Directory，就可以打开一个文件夹。在该文件夹新建一个文件 markdown.hsnips，并将这个网址里面的内容输入进去，保存，就可以使用了。
+  #+end_quote
+  【我的想法】
+
+* 有哪些古籍是曾经失传，到近现代才被重新发现的？  :推荐:古籍:书单:文学:明清小说:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/266446300/answer/3592474318
+  :作者:  遍山红松
+  :原文:  [[file:原文/2026-10-19-有哪些古籍是曾经失传到近现代才被重新发现的-3592474318.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-有哪些古籍是曾经失传到近现代才被重新发现的-3592474318.org][打开本地归档]]
+  - 一句话概括：推荐失而复得的清初长篇小说《姑妄言》——国内早已失传，是中国学者后来在苏联发现；作者认为书中的梗能把人笑趴，写世态炎凉的水平不输《金瓶梅》，写男欢女爱更是碾压《金瓶梅》。
+  【方法/论点要点】
+  - 书名：《姑妄言》。
+  - 失传与重现：国内已经失传，是中国学者后来在苏联发现的。
+  - 价值评价：作者要是活在现在，应该比宁财神牛叉；书中描写世态炎凉的水平不输《金瓶梅》。
+  - 尺度与可读性：书中的梗常能把人笑趴；至于男欢女爱，碾压《金瓶梅》。
+  【原文摘录】
+  #+begin_quote
+  《姑妄言》啊。国内已经失传，是中国学者后来在苏联发现的。作者要是活在现在，应该比宁财神牛叉。
+  #+end_quote
+  #+begin_quote
+  书中的梗常能把人笑趴，书中描写世态炎凉的水平不输《金瓶梅》，至于男欢女爱，碾压《金瓶梅》。
+  #+end_quote
+  【我的想法】
