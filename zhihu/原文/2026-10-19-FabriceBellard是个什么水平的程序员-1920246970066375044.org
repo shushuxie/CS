@@ -1,0 +1,135 @@
+#+TITLE: Fabrice Bellard 是个什么水平的程序员？
+#+LINK: https://www.zhihu.com/question/28388113/answer/1920246970066375044
+#+AUTHOR: 奉贤一理工直男
+#+CREATED: 2025-06-22
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+比Linus更厉害的程序员，这家伙一定是穿越回来的！
+
+转自公众号码农翻身 [https://mp.weixin.qq.com/s/MnMCB32RnYw_up7fx1lXvQ](https://mp.weixin.qq.com/s/MnMCB32RnYw_up7fx1lXvQ)
+
+Linus Torvalds是个非常厉害的程序员，因为他有两个名扬天下的作品：Linux和Git。 
+ 如果单论技术能力，有一个人，也许比Linus更强。 
+ 我在看他主页项目列表的时候，感觉头都炸了。 
+ 
+ 他开发了著名的模拟器QEMU和音视频处理库FFmpeg，仅仅是这两项就超越绝大部分程序员了，他还写过C编译器，OpenGL实现，LTE软基站，JS引擎，让Linux在浏览器中跑起来，甚至还创造了计算圆周率的世界纪录...... 
+ 
+ 也就是说，这位老兄在操作系统、模拟器、多媒体、计算机图形学、编译器、编程语言、通信、甚至数学等领域跳来跳去，一年开发一个我一辈子都写不出的软件！ 
+ 
+ 他写的程序还总是比别的程序小几个数量级，快几个数量级！ 
+ 这也太变态了吧？！ 
+ 不得不承认，这个世界上真的有天才的存在。 
+ 他就是法国程序员Fabrice Bellard。
+
+[[https://picx.zhimg.com/50/v2-ea12ed1a727c4e7a4098a4ac8b83b693_720w.jpg?source=2c26e567]]
+
+
+ 
+ 我们来看看他的神奇之路。 
+ 
+ *01* 
+ *压缩软件* 
+ Fabrice Bellard出生于法国东南部的一个小城市格勒诺布尔，17岁上高中的时候发现自己的电脑硬盘又小又贵，他就想着如何节省硬盘空间，于是用汇编语言开发了一个压缩程序LZEXE。 
+ LZEXE压缩效果极好，他的朋友也Copy过来使用，并且放到了BBS上，一下子火了，成了DOS时代最火的压缩工具之一。 
+ 1996年，24岁的他写了一个Java虚拟机，可以把Java代码编译成C代码执行。 
+ *02* 
+ 
+ *圆周率算法* 
+ 1997年，他对圆周率的计算产生了兴趣，通过改良Bailey–Borwein–Plouffe公式，提出了最快速的计算圆周率的算法，极大地降低了时间复杂度。
+
+[[https://picx.zhimg.com/50/v2-a98a22fc660bcce3063c703b3021059d_720w.jpg?source=2c26e567]]
+
+
+ 
+ 从此他在数学社区建立了自己的声望，新算法也被命名为Bellard公式。 
+ 
+ *03* 
+ *TinyGL(计算机图形学）* 
+ 1998 年，Bellard 在开发一个虚拟现实引擎项目的时候，需要用到OpenGL，这是一个用于渲染2D、3D矢量图形的跨语言、跨平台的API，OpenGL的开源实现是Mesa，Bellard觉得Mesa太慢了，于是自己写了一个，这就是TinyGL。 
+ TinyGL实现了OpenGL的子集，比Mesa或者其他商用实现（如Solaris OpenWin OpenGL）快得多，占用的资源少得多，并且比任何一个都小几个数量级，Bellard 再次展示了他在编写高效 C 代码方面的超高技能。 
+ *04* 
+ *FFmpeg(音频视频多媒体)* 
+ 2000年，他化名Gérard Lantau，开始了他最重要和最受广泛认可的项目之⼀：FFmpeg。
+
+[[https://pic1.zhimg.com/50/v2-6aaf71a32e6cbf5dfb4dd7ab08494ace_720w.jpg?source=2c26e567]]
+
+
+ 
+ FFmpeg 是名副其实的数字视频和音频的“瑞士军刀”，在视频软件和商业网站中无处不在：VLC，YouTube， iTunes ，它的强大之处不用我介绍了吧。 
+ *05* 
+ *C语言混淆竞赛* 
+ 在创建FFmpeg不久，2000 年和 2001 年，Bellard 向国际C语言代码混淆竞赛 (IOCCC) 提交了两个参赛作品，并且连续两次获奖。 
+ 
+ 要知道，IOCCC 是最具创造性的C语言混淆竞赛，是程序员充分展示自己智力的最佳舞台，能赢一次就非常厉害了，而Bellard轻轻松松就搞定了两次。 
+ 
+ 下面是Bellard在2000年的获奖作品，使用快速傅里叶变换在较短时间内计算出已知的最大素数(2^6972593-1) 
+ int m = 754974721, N, t[1 << 22], a, *p, i, e = 1 << 22, j, s, b, c, U; f (d) { for (s = 1 << 23; s; s /= 2, d = d * 1LL * d % m)     if (s < N)       for (p = t; p < t + N; p += s) for (i = s, c = 1; i; i--)    b = *p + p[s], p[s] = (m + *p - p[s]) *      1LL * c % m, *p++ = b % m, c = c * 1LL * d % m; for (j = 0; i < N - 1;)     {       for (s = N / 2; !((j ^= s) & s); s /= 2);       if (++i < j)  a = t[i], t[i] = t[j], t[j] = a;     } }  main () {   *t = 2;   U = N = 1; while (e /= 2)     {       N *= 2;       U = U * 1LL * (m + 1) / 2 % m;       f (362);       for (p = t; p < t + N;)  *p++ = (*p * 1LL * p % m) * U % m;       f (415027540);       for (a = 0, p = t; p < t + N;)  a += (6972593 & e ? 2 : 1) * p, *p++ = a % 10, a /= 10;     } while (!*--p);   t[0]--; while (p >= t)     printf ("%d", *p--); } 
+ 
+ *06* 
+ *TinyCC(最快的编译器）* 
+ 从2001年的比赛中还产生了一个副产品：TinyCC，这是世界上最快、最小的C语言编译器，比其他大多数C编译器都要小几个数量级。 
+ 
+ 为了证明TinyCC的威力，Bellard基于TinyCC开发了一个只有138K的TCCBoot，可以在15秒以内编译完Linux内核并且启动，实在太吓人了。
+
+[[https://picx.zhimg.com/50/v2-839c0548340549c92a1b34eea96279f2_720w.jpg?source=2c26e567]]
+
+
+ 
+ *07* 
+ *QEMU（模拟器）* 
+ 2005年，Bellard又发布了一个爆炸性项目QEMU，这是一个开源的模拟器，可以用软件的方式来模拟CPU，内存，I/O设备，给操作系统营造一个运行在硬件中的假象。 
+ 
+ 可以想想，开发这样的软件不但需要对操作系统极其了解，还得掌握极其广泛的硬件知识，细节非常多，其难度甚至比操作系统都高。
+
+[[https://picx.zhimg.com/50/v2-7f73494f371d7066886876ff1bcd67a8_720w.jpg?source=2c26e567]]
+
+
+ 
+ *08* 
+ *创造PI的世界纪录* 
+ 2009年，Bellard又去玩数学了，他宣布把圆周率小数点后2.7万亿位以后，仅仅使用了一台普通的PC，创造了世界纪录。 
+ 此前的世界纪录是由排名世界第47位的T2K Open超级计算机创造的，而Bellard这台桌面电脑不到2000欧元，配置仅为：2.93GHz Core i7 CPU，6GB内存，7.5TB硬盘。 
+ 
+ 一个人加一台电脑，竟然击败了超级计算机。 
+ 
+ *09* 
+ *JSLinux（模拟器）* 
+ 2011年，他的兴趣又转到了JavaScript身上，居然用JavaScript写了一个PC模拟器，让Linux，Windows可以在浏览器中运行起来。 
+ 
+ 这个模拟器仿真了一个32位的x86兼容处理器，一个8259可编程中断控制器，一个8254可编程中断计时器，和一个16450 UART。 
+ 
+ 不仅支持命令行，还支持图形界面，看到 Windows 2000 竟然在浏览器中跑了起来，那种震撼的感觉，只能用卧槽来形容了！
+
+[[https://picx.zhimg.com/50/v2-477f439b8a0c60126940bb15af42d837_720w.jpg?source=2c26e567]]
+
+
+ 
+ *10* 
+ *LTE软基站（通信）* 
+ 2012年，Bellard的兴趣再次转移，一个人花了10个月时间，在一台PC上居然实现了一个运行效率极高LTE软基站。支持LTE TDD/FDD，NB-IoT、eMTC，最大可支持5载波2x2 MIMO或3载波4x4 MIMO。 
+ 
+ 这一切，只需要一个拥有i7 4核CPU的PC就够了。
+
+[[https://picx.zhimg.com/50/v2-0d457f184118de2d5ad8cf5ec55474dd_720w.jpg?source=2c26e567]]
+
+
+ 
+ *11* 
+ *QuickJS （JavaScript解释器）* 
+ 2019年，Bellard发布了一个嵌入式的JavaScript执行引擎QuickJS。 
+ QuickJS支持ES2020，小巧并且易于嵌入，只有几个C文件，没有任何其他外部依赖。 
+ 
+ 它运行速度很快，在一个单核CPU上可以在95秒内完成69000个ECMAScript测试。 
+ 
+ 我只是挑了Bellard开发的部分软件，在他的网站 [http://bellard.org](http://bellard.org) 还有很多，最让人震撼的是，这些软件覆盖了计算机科学的各个领域，千差万别。 
+ 
+ Bellard给人的印象是，他可以轻易进入一个他觉得有趣的领域，成为这个领域的专家，留下一个让其他人愿意花费数年时间维护的软件，自己则轻飘飘地离开，进入下一个领域。 
+ 有人问他为什么要研究这么多不同的东西时，他说：我讨厌一直做同样的事情，所以一定要切换不同的项目来玩...... 
+ 
+ Just for fun，这是Linus的口号，看来各个大神的追求都是一样的啊。 
+ Bellard对金钱或者名声不感兴趣（用化名做开源项目就是证明），他极少接受媒体的采访，互联网上他的资料非常少，远不如Linus那样声名远扬。 
+ 
+ 但是如果你如果你看过他那简陋的个人主页， [http://bellard.org](http://bellard.org) ，看看那些展示了惊人的深度和广度的项目，绝对会被震撼。 
+ 
+ Bellard一定是穿越回来的，或者一定是在上帝模式下编程。

@@ -1,0 +1,10 @@
+#+TITLE: 怎样从零开始学习网络工程师?
+#+LINK: https://www.zhihu.com/question/459291842/answer/1919152853169205336
+#+AUTHOR: timerring
+#+CREATED: 2025-06-19
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+不用看这些广告，也不用看课程，一个最简单有效的方式，订阅并且持续看 Cloudflare 的博客，这可能是世界上中英文的最前沿、最工程、最全面的网络相关的博客了，非常易懂。是那种我都愿意付费阅读的，但是赛博菩萨就是免费。如果真的能够认真阅读，某种程度上在 HighLevel 的层面不亚于 PHD 或者五年经验的工程师。
+
+[https://blog.cloudflare.com/](https://blog.cloudflare.com/)
