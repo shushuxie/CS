@@ -1,0 +1,61 @@
+#+TITLE: 有哪些日常用语其实是几十年前的「烂梗」？
+#+LINK: https://www.zhihu.com/question/6236741826/answer/1952711788907982898
+#+AUTHOR: 西西里的普洱茶
+#+CREATED: 2025-09-20
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+说个英文的。其实 'OK' 最开始也是一个烂梗。
+
+在19世纪30年代的美国报纸界，编辑和作家协会将常见短语缩写，有时候还故意把单词拼错，以达到幽默的效果。
+
+例如，当时纽约报导一位时尚女性对男性朋友说「O.K.K.B.W.P.」，意思是「One Kind Kiss Before We Part」（分开前给我一个温存的吻吧）。
+
+这就好像19世纪的网络黑话，类似于今天的「YYDS」（永远的神）。
+
+「OK」就是这个风潮下的产物。它是由「all correct」故意拼错成「oll korrect」，再缩写而来。
+
+1839年3月23日，《波士顿晨报》（Boston Morning Post）上，有一篇关于当地一个社团的文章。编辑写道：
+
+#+begin_quote
+... he of the [Providence] Journal, and his train-band, would have the 'contributions box,' et ceteras, o.k.—all correct—and cause the corks to fly…"
+#+end_quote
+
+[[https://picx.zhimg.com/50/v2-b4dfe2b548059ffa606ed7859d7fc290_720w.jpg?source=2c26e567]]
+*波士顿晨报*
+
+刚开始，这只是编辑之间的小玩笑。如果没有其他外力，那么「OK」这个词会像其他烂梗一样逐渐消失。但是故事转折点发生在1840年。
+
+当时的美国总统马丁·范布伦 (Martin Van Buren) 竞选连任。他的出生地是纽约州的金德胡克 (Kinderhook)，因此他的绰号就叫 「Old Kinderhook」。
+
+范布伦的支持者们利用了「OK」这个现成的热词，组成了「O.K. Clubs」，一语双关，既支持了「Old Kinderhook」，又暗示他「All Correct」（一切很好）。
+
+[[https://pic1.zhimg.com/50/v2-0d2035d1d11ad24394d45877eb05d328_720w.jpg?source=2c26e567]]
+*当时的美国总统 马丁·范布伦*
+
+随后，「OK」一词从一个波士顿地区的烂梗成为了全美国的政治口号，逐渐地融入美国民众的日常英语中，最后传到全世界。
+
+[[https://picx.zhimg.com/50/v2-4479ce2ba5757a9cc6cdcef882f2bfb6_720w.jpg?source=2c26e567]]
+*「OK」一词现在可在剑桥词典找到。*
+
+---
+
+评论区有人很好奇，那okay是怎么来的？OK难道不是okay的缩写吗？
+
+事实上恰恰相反，okay比OK晚50年出现，说明okay是从OK演变而来的。也就是说，先有OK再有okay。
+
+根据发音创造单词在英语 (美式英语) 里面很普遍。比如人们会把Master of Ceremony（主持人）简化成为MC，但为了让它看起来更像单词，就根据发音创造了 emcee。
+
+类似的例子还有veep，源自VP (Vice President)，也就是副总统。
+
+---
+
+相关内容
+
+1. 关于孙中山和宋庆龄早年使用英文沟通：
+
+[[https://www.zhihu.com/question/784489052/answer/1951261228614808072][可以说一个比较小众的冷知识吗？]]
+
+2. 关于有学者认为耶稣是中国人，是中国上古时期“五帝”之一的颛顼：
+
+[[https://www.zhihu.com/question/647766773/answer/1949828793607886365][你听过最野的野史有多野？]]
