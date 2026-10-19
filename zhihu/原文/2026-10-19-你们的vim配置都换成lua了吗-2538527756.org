@@ -1,0 +1,102 @@
+#+TITLE: 你们的vim配置都换成lua了吗？
+#+LINK: https://www.zhihu.com/question/445290918/answer/2538527756
+#+AUTHOR: 南风璇
+#+CREATED: 2022-06-21
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+更新：大家想学配置的可以看专栏，慢慢填坑，持续关注~
+
+[南风璇：现代Neovim配置-(0)-搭建WSL环境](https://zhuanlan.zhihu.com/p/532361193)
+
+------------
+
+Neovim支持Lua以后，与Vim基本已经割裂了，由于Lua的加持，以及内置Language Server Protocol，Neovim可以与现代编辑器VS Code匹敌。
+
+Vim Script的运行效率较差，切换到Lua配置后，会明显提高启动速度。
+
+下面是我的一些配置，部分配置参考了B站up敲代码的脱发水。
+
+这是配置文件的结构：
+
+[[https://pic1.zhimg.com/50/v2-1caef2df6eacce749db37ecea3f81fc8_720w.jpg?source=2c26e567]]
+*配置文件结构*
+
+其中，options.lua中填写基础设置，keymaps.lua中填写基础的键位映射，colorscheme.lua中填写配色方案的配置，plugins.lua中加载插件。conf文件夹存放各个插件的配置项，dap和lsp分别存放调试选项和LSP插件的配置。
+
+下面是配置好的Neovim效果，运行在Arch Linux，WSL中，使用Tokyo Dark配色方案。
+
+[[https://pic1.zhimg.com/50/v2-ca9126f96bd293addd050c913b3f8240_720w.jpg?source=2c26e567]]
+*配置好的Neovim*
+
+下面介绍常用的插件：
+
+插件管理： [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
+纯Lua编写，执行效率高，使用简单，而且可以自己管理自己。
+
+状态栏： [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+
+纯Lua编写，轻快简洁，比Vim Script编写的airline更快。
+
+标签栏： [tabline.nvim](https://github.com/kdheepak/tabline.nvim)
+
+纯Lua编写，可以配套lualine.nvim使用。
+
+文件树： [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
+
+纯Lua编写，支持异步，比NERDTree快很多。
+
+函数预览： [aerial.nvim](https://github.com/stevearc/aerial.nvim)
+
+基于LSP，无需ctags。
+
+[[https://picx.zhimg.com/50/v2-fec4fcff0e72690ffdecb768e2593638_720w.jpg?source=2c26e567]]
+
+代码高亮增强： [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+纯Lua插件。
+
+模糊查找： [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+
+可以说是FZF的Lua版吧，非常好用。
+
+[[https://pic1.zhimg.com/50/v2-4b3e4acc90f3701c1c36d7576b8ed321_720w.jpg?source=2c26e567]]
+*Telescope文件查找*
+
+LSP支持： [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer) 和 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+
+方便地管理和配置LSP，支持Windows，借助LSP实现强大的补全功能。
+
+[[https://picx.zhimg.com/50/v2-dabf146772bcda92b3f21c3d967e3878_720w.jpg?source=2c26e567]]
+*LSP管理插件*
+
+[[https://pic1.zhimg.com/50/v2-b07e3ae7c8878020dacfa1c38e200bfe_720w.jpg?source=2c26e567]]
+*代码补全和语法检查*
+
+浮动终端： [FTerm.nvim](https://github.com/numToStr/FTerm.nvim)
+
+[[https://picx.zhimg.com/50/v2-ccf3ad21e009f5b12872077ad959e1ac_720w.jpg?source=2c26e567]]
+*浮动终端*
+
+主题配色（都是纯Lua编写）：
+
+[Tokyo Dark](https://github.com/tiagovla/tokyodark.nvim) ：个人最喜欢的配色。
+
+[[https://picx.zhimg.com/50/v2-e717137f38850d9eab0eb63bb22b542c_720w.jpg?source=2c26e567]]
+*Tokyo Dark*
+
+[Neon](https://github.com/dr4vs/neon.nvim) ：霓虹色。
+
+[[https://pic1.zhimg.com/50/v2-0e4e78bca35bd47b8f278f532e731d8e_720w.jpg?source=2c26e567]]
+*Neon*
+
+[Kanagawa](https://github.com/rebelot/kanagawa.nvim) ：好看的暗色主题。
+
+[[https://pic1.zhimg.com/50/v2-a5d86380bcecd9a9282d0fa6f53f4010_720w.jpg?source=2c26e567]]
+*Kanagawa*
+
+[Vscode](https://github.com/Mofiqul/vscode.nvim) ：VS Code同款主题，可以配置亮色和暗色。
+
+[[https://pic1.zhimg.com/50/v2-3079f7402e78fd5723747ee8be509a9e_720w.jpg?source=2c26e567]]
+*Vscode*

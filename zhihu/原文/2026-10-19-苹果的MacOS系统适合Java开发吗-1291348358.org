@@ -1,0 +1,154 @@
+#+TITLE: 苹果的 Mac OS 系统适合 Java 开发吗？
+#+LINK: https://www.zhihu.com/question/349910310/answer/1291348358
+#+AUTHOR: 古时的风筝
+#+CREATED: 2020-06-19
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+#+begin_quote
+作为一个 Java 开发者，并且是一个以前用 Windows，现在用 Mac 的 Java 开发者，我可以很负责任的告诉你，苹果系统开发 Java 正合适，换句话说，除了开发微软的那一套，其他的用 Mac 开发简直不要太香。
+#+end_quote
+
+另外关于提说所说的 mysql和oracle数据库是否有mac的版本，当然是有的，我的 Mac 上就装了 MySQL。
+
+[[https://picx.zhimg.com/50/v2-9081e7c452eb8ad03452512ba5352b7d_720w.jpg?source=2c26e567]]
+
+客户端用的 Navicat 。
+
+[[https://picx.zhimg.com/50/v2-bed8fdf4b542a7fa339fb5ee20f1b4df_720w.jpg?source=2c26e567]]
+
+至于 Oracle，我刚刚查过了，已经支持 Mac 系统安装了。
+
+** Docker Desktop + kitematic
+
+就算不支持也无所谓，我推荐你使用 Docker，装了 Docker 之后相当于装了一个大集装箱，想要什么软件、服务，直接去仓库拉一下下来，启动就好了。
+
+在配合上 kitematic ，一个 GUI 版的容器管理工具，简直太方便了。
+
+Docker Desktop 是 Mac 系统的桌面版。 [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+
+[[https://picx.zhimg.com/50/v2-db35b6360586a7fad7d9af169ab6dab8_720w.jpg?source=2c26e567]]
+*Docker Desktop*
+
+再者我们平时开发为了更贴近线上环境，装个 redis、mongodb、nginx 啥的也在所难免，有了 Dokcer 直接下个镜像 run 一下 ok。
+
+再用kitematic 配合 Docker Desktop ，那简直不要太香，轻轻点几下鼠标，一个 redis 实例就好了，再一点鼠标，nginx 就好了。
+
+[[https://picx.zhimg.com/50/v2-c510c3f3464aad0f7b5fda40814d2b0b_720w.jpg?source=2c26e567]]
+*kitematic*
+
+** 再推荐其他工具
+
+除了题主所说的 MySQL 和 Oracle ，在开发过程中，以下几款利器能极大的提升开发体验和工作效率。
+
+*** 开发系列
+
+这是做开发的同学必备的吃饭的家伙。
+
+*** Jetbrains 系列
+
+*IDEA* ： 做 Java 开发的同学相比多半都是用它开发的。
+
+*PyCharm* : Python 开发必备，我除了写 Java 之外，写的最多的就是 Python ，PyCharm 也是必不可少的。
+
+*CLion* : 有时候也看看 JDK 源码，用 CLion 正好。
+
+*WebStorm* ：前端开发之用，我偶尔也会用用 React 写点儿前端，之前就是用它。不过后来改了其他的工具。
+
+*** Visual Studio Code
+
+这就是替换了 WebStorm 的前端开发工具，真的很好用。
+
+[[https://picx.zhimg.com/50/v2-c3b152997333f0e6ba09feb592d2becc_720w.jpg?source=2c26e567]]
+
+*** Sublime Text
+
+也可以配置成 Python、Go等语言的开发环境，不过现在更多的被我当做临时记事本用。你记录的东西，如果不是主动关闭，就算你不保存，下次开机也不会丢失。
+
+[[https://picx.zhimg.com/50/v2-29414d1a8ec00a216cfcea4e09df9c88_720w.jpg?source=2c26e567]]
+
+*** Postman
+
+接口测试神器，方便你通过界面的方式配置各种参数，构造请求体调试你的接口。与之类似的还有个 Postwoman。
+
+[[https://pic1.zhimg.com/50/v2-3da48dba338d22c4a89eb3d5cc4057d8_720w.jpg?source=2c26e567]]
+
+*** iTerm2
+
+一款终端工具，这其实是只有一个人开发和维护的工具，但是非常好用。虽然系统自带的终端已经可以满足工作需要了。
+
+[[https://pic1.zhimg.com/50/v2-ae6e6be167b1f29c52cbb3d9aa84ab8a_720w.jpg?source=2c26e567]]
+
+*** Cyberduck
+
+大黄鸭，如果你经常需要和服务器进行文件传输，又不想总是用命令行的方式，那么大黄鸭肯定是你的首选。
+
+[[https://pic1.zhimg.com/50/v2-21a66673d50ae37d21d776ffd20c9ddb_720w.jpg?source=2c26e567]]
+
+*** Redis Desktop Manager
+
+Redis 的客户端管理软件，虽然命令方式要掌握，但是客户端的方式会更加直观和方便。
+
+[[https://pic1.zhimg.com/50/v2-1e1a20ac053432849bfe8a8f532fc15b_720w.jpg?source=2c26e567]]
+
+*** VisualVM
+
+JVM 监控客户端，Java 开发者必备。
+
+[[https://pic1.zhimg.com/50/v2-556d4d5a6c251343dff96ea018e96979_720w.jpg?source=2c26e567]]
+
+*** Dash
+
+提供了超过200种 API 文档离线版，比如 JDK、Go、Python、swift 等。
+
+[[https://pic1.zhimg.com/50/v2-caac8d887e7060b4a87aae7b67e7e081_720w.jpg?source=2c26e567]]
+
+*** 学习工具
+
+*** 印象笔记
+
+虽然印象笔记的文档格式着实不太好看，但是关键在于记录方便，而且可以手机、电脑同步，关键是免费版的功能就足够了。我平时记录一些想法或者笔记一直都是用印象笔记。
+
+*** XMind 或者 MindNode
+
+思维导图工具，免费功能就足够帮我们整理思路了，当然了，如果不想用客户端，可以用百度脑图等在线工具也很方便。
+
+[[https://pica.zhimg.com/50/v2-4f9693f73fcfc9b3621c573d4868bed0_720w.jpg?source=2c26e567]]
+
+*** 创作工具
+
+平时喜欢写文章的同学要关注一下了。
+
+*** Typora
+
+这是一款 MarkDown 写作工具，可以自定义样式，我的所有文章都是通过这个工具写的，而且通过自定义的样式，可以直接生成微信公众号的格式。
+
+[[https://pic1.zhimg.com/50/v2-eab1d9a683b00e52506c8952243324dd_720w.jpg?source=2c26e567]]
+
+另外，再推荐一个漂亮的在线 Markdown 编辑器，可以生成非常漂亮的样式，支持生成微信公众号版，还支持一键复制掘金的格式，我在掘金的文章都是用它排版的。
+
+地址 ： [https://mdnice.com/](https://mdnice.com/)
+
+*** PPT 或者 KeyNote
+
+这个主要是画图，比如我公众号文章里的配图大部分都是用它们画的。
+
+[[https://pic1.zhimg.com/50/v2-2f4e69a98f0c5b4cc146edacc192a7fd_720w.jpg?source=2c26e567]]
+
+*** PhotoShop
+
+配图专用，我的公众号题图好多都是用 PS 简单修饰一下。
+
+[[https://picx.zhimg.com/50/v2-390d831abbf6bf8293e00194f7485af6_720w.jpg?source=2c26e567]]
+
+*** PDF Export
+
+PDF 编辑工具，可以加页眉、页脚，文档目录等。例如我的 [这篇文章](https://juejin.im/post/5e7a20e6e51d45270d5338e2) 里的 PDF 就是用这个工具加的目录。
+
+*** Mounty for NTFS
+
+这是一个使 NTFS 格式的硬盘支持在 MacOS 下的读写。有的硬盘在 MacOS 下只能读不能写，我经常会把一些数据备份到移动硬盘里，所以必须要向移动硬盘里写数据，这个工具很好的解决了这个问题，而且还是免费的。
+
+---
+
+[古时的风筝：教你选购一款合适的机械键盘](https://zhuanlan.zhihu.com/p/525094215)

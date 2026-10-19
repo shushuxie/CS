@@ -1,0 +1,250 @@
+#+TITLE: 如何系统的学习arthas?
+#+LINK: https://www.zhihu.com/question/624945901/answer/3241638354
+#+AUTHOR: 技术王
+#+CREATED: 2023-10-08
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+好问题。
+
+大部分庸庸碌碌的答主都喜欢把arthas的命令及其参数都列举一遍，如果配合一些截图，那就称得上是有点小不凡的答主了。所以在看到网络上的那些系统学习arthas的文章，都是千遍一律，感觉就像是天天吃猪脚饭一样，让人没有看下去的欲望。
+
+那么，系统的学习arthas，难道不需要熟练掌握那些命令吗？这就好像学习英语，不应该把单次掌握透彻吗？答案当然是要掌握。但是谁学英语也不可能天天拿着一本英汉词典来背诵吧？不得跟人多说、多看、多写才能学会？所以arthas也是一个道理，得熟练的用起来才行。
+
+那么，怎么用？用在哪？这就是我们今天要讲述的内容。只要能使用arthas解决以下几个最常见的问题并且熟练使用，那么就算是系统学会了。当然，那些跟我杠说什么刁钻的用法，炫技的用法的人，就像学习了点文言文就来教我茴香豆的茴字有九种写法了，这种人就自己玩去吧。
+
+*排查耗时问题*
+
+我想这是最容易想到的问题了吧，某个接口响应慢了，但是你就是不知道慢在哪，即便是高级点的还有全链路跟踪的系统系统，也不一定能够把耗时的东西彻底揪出来，因为全链路跟踪也只是外部调用的耗时能够统计到，内部逻辑（比如你来个sleep一天）是无法精确统计到的，至于为什么，这个问题我会出专题来讲述，这里就不多啰嗦了。
+
+比如我这里有个controller吧，请看，够简单了吧，我要找到耗时在哪
+
+[[https://pic1.zhimg.com/50/v2-631b24fb505c420d1ea9bf74cceed4bc_720w.jpg?source=2c26e567]]
+
+那么当你刚看到这个接口慢的时候，是不是会无从下手？那么arthas就来了，你可以执行这个命令：trace com.ht.jetty.server.controller.HelloController hello -n 1，简单介绍下这个trace命令吧，trace后面的就是类名，类名后面是方法名，这里-n 1表示只检测一次。
+
+[[https://pic1.zhimg.com/50/v2-d701e6869a0f0553207769a4bd890aff_720w.jpg?source=2c26e567]]
+
+是不是一眼就看出来了耗时是哪个方法导致的？在没有任何日志没有任何提示的前提下，你能做到吗？
+
+好了，现在问题升级了，刚刚我是任意统计了一次，但是不是任意就会慢的，只在某些特定的情况下才会变慢，比如下面这个
+
+[[https://picx.zhimg.com/50/v2-b7cb9dd469fb22e05b02d7b2b1eb29d2_720w.jpg?source=2c26e567]]
+
+只有参数params="kill"的时候才变慢，怎么办？这就使用出了我们第二个方法了，Ognl表达式上场了，我们可以语句上这么搞一下
+
+trace com.ht.jetty.server.controller.HelloController hello -n 1 "params[0] == 'kill'"
+
+在后面直接加上这个表达式就行了，靴威介绍下吧，params表示的是hello这个方法的入参，params[0]就是入参的第一个参数，其目的就是让第一个参数的值等于‘kill’的才统计，其他的都忽略不计。怎么样，是不是感觉就能干很多事情了？
+
+[[https://pic1.zhimg.com/50/v2-f197bee7ff19572bebd215bb60f376e7_720w.jpg?source=2c26e567]]
+
+那么，现在我们已经找到是printx3这个方法了，但是这里看不到具体的printx3耗时在哪了，我们只能继续重复上面的动作，来看看printx3这个耗时在哪了？
+
+trace com.ht.jetty.server.controller.HelloController printx3-n 1
+
+[[https://picx.zhimg.com/50/v2-90a18fc8810443b4ff1b89a490072f87_720w.jpg?source=2c26e567]]
+
+看到了吗？好像并不过瘾，这里的耗时只有一个总体的，但是我们看代码实际上是这样的：
+
+[[https://picx.zhimg.com/50/v2-88c54fa7f59c5498275392b66d992cd8_720w.jpg?source=2c26e567]]
+
+这就丧良心了，到底是for里面耗时大了还是println耗时大了呢？怎么感觉很滴答呢？于是我们再加一个参数：
+
+trace com.ht.jetty.server.controller.HelloController printx3 -n 1 *--skipJDKMethod false*
+
+[[https://picx.zhimg.com/50/v2-d7da3ec57255683113b52ed22ac0104a_720w.jpg?source=2c26e567]]
+
+这句话就是打印jdk内部的方法耗时，这里我们也充分的看到了arthas的自信，耗时的代码肯定是你写的，jdk的代码怎么会耗时呢？当然我们就只能强制打开了，默认肯定是你的代码才会耗时高的。
+
+前面说道，为什么第一次的时候只能到printx3这个层级，要想看printx3耗时在哪，还得重复执行trace这个命令，那么，如果我一定想要一次性就统统出来呢？
+
+很可惜，这样的方法是没有的，不过有个勉强的替代方案吧，就是通过-E选项，可以通过正则表达式来匹配多个类、方法。在一定程度上可以达到实现多层trace对效果，我们把命令这么改一下：
+
+trace -E com.ht.jetty.server.controller.HelloController hello|printx1|printx2|printx3|printx4|printx5|printx6 -n 1 --skipJDKMethod false
+
+看看执行结果：
+
+[[https://pic1.zhimg.com/50/v2-f1c9f384588fc399f80aa1a82f4c789c_720w.jpg?source=2c26e567]]
+
+注意，我这里换了个cmd，是因为上面那个git的cmd出了点问题。这一下就看到了跟深一步的层级了吧，一次性都展现出来了，不过我觉得这个意义不是很大，你完全可以重复一遍进行耗时的下钻探究。
+
+*整体耗时问题*
+
+好了，我们刚刚排查的是某个具体的请求耗时很慢，但是，有一天我们在APM类型的工具上看到耗时很怪异的时候怎么办？假如我们从数据库这一端来看，其实并没有慢SQL，但是从APM这一端来看，大部分都是慢SQL。
+
+这个就是很经典的监控问题了，从客户端看，接口很慢，从服务端看，接口又不慢，而且相差特别大，这个时候，最容易想到的可能是网络问题，但是双方都是在内网千兆网环境的，最不可能出现的问题恰恰是网络，那么怎么办？APM是统计准确的吗？尤其是QPS达到好几百的时候，整体相差了一半的响应时间，使用trace那就显然不好使了。那么下面这个就来了！
+
+从上面可以知道，整体耗时是系统的System.out.println耗时大了，那么能不能看下整体耗时情况呢？显然是可以的，只需要执行下面这个语句
+
+monitor -c 6 java.io.PrintStream println
+
+[[https://pic1.zhimg.com/50/v2-802f5cff0ed94fbc49a364d714c35958_720w.jpg?source=2c26e567]]
+
+看上去清晰可见了，每6秒统计一次这个方法的耗时平均时间、总请求数等，当然，如果你想看看一分钟的，那么就把-c 6改成-c 60就好了。
+
+当然，这里又是只统计了所有的println方法的耗时，如果我只想统计下面圈起来的方法呢？
+
+[[https://pic1.zhimg.com/50/v2-e2334fbc436b325abb97933ab92b0144_720w.jpg?source=2c26e567]]
+
+这回上面介绍到的Ognl就来了吧，请看下面的方式，你也不用去理解和记忆太多，只需要记住这样做就行了。操作次数多了，自然就会理解了。
+
+monitor -b -c 6 java.io.PrintStream println "params[0] == '111'"
+
+*CPU飙高的问题*
+
+我想没有比这个问题更经典了吧，各位都不是什么省油的，想必大家肯定是对CPU飙高问题方面的问题烂熟于心了。但是，如果不使用arthas的话，使用传统手段还是需要费点劲的，首先你得找到java进程id、再通过操作系统top -Hp 找到消耗CPU最高的线程。然后记录下这个线程的id，再去执行jstack，找到这个线程执行的代码位置，传统手段就是这样，没毛病吧？
+
+CPU飙高，本质上是某段代码的CPU占用高了，所以无论是传统手段还是arthas，都是需要找到这个消耗CPU最高的代码片段，那么，我下面就介绍下使用arthas怎么定位到吧。
+
+首先只需执行thread就知道是哪个线程了
+
+[[https://picx.zhimg.com/50/v2-939b3ad7bf56e512cc0837e4726a828c_720w.jpg?source=2c26e567]]
+
+显然是qtp1620529408-44这个线程占用CPU很高了，你也别纠结为什么这个线程的名字这么奇怪，这个线程是jetty的worker线程，我使用的是jetty容器，其他的不多解释了。
+
+那么这个线程是在执行什么代码呢？我们再看下这个线程id是44，所以执行下面这个命令就知道了
+
+thread 44
+
+[[https://pica.zhimg.com/50/v2-22453f6261fbf344ec15882ec7c24d1b_720w.jpg?source=2c26e567]]
+
+看到了吧，为什么CPU飙高了？就是因为执行了这段代码导致的，是我们拼命的执行了System.out.println的缘故，所以优化的策略当然是降低这个的次数。
+
+看看，使用arthas排查CPU标高问题只需要两个动作，当然也不能算是什么能力了，在炫技的时候最好还是使用传统手段，毕竟步骤的繁琐性在那里摆着，对吧。
+
+*调用从哪来*
+
+我想这个大家也是会经常需要用到的吧，比如我们这个栗子，类名是HelloController，显然是controller层了，但是，为什么我们写个注解就被调用了，谁在调这个HelloController里面的hello方法？毕竟自己并没有手动的去调这个方法的，这个调用是框架发起的吗？那是哪个框架呢？
+
+那么，对于经常排查调用来源的时候，就很好了，这个命令就是：
+
+stack com.ht.jetty.server.controller.HelloController hello -n 1
+
+[[https://pica.zhimg.com/50/v2-44f52defd60fa4c2451e2537477e4e22_720w.jpg?source=2c26e567]]
+
+看清楚了吧，是谁调的hello？显然是springmvc框架里面的方法，那又是谁调的springmvc呢？很显然是jetty调的，又是谁调的jetty呢？显然是线程run方法，当然，如果你还需要探究谁调的run，那么恐怕得结合虚拟机和操作系统来看了，你有这水平，也没几个人敢对你虎视眈眈了。
+
+当然，这个命令跟trace一样，也是支持Ognl表达式的，下面这个命令就是只查询参数为111的。
+
+stack com.ht.jetty.server.controller.HelloController hello -n 1 "params[0] == '111'"
+
+[[https://picx.zhimg.com/50/v2-35e3b1adb28717d69b2208f65b416dea_720w.jpg?source=2c26e567]]
+
+*查看线上跑的类*
+
+这个是最常见的了吧，提交了新代码，发到线上，结果功能不见了，你说气人吧。
+
+那么第一步，你得先看看自己的功能是不是已经上去了，最好的办法，当然是把对应线上的class或者jar包拉下来反编译下看看。然鹅，线上拉下来的class就一定是jvm加载到内存里面的那个class吗？如果使用ASM做了一些动态代理的动作呢？实际在跑的class还是你编译的那个class吗？又假如，你引入了APM，被APM插装后的class还是jar包里面的那个class吗？
+
+比如我们想要看jetty 里面的org.eclipse.jetty.servlet.ServletHolder handle方法，如果你通过反编译去看的话，你看到的代码是这样的：
+
+[[https://picx.zhimg.com/50/v2-6363ae9219947f9152d98e63067c3de5_720w.jpg?source=2c26e567]]
+
+显然，我们要的是最终jvm加载到内存里面并且在跑的那个class，这样才是最准确的，所以如果你用这个命令去看：
+
+jad org.eclipse.jetty.servlet.ServletHolder handle
+
+看到的却是这样的
+
+[[https://pic1.zhimg.com/50/v2-9e471dce514f36be1f46c739725f76d6_720w.jpg?source=2c26e567]]
+
+这里是APM给我们自动插装了，所以我们是看到的实际是这个样子的。
+
+*定位问题*
+
+还是线上的问题，出现了bug，结果没日志，尤其是关键地方，啥没有，你说气人不。
+
+所以这个时候，关键的命令就来了。依旧如下面的代码
+
+[[https://pica.zhimg.com/50/v2-6880256a993ee738ac7cb648e5988249_720w.jpg?source=2c26e567]]
+
+我想看看参数params的值能看吗？显然是能看到的，我们只需要执行：
+
+watch com.ht.jetty.server.controller.HelloController hello "{params}" -n 1 -x 1和
+
+watch com.ht.jetty.server.controller.HelloController hello "{params}" -n 1 -x 2
+
+[[https://picx.zhimg.com/50/v2-f55f12364f6406a3644d0b1b62f13d87_720w.jpg?source=2c26e567]]
+
+看，类名和方法名还是一样的，这次加了个{params}，意思就是把参数打印出来，-n 1还是原来的意思，执行一次，-x呢，请看两次效果，一次是-x 1 另外一次是-x 2，显然-x 2的时候把对象的具体值都打印出来了，这就是-x的作用了。
+
+那么，返回值能看到吗？可以稍微修改下方法：
+
+watch com.ht.jetty.server.controller.HelloController hello "{returnObj}" -n 1 -x 2
+
+[[https://picx.zhimg.com/50/v2-e75c99f89577dc518725879f3c37a8ee_720w.jpg?source=2c26e567]]
+
+只修改了一个地方，其他地方都是一致的，就可以看到返回值了。
+
+下面我们再看下面这个情况。
+
+[[https://picx.zhimg.com/50/v2-5370e023d432302ca876095d3c429942_720w.jpg?source=2c26e567]]
+
+我们执行下这个看看
+
+watch com.ht.jetty.server.controller.HelloController hello "{params}" -n 1 -x 2
+
+[[https://pic1.zhimg.com/50/v2-9a978b93425e85492ff3994e67eef671_720w.jpg?source=2c26e567]]
+
+结果是很震惊的，params这个参数在中间被修改了，我们实际上是想要看到传入的参数的，不是最终被修改之后的，那么怎么办？这就不得不介绍下了，默认watch是在方法执行结束后，将结果返回来的，所以显然params就变了，然鹅如果我们需要实际params的传参，那么我们就要在方法执行之前就将结果返回过来，所以我们只需要加个参数-b就行了：
+
+watch com.ht.jetty.server.controller.HelloController hello "{params}" -n 1 -x 2 -b
+
+[[https://pic1.zhimg.com/50/v2-c4dced3271af3adc010b23a0f2da1ed6_720w.jpg?source=2c26e567]]
+
+这回就是实际的传参了。如果方法抛出异常了呢？
+
+[[https://picx.zhimg.com/50/v2-1082963fadc8ba21a978bcfcc4c1cc81_720w.jpg?source=2c26e567]]
+
+我们可以执行下面这个语句就可以看到异常信息了
+
+watch com.ht.jetty.server.controller.HelloController hello '{params,throwExp}' -e -x 2
+
+[[https://picx.zhimg.com/50/v2-28ef46af32141ef23bdd4b37482243d5_720w.jpg?source=2c26e567]]
+
+当然，也可以不需要-e，那就无论是否有异常都打印出来了，加上-e就只打印异常的。
+
+最后，如果我们只要看参数为000的呢？这个是前面已经介绍到的Ognl表达式。
+
+[[https://pic1.zhimg.com/50/v2-ec08c706f99b23353c2807158c7d64c5_720w.jpg?source=2c26e567]]
+
+仔细看，第一次没加-b，没反应，第二次加了-b有反应了，那是因为前面已经说过的，方法请求之前就打印数据。当然，可以看到，我这里把参数、返回值、异常同时都打印出来了。为什么没返回值呢？显然，方法执行之前怎么会有返回值呢？
+
+*直接调用方法*
+
+当然，你还可以直接调用该有的方法，可以看看时间戳是否对不上了，这也是经常遇到的问题，尤其是海外的机房不清楚到底是时间戳还是时区的问题的时候，就需要检测了，下面就是调用这个方法，检测下系统的时间戳是不是对得上。
+
+[[https://pic1.zhimg.com/50/v2-ff14cc159cb34264cf07c8243b1353f6_720w.jpg?source=2c26e567]]
+
+当然，这不仅仅是调用这个方法了，还有一个作用是可以通过这个获取spring的对象，然后调用spring bean的方法，检测对象是否有bug，这个是很好搞的。
+
+比如，我们想要看看HelloController这个类生成的对象里面的成员数据，或者调用一下这个对象里面的方法，怎么办？请看这个执行方法：
+
+ognl "@org.springframework.web.context.ContextLoader@getCurrentWebApplicationContext().getBean('helloController').hello('222')"
+
+[[https://pic1.zhimg.com/50/v2-173d1aef6ac11269f0f45d68d5d648b2_720w.jpg?source=2c26e567]]
+
+首先我们获取到spring的这个bean，再调用其中的hello方法，我们看到是返回了一串数据的。
+
+其次，我们还可以看看这个bean里面的数据
+
+ognl "@org.springframework.web.context.ContextLoader@getCurrentWebApplicationContext().getBean('helloController')" -x 3
+
+-x 3这个参数我们是已经介绍了的，同上，所以这里我们不仅仅可以看到这个bean，还可以调用这个bean的方法，还可以看到这个bean里面的所有数据。
+
+[[https://pic1.zhimg.com/50/v2-5acdcef1c01b12f4e81d6d1844ca5ba2_720w.jpg?source=2c26e567]]
+
+上面我们可以知道，map是一个静态值，如果是通过获取bean才能获取到map的值，是不是显得太迂回了？有什么直接的方法吗？
+
+[[https://pic1.zhimg.com/50/v2-669cf6f6157bb083cdbc127a60a69635_720w.jpg?source=2c26e567]]
+
+显然是可以的，可以执行：getstatic com.ht.jetty.server.controller.HelloController map
+
+当然也支持Ognl表达式的
+
+[[https://pic1.zhimg.com/50/v2-6f3a332e7b1c2791cdcc1565e686ba60_720w.jpg?source=2c26e567]]
+
+*结论*
+
+好了，arthas的内容是很丰富的，根据我的经验，这些是使用的最多的，大家只需要熟练的掌握这几个手段，就可以入门了，至于太晦涩的东西可以不需要深入研究，还有如果真的想系统性学会arthas， *必须徒手写一个这样的工具出来！！*

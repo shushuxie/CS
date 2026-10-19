@@ -1,0 +1,22 @@
+#+TITLE: 从底层内核开始完全自主开发一个操作系统的难度到底有多大？
+#+LINK: https://www.zhihu.com/question/653441206/answer/3482714543
+#+AUTHOR: Hugo.Hu
+#+CREATED: 2024-04-29
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+Linux有个项目很好玩，我一直在关注这个项目，即便年近40也有事没事撸一遍，名字叫做Linux From Scratch。就是一种从网上直接下载源码，从头编译LINUX的安装方式。
+
+[Welcome to Linux From Scratch!](https://www.linuxfromscratch.org/)
+
+最新的版本为 *12.1，* 在这个项目中，罗列了一些作者认为需要构建的一些软件。
+
+[3.2. 全部软件包](https://lfs.xry111.site/zh_CN/12.1/chapter03/packages.html)
+
+这些软件，能够支撑一个不包含X图形化界面的Linux系统。
+
+你可以详细了解一个操作系统是如何运行的，GNU/Linux能运行起来，真的不是一个kernel就行的
+
+强烈建议每个CS学生都应该掌握的内容。
+
+另，很多人和我争论Linux套壳或者安卓套壳的问题的时候，当我拿出来LFS，所有人都闭嘴了。

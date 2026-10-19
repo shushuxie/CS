@@ -1,0 +1,10 @@
+#+TITLE: Neovim有哪些好看的主题？
+#+LINK: https://www.zhihu.com/question/514303638/answer/2491106420
+#+AUTHOR: 丁博
+#+CREATED: 2022-05-18
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+[Trending vim color schemes | vimcolorschemes](https://vimcolorschemes.com/)
+
+这个网站可以直接看各种vim配色主题的效果，省得一个个安装起来对比。

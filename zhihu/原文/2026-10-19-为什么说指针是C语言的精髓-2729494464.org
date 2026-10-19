@@ -1,0 +1,159 @@
+#+TITLE: 为什么说指针是 C 语言的精髓？
+#+LINK: https://www.zhihu.com/question/20125963/answer/2729494464
+#+AUTHOR: 码农出击
+#+CREATED: 2022-10-25
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+*不理解 指针 ，是因为有人教错了你。*
+
+有人告诉你，指针是“ *指向* ”某某某的，那就是误导你，给你挖了个坑。初学者小心不要误读这“ 指向 ”二字。
+
+第一，“指针”通常用于保存一个地址，这个地址的数据类型在定义 指针变量 时确定。
+
+举个例子，做个比较：
+
+int a;   //定义一个变量a，用于保存一个int类型。
+
+int * b;   //定义一个指针变量b，用于保存一个地址，这个地址所保存的数据应该是int类型。
+
+第二，是变量就应该可以赋值，指针变量也一样。但一般不会给指针直接赋值一个数值，而是将其他变量的地址赋值给指针，或者其他指针的值赋值给这个指针。
+
+继续上面的例子：
+
+b=&a;    //把变量a的地址赋值给b。“&”操作是取变量的地址。
+
+继续举例：
+
+int * c;  //我们又定义一个指针c
+
+c=b;     //将b的值赋值给c，上面已经知道b是指针，它的值是a的地址，那么现在c 的值和b一样，也是个a的地址。
+
+第三，指针变量保存的值，也就是地址是可以变的。
+
+举个数组初始化的例子：
+
+int d[100];
+
+int * e;
+
+e=&d[0];    //e保存了数组d的第一个数据的地址
+
+for (int i=0; i<100; i++){
+
+*e = 0;     //把该地址中的数据赋值0
+
+e++;   //地址累加一次，也就是数组中下一个数据的地址 
+ }
+
+指针和其他变量一样，可以运算（一般是加减），也可以重新赋值。
+
+第四，指针有啥用。
+
+比方说，我们有个 函数 ，如下：
+
+int add（int x){
+
+return (x+1);  //把输入的值加1并返回结果。
+
+}
+
+好了，应用的时候是这样的：
+
+{
+
+int a=1;
+
+a=add(a);   //add函数返回的是a+1
+
+//现在 a等于2
+
+}
+
+很简单吧，就是把a都累加一次。
+
+用指针怎么写：
+
+void add(int *y){   //给入的是一个int指针，是一个地址。
+
+*y = *y + 1;     //* 是指 *引用* 这个地址所保存的变量
+
+//这条语句的意思就是，把这个地址里的值加1，然后放回这个地址。
+
+}
+
+把这个函数用起来： 
+ {
+
+int a=1;
+
+add(&a);   //把a的地址传到函数里
+
+//add函数，就是把a的值加1，再放回到变量a里。
+
+//现在a等于2 
+ }
+
+试想一下，如果我们要对一个 [数据结构](https://www.zhihu.com/search?q=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A659429892%7D) 里的数据进行处理，那是不是就该传入这个结构的地址，在函数中依靠指针来引用这个地址的数据结构，进行运算。
+
+第五，若已有一个指针变量，可不可以用另外一个指针来保存这个变量的地址呢。
+
+可以的。
+
+一个变量保存另一个指针的地址，那它就是通常所说是“指针的指针”了。
+
+通常，指针的指针多用做（或指的是）函数指针或数据结构中有指针的情况。初学者搞不清，就不要勉强了。
+
+第六， 空指针 可怕吗？
+
+我们知道，一个变量要赋值后才能用，指针也是一样。指针不赋值（不给定地址）就拿来用，是不是也要出错。这个就是空指针。一般把指针赋值为Null，就是表明这个指针是空的，不能用。所以程序中一定要经常判别指针不是Null才能用。
+
+最后，初学C语言，最好把复合的语句拆开来看，比较容易理解。像 int *a=&b; 这种，拆成
+
+int * a;
+
+a=&b;
+
+就好理解了。
+
+上面所说的，是指针比较基础的东西，希望能帮助初学者学习理清思路。
+
+#+begin_quote
+来源:  作者：Wayne 链接： [https://www.zhihu.com/question/24466000/answer/659429892](https://www.zhihu.com/question/24466000/answer/659429892)
+#+end_quote
+
+*很多人会问为什么C语言能长盛不衰?*
+
+从底层往上看，在冯诺依曼架构的机器上，用以内存地址和寄存器为操作单位的单条指令组成程序是非常自然的事情。
+
+而如果你学过汇编，你就会发现，C语言是这个样子是非常自然的一件事情。它只是对汇编做了一些包装；就像汇编是对机器语言做了简单的包装一样（好吧还是有点不一样的，实现起来复杂得多，但的确很自然）。
+
+所以呢，你觉得不自然的地方，是因为你是从数学，从顶层往下看。那么看到的就会是像haskell，lisp这样直观的语言。
+
+如果从底层往上看，C语言也一样的直观。
+
+*C语言最佳学习路线: [阿里大佬强烈推荐的C语言学习路线](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487241&idx=1&sn=2919b00ed019106304eecb0a1e10ea40&chksm=fdb3f1d7cac478c189ec742f849a6aaea37c973240fbe251c2d23e83fd7a0bb556c96e8195e1#rd)*
+
+*最重要的是:*
+
+C 树立了正确的设计原则。第一是减法原则：Perfection is attained, not when there is nothing left to add, but when there is nothing left to take away. 第二是符合实际需求，C 的各种假定立刻被其设计者在实现 Unix 的实际工作中检验，而不是建立在盲目的假设上。有了这两条，其它语言都不再试图替代它。任何试图取得成功的语言都必须和 C 保持距离。
+
+*最近很多同学问我大厂面试的核心知识点，东哥熬夜整理出来了9大核心知识点，需要的自取：*
+
+[校招进大厂，9大核心课程知识，熬夜整理成思维导图送给大家​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487009&idx=1&sn=4495414184e17ee2c4c22cf4f55db467&chksm=fdb3f0ffcac479e9c97c6f70662ae09976b3bf3d49aab7a12bb950db8f8a7502dc39fc24c5e3#rd)
+
+[BAT大佬整理的进大厂必看秘籍!​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487114&idx=1&sn=3daf22898b8149910b297f48376395a3&chksm=fdb3f054cac47942e2dcd43ba8a33ab414e0dafb2300ac2eebc9fe18af5cd9f4618b3b4f3266#rd)
+
+另外，我当初在准备各大公司技术笔试的时候刷了大量的算法题，其中就是参考了 *一本谷歌大神的LeetCode刷题笔记* ，帮我整理了解题思路，归纳了出刷题方法，非常不出错，转给需要的同学：
+
+[BAT大佬写的Leetcode刷题笔记，看完秒杀90%的算法题！​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247485348&idx=1&sn=02ede6b715b20a6b981af1d021d77d5d&chksm=fdb3f97acac4706cc193bec80b984255bb33db2b35366682bd566280326b7029f1dae632abb2#rd)
+
+最后给大家介绍一份计算机经典书籍，送大家一份硬核书籍资源：读大学跟工作期间，我买了很多书，大部分是一些技术书籍，也收集了这些书籍的电子版，都在这里，现在免费share给大家， *包括了计算机类常用电子书，包括C，C++，Java，Python，Java，Linux，Go* 等，希望大家能认真阅读。 *点击下方链接直达获取：*
+
+[计算机经典必读书单(含下载方式)​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd​mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd](https://mp.weixin.qq.com/s?__biz=MzU4MjgwNjQ0OQ==&mid=2247487238&idx=1&sn=c63594d794bed494ff91bebd4c8de37c&chksm=fdb3f1d8cac478ce0bb20b69a930567c8790e1c3fe4629aacb805a5c2ac9f39035772855738e#rd)
+
+*码字不易，硬核码字更难，希望大家不要吝啬自己的鼓励，给我 ：*
+
+[@码农出击](https://www.zhihu.com/people/654c3abe48a76ba5ac3c116813806075)
+
+*一个点赞，鼓励下我！*

@@ -1,0 +1,45 @@
+#+TITLE: m1 MacBook steam连接xbox ones 蓝牙手柄游戏内无法使用怎么解决？
+#+LINK: https://www.zhihu.com/question/435611353/answer/2136351110
+#+AUTHOR: 林可
+#+CREATED: 2021-09-23
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+实在是忍不了了，自己根据楼上的回答尝试后，系统不停提示要增加来自各种应用的接受全局按键的请求，突发灵感尝试了下面的方法，然后果然就管用了！赶紧来分享给大家
+
+1. 打开 系统偏好设置 --》安全与隐私设置--》输入监听 ，根据下图步骤操作。如果在列表中有 Steam 则只需要打勾即可，如果没有则需要点击加号➕ 按钮
+2. 在系统中搜索 Steam 并添加到输入监听对象中去，然后打勾开启即可
+3. 然后再启动 Steam的时候就会弹出安装 input 驱动提示了
+
+[[https://pic1.zhimg.com/50/v2-32729d9ff24c4f0269cf1036e3333718_720w.jpg?source=2c26e567]]
+*步骤1*
+
+[[https://pic1.zhimg.com/50/v2-fd318d452b61f1428007da3939e627a6_720w.jpg?source=2c26e567]]
+*步骤2*
+
+[[https://picx.zhimg.com/50/v2-8a2cb0e58de2c72ef27186a827389a34_720w.jpg?source=2c26e567]]
+*重启Steam后弹出该提示*
+
+就因为Steam自己不把自己添加到 BigSur的输入监听对象中去，导致无法连接手柄折磨了我半年，我觉得是个非常傻逼的事情。而且查遍全网也没找到解决方法，，希望可以帮助到大家。
+
+---
+
+就看看我遇到的极其傻逼的情况：
+
+安装Input驱动的时候提示错误
+
+[[https://picx.zhimg.com/50/v2-949fa7b73e8760226398e0f03fc9d92d_720w.jpg?source=2c26e567]]
+*安装Input驱动的时候提示错误*
+
+[[https://pica.zhimg.com/50/v2-7eedcefa89c45408c1edde40a1cd3111_720w.jpg?source=2c26e567]]
+*解决方案，，苹果的隐私策略，牛，服气*
+
+这么麻烦折腾还是算了，然后在网上看到 Steam Input 无法安装的解决策略：
+
+[https://steamcommunity.com/discussions/forum/2/3004429475624592660/](https://steamcommunity.com/discussions/forum/2/3004429475624592660/)
+
+[https://v2ex.com/t/744729](https://v2ex.com/t/744729)
+
+最简单的方法就是在 Steam 游戏设置中：禁用 Steam输入 ，然后就神奇的可以使用手柄了
+
+[[https://pic1.zhimg.com/50/v2-38fa29f5876e70d61bc96ae02b0a4ac8_720w.jpg?source=2c26e567]]

@@ -1,0 +1,246 @@
+#+TITLE: Vim 有什么奇技淫巧？
+#+LINK: https://www.zhihu.com/question/27478597/answer/2777381978
+#+AUTHOR: willpower
+#+CREATED: 2022-11-27
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+*学习vim, 愚以为一定要练习会hjkl移动。我以前也觉得痛苦，但是熟悉后，简直不要太爽，打游戏都可以适应。关键是以后你连上服务器不用改键你知道吧，有的人觉得改键嘛，两分钟的事情，实则不然，hjkl这四个键位会导致你后面后多键位的改变，而vim的很多操作都是有含义且连锁的，后面带来的麻烦更多！！！，学会hjkl移动，成功一大半(后面可以慢慢一点点学习)，有什么比自由移动还要爽的呢?*
+
+[vim的奇技淫巧https://www.zhihu.com/video/1732137313247793152](https://www.zhihu.com/video/1732137313247793152)
+
+1. 映射H为0，L为$.谁用谁知道
+
+2. 映射ctrl+e为%，这个在匹配符号跳转，非常好用
+
+3. 懂得范围的使用，比如你用过ciw, c$, 你有想过用c/main吗？
+
+[[https://picx.zhimg.com/50/v2-a0f3350ea71e793b19355eb0715751fe_720w.gif?source=2c26e567]]
+
+4. 懂得用vim的quickfix窗口，它的含义其实是通用的，我给你说个用法，你去玩玩，:vim /a/g *回车，然后使用:copen回车，你就能看到当前所有文件中包含a的行了，自由跳转。非常nice
+
+[[https://picx.zhimg.com/50/v2-ed0e083a6ef8c58afc15b5f45cdb727a_720w.gif?source=2c26e567]]
+
+5. vim中的make是可以自定义的，不是非得是c语言的makefile, 任何语言的编译或者运行都可以自定义！
+
+6. vim替换的技巧永远优雅，你可以使用#作为分割符号，而没必要用/.
+
+[[https://pic1.zhimg.com/50/v2-75a83f251ab80274a5e99df04675b768_720w.gif?source=2c26e567]]
+
+7. 输入:smile回车，你可以看到一个笑脸
+
+8. 恭喜你，亚瑟王！输入:ter回车，你可以自由使用内置的终端，除了窗口相关命令，其它指令需要加ctrl+w前缀！比如，你要在内置终端中进去normal模式，可以使用ctrl+w,N就行了，要进编辑模式，按下i就可以了。
+
+[[https://pic1.zhimg.com/50/v2-c79b64accacbdb847efa51e0d3220382_720w.gif?source=2c26e567]]
+
+9. vim可以接受来自管道的内容，比如 ls | vim -，这样你就可以不用less查看内容了，自由探索！
+
+[[https://pic1.zhimg.com/50/v2-2a7ffd986f4e5b25afc2007296ae4849_720w.gif?source=2c26e567]]
+
+10. ctrl+w o，关闭除了当前窗口的其它所有窗口！不用一个一个关的
+
+[[https://pic1.zhimg.com/50/v2-88c4f94cfbef888b606bfb021f98b80f_720w.gif?source=2c26e567]]
+
+11. 补全路径使用ctrl+x, ctrl+f，谁用谁知道
+
+12. 想制造输出？太容易了，随时随地用你喜欢的语言！
+
+比如我想要0-9，直接输入
+
+#+begin_src python
+for i in range(10):
+    print(i)
+#+end_src
+
+V选中两行程序，然后按下 *!* ，输入python3回车，你就可以得到文本了，同理，你想要bash脚本的，可以输入bash，执行输出！
+
+#+begin_src bash
+for i in ~seq 0 9~;
+do
+    echo $i
+done
+#+end_src
+
+这在vim中叫做filter，非常好用，可以和诸多程序联动，比如执行sort，可以得到排序后的输出！
+
+[[https://picx.zhimg.com/50/v2-d77b68a3f124b5d133382068ab206d4b_720w.gif?source=2c26e567]]
+
+13. 复制全文还在使用ggyG之类的?试试:%y+，这种方法好就好在不用移动视野，而且极快！喜欢的话，设置一个映射吧，我设置的是yie
+
+14. 错误响铃很烦？闪光也很烦，复制下面的内容到vimrc中吧
+
+~set noeb vb t_vb= "noeb取消error bell 打开vb(visualbell), 但是将t_vb清除，这样就不会闪烁屏幕了~
+
+~set belloff=all "取消所有闪烁, 仅仅上一行在第一行还是会闪烁"~
+
+15. 大家都用过ctrl+a, 用过 *g ctrl+a* 吗？ 效果如下，选中使用g ctrl+a(递增)
+
+[[https://pic1.zhimg.com/50/v2-f96a264e3fd0a46e42cb99d008307f2b_720w.gif?source=2c26e567]]
+
+16. 替换操作没必要一次操作成功，我们可以先找自己想要的，没问题再进行替换, 先使用/进行搜索，搜索正确后，替换操作的第一操作数可以省略。
+
+[[https://picx.zhimg.com/50/v2-16811d3b4717fbd587338510744866aa_720w.gif?source=2c26e567]]
+
+17. global命y令，是vim最重要的功能，一定要学会其操作，如上，也可以先查再操作(具体自己下去看), 这里给两个示例，1( *删除文中#开头的行)* , 2( *将所有#开头的行移动到底部* ）
+
+1.
+
+[[https://picx.zhimg.com/50/v2-6c369df9a876ec54a2f2ef491a403971_720w.gif?source=2c26e567]]
+
+2.
+
+[[https://picx.zhimg.com/50/v2-d4cf41777247a4441390fc30ff260f3c_720w.gif?source=2c26e567]]
+
+18. 制作显示框或者提示框总对不齐？试试 *Vr=*
+
+[[https://picx.zhimg.com/50/v2-e6e680168d5c15ecc9f5f378b1b0e592_720w.gif?source=2c26e567]]
+
+19. vim自带有文件管理器，使用Lex, Sex就可以在当前窗口纵向和横向打开，用Tex就可以新建标签打开。(用Le, E也可以哦)
+
+[[https://picx.zhimg.com/50/v2-1481a3462e3be10730595fdedec09415_720w.gif?source=2c26e567]]
+
+20. 替换操作如果需要用到搜到的词，用&代替搜到的单词，就不用再次输入了。比如把变量换成MetadataReader变成v_MetadataReader。
+
+[[https://picx.zhimg.com/50/v2-961a6d97b8241d070d757dff7f51b132_720w.gif?source=2c26e567]]
+
+21. 如何同时搜索两个单词呢？比如good和bad，配合20技巧，将这些单词后加上_select。
+
+[[https://picx.zhimg.com/50/v2-ae593fdabcf8c84784832bfa44ac61d6_720w.gif?source=2c26e567]]
+
+22. 段落对象的使用，在vim中字符'{'以及'}'分别代表段落顶部以及段落底部的位置，这在添加头文件以及移动的时候非常有用。比如以下例子。
+
+[[https://pic1.zhimg.com/50/v2-d91b9dcf5200e6bac4e609b74a61fe5f_720w.gif?source=2c26e567]]
+
+这里以给python增加头文件为例，使用 *gg}* 就可以马上到达头文件尾部的位置，方便添加头文件，并且这里也给出了段落缩进的修改，可以看到使用 *>}* 就可以直接将一个段落进行缩进。
+
+23. 拼接的妙用，你使用过vim中的大写J吗？在vim中它的含义是join，意思是将下一行和当前行进行拼接。比如以下是一个创建示例数组的例子。首先使用之前提到的技巧12，利用python输出1-10的数字，然后我们使用 *J* 来把他们拼接到一起(注意直接使用 *J* 是带有空格的，使用 *gJ* 可以不带空格），这里我们需要使用替换命令把空格替换为逗号，然后放在指定位置增加[]就可以了，怎么样？是不是很方便？
+
+[[https://picx.zhimg.com/50/v2-ab5d436fbf1f88db08c1300ae73ff7cc_720w.gif?source=2c26e567]]
+
+24. vglobal命令的使用：一个需求，是你需要过滤当前文本中的内容，留下自己想搜索的内容，你可以使用:vglobal(缩写为v), 该命令是相反的global，操作不是搜索的内容, 比如下面的例子：我想要只留下2011的行，那么我就直接搜索2011，然后使用:vglobal//d 删除其它不匹配的行，就是我想要看的内容了
+
+[[https://pic1.zhimg.com/50/v2-fb830ca60d2f76d59fb5248ab2d436e1_720w.gif?source=2c26e567]]
+
+25. 如果刚刚使用了一个很长的命令，然后我现在想要修改，怎么便捷的编辑？->使用命令行窗口可以很好的解决这个问题，比如你可以使用q: 、q/以及q?来进入命令行窗户，其中/和?都是搜索命令窗口而:是执行命令窗口，比如下面这个例子(这里我搜索了this is a good example, 现在我又想搜索this is a good game，但是命令太长了，我是用q/来进入搜索命令行窗口，然后直接编辑，回车就可以了):
+
+[[https://picx.zhimg.com/50/v2-368847d74f2196adf5f69c03e5f86e02_720w.gif?source=2c26e567]]
+
+又比如，我这里再2010和2011后面插入了test, 但是，我的需求改变了，需要在后面增加_test_goodtest， 因此我使用q:来进入命令行窗口，重新编辑刚才那条命令，回车即可执行
+
+[[https://pica.zhimg.com/50/v2-e3602b1a10fc297eb774d3ca86be7440_720w.gif?source=2c26e567]]
+
+26. 标记的使用，大家相比都用过m{a-zA-Z}来标记一处地点，但是你知道吗，vim中有一些默认的标记，能够使你快速进行编辑和移动，比如符号 *.* 表示最近编辑的位置， *0-9* 表示最近使用的文件，而 *^* 表示最近插入的位置， *~* 表示上一次跳转前的位置， *“* 表示上一次退出文件的位置， *[* 表示上一次修改的开始处， *]* 表示上一次修改的结尾处，我最常用的是 *.* 和 *~* ，能够马上跳转到我刚才编辑的地方以及上一次跳转的地方，熟悉了的话，非常方便（ *这个建议下意识练习，非常实用* )
+
+27. 捕获文本方便替换操作：vim中搜索有捕获文本的方式，那就是在搜索的时候用括号把需要捕获的文本包起来，然后根据顺序vim自动会把它编号，在引用的时候使用\1、\2....就可以直接引用，比如下面的例子：我有一些中括号括起来的willpower，我是用捕获文本的方式来将其括号消除(当然，要实现这一功能有许多方式，这里只是一个例子)， *捕获文本的方式非常方便，建议学习*
+
+*如果觉得转义太麻烦，可以看一看vim的very magic模式*
+
+[[https://pic1.zhimg.com/50/v2-d7826806a54337511e6788616d843cb7_720w.gif?source=2c26e567]]
+
+28. 编辑文件的时候忘记了使用最高权限而无法保存怎么办？
+
+你可以使用
+
+#+begin_src vim
+:w !sudo tee %
+#+end_src
+
+我给你拆解一下：首先是w命令是write命令(就和平常写的wq一样那个)， 然后是!命令，这是将文本内容通过管道传递给shell命令了，后面你可以看作在shell中运行，然后是tee是写命令，然后是%，在这里vim会将它展开为文件名字(如果不信，你可以使用:!echo %查看)， 因此这句话就是将文件内容传递给外面有权限的shell命令tee去写入(这个命令建议记住!)，最后vim会报一个警告，这是因为文件被修改了，按下L(也即Load)就可以了。
+
+[[https://picx.zhimg.com/50/v2-5a25f3f61d27267df97a0c44b56f29fc_720w.gif?source=2c26e567]]
+
+29. 在visual模式中你是否遇到过想修改另一个方向的范围？使用o键就可以完成这个需求，比如下面的函数我想使用vi{来选择函数体里面的内容，但是我现在想法变了，我想把整个函数都选择复制一下（这个o键位，在visual模式非常好用，建议学习)
+
+[[https://picx.zhimg.com/50/v2-84ff11aaa5c3aa42c41d3a9c4eeac540_720w.gif?source=2c26e567]]
+
+30. *gf* 快速跳转：当日志中出现文件路径的时候，我们可以在normal模式下，路径上按下gf快速跳到所在路径，如果需要另开tab，而不是当前窗口，那么使用ctrl+w gf即可。
+
+[[https://picx.zhimg.com/50/v2-3e17b924ece3fa8f97e461297c900423_720w.gif?source=2c26e567]]
+
+31. 巧用vim, quickfix的errorformat， 有的时候我们会遇到想要快速跳转到日志报错的对应处，但是当前vim先有的compiler没有合适的，那么我们可以自定义errorformat，然后快速跳转解决问题：
+
+：set errorformat=this\ is\ a\ path\ %m\ :%f\ %l
+
+其中%m是错误信息， %f是文件路径,  %l是行号,  空格要使用\ 转义，这样简单的格式就能够让我们快速构建自己的错误解决列表，快速跳转，非常方便。
+
+出现的copen以及cfile可以help看看，还是非常通俗易懂的。
+
+[[https://picx.zhimg.com/50/v2-e4a70dc293c8da91a5ad73e249b309a5_720w.gif?source=2c26e567]]
+
+真实场景1：
+
+现在小明想知道服务器A上面的网口有多少是连着网线的，想配置一个多网口服务器。他知道有一个命令叫做ethtool, 使用ethtool + <net  device name>就可以知道信息，比如： 
+
+
+#+begin_src bash
+ubuntu@wphost:~/vim-test$ ethtool eth0
+Settings for eth0:
+        Supported ports: [ ]
+        Supported link modes:   Not reported
+        Supported pause frame use: No
+        Supports auto-negotiation: No
+        Supported FEC modes: Not reported
+        Advertised link modes:  Not reported
+        Advertised pause frame use: No
+        Advertised auto-negotiation: No
+        Advertised FEC modes: Not reported
+        Speed: Unknown!
+        Duplex: Unknown! (255)
+        Port: Other
+        PHYAD: 0
+        Transceiver: internal
+        Auto-negotiation: off
+Cannot get wake-on-lan settings: Operation not permitted
+        Link detected: yes
+
+#+end_src
+
+然后，有用的信息就是: 
+
+
+[[https://picx.zhimg.com/50/v2-464a8cbb302bec6b464ff4ed66fb5c40_720w.jpg?source=2c26e567]]
+
+那么要做的事情就是，筛选这两个，然后显示(大家可以想一下如何做方便，类似的任务都可以这样做，就是筛选自己想要的内容显示)
+
+这里用的就是管道+搜索和vglobal命令
+
+先使用管道捕获(这个不重要): 
+ for i in ~ls /sys/class/net~;do sudo ethtool $i; done | vim -
+
+然后，可以看到输出内容我们只想要eth和Link关键字相关的行,因此这里先搜索
+
+/eth\|Link
+
+然后我们把不包含这些字段的行删除:
+
+:v//d
+
+就可以了。
+
+[[https://picx.zhimg.com/50/v2-c42b6a11eb426b1b37c6b929823f3273_720w.gif?source=2c26e567]]
+
+*有用的话，各位看官点个赞，我还有N多小技巧哦(PS: 有问题也可以评论区提出来，我会的话，给你解答!)*
+
+*2022/12/1更新：增加gif解释(点个赞呗)*
+
+*2023/5/10更新：增加22. 段落对象的使用以及23. 拼接的妙用*
+
+*2023/9/24更新：增加24. vglobal的使用以及25. 命令行窗口的使用*
+
+*2023/10/3更新：增加26标记以及27捕获文本的使用*
+
+*2023/10/9更新：增加28权限保存以及29visual模式下调转方向*
+
+*2024/3/3更新：增加案例1*
+
+*2024/12/07更新：增加30 gf的使用，以及31 构建自己的errorformat选项，快速解决问题。*
+
+~技巧是为了更好地执行自己的想法，多用才能体会到其中的妙用~
+
+*** 评论问题回答:
+
+1. 行之间的跳转有啥好的技巧吗，我现在就是 H M L 完之后，5j 5k 这样跳的，有时候 jjj kkk 的，就特别的…傻的感觉?
+
+#+begin_quote
+答:如果在有插件的情况，推荐·easymotion/vim-easymotion·，在没有插件的情况下，优先使用查询/以及?, 其次使用#以及*, 再者如果是特殊情况，比如在括号中，其实没必要跳转到括号里面使用ci(, 其实是要在同一行就能直接修改，"中的内容同理；还有如果是修改数字，优先使用ctrl+A，直接跳转到数字，然后再修改即可.(一句话，多用查找，少用精细度的移动。)
+#+end_quote

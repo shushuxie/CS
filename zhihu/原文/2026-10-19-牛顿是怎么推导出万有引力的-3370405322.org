@@ -1,0 +1,64 @@
+#+TITLE: 牛顿是怎么推导出万有引力的？
+#+LINK: https://www.zhihu.com/question/40794193/answer/3370405322
+#+AUTHOR: 2睡了2
+#+CREATED: 2024-01-21
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+牛的推导过程与教科书的推导是完全不同的
+
+[[https://picx.zhimg.com/50/v2-6a10ed7addd5358e46d1c20c7239fdf4_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-dd94a2b4af6aa5e5e18c020fdb98bd38_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-7b6653979d7fd9c79effcceabf0eb384_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-85389919b18b5938342e7db35876979d_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-83c5ddc56191465db7e88569e25f33a9_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-c45648b76086233df1e9bbc2afb4f56a_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-66477440f934cef8869e34cc4918b356_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-e460556a2a3d50fdbb92d48beb09b589_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-b67859d81840130eaa2ce8dd612f1cad_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-2eadfe90d1fb117e2e2f65587876bb4b_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-07e030d636ae20f575bfa41a3ec8618c_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-8d8e1fa558e4f5e128df081f533d29c3_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-5352647403349ebecea7a248dd5211e1_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-798b9443d4a7464862a8d5faced71d93_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-33df1108312c24406f978845eec7d153_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-f3f3b8512dd33956c53e35baac954013_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-df04e3606ec29fa8d73b6b868898ed62_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-e93af5f402b13aa891c3d2af0f203dac_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-014dd40349aede5ea5c8636ab1b08678_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-b116ba6e0af298d76d551015cd0d3e8c_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-48a7edbc09b27c862f300af30af6cb6c_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-f093cae580b755afdf61c6b2899b36c8_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-cd55a72fa159da42e8e90f29e998195f_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-4ca8df2f110d2eb85f885babdc1a4ef0_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-9b71f95a43d391fc17382449d60217c8_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-492ad972a30071b81d8918b83c07bed1_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-4ab0cf44ed76fd2ed31db6334b296931_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-1f8511f8cb41b79727176c693c8cc1b3_720w.jpg?source=2c26e567]]

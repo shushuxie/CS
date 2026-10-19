@@ -1,0 +1,10 @@
+#+TITLE: 天涯神帖，第一神帖是什么？
+#+LINK: https://www.zhihu.com/question/655716371/answer/13553721126
+#+AUTHOR: 觉知
+#+CREATED: 2024-10-24
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+[https://tianya.at/bbs/直接去这看呢，网友自己做的，天涯再会](https://tianya.at/bbs/%E7%9B%B4%E6%8E%A5%E5%8E%BB%E8%BF%99%E7%9C%8B%E5%91%A2%EF%BC%8C%E7%BD%91%E5%8F%8B%E8%87%AA%E5%B7%B1%E5%81%9A%E7%9A%84%EF%BC%8C%E5%A4%A9%E6%B6%AF%E5%86%8D%E4%BC%9A)
+
+说看不了的，可以用这个看看DNS被污染，下个月启用这个地址 [https://tianya.my/](https://tianya.my/)

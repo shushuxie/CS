@@ -1,0 +1,36 @@
+#+TITLE: 学代码的时候一半的时间都在折腾配置和系统,有必要吗？
+#+LINK: https://www.zhihu.com/question/8435690673/answer/98418700234
+#+AUTHOR: 子墨
+#+CREATED: 2025-02-11
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+*你不用配环境* ，微软给所有 Github 用户都提供了免费的 CodeSpace 虚拟机。
+
+这个虚拟机上不会有任何环境问题，因为服务器直接就在远程机房。 不用换源，不用担心国内网络问题。 不用担心 cpp java python js 环境问题。 所有主流环境都已安装。
+
+最经典的例子，99% 的项目都不会比 VSCode 更复杂了吧。借助这个虚拟机，任何人都可以在 10分钟内完整编译一个VScode 出来，不会有任何环境报错。
+
+[GitHub - microsoft/vscode: Visual Studio Code](https://github.com/microsoft/vscode)
+
+不信的话可以自己试一试，点这个绿色图标，开一个 CodeSpace 就行
+
+[[https://picx.zhimg.com/50/v2-2ec8b8fcaaad8ca6de33c362b18ce24f_720w.jpg?source=2c26e567]]
+
+顺便提一句，著名的 python 也是。 Python 是用 C语言写的，大型C项目编译从来都是一场噩梦，九牛二虎的力气都不一定能完整编译一次。但是借助上面的方法，问题迎刃而解。
+
+[github.com/python/cpython](https://github.com/python/cpython)
+
+[[https://picx.zhimg.com/50/v2-eece7423d57f4d627e13b9a59616f178_720w.jpg?source=2c26e567]]
+
+但凡一个开源项目里面有 .devcontainer 文件夹的，基本都是可以完全无痛在远程机上编译的。
+
+有兴趣的可以继续去了解一下 容器化技术、虚拟机。 我从大学的时候就一直想尝试自己编译一些大型项目，但是直到几年后我才知道有这种好东西 ^_^
+
+*前提：你能正常访问 Github。* 我不会在这里教你科学上网的~~
+
+---
+
+没想到这个回答那么受欢迎，那么就全程直播，完整编译一次 VSCode 给大家看看。奶奶也能学会！
+
+[子墨：全程直播，零基础从源码编译 VSCode，仅需5分钟](https://zhuanlan.zhihu.com/p/23531362271)

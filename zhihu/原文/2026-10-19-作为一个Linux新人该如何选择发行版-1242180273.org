@@ -1,0 +1,169 @@
+#+TITLE: 作为一个Linux新人，该如何选择发行版？
+#+LINK: https://www.zhihu.com/question/21517341/answer/1242180273
+#+AUTHOR: CodeSheep程序羊
+#+CREATED: 2020-05-24
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+来个Linux常用操作系统盘点吧。
+
+[[https://pic1.zhimg.com/50/v2-a74ba3fb4012ad90c7d0f9736f4986fd_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+本文已收录进开源项目： *[github.com/JavaCollection](https://github.com/hansonwang99/JavaCollection)* ，有自学路线、面试题和面经、编程资料及系列技术文章等，资源持续更新中...
+#+end_quote
+
+在之前的两篇文章：
+
+- *[《人手一套Linux环境搭建之：macOS版本教程》](https://github.com/hansonwang99/JavaCollection)*
+- *[《人手一套Linux环境搭建之：Windows版本教程》](https://github.com/hansonwang99/JavaCollection)*
+
+中详细演示了如何在 ~Windows~ 系统和 ~macOS~ 系统上基于虚拟机来打造 *学习和实验用* 的 ~Linux~ 环境，这两篇文章中安装的 ~Linux~ 系统都是 ~CentOS~ 这个发行版，于是一些小伙伴发出了 *致命三连击* ：
+
+- 为啥不选用其他类型的 ~Linux~ 系统呢？
+- 还有哪些 ~Linux~ 系统可供选用呢？
+- 我到底该选哪一种 ~Linux~ 操作系统呢？
+
+得嘞，做个小盘点试试看。
+
+[[https://pic1.zhimg.com/50/v2-83620f90d263ff0e44ad931c9320713b_720w.jpg?source=2c26e567]]
+
+不过由于个人能力和见识有限，如有不当之处，还请批评指出，一起交流进步。
+
+---
+
+* *眼花缭乱！**
+
+~Linux~ 系统的种类实在是太多了，具体的发行版种类让人看得眼花缭乱，本文就试着来总结一波， *理一理* 、 *顺一顺* ，帮助我们做到心里有数。
+
+单谈 ~Linux~ 的概念实在是太泛了。严格来讲， ~Linux~ 只能说是一种操作系统的 *内核* ，所以我们通常所说的 *“Linux操作系统”* 一般指的是 *采用Linux作为内核* 的操作系统！
+
+首先我们选两个常见的维度，来 *做个分类* 吧。
+
+---
+
+** *按是否商业版来划分**
+
+现有的 ~Linux~ 发行版操作系统，可以划分为由商业公司维护的 *商业版本* 和由开源社区维护的 *免费发行* 版本。
+
+商业版 ~Linux~ 系统典型的代表那就是 ~RedHat Enterprise Linux~ ，而平时我们所常用的 ~Ubuntu~ 、 ~CentOS~ 、 ~Debain~ 这种则一般属于免费发行版。
+
+*有人会说，Linux不是开源的吗？不应该都是免费的吗？*
+
+是的， ~Linux~ 内核是开源的，但是 *开源≠免费* ，我们可以理解为付费的是它的服务或者商业支持，所以有些 ~Linux~ 的发行版它也有它所谓的商业版。
+
+当然这个角度我们不用纠结太多，一般个人使用，用免费发行版比较多。
+
+---
+
+** *按包管理器来划分**
+
+*首先，什么是包管理器呢？*
+
+这么说吧，如果没有包管理器这个东西的存在，那估计仅仅是 ~Linux~ 系统上的软件安装，怕是就要劝退很多用户了，因为很多的 *软件依赖处理* 会让人抓狂。
+
+因此简单起见，我们可以将包管理器理解为，用来为 ~Linux~ 系统上的软件 ~安装~ 、 ~卸载~ 、 ~升级~ 、 ~查询~ 提供支持的组件，所以对于用户使用来说，一般是一组工具命令集。
+
+目前 ~Linux~ 世界里的包管理种类繁荣，选几个最主流的，可以大致梳理成如下表格所示，每一种都有对应的Linux发行版代表：
+
+*包管理器名称常用标志性指令代表系统举例* DPKGdpkg、aptDebain、Ubuntu等RPMrpm、yumRedHat、CentOS等PacmanpacmanArch、Manjaro等DNFdnfFedoraZypperzypperSUSEPortageemergeGentoo
+
+用一个脑图来总结一下可能会更加形象：
+
+[[https://pic1.zhimg.com/50/v2-96412a201d1b437bd977673c3e4ea3a9_720w.jpg?source=2c26e567]]
+
+所接下来分别针对这里面的几个主流使用的 ~Linux~ 发行版系统来大致唠一唠。
+
+---
+
+* *Debian**
+
+~Debian~ 和 ~Ubuntu~ 是一个派系的，但界面可能没有 ~Ubuntu~ 那么华丽，但是比较稳定，也适合用作服务器操作系统。 ~Debian~ 在开源圈子用得十分广泛，也有一大批开源爱好者活跃于其中。
+
+[[https://pica.zhimg.com/50/v2-45c91bbf761aff9c2f48e207e4d1f107_720w.jpg?source=2c26e567]]
+
+---
+
+* *Ubuntu**
+
+~Ubuntu~ 界面比较华丽，包管理器很完善，社区也非常活跃，个人用户确实很多，所以从市面上看的确比较大众化。
+
+[[https://pic1.zhimg.com/50/v2-d28bf5bb5b68e65a7769ca96874b1547_720w.jpg?source=2c26e567]]
+
+---
+
+* *RedHat**
+
+~RHEL（Red Hat Enterprise Linux）~ 毕竟是商业版 ~Linux~ 系统，一般多用于企业生产环境，提供完善的商业支持，在性能、稳定性方面也有很大的保障。
+
+[[https://picx.zhimg.com/50/v2-ab57c907552c1d0b3c4c0a33692c3913_720w.jpg?source=2c26e567]]
+
+---
+
+* *CentOS**
+
+~CentOS~ 可以理解为是基于 ~RedHat~ 商业版系统的社区编译重发布版，完全开源免费，因此相较于其他一些免费的 ~Linux~ 发行版会更加稳定，也因此一般企业里常用作服务器操作系统。
+
+[[https://picx.zhimg.com/50/v2-d3c85313ab906adc8fbec8139283783b_720w.jpg?source=2c26e567]]
+
+---
+
+* *Fedora**
+
+~Fedora~ 其实和 ~RedHat~ 也同属一个派系，背后的支撑企业也是红帽子公司。但是 ~Fedora~ 是免费发行版，而且更加侧重于新技术的试验和加持，因此稳定性方面的考量较 ~CentOS~ 会稍微次要一些。
+
+[[https://pic1.zhimg.com/50/v2-82ab050b371bae1017ea2f684445ab36_720w.jpg?source=2c26e567]]
+
+---
+
+* *SUSE**
+
+~SUSE~ 背后也算是有大公司的支持了，目前主要也还是多用于企业用户。
+
+[[https://pica.zhimg.com/50/v2-35a3d8ec222b27225dfb02f179199771_720w.jpg?source=2c26e567]]
+
+---
+
+* *Arch**
+
+~Arch~ 的确比较适合好奇心强的人尝鲜，它的官方 ~Wiki~ 做得好， ~AUR~ 仓库很繁荣，适合 ~DIY~ 玩家去折腾，确实也吸引了不少粉丝。
+
+[[https://pic1.zhimg.com/50/v2-fc2304b14f762f3b2fc1b3909c8a2ecb_720w.jpg?source=2c26e567]]
+
+---
+
+* *Manjaro**
+
+~Manjaro~ 可以看成是 ~Arch Linux~ 的衍生分支，既包含了 ~Arch~ 的常见优点，但也对用户友好，注重体验和稳定性。 ~Manjaro~ 的安装和使用都比较方便，目前使用用户非常多。
+
+[[https://pica.zhimg.com/50/v2-9e2d413cb81d06c5c576ca43e2dbc163_720w.jpg?source=2c26e567]]
+
+---
+
+* *Gentoo**
+
+~Gentoo~ 适合极客范化的折腾，也比较适合有特殊需要和特殊化定制的需求，总体来说比较小众。但是用得很6的大佬们都说好，因为这些大佬们大多有系统洁癖，控制欲很强，什么都需要自己编译、自己定制，这个对他们来说简直就是天堂了。
+
+[[https://pic1.zhimg.com/50/v2-f7990f5bc3744b51b03421599883d25a_720w.jpg?source=2c26e567]]
+
+---
+
+* *其他Linux发行版**
+
+上文中只是介绍了比较主流和常用的 ~Linux~ 发行版，其他还有很多 ~Linux~ 发行版和其衍生系统数不胜数，在此也不一一列举了。
+
+---
+
+* *选用建议**
+
+- 如果是完全0基础的新手，只是想入门 ~Linux~ 的生态，体验 ~Linux~ 界面，那 ~Ubuntu~ 就非常合适
+- 如果喜欢折腾和DIY，好奇心满满，可以试试 ~Arch~ 、 ~Manjaro~ 、 ~Gentoo~ 这些
+- 如果想用来部署服务，考虑稳定性，那 ~CentOS~ 、 ~Debian~ 都是不错的选择
+
+当然这仅仅只是参考，最终的选择还是看个人需求和兴趣吧。
+
+---
+
+#+begin_quote
+本文已收录进开源项目： *[github.com/JavaCollection](https://github.com/hansonwang99/JavaCollection)* ，有自学路线、面试题和面经、编程资料及系列技术文章等，资源持续更新中...
+#+end_quote

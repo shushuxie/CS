@@ -1,0 +1,75 @@
+#+TITLE: VIM这么难用，为啥这么多人热衷？
+#+LINK: https://www.zhihu.com/question/437735833/answer/1733228460
+#+AUTHOR: 男科不难谦哥
+#+CREATED: 2021-02-16
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+我是个18年的非专业EMACSER, 但我爱用evil，因为VIM的精髓就是它有一套用于编辑文本的语言，我把我以前的笔记贴在这里，您可以感受一下其中的设计逻辑：
+
+** VIM语法 
+ 
+ *1.1 动词*
+
+
+ 动词代表了我们打算对文本进行什么操作。例如：
+
+- d 删除 delete
+- r 替换 replace
+- c 修改 change
+- y 复制 yank
+- v 选取 visual select
+
+
+ *1.2 名词* 
+ 名词代表了我们即将处理的文本。Vim 中有一个专门的术语叫做文本对象text object，示例：
+
+- w 单词word
+- s sentence
+- p 段落paragraph
+- t HTML标签tag
+- 引号或者各种括号所包含的文本称作一个文本块。
+
+
+ *1.3 介词* 
+
+
+介词界定了待编辑文本的范围或者位置。例如：
+
+- i “在…之内”inside
+- a “环绕…”around
+- t “到…位置前”to
+- f “到…位置上”forward
+
+
+ *1.4 组词为句*
+
+
+ 文本编辑命令的基本语法如下： 
+ *动词+介词+名词* 
+ 例子:
+
+- 删除一个段落 delete inside paragraph: dip
+- 选取一个句子 visual select inside sentence: vis
+- 修改一个单词 change inside word: ciw
+- 修改一个单词 change around word: caw
+- 删除文本直到字符“x”（不包括字符“x”）delete to x: dtx
+- 删除文本直到字符“x”（包括字符“x”）delete forward x: dfx
+
+
+ *1.5 数词*
+
+
+ 数词指定了待编辑文本对象的数量, 语法就成了这样： 
+ *动词+介词/数词+名词* 
+ 例子：
+
+- 修改三个单词 change three words: c3w
+- 删除两个单词 delete two words: d2w
+
+另外，数词也可以修饰动词，表示将操作执行 n 次。语法： 
+ *数词+动词+名词* 
+ 示例：
+
+- 两次删除单词（等价于删除两个单词） twice delete word: 2dw
+- 三次删除字符（等价于删除三个字符）three times delete character: 3x

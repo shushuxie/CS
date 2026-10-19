@@ -1,0 +1,129 @@
+#+TITLE: int (*(*fun(int*(*p)(int *)))[5]) (int*)表示的是什么?
+#+LINK: https://www.zhihu.com/question/542944040/answer/2573116176
+#+AUTHOR: Hippop
+#+CREATED: 2022-07-13
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+对于这种复合类型声明，有一种以不变应万变的方法。你只需要记住一条规则，便可拆解所有类型声明。
+
+*对于任意一种类型声明式，右边类型表达式经过* () []运算后的结果类型与左边相同。*
+
+这个意思就是：表达式(*(*fun(int*(*p)(int *)))[5]) (int*)的结果类型是int，当然类型表达式与语句表达式还有一点差别，主要体现在()与[]上面：
+
+- 类型表达式的()也表示调用运算，不过()内可以包含出调用参数的类型信息。如：int (*p)(int *)，则含义是，可以对*p进行函数调用，给其传递参数int*，结果是int。由此可知*p是一个函数，那么p则是函数指针。
+- 类型表达式的[]也表示下标运算，不过[]内可以包含出运算数组的元素个数信息。如：int a[5]，则含义是，对a进行下标运算，结果为int，由此a是一个数组。
+
+对于上述式子：
+
+1. 对于 <u>(*(*fun(int*(*p)(int *)))[5])</u> (int*)，括号优先级比调用运算高，因此后运算的是调用运算（注意这是反推，优先级最低的运算被最先脱掉），所以*(*fun(int*(*p)(int *)))[5]是一个返回值为int，参数为int*的函数。
+2. 对于* <u>(*fun(int*(*p)(int *)))[5]</u> ，下标运算[]优先级比取值运算*高，所以(*fun(int*(*p)(int *)))[5]经过取值运算，得到的是一个函数，因此(*fun(int*(*p)(int *)))[5]的结果是函数指针。
+3. 对于 <u>(*fun(int*(*p)(int *)))</u> [5]，括号优先级比下标运算高，所以(*fun(int*(*p)(int *)))经过下标运算，得到的是函数指针，因此*fun(int*(*p)(int *))是一个5个元素的函数指针数组。
+4. 对于* <u>fun(int*(*p)(int *))</u> ，调用运算优先级比取值运算高，所以fun(int*(*p)(int *))经过取值运算，得到的是一个指向数组的指针。
+5. 对于fun( <u>int*(*p)(int *)</u> )，int*(*p)(int *)处于调用运算符之内，所以int*(*p)(int *)是函数fun的参数，fun是一个函数，经过调用得到的是一个指向数组的指针。
+6. 对于int*(*p)(int *)，如法炮制可知。它是一个返回值为int*的，参数为int*的函数指针。
+
+因此，连起来就是，int (*(*fun(int*(*p)(int *)))[5]) (int*)是一个函数，它的参数是一个返回值为int*，参数为int*的函数指针，它的返回值是一个指向5个元素数组的指针，数组的元素是一个返回值为int，参数为int*的函数指针。
+
+到这里，可能还有同学不知道为什么这样反推。那下面我把正推流程放出来可能就清晰了。
+
+对于(*(*fun(int*(*p)(int *)))[5]) (int*)这个类型表达式，我们先将其转换成对应的语句表达式就是：
+
+(*(*fun(0))[0])(0): 结果类型为int
+
+转换时，我们将函数调用里的参数用值代替，数组下标填0。
+
+从语句表达式可以看出来：
+
+1. 对fun进行函数调用
+2. 再对返回值取值
+3. 然后取其元素
+4. 再取值
+5. 把它当成函数调用
+6. 返回值是一个int
+
+前面的过程就是这个过程的反推，这下应该明白了吧。
+
+---
+
+因此int (*(*fun(int*(*p)(int *)))[5]) (int*)是一个函数声明，你可以写出这样的代码并编译通过
+
+#+begin_src c
+#include <stdio.h>
+
+typedef int (*pfunc_t)(int *);
+
+int test1(int *p)
+{
+    printf("test1 %d", *p);
+    return 1;
+}
+int test2(int *p)
+{
+    printf("test2 %d", *p);
+    return 2;
+}
+
+pfunc_t pfuncs1[5] = {test1, test2, test1, test2, test1};
+pfunc_t pfuncs2[5] = {test2, test2, test2, test1, test1};
+
+int (*(*fun(int*(*p)(int *)))[5])(int*)
+{
+    int i = 999;
+    int *ret;
+
+    ret = p(&i);
+
+    return (*ret == 0) ? &pfuncs1 : &pfuncs2;
+}
+
+int *test3(int *p)
+{
+    *p %= 37;
+    return p;
+}
+int *test4(int *p)
+{
+    *p %= 36;
+    return p;
+}
+
+int main(void)
+{
+    pfunc_t (*pfuncs)[5];
+    int i;
+
+    printf("call fun test3:\n");
+    pfuncs = fun(test3);
+    for (i = 0; i < 5; i++)
+    {
+        printf(" ret:%d\n", (*pfuncs)[i](&i));
+    }
+
+    printf("call fun test4:\n");
+    pfuncs = fun(test4);
+    for (i = 4; i >= 0; i--)
+    {
+        printf(" ret:%d\n", (*pfuncs)[i](&i));
+    }
+
+    return 0;
+}
+#+end_src
+
+运行结果：
+
+#+begin_src text
+call fun test3:
+test1 0 ret:1
+test2 1 ret:2
+test1 2 ret:1
+test2 3 ret:2
+test1 4 ret:1
+call fun test4:
+test1 4 ret:1
+test1 3 ret:1
+test2 2 ret:2
+test2 1 ret:2
+test2 0 ret:2
+#+end_src

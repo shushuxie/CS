@@ -1,0 +1,99 @@
+#+TITLE: 可以用m1芯片的mac来学习x86的汇编么?
+#+LINK: https://www.zhihu.com/question/481553539/answer/2551373272
+#+AUTHOR: 飞向别人的床
+#+CREATED: 2022-06-29
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+** 前言
+
+最近在啃CSAPP，发现第三章讲汇编的时候用的是x86-64指令集。一开始还不知道交叉编译这回事，想着只能搞一台x86-84的云服务器学习了。但是国内的云服务器太贵了，只好选择Vultr，买了在New Jersey的云服务器。
+
+不出我所料，连接的时候卡的要死，虽然勉强能用，但是实在影响心情。遂考虑在M1上编译x86-64指令集的方法。一开始翻网上的全都是在x86-64上编译arm的方法，乌鱼子。
+
+尝试在brew上搜了一下x86
+
+#+begin_src bash
+$ brew search x86
+==> Formulae
+x86_64-elf-binutils      x86_64-elf-gcc      x86_64-elf-gdb
+#+end_src
+
+还真有！接下来就easy了！
+
+** 解决方法
+
+** *1. 安装x86-64编译工具链**
+
+#+begin_src bash
+$ brew install x86_64-elf-gcc x86_64-elf-gdb
+#+end_src
+
+安装 ~x86_64-elf-gcc~ 时会自动安装 ~x86_64-elf-binutils~ ，因此相当于把这三个一起装了。当然，最后安装好可不止这三个，而是
+
+#+begin_src bash
+$ ls /opt/homebrew/bin | grep x86_64
+x86_64-elf-addr2line
+x86_64-elf-ar
+x86_64-elf-as
+x86_64-elf-c++
+x86_64-elf-c++filt
+x86_64-elf-cpp
+x86_64-elf-elfedit
+x86_64-elf-g++
+x86_64-elf-gcc
+x86_64-elf-gcc-12.1.0
+x86_64-elf-gcc-ar
+x86_64-elf-gcc-nm
+x86_64-elf-gcc-ranlib
+x86_64-elf-gcov
+x86_64-elf-gcov-dump
+x86_64-elf-gcov-tool
+x86_64-elf-gdb
+x86_64-elf-gdb-add-index
+x86_64-elf-gprof
+x86_64-elf-ld
+x86_64-elf-ld.bfd
+x86_64-elf-lto-dump
+x86_64-elf-nm
+x86_64-elf-objcopy
+x86_64-elf-objdump
+x86_64-elf-ranlib
+x86_64-elf-readelf
+x86_64-elf-size
+x86_64-elf-strings
+x86_64-elf-strip
+#+end_src
+
+好家伙，GCC工具链齐活了！妈妈再也不用担心ARM机上编译不了x86-64了！（
+
+** *2. 注意事项**
+
+接下来就可以愉快的用 ~x86_64-elf-gcc~ 编译你最爱的C代码了！（当然，对于我来说，主要是编译成汇编以供学习之用）
+
+由于命令过长，我在 ~.zshrc~ 文件里增加了几行 ~alias~ ，作为命令缩写
+
+#+begin_src bash
+alias xgcc="/opt/homebrew/bin/x86_64-elf-gcc"
+alias xobjdump="/opt/homebrew/bin/x86_64-elf-objdump"
+alias xgdb="/opt/homebrew/bin/x86_64-elf-gdb"
+#+end_src
+
+*关于编译的问题*
+
+由于 ~x86_64-elf-gcc~ header files不全，因此为学习之便，我们可以 *借用* Xcode Command Line Tools的header files。例如：
+
+#+begin_src bash
+$ xgcc -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include -Og -S hello.c
+#+end_src
+
+就可以顺利通过编译了！（注意include路径要替换成你的系统版本号）
+
+当然，这样只能编译成汇编，编译成二进制文件还是会有问题。
+
+** 后记
+
+#+begin_quote
+Vultr，退钱！ 
+ ——某不愿透露姓名的希波波希
+#+end_quote

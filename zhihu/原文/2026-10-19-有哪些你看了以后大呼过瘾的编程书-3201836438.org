@@ -1,0 +1,20 @@
+#+TITLE: 有哪些你看了以后大呼过瘾的编程书？
+#+LINK: https://www.zhihu.com/question/50408698/answer/3201836438
+#+AUTHOR: CrackingOysters
+#+CREATED: 2023-09-08
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+《systematic programming: an introduction》
+
+一口气看了七八章。
+
+我发现这本书在国内被提及很少。
+
+实际上这本书是计算机泰斗人物niklaus wirth写的，就是设计了Pascal，写程序=数据结构+算法
+
+这本书是入门书，也就是适合要入门的时候看，打下坚实的基础。老手看看也会有收获。
+
+比如强调初步程序证明对于写程序很重要。比如常说的循环不变量。赋值语句的证明（赋值语句有啥需要证明的，看了才发现比较好玩有意思）
+
+现在在着手读第二遍，写文章总结和记录一下，欢迎讨论。

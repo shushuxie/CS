@@ -1,0 +1,151 @@
+#+TITLE: SDK 和 API 的区别是什么？
+#+LINK: https://www.zhihu.com/question/21691705/answer/770586138
+#+AUTHOR: 简道云
+#+CREATED: 2019-08-01
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+【2022.3.4更新】，最近又找到了一些新的资料，更新一下~
+
+---
+
+不知道区别的人，大概率是你还没搞懂API、SDK是什么。
+
+* *讲个小故事：**
+
+#+begin_quote
+研发人员A开发了软件A，研发人员B正在研发软件B。 
+ 有一天，研发人员B想要调用软件A的部分功能来用，但是他又不想从头看一遍软件A的源码和功能实现过程，怎么办呢？ 
+ 研发人员A想了一个好主意： *我把软件A里你需要的功能打包好，写成一个函数。你按照我说的流程，把这个函数放在软件B里，就能直接用我的功能了！* 
+ 其中，API就是研发人员A说的那个函数。
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-4160a3b3d7361a1d75fa0174f8e3e83e_720w.jpg?source=2c26e567]]
+
+这就是API的诞生。
+
+** *日常生活中，我们有很多类似API的场景，比如：**
+
+#+begin_quote
+电脑需要调用手机里面的信息，这时候你会拿一根数据线将电脑手机连接起来，电脑和手机上连接数据线的接口就相当于“API接口”。如图所示：
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-c3e0af3bc3c7ec6a163a2e8b5b5d6695_720w.jpg?source=2c26e567]]
+
+* *那SDK又是什么？**
+
+SDK 就是 Software Development Kit 的缩写，翻译过来——软件开发工具包。这是一个覆盖面相当广泛的名词，可以这么说：辅助开发某一类软件的相关文档、范例和工具的集合都可以叫做SDK。
+
+SDK被开发出来是为了减少程序员工作量的。
+
+比如——
+
+#+begin_quote
+有公司开发出某种软件的某一功能，把它封装成SDK（比如数据分析SDK就是能够实现数据分析功能的SDK），出售给其他公司做开发用，其他公司如果想要给软件开发出某种功能，但又不想从头开始搞开发，直接付钱省事。
+#+end_quote
+
+* *现在可以谈谈API和SDK的区别了。**
+
+总的来说，两者没有值得比较的区别，因为是具有关联性的两种东西。
+
+你可以把SDK想象成一个虚拟的程序包，在这个程序包中有一份做好的软件功能，这份程序包几乎是全封闭的，只有一个小小接口可以联通外界，这个接口就是API。
+
+比如——
+
+我们现在要在企业ERP系统中增加某个功能（比如自动备份、数据分析、云存储等），但又不想耗费大量时间、也没那么多研发亲自去做这个功能。这时我们可以选择使用这个“SDK”软件包，把ERP系统连接上API接口，就可以使用SDK软件包里的功能。
+
+** *举个实例辅助理解：**
+
+【中铁大桥科研院】有一个自研的信息平台，用于管理业务数据。
+
+但他们曾面临一个问题——尽管有信息平台，却因为系统的独立性，数据的上传和备份，需要依靠人工在excel里来回操作，效率很低。
+
+由于系统的开发周期长、成本高，桥科院将目光聚焦到现成的功能软件上。
+
+后来通过API将简道云直接插入公司数据库，数据可自动上传至信息平台上并统一展示；再通过webhook把数据推送到服务器，实现自动备份。
+
+[[https://picx.zhimg.com/50/v2-e412823d1380e1174b97ab614f818159_720w.jpg?source=2c26e567]]
+*API将信息平台与简道云相连*
+
+在这一过程中，简道云扮演的角色就是SDK，而简道云配备API接口，可以对接外部系统，让桥科院不用开发直接实现了数据自动上传、备份的功能。
+
+*最后，贴近生活讲讲两者的关系：*
+
+*有一杯密封饮料，它的名字叫做“SDK”。*
+
+*饮料上插着吸管，吸管的名字叫“API”。*
+
+*把你叫做“XX系统”。*
+
+*如果你想喝到SDK里的饮料（让系统拥有SDK中的功能），你必须通过API这根吸管来实现（通过API连接你的系统和SDK工具包），否则你就喝不到饮料。*
+
+*所以：*
+
+SDK＝放着你想要的软件功能的软件包
+
+API＝SDK上唯一的接口
+
+*不知道你这次真的懂了没？*
+
+---
+
+*这个问题好像又热起来了，既然如此，给大家推荐一个新“玩具”：前端事件。*
+
+*理论上解释：*
+
+#+begin_quote
+前端事件是一种全新的数据获取的方式，可以在数据提交或者表单填报时，主动调用外部接口，从而可以实现接口取数、数据验证、数据分析、触发事件等一系列的操作，用户可以基于现成的商业接口进行配置（无需编程），也可以根据自身需求封装接口，灵活地满足自身业务需求（需编程）
+#+end_quote
+
+*说人话解释：*
+
+#+begin_quote
+用户填写快递单号，返回具体物流信息； 
+ 上传发票图片，返回发票金额； 
+ 上传身份证照片，获取身份证姓名、身份证号； 
+ ……等。
+#+end_quote
+
+例如，在发票报销场景中，根据前端事件配置，可在提交发票图片后自动获取发票中的开票金额、开票日期等基础信息。
+
+[[https://picx.zhimg.com/50/v2-48e859f1b1c8f25213a01f85e3ea79f6_720w.gif?source=2c26e567]]
+
+- 增值税发票OCR识别_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5f978864059fff000699222a) [配置方法](https://hc.jiandaoyun.com/open/12120)
+- 增值税发票PDF格式识别_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5fa9ef7a8c40d2000640095c)
+- 身份证OCR识别_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5f9157ddb082cf0006d980c5) [配置方法](https://hc.jiandaoyun.com/open/12125)
+- 身份证姓名一致性校验_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5f9157ddb082cf0006d980c1)
+- 银行卡OCR识别_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5f9157ddb082cf0006d980c2) [配置方法](https://hc.jiandaoyun.com/open/12119)
+- 银行卡四要素校验_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5ff28e22a6849a000754fecb)
+- 自定义模板识别_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5ff2ab04973e3c0006ebca7d) [配置方法](https://hc.jiandaoyun.com/open/12251)
+- 物流信息查询_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5f9157ddb082cf0006d980c3) [配置方法](https://hc.jiandaoyun.com/open/12156)
+- 短信发送_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5ff2af67c0258900070100ea) [配置方法](https://hc.jiandaoyun.com/open/12255)
+- 全球ip地址查询_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5f97885b4e5a800006a99f95)
+- 数据库取数_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/5f9157ddb082cf0006d980c4)
+- 企业工商信息查询_Demo： [点击体验](https://t6ixa9nyl6.jiandaoyun.com/f/6062e810cb4abc000996b270)
+
+*** 最后！
+
+*求点赞求关注 [@简道云](https://www.zhihu.com/people/ef107b75e1aaf4025dce59f3d69a4bf9) ，邀请你一起成长~*
+
+---
+
+*参考资料：*
+
+- [想问一下什么是API接口，具体是什么意思？](https://www.zhihu.com/question/38594466/answer/487039892)
+- [短视频app开发丨SDK和API最通俗的解释，新手必看](https://baijiahao.baidu.com/s?id=1631565855082549763&wfr=spider&for=pc)
+
+*相关介绍：*
+
+简道云，以阿里云为依托的云办公平台。以表单为基础，特色的流程协作、图表分析等功能，让用户简单灵活的搭建管理应用，免去开发成本的同时，享受到数字化管理。
+
+（点击进入： [「简道云官网」](https://www.jiandaoyun.com/?utm_src=zhjn) ），分享几个热门模板：
+
+#+begin_quote
+*[进销存管理](https://www.jiandaoyun.com/index/solution_center/app/12809?utm_src=fazxjxczhjn) | [OA管理](https://www.jiandaoyun.com/index/solution_center/app/12777?utm_src=fazxzhjn) | [人事管理](https://www.jiandaoyun.com/index/solution_center/app/12782?utm_src=fazxrszhjn)* 
+ *[请假审批](https://www.jiandaoyun.com/template/5ae2d6061c79061cb7170fc9/?utm_src=fazxzhjn) | [会议管理](https://www.jiandaoyun.com/template/5ae2d7f6c1d0477019d26982/?utm_src=fazxzhjn) | [工作任务管理](https://www.jiandaoyun.com/template/5af3c0542198f7517cea8647/?utm_src=fazxzhjn)* 
+ *[CRM客户管理](https://www.jiandaoyun.com/template/627b52a4d946970008e68569?utm_src=fazxcrzzhjn) | [SRM供应商管理](https://www.jiandaoyun.com/index/solution_center/app/12810?utm_src=fazxgyszhjn) | [ERP管理](https://www.jiandaoyun.com/index/solution_center/app/12838?utm_src=fazxerpzhjn)* 
+ *[绩效管理](https://www.jiandaoyun.com/index/solution_center/app/12771?utm_src=fazxjxglzhjn) | [工程项目管理](https://www.jiandaoyun.com/index/solution_center/app/12822?utm_src=fazxgcxmzhjn) | [费用申请和报销](https://www.jiandaoyun.com/index/solution_center/app/12812?utm_src=fazxzhjn)* 
+ *更多模板： [简道云方案中心](https://www.jiandaoyun.com/index/solution_center?utm_src=fazxzhjn)*
+#+end_quote
+
+[[https://picx.zhimg.com/50/v2-4418efcfc6bdfcabccb92fd0873b0bf0_720w.jpg?source=2c26e567]]

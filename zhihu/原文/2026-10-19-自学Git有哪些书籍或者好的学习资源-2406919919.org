@@ -1,0 +1,20 @@
+#+TITLE: 自学Git，有哪些书籍或者好的学习资源？
+#+LINK: https://www.zhihu.com/question/38008771/answer/2406919919
+#+AUTHOR: 谭新宇
+#+CREATED: 2022-03-25
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+推荐三个学习资料，花个两天时间都学一遍就可以非常熟悉 git 了：
+
+- 2.4 w+ star 的 [learnGitBranching](https://github.com/pcottle/learnGitBranching) 。该仓库通过图形化界面向我们生动地展示了每一条 git 命令背后的细节，能够让大家对 git 的实现原理有更深刻的理解。了解实现原理之后，相信不论什么命令只要看看说明就能够明白其具体作用了。
+
+[[https://picx.zhimg.com/50/v2-250aa5f868caf353a7351379ae06ae40_720w.jpg?source=2c26e567]]
+
+- 6.5 k+ star 的 [githug](https://github.com/Gazler/githug) 。该仓库能够为我们模拟各种需要执行 git 操作的场景，跟着 60 多个 level 完整的走一遍就可以基本解决日常开发中会遇到的 git 问题了。可以参考下我当时通关的记录 [try-githug](https://github.com/OneSizeFitsQuorum/try-githug) 。
+
+[[https://pic1.zhimg.com/50/v2-258dd4d12f46b8339d24dc79bf2aa5ac_720w.jpg?source=2c26e567]]
+
+- 我自己总结的 [33 条常用 git 命令详解](https://github.com/OneSizeFitsQuorum/git-tips) 。虽然 star 不多，但自认为还算精炼，最后推荐了我的 git alias~
+
+[[https://picx.zhimg.com/50/v2-9718962b313fb7413e6b4812176d1aae_720w.jpg?source=2c26e567]]

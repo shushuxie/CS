@@ -1,0 +1,342 @@
+#+TITLE: 对于编程思想和能力有重大提升的书有哪些?
+#+LINK: https://www.zhihu.com/question/35648714/answer/2247718013
+#+AUTHOR: 大南瓜
+#+CREATED: 2021-11-29
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+恰好最在整理这些年读过的书，有些已经绝版，自取
+
+计算机必备经典书籍
+
+* *算法和数据结构系列**
+
+数据结构和算法分析：C语言描述
+
+网盘链接: [https://http://pan.baidu.com/s/16twg6DzuPdlo4nfsqNuL4Q](https://pan.baidu.com/s/16twg6DzuPdlo4nfsqNuL4Q)
+
+提取码: tph4
+
+*算法导论*
+
+链接: [https://http://pan.baidu.com/s/1BTc4TRwojDZ8PXx6xBrgsQ](https://pan.baidu.com/s/1BTc4TRwojDZ8PXx6xBrgsQ)
+
+提取码: g2jh
+
+*算法*
+
+链接: [https://http://pan.baidu.com/s/1MIO54SIaHF59Lkbk0tkvJA](https://pan.baidu.com/s/1MIO54SIaHF59Lkbk0tkvJA)
+
+提取码: mako
+
+*编程珠玑*
+
+链接: [https://http://pan.baidu.com/s/1sA0rj_YBSUjtT_sA0acpbQ](https://pan.baidu.com/s/1sA0rj_YBSUjtT_sA0acpbQ)
+
+提取码: v17c
+
+*编程之美*
+
+链接: [https://http://pan.baidu.com/s/1hPPHhruoDD2NnLq5xMfP3g](https://pan.baidu.com/s/1hPPHhruoDD2NnLq5xMfP3g)
+
+提取码: 91jh
+
+*剑指offer*
+
+链接: [https://http://pan.baidu.com/s/1rU-8SKHv_feq7YjuKUYmSg](https://pan.baidu.com/s/1rU-8SKHv_feq7YjuKUYmSg)
+
+提取码: vf54
+
+*Java数据结构和算法*
+
+链接: [https://http://pan.baidu.com/s/1LJbB7ThiFJhPYBTRP0cmYw](https://pan.baidu.com/s/1LJbB7ThiFJhPYBTRP0cmYw)
+
+提取码: frtm
+
+* *C语言**
+
+** *C和指针**
+
+链接: [https://http://pan.baidu.com/s/1cjnTc0TUIfq6BQCttXgSJA](https://pan.baidu.com/s/1cjnTc0TUIfq6BQCttXgSJA)
+
+提取码: 3kub
+
+*C陷阱与缺陷*
+
+链接: [https://http://pan.baidu.com/s/171lEk_KJZln4vQC0n1vAoA](https://pan.baidu.com/s/171lEk_KJZln4vQC0n1vAoA)
+
+提取码: honp
+
+*C程序设计语言*
+
+链接: [https://http://pan.baidu.com/s/1PQwC-LPXqHN5w2ahXgq1Wg](https://pan.baidu.com/s/1PQwC-LPXqHN5w2ahXgq1Wg)
+
+提取码: wf28
+
+*** C专家编程
+
+链接: [https://http://pan.baidu.com/s/17n4585Ms6AXGau_a9JrcDw](https://pan.baidu.com/s/17n4585Ms6AXGau_a9JrcDw)
+
+提取码: ncdc
+
+*c++语言*
+
+** *C++大学教程**
+
+链接: [https://http://pan.baidu.com/s/1ffpAAC85jCEhjzUi2I0GFg](https://pan.baidu.com/s/1ffpAAC85jCEhjzUi2I0GFg)
+
+提取码: 2ijb
+
+*C++ Primer*
+
+链接: [https://http://pan.baidu.com/s/1oXfYAJDtQvedbkvHupmPGg](https://pan.baidu.com/s/1oXfYAJDtQvedbkvHupmPGg)
+
+提取码: m0i2
+
+*Effective C++*
+
+链接: [https://http://pan.baidu.com/s/16hT0ZpFmRit1ccNWhiWAXQ](https://pan.baidu.com/s/16hT0ZpFmRit1ccNWhiWAXQ)
+
+提取码: ad2a
+
+*More Effective C++*
+
+链接: [https://http://pan.baidu.com/s/1nZx0cVDbdHuctO9-m4a3AA](https://pan.baidu.com/s/1nZx0cVDbdHuctO9-m4a3AA)
+
+提取码: gvgk
+
+*Exceptional C++*
+
+链接: [https://http://pan.baidu.com/s/1dg_MwKPSIRF2Duu8v4M54Q](https://pan.baidu.com/s/1dg_MwKPSIRF2Duu8v4M54Q)
+
+提取码: bw2r
+
+*More Exceptional C++*
+
+链接: [https://http://pan.baidu.com/s/1Rnf7724txIuD7IFOhlRLkQ](https://pan.baidu.com/s/1Rnf7724txIuD7IFOhlRLkQ)
+
+提取码: o5ab
+
+*C++沉思录*
+
+链接: [https://http://pan.baidu.com/s/1nmoperJpABL_ReVRkQck7A](https://pan.baidu.com/s/1nmoperJpABL_ReVRkQck7A)
+
+提取码: m6o7
+
+*深度探索C++对象模型*
+
+链接: [https://http://pan.baidu.com/s/1G-kjWMOerDl4GrDk8129kA](https://pan.baidu.com/s/1G-kjWMOerDl4GrDk8129kA)
+
+提取码: w5hi
+
+*C++设计和演化*
+
+链接: [https://http://pan.baidu.com/s/1yFVLsFYJf9vdcPoEFH7JNA](https://pan.baidu.com/s/1yFVLsFYJf9vdcPoEFH7JNA)
+
+提取码: s2dh
+
+*提高C++性能的编程技术*
+
+链接: [https://http://pan.baidu.com/s/1cdMR_VnTGFAWu4ih9a6Uyg](https://pan.baidu.com/s/1cdMR_VnTGFAWu4ih9a6Uyg)
+
+提取码: ifei
+
+*Effective Modern C++*
+
+链接: [https://http://pan.baidu.com/s/1n6cGYW_bJKwl0KvhS7IJFw](https://pan.baidu.com/s/1n6cGYW_bJKwl0KvhS7IJFw)
+
+提取码: 42dk
+
+*C++程序设计语言(特别版)*
+
+链接: [https://http://pan.baidu.com/s/1TC7XzQMz4g7MhNF4bVIbtg](https://pan.baidu.com/s/1TC7XzQMz4g7MhNF4bVIbtg) 提取码: iq1u
+
+--来自百度网盘超级会员v4的分享
+
+** *Essential C++**
+
+链接: [https://http://pan.baidu.com/s/15s-WtC4Yfg5VgNRbhQN63w](https://pan.baidu.com/s/15s-WtC4Yfg5VgNRbhQN63w)
+
+提取码: hs1i
+
+*C++并发编程实战*
+
+链接: [https://http://pan.baidu.com/s/1NmlqeGgHeKhgFrRCkh1vEw](https://pan.baidu.com/s/1NmlqeGgHeKhgFrRCkh1vEw)
+
+提取码: q2lu
+
+*C++编程规范*
+
+链接: [https://http://pan.baidu.com/s/1MUMe3TLPS9k96pWO7PnPfw](https://pan.baidu.com/s/1MUMe3TLPS9k96pWO7PnPfw)
+
+提取码: 4eoj
+
+*Java*
+
+** *Java语言程序设计**
+
+链接: [https://http://pan.baidu.com/s/1H-PTVSfsGHZ3i3Qq2fAu6Q](https://pan.baidu.com/s/1H-PTVSfsGHZ3i3Qq2fAu6Q)
+
+提取码: 7wf3
+
+*深入理解Java虚拟机*
+
+链接: [https://http://pan.baidu.com/s/1pZ_eXP7PT_ZSLWqj9jQbZA](https://pan.baidu.com/s/1pZ_eXP7PT_ZSLWqj9jQbZA)
+
+提取码: rb63
+
+*Java核心技术(卷一)*
+
+链接: [https://pan.baidu.com/s/1LeNOW9qQA_yIjxfkjVzd1w](https://links.jianshu.com/go?to=https%3A%2F%2Fpan.baidu.com%2Fs%2F1LeNOW9qQA_yIjxfkjVzd1w)
+
+提取码: 7218
+
+** *Java核心技术(卷二)**
+
+链接: [https://pan.baidu.com/s/1yFJi4RUdJ7-Un_877I1x1w](https://links.jianshu.com/go?to=https%3A%2F%2Fpan.baidu.com%2Fs%2F1yFJi4RUdJ7-Un_877I1x1w)
+
+提取码: fj8b
+
+* *Java编程思想**
+
+链接: [https://http://pan.baidu.com/s/12ENEL5N4eqmYcnjv9hy_DQ](https://pan.baidu.com/s/12ENEL5N4eqmYcnjv9hy_DQ)
+
+提取码: mt56
+
+*Effective Java中文版*
+
+链接: [https://http://pan.baidu.com/s/1Ip4wPWSgeTSeEZni0K0h3A](https://pan.baidu.com/s/1Ip4wPWSgeTSeEZni0K0h3A)
+
+提取码: bumf
+
+*Maven实战*
+
+链接: [https://http://pan.baidu.com/s/1xXaXaHXK3oaVtnv0JHZbVw](https://pan.baidu.com/s/1xXaXaHXK3oaVtnv0JHZbVw)
+
+提取码: dpbf
+
+*操作系统*
+
+** *深入理解计算机系统**
+
+链接: [https://http://pan.baidu.com/s/1v9VfgGJZAF2q5cBK8F1Rvw](https://pan.baidu.com/s/1v9VfgGJZAF2q5cBK8F1Rvw)
+
+提取码: k8bq
+
+*操作系统概念*
+
+链接: [https://http://pan.baidu.com/s/19qPSoxL3TvXfII9W0yiq0Q](https://pan.baidu.com/s/19qPSoxL3TvXfII9W0yiq0Q)
+
+提取码: 7qre
+
+*编译原理*
+
+链接: [https://http://pan.baidu.com/s/1QL6T_YdgmO_1VcT1PAmSEw](https://pan.baidu.com/s/1QL6T_YdgmO_1VcT1PAmSEw)
+
+提取码: omim
+
+*计算机网络*
+
+** *TCP/IP 详解(卷一)**
+
+链接: [https://http://pan.baidu.com/s/1xJrYydfPsYkG_vGEN-By5A](https://pan.baidu.com/s/1xJrYydfPsYkG_vGEN-By5A)
+
+提取码: 5mvq
+
+*HTTP权威指南*
+
+链接: [https://http://pan.baidu.com/s/1d9kJOav5RWszsgMz_X7m4A](https://pan.baidu.com/s/1d9kJOav5RWszsgMz_X7m4A)
+
+提取码: t8ap
+
+*图解HTTP（彩色版）*
+
+链接: [https://http://pan.baidu.com/s/1YdBk3mkpe7K9sND1F-dawA](https://pan.baidu.com/s/1YdBk3mkpe7K9sND1F-dawA)
+
+提取码: 9ma8
+
+*Linux/Unix*
+
+** *UNIX网络编程卷1 API**
+
+链接: [https://http://pan.baidu.com/s/1gE_D1-sX7p9sIEn71c0rgg](https://pan.baidu.com/s/1gE_D1-sX7p9sIEn71c0rgg)
+
+提取码: krka
+
+*UNIX网络编程卷2：进程间通信*
+
+链接: [https://http://pan.baidu.com/s/1d7SwEMsvZQ76624UZ0ARUQ](https://pan.baidu.com/s/1d7SwEMsvZQ76624UZ0ARUQ)
+
+提取码: 64n2
+
+*UNIX环境高级编程*
+
+链接: [https://http://pan.baidu.com/s/1KKqd2tgxM5wCQb4A7sl2Ag](https://pan.baidu.com/s/1KKqd2tgxM5wCQb4A7sl2Ag)
+
+提取码: 27n2
+
+*Linux内核设计与实现*
+
+链接: [https://http://pan.baidu.com/s/1VqTUaBwdvdOFPJK5VvScjg](https://pan.baidu.com/s/1VqTUaBwdvdOFPJK5VvScjg)
+
+提取码: krch
+
+*数据库*
+
+** *MySQL技术内幕**
+
+链接: [https://http://pan.baidu.com/s/1bp4d6RYhzKOfs7mHZ4LuVA](https://pan.baidu.com/s/1bp4d6RYhzKOfs7mHZ4LuVA)
+
+提取码: r4gw
+
+** *MySQL必知必会**
+
+链接: [https://http://pan.baidu.com/s/1SOI9SPBzkt7QIMizLw-Y3A](https://pan.baidu.com/s/1SOI9SPBzkt7QIMizLw-Y3A)
+
+提取码: 9clo
+
+** *数据库系统概念**
+
+网盘链接: [https://http://pan.baidu.com/s/1aUH6Aw_5Jo_pKWRuduXPxQ](https://pan.baidu.com/s/1aUH6Aw_5Jo_pKWRuduXPxQ) 提取码: 0qgf
+
+** *高性能MySQL**
+
+网盘链接: [https://http://pan.baidu.com/s/1Q-5w9MoyzAzURnxsMgtcIg](https://pan.baidu.com/s/1Q-5w9MoyzAzURnxsMgtcIg) 提取码: fuwb
+
+** *Redis设计与实现**
+
+链接: [https://http://pan.baidu.com/s/1WSP9nuyEd8bxbaq-JeoFzQ](https://pan.baidu.com/s/1WSP9nuyEd8bxbaq-JeoFzQ)
+
+提取码: t1mv
+
+*Redis实战*
+
+链接: [https://http://pan.baidu.com/s/16HWlJ78a_fe-5YT-AtVYlA](https://pan.baidu.com/s/16HWlJ78a_fe-5YT-AtVYlA)
+
+提取码: aser
+
+*设计模式*
+
+** *设计模式：可复用面向对象软件的基础**
+
+链接: [https://http://pan.baidu.com/s/1rv2aOTrWRdxOSfnPvAdOgw](https://pan.baidu.com/s/1rv2aOTrWRdxOSfnPvAdOgw)
+
+提取码: vpdh
+
+*HeadFirst 设计模式*
+
+链接: [https://http://pan.baidu.com/s/17oZtYkp18ZlclrjcZNBquw](https://pan.baidu.com/s/17oZtYkp18ZlclrjcZNBquw)
+
+提取码: agbs
+
+*大话设计模式*
+
+链接: [https://http://pan.baidu.com/s/1WWFxBn-Wnx56Va2BrJ3owg](https://pan.baidu.com/s/1WWFxBn-Wnx56Va2BrJ3owg)
+
+提取码: 76a5
+
+图解设计模式
+
+链接: [https://http://pan.baidu.com/s/1LecPFv_pV3dy14Haip06zw](https://pan.baidu.com/s/1LecPFv_pV3dy14Haip06zw)
+
+提取码: d08c

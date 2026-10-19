@@ -1,0 +1,61 @@
+#+TITLE: 终端、Shell、tty 和控制台（console）有什么区别？
+#+LINK: https://www.zhihu.com/question/21711307/answer/2231006377
+#+AUTHOR: 大川
+#+CREATED: 2021-11-18
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+上古时期，都有实体
+
+理解完全不是难事
+
+这个IBM的广告，美女左手是terminal，右手是console
+
+[[https://picx.zhimg.com/50/v2-7aa6997d017d876543671e4113048a62_720w.jpg?source=2c26e567]]
+*底图来源：https://www.ibm.com/ibm/history/ibm100/images/icp/Z491903Y91074L07/us__en_us__ibm100__selectric__selectric_2__900x746.jpg*
+
+- terminal 相对的是console
+- terminal是一个设备，最早借用了teletypewriter的产品形态，简称tty
+- shell相对的是kernel
+
+实体terminal时代的逻辑流程图如下：
+
+[[https://picx.zhimg.com/50/v2-13935429b31024501c49bc5a85dfeb06_720w.jpg?source=2c26e567]]
+*原图出自：https://www.linusakesson.net/programming/tty/*
+
+到了PC时代，本机自带了键盘鼠标，于是混乱就开始了
+
+- 实体的terminal设备，已经消失了，没有打字机形态的tty，也不存在video tty
+- 但是，基因被传承了下来，还是有terminal，tty这样的名称存在，并且逻辑上一以贯之
+- shell作为kernel的中间层，也发明了出来，搞不清打开的是terminal还是shell
+
+来看一张图，其实会解决这个混乱
+
+[[https://pic1.zhimg.com/50/v2-63cdd117f1026c2bbf455920b29c4454_720w.jpg?source=2c26e567]]
+*底图来自unsplash*
+
+- 我们平时打开的iterm2之类的，实际上是terminal应用
+- 实体tty不存在了，但是虚拟出一个伪终端，pseudo tty，简称pty
+- 为什么要这样做呢？
+- master与外部terminal应用交互，slave与shell交互，shell与kernel交互
+
+现代tty架构
+
+[[https://pic1.zhimg.com/50/v2-6e7223f90e399bbcd06705f2a7cae884_720w.jpg?source=2c26e567]]
+*原图：https://www.linusakesson.net/programming/tty/*
+
+参考1，可以了解pty中的ptm，pts流程：
+
+[Terminal under the hood - TTY & PTY](https://yakout.io/blog/terminal-under-the-hood/) [Anatomy of a Terminal Emulator](https://www.poor.dev/blog/terminal-anatomy/) [Terminal under the hood - TTY & PTY](https://yakout.io/blog/terminal-under-the-hood/)
+
+参考2，用rust实现一个terminal emulator：
+
+[https://www.poor.dev/blog/terminal-anatomy/](https://www.poor.dev/blog/terminal-anatomy/)
+
+参考3，tty历史和架构的演变：
+
+[https://www.linusakesson.net/programming/tty/](https://www.linusakesson.net/programming/tty/)
+
+b站发现极好看的tty复刻
+
+[[https://picx.zhimg.com/50/v2-2e677301a307150b378663027d1615ff_720w.jpg?source=2c26e567]]

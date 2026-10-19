@@ -1,0 +1,10 @@
+#+TITLE: 《深入理解计算机系统》这本书需要什么水平能看懂？
+#+LINK: https://www.zhihu.com/question/20354069/answer/125363531
+#+AUTHOR: Tools boy
+#+CREATED: 2016-10-07
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+我看深入理解计算机系统时，找到了cousera上南京大学的计算机系统基础课程，发现基本就是CSAPP的内容，讲解的非常通俗易懂，看书不明白的地方，看视频就懂了！强烈推荐！！！！！！！
+
+[https://www.coursera.org/learn/jisuanji-xitong/](https://www.coursera.org/learn/jisuanji-xitong/)

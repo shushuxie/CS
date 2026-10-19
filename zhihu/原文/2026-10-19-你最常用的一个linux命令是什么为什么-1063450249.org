@@ -1,0 +1,185 @@
+#+TITLE: 你最常用的一个 linux 命令是什么？为什么？
+#+LINK: https://www.zhihu.com/question/20620445/answer/1063450249
+#+AUTHOR: 韦易笑
+#+CREATED: 2020-03-08
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+2020 年了，真的没必要再终端里一个字一个字敲命令了，有更酷炫的方式。分享下我在今年年最常用的一个命令，task，命令行任务管理。
+
+服务端命令太长记输入慢怎么办？用的少的命令记不住怎么办？你需要任务管理器，将你命令行各种常见的冗余的任务管理起来，然后敲 2-3 个字母就能启动它（点击播放下面动图）：
+
+[[https://pic1.zhimg.com/50/v2-5a88fbb5f79e628737181e5a5bf8f665_720w.gif?source=2c26e567]]
+
+基本日常各种长难命令，什么 git 操作啊，常用主机间 ssh 跳来跳去啊，项目的编译，测试和发布啊，别人每次还需要重新敲一遍，或者把历史调出来，四处修改一番，有时候还改错了。而你现在只需要敲 2-3 个字母就运行了，像溜冰一般的流畅。
+
+平时就连 ~task~ 四个字你都可以省略，绑定到 F5 上去，用法：
+
+#+begin_src bash
+cd ~/github
+git clone --depth 1 https://github.com/skywind3000/asynctasks.vim
+ln -s ~/github/asynctasks.vim/bin/asynctask ~/bin
+#+end_src
+
+然后记得把你的 ~~/bin~ 目录加入 ~$PATH~ ，最后在你的 ~.bashrc~ 中加一行：
+
+#+begin_src bash
+alias task='asynctask -f'
+#+end_src
+
+妥了，然后添加任务，编辑： ~~/.config/asynctask/tasks.ini~ 全局任务配置：
+
+#+begin_src ini
+[git-fetch-master]
+command=git fetch origin master
+cwd=<root>
+
+[git-checkout]
+command=git checkout $(?branch)
+cwd=<root>
+#+end_src
+
+类似这样，然后输入 task 命令，就能运行上面的任务了， ~cwd~ 字段是命令运行的目录， ~<root>~ 代表项目根目录（有 ~.git~ 和 ~.svn~ 那个目录），不写的话就是当前目录，如果命令包含 ~$(?xxx)~ 的内容，运行前就会让用户输入 xxx，然后替换。
+
+局部任务定义在各个项目文件夹下的 ~.tasks~ 中，作用所有子目录，完成针对项目的一些编译，测试，发布等日常任务，就是每天敲着你手累的命令，现在可以只用 2-3 个字母就重复执行了。
+
+我平时连 ~task~ 几个字都懒得敲，因为把它绑到 F5 上了，把下面代码放入 ~.bashrc~ ：
+
+#+begin_src bash
+bind '"\e[15~":"task\n"'
+#+end_src
+
+用 zsh 的话，把用下面配置：
+
+#+begin_src text
+bindkey -s '\e[15~' 'task\n'
+#+end_src
+
+然后每次按 F5 就运行 task 命令了，更少击键，记得使用前先安装 fzf，不然就只能：
+
+#+begin_src bash
+asynctask git-fetch-master
+#+end_src
+
+这样输入完整命令了，安装了 fzf 以后，就可以模糊匹配输入命令。
+
+基本可以把反复用到的 shell 命令分类保存，特别是一些又臭又长的命令，现在只需要轻轻的敲 2-3 个字母就成了。
+
+这里有一份命令配置例子： [skywind3000/asynctasks.vim](https://github.com/skywind3000/asynctasks.vim/wiki/Bash-Snippet-Manager)
+
+在 Vim 里也可以这么用（点击播放下面动图）：
+
+[[https://pica.zhimg.com/50/v2-3d961675fa23f10e97c10baa61b88794_720w.gif?source=2c26e567]]
+
+你当然也可以把常用任务绑定到 F1-F12 上，不用每次输入。
+
+--
+
+不要自作聪明的着急科普 fish shell 了，这是 fish 和 zsh 里没有的新东西。更不是历史搜索。这套任务系统要说像的话，你们没发现它更像 vscode 的任务系统么？我拓展了它的用途，让它变得更为通用和灵活。
+
+这本质上是对裸命令进行二次抽象，这个抽象会给你带来意想不到的便利，比如你想编译和执行某个文件，那么可以把他们的语义统一成 file-build 和 file-run：
+
+放到全局配置里
+
+#+begin_src ini
+[file-build]
+command:c,cpp=gcc -O2 -Wall "$(VIM_FILEPATH)" -o "$(VIM_PATHNOEXT)" -lstdc++ -lm -msse3
+command:go=go build -o "$(VIM_PATHNOEXT)" "$(VIM_FILEPATH)"
+command:make=make -f "$(VIM_FILEPATH)"
+cwd=$(VIM_FILEDIR)
+
+[file-run]
+command="$(VIM_FILEPATH)"
+command:c,cpp="$(VIM_PATHNOEXT)"
+command:go="$(VIM_PATHNOEXT)"
+command:python=python "$(VIM_FILENAME)"
+command:javascript=node "$(VIM_FILENAME)"
+command:sh=sh "$(VIM_FILENAME)"
+command:lua=lua "$(VIM_FILENAME)"
+command:perl=perl "$(VIM_FILENAME)"
+command:ruby=ruby "$(VIM_FILENAME)"
+cwd=$(VIM_FILEDIR)
+#+end_src
+
+不同的文件能够执行不同的命令进行编译。那么，我们语义就可以统一成：
+
+#+begin_src bash
+asynctask file-build xxx    # 编译文件
+asynctask file-run xxx      # 运行文件
+#+end_src
+
+你只需要记这样一个任务名即可，不需要管理细节，还可以把它配置在你喜欢的任何编辑器上，快捷键操作。上面配置里的 ~$(...)~ 的宏以 VIM 开头是为了兼容同名 vim 插件的配置，并不是需要 Vim 才能运行。
+
+*项目编译*
+
+配置任务时可以添加经常可以把下面配置添加到全局任务中：
+
+#+begin_src ini
+[project-build]
+command=make
+* 设置在当前项目的根目录处运行 make
+cwd=$(VIM_ROOT)
+
+[project-run]
+command=make run
+* <root> 是 $(VIM_ROOT) 的别名，写起来容易些
+cwd=<root>
+output=terminal
+#+end_src
+
+以往你命令行编译项目时，势必要回到项目根目录，再运行 make 什么的，设置好了 ~cwd~ 字段以后，你可以再某项目任意一级子目录里运行：
+
+#+begin_src bash
+asynctask project-build
+#+end_src
+
+它都会自动帮你向上搜寻项目根目录的标记（ ~.git~ , ~.svn~ , ~.project~ 可配置），并记录在宏 ~<root>~ 里，命令设置了 ~cwd=<root>~ 以后，就会自动跑到项目根路径处运行，不用你每次 cd ../../.. 一大堆。
+
+能够流畅无阻碍的执行：“编辑/编译/测试” 循环，是提高你编程效率最有效的方法，所以我们把上面两个任务绑定到 F7 和 F8：
+
+#+begin_src bash
+bind '"\e[18~":"asynctask project-build\n"'
+bind '"\e[19~":"asynctask project-run\n"'
+#+end_src
+
+那么你在某个项目任意一级子目录下面就能 F7 编译项目，F8 运行项目了，命令都不用敲。
+
+不同的项目，构建系统不同，有的用 cmake 有的用 gnu make，假设我系统里大部分项目都是 gnu make 的，那么把上面 gnu make 的任务配置成全局的就行，但是我的 A 项目中使用 msbuild 进行构建，难道要配置一个 ~project-build-msbuild~ 的任务么？
+
+*任务适配*
+
+并不需要，我只需要在项目 A 的根目录处放一个 ~.tasks~ 文件：
+
+#+begin_src ini
+[project-build]
+command=vcvars32 > nul && msbuild build/StreamNet.vcxproj /property:Configuration=Debug /nologo /verbosity:quiet
+cwd=<root>
+errorformat=%f(%l):%m
+
+[project-run]
+command=build/Debug/StreamNet.exe
+cwd=<root>
+output=terminal
+#+end_src
+
+因为本地任务比全局任务有更高优先级，那么只要我在 A 项目下面任意一层子目录内运行：
+
+#+begin_src bash
+asynctask project-build
+asynctask project-run
+#+end_src
+
+就能用上级目录 ~.tasks~ 文件中配置的具体命令，调用 msbuild 编译当前项目了：
+
+[[https://picx.zhimg.com/50/v2-45854abe8917e0a0ee1d10d35a59f879_720w.gif?source=2c26e567]]
+*使用 cmake 的项目也一样，局部重新定义 project-build/run 等任务的内容*
+
+比如你在 project A 下面 src 目录里面很深的一级子目录，你不需要回到根目录，因为命令已经写清楚了自己的运行位置，运行时会临时回到项目根目录处运行，编译完你也不用一级级返回。
+
+具体命令经过抽象后，不需要记住每个项目复杂的构建命令细节，只需记住统一的任务名称即可。在不同的项目中可以保持同样的操作习惯，不需要回想这个项目到底是用什么编译的，还还可以把它配置到 F7，F8 上面，热键任然不用改，不论你处在什么类型的项目下面，你的习惯不用改，你的工作流不会中断。
+
+或者配置到你熟悉的编辑器上，就像 NotePad++ 这样原始的编辑器也有 NppExec  的插件让你配置外部工具，那么当你配置到编辑器上以后，你就能和命令行一起使用完全相同的语义，对重复度高的工作进行统一的抽象了。
+
+这就是全局任务和局部任务搭配的黑魔法。其他还有很多技巧，为同一个任务配置不同的 profile ，指定是 debug 模式，还是 release 模式，还是 gdb 模式，同样不用更改任务的名字，就能区别不同的 profile，具体见项目文档吧。
+
+--

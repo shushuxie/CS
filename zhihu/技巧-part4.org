@@ -1,0 +1,1027 @@
+
+
+* 编程新手如何提高编程能力？  :技巧:编程:学习方法:练习:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/27574436/answer/2933037500
+  :作者:  朱卫军
+  :原文:  [[file:原文/2026-10-19-编程新手如何提高编程能力-2933037500.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-编程新手如何提高编程能力-2933037500.org][打开本地归档]]
+  - 一句话概括：主张提高编程能力靠「疯狂的练习」，列出写代码、读源码、写博客、逛社区、打比赛等大量练法，用髓磷脂与一场交通数据比赛的经历说明熟能生巧，并推荐 Github、Kaggle 等练习资源。
+  【方法/论点要点】
+  - 练法清单：~去每天花两小时写代码，去研读各种开源项目源代码。去写技术博客，去蹭技术讲座、会议、公开课程。去逛Github，去StackOverflow上提问，去论坛上找技术大佬聊天。去参加软考，去参加ACM等正规编程比赛。去尝试自己写一个个人网站，或者开发一个游戏APP。~
+  - 核心态度：让意愿充斥整个身体并相信能做好；~不积跬步无以至千里，新手想要成为高手，疯狂的练习是第一步~。~很多事都是孰能生巧，没有足够多练习不要提天赋。~
+  - 练出髓磷脂：大量练习会产生髓磷脂（神经元外侧的脂质），让脑回路更灵活；大脑分反射、思考、记忆三个功能，反复练习让思考演变成习惯，最后仅靠反射完成，达到「生巧」。
+  - 练习要有突破：~练习不是一味的重复，或者去完全复刻别人的代码，每一次练习都应该增加难度，有突破自己认知的成长~；经反复输入、评估、输出、纠正就会有惊人变化。
+  - 亲历案例：工作第二年参加交通数据科学比赛（用历史数据预测未来车流），高强度使用 Google、翻遍 Kaggle/StackOverflow/Github，看大量车流论文，前后写了上万行代码（含数据探索、新老方案），赛后~发现自己在编程和算法上比以前通透了不少~——这是作者编程能力第一次突飞猛进。
+  - 提醒：想要成为大佬还得勤于思考，~不然久而久之会变成没有灵魂的代码机器~。
+  - 练习资源（以 Python 为例）：Github——全球最大代码托管站，Python 资源最多，有 pandas、django、tensorflow、pytorch、requests 等源码，以及 awesome python、Python-100-Days、ML-For-Beginners 等十几万 star 的学习资源，用 Python 关键词能搜出 300 多万仓库；Kaggle——世界最大的数据科学比赛网站和社区，涉数据分析、机器学习、深度学习、数理统计、可视化，还有免费数据集、模型、教程文档。
+  【原文摘录】
+  #+begin_quote
+  只要你愿意提高代码能力，有无数种方法能帮到你，但你需要让你的意愿充斥整个身体，并相信能做好。
+  #+end_quote
+  #+begin_quote
+  编程应该是最能体验prctice make perfect的技能之一，在前期积累的阶段，往往要大量的去刷题、比赛、模仿，才能显得游刃有余。
+  #+end_quote
+  #+begin_quote
+  大脑可以通过大量的反复练习让思考演变成习惯，最后跳过思考只需要反射的指令操控就能完成，从而达到"生巧"的效果。
+  #+end_quote
+  #+begin_quote
+  但真正想要成为大佬，还得要勤于思考，不然久而久之会变成没有灵魂的代码机器。
+  #+end_quote
+  【我的想法】
+
+* 编程中，有哪些好的习惯从一开始就值得坚持？  :技巧:编程:模块化:抽象:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/32255673/answer/55279073
+  :作者:  Yul8ulY
+  :原文:  [[file:原文/2026-10-19-编程中有哪些好的习惯从一开始就值得坚持-55279073.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-编程中有哪些好的习惯从一开始就值得坚持-55279073.org][打开本地归档]]
+  - 一句话概括：主张从小就坚持「重视模块化、重视抽象但不滥用」，用代码行数瓶颈的自述与对比实验说明：合理抽象能把功能变成黑盒、极大减轻脑力负担，从而让人不遇瓶颈。
+  【方法/论点要点】
+  - 唯一要点：重视模块化，重视抽象但不滥用。作者从模仿大牛写模块化程序、看 SICP 知道抽象的好处中受益很大。
+  - 反常现象：那篇讲程序员代码行数瓶颈的博客说 2k、20k、200k 行会遇瓶颈，但作者第一次写 8k+ 大程序没感觉，如今接手近 900k 行项目、自己写的部分近 10k，仍没遇到瓶颈。
+  - 对比实验：作者很不认真地写小程序时也常写乱——一旦超过 200 行就觉得难受，做一点小修改都要花很久找该改哪里；~这种吃力感是我在那些精心思考的大项目里从未感受过的~。
+  - 结论：~这说明了我并没有过人的天赋能在混乱中轻易找出清晰的脉络，那就是说，之前的如鱼得水，是因为好的习惯。~
+  - 原理：模块划分合理、抽象合理的程序里，一个功能就是一个黑盒，只需知道它对什么输入给什么输出，无需了解内部反应，从而把精力投入真正需要考虑的地方；混乱程序则要理清每句话的关系，脑力消耗巨大。
+  - 呼吁坚持：初期会觉得花时间思考模块划分、抽象层级是浪费时间，但久了会发现它在无声无息间帮你消除许多瓶颈，还会有思维能力增强的额外好处。
+  【原文摘录】
+  #+begin_quote
+  在模块划分合理、抽象合理的程序里，我可以简单的把一个个功能抽象为一个简单的黑盒，我不需要知道他们内部发生了什么复杂的反应，我只需要知道他们对什么样的输入会做出什么样的输出。
+  #+end_quote
+  #+begin_quote
+  这种抽象极大的减轻了大脑的负担，让我可以把精力更多的投入到真正需要考虑的地方。而那些混乱的程序里，我需要理清每一句话之间的关系，这无疑会极大的消耗脑力。
+  #+end_quote
+  #+begin_quote
+  这个习惯，真的让人十分受益，请一定坚持。刚开始的时候，你或许觉得花很长时间去思考程序的模块划分、抽象层级是十分浪费时间的无用功；但久了以后，你就会感受到这种习惯带来的好处。
+  #+end_quote
+  #+begin_quote
+  当你习惯用模块化组织你的思维时，思维能力也会有一定的增强。
+  #+end_quote
+  【我的想法】
+
+* 为什么CSGO我买了一把刀后，总有人加我好友？  :技巧:CSGO:防骗:网络安全:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/437524396/answer/1658934099
+  :作者:  梨璃荔
+  :原文:  [[file:原文/2026-10-19-为什么CSGO我买了一把刀后总有人加我好友-1658934099.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-为什么CSGO我买了一把刀后总有人加我好友-1658934099.org][打开本地归档]]
+  - 一句话概括：提醒买了皮肤（刀）后加好友的陌生人几乎都是奔着盗库存来的骗子，说明其套路（广告、劫持交易链接盗库存），并给出「别加、拒绝拉黑、不点链接」的应对建议。
+  【方法/论点要点】
+  - 结论：*千万别加！*——加了一个就会有更多人发好友申请，还会发广告（如「好兄弟，我已经领了一把蝴蝶刀，你也来试试」）。
+  - 套路：都是假的，目的是 *直接劫持你的交易链接，然后盗你库存*。
+  - 亲身经历：当年被盗，作者和五个朋友轮流改密码，另一个兄弟联系客服，几个人和对方对线五个多小时，才让客服把账号冻结（至今仍在冻结）。
+  - 应对办法（2021.01.09 更新）：简单粗暴就 *直接拒绝并拉黑*；想提升交际水平就同意，然后和他聊天练英语（*在不点链接的前提下*）——毕竟英语很重要，不然打国际服都不知道怎么报点。
+  - 补充后续：作者一度追梦开箱成功（280+170 元，开出 M9 伽马多普勒 P2），也自述被骗、吐槽 CSGO 外挂与嘲讽环境变味。
+  【原文摘录】
+  #+begin_quote
+  千万别加！我敢肯定的告诉你加了一个就会有更多的人给你发好友申请，另外还会给你发广告。
+  #+end_quote
+  #+begin_quote
+  真的都是假的（亲身经历）直接劫持你的交易链接然后盗你库存。
+  #+end_quote
+  #+begin_quote
+  为了你的库存和游戏小心一点。害人之心不可有，防人之心不可无。
+  #+end_quote
+  #+begin_quote
+  简单粗暴就直接拒绝并拉黑。想要提升交际水平就同意，然后和他聊天，练一练英语(在不点链接的前提下)。
+  #+end_quote
+  【我的想法】
+
+* 可以用m1芯片的mac来学习x86的汇编么?  :技巧:macOS:M1:汇编:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/481553539/answer/2551373272
+  :作者:  飞向别人的床
+  :原文:  [[file:原文/2026-10-19-可以用m1芯片的mac来学习x86的汇编么-2551373272.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-可以用m1芯片的mac来学习x86的汇编么-2551373272.org][打开本地归档]]
+  - 一句话概括：介绍在 M1 Mac 上借 Homebrew 安装 x86-64 交叉工具链（x86_64-elf-gcc/gdb/binutils）来编译、查看 x86-64 汇编的完整步骤，并给出借用 Xcode 头文件编译的办法。
+  【方法/论点要点】
+  - 背景：作者啃 CSAPP 第三章要用 x86-64 指令集，又嫌国外云服务器连接太卡，于是找在 M1 上编译 x86-64 的办法（网上多在讲反过来的 x86 上编译 arm）。
+  - 第一步·安装交叉工具链：在 Homebrew 里搜到 x86_64-elf-gcc/gdb/binutils，执行 ~brew install x86_64-elf-gcc x86_64-elf-gdb~；装 gcc 时会自动装 binutils，~/opt/homebrew/bin~ 下会得到一整套 x86_64-elf-* 工具（as、gcc、ld、objdump、gdb、readelf 等）。
+  - 第二步·设置别名：因命令过长，在 ~.zshrc~ 里加 ~alias xgcc="/opt/homebrew/bin/x86_64-elf-gcc"~、~alias xobjdump=".../x86_64-elf-objdump"~、~alias xgdb=".../x86_64-elf-gdb"~。
+  - 编译技巧：x86_64-elf-gcc 头文件不全，可借用 Xcode Command Line Tools 的头文件，例如 ~xgcc -I/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include -Og -S hello.c~（include 路径按自己系统版本号替换）即可编译出汇编。
+  - 局限：这样只能编译成汇编，想编译成二进制文件仍会有问题。作者结尾吐槽「Vultr，退钱！」。
+  【原文摘录】
+  #+begin_quote
+  尝试在brew上搜了一下x86……还真有！接下来就easy了！
+  #+end_quote
+  #+begin_quote
+  接下来就可以愉快的用 x86_64-elf-gcc 编译你最爱的C代码了！（当然，对于我来说，主要是编译成汇编以供学习之用）
+  #+end_quote
+  #+begin_quote
+  由于 x86_64-elf-gcc header files不全，因此为学习之便，我们可以借用 Xcode Command Line Tools的header files。
+  #+end_quote
+  #+begin_quote
+  当然，这样只能编译成汇编，编译成二进制文件还是会有问题。
+  #+end_quote
+  【我的想法】
+
+* 如何开始在 github 上学习东西？  :技巧:GitHub:Git:教程:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/30119197/answer/1877067450
+  :作者:  程序员吴师兄
+  :原文:  [[file:原文/2026-10-19-如何开始在github上学习东西-1877067450.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-如何开始在github上学习东西-1877067450.org][打开本地归档]]
+  - 一句话概括：一篇两万字图文 GitHub 教程，从注册账号、修改个人信息、创建仓库、术语解释，到 Git 安装、十个常用命令、SSH 绑定与向 GitHub 提交代码，完整走一遍入门流程。
+  【方法/论点要点】
+  - 初识 GitHub：~GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。~ 2008 年 4 月 10 日上线，除 Git 代码仓库托管和 Web 管理界面外，还提供订阅、讨论组、文本渲染、在线文件编辑器、协作图谱、Gist 等功能。为项目贡献代码的流程很简单：先点 Fork，把代码检出并把修改加入自己分出的库，最后通过内建的 pull request 机制申请合并。
+  - 业界大神示例：Linus Torvalds（Linux 之父，github.com/torvalds）、John Resig（jQuery 创始人，github.com/jeresig）、Jake Wharton（Android 之神，GitHub 全球排名第二，github.com/JakeWharton）。
+  - 著名开源项目：Linux（torvalds/linux）、Swift（apple/swift）、Ruby（ruby/ruby）；在 GitHub 开源的公司：Google、Microsoft、Alibaba。
+  - 注册账号：进入 https://www.github.com → 点击 Sign up → 填 Username、Email Address、Password → Create an account → 选公开免费仓库（public repositories）→ 最后一步可 skip this step → 出现 Read the guide / Start a project。Username 要起有标识性的，若搭博客默认地址是 ~username.github.io~。
+  - 主页与个人信息：点 View profile and more → Your profile；点 Edit profile 可填 Name、Bio、URL、Company、Location、上传头像，完成后 Update profile。Personal settings 里有 Account、Emails，以及很重要的 SSH and GPG keys（可通过它连本地 IDE，保证提交与检出的安全性）。
+  - 创建仓库：Repositories → 点绿色 New → 填 Repository name、Description（可选）、选 Public、可勾选 Initialize this repository with a README → 点 Create repository。
+  - 术语解释：Repository（仓库，项目存放处）、Issues（问题，别人可提 bug/改进）、Star（点赞）、Fork（复制一个完全相同的项目到自己账号、独立于原项目）、Pull Request（在 Fork 基础上向原作者提交合并请求）、Merge（合并 Pull 请求）、Watch（观察项目更新并收到通知）、Gist（分享代码片段）。
+  - Git 安装（Windows 为例）：Git 官网 → Downloads → 选操作系统 → 下载 → 双击安装 → 一路 Next；关键一步选 ~Use Git from the Windows Command Prompt~（标注 2，兼顾 Git Bash 与 Windows 命令行；标注 3 会用 Unix 工具覆盖 Windows 工具，强烈不建议）；其余（HTTPS 传输后台、行结束标记、终端模拟器、补充功能等）默认即可 → 安装完成选 Launch Git Bash → 输入 ~git~ 验证就绪。
+  - Git 常用操作的前提：进行任何 git 操作前，都要先切换到 Git 仓库的最顶层目录，再在此目录中打开 Git Bash（Linux 直接 cd 到仓库目录）。
+  - 十个常用命令：
+    1. ~git status~——查看仓库状态（未初始化时会提示 demo 不是 Git 仓库）。
+    2. ~git init~——初始化 Git 仓库（之后默认进入 master 主分支，并用 Untracked files 提示未被追踪的文件）。
+    3. ~git add hit.txt~——把文件添加到「临时缓冲区」，并未提交，可防止误提交。
+    4. ~git commit -m "text commit"~——提交到仓库，~-m~ 后双引号内是提交信息；提交完 ~git status~ 显示 nothing to commit, working tree clean。
+    5. ~git log~——打印提交日志（含 Author、Date、提交信息）。
+    6. ~git branch~ / ~git branch a~——查看分支 / 创建名为 a 的分支（* 号表示当前所在分支）。
+    7. ~git checkout a~——切换到 a 分支；~git checkout -b b~ 可在创建分支的同时直接切换到新分支。
+    8. ~git merge a~——切到 master 后把 a 分支合并到 master（有冲突需先解决冲突）。
+    9. ~git branch -d a~——删除 a 分支；删不掉时可用 ~git branch -D a~ 强制删除。
+    10. ~git tag v1.0~——为当前分支加标签；~git tag~ 查看标签；~git checkout v1.0~ 切换到该标签下的代码状态。
+  - 建议：几乎每个操作后都执行 ~git status~ 查看仓库状态，实时了解仓库情况。
+  - SSH 绑定 Git 与 GitHub：
+    1. 生成 SSH key：先确认装好 SSH（Linux/Mac 默认有；Windows 装了 Git Bash 通常自带），输入 ~ssh-keygen -t rsa~ 指定 RSA 算法生成密钥，连敲三次回车（不需密码），生成私钥 ~id_rsa~ 和公钥 ~id_rsa.pub~，默认在 Linux/Mac 的 ~/.ssh、Windows 的 C:\Documents and Settings\username\.ssh（Win10 为 C:\Users\think\.ssh）。
+    2. 添加 SSH key：GitHub 主页右上角倒三角 → Settings → SSH and GPG Keys → New SSH key → 把公钥 id_rsa.pub 的内容粘贴到 Key 处（Title 可不填）→ Add SSH key。
+    3. 验证：输入 ~ssh -T git@github.com~，出现相应提示即为绑定成功。
+  - 向 GitHub 提交代码：先了解两个命令——~git push origin master~（把本地更新推到远程）和 ~git pull origin master~（把远程更新拉到本地）；一般 push 之前先 pull，不容易冲突。
+    - 情况一：本地没有 Git 仓库——直接把远程仓库 clone 到本地：~git clone https://github.com/guobinhit/mybatis-tutorial.git~；clone 出来的本地仓库本身就是 Git 仓库、不用再 init，且自动关联远程仓库，改完 commit 后 ~git push origin master~（首次提交需输入账号密码验证）。
+    - 情况二：本地已有 Git 仓库且多次 commit——先 ~git init~，再 ~git remote add origin https://github.com/guobinhit/springmvc-tutorial.git~ 关联远程仓库（origin 为远程仓库名，习惯如此命名，关联多个远程仓库时再取别名），接着 ~git pull origin master~ 同步远程到本地，然后 ~git add~ / ~git commit~，最后 ~git push origin master~。
+  【原文摘录】
+  #+begin_quote
+  GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。
+  #+end_quote
+  #+begin_quote
+  GitHub 可以托管各种 Git 库，并提供一个 web 界面，但与其它像 SourceForge 或 Google Code 这样的服务不同，GitHub 的独特卖点在于从另外一个项目进行分支的简易性。为一个项目贡献代码非常简单：首先点击项目站点的Fork的按钮，然后将代码检出并将修改加入到刚才分出的代码库中，最后通过内建的pull request机制向项目负责人申请代码合并。
+  #+end_quote
+  #+begin_quote
+  在这里，需要声明一点，那就是：git add命令并没有把文件提交到 Git 仓库，而是把文件添加到了「临时缓冲区」，这个命令有效防止了我们错误提交的可能性。
+  #+end_quote
+  #+begin_quote
+  通过以上的操作，我们会发现一个现象，那就是：在每个git操作之后，我们基本都会输入git status命令，查看仓库状态。这也从侧面说明了git status命令使用的频率之高。
+  #+end_quote
+  #+begin_quote
+  pull request：如果我们fork了别人的项目（或者说代码），并对其进行了修改，想要把我们的代码合并到原始项目（或者说原始代码）中，我们就需要提交一个pull request，让原作者把我们的代码拉到 ta 的项目中，至少对于 ta 来说，我们都是属于远程端的。
+  #+end_quote
+  #+begin_quote
+  最后，再强调一遍：在我们向远程仓库提交代码的时候，一定要先进行pull操作，再进行push操作，防止本地仓库与远程仓库不同步导致冲突的问题。
+  #+end_quote
+  【我的想法】
+  （注：原文含版权声明——本文为 CSDN 博主「CG国斌」的原创文章，遵循 CC 4.0 BY-SA 版权协议；原文链接 https://www.cxyxiaowu.com/15953.html 。）
+
+* 为什么说指针是 C 语言的精髓？  :技巧:C语言:指针:编程:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/20125963/answer/2729494464
+  :作者:  码农出击
+  :原文:  [[file:原文/2026-10-19-为什么说指针是C语言的精髓-2729494464.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-为什么说指针是C语言的精髓-2729494464.org][打开本地归档]]
+  - 一句话概括：回答先纠正「指针是『指向』」这一误读，用六点例子讲清指针是保存地址的变量及其声明、赋值、运算、传参、指针的指针与空指针，后半段说明 C 语言为何长盛不衰。
+  【方法/论点要点】
+  - 开篇纠错：~不理解指针，是因为有人教错了你。~ 有人告诉你指针是「指向」某某某的，那就是误导、给你挖了个坑，初学者小心不要误读「指向」二字。
+  - 第一，指针通常用于保存一个地址，这个地址的数据类型在定义指针变量时确定。
+    #+begin_src c
+    int a;   //定义一个变量a，用于保存一个int类型。
+    int * b; //定义一个指针变量b，用于保存一个地址，这个地址所保存的数据应该是int类型。
+    #+end_src
+  - 第二，变量可以赋值，指针变量也一样；但一般不给指针直接赋值一个数值，而是把其他变量的地址、或其他指针的值赋给它。
+    #+begin_src c
+    b=&a;    //把变量a的地址赋值给b。“&”操作是取变量的地址。
+    int * c; //我们又定义一个指针c
+    c=b;     //c 的值和 b 一样，也是个 a 的地址。
+    #+end_src
+  - 第三，指针变量保存的值（地址）是可以变的。数组初始化例子：
+    #+begin_src c
+    int d[100];
+    int * e;
+    e=&d[0];    //e保存了数组d的第一个数据的地址
+    for (int i=0; i<100; i++){
+        *e = 0;     //把该地址中的数据赋值0
+        e++;        //地址累加一次，也就是数组中下一个数据的地址
+    }
+    #+end_src
+    指针和其他变量一样可以运算（一般是加减），也可以重新赋值。
+  - 第四，指针有啥用。先看不用指针的函数：
+    #+begin_src c
+    int add（int x){
+        return (x+1);  //把输入的值加1并返回结果。
+    }
+    #+end_src
+    调用 ~a=add(a);~ 现在 a 等于 2。改用指针：
+    #+begin_src c
+    void add(int *y){   //给入的是一个int指针，是一个地址。
+        *y = *y + 1;    //* 是指引用这个地址所保存的变量
+    }
+    #+end_src
+    调用 ~add(&a);~ 把 a 的地址传进函数，a 的值加 1 再放回 a，现在 a 等于 2。若要对一个数据结构里的数据进行处理，就应传入这个结构的地址，在函数中依靠指针引用该地址的数据结构进行运算。
+  - 第五，可以再用一个指针保存另一个指针变量的地址，即「指针的指针」；多用于函数指针或数据结构中有指针的情况，初学者搞不清就不必勉强。
+  - 第六，空指针。指针不赋值（不给定地址）就拿来用会出错，这就是空指针；一般把指针赋值为 Null 表明它是空的、不能用，所以程序中一定要经常判别指针不是 Null 才能用。
+  - 最后建议：初学 C 语言最好把复合语句拆开来看，如 ~int *a=&b;~ 拆成 ~int * a; a=&b;~ 就好理解了。
+  - 为什么 C 语言长盛不衰：从底层往上看，在冯诺依曼架构的机器上，以内存地址和寄存器为操作单位的单条指令组成程序是非常自然的事情；学过汇编就会发现 C 语言只是对汇编做了一些包装（就像汇编对机器语言做简单包装）。你觉得不自然，是因为从数学、从顶层往下看，看到的是像 haskell、lisp 这样直观的语言；从底层往上看，C 语言也一样的直观。
+  - C 的设计原则：第一是减法原则——~Perfection is attained, not when there is nothing left to add, but when there is nothing left to take away.~ 第二是符合实际需求——C 的各种假定立刻被其设计者在实现 Unix 的实际工作中检验，而不是建立在盲目的假设上。有了这两条，其它语言都不再试图替代它。
+  【原文摘录】
+  #+begin_quote
+  不理解指针，是因为有人教错了你。有人告诉你，指针是“指向”某某某的，那就是误导你，给你挖了个坑。初学者小心不要误读这“指向”二字。
+  #+end_quote
+  #+begin_quote
+  第一，“指针”通常用于保存一个地址，这个地址的数据类型在定义指针变量时确定。
+  #+end_quote
+  #+begin_quote
+  指针变量保存的值，也就是地址是可以变的。指针和其他变量一样，可以运算（一般是加减），也可以重新赋值。
+  #+end_quote
+  #+begin_quote
+  一个变量保存另一个指针的地址，那它就是通常所说是“指针的指针”了。通常，指针的指针多用做（或指的是）函数指针或数据结构中有指针的情况。
+  #+end_quote
+  #+begin_quote
+  一般把指针赋值为Null，就是表明这个指针是空的，不能用。所以程序中一定要经常判别指针不是Null才能用。
+  #+end_quote
+  #+begin_quote
+  C 树立了正确的设计原则。第一是减法原则：Perfection is attained, not when there is nothing left to add, but when there is nothing left to take away. 第二是符合实际需求。
+  #+end_quote
+  【我的想法】
+
+* 你最爱的一个 Vim 命令是什么？  :技巧:Vim:快捷键:效率:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/19691653/answer/2359068304
+  :作者:  鱼丽之宴
+  :原文:  [[file:原文/2026-10-19-你最爱的一个Vim命令是什么-2359068304.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-你最爱的一个Vim命令是什么-2359068304.org][打开本地归档]]
+  - 一句话概括：作者推荐 Vim 的 ~2g;~ 命令——跳到「上上次」编辑的位置（区别于 ~gi~ 跳到「上次」），并把 ~g<leader>~ 映射为 ~2g;a~，两个键就能跳回继续写。
+  【方法/论点要点】
+  - 命令：~g;~（准确说是 ~2g;~），作用是跳转到「上上次」编辑的地方；与 ~gi~（跳转到上次编辑的地方）不同。
+  - 使用场景：代码写到一半才发现某个变量或函数没声明。一般做法是先跳到前面声明好，再靠「数字+j/k」或「数字+gg/G」跳行、再用 ~f~ 跳到准确位置，效率低于鼠标；而用 ~g;~，声明完后只需 ~2g;~ 三个键就跳回来，还不用考虑在第几行、相隔多少行、在哪个字母后面。
+  - 映射优化：~2g;~ 只是跳回位置，还需输入 ~a~ 才能继续编程，共四键；于是把 ~g<leader>~ 映射为 ~2g;a~，~至此，我只需要两个键就能跳转回来~。
+  - 原理与配对：~g;~ 依据某个寄存器中的记录跳转，输入 ~:changes~ 可查看该寄存器内容；与之对应的是 ~g,~ 命令，二者配合能实现绝大部分精准跳转。
+  - 缺点：声明变量或函数时要一次性输入完毕，中间不能返回 normal 模式，Ctrl+o 也不行；若必须返回，就多输入几次 ~g;~（或「数字+g;」）。
+  - IDEA 的 Vim 插件没有这个命令，替代法：声明完变量或函数后不要按 ESC 或 Ctrl+[，而是按 Ctrl+o 再输入 ~gi~；缺点是同样要一次性输完，但用 Ctrl+o 可以（IDEA 判定 Ctrl+o 仍是 input 模式，而 Vim 判定为 normal 模式）。
+  - vscode 的 Vim 插件在这方面和 Vim 一样，只是好像还不支持 ~:changes~ 命令。
+  【原文摘录】
+  #+begin_quote
+  准确来说这个命令应该是 2g;，作用是跳转到上上次编辑的地方，这和 gi 命令（跳转到上次编辑的地方）不一样。
+  #+end_quote
+  #+begin_quote
+  而使用 g; 命令就不一样了，我在前面补充好函数的声明之后，想要跳转回来继续写，只需要 2g; 这三个键就跳转回来了！而且还不需要考虑诸如这个在多少行？相隔我当前位置多少行？在哪个字母后面？之类的问题。
+  #+end_quote
+  #+begin_quote
+  于是我将 g<leader> 映射为了 2g;a 。至此，我只需要两个键就能跳转回来，over！
+  #+end_quote
+  #+begin_quote
+  g; 命令是根据某个寄存器（我没有仔细了解过）中的记录来跳转的，输入 :changes 可以查看该寄存器中的内容。与 g; 命令相对应的是 g, 命令，通过这两个命令可以实现绝大部分我所需要的精准跳转。
+  #+end_quote
+  #+begin_quote
+  IDEA的vim插件貌似并没有这个命令，但是有代替方法：声明完变量或者函数后不要输入 ESC 或者 Ctrl+[ ，而是输入 Ctrl+o ，然后再输入 gi 命令即可。
+  #+end_quote
+  【我的想法】
+
+* 怎么说离职原因新的公司比较能接受？  :技巧:职场:面试:离职:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/264639341/answer/1594789860
+  :作者:  丁丁猫
+  :原文:  [[file:原文/2026-10-19-怎么说离职原因新的公司比较能接受-1594789860.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-怎么说离职原因新的公司比较能接受-1594789860.org][打开本地归档]]
+  - 一句话概括：作者给出八组「实际原因→体面说法」的格式化离职应对话术，并列出四条面试中不能踩的雷区。
+  【方法/论点要点】
+  - 八组格式化应对方式（实际原因 → 离职原因）：
+    1. 原单位钱太少 → 我认为我自己已经具备了一定的积累，希望可以迈向一个新的台阶。
+    2. 跟同事处不来 → 我很重视平台的发展，我认为一个人才只有放在合适的平台才能够最大程度的发挥出自己的才干。
+    3. 有个傻X领导 → 虽然我已经有相当的经验和技能，但仍然希望能够拓宽自己的知识面，进行更深入的学习和实践。
+    4. 原单位扯皮甩锅大战 → 我认为一个良好的工作氛围能够提高工作效率，明确的分工和相对完善的制度是提高生产力的基本保障。
+    5. 提拔无望 → 我认为人不应该满足于现状，而是应该积极进取，如果不能够适时的挑战自己，逼自己一把，怎么能够最大程度的挖掘自己的潜力呢？
+    6. 傻X管理制度太多 → 贵公司所推崇的人性化管理非常符合我对工作环境的预期，我也相信在这样的环境中，我能够发挥出更大的主观能动性。
+    7. 太忙了 → 相比于低效重复的工作进度，我更认同高效高质的工作模式。
+    8. 太闲了 → 我是一个不满足于现状的人，我认为年轻人不应该满足于安乐的环境，应该随时具有努力和奋斗的觉悟。
+  - 不能踩的四条雷：
+    1. 说上一家领导和公司的坏话——容易给人留下不能融入环境或缺乏团队意识的印象。
+    2. 抱怨工资低——工资低虽可能是客观原因，但与自身能力和经验也有很大关系，因工资低而离职只会让用人单位怀疑你的专业性和稳定性。
+    3. 「我男朋友/女朋友在这边工作」——感情用事是职场大忌。
+    4. 「我爸妈不喜欢我原来的那份工作」——没有主见也是职场大忌。
+  【原文摘录】
+  #+begin_quote
+    1.实际原因：原单位钱太少。离职原因：我认为我自己已经具备了一定的积累，希望可以迈向一个新的台阶。
+  #+end_quote
+  #+begin_quote
+    4.实际原因：原单位扯皮甩锅大战。离职原因：我认为一个良好的工作氛围能够提高工作效率，明确的分工和相对完善的制度是提高生产力的基本保障。
+  #+end_quote
+  #+begin_quote
+    6.实际原因：傻X管理制度太多。离职原因：贵公司所推崇的人性化管理非常符合我对工作环境的预期，我也相信在这样的环境中，我能够发挥出更大的主观能动性。
+  #+end_quote
+  #+begin_quote
+    1.说上一家领导和公司的坏话，容易给人留下一个不能融入环境或者缺乏团队意识的印象；
+  #+end_quote
+  #+begin_quote
+    2.抱怨工资低，虽然可能工资低是客观原因，但是这个与应聘者本身的能力和经验还是有很大关系，因为工资低而离职，只能让用人单位怀疑你的专业性和稳定性；
+  #+end_quote
+  #+begin_quote
+    3.我男朋友/女朋友在这边工作，感情用事是职场大忌；
+  #+end_quote
+  【我的想法】
+
+* 你最常用的一个 linux 命令是什么？为什么？  :技巧:Linux:命令行:效率:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/20620445/answer/1063450249
+  :作者:  韦易笑
+  :原文:  [[file:原文/2026-10-19-你最常用的一个linux命令是什么为什么-1063450249.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-你最常用的一个linux命令是什么为什么-1063450249.org][打开本地归档]]
+  - 一句话概括：作者分享自己最常用的命令 ~task~（基于 asynctasks.vim 的命令行任务管理），把又长又难记的命令抽象成 2-3 个字母的任务名，可绑定到 F5/F7/F8 等热键，并支持全局任务与项目局部任务的分层适配。
+  【方法/论点要点】
+  - 动机：服务端命令太长、输入慢，用得少的记不住；用任务管理器把各种常见的冗余命令管理起来，敲 2-3 个字母就能启动。
+  - 安装与部署：
+    #+begin_src bash
+    cd ~/github
+    git clone --depth 1 https://github.com/skywind3000/asynctasks.vim
+    ln -s ~/github/asynctasks.vim/bin/asynctask ~/bin
+    #+end_src
+    把 ~/bin~ 目录加入 ~$PATH~，再在 ~.bashrc~ 里加一行：~alias task='asynctask -f'~
+  - 定义全局任务：编辑 ~/.config/asynctask/tasks.ini~：
+    #+begin_src ini
+    [git-fetch-master]
+    command=git fetch origin master
+    cwd=<root>
+
+    [git-checkout]
+    command=git checkout $(?branch)
+    cwd=<root>
+    #+end_src
+    之后输入 ~task~ 就能运行上面的任务。~cwd~ 字段是命令运行的目录，~<root>~ 代表项目根目录（有 ~.git~ 和 ~.svn~ 的那个目录），不写就是当前目录；命令含 ~$(?xxx)~ 时运行前会让用户输入 xxx 再替换。
+  - 局部任务：定义在各个项目文件夹下的 ~.tasks~ 中，作用于所有子目录，用于针对项目的编译、测试、发布等日常任务；本地任务比全局任务优先级更高。
+  - 把 task 绑到 F5（连「task」几个字都省了）：在 ~.bashrc~ 中加
+    #+begin_src bash
+    bind '"\e[15~":"task\n"'
+    #+end_src
+    zsh 用：~bindkey -s '\e[15~' 'task\n'~。使用前先安装 fzf，否则只能输入完整命令 ~asynctask git-fetch-master~；装了 fzf 后就能模糊匹配输入命令。
+  - 命令语义抽象（file-build / file-run）：把编译和执行统一成语义化任务，放进全局配置：
+    #+begin_src ini
+    [file-build]
+    command:c,cpp=gcc -O2 -Wall "$(VIM_FILEPATH)" -o "$(VIM_PATHNOEXT)" -lstdc++ -lm -msse3
+    command:go=go build -o "$(VIM_PATHNOEXT)" "$(VIM_FILEPATH)"
+    command:make=make -f "$(VIM_FILEPATH)"
+    cwd=$(VIM_FILEDIR)
+
+    [file-run]
+    command="$(VIM_FILEPATH)"
+    command:c,cpp="$(VIM_PATHNOEXT)"
+    command:go="$(VIM_PATHNOEXT)"
+    command:python=python "$(VIM_FILENAME)"
+    command:javascript=node "$(VIM_FILENAME)"
+    command:sh=sh "$(VIM_FILENAME)"
+    command:lua=lua "$(VIM_FILENAME)"
+    command:perl=perl "$(VIM_FILENAME)"
+    command:ruby=ruby "$(VIM_FILENAME)"
+    cwd=$(VIM_FILEDIR)
+    #+end_src
+    于是统一成 ~asynctask file-build xxx~（编译文件）、~asynctask file-run xxx~（运行文件）；~$(...)~ 宏以 VIM 开头是为了兼容同名 vim 插件的配置，并不是需要 Vim 才能运行。
+  - 项目编译（project-build / project-run）：
+    #+begin_src ini
+    [project-build]
+    command=make
+    cwd=$(VIM_ROOT)
+
+    [project-run]
+    command=make run
+    cwd=<root>
+    output=terminal
+    #+end_src
+    设置 ~cwd~ 后可在项目任意一级子目录运行 ~asynctask project-build~，它会自动向上搜寻项目根目录标记（~.git~、~.svn~、~.project~ 可配置）并记录在宏 ~<root>~ 里，不用每次 ~cd ../../..~。
+  - 绑定 F7/F8 让「编辑/编译/测试」循环无阻碍：
+    #+begin_src bash
+    bind '"\e[18~":"asynctask project-build\n"'
+    bind '"\e[19~":"asynctask project-run\n"'
+    #+end_src
+    这样在项目任意子目录下按 F7 编译、F8 运行，命令都不用敲。
+  - 任务适配：不同项目构建系统不同（有的 cmake、有的 gnu make），全局配 gnu make、某个用 msbuild 的项目只需在根目录放一个 ~.tasks~ 覆盖同名任务（如 ~project-build~ 调用 msbuild），局部任务优先级更高，不用改任务名。cmake 项目同理。
+  - profile：可为同一任务配置不同 profile（debug / release / gdb 模式），同样不用改任务名。
+  - 本质：对裸命令进行二次抽象，统一语义、保持操作习惯；也可配置到 NotePad++（NppExec 插件）等编辑器上，与命令行共用完全相同的语义。附配置示例：https://github.com/skywind3000/asynctasks.vim/wiki/Bash-Snippet-Manager
+  - 澄清：这不是 fish/zsh 已有的东西，也不是历史搜索；它更像 vscode 的任务系统，作者拓展了它的用途使其更通用灵活。
+  【原文摘录】
+  #+begin_quote
+  2020 年了，真的没必要再终端里一个字一个字敲命令了，有更酷炫的方式。分享下我在今年年最常用的一个命令，task，命令行任务管理。
+  #+end_quote
+  #+begin_quote
+  你需要任务管理器，将你命令行各种常见的冗余的任务管理起来，然后敲 2-3 个字母就能启动它。
+  #+end_quote
+  #+begin_quote
+  局部任务定义在各个项目文件夹下的 .tasks 中，作用所有子目录，完成针对项目的一些编译，测试，发布等日常任务，就是每天敲着你手累的命令，现在可以只用 2-3 个字母就重复执行了。
+  #+end_quote
+  #+begin_quote
+  能够流畅无阻碍的执行：“编辑/编译/测试” 循环，是提高你编程效率最有效的方法。
+  #+end_quote
+  #+begin_quote
+  这本质上是对裸命令进行二次抽象，这个抽象会给你带来意想不到的便利。
+  #+end_quote
+  #+begin_quote
+  这就是全局任务和局部任务搭配的黑魔法。其他还有很多技巧，为同一个任务配置不同的 profile ，指定是 debug 模式，还是 release 模式，还是 gdb 模式，同样不用更改任务的名字，就能区别不同的 profile。
+  #+end_quote
+  【我的想法】
+
+* 在实际开发项目中如何用好git？  :技巧:Git:版本控制:效率:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/60110166/answer/2561561742
+  :作者:  Johan约翰
+  :原文:  [[file:原文/2026-10-19-在实际开发项目中如何用好git-2561561742.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-在实际开发项目中如何用好git-2561561742.org][打开本地归档]]
+  - 一句话概括：用好 Git 的七点——rebase 让提交记录清晰、reflog+reset 跳到任意 commit、cherry-pick 取指定 commit、commit --amend 改提交内容、revert 回滚某次提交、stash 暂存文件、配置 alias 提效，并附具体命令。
+  【方法/论点要点】
+  - 总览（七点）：~使用 git rebase 让提交记录更加清晰可读~；~使用 git reflog + git reset 跳到任意 commit~；~使用 git cherry-pick 获取指定的 commit~；~使用 git commit --amend 更改提交内容~；~使用 git revert 回滚某次的提交~；~使用 git stash 来暂存文件~；~配置 git alias 提升工作效率~。
+  - 一、git rebase：变基，作用和 merge 相似，用于把一个分支的修改合并到当前分支。用法：基于 master 创建 feature 分支 → 在 feature 上开发功能点 → master 上也提交 commit → 在 feature 上执行 ~git rebase master~（以 master 最后的提交作为基点，逐个应用 feature 的每个更改）。
+    - rebase VS merge：merge（~git merge branchname~）会保存每次 commit，用 gitk 看会有好几条颜色的线；rebase 则去除一系列提交记录、「复制」它们再逐个放下去，能创造更清晰的提交记录。merge 会保留所有 commit 的历史时间，人多后历史记录会混乱。
+    - 交互模式（压缩多次无效提交为一次）：
+      #+begin_src powershell
+      git log
+      # f9f6f3b commit 3
+      # 2feb45f commit 2
+      # 07a3cb6 commit 1
+      # 我们要修改 2 的话，rebase 到它的下一个 commit，这里是 1
+      git rebase 07a3cb6 -i
+      git rebase -i <base-commit>
+      # 或者是 git rebase -i HEAD~2 对最近的两次 commit 进行合并
+      #+end_src
+      在打开的对话框里修改，之后还要 rebase continue。有人称之为后悔药——无论写什么 commit 最后都能修改、合并，DIY 性强。
+  - 二、git reflog + git reset：换句话叫时光机，通过查找所有分支的所有操作记录（包括已被删除的 commit 记录和 reset 操作），再用 reset HEAD 跳到指定 commit。
+    #+begin_src text
+    git reflog
+    #afa2f45 HEAD@{10}: checkout: moving from 今天 to 明天
+    #4abcda5 HEAD@{11}: commit: 打通1800处仙窍
+    #de42069 HEAD@{12}: commit: 真言轮经大成
+    git reset HEAD@{10}
+    # 或者 git reset --hard afa2f45
+    #+end_src
+  - 三、git cherry-pick：意为「挑拣」提交，与 merge 合并一个分支的所有提交不同，它获取某个分支的单个提交并作为新提交接入当前分支。故事背景：张三在分支上开发 feature1~feature6 六个提交，再 ~git reset --hard feature1~ 跳回第一个 commit 开发出 feature7，要把 feature7 合并到 feature6 上：
+    #+begin_src text
+    git reflog
+    # 找到 feature7 的 commit 4c97ff3
+    # 回到 feature6 的 commit cd52afc
+    git reset --hard cd52afc
+    git cherry-pick 4c97ff3
+    #+end_src
+    简单说每一次 commit 就是一次记录，可以合并到任意地方；开发功能点或修复 bug 尽量做到一个功能点一个 commit，方便出错时挑拣代码。
+  - 四、git commit --amend：修正，把新改动合并进最近一次的 commit。
+    #+begin_src text
+    git add .
+    git commit --amend --no-edit
+    #+end_src
+    ~git commit --amend~ 会弹出让你修改内容；加 ~--no-edit~ 保持上一次的 commit 内容。PS：如果代码已经 push，慎用，因为会修改提交历史。
+  - 五、git revert 回滚某次提交：与 ~git reset --hard xxx~（回到某次 commit）不同，revert 能撤销某次 commit。
+    #+begin_src text
+    git log
+    git revert <commit-id>
+    #+end_src
+    这种做法会新建一条 commit 来撤回之前的修改，提交历史不会被抹去；所以个人开发或个人 feature 分支可用 reset 回滚，多人协作的集成分支上 revert 更合适、可安全撤回。
+  - 六、git stash 暂存文件：先把本地改动存起来，等紧急 bug 修完再取回。先了解 Git 四大工作区域：
+    - Workspace（工作区）：本地电脑所见的文件和目录。
+    - Index/Stage（暂存区）：一般在 .git 目录下，~git add 改动文件~ 后改动放入暂存区。
+    - Repository（本地仓库）：~git clone 地址~ 后存在本地的版本库，HEAD 指向最新放入仓库的版本，~git commit~ 后文件改动到本地仓库。
+    - Remote（远程仓库）：Github、Gitlab、码云等代码托管平台。
+    常见场景：开发功能点时突然有线上 bug 要紧急修复。基本命令：
+    #+begin_src text
+    git stash # 将本地的改动暂存
+    git stash save "message" # 执行存储时，添加备注
+    git stash pop # 应用最近一次暂存，并删除暂存记录
+    git stash apply # 恢复最近的存储，但不会把存储从存储列表中删除；使用其他用 git stash apply stash@{$num}
+    git stash list # 查看 stash 了哪些存储
+    git stash clear # 删除所有缓存的 stash
+    git ls-files --stage # 查看 index 暂存区
+    #+end_src
+  - 七、配置 git alias：基本用法 ~git config --global alias.<简化的字符> 原始命令~。
+    #+begin_src text
+    git config --global alias.co checkout
+    git config --global alias.ci commit
+    git config --global alias.br branch
+    #+end_src
+    也可在 .gitconfig 文件中设置：
+    #+begin_src text
+    [alias]
+    st = status -sb
+    co = checkout
+    br = branch
+    mg = merge
+    ci = commit
+    ds = diff --staged
+    dt = difftool
+    mt = mergetool
+    last = log -1 HEAD
+    latest = for-each-ref --sort=-committerdate --format=\"%(committername)@%(refname:short) [%(committerdate:short)] %(contents)\"
+    ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad %C(red)%d %C(reset)%s %C(green)[%cn]\" --decorate --date=short
+    hist = log --pretty=format:\"%C(yellow)%h %C(red)%d %C(reset)%s %C(green)[%an] %C(blue)%ad\" --topo-order --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    #+end_src
+  - 其他不常见但好用的命令：~gitk~（打开图形化工具）、~gitjk~（撤销刚在 git 中所做的操作）、~git help -g~（展示帮助信息）、~cat .git/HEAD~（查看分支文件）、~git fetch --all && git reset --hard origin/master~（回到远程仓库的状态）、~git push -f origin master~（强行覆盖远程 master）。
+  【原文摘录】
+  #+begin_quote
+    简单来说，就这七点：使用 git rebase 让提交记录更加清晰可读；使用 git reflog + git reset 跳到任意 commit；使用 git cherry-pick 获取指定的 commit；使用 git commit --amend 更改提交内容；使用 git revert 回滚某次的提交；使用 git stash 来暂存文件；配置 git alias 提升工作效率。
+  #+end_quote
+  #+begin_quote
+  所以 rebase 的优势就明了了，它能创造更清晰的提交记录。但 merge 会保留你所有的 commit 的历史时间，当开发人员一多，历史记录就会变得混乱。
+  #+end_quote
+  #+begin_quote
+  在开发中，通常会在一个分支上产生很多无效的提交，这种情况下使用 rebase 的交互模式可以把多次 commit 压缩成一次提交，得到一个干净的提交历史。
+  #+end_quote
+  #+begin_quote
+  所以就个人开发或个人 feature 分支而言，可以使用 git reset 来回滚代码，但在多人协作的集成分支上，git revert 更适合。这样，提交的历史记录不会被抹去，可以安全地进行撤回。
+  #+end_quote
+  #+begin_quote
+  简单来说，你的每一次 commit，就是一次记录，可以合并到任意地方。所以开发功能点或者修复bug之类，尽量做到一个功能点一个commit，方便出错时挑拣代码。
+  #+end_quote
+  #+begin_quote
+  PS：假如你的代码已经 push 了的话，要慎用，因为会修改提交历史。
+  #+end_quote
+  【我的想法】
+
+* int (*(*fun(...))[5])(int*) 这样的复合声明怎么读？  :技巧:C语言:指针:类型声明:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/542944040/answer/2573116176
+  :作者:  Hippop
+  :原文:  [[file:原文/2026-10-19-intfunintpint[5]int表示的是什么-2573116176.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-intfunintpint[5]int表示的是什么-2573116176.org][打开本地归档]]
+  - 一句话概括：给出一条「右边表达式运算后的结果类型与左边相同」的通则，用反推法一步步拆开 ~int (*(*fun(int*(*p)(int *)))[5]) (int*)~ 这种天书声明，并附可编译验证的完整代码。
+  【方法/论点要点】
+  - 核心规则：对于任意一种类型声明式，右边类型表达式经过 ~* () []~ 运算后的结果类型与左边相同。
+  - 类型表达式里 ~()~ 也表示调用运算，但括号内可含参数的类型信息（如 ~int (*p)(int *)~ 表示可对 ~*p~ 传 ~int*~ 调用、结果 int，故 p 是函数指针）；~[]~ 也表示下标运算，括号内可含元素个数（如 ~int a[5]~ 表示对 a 做下标运算得 int，故 a 是数组）。
+  - 反推六步（优先级最低的运算最先脱掉）：① ~(*(*fun(...))[5])(int*)~：括号优先级高于调用，故 ~*(*fun(...))[5]~ 是返回 int、参数 int* 的函数；② ~*(*fun(...))[5]~：~[]~ 高于 ~*~，取值后得函数，故 ~(*fun(...))[5]~ 是函数指针；③ ~(*fun(...))[5]~：括号高于 ~[]~，故 ~*fun(...)~ 是 5 元素的函数指针数组；④ ~*fun(...)~：调用高于取值，故 ~fun(...)~ 是指向数组的指针；⑤ ~fun(int*(*p)(int *))~：参数是 ~int*(*p)(int *)~；⑥ ~int*(*p)(int *)~：返回 int*、参数 int* 的函数指针。
+  - 结论：~int (*(*fun(int*(*p)(int *)))[5]) (int*)~ 是一个函数，其参数是「返回值为 ~int*~、参数为 ~int*~ 的函数指针」，其返回值是「指向 5 元素数组的指针」，数组元素是「返回值为 int、参数为 ~int*~ 的函数指针」。
+  - 正推验证：把类型表达式换成对应语句表达式 ~(*(*fun(0))[0])(0)~，结果类型为 int；过程是「对 fun 调用 → 对返回值取值 → 取元素 → 再取值 → 当函数调用 → 返回 int」，正好是前面反推的逆过程。
+  - 可编译性：文中给出完整 C 程序（用 ~typedef int (*pfunc_t)(int *)~ 定义函数指针、声明两个函数指针数组，~fun~ 返回指向数组的指针，~main~ 里遍历调用），并贴出实际运行结果，证明该声明合法。
+  【原文摘录】
+  #+begin_quote
+  对于这种复合类型声明，有一种以不变应万变的方法。你只需要记住一条规则，便可拆解所有类型声明。
+
+  对于任意一种类型声明式，右边类型表达式经过* () []运算后的结果类型与左边相同。
+  #+end_quote
+  #+begin_quote
+  因此，连起来就是，int (*(*fun(int*(*p)(int *)))[5]) (int*)是一个函数，它的参数是一个返回值为int*，参数为int*的函数指针，它的返回值是一个指向5个元素数组的指针，数组的元素是一个返回值为int，参数为int*的函数指针。
+  #+end_quote
+  #+begin_quote
+  对于(*(*fun(int*(*p)(int *)))[5]) (int*)这个类型表达式，我们先将其转换成对应的语句表达式就是：
+
+  (*(*fun(0))[0])(0): 结果类型为int
+
+  转换时，我们将函数调用里的参数用值代替，数组下标填0。
+  #+end_quote
+  #+begin_quote
+  前面的过程就是这个过程的反推，这下应该明白了吧。
+  #+end_quote
+  【我的想法】
+  「右边表达式运算后的结果类型与左边相同」这条通则很妙，把天书声明变成可逐步反推的过程，配可编译代码验证最靠谱，值得当 C 语言类型题的模板。
+
+* 你是如何学会正则表达式的？  :技巧:正则表达式:编程:教程:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/48219401/answer/748926080
+  :作者:  小侠AI
+  :原文:  [[file:原文/2026-10-19-你是如何学会正则表达式的-748926080.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-你是如何学会正则表达式的-748926080.org][打开本地归档]]
+  - 一句话概括：一篇把正则从符号到进阶用法再到实战采集讲透的长教程——元字符、反义、量词、懒惰限定符、捕获分组、零宽断言逐条带例，最后用 C# 采集博客园首页做完整闭环，并附在线/离线匹配工具。
+  【方法/论点要点】
+  - 什么是正则：一种特殊的字符串模式，用于匹配一组字符串，好比用模具做产品；正则所用的字符其实不多，难的是组合后可读性差。
+  - 常用工具：在线匹配 regexpal.com（可能已挂）、rubular.com；软件 McTracer（可把正则导出成 java/C#/js 并自动转义，还支持解释哪段是捕获分组、哪段是贪婪匹配）。
+  - 元字符：~^~ 匹配行或字符串的起始位置（有时还匹配整个文档起始）；~$~ 匹配行或字符串的结尾；~\b~ 不消耗字符只匹配一个位置，常用于单词边界；~\d~ 匹配数字；~\w~ 匹配字母、数字、下划线；~\s~ 匹配空格；~.~ 匹配除换行符以外的任何字符（~\w~ 的加强版，~\w~ 不能匹配空格）；~[abc]~ 字符组，匹配括号内元素，也可写 ~[a-z]~ 匹配 a 至 z。
+  - 反义：把字母改成大写即取反——~\W~ 任意不是字母数字下划线的字符、~\S~ 任意非空白符、~\D~ 任意非数字、~\B~ 不是单词开头或结束的位置、~[^abc]~ 匹配除 abc 以外的任意字符。
+  - 量词的三概念：贪婪（如 ~*~）先匹配整个字符串、失败则回退一个字符（回溯），最耗资源；懒惰（如 ~?~，勉强）从起始位置每次只检查一个字符；占有（如 ~+~）覆盖整个目标字符串后只尝试一次，不回溯，「好比先抓一把石头，然后从石头中挑出黄金」。
+  - 量词用法：~*~ 重复零次或更多；~+~ 重复一次或更多；~?~ 重复零次或一次；~{n}~ 重复 n 次；~{n,m}~ 重复 n 到 m 次；~{n,}~ 重复 n 次或更多。
+  - 电话号例子：先用 ~^0\d\d\d-\d\d\d\d\d\d\d$~ 说明 ~\d~，学完量词后简化成 ~0\d+-\d{7}~，再限定区号得到 ~^0\d{2,3}-\d{7}~（区号可 3 位或 4 位）。
+  - 懒惰限定符：~*?~ 重复任意次但尽可能少重复（如 ~acbacb~ 用 ~a.*?b~ 只取到第一个 ~acb~）；~+?~ 至少一次但尽可能少；~??~ 0 次或 1 次但尽可能少；~{n,m}?~、~{n,}?~ 同理尽可能少。
+  - 捕获分组：~(\d)\d~ 中 ~(\d)~ 即一个捕获组，可用后向引用 ~\1~（如 ~\b(\w+)\b\s\1\b~ 匹配 ~zery zery~）；可用 ~(?<name>exp)~ 自定义组名、后向引用写作 ~\k<name>~。常用写法：~(exp)~ 捕获到自动命名组、~(?<name>exp)~ 捕获到 name 组、~(?:exp)~ 不捕获也不分配组号。
+  - 零宽断言：~(?=exp)~ 匹配 exp 前面的位置（如 ~(?<txt>.+(?=ing))~ 取 ing 前所有字符）；~(?<=exp)~ 匹配 exp 后面的位置（如取 How 之后）；~(?!exp)~ 匹配后面不是 exp 的位置；~(?<!exp)~ 匹配前面不是 exp 的位置。
+  - 实战：用 C# 发起 HTTP 请求抓博客园首页，再用正则过滤 HTML，依次取出推荐数、标题、文章链接、作者图片、作者博客 URL、文章简介、发布人与发布时间、评论数、阅读数，用到了 ~\s~、~\w+~、~.*?~、捕获分组、零宽断言等。
+  - 总结：正则并不难，了解每个符号后多动手写几次自然就明白；但正则是出了名的坑多，少写一个点就匹配不到数据。
+  【原文摘录】
+  #+begin_quote
+  正则表达式是一种特殊的字符串模式，用于匹配一组字符串，就好比用模具做产品，而正则就是这个模具，定义一种规则去匹配符合规则的字符。
+  #+end_quote
+  #+begin_quote
+  贪婪量词会首先匹配整个字符串，尝试匹配时，它会选定尽可能多的内容，如果 失败则回退一个字符，然后再次尝试回退的过程就叫做回溯，它会每次回退一个字符，直到找到匹配的内容或者没有字符可以回退。
+  #+end_quote
+  #+begin_quote
+  占有量词会覆盖事个目标字符串，然后尝试寻找匹配内容 ，但它只尝试一次，不会回溯，就好比先抓一把石头，然后从石头中挑出黄金
+  #+end_quote
+  #+begin_quote
+  如 "acbacb" 正则 "a.*?b" 只会取到第一个"acb" 原本可以全部取到但加了限定符后，只会匹配尽可能少的字符 ，而"acbacb"最少字符的结果就是"acb"
+  #+end_quote
+  #+begin_quote
+  那捕获分组有什么用呢看个例子就知道了：如 "zery zery" 正则 \b(\w+)\b\s\1\b 所以这里的"\1"所捕获到的字符也是 与(\w+)一样的"zery"
+  #+end_quote
+  #+begin_quote
+  正则其实并不难，了解每个符号的意思后，自己马上动手试一试多写几次自然就明白了，正则是出了名的坑多，随便少写了个点就匹配不到数据了，我也踩了很多坑，踩着踩着就踩出经验了。
+  #+end_quote
+  【我的想法】
+  从元字符到零宽断言层层递进，最后用采集博客园做闭环，是少见的「讲全又讲完」的正则入门；懒惰限定符和零宽断言两节最值得单独记。
+
+* 怎么才能心无旁骛地学习？  :技巧:学习方法:专注:自我管理:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/324702775/answer/857090264
+  :作者:  FAM小五
+  :原文:  [[file:原文/2026-10-19-怎么才能心无旁骛地学习-857090264.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-怎么才能心无旁骛地学习-857090264.org][打开本地归档]]
+  - 一句话概括：一套「五个阶段 + 若干小技巧」的专注学习法，从破除「潜念」预设、专注过程、保持新鲜感、用 PDCA 拒绝完美主义，到打理身体状态，还附动笔、番茄钟、排除干扰、仪式感的落地办法。
+  【方法/论点要点】
+  - 第一阶段：不要给自己「预设」。老师骂「笨」「最差一届」想激励学生，事实正好相反、学生表现会越来越差，这是哈佛终身教授埃伦·兰格提出的「潜念」mindlessness（无意识行为）的影响。两个自测：你是否相信智力不可改变？能力不可增长？答 yes 说明已被严重影响。最直接的危害是扼杀未发挥的潜能。
+  - 第二阶段：专注解决问题的过程。①「享受」思考的乐趣：多反思多提问，别停在书本文字上；别给自己定「必须读完 10 页」这类目标，专注知识本身、多想多查，专注就不再难。②「主动」学习：事情做成都出于「我想做」而非「想我做」；别拖时长、别暗示自己必须学满 3 个小时，把关注点放在学习本身，「解决了问题」才值得庆祝。
+  - 第三阶段：保持对学习的新鲜感，避免疲劳感。人面对长期不变的东西都会丧失兴趣、坐在书前多半是在耗时间，热情衰退是迟早的，所以保持新鲜感比完成计划更重要；要从中找到自己的兴奋点（如搞定一个新知识带来的满足感）。记住：新鲜感 = 高效。
+  - 第四阶段：别把时间「浪费」在把事做「完美」上。计时完成，按 PDCA 循环：P（Planning 计划）、D（Do 执行）、C（Check 检查结果）、A（Act 改善提高）。把要做的事写下来、每件事规定时间并严格完成；超时即使没做完也不再继续，立刻投入下一项，没做好的留到下一轮解决。过度「完美主义」就是浪费时间。
+  - 第五阶段：保持良好身体状态、持续输出。①每日睡眠大于 7 小时（荷兰神经学家伊斯布兰德·范德韦研究发现睡眠影响海马体活跃度、进而影响记忆力与专注度）；②减少能快速提升血糖的高碳水食物摄入（尤其周中下午要学习时，会让人「身体疲惫」、大幅降低效率）；③适当体育锻炼，舒缓压力、增强体质；④获得正面反馈，让自己觉得学习有意义（最直观是成绩提升、能力增长）。
+  - 小技巧 1：养成动笔的习惯。一边学一边记笔记，写字能促进二次消化、提升专注度并帮你进入学习状态；「读过」不等于「留存」，不记第二天八成会忘 20%、第三天忘 40%；浮躁时强迫自己开始写，写着写着就沉浸进去了。
+  - 小技巧 2：番茄工作法（老生常谈，自行百度）。
+  - 小技巧 3：排除干扰信息。手机提前静音，别让不重要信息分散注意力、抬高你集中注意力的成本。
+  - 小技巧 4：建立学习的「仪式感」。①学习前保证工具整洁齐全；②前一天晚上做好准备、养足精神；③提前进入学习状态（如定 8 点学就 7:50 开始准备），降低行动门槛。
+  【原文摘录】
+  #+begin_quote
+  说出来你可能不信，一直是学渣的我，靠着这套方法，竟然让我在高考前三个月提高了将近一百多分，逆袭考上了985，成为了我们那一届最大的黑马。
+  #+end_quote
+  #+begin_quote
+  学生不会因为老师的批评而奋发图强，反而表现会越来越“差”，这其实就是“潜念”对一个人的巨大影响。
+  #+end_quote
+  #+begin_quote
+  不要把拖时长，你越“熬”时间时间就越“难熬”……把关注点放在学习本身，“解决了问题”才是值得庆祝的事，而不是你又“成功”的“浪费”了两个小时。
+  #+end_quote
+  #+begin_quote
+  把你要做的事写下来，每件事给自己规定时间，严格按照时间完成，如果超过时间了，即使没有完成也不再继续做，立刻投入到下一项工作中，没有做好的事，就留到下一轮，在下一轮中再来解决。过度的“完美主义”其实就是在“浪费时间”。
+  #+end_quote
+  #+begin_quote
+  记笔记的过程就是，大脑处理信息的过程。当你非常浮躁的时候，无法安静下来，那就强迫自己开始写，写着写着，你就会发现你已经沉浸在这个阅读和思考的氛围中了。
+  #+end_quote
+  【我的想法】
+  「五个阶段 + 小技巧」结构完整，破除潜念和用 PDCA 对抗完美主义两节最实用；方法偏多，挑两三条坚持比全盘照做更有效。
+
+* 下面这种结构如何用latex排版？  :技巧:LaTeX:tikz:绘图:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/522305783/answer/2396086263
+  :作者:  王大力
+  :原文:  [[file:原文/2026-10-19-下面这种结构如何用latex排版-2396086263.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-下面这种结构如何用latex排版-2396086263.org][打开本地归档]]
+  - 一句话概括：用 LaTeX 的 ~tikz~ 包搭三个 ~matrix~ 表格并用彩色箭头连接，给出了可直接编译的完整代码，用来排「函数依赖/映射」式的多表结构图。
+  【方法/论点要点】
+  - 思路：用 ~standalone~ 文档类 + ~tikz~，加载 ~positioning, calc, matrix, arrows.meta~ 库，用 ~matrix of math nodes~ 摆三张表，再用 ~\draw[->]~ 从单元格连线。
+  - 样式准备：在 ~\tikzset~ 里定义 ~every matrix/.style={matrix of math nodes}~、~hp/.style={column 3/...}~、~Hp/.style={column 4/...}~（把第三/四列锚点设为 base east 以便对齐）、~>=Stealth~。
+  - 结构：上表 ~(a)~ 三列 ~X Y φ₁(X,Y)~；下表 ~(b)~ 三列 ~Y Z φ₂(Y,Z)~；右侧 ~(c)~ 四列 ~X Y Z φ₃(X,Y,Z)~；用 ~\coordinate (x) at ($(a)!0.5!(b)$)~ 取上下表的中点，再用 ~[right = 3cm of x]~ 把右表放好。
+  - 连线：用 ~\draw[->, 颜色] (源单元格) to[in=180, out=0] (目标单元格)~，红/橙/蓝/紫/青/灰线分别连接不同单元格，虚线用 ~dashed~，并可用 ~[xshift=...em, yshift=...em]~ 微调落点。
+  - 关键代码（缩略，重复行以省略号代替）：
+  #+begin_src tex
+  \documentclass{standalone}
+  \usepackage{tikz}
+  \usetikzlibrary{positioning, calc, matrix, arrows.meta}
+  \tikzset{
+      every matrix/.style={matrix of math nodes},hp/.style={column 3/.style={anchor={base east}}},Hp/.style={column 4/.style={anchor={base east}}},>=Stealth
+  }
+  \begin{document}
+  \begin{tikzpicture}
+  \matrix [hp] (a) {\hline X & Y & \phi_1(X,Y) \hline 1 & 2 & 0.3 \\ ... \hline};
+  \matrix[below = of a, hp] (b) {\hline Y & Z & \phi_2(Y,Z) \hline 1 & 2 & 0.3 \\ ... \hline};
+  \coordinate (x) at ($(a)!0.5!(b)$);
+  \matrix[right = 3cm of x, Hp] (c) {\hline X & Y & Z & \phi_3(X,Y,Z) \hline 0 & 1 & 2 & 0.3 \\ ... \hline};
+  \draw[->, red] (a-2-3) to[in=180, out=0] (c-2-1);
+  \draw[->, orange] (b-3-2) to[in=180, out=0] (c-5-3);
+  \draw[->, purple, dashed] (c-1-1) to[in=100, out=80] ([xshift=-0.5em, yshift=0.5em]c-1-4);
+  \end{tikzpicture}
+  \end{document}
+  #+end_src
+  【原文摘录】
+  #+begin_quote
+  这个用LaTeX的tikz很容易进行排版和画箭头，如下：
+  #+end_quote
+  #+begin_quote
+  \draw[->, red] (a-2-3) to[in=180, out=0] (c-2-1);
+  \draw[->, orange] (b-3-2) to[in=180, out=0] (c-5-3);
+  \draw[->, blue] (b-4-3) to[in=180, out=0] (c-4-1);
+  #+end_quote
+  #+begin_quote
+  \coordinate (x) at ($(a)!0.5!(b)$);
+  \matrix[right = 3cm of x, Hp] (c) { ... };
+  #+end_quote
+  【我的想法】
+  给了能直接编译的完整代码，比只贴片段友好；用 coordinate 取中点再摆右表的思路，可以迁移到别的多表排版。
+
+* 不想学习的时候如何逼迫自己学习？  :技巧:学习:意志力:方法论:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/20773513/answer/136229297
+  :作者:  壮猫咪attorney
+  :原文:  [[file:原文/2026-10-19-不想学习的时候如何逼迫自己学习-136229297.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-不想学习的时候如何逼迫自己学习-136229297.org][打开本地归档]]
+  - 一句话概括：把「逼迫自己学习」讲成一套可操作的逻辑——学习的激励点来自学习之外（比别人强的正向反馈）、知识是体系化的关键节点、意志力是有限资源，最后给出「找正向激励、定体系化目标、明确关键时点、训练意志力」的四步法并附「胜利者效应」。
+  【方法/论点要点】
+  - 前提：中国教育环境下多把学习当「成功」的手段而非目的，所以要从学习本身获得乐趣几乎不可能；先把学习当成现阶段的「工具」来理解。
+  - 核心机制：学习的激励点来自学习之外——比别人强、被赏识与区别对待。学霸的「自我驱动」源于越早获得学习之外的正向反馈（赏识、钦佩、不被霸凌），从而进入「越学好越有奖励→越奖励越懂学习逻辑→越懂逻辑越学得好」的正向循环。名校标签、CFA/CPA/ACCA 证书都是这种正向激励，学习好坏直接作用于「区分人与人」，像奢侈品一样，甚至更强。
+  - 常识一，有效时间和你的时间都有限。简化公式：得到知识的纯度 = 效率 × 时间。微信短文、游戏、所谓「知乎学习」缺乏体系化和进阶性，不算知识；一天学习 8 小时不玩手机就强过 99% 的人。基础知识到熟练没有 500 小时想都别想（如考过日语 N2 天资好的约 500 小时、笨一点 800 小时，且不含上课玩手机、自习刷知乎的时间）。这就是「知识相对论」：重要的不是知识本身，而是充分消化吸收知识所要付出的时间。
+  - 常识二，真正的知识没积累到一关就打不了下一关，要注重关键节点。学习是体系化的，路径是 A→B→C……→P，无法从 A 直达 P（不能给只学过九九乘法表的小学生讲微积分）；缺了关键节点，整座知识大厦摇摇欲坠，只能在「补缺」和「学新」之间折返跑——别人学 D 时你在补 B、巩固 C 再学 D。很多人并非智商问题，而是「失去了正向反馈、方法不对、不成体系、有效时间不多」。
+  - 常识三，意志力是有限度的，且可能是你学习上唯一的优势。引罗伊·鲍迈斯特《意志力》：①意志力是一种生理机制、是可被消耗的资源（与葡萄糖有关，饿了累了难保持记忆集中），心智被占据就无法并行思考；②可通过设定合理目标、养成良好习惯、自我监控来提高，有效练习办法是「做自己不习惯做的事」（刻意训练）。意志力同时影响时间与效率两个维度，对学习的影响比智商更根本。
+  - 总结四步：①寻找正向激励的奖励（小到点赞关注，大到考入名校、考下 10%-20% 技能证书、进好公司，它们会成为带不走的「资历」，给你「我能比别人学得好」的暗示，且是终生式反馈）；②订立一个需要体系化的知识目标，做好投入 500-800 小时的打算，日有效时间从 4 小时起步，建立时间观念；③建立体系化目标并明确关键时点，把目标解剖到具体关键节点逐步完成；④训练意志力，并把有限的意志力花在重要的地方。
+  - 2019 补丁：所谓「体系化目标」其实是达到目标的立体化结构——如健身不只是运动，还包括运动、意志力、睡眠、营养、控制食欲、防反弹、身体指标、补剂等，运动内部又有有氧/ HIIT /力量训练，再往下还有操课、跳绳、游泳、自重、固定器械、自由力量等；目标要点亮越多「知识树」越好。
+  - 19 补：胜利者效应。引浙大胡海岚团队刊登于《Science》的研究（及 2011 年「钻管测试」）：刺激劣势小鼠前额叶脑区突触强度后，它能逆袭强敌；胜利 6 次后大脑发生质变，突触连接强度显著增加并自主维持优势——即「过去成功的经历会通过改变动物的生理结构，从而引导其赢得下一次竞争」。
+  - 文末推荐《意志力》及一学习类书籍。
+  【原文摘录】
+  #+begin_quote
+  逼迫这个词用得很好，因为的确学习是逼迫的，而成就感也是从逼迫自己中产生的。
+  #+end_quote
+  #+begin_quote
+  而学习的激励点来自于学习之外——比别人强，俗称装逼。
+  #+end_quote
+  #+begin_quote
+  越学好越有奖励（夸赞、鼓舞、区分周围的人）——越奖励越能知道学习的逻辑——越知道逻辑越能学好——越学好越能得到奖励（名校、CFA/CPA/ACCA等证书），这就是学习的正向循环。
+  #+end_quote
+  #+begin_quote
+  重要的并非是知识本身，而是充分地消化吸收知识所要付出的时间。
+  #+end_quote
+  #+begin_quote
+  要达到C点，首先你必须学会B，要达到E点，你必须先达到D。你根本无法给一个小学三年级的孩子讲什么叫微积分……而绝对不是直接从A到P的。
+  #+end_quote
+  #+begin_quote
+  意志力是一种通用资源，这意味着你可以通过做一些日常小事来提高意志力，然后把它用在其它事情上。该书提出一个有效练习办法是做自己不习惯做的事。
+  #+end_quote
+  【我的想法】
+  把「逼迫」拆成激励来源、知识体系、意志力三条线，比空喊自律靠谱；「学习的激励点来自学习之外」有些功利，但对多数人确实成立。
+
+* 参加大学生数学建模竞赛，有哪些好用的绘图软件推荐？  :技巧:Matlab:绘图:数据可视化:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/39417414/answer/2338777208
+  :作者:  程序猿老王
+  :原文:  [[file:原文/2026-10-19-参加大学生数学建模竞赛有哪些好用的绘图软件推荐-2338777208.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-参加大学生数学建模竞赛有哪些好用的绘图软件推荐-2338777208.org][打开本地归档]]
+  - 一句话概括：一篇用 Matlab 覆盖数模常见图形的大合集——从二维曲线、散点、渐变、误差柱状、填充、多 Y 轴，到场图、三维伪彩/裁剪、等高线、矢量场、热图、分子模型、分形（Newton/Julia）、曲面贴图，逐种配可运行代码。
+  【方法/论点要点】
+  - 出发点：「Matlab 强上一波」，文末附 28 种好看淡色的配色资源（Taosy.W 专栏），先睹为快。
+  - 二维曲线：~plot(x, y1); hold on; plot(x, y2, 'LineWidth', 2); hold off; legend('y1','y2');~；可用 ~'Color', [0.21,0.21,0.67]~ 换成 28 种淡色中挑选的颜色。
+  - 二维散点图：在 ~plot~ 里用 ~'o'~ 并设 ~'MarkerFaceColor'~、~'MarkerEdgeColor'~ 控制点形状/填充色/轮廓色，用来比较理论数据与实验数据趋势。
+  - 二维渐变色图：自定义 ~c_map~（28 行 RGB），用 ~scatter(x, y3, x, x, 'filled'); colormap(c_map);~ 让颜色与点大小表征数值；也可用 ~fill([x, NaN], [y2, NaN], [x, NaN], 'EdgeColor', 'interp', 'LineWidth', 2)~ 做渐变填充。
+  - 带误差线的柱状图：~bar(x,y)~ 后用 ~h(1,k).FaceColor~ 设各系列颜色、~h(1,2).FaceColor='flat'; h(1,2).CData(2,:)=[0.21 0.21 0.67]~ 单独改一根；用 ~h(1,i).XEndPoints~ 取误差线 x，再 ~errorbar(xx, y, neg, pos, 'LineStyle','none',...)~。
+  - 填充图：确定上下边界后用 ~xFill = [x, fliplr(x)]; yFill = [maxY, fliplr(minY)]; fill(xFill, yFill, [0.21 0.21 0.67]);~ 填充，注意多边形要按顺序闭合成环。函数交叉区域填充则用 ~fimplicit(g1,...)~ 取 ~XData/YData~，用 ~fliplr~ 统一方向、~find~ 截取三段区间后拼成闭环再 ~fill~。
+  - 多 Y 轴：两个轴用 ~yyaxis left / yyaxis right~；三个及以上纵坐标把数据归一化到 y1 范围，主图用 ~axes('position',[0.1 0.1 0.5 0.5])~ 画，再叠两个只占 ~0.005~ 宽的空坐标轴（曲线画成白色、~'yaxislocation','right'~）配 ~plot~ 补线，最后 ~box off; set(gcf,'color','white')~。
+  - 二维场图与带箭头曲线：~quiver(x,y,u,v)~ 加 ~streamline(x,y,u,v,startx,starty)~ 画流线；要加箭头就把流线取出的数据从 Axes 坐标换算到 figure 坐标，再用 ~annotation('arrow', xNew, yNew, 'color','b')~ 逐条画。
+  - 三维曲线/散点：~plot3(xt, yt, t, '-o', 'Color','b', 'MarkerSize',10, 'MarkerFaceColor','#D9FFFF')~；多条曲线保证 ~x y z~ 长度一致即可；渐变三维曲线用 ~fill3(..., 'EdgeColor','interp')~；散点用 ~scatter3(x,y,z,s,c)~。
+  - 三维伪彩图：~surf(x,y,z)~ 配 ~colormap~；要在同一 figure 里让不同子图用不同 colormap，可先 ~cMap = colormap;~ 再 ~set(plot1,'Colormap',cMap)~，或用 ~freezeColors~。
+  - 裁剪伪彩图：对 ~peaks~ 生成的数据，把不满足条件的点 ~z(i,j) = NaN~，再用 ~surf; shading interp; view(0,90)~ 渲染出特定区域。
+  - 等高线：~contour(X,Y,Z,20,'LineWidth',2)~、虚线 ~contour(X,Y,Z,'--')~、指定值 ~contour(...,v,...)~、加数值 ~'ShowText','on'~；三维用 ~contour3~（可取球面/peaks 数据）。填充等高线用 ~contourf~（可 ~[2 3]~ 限定范围、~'ShowText','on'~）。
+  - 三维矢量场：~[U,V,W] = surfnorm(X,Y,Z); quiver3(X,Y,Z,U,V,W,0.5,'r'); hold on; surf(X,Y,Z); shading interp; view(0,90);~。
+  - 伪彩图+投影图：用 ~subplot(3,3,[1,2])~ 等布局，主图 ~surf + view(0,90) + shading interp~，上方 ~plot(x, z1)~ 画 x 向投影、右侧 ~plot(z2, y)~ 画 y 向投影；新版可用 ~tiledlayout(3,3,'TileSpacing','Compact')~ 与 ~nexttile([r,c])~。
+  - 条形分布图：~bar(x, y, 'EdgeColor','none', 'BarWidth', 1)~。
+  - 热图：~pcolor(z); view(0,90); ax.EdgeColor=[1 1 1]; axis off~；也可用双层 ~for~ 加 ~patch~ 逐格按数值着色。
+  - 分子模型图：用 ~sphere(100)~ 缩放平移画一个大球（C）加四个小球（H），~axis equal off; light; lighting gouraud~ 增加立体感。
+  - 分形图：Newton-Raphson 解 ~z^8-1=0~，按迭代次数 ~pcolor(X,Y,A); shading flat~，可用 ~VideoWriter~ 生成放大动画；Julia 集取 ~c = -0.1 + 1i*0.651~、半径 32、迭代到 ~abs(z)>radius~。
+  - 曲线斜线填充：见 Taosy.W 专栏《用 Matlab 绘制带有 X 轴和 Y 轴箭头以及斜线填充的曲线图》。
+  - 曲面贴图：~[x,y,z]=sphere(200); p=surf(x,y,z); shading interp; p.CData=image; p.FaceColor="texturemap"; axis equal off;~ 把地图图片贴到球面，再用 ~lightangle~ 循环旋转光源。
+  【原文摘录】
+  #+begin_quote
+  Matlab 强上一波
+  #+end_quote
+  #+begin_quote
+  二维曲线算是最最常见的一种曲线了，它能反应两个变量的因果关系；……调整线的粗细，给人感觉就不一样；或者说这个颜色可能你觉得不好看，查阅帮助文档里给的标准颜色也都不喜欢……没关系，我整理了 28 种个人觉得比较好看的颜色。
+  #+end_quote
+  #+begin_quote
+  % 设置数据点的形状、数据点的填充颜色、数据点的轮廓颜色
+  plot(x, y3, 'o', 'LineWidth', 2, 'Color', [0.46, 0.63, 0.90], 'MarkerFaceColor', [0.35, 0.90, 0.89], 'MarkerEdgeColor', [0.18, 0.62, 0.17]);
+  #+end_quote
+  #+begin_quote
+  % 确定填充多边形，按照顺时针方向来确定点
+  % fliplr 实现左右翻转
+  xFill = [x, fliplr(x)];
+  yFill = [maxY, fliplr(minY)];
+  fill(xFill, yFill, [0.21, 0.21, 0.67]);
+  #+end_quote
+  #+begin_quote
+  % 接下来，确定相交区域，主要看这三个关键点：g1-g2, g1-g3, g2-g3
+  % 数据长度不一样，难搞了，借助【数据提示】功能吧
+  #+end_quote
+  #+begin_quote
+  % 纹理贴图
+  p.FaceColor = "texturemap";
+  #+end_quote
+  【我的想法】
+  覆盖面极广、几乎每种图都配可运行代码，是数模备赛的实用手册；缺点是更像代码索引，适合用时按图索骥，不适合通读。
+
+* 为什么Mac适合编程？  :技巧:Mac:开发环境:工具:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/27617980/answer/919642075
+  :作者:  腾讯技术工程
+  :原文:  [[file:原文/2026-10-19-为什么Mac适合编程-919642075.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-为什么Mac适合编程-919642075.org][打开本地归档]]
+  - 一句话概括：一份「拿到 Mac 后如何配置成顺手的开发工具」的实操清单——从系统基本设置、Homebrew 装工具，到 iTerm2/zsh/oh-my-zsh、VSCode、pyenv 与数据库安装，命令与路径全部照录。
+  【方法/论点要点】
+  - 一、基本设置：①升级到新版本操作系统（示例 macOS Mojave 10.14.3）；②关闭菜单栏效果以减少资源占用和热量——系统偏好设置 / 辅助功能 / 显示，勾选（减弱动态效果、减少透明度）；③配置睡眠保护——系统偏好设置 / 安全性与隐私 / 通用，勾选（进入睡眠或开始保护程序「立即」要求输入密码）；④配置触发角——系统偏好设置 / 屏幕保护程序 / 触发角，选择（右上桌面、左下启动台、右下启动屏幕保护）。
+  - 二、工具安装：①~xcode-select --install~；②Homebrew（~brew.sh~）——用 ~/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"~ 安装，文中强调「必须设置代理地址，否则无法安装 brew」；③brew cask list；④用 brew / brew cask 安装常用工具；⑤其他工具：下载工具 motrix、截图 jietu、看图 kantu，以及 QuickLook 插件 ~qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo~；微软字体 Consolas（YaHei-Consolas-Hybrid 安装脚本）；szrz 插件；graphviz 用 ~dot -h~ 验证。
+  - 三、其他配置·iTerm2：在 iterm2 > preference > profiles > colors > Color Presets 选 solarized dark（配色官网 iterm2colorschemes.com）。
+  - 三、其他配置·zsh 与 oh-my-zsh：~brew install zsh zsh-completions~；~curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh~；编辑 ~/etc/shells~ 添加 ~/usr/local/bin/zsh~；~sudo chsh -s /usr/local/bin/zsh~ 改默认 shell；主题 ~ZSH_THEME=pygmalion~；插件 ~plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)~；ls 配色 ~unset LSCOLORS; export CLICOLOR=1; export CLICOLOR_FORCE=1~；~source ~/.env.sh~ 生效。
+  - 三、其他配置·solarized 主题：~git clone https://github.com/altercation/solarized~；把 ~colors/solarized.vim~ 拷到 ~/.vim/colors/；在 ~/.vimrc 里 ~syntax on~ / ~set background=dark~ / ~colorscheme solarized~ / ~set backspace=2~。
+  - 三、其他配置·VSCode：命令行打开——Command Palette（⇧⌘P）搜 'shell command' 执行 Install 'code' command in PATH；安装插件 Chinese language pack、markdownlint、atom one dark theme、one dark pro、material theme、vscode-icons、python、go；shell 选 zsh——首选项 / 设置搜 ~terminal.integrated.shell.osx~ 设为 ~/usr/local/bin/zsh~；python 解释器选择 env-3.6.8；python lint 选 pylint；python 自动格式化 ~"python.formatting.provider": "black"~；python 开发工具可用 jetbrains 全家桶 / pycharm Community / idea Community。
+  - 四、Python 环境·pyenv：用 pyenv-installer 脚本安装；在 ~/.zshrc 里加 PATH 与 ~eval "$(pyenv init -)"~、~eval "$(pyenv virtualenv-init -)"~。常用命令：~pyenv install -l~ 看可用版本；~pyenv install 2.7.16~；装 py2 报 zlib 错则 ~brew install readline xz~；Mojave 10.14+ 需装 SDK headers（~sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /~）；装 3.7.2 报 ssl 错用 ~CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl)" pyenv install 3.7.2~；~pyenv install 3.6.8~；~pyenv virtualenv 3.6.4 env-3.6.4~ 建虚拟环境；~pyenv activate env-3.6.4~ / ~pyenv deactivate~。
+  - 四、Python 环境·pip 配置：~mkdir ~/.pip~，编辑 ~/.pip/.pip.conf~，写 ~[list] format=columns~、~[global] index-url = http://mirrors.aliyun.com/pypi/simple/ download_cache = ~/.cache/pip~、~[install] trusted-host=mirrors.aliyun.com~。
+  - 五、数据库安装：用 brew service 管理后台任务——~brew tap homebrew/services~；~brew services start mysql~ / ~brew services restart mysql~ / ~brew services list~ / ~brew services cleanup~；界面管理可 ~brew cask install launchrocket~。
+  - 六、参考资源：awesome-mac、open-source-mac-os-apps、Best-App、mac-setup、mac-dev-setup、dev-setup。
+  【原文摘录】
+  #+begin_quote
+  说 Mac 适合编程的答案总结地都差不多了，当你确定要用 Mac 作为开发工具后，那下一步面临的问题就是：拿到一台 Mac 怎么把它配置成一台顺手的开发工具了。
+  #+end_quote
+  #+begin_quote
+  # 这里必须设置 代理地址，否则无法安装brew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  #+end_quote
+  #+begin_quote
+  # 设置主题
+  ZSH_THEME=pygmalion
+  # 设置插件
+  plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+  #+end_quote
+  #+begin_quote
+  # 安装 python2 最新版本
+  pyenv install 2.7.16
+  # 安装报错 ERROR: The Python zlib extension was not compiled. Missing the zlib?
+  brew install readline xz
+  #+end_quote
+  #+begin_quote
+  [global]
+  download_cache = ~/.cache/pip
+  index-url = http://mirrors.aliyun.com/pypi/simple/
+  #+end_quote
+  【我的想法】
+  从系统设置到 Homebrew、iTerm2、VSCode、pyenv 一路照录命令，可直接当配置手册用；缺点是版本敏感，照抄前最好核对当前系统。
+
+* 一年内的前端看不懂前端框架源码怎么办？  :技巧:前端:源码:学习路线:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/350289336/answer/873350617
+  :作者:  增增
+  :原文:  [[file:原文/2026-10-19-一年内的前端看不懂前端框架源码怎么办-873350617.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-一年内的前端看不懂前端框架源码怎么办-873350617.org][打开本地归档]]
+  - 一句话概括：给前端新人的「看源码」循序渐进路线——从 lodash 小函数、到 redux 类库、再到 MVVM 原理与 mini 框架、最后带问题读 React/Vue 并参与开源；并列出业务方向（秒开/工程化/监控/多端/低代码/SSR/Serverless 等）避免只当页面仔。
+  【方法/论点要点】
+  - 前提：不建议直接看迭代了很多大版本的框架源码，要循序渐进。
+  - 第一步：从 ~lodash~ 这种工具库看起——都是小块函数、好上手、容易调试看效果，还能补基础（节流、防抖、深拷贝等）；另推荐 30 seconds of code（全是小而美的代码片段，部分可替代 lodash 函数）。
+  - 第二步：找到看源码的感觉后，看某个功能专一又兼顾深度的类库源码，如 ~redux~、~moment~（可参考《完全理解 redux（从零实现一个 redux）》《带着问题看 React-Redux 源码》）。
+  - 第三步：有基础和感觉后，看现在 MVVM 框架的实现原理——从单一功能开始，拆解 MVVM 的通用实现模式（双向绑定、虚拟 DOM 等），最后实现自己的 mini MVVM（参考《50 行代码的 MVVM，感受闭包的艺术》等）。
+  - 第四步：具备看 React、Vue 的能力后，最好带着问题去看——如 React fiber 原理、如何渲染、setState 怎么操作等（参考《setState 的秘密》《自己动手实现一个 React》）。
+  - 最后：参与开源框架开发——对 preact、vue 等修 issue 或迭代功能，也可对 React/Vue 周边生态库提 PR，进而尝试做对标业界高质量的开源「轮子」。
+  - 但业务里造轮子机会不多，想摆脱「页面仔」还有很多方向：多端秒开/性能优化；工程化套件（脚手架、开发调试工具、发布管理，先熟练 webpack 和 babel）；数据埋点/监控；多端融合（H5/iOS/Android/小程序，跨端框架如 omi、taro、Chameleon，更底层如 Weex、RN、Flutter）；组件库与 pro code / low code（基础组件如 ant design，pro code 如 ant design pro，low code 多可视化搭建）；互动平台（2D/3D 动效、前端图形、直播，动画路线 js/css → svg → lottie-web）；SSR、微前端；BFF、Serverless、BFF in Serverless；灰度平台/ABTest；职场软技能。
+  - 落脚点：离开业务个人能存活、公司离开业务活不了；前端能驱动业务的价值点在于提效、性能优化、可视化工具、监控系统、端侧数据采集及分析、BFF 架构。
+  【原文摘录】
+  #+begin_quote
+  不建议直接看已经迭代了这么多大版本的框架源码，如果想看源码，可以循序渐进的看。
+  #+end_quote
+  #+begin_quote
+  第一步：可以从lodash这种工具库开始看，因为都是比较小块的函数，比较好上手理解，也容易调试看效果。还可以补足自己的基础，例如节流、防抖、深拷贝等。
+  #+end_quote
+  #+begin_quote
+  第三步：这时候自己有了一定的基础和感觉了，可以再去看现在mvvm框架实现的原理，也是从单一的功能开始，拆解mvvm框架的通用实现模式，如双向绑定、虚拟dom等，最后实现自己的mini mvvm。
+  #+end_quote
+  #+begin_quote
+  最后：可以试着参与到开源框架的开发中来，对preact、vue等框架进行一些issue的修复和功能的迭代。
+  #+end_quote
+  #+begin_quote
+  个人离开来业务可以存活，公司离开了业务是活不了的。
+  #+end_quote
+  【我的想法】
+  「从 lodash 到 mini 框架再到 React/Vue」的递进路线很务实；提醒新人别只当页面仔、要关注业务方向，是比看源码更重要的建议。
+
+* 如何克服解决 Git 冲突的恐惧症？  :技巧:Git:版本控制:团队协作:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/27507789/answer/37029749
+  :作者:  东方孤思子
+  :原文:  [[file:原文/2026-10-19-如何克服解决Git冲突的恐惧症-37029749.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-如何克服解决Git冲突的恐惧症-37029749.org][打开本地归档]]
+  - 一句话概括：给 Git 冲突恐惧症开的一张药方——个人层面靠玩 Learn Git Branching、掌握 reflog+reset、用 SourceTree/GitExtensions、灵活 Stash；团队层面 push 前先 merge、重构成独立模块减少交叉改动、管理人员熟练 blame/diff、各自在分支上操作并靠 CI 定期合并主干。
+  【方法/论点要点】
+  - 先安抚：初学者有 branch 分支恐惧症、rebase 恐惧症、conflict 冲突恐惧症都很正常，帮不上忙也别风凉话、秀优越。
+  - 针对个人·根本方法：掌握 Git 基础后，玩一玩《Learn Git Branching》（前端实现的小游戏，由浅入深、一天精通），加深对分支、merge、rebase、pull、push、快进等概念的理解。
+  - 针对个人·治标方法（立竿见影）：「熟练掌握 reflog + reset」——先学会「吃后悔药」就像学车先学会踩刹车，心里才有底；初次进 reflog 界面不知怎么退出（按 ~q~）不要害怕。
+  - 针对个人·辅助方法：装个好的前端如 SourceTree / GitExtensions，一般性操作可不用指令，出错有 UI 界面、解决冲突只需动鼠标，尤其「一键 undo last commit」对新手很好用。
+  - 针对个人·灵活使用 Stash：工作区里有很多无法/没必要 commit 又不能删的临时文件时，可以先 stash 暂存、还你清爽工作区，merge 之后再还原。
+  - 针对团队·第一：所有人 push 之前先 merge；很久没 merge 了就「先 merge 再写码」——这是初学者最常犯的错。
+  - 针对团队·第二：重构项目文件架构，让不同模块的人尽可能少碰别的模块，最好每人只动自己的文件（前后端分离、MVC、MVVM 等），别整个项目就俩文件、那样不出冲突才怪。
+  - 针对团队·第三：项目管理人员要熟练掌握 blame 和 diff，知道怎么帮他人解决冲突。
+  - 针对团队·第四：最好每人只在自己的 Repo/Branch 上操作、不直接 commit 到主干 master/main；这样主管可先 review 再帮他 merge，也要确保他们经常 merge 主干，或用自动化 CI 定期 merge 主干跑测试，防止子项目偏离主干太远。若有人总自己开发、从不 merge 主干，每次合并都是一堆相同的冲突，可据其对项目的重要程度决定是「打死他还是温和提醒他」。
+  【原文摘录】
+  #+begin_quote
+  初学者有 branch 分支恐惧症，rebase 恐惧症，conflict 冲突恐惧症都可以理解啊！帮不上忙就算了，就不要说风凉话，秀优越了……
+  #+end_quote
+  #+begin_quote
+  治标方法，立竿见影，从此神经比较大，就再也不怕不怕不怕啦！——“熟练掌握 reflog + reset”。告诉你后悔药是如何吃的，这就跟学车是一样的道理，一定要先学会踩刹车，心里才有底。
+  #+end_quote
+  #+begin_quote
+  所有人记得 push 之前先 merge，很长时间没 merge 了先 merge 再写码。初学者最常犯的错！
+  #+end_quote
+  #+begin_quote
+  重构项目的文件架构，让不同模块的人尽可能少碰别的模块的东西，最好每个人人只动自己的文件。
+  #+end_quote
+  #+begin_quote
+  最好每个人在自己的 Repo 或 Branch 上操作，不要直接 commit 到主干 master/main。
+  #+end_quote
+  【我的想法】
+  既给个人层面的工具与命令（reflog、stash、图形化），也给团队层面的流程（先 merge、模块解耦、CI），是少见的两层视角；reflog 能治恐惧症这点很真实。
+
+* 怎样快速提高自己的打字速度和正确率？  :技巧:打字:刻意练习:方法:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/41027663/answer/127006670
+  :作者:  翟海生
+  :原文:  [[file:原文/2026-10-19-怎样快速提高自己的打字速度和正确率-127006670.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-怎样快速提高自己的打字速度和正确率-127006670.org][打开本地归档]]
+  - 一句话概括：提高打字速度就一条——找个靠谱的打字网页立刻开始每天刻意练习，降低错误率就是放慢速度想好再下指；作者用 keybr.com 练到最好单次 90wpm、突发 147wpm，并总结出靠「只关注键位与手指感受」进入心流的方法。
+  【方法/论点要点】
+  - 两个问题分别对应：「如何提高打字速度」——找一个靠谱的打字 app 或网页，立刻马上开始每日定时的刻意练习打字；「如何降低错误率」——放慢速度，想好了或看准了再下指。
+  - 心态：种一棵树最好的时间是十年前，其次是现在；不管想做什么，马上开始做最重要。
+  - 跷跷板原理：无论 40wpm 还是 400wpm 的人，打字速度和正确率永远是跷跷板——短期内打得快对得少、打得慢对得多，这点永远不变。但从长期看，每一次击键都是锻炼一次「肌肉记忆」，你要它正确还是要返工？作者选择「慢而正确」地锻炼肌肉记忆。
+  - 心流方法：练习约 10 天后发现一个能进入打字心流（不烦躁、不关心正确率和速度）的方法——keybr.com 会间断性高频出现某个或某两个字母，遇到时每一次敲击只关注某个键的位置和敲击时手指的感受（角度、力度和力反馈），枯燥一扫而空。
+  - 工具 keybr.com：免费网页打字练习，虽是英文但单词不多、多数不认识的单词可以不查也不影响练习；初始目标就是「熟练打完 26 个字母」，看似简单但打字速度 60wpm 以下的人没几个能顺利完工，很多人反馈用了一个月才打完，且对一指禅有键位指示。
+  - 统计功能很强：打字速度增长图、每个字母的打字速度与错误率对比图、击键次数对比图等；作者认为最有用的是最后一行 miss/hit（打字错误数÷击键数）比率，它能告诉你目前的状态和所不知道的短板。
+  - 训练路径：通关英文打字 → 通关中文打字 → 通关字符和标点，通关标准自定（如 60wpm、80wpm 或更多）。英文打字是基础（键盘是英文的）；刻意练习后 Q、W 不到一周，Q 从 20wpm 升到 39wpm、错误率也直线下降。
+  - 状态更新：每日半小时、用不了 100 小时，打字速度应该可以超过世界上 90% 的人；个人最好单次成绩 90wpm；平均打字速度约等于「最高速度减 30」；1 月 8 日突发速度最高到 147wpm（作者自认像假的，留个记录）。
+  【原文摘录】
+  #+begin_quote
+  答1： 找一个靠谱的打字 app 或网页 立刻马上开始每日定时的刻意练习 - 打字。答2： 放慢速度，想好了或看准了再下指。
+  #+end_quote
+  #+begin_quote
+  种一棵树最好的时间是十年前, 其次是现在.
+  #+end_quote
+  #+begin_quote
+  无论对打字 40 wpm 还是 400 wpm 的人来说 ，打字速度和正确率永远是跷跷板。……你每一次击键，就是锻炼一次「肌肉记忆」，你希望每一次的这个「肌肉记忆」是正确的，还是错误的需要返工的？
+  #+end_quote
+  #+begin_quote
+  每一次敲击只关注某个键的位置和敲击它时手指的感受（比如角度，力度和力反馈）。这种感受是如此美妙，打字的枯燥一扫而空。
+  #+end_quote
+  #+begin_quote
+  每日半个小时，用不了100个小时，你的打字速度应该可以超过世界上90%的人。
+  #+end_quote
+  【我的想法】
+  方法极简——找对工具、每天刻意练、慢下来降错误率；90/147wpm 的数据和「只关注键位与手指感受」的心流经验，比泛泛而谈更可信。
+
+* 为什么看似简陋的vim在熟练的人手中如此的神乎其技？  :技巧:Vim:编辑器:效率:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/436870674/answer/1712185019
+  :作者:  kidneyball
+  :原文:  [[file:原文/2026-10-19-为什么看似简陋的vim在熟练的人手中如此的神乎其技-1712185019.org][本地原文]]
+  :抓取:  2026-10-19
+  :END:
+  - 本地原文：[[file:原文/2026-10-19-为什么看似简陋的vim在熟练的人手中如此的神乎其技-1712185019.org][打开本地归档]]
+  - 一句话概括：一位 vim 老手用「按键序列 vs 组合键、类编程的编辑体验、Unix 生态的一环、小功能定制方便」四点解释 vim 为何在熟手中显得神乎其技，并给出宏、:norm、外部命令整合等实战方法。
+  【方法/论点要点】
+  - 普及度洗脑：全平台制霸，除 Windows 外主流系统基本预装，iPad、安卓都能用；各种 IDE 都有 vim 模拟器，且都能配置一键跳到纯 vim 里改完再回来，「一次学习到处使用」，学习曲线再高也值回票价。
+  - 理念一：主打按键序列而非组合功能键。组合键受功能键数量和表义限制，字母不够用、手指要一直按住、功能键本身不表义；按键序列可无限组合且表义，常用设短、不常用设长，如把 IDE 快捷键配成「空格打头空格结尾」，既好记又能减轻小指劳损。
+  - 理念二：类似编程的编辑体验（吸引程序员的大杀器）——把编辑看成用短命令变换一坨文本数据。
+  - 组合元素：~ciw~（change in word）拆成 3 个可替换元素，~diw~/~caw~/~ci"~ 同理；~xp~ 直接记成「交换两字符」、~ddp~ 交换两行、~bi~/~ea~ 在词首/词尾插入更自然。
+  - 命令按逻辑体系设计而非功能拼凑：~r~ 在选中模式下把所选文本都改成同一字符，作者原本觉得没用，后来发现是 markdown 标题下划线的终极方案；常会发现顺理成章但看似没用的设定突然在某场景有奇效，连插件都省了。
+  - 丰富的定位与范围限定：到绝对行首 ~0~、到第一个非空字符 ~_~/~^~、下一绝对行 ~j~、下一可视行 ~gj~，以及 ~f F t T W E { }~ 等；关键用途是方便录宏。
+  - 录宏三步曲：对齐定位、操作、下一个。~qq~ 开录、~@q~ 重放、~@@~ 重复；例子——查 ~lambda~ 后把第二个括号内容改成 ~x+1~：~F"f(%f(~ 对齐 + ~ci(x+1~ + ~n~ + ~q~。建议尽量用对齐定位功能移动光标，避免滥用 ~hjkl~。
+  - 命令像函数：接受「数字/动作/文本对象」参数，数字表示重复执行。
+  - ~:norm~ 配合 ~:global~：可用编辑命令显式写「代码」；选中文本时对每一行执行命令。如选中每行行尾加逗号 ~:norm A,~；在选中每行回放宏 ~:norm @q~。
+  - 理念三：Vim 是 Unix 生态的重要一环，不只是命令行下好用的编辑器。用 ~set EDITOR=vim~ 配合 ~ctrl-x ctrl-e~ 在命令行里编辑长命令；用 ~cmd | vim -~ 把命令输出当文件编辑；~:r !cmd~ 读入命令结果到光标下方；~:'<,'>!cmd~ / ~:%!cmd~ 把选中/全文喂给外部命令并用输出替换；连续 ~:%!cmd~ 相当于链式 pipe 且可中途改动；对选中内容执行 ~:'<,'>!bash~ 可直接跑 shell。
+  - 由此两个体验：vim 可当大部分命令行工具的输入输出界面，自己用任意语言写个读 stdin 写 stdout 的工具即可；只要能找到合适的命令行工具，很多需求无需装插件——格式化 JSON 用 ~jq~、XML 用 ~xmllint~、JS 用 ~js-beautify~。
+  - 理念四：小功能定制方便，不必写 vimL 插件，宏 + command + norm + 外部命令就能玩出花。例：在光标处插入 uuid——录宏 ~ma~、~:r !uuidgen~、~yg_~、~"_dd~、跳回标记 a，再把宏转成 vimrc 里的 ~:Uuid~ 命令；或配置 ~:TAFmtJson~ 调用 ~jq -S~ 格式化并排序、设语法高亮与折叠，搜关键字时自动展开路径折叠，是检查深层 JSON 路径的利器。
+  - 结论：多数工具扩展靠调 API 且与日常编辑割裂；vim 有 vimL 层，也有「直接模拟手打命令」的流氓方案，并与「宏存寄存器」的特性相得益彰。
+  【原文摘录】
+  #+begin_quote
+  总之还是那句，一次学习到处使用。就这一点在我看来无论学习曲线多高其实都已经值回票价了。
+  #+end_quote
+  #+begin_quote
+  使用 vim 编辑时，不要看成自己在码字，而是在用各种短命令去变换一坨数据（文本）。
+  #+end_quote
+  #+begin_quote
+  录宏三步曲：【对齐定位、操作、下一个】。大部分 IDE 和编辑器虽然也有录宏重播的功能，但没提供好用的对齐定位功能，宏功能就变成了鸡肋。
+  #+end_quote
+  #+begin_quote
+  在我的角度看，我相当于在极短时间内用 vim 的编辑命令写了个小程序在重复执行。
+  #+end_quote
+  #+begin_quote
+  你会发现 vim 其实可以作为大部分命令行工具的输入输出界面……随便用个顺手的语言写个命令行工具，从 stdin 拿到输入，把结果输出到 stdout，专注业务逻辑就行了。
+  #+end_quote
+  #+begin_quote
+  大部分工具提供的扩展方案都是调用 API……而不会让你“写个脚本模拟人手按 ctrl-f 查找”。
+  #+end_quote
+  【我的想法】
+  这篇把 vim「为什么强」讲得比我读过的多数教程都透彻，精髓在「把编辑当编程」和「对齐定位 + 录宏」这两条可迁移的心法。最有价值的是那个把宏落成 ~:Uuid~ / ~:TAFmtJson~ 自定义命令的套路——它证明了 vim 的扩展未必需要写插件，宏本身就是可复用的程序。属于值得收藏反复看的技巧文。

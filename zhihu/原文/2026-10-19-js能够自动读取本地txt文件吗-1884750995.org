@@ -1,0 +1,24 @@
+#+TITLE: js能够自动读取本地txt文件吗？
+#+LINK: https://www.zhihu.com/question/459169278/answer/1884750995
+#+AUTHOR: Uruz-7
+#+CREATED: 2021-05-13
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+前段时间也是遇到了类似需求
+
+大概是这样，电脑上一个文件夹会不断产生新文件，前端页面需要访问那个文件夹里最新文件的内容。
+
+leader让我看看能不能浏览器直接访问，我一开始也以为不行，然后我查到了这个
+
+[https://web.dev/file-system-access/](https://web.dev/file-system-access/)
+
+也就是从浏览器访问文件系统的API
+
+demo在这里
+
+[Text Editor](https://googlechromelabs.github.io/text-editor/)
+
+也就是说从浏览器已经可以实现文件访问了。但是最重要的一点是这个过程必须有用户参与，需要用户赋予权限，类似UAC，所以自动监视文件夹目前还是不可以。
+
+最后我的解决方法是在本地用python搭一个API，然后从前端发送请求，后端收到请求以后扫描文件这样。当然用node.js，用go什么的也都一样了。

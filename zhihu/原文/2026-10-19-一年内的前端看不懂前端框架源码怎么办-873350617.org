@@ -1,0 +1,107 @@
+#+TITLE: 一年内的前端看不懂前端框架源码怎么办？
+#+LINK: https://www.zhihu.com/question/350289336/answer/873350617
+#+AUTHOR: 增增
+#+CREATED: 2019-10-28
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+不建议直接看已经迭代了这么多大版本的框架源码，如果想看源码，可以循序渐进的看。
+
+第一步：可以从lodash这种工具库开始看，因为都是比较小块的函数，比较好上手理解，也容易调试看效果。还可以补足自己的基础，例如节流、防抖、深拷贝等。另外还推荐30 seconds of code，全是小而美的代码片段，有些lodash的函数可以用这个替代。
+
+[徐祁：Lodash 源码中的那些迷人的细节](https://zhuanlan.zhihu.com/p/32823459?refer=FrontendMagazine)
+
+[30 seconds of code](https://www.30secondsofcode.org/list)
+
+第二步：找到了看源码的感觉后，再去看某个类库的源码，比如说redux、moment这种，功能专一同时也兼顾深度。
+
+[完全理解 redux（从零实现一个 redux） · Issue #22 · brickspert/blog](https://github.com/brickspert/blog/issues/22)
+
+[Nero：带着问题看React-Redux源码（一万四千字长文预警）](https://zhuanlan.zhihu.com/p/80655889)
+
+第三步：这时候自己有了一定的基础和感觉了，可以再去看现在mvvm框架实现的原理，也是从单一的功能开始，拆解mvvm框架的通用实现模式，如双向绑定、虚拟dom等，最后实现自己的mini mvvm。
+
+[50行代码的MVVM，感受闭包的艺术 - 掘金](https://juejin.im/post/5b1fa77451882513ea5cc2ca)
+
+[不好意思！耽误你的十分钟，让MVVM原理还给你 - 掘金](https://juejin.im/post/5abdd6f6f265da23793c4458)
+
+第四步：这时候你具备了看react、vue这种框架的能力了，最好还是带着问题去看，比如看react fiber的原理、如何渲染的，setState怎么操作等等。
+
+[[React技术内幕] setState的秘密](https://juejin.im/post/599b8f066fb9a0247637d61b)
+
+[怎样学习React？当然是自己动手实现一个React啦 - 掘金](https://juejin.im/post/5ad81c24f265da504c168c85)
+
+最后：可以试着参与到开源框架的开发中来，对preact、vue等框架进行一些issue的修复和功能的迭代。如果觉得过于困难，可以对react或者vue周边生态的库进行pr，经过前面的这么多铺垫，这时候也可以释放自己创造力了，可以试着做一些对标业界开源高质量的轮子。
+
+[打造 10000 Star 的前端开源项目 ⭐](https://juejin.im/post/5c25a477f265da613b6fd70e)
+
+---
+
+但是，在实际的业务开发中并没有多少造这种轮子的机会，抛开具体的知识点，大家的关注点会更多的放在能够产生业务价值的事情上，如果想摆脱页面仔的称号，还有很多其他方向，值得研究和学习
+
+- *各种多端秒开方案、性能优化相关*
+
+[移动 H5 首屏秒开优化方案探讨](http://blog.cnbang.net/tech/3477/)
+
+- *工程化套件（脚手架、开发调试工具、发布管理）（建议先熟练使用webpacl和babel）*
+
+[【手把手】15分钟搭一个企业级脚手架 - 掘金](https://juejin.im/post/5d650613f265da03951a0364)
+
+[前端自动化发布实战总结 - 掘金](https://juejin.im/post/5b23f18b6fb9a00e6433536d)
+
+- *数据埋点/监控*
+
+[前端监控和前端埋点方案设计 - 掘金](https://juejin.im/post/5b62d68df265da0f9d1a1cd6)
+
+- *多端融合（包含 H5/iOS/Android/小程序 ）*
+
+跨端开发框架如腾讯的omi、京东的taro和滴滴的Chameleon
+
+更加偏底层的有Weex、RN、Flutter
+
+[多端统一开发框架 - Taro](https://aotu.io/notes/2018/06/07/Taro/)
+
+[[译] Awesome Flutter：带你从入门到进阶的 Flutter 指南](https://juejin.im/post/5b2869e66fb9a00e5f3e861f)
+
+- *组件库、pro code、low code方案*
+
+组件库有基础组件库和业务组件库，基础组件像ant design这种已经非常的成熟了。实际业务中可能会根据场景去封装基础组件库构成业务组件、通用模板等。
+
+pro code: 以 ant design pro这种为代表，相当于一个开箱即用的中后台系统
+
+low code：一般是可视化搭建的形式生成前端代码，一般只能做比较简单的场景或者和业务耦合的也比较严重，目前没有好的开源的产品
+
+- *互动平台，包括各种2d、3d的动效, 前端图形，直播等*
+
+[直播原理与web直播实战 - 掘金](https://juejin.im/post/5ab851b6f265da23826df601)
+
+动画动效路线: js/css动画 -> svg动画 ->  lottie-web
+
+- *SSR、微前端方案*
+
+[【长文慎入】一文吃透 React SSR 服务端渲染和同构原理](https://juejin.im/post/5d7deef6e51d453bb13b66cd)
+
+- *BFF、Serverless、以及BFF in Serverless*
+
+[探索 Serverless 中的前端开发模式](https://juejin.im/post/5cdc3dc2e51d453b6c1d9d3a)
+
+- *灰度平台/ABtest等等*
+
+[要进大厂？前端灰度发布必须要知道 - 掘金](https://juejin.im/post/5da88d795188252f051e2b47)
+
+- *职场生存必备软技能*
+
+[软技能-代码之外的生存指南1(职业篇) - 掘金](https://juejin.im/post/5bf2382d6fb9a049d974ccb6)
+
+[工程师如何在工作中提升自己? - 掘金](https://juejin.im/post/5ad06fc851882555635ebc9c)
+
+---
+
+最后的最后，还是回到业务, 个人离开来业务可以存活，公司离开了业务是活不了的，一般的业务是重后端的，这里只说下前端有哪些可以驱动业务的地方（也就是业务代码之外你的价值体现）
+
+- *提效*
+- *性能优化*
+- *可视化工具*
+- *各种监控系统*
+- *端侧数据采集及分析*
+- *BFF架构*

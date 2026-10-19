@@ -1,0 +1,18 @@
+#+TITLE: 为什么第一张图我怎么看都是凸起来的，但实物其实是凹下去的？
+#+LINK: https://www.zhihu.com/question/630297407/answer/3290058860
+#+AUTHOR: 打开盒子吓一跳
+#+CREATED: 2023-11-15
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+其实这是光源位置问题，人脑在分析图片时会习惯性地默认光源在上，阴影在下。如果大家盯着手腕位置的阴影看一下，试着脑补一下光源位置，再去重新观察就会看出是凹下去的了。
+
+[[https://pic1.zhimg.com/50/v2-c1998cc4c5b8551abd0e6ab9eb468f7e_720w.jpg?source=2c26e567]]
+
+同理，假如我们把这张图翻转一下，把光源调到大脑默认的朝上位置，大多数人都可以一眼看出来是凹下去的。
+
+[[https://pica.zhimg.com/50/v2-351e479fea48fee257864c4470096cbb_720w.jpg?source=2c26e567]]
+
+假如我们把另一张参考侧面图翻转一下，很多人又会感觉实物是凸起来的。
+
+[[https://picx.zhimg.com/50/v2-28b0929a1eb7d61e1dbd1e629e95e0e9_720w.jpg?source=2c26e567]]

@@ -1,0 +1,33 @@
+#+TITLE: 想体验原生安卓该选择什么手机？
+#+LINK: https://www.zhihu.com/question/439545724/answer/1683196297
+#+AUTHOR: 张小夜
+#+CREATED: 2021-01-17
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+除了Google Pixel系列，索尼、三星、LG、小米、红米、一加、Realme等可以解锁bootloader的手机都可以刷原生Android，XDA论坛有教程。而且旗舰机基本都支持4K60Hz。
+
+如果只是想体验下，推荐捡LG的洋垃圾，性能高，屏幕分辨率高，还便宜。但是LG手机刷机其实不太友好（本人上次就把一台LGV35刷的不能插移动卡了），所以刷机要谨慎。推荐个国内论坛： [LGe社区](https://bbs.lge.fun/) 。
+
+其中第三方的原生Android开发者网站有 [lineageos](https://download.lineageos.org/) ，国内的 [魔趣](https://download.mokeedev.com/) 。但这两个现在更新也不太频繁了。并且也抛弃了不少机型。以下再提供其他原生ROM的信息。
+
+目前有大量的在原生ROM提供一些个性化功能的ROM，比如比较火的有 [DotOS](https://www.droidontime.com/devices/spes) , [PixelPlusUI](https://ppui.site/download) , [Evolution X (evolution-x.org)](https://evolution-x.org/) , SuperiorOS等。
+
+其中dotOS是定制化程度最高的，也是Android大版本更新最慢的。但其实界面还是类原生的。
+
+[[https://pica.zhimg.com/50/v2-7b6cf6a8fb19b8e631fbfcaae9ae1ea0_720w.jpg?source=2c26e567]]
+*dotOS*
+
+[[https://pic1.zhimg.com/50/v2-6f67be9fb3c9dad2785c2a38e24b4131_720w.jpg?source=2c26e567]]
+*dotOS*
+
+[[https://pica.zhimg.com/50/v2-d5316ef3d0126227d17d069eced9d3b2_720w.jpg?source=2c26e567]]
+*Evolution X 可配置项*
+
+可以加入他们的TG频道。会发布新ROM的信息和下载地址，一般包含带谷歌服务和不带谷歌服务两个版本的。目前本人使用的是一台Redmi Note 7 Pro，已经刷入了原生Android 13系统。还是挺流畅的。
+
+可以去这俩网站查看支持的机型。
+
+[]()
+
+[]()

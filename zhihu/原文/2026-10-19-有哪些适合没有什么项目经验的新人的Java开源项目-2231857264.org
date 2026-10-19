@@ -1,0 +1,87 @@
+#+TITLE: 有哪些适合没有什么项目经验的新人的 Java 开源项目？
+#+LINK: https://www.zhihu.com/question/20341975/answer/2231857264
+#+AUTHOR: HelloGitHub
+#+CREATED: 2021-11-19
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+新人入门，找适合入门学习的开源项目？来看 *HelloGitHub* 的推荐就对啦！ *HelloGitHub* 在过去的 5 年里专注于发掘有趣、入门级的开源项目
+
+目前已经推荐了 *1600* 多个开源项目！不仅有适合入门Java的项目推荐，还有很多其他语言入门项目集合以及很多有意思的开源项目，助你开启编程之路~
+
+推荐一些适合入门学习的Java开源项目：
+
+** *1、快乐的小鸟**
+
+[[https://picx.zhimg.com/50/v2-e244ea79866eec7437b7dfe84f2509e4_720w.jpg?source=2c26e567]]
+
+作者仅使用了 Java 标准库还原了，曾经在手机上红遍一时的“愤怒的小鸟”。先 ~clone~ 把源码下载后，可以通过 ~java -jar FlappyBird.jar~ 直接运行，也可以通过运行源码中的 ~GameApp:main~ 方法来启动整个游戏。通过学习该项目可以学习到： 
+
+
+- 使用标准库中的一些工具，比如集合、播放音效、加载图片
+- 如何利用多文件，把不同的逻辑拆分到不同的类中去，并相互之间协作构建起整个游戏的状态
+- 一些设计模式的应用，比如单例、对象池
+
+#+begin_quote
+GitHub 地址： [https://github.com/kingyuluk/FlappyBird](https://github.com/kingyuluk/FlappyBird)
+#+end_quote
+
+** 2、 *Java 圣经**
+
+[[https://pic1.zhimg.com/50/v2-45a0305f271d8dd7bbb8d61aea7bde85_720w.jpg?source=2c26e567]]
+
+高尔基说过：「书是人类进步的阶梯」。在历史的长河中诞生过无数的著作，计算机领域也不例外，而《Think in Java》就是我要重点介绍的一本著作，这本书给我的第一印象就是：全！从最基本的数据类型到之后的面向对象再到后面的泛型反射的高级话题，无所不包。我之前阅读的是第四版实体书，现在的好消息是，第五版来了！而且是以开源的形式。经过之前小项目的小打小闹，大家也有了一点编程的感觉了，是时候巩固下理论知识了，俗话说的好：「基础不牢，地动山摇」。现在这个阶段去阅读此著作一定会给你不一样的感觉，我甚至推荐你每到一个阶段，你可以回过头去翻翻这本经典书籍，每次都会有新的认识。 
+
+
+- 项目地址： [https://github.com/LingCoder/OnJava8](https://github.com/LingCoder/OnJava8)
+- 在线阅读： [https://lingcoder.github.io/OnJava8/#/sidebar](https://lingcoder.github.io/OnJava8/#/sidebar)
+
+** 3、 *春天来了**
+
+Java 在生产中多数是以服务端开发为主，那在服务端领域还有一个一定绕不开的 Java 框架就是 Spring。我相信你一定听过这个名字，Spring 这个框架现在基本已经是 Java 服务端的工业级标准了，我就职过的公司没有一个不用的，而 Spring 发展至今，他工程上的复杂程度也大大的提高了，各种封装和抽象，想要搞懂原理变得非常困难，但是你不需要太过害怕，因为只是完成功能上的开发和一般的使用是不需要知道 Spring 的原理的。Spring 团队为了能进一步提升开发体验，推出了 Spring Boot 这个框架，你可以认为 Spring Boot 是对原本的 Spring MVC 进行封装并且内置了一个 Tomcat 的容器，仅此而已。最后如果是新学的话建议直接从 2.0 开始。
+
+关于 Spring Boot 我这里推荐一个项目：
+
+#+begin_quote
+[https://github.com/yizhiwazi/springboot-socks](https://github.com/yizhiwazi/springboot-socks)
+#+end_quote
+
+项目里面内置了很多有用的片段，从最简单的 Hello World 到如何集成 Mybatis 啊，又或者是如何跨域，还有怎么发送邮件啊等等，都有一个对应的文件夹的示例。
+
+此阶段建议按照以下路线学习：
+
+- 从零启动一个空的 Spring Boot 项目，可以学习到 Spring Boot 的最小配置，以及如何声明 REST 风格的 Controller 并返回简单的数据
+- 将 Spring Boot 和 Java 的持久层框架（如 Mybatis-Plus ）串起来，通过 REST 的接口进行简单的增删改查操作（可以完全不需要页面，仅仅需要一个 Postman 或者 ~curl~ 即可）
+- 使用 FreeMarker 或者 Thymeleaf 其他模板引擎，写一个简单的页面（可以是一些简单的输入框，按钮，完全不需要考虑样式），再将之前的增删改查操作串起来，并通过模板引擎将结果渲染至浏览器。
+
+完成这个阶段后，相信你对企业中的前后端交互以及框架的基本使用就有概念了。然后就能基于此，尝试做一些小功能，比如登陆，注册等等。
+
+*前方高能，干货来啦！我们还推出了多种热门语言的入门级开源项目，包括Java* 、 *Python、c++、Go、JS* ：
+
+[适合 Java 新手的开源项目集合——在 GitHub 学编程​mp.weixin.qq.com/s/XT53_VinwQhD-ns0gGiN7A​mp.weixin.qq.com/s/XT53_VinwQhD-ns0gGiN7A](https://mp.weixin.qq.com/s/XT53_VinwQhD-ns0gGiN7A)
+
+[GitHub 上适合新手的开源项目——Python 篇](https://mp.weixin.qq.com/s/CudNAqf5n1VwQWBS-LehSA)
+
+[适合 C++ 新手学习的开源项目——在 GitHub 学编程​mp.weixin.qq.com/s/x__bkNvNDoHQy1pOL4AaOw​mp.weixin.qq.com/s/x__bkNvNDoHQy1pOL4AaOw](https://mp.weixin.qq.com/s/x__bkNvNDoHQy1pOL4AaOw)
+
+[适合 Go 新手学习的开源项目——在 GitHub 学编程​mp.weixin.qq.com/s/pAkjxK6N4shTEtHXQbxChg​mp.weixin.qq.com/s/pAkjxK6N4shTEtHXQbxChg](https://mp.weixin.qq.com/s/pAkjxK6N4shTEtHXQbxChg)
+
+[适合 JS 新手学习的开源项目——在 GitHub 学编程​mp.weixin.qq.com/s/lZhw4aDItZo2DLsm0rf82A​mp.weixin.qq.com/s/lZhw4aDItZo2DLsm0rf82A](https://mp.weixin.qq.com/s/lZhw4aDItZo2DLsm0rf82A)
+
+以及每周一篇 *GitHub Trending* 精选项目:
+
+[https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MzYyNzQ0MQ==&action=getalbum&album_id=1332112026222641153#wechat_redirect​mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MzYyNzQ0MQ==&action=getalbum&album_id=1332112026222641153#wechat_redirect​mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MzYyNzQ0MQ==&action=getalbum&album_id=1332112026222641153#wechat_redirect](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MzYyNzQ0MQ==&action=getalbum&album_id=1332112026222641153#wechat_redirect)
+
+*HelloGitHub* 月刊也在持续更新中，每月28号发刊，可以关注下
+
+附上最新一期月刊:
+
+[《HelloGitHub》第 67 期​mp.weixin.qq.com/s/Kt_hz4coNIzZhu3e9zILbA](https://mp.weixin.qq.com/s/Kt_hz4coNIzZhu3e9zILbA)
+
+关注 *HelloGitHub* 可解锁更多入门级、有意思的开源项目
+
+#+begin_quote
+HelloGitHub 想让更多人爱上编程、开源，所以一直在尝试、摸索如何可以帮助到更多的人。目前HelloGitHub 交流群已全面开放，添加： *HelloGitHub001* 为好友入群，可同 *前端* 、 *Java* 、 *Go* 、 *Python* 等各界大佬谈笑风生、切磋技术~ 还有 *大学生开源群* ，叫上你的小伙伴一起感受开源的乐趣吧！
+#+end_quote
+
+*HelloGitHub 分享 GitHub 上有趣、入门级的开源项目，找开源就上 HelloGitHub。*

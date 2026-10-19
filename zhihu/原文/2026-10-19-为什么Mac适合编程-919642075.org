@@ -1,0 +1,263 @@
+#+TITLE: 为什么 Mac 适合编程？
+#+LINK: https://www.zhihu.com/question/27617980/answer/919642075
+#+AUTHOR: 腾讯技术工程
+#+CREATED: 2019-12-02
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+说 Mac 适合编程的答案总结地都差不多了，当你确定要用 Mac 作为开发工具后，那下一步面临的问题就是：拿到一台 Mac 怎么把它配置成一台顺手的开发工具了。
+
+下面分享一下鹅厂程序猿 GG 的配置心得：
+
+* *一、基本设置**
+
+1. 升级到新版本操作系统(macOS Mojave 10.14.3)
+2. 关闭菜单栏效果, 减少资源占用和产生的热量
+
+#+begin_quote
+系统偏好设置/辅助功能/显示, 勾选 (减弱动态效果、减少透明度)
+#+end_quote
+
+1. 配置睡眠保护
+
+#+begin_quote
+系统偏好设置/安全性与隐私/通用, 勾选(进入睡眠或开始保护程序 ~立即~ 要求输入密码)
+#+end_quote
+
+1. 配置触发角
+
+#+begin_quote
+系统偏好设置/屏幕保护程序/触发角, 选择(右上桌面，左下启动台，右下启动屏幕保护)
+#+end_quote
+
+* *二、工具安装**
+
+1. Xcode Command Line Tools
+
+#+begin_quote
+xcode-select --install
+#+end_quote
+
+1. [Homebrew](https://brew.sh/)
+
+#+begin_src text
+* 这里必须设置 代理地址，否则无法安装brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install
+
+#+end_src
+
+1. [brew cask list](https://github.com/caskroom/homebrew-cask/tree/master/Casks)
+2. brew 安装常用工具
+
+[[https://picx.zhimg.com/50/v2-e8498934639743084e368795d2de7202_720w.jpg?source=2c26e567]]
+
+1. brew cask 安装常用工具
+
+[[https://picx.zhimg.com/50/v2-02172e18b8e9a02f1479619b61103af7_720w.jpg?source=2c26e567]]
+
+1. 其他工具
+
+- [下载工具 motrix](https://motrix.app/)
+- [截图工具 jietu](http://jietu.qq.com/)
+- [看图工具 jietu](https://kantu.qq.com/)
+- [brew cask tools list](https://github.com/caskroom/homebrew-cask/tree/master/Casks)
+- [快速查看工具 Nicer plugins for QuickLook](https://github.com/sindresorhus/quick-look-plugins) 
+ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo 
+
+- 微软字体 Consolas 
+ wget -qO- [https://raw.githubusercontent.com/yakumioto/YaHei-Consolas-Hybrid-1.12/master/install.sh](https://raw.githubusercontent.com/yakumioto/YaHei-Consolas-Hybrid-1.12/master/install.sh) && sudo install.sh 
+
+- [szrz插件](https://github.com/mmastrac/iterm2-zmodem)
+- graphviz 所用语言 dot 验证 
+ dot -h 
+
+
+* *三、其他配置**
+
+1. 设置 iterm2
+
+- [iterm2 配色官网](http://iterm2colorschemes.com/) 
+ iterm2 > preference > profiles > colors > Color Presets > solarized dark 
+
+
+1. 安装 zsh，oh-my-zsh 
+ *# 安装 zsh 及 补全* 
+ brew install zsh zsh-completions 
+ 
+ *# 安装 oh-my-zsh* 
+ curl -L [https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh](https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh) | sh 
+ 
+ *# 编辑 /etc/shells* 
+ sudo vim /etc/shells 
+ 
+ *# 添加 zsh* 
+ /usr/local/bin/zsh 
+ 
+ *# 修改默认shell* 
+ sudo chsh -s /usr/local/bin/zsh 
+ 
+ *# 将环境变量移到~/.env.sh* 
+ vim ~/.zshrc 
+ 
+ *# 设置主题* 
+ ZSH_THEME=pygmalion 
+ *# 设置插件* 
+ plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting) 
+ 
+ *# ls 配色生效* 
+ unset LSCOLORS 
+ export CLICOLOR=1 
+ export CLICOLOR_FORCE=1 
+ 
+ *# 生效* 
+ source ~/.env.sh 
+
+2. solarized 主题配色 
+ *# clone 之* 
+ git clone [https://github.com/altercation/solarized](https://github.com/altercation/solarized) 
+ 
+ *# 配置 vim 主题* 
+ cd solarized/vim-colors-solarized/ 
+ mkdir -p ~/.vim/colors 
+ cp colors/solarized.vim ~/.vim/colors/ 
+ 
+ *# 配置 vim* 
+ vim ~/.vimrc 
+ syntax on 
+ set background=dark 
+ colorscheme solarized 
+ set backspace=2 
+
+3. [vscode 配置命令行中打开](https://code.visualstudio.com/docs/setup/mac)
+
+#+begin_quote
+Open the Command Palette ( ?? P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command. 
+
+#+end_quote
+
+1. vscode 插件安装
+
+- Chinese language pack(中文语言包)
+- markdownlint(markdown格式检查器)
+- atom one dark theme(ATOM 风格主题)
+- one dark pro(主题)
+- material theme(主题)
+- vscode-icons(图标)
+- python(vscode python扩展包)
+- go(go 扩展包)
+
+1. vscode shell 选择，zsh
+
+#+begin_quote
+首选项/设置, 搜索 terminal.integrated.shell.osx ，设置值为 /usr/local/bin/zsh
+#+end_quote
+
+1. vscode python 解释器选择
+
+#+begin_quote
+⇧⌘P, 搜索 select interpreter ，选择一个 env-3.6.8
+#+end_quote
+
+1. vscode python lint 安装，选择 pylint 即可
+2. [vscode python 自动格式化](https://code.visualstudio.com/docs/python/editing)
+
+#+begin_quote
+"python.formatting.provider": "black"
+#+end_quote
+
+1. python 开发工具
+
+- [jetbrains 全家桶](https://www.jetbrains.com/)
+- [pycharm Community](https://www.jetbrains.com/pycharm/)
+- [idea Community](https://www.jetbrains.com/idea/)
+
+* *四、 python 环境**
+
+1. pyenv 安装 
+ *# 安装 pyenv 参考, [http://einverne.github.io/post/2017/04/pyenv.html](http://einverne.github.io/post/2017/04/pyenv.html)* 
+ curl -L [https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer](https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer) | bash 
+ 
+ *# 添加环境变量* 
+ vim ~/.zshrc 
+ export PATH="HOME/.pyenv/bin:HOME/.pyenv/bin:HOME/.pyenv/bin:PATH" 
+ eval "(pyenvinit¨E45E)"eval"(pyenv init -)" 
+ eval "(pyenvinit¨E45E)"eval"(pyenv virtualenv-init -)" 
+ 
+ *# 常用命令* 
+ 
+ *# 查看可用版本* 
+ pyenv install -l 
+ 
+ *# 安装 python2 最新版本* 
+ pyenv install 2.7.16 
+ 
+ *# 安装报错 ERROR: The Python zlib extension was not compiled. Missing the zlib? [https://github.com/pyenv/pyenv/wiki/common-build-problems](https://github.com/pyenv/pyenv/wiki/common-build-problems)* 
+ brew install readline xz 
+ 
+ *# When running Mojave or higher (10.14+) you will also need to install the additional SDK headers by downloading them from Apple Developers. You can also check under /Library/Developer/CommandLineTools/Packages/ as some versions of Mac OS will have the pkg locally.* 
+ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target / 
+ 
+ *# 安装 python3 最新版本 3.7.2* 
+ *# 报错 ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?* 
+ *# [https://github.com/pyenv/pyenv/issues/1184#issuecomment-409320318](https://github.com/pyenv/pyenv/issues/1184#issuecomment-409320318)* 
+ CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl)" pyenv install 3.7.2 
+ 
+ *# 安装 python 3.6 ，tf 支持的最新版本* 
+ pyenv install 3.6.8 
+ 
+ *# 安装 python2 最新版 2.7.16* 
+ pyenv install 2.7.16 
+ 
+ *# 创建虚拟环境* 
+ pyenv virtualenv 3.6.4 env-3.6.4 
+ 
+ *# 激活虚拟环境* 
+ pyenv activate env-3.6.4 
+ 
+ *# 退出虚拟环境* 
+ pyenv deactivate 
+
+2. 创建 pip 配置文件 
+ *# 创建 pip 配置目录* 
+ mkdir ~/.pip 
+ 
+ *# 编辑配置* 
+ vim ~/.pip/.pip.conf 
+ 
+ *# 添加以下内容* 
+ [list] 
+ format=columns 
+ [global] 
+ download_cache = ~/.cache/pip 
+ index-url = [http://mirrors.aliyun.com/pypi/simple/](http://mirrors.aliyun.com/pypi/simple/) 
+ [install] 
+ trusted-host= [http://mirrors.aliyun.com](http://mirrors.aliyun.com) 
+
+
+* *五、数据库安装**
+
+1. 数据库安装
+
+[[https://picx.zhimg.com/50/v2-b62ec90a4263a9bc24f91194f288f17c_720w.jpg?source=2c26e567]]
+
+1. 通过 brew service 管理此类后台任务 
+ brew tap homebrew/services 
+ brew services start mysql 
+ brew services restart mysql 
+ brew services list 
+ brew services cleanup 
+ 
+ *# 通过界面管理后台服务* 
+ brew cask install launchrocket 
+
+
+* *六、参考**
+
+- [awesome-mac](https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md)
+- [open-source-mac-os-apps](https://github.com/serhii-londar/open-source-mac-os-apps)
+- [Best-App](https://github.com/hzlzh/Best-App)
+- [mac-setup](http://sourabhbajaj.com/mac-setup/)
+- [mac-dev-setup](https://github.com/nicolashery/mac-dev-setup)
+- [dev-setup](https://github.com/donnemartin/dev-setup)
+
+更多干货，欢迎关注： [腾讯技术](https://www.zhihu.com/org/teng-xun-ji-zhu-gong-cheng/activities)

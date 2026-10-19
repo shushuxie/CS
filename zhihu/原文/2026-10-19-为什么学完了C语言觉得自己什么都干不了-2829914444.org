@@ -1,0 +1,129 @@
+#+TITLE: 为什么学完了 C 语言觉得自己什么都干不了？
+#+LINK: https://www.zhihu.com/question/574785659/answer/2829914444
+#+AUTHOR: 库森说 AI
+#+CREATED: 2023-01-04
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+*你是不是觉得：学完了 C 语言就是只能坐下数学题，在黑框里输出一串数字，做个水仙花、杨辉三角。觉得它并不能编辑出一个啥子游戏或者软件出来。*
+
+阿里的库森学长在读书是也是这种感受，平时老师上课时基本都在用古老的软件vc6.0，能用vs2013的都屈指可数！
+
+而且课程设计都是做过通讯录、图书馆系统，一直都是黑呼呼的窗口，哪还有什么编程兴趣。
+
+都在讲C语言是最接近与底层的一门高级语言，C语言很强大，可以开发嵌入式啊，做操作系统啊，开发数据库啊。
+
+C的确可以做很多事情，这是 *纯c写的超级马里奥：*
+
+[[https://picx.zhimg.com/50/v2-fa97680aa03fff2892213b826b1ee34d_720w.jpg?source=2c26e567]]
+
+但这些对大一刚学完C语言的同学们过于遥远，开发难度很大。
+
+*而且大一课程教的只是c语言语法，是与平台无关的，不调用图形接口，就没法写windows应用。*
+
+*不调用操作系统网络接口，就没法写通信程序。不学习linux内核,你就不会用c写linux内核.*
+
+这里给小伙伴们分享几个C语言能做的小游戏、小项目，从基础到进阶，学完C语言的基础就能做，你会发现C语言真的能做很多事！
+
+** 一、基础版
+
+1. [C/C++ - C语言制作简单计算器](https://www.shiyanlou.com/courses/75) 
+ 用C语言做一个简单的计算器，进行加、减、乘、除操作。项目涉及的所有数学知识都很简单，但输入过程会增加复杂性。
+
+[[https://pic1.zhimg.com/50/daa1a832d45da6cadb62fd168d8532f9_720w.jpg?source=2c26e567]]
+
+
+ 
+ 2. [C/C++ - C语言制作2048](https://www.shiyanlou.com/courses/155) 
+ 2048是之前十分火爆的一款 [益智游戏](https://www.zhihu.com/search?q=%E7%9B%8A%E6%99%BA%E6%B8%B8%E6%88%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A91887947%7D) 。项目将使用 C 语言完成一个 [2048游戏](https://www.zhihu.com/search?q=2048%E6%B8%B8%E6%88%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A91887947%7D) 。
+
+[[https://picx.zhimg.com/50/d6cbd086d9a5ec5e28294858143e7de6_720w.jpg?source=2c26e567]]
+
+3. [C/C++ - C语言版扫雷游戏](https://www.shiyanlou.com/courses/116) 
+ 扫雷是Window系统中自带的经典游戏。项目将使用 C 语言完成一个简单的扫雷游戏。 
+ 
+
+
+[[https://picx.zhimg.com/50/048680efc7266b615f7680b5a20a0c3a_720w.jpg?source=2c26e567]]
+
+4. [C/C++ - C语言编写万年历](https://www.shiyanlou.com/courses/126) 
+ 
+ 本次课程将使用 C 语言完成一个简单的日历功能。输入相应的年/月即可看到当月的日历。
+
+[[https://pic1.zhimg.com/50/496ab6c9ffebd991b24fc721024016d4_720w.jpg?source=2c26e567]]
+
+5. [C/C++ - C语言快速实现五子棋](https://www.shiyanlou.com/courses/313)
+
+用最最简单的代码来实现五子棋游戏，帮助大家复习基础知识，了解一个项目的开发流程。
+
+[[https://pic1.zhimg.com/50/v2-8cf4a209937916496a2b5311e66e8e6a_720w.jpg?source=2c26e567]]
+
+学C语言也要看些经典书籍，我收集了计算机类的经典书籍，分享给同学们，这里即可下载：
+
+[计算机必看书籍电子版](https://mp.weixin.qq.com/s?__biz=MzkyMTI3Mjc2MQ==&mid=2247490233&idx=1&sn=4049dd1ef774ac9fbbf921dd450f7d9a&chksm=c187726ff6f0fb797321688955f0d524551adc9debc22550aa1ee9c4d817aa9291407f63f8ab&token=1681860017&lang=zh_CN#rd)
+
+[[https://picx.zhimg.com/50/v2-fd3d1339fa7a0426cbea761db7f66ac5_720w.jpg?source=2c26e567]]
+
+[计算机经典书籍下载](https://mp.weixin.qq.com/s?__biz=MzkyMTI3Mjc2MQ==&mid=2247490233&idx=1&sn=4049dd1ef774ac9fbbf921dd450f7d9a&chksm=c187726ff6f0fb797321688955f0d524551adc9debc22550aa1ee9c4d817aa9291407f63f8ab&token=1681860017&lang=zh_CN#rd)
+
+** 二、进阶版的项目
+
+*1、Webbench*
+
+[[https://picx.zhimg.com/50/v2-615bed66ff749483909d5921a7a03085_720w.jpg?source=2c26e567]]
+
+*Webbench* 是一个在 Linux 下使用的非常简单的网站压测工具。
+
+它使用fork()模拟多个客户端同时访问我们设定的URL，测试网站在压力下工作的性能。
+
+最多可以模拟 3 万个并发连接去测试网站的负载能力。Webbench使用C语言编写，代码非常简洁，源码加起来不到 600 行。
+
+*项目地址： <u>[http://home.tiscali.cz/~cz210552/webbench.html](http://home.tiscali.cz/~cz210552/webbench.html)</u>*
+
+2、 *Tinyhttpd*
+
+[[https://picx.zhimg.com/50/v2-55198f5f99d79804fe8e3bf97027feb4_720w.jpg?source=2c26e567]]
+
+*tinyhttpd* 是一个超轻量型Http Server，使用C语言开发，全部代码只有 502 行（包括注释），附带一个简单的 Client
+
+可以通过阅读这段代码理解一个 Http Server 的本质。
+
+*项目地址： <u>[http://sourceforge.net/projects/tinyhttpd/](http://sourceforge.net/projects/tinyhttpd/)</u>*
+
+** *3、cJSON**
+
+*cJSON* 是C语言中的一个JSON编解码器，非常轻量级，C文件只有 500 多行，速度也非常理想。
+
+虽然cJSON功能不是非常强大，但cJSON的小身板和速度是最值得赞赏的。
+
+其代码被非常好地维护着，结构也简单易懂，可以作为一个非常好的C语言项目进行学习。
+
+*项目主页： <u>[http://sourceforge.net/projects/cjson/](http://sourceforge.net/projects/cjson/)</u>*
+
+** 4、 *Libev**
+
+*libev* 是一个开源的事件驱动库，基于 epoll、kqueue 等 OS 提供的基础设施。
+
+其以高效出名，它可以将 IO 事件、定时器、和信号统一起来，统一放在事件处理这一套框架下处理。
+
+基于 Reactor 模式，效率较高，并且代码精简（4.15 版本 8000 多行），是学习事件驱动编程的很好的资源。
+
+*项目地址： <u>[http://software.schmorp.de/pkg/libev.html](http://software.schmorp.de/pkg/libev.html)</u>*
+
+** *5、Lua**
+
+[[https://picx.zhimg.com/50/v2-150680b955bf6d6a1648a1409cafa825_720w.jpg?source=2c26e567]]
+
+*Lua* 很棒，在任何支持 ANSI C 编译器的平台上都可以轻松编译通过。
+
+Lua 的代码数量足够小，5.1.4 仅仅 1.5W 行，去掉空白行和注释估计能到 1W 行。
+
+*项目地址：* [http://www.lua.org/](http://www.lua.org/)
+
+*<u>同学们不要白嫖哦，给库森学长点个赞！</u>*
+
+学完C语言，可以参加 [蓝桥杯](https://www.zhihu.com/search?q=%E8%93%9D%E6%A1%A5%E6%9D%AF&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2533186725%7D) 竞赛，再学了数据结构和算法，就可以参加ACM了。还有阿里天池、 [百度之星](https://www.zhihu.com/search?q=%E7%99%BE%E5%BA%A6%E4%B9%8B%E6%98%9F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2821270934%7D) 大赛等也可以关注下，在企业和学校认可度也是不错的。
+
+送一句我喜欢的话， [万丈高楼平地起](https://www.zhihu.com/search?q=%E4%B8%87%E4%B8%88%E9%AB%98%E6%A5%BC%E5%B9%B3%E5%9C%B0%E8%B5%B7&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2732932978%7D) ，勿在浮沙筑高台，打好编程基础，加油共勉。
+
+*我是* [@程序员库森](https://www.zhihu.com/people/c9554d5883c6218d8e4d5ddab5bdfcde) *，希望帮到你，欢迎关注。*

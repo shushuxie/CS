@@ -1,0 +1,91 @@
+#+TITLE: 有哪些你看了以后大呼过瘾的编程书？
+#+LINK: https://www.zhihu.com/question/50408698/answer/2278198495
+#+AUTHOR: JavaGuide
+#+CREATED: 2021-12-20
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+这是一本在国内外都被称为技术书籍巅峰之作的神书！
+
+国内的豆瓣评分 9.7（满分 10.00），接近 90% 的人为这本书打了五星好评。
+
+[[https://picx.zhimg.com/50/v2-7bc669afe1b4674c5abcdfe86f0bb4a9_720w.jpg?source=2c26e567]]
+
+国外的 Goodreads（类似于豆瓣） 评分 4.72（满分 5.00） ，接近 80% 的人为这本书打了五星好评。
+
+[[https://picx.zhimg.com/50/v2-63b6552a8e3e9fcb835ef5524a9fc56c_720w.jpg?source=2c26e567]]
+
+这本书就是 [《Designing Data-Intensive Application》](https://javaguide.cn/) ，也被简称为 [DDIA](https://javaguide.cn/) ，在国内通常被翻译为 [《数据密集型应用系统设计》](https://javaguide.cn/) 。
+
+我一直觉得这是一本有点被书名耽误的神书，大家千万不要被书名给“欺骗”了。
+
+单看书名，很多人估计觉得这就是一本专门为数据处理相关工作的程序准备的书籍。我当时在第一眼看这本书的书名的时候就是这种感觉。
+
+实际不然，这本书适合每一位做后端开发的程序员阅读，尤其适合每一位 CRUD 程序员阅读！
+
+这本书的主要讲了分布式数据库、数据分区、事务、分布式系统等内容。从数据模型与查询语言，数据编码到数据复制和分区，再到事务，一致性共识，分布式系统面临的一些挑战（如故障与部分失效、不可靠网络和时钟），作者都结合实例提供了有深度的讲解，在工业与学术之间平衡的很好。
+
+就比如在讲快照隔离实现技术多版本并发控制（MVCC, multi-version concurrentcy control）的时候，作者就图解了 [PostgreSQL](https://javaguide.cn/) 如何实现基于 MVCC 实现的快照级别隔离。
+
+[[https://picx.zhimg.com/50/v2-405ad741af19be1fc87f1aa607109c64_720w.jpg?source=2c26e567]]
+
+作者认为：
+
+- 数据是后端系统的核心，我们所做的任何事情都是围绕着数据来展开的；
+- 现在的大部分应用程序都是 *数据密集型（data-intensive）* 而非 *计算密集型（compute-intensive）* ，也就是说系统的瓶颈通常来自于对数据的处理而非 CPU ；
+- 数据库、消息队列、缓存等中间件/软件可以被统称为 *数据系统（data system）* ，它们之间的界限越来越模糊，例如：数据存储可以被当成消息队列用（Redis），消息队列则带有类似数据库的持久保证（Apache Kafka）。
+
+这本书介绍的很多概念你可能之前都听过，但是在看了书中的内容之后，你可能会豁然开朗：“哇塞！原来是这样的啊！这不是某技术的原理么？”。
+
+[下图是我在第二次看这本书的时候做的笔记](https://javaguide.cn/) ：
+
+[[https://pic1.zhimg.com/50/v2-cdd39036a79a2f5840391b42ab5ce12b_720w.jpg?source=2c26e567]]
+
+第一次看这本书的时候还在读大三，那时候读这本书只觉得内容很干，但是很多地方自己看不懂。等到第二次再读就好多了，很多不太能理解的概念也能搞清了。
+
+看了这本书你会发现国内外的非常多的系统设计课程以及和数据相关的课程里面的很多内容在这本书中都有提到。
+
+这本书有很多地方的讲解都能让你对这个知识点有新的认识。
+
+就比如在介绍事务的 ACID 特性的时候，这本书中如是说：
+
+#+begin_quote
+Atomicity, isolation, and durability are properties of the database, whereas consis‐ tency (in the ACID sense) is a property of the application. The application may rely on the database’s atomicity and isolation properties in order to achieve consistency, but it’s not up to the database alone. 
+ 翻译过来的意思是：原子性，隔离性和持久性是数据库的属性，而一致性（在 ACID 意义上）是应用程序的属性。应用可能依赖数据库的原子性和隔离属性来实现一致性，但这并不仅取决于数据库。因此，字母 C 不属于 ACID 。 
+
+#+end_quote
+
+看了之后是不是感觉自己被 ACID 这个概念被误导了很久？
+
+再比如说在介绍数据复制这部分内容的时候，这本书介绍了三种常见的复制方案及其优点和缺点。
+
+#+begin_quote
+主从复制非常流行，主要是因为它很容易理解，也不需要担心冲突问题。而万 一出现节点失效、网络中断或者延迟抖动等情况，多主节点和无主节点复制方案会更加可靠，不过背后的代价则是系统的复杂性和弱一致性。 
+
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-59342b29ab54d083b80de692c9d79242_720w.jpg?source=2c26e567]]
+
+看这本书的时候，你可以结合 [MIT6.824](https://javaguide.cn/) 分布式系统课程。油管上这门课程的视频版本，地址： [https://www.youtube.com/channel/UC_7WrbZTCODu1o_kfUMq88g/videos](https://www.youtube.com/channel/UC_7WrbZTCODu1o_kfUMq88g/videos) 。
+
+[[https://picx.zhimg.com/50/v2-6772b7ff597ba025a8fd73a1746ab124_720w.jpg?source=2c26e567]]
+
+这这门课程是全英文的，英语能力不够好的同学很难坚持学习下来。
+
+不过，不用担心！B 站有这个课程的中文翻译版合集，地址： [https://www.bilibili.com/video/av91748150](https://www.bilibili.com/video/av91748150) 。国内也有小伙伴还提供了这门课程的中文文字版，地址： [https://mit-public-courses-cn-translatio.gitbook.io/mit6-824/](https://mit-public-courses-cn-translatio.gitbook.io/mit6-824/) 。
+
+[[https://picx.zhimg.com/50/v2-f1f855807ad53f91391bfc54953d6769_720w.jpg?source=2c26e567]]
+
+看了之后表示：“真羡慕 MIT 的学生，在大学能有这么好的学习方式和实践！”。我特么可太羡慕了！这门课的 Lab 非常不错！
+
+另外，这本书的作者 Martin Kleppmann（马丁·科勒普曼）是剑桥大学计算机科学与技术系的噶几研究助理和讲师，是一位在工业界和学术界的大牛，参与了多个知名开源项目包括 [Automerge](https://github.com/automerge/automerge) 、 [Apache Avro](https://avro.apache.org/) 和 [Apache Samza](https://samza.apache.org/) 。Martin Kleppmann 的个人博客地址： [https://martin.kleppmann.com/](https://martin.kleppmann.com/) 。
+
+[[https://picx.zhimg.com/50/v2-3803b35ed40fd2a1e96b2f732594845a_720w.jpg?source=2c26e567]]
+
+考虑到版权问题，这里就不分享这本书籍的 PDF 版本了。感兴趣的小伙伴，可以自己购买纸质书或者找一下这本书的开源翻译版本。
+
+更多优质技术书籍，我整理在了我的网站： [https://javaguide.cn/books/distributed-system.html](https://javaguide.cn/books/distributed-system.html) ，也欢迎大家进行补充！
+
+[[https://pic1.zhimg.com/50/v2-a43eaab9c7eb9c63e8accbe9a9e7f764_720w.jpg?source=2c26e567]]
+
+原创不易，欢迎点赞分享，欢迎关注 [@JavaGuide](https://www.zhihu.com/people/ee0f19babdc46c21672264080ad7a641) ，我会持续分享原创干货！加油，冲

@@ -1,0 +1,330 @@
+#+TITLE: 如何看待程序员持续写技术博客？
+#+LINK: https://www.zhihu.com/question/41802793/answer/2153693554
+#+AUTHOR: 小林coding
+#+CREATED: 2021-10-04
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+*我是从20年3月份开始写技术博客的，不知不觉已经坚持一年半了！*
+
+起初我写技术博客是为了记录自己的学习笔记，以后复习的时候能够快速回忆起来，但是技术博客发表到互联网后，就发生了一些奇妙的变化，慢慢的我写文章在知乎、csdn、掘金、博客园等各大平台火了起来，慢慢积累了不少的读者，也收获了很多读者的鼓励和支持。
+
+在csdn已经成为博客专家：
+
+[[https://picx.zhimg.com/50/v2-ebb488328b1b6d4e9888c20faf702169_720w.jpg?source=2c26e567]]
+
+在知乎上有很多破千赞的技术文：
+
+[[https://pica.zhimg.com/50/v2-c2200cbf396842e7e0ab09f0dce5f416_720w.jpg?source=2c26e567]]
+
+开始有了正反馈后，慢慢写博客不再是单纯的记笔记。
+
+*而是用图+大白话的方式来帮助大家理解常见的面试题和技术点，然后我坚持一年半，保持每个星期输出1-2篇技术文，都是利用自己的周末时间，现在回想起来，我已经牺牲了n个周末，但是非常的值得。*
+
+因为我收获了很多平台送的礼品，这里我列举下我得过的奖品。
+
+** *2020年 4 月**
+
+我最开始写的是图解网络的文章，而且都是面试常考的知识点。
+
+去年的 3-4 月正好是春招时间，于是我就想把我的图解网络文章发布到牛客网，因为那里基本都是准备校招的同学，希望我的硬核文章能帮助到他们。
+
+好家伙，结果一发图解 HTTP 和图解 TCP 文章，直接小火了一把，得到了非常多同学的收藏，我在牛客网全靠文章的收藏数，直奔红名大佬。
+
+[[https://picx.zhimg.com/50/v2-4a15bcd6361b0ec26dd64800712d2669_720w.jpg?source=2c26e567]]
+
+而牛客网有个机制就是，如果你的文章被很多人收藏，上了周榜你就会获得「牛币」，这个牛币是可以兑换礼物的，比如杯子、笔记本、背包、衣服等等。
+
+[[https://pic1.zhimg.com/50/v2-0234f2a44bb0a815da212e7673f4abc4_720w.jpg?source=2c26e567]]
+
+当时兑换了不少礼物，你可以看到基本都是杯子，因为送了一些给朋友们。
+
+** *2020年 8 月**
+
+这时我刚写文章不到半年，刚好看到 infoQ 博客平台在搞活动， 就尝试在这里发了几篇图解文章。当时没抱着什么希望，因为感觉这个平台都是什么高并发、架构类的文章，我的基础文章应该没什么戏。结果出乎意料，竟然得奖了。
+
+[[https://pic1.zhimg.com/50/v2-a5191fc2be99efe72614979062b9d0ed_720w.jpg?source=2c26e567]]
+
+这是我在博客平台拿到的第一个奖，一个宇航员玩具和一本技术书。
+
+[[https://pic1.zhimg.com/50/v2-7a18e28b5ad6b6e86ba72fc0493069db_720w.jpg?source=2c26e567]]
+
+虽然并不是什么重量级的奖项，但是让我知道基础文章也是很受大家欢迎的。
+
+图解CS，yyds！
+
+** *2020 年 9 月**
+
+由于我一直都有在 CSDN 发布文章，我的硬核图解文章很快就被 CSDN 运营的人注意到了。然后在去年中秋节的时候，收到 CSDN 官方送的月饼，这个包装盒还是很漂亮的。
+
+[[https://picx.zhimg.com/50/v2-684203bf4cae21752080a13f1c17a09b_720w.jpg?source=2c26e567]]
+
+没想到写个文章，还把买月饼的钱省了。
+
+** *2020 年 10 月**
+
+半年多的时间，凭借自己优质的图解文章，在 CSDN 积累了一些小人气，终于成为了 CSDN 博客专家的称号，有了一点点逼格。
+
+[[https://pic1.zhimg.com/50/v2-a4e40f4eb105dcb1f7d2514c1395e483_720w.jpg?source=2c26e567]]
+
+也在 CSDN 首届技术原创博客大赛中，喜提一等奖。
+
+[[https://picx.zhimg.com/50/v2-c495f021dd975eb646244ecf07de0401_720w.jpg?source=2c26e567]]
+
+没想到除了在公司和学校外，也能拿到奖状，魔幻魔幻！
+
+** *2021 年 1 月**
+
+新的一年，这个时候各大博客平台都开始评选年度博主，而且奖品还是挺不错的，不过都是基本要拉票的，也就是谁的粉丝多，谁就越有优势。
+
+我选择参加了 CSDN 的 2020 年的博客之星评比活动，那时候每天都在朋友圈拉票，不管发啥都带有投票链接，这个拉票周期太长了，竟然要 2 个星期，后面发拉票的朋友圈发到我都不好意思了。我的读者们还是很给力，在拉票环节我的票数在前十。
+
+不过这个活动最后一个环节还需要专家评审，主要考虑你的文章阅读量、收藏量、涨粉量做一个最终的评比。结果出来后，很可惜没有进入前十，得了到 19 名，奖品有这些：
+
+[[https://picx.zhimg.com/50/v2-e75a1d41841c6aa395d0d1cb51952529_720w.jpg?source=2c26e567]]
+
+不过也满足了，毕竟在 CSDN 也就写了一年的文章，如果今年还有评选活动，争取搞个前十。
+
+** *2021 年 2 月**
+
+当当每年都会有购书活动，我都是和机械工业华章出版社拿优惠码给读者用，然后顺手推荐他们的计算机黑皮书。所幸带货效果还算可以，他们也送了我一些奖品，很漂亮。
+
+[[https://pic1.zhimg.com/50/v2-ef65f814ab0643d0af6a8fb6bab3b71f_720w.jpg?source=2c26e567]]
+
+** *2021 年 5 月**
+
+有一天力扣的运营找上我，说最近他们举办了个活动，如果在力扣发布面试题材的文章，有机会获得奖品。
+
+那刚好我的图解网络和图解系统里的部分文章是面向面试突击的，我就把以前的文章重新发布到了力扣平台上。结果又来了个惊喜，我的图解 TCP 文章上了力扣的首页，要知道力扣可是主打算法的平台呀。
+
+[[https://picx.zhimg.com/50/v2-dce73646e9bb991334545d680c9a0d79_720w.jpg?source=2c26e567]]
+
+通过这次活动喜提了两个奖品，分别是无线耳机和力扣的 T 恤。
+
+[[https://picx.zhimg.com/50/v2-d837cef3a985c75d163ed7f339304114_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-73bdba66bf4eb68dac4ffd8b27ede339_720w.jpg?source=2c26e567]]
+
+这个 T 恤我日常也经常穿，感觉穿了后，在码代码的时候，会有股神秘的力量涌出，哈哈。
+
+** *2021 年 6 月**
+
+最近华为云也搞了个博客平台，我也被邀请加入了。我又把我以前写的文章发了过去，又得奖品了，得了个价值 300 元的华为智能体脂秤和 200 元的京东卡。
+
+[[https://pic1.zhimg.com/50/v2-45dc93d27374618ea33118ddfd66a778_720w.jpg?source=2c26e567]]
+
+这个智能体脂秤能测出很多种指标，比如体重、心率、体脂等等，刚好我父母早上都有运动的习惯，就给他们用了，每隔一段时间可以通过这个评估下最近的身体状况。
+
+这个时间，正好是 infoQ 博客平台周年庆了，就在上个星期，我收到了他们送的周年庆的奖品，有衣服、有被子、有笔记本等，很厚实的一份奖品，颜色也非常的极客。
+
+[[https://pic1.zhimg.com/50/v2-30349ea79642c990f1293ca9adf7d887_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-ee17338a74bb87d3f90113679b960314_720w.jpg?source=2c26e567]]
+
+我写的文章主要是计算机基础类的，比如操作系统、计算机网络、数据库、计算机组成等等，正好这一块知识点是大厂常问的知识点，所以我的文章帮助到了很多读者，不少读者跑来感谢我，因为看了我的文章，不再惧怕这些计算机基础的知识了，然后在校招中拿到了腾讯、字节、阿里、百度的offer。
+
+写了这么久，我积累了不少计算机基础的技术文，正好乘着假期，我也把我这一年多输出的文章整合了起来。
+
+*** 计算机网络
+
+*** 基础篇
+
+- [TCP/IP 网络模型](https://mp.weixin.qq.com/s/lroONaj5dVM0z7MD7DPE_A)
+
+*** HTTP 篇
+
+- [HTTP 常见的面试题](https://mp.weixin.qq.com/s/bUy220-ect00N4gnO0697A)
+- [HTTP/1.1如何优化?](https://mp.weixin.qq.com/s/1Vb87OGa05a7zkbRrLsLGg)
+- [什么是数字签名和数字证书？](https://mp.weixin.qq.com/s/X3v-yKhCjnwIDM5PRPNASg)
+- [HTTPS RSA 握手解析](https://mp.weixin.qq.com/s/U9SRLE7jZTB6lUZ6c8gTKg)
+- [HTTPS ECDHE 握手解析](https://mp.weixin.qq.com/s/pLyR8zuw4l7Z6sdUZ4IL5w)
+- [HTTPS 如何优化?](https://mp.weixin.qq.com/s/gGOuIvrDuCP057v8KhTgXQ)
+- [HTTP/2 牛逼在哪?](https://mp.weixin.qq.com/s/TvGAmKKrKrcWlsV2cfC34g)
+- [HTTP/3 强势来袭](https://mp.weixin.qq.com/s/bHuhvkVOwplkvPwEHxF4mg)
+
+*** TCP 篇
+
+- [TCP 三次握手和四次挥手面试题](https://mp.weixin.qq.com/s/tH8RFmjrveOmgLvk9hmrkw)
+- [TCP 重传、滑动窗口、流量控制、拥塞控制](https://mp.weixin.qq.com/s/Tc09ovdNacOtnMOMeRc_uA)
+- [TCP 实战抓包分析](https://mp.weixin.qq.com/s/bHZ2_hgNQTKFZpWMCfUH9A)
+- [TCP 半连接队列和全连接队](https://mp.weixin.qq.com/s/2qN0ulyBtO2I67NB_RnJbg)
+- [TCP 内核参数：如何优化 TCP 三次握手和四次挥手](https://mp.weixin.qq.com/s/fjnChU3MKNc_x-Wk7evLhg)
+- [TCP 粘包和拆包](https://mp.weixin.qq.com/s/cdJ7LbH-_uVWz9BZgOuMtg)
+- [收到RST，就一定会断开TCP连接吗？](https://mp.weixin.qq.com/s/jomA0WT6zul1zrGzuBqOkA)
+- [代码执行 send 后，数据就发出去了吗？](https://mp.weixin.qq.com/s/S0p_cu3DRwre-Pbf85OIaA)
+- [粗暴的关闭 vs 优雅的关闭](https://mp.weixin.qq.com/s/oixKJ42cTo72D2572XU2sQ)
+- [我跟面试官聊 TCP 三次握手源码，他夸我真棒！](https://mp.weixin.qq.com/s/UHuey2WKzsdw6RR4aOT8rg)
+
+*** IP 篇
+
+- [IP 基础知识全家桶](https://mp.weixin.qq.com/s/qydIO7NDfFTYs4-ZZlfgRg)
+- [ping 工作原理](https://mp.weixin.qq.com/s/leE2DgDOl5z90hG2gG1Urw)
+
+*** 网络综合篇
+
+- [键入网址到网页显示，期间发生了什么？](https://mp.weixin.qq.com/s/iSZp41SRmh5b2bXIvzemIw)
+- [CDN 工作原理](https://mp.weixin.qq.com/s/ra6qnCK4BRaJp--3_NgLtA)
+- [Linux 常用的网络命令](https://mp.weixin.qq.com/s/N-_jsA6eoM0f_7LCM-il5A)
+
+*** 网络异常篇
+
+- [一个 TCP 连接，一端发生宕机和进程挂掉有什么区别？](https://mp.weixin.qq.com/s/XWyKGrkVE_OejOkn0sAEMg)
+- [TCP 的 Keepalive 和 HTTP 的 Keep-Alive 是一个东西吗？](https://mp.weixin.qq.com/s/25atTs4b-vORIx525ur_aw)
+- [HTTPS 中 TLS 和 TCP 能同时握手吗？](https://mp.weixin.qq.com/s/KA66YEj5erMWj-cRgY7fAQ)
+- [TCP 三次握手和四次挥手，期间失败了会怎么样？](https://mp.weixin.qq.com/s/CTqag_TxAHLuUwLvbrmlnw)
+- [TCP 在 FIN_WAIT_2 状态下，收到处理乱序的 FIN 报文，会如何处理？](https://mp.weixin.qq.com/s/w3Zvae-oJ3qLwtHnwPMtyQ)
+- [一个已经建立的 TCP 连接，客户端中途宕机了，而服务端此时也没有数据要发送，处于 establish 状态，客户端恢复后，向服务端建立连接，此时服务端会怎么处理？](https://mp.weixin.qq.com/s/Xm1nIm1SnUo2xQmC3MQgNA)
+
+*** 操作系统
+
+*** 硬件结构
+
+- [CPU 是如何执行程序的?](https://mp.weixin.qq.com/s/TxFzIgNLettiEO4JKWgQpQ)
+- [存储器金字塔](https://mp.weixin.qq.com/s/-E5jcp7tfkXjsSu2vzdeAw)
+- [如何写出让 CPU 跑得更快的代码?](https://mp.weixin.qq.com/s/-uhAhBD2zGl_h19E4fNJzQ)
+- [图解 CPU 缓存一致性](https://mp.weixin.qq.com/s/PDUqwAIaUxNkbjvRfovaCg)
+- [用动图的方式，理解 CPU 缓存一致性协议！](https://mp.weixin.qq.com/s/otJfvn1M3ObNqonrkFTiYg)
+- [CPU 是如何执行任务的?](https://mp.weixin.qq.com/s/djRd9g00vvIpSr6O07OOpA)
+- [什么是软中断？](https://mp.weixin.qq.com/s/Yjk_SnhZ6q3v55jcWM7kbQ)
+- [为什么 0.1 + 0.2 不等于 0.3 ?](https://mp.weixin.qq.com/s/evMy7Jz-3nRmr887DfHkjw)
+
+*** 操作系统结构
+
+- [Linux 内核 vs Windows 内核](https://mp.weixin.qq.com/s/2yiZZPjKmmFdoIlHC-jjxw)
+
+*** 内存管理
+
+- [虚拟内存](https://mp.weixin.qq.com/s/HJB_ATQFNqG82YBCRr97CA)
+
+*** 进程与线程
+
+- [进程和线程基础知识全家桶](https://mp.weixin.qq.com/s/YXl6WZVzRKCfxzerJWyfrg)
+- [一个进程最多可以创建多少个线程？](https://mp.weixin.qq.com/s/eC599TS_0kfwDK4LGgPa1g)
+- [进程间通信](https://mp.weixin.qq.com/s/MnIcTR0KKpgnSoA3xaPUSA)
+- [多线程同步与互斥](https://mp.weixin.qq.com/s/UWT1oMQsQUmmKzQ94xRwew)
+- [多线程那些事，硬核有趣](https://mp.weixin.qq.com/s/k_6shN16l9pPR_k3kufLQQ)
+- [死锁](https://mp.weixin.qq.com/s/2S0OHJgLvIY4GaVxBv3izQ)
+- [互斥锁、自旋锁、读写锁、悲观锁、乐观锁的应用场景](https://mp.weixin.qq.com/s/CqIXHowIDT1kxyBOO0x7TQ)
+- [线程间到底共享了哪些进程资源？](https://mp.weixin.qq.com/s/-TzN4U052F6kOkPhNEe3Cg)
+- [大白话说协程](https://mp.weixin.qq.com/s/BKm60as1vz3bfvzJjU7uTw)
+
+*** 调度算法
+
+- [进程调度/⻚面置换/磁盘调度算法](https://mp.weixin.qq.com/s/JWj6_BF9Xc84kQcyx6Nf_g)
+
+*** 文件系统
+
+- [一口气搞懂「文件系统」](https://mp.weixin.qq.com/s/qJdoXTv_XS_4ts9YuzMNIw)
+
+*** 设备管理
+
+- [键盘敲入A 字母时，操作系统期间发生了什么?](https://mp.weixin.qq.com/s/04BkLtnPBmmx6CtdQPXiRA)
+
+*** 网络系统
+
+- [Linux 系统是如何收发网络包的?](https://mp.weixin.qq.com/s/ISQ2qutpJjYOdtM3taeO_A)
+- [什么是零拷贝](https://mp.weixin.qq.com/s/P0IP6c_qFhuebwdwD8HM7w)
+- [I/O 多路复用:select/poll/epoll](https://mp.weixin.qq.com/s/Qpa0qXxuIM8jrBqDaXmVNA)
+- [高性能网络模式:Reactor 和 Proactor](https://mp.weixin.qq.com/s/GRkZ1IEfTalQSkErWe1SAg)
+
+*** Linux 命令
+
+- [如何查看网络的性能指标?](https://mp.weixin.qq.com/s/_abtebePHs4GczJy6qhsYQ)
+- [如何从日志分析 PV、UV?](https://mp.weixin.qq.com/s/c1QXIeYR0zRrzTXWxFNxCw)
+
+*** 系统综合篇
+
+- [如何将计算机组成、操作系统、计算机网络、数据结构与算法融会贯通？](https://mp.weixin.qq.com/s/X6csZtQhR42qnJWIe0vwVQ)
+- [面试官：如何提高程序的性能？](https://mp.weixin.qq.com/s/7DTdXghf5Iq9mhYcfbc9Eg)
+
+*** MySQL
+
+*** 基础知识
+
+- [熬夜肝了 2W 字的数据库知识点](https://mp.weixin.qq.com/s/hWwE67YMEsO-2HY9uDpQ3w)
+
+*** 索引
+
+- [索引为什么能提高查询性能？](https://mp.weixin.qq.com/s/KxSlNnXQSaMemYdqyRCMOg)
+- [一口气搞懂 MySQL 索引所有知识点](https://mp.weixin.qq.com/s/rS-zbxX2P_1-r0jE8HZQjw)
+- [组合索引遵循了最左匹配原则就走索引吗？](https://mp.weixin.qq.com/s/WvL0mSOGsn170jFxdrw9TA)
+- [15 张图破局，慢 SQL](https://mp.weixin.qq.com/s/fCk-uZyi5k1hKwrURZNe7A)
+- [分页场景慢？MySQL的锅！](https://mp.weixin.qq.com/s/SPJ6kvxVk151Vl4r0KoMLQ)
+
+*** 事务
+
+- [事务、事务隔离级别和MVCC](https://mp.weixin.qq.com/s/sCgIWj0HjMgUqVIHwLXduQ)
+- [幻读是怎么被解决的？](https://mp.weixin.qq.com/s/2hzXwgzKsTPuNCCLpTc3OQ)
+
+*** 锁
+
+- [MySQL 全局锁、表级锁、行级锁](https://mp.weixin.qq.com/s/cUx0z6iAVl-EBqgFkj1aAA)
+- [MySQL 是怎么加行锁的？](https://mp.weixin.qq.com/s/i5QWx3QPZNkV51ghFbtXCw)
+- [完蛋，公司被一条 update 语句干趴了！](https://mp.weixin.qq.com/s/9R8ChusahrJvLGmUvHWBgA)
+
+*** 面试题
+
+- [Mysql 夺命连环 13 问，你能抗住多少题？](https://mp.weixin.qq.com/s/mMWSYmh490MNJMGxjagRVA)
+- [我当面试官，面你 MySQL 基础](https://mp.weixin.qq.com/s/i5QWx3QPZNkV51ghFbtXCw)
+- [MySQ 八股文来袭！](https://mp.weixin.qq.com/s/9YO1mkQb2QTk55ZYv4ZBjw)
+
+*** Redis
+
+*** 数据结构
+
+- [20 张图击溃，跳表！](https://mp.weixin.qq.com/s/Dk6zmg3dSIS6OBPhJDSF9g)
+
+*** 持久化
+
+- [RDB 快照](https://mp.weixin.qq.com/s/xQHd0AAy9tP4HXNMDoUYKQ)
+- [AOF 日志](https://mp.weixin.qq.com/s/AFd2rOKD7RViadUjBGiobw)
+- [RDB 和 AOF 读者问题答疑](https://mp.weixin.qq.com/s/z6KSXLNBvs5u_khJwW95Hg)
+
+*** 架构
+
+- [主从复制工作原理](https://mp.weixin.qq.com/s/WmG2vMhEgc7XHjeCFgSZTQ)
+- [缓存雪崩、击穿、穿透](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
+- [先更新数据库，还是先更新缓存？](https://mp.weixin.qq.com/s/kZJcGkOMYqLzUsmbGTruYA)
+- [如何保证「先更新数据库 ，再删除缓存」这两个操作能执行成功？](https://mp.weixin.qq.com/s/DJoHsdXb5vsLy5EBdbK_IA)
+- [Redis分布式锁，你用对了吗？](https://mp.weixin.qq.com/s/gCiAG7uaap7ea7_fdKuoqw)
+
+*** 面试题
+
+- [Redis 为什么这么快?](https://mp.weixin.qq.com/s/z0wH-eCp0zoVnj4tAnZPrw)
+- [Redis 八股文](https://mp.weixin.qq.com/s/XFQYvVB5uJSjYrHuJP9sXg)
+- [我当面试官，面你 Redis ！](https://mp.weixin.qq.com/s/IkV8YKWOxNRZGD8C6U7_aQ)
+
+*** Java 并发
+
+- [2W 字带你，深入一下线程池](https://mp.weixin.qq.com/s/GMHO0hbcay0OazkNQKOn8w)
+- [17 张图看穿 synchronized 关键字](https://mp.weixin.qq.com/s/LKODNreV7ktMPFDFkUlFyw)
+- [要搞懂 volatile 关键字，就靠这 26 张图](https://mp.weixin.qq.com/s/egKkiRyoyFl_b2v0CYlzXQ)
+- [Java 多线程，八股文！](https://mp.weixin.qq.com/s/mWI_s8i8yt-ZXE-tcg6Esw)
+
+*** 学习心得
+
+- [怎么学操作系统和计算机网络呀？](https://mp.weixin.qq.com/s/yopn5PqC7ESQcxWOj0eBoQ)
+- [学计组的亿点小建议！](https://mp.weixin.qq.com/s/C1eqVk3Vzjsobp2byfXf_A)
+- [看书的一点小建议](https://mp.weixin.qq.com/s/_y_kkhDil-2GCedilKurTA)
+- [打好这些计算机基础体系，大厂 Offer 任你挑](https://mp.weixin.qq.com/s/V8aiLxBdEKA3JGF-JOehyQ)
+- [21 张思维导图，小林肝了半个月的「后端技术学习路线」长啥样？](https://mp.weixin.qq.com/s/qCq6FuKvi21pqjQFKuLVzQ)
+- [小林读者喜提微软offer，来瞧一瞧他的算法学习之路](https://mp.weixin.qq.com/s/iOKb2TtwWf0BMzVlwSaYUQ)
+- [我的 500 张图是怎么画的？](https://mp.weixin.qq.com/s/MIzfSiOa6R5uddShALunQQ)
+
+*** 读者牛逼 - 校招/社招经验
+
+- [双非本科 + 非科班，从月薪 5k offer 到年总包 35w+ 的 offer](https://mp.weixin.qq.com/s/jHG9cV8of9Xi8SldN84k_A)
+- [211硕士 + 非科班，校招拿字节跳动offer](https://mp.weixin.qq.com/s/jdisSqNqdLSX7NJv0TpQWA)
+- [三本，京东美团滴滴高途作业帮等offer](https://mp.weixin.qq.com/s/IPmcPBS35TgGLBDY94uiVw)
+- [双非本科，校招斩获字节、腾讯、阿里后端开发](https://mp.weixin.qq.com/s/ZfgwtLX43IjGe33yoqLwEQ)
+- [社招转行进腾讯](https://mp.weixin.qq.com/s/Ub3uNcj2r-SzLbjqp-H_Qw)
+- [双非一本，斩获字节offer](https://mp.weixin.qq.com/s/HqLJQPWLkaOkohjqiW_0BA)
+
+*** 图解 PDF 发布
+
+- [不鸽了，小林的「图解网络 3.0 」发布！](https://mp.weixin.qq.com/s/_mAA-cNQM35Kf9Jyat2HYQ)
+- [小林的图解系统，大曝光！](https://mp.weixin.qq.com/s/IEmXqmh7FXkCzYnb2yetrw)
+
+怎么样，是不是超多干货！
+
+这次来个三连不过分吧？

@@ -1,0 +1,89 @@
+#+TITLE: 为什么很多程序员爱用 Vim？
+#+LINK: https://www.zhihu.com/question/305779588/answer/2216897438
+#+AUTHOR: findyi
+#+CREATED: 2021-11-10
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+现代的编辑器，都非常优秀，第一次使用VIM在折腾了一整天插件后，我非常沮丧，觉得vim没救了。
+
+后来我慢慢的明白了，试图让vim做所有事情，是不现实的，并且要适应vim一定会有一个痛苦的折腾过程。这是自由的代价，可能不是所有人都喜欢这样。如果有足够的时间，比如是大学生，还是很值得体验一下vim的。
+
+*一旦能够享受vim给的自由，你会爱不释手的。其他编辑器虽然很好，很舒服，但那都是别人的编辑器，你永远驯服不了。*
+
+*下面简单说下vim的优势所在：* 
+ 
+ 1， 查看 自己github 所有收藏（star）的项目，模糊搜索自己需要的，点击自动用浏览器打开：为什么有这个需求，github上很多非常好的项目，看到后点击加星收藏，日积月累，收藏项目太多，找起来太慢。 
+
+
+[[https://picx.zhimg.com/50/v2-5cc82350029ced09569180e8c2e47636_720w.jpg?source=2c26e567]]
+
+
+ 2， 编写git commit message 时候，关联github 的issue 列表，于是傻眼了，不知道issue的编号，还得去网页看，这么麻烦的事情，怎么能够忍受，于是，SpaceVim 内实现了，commit message 内的补全，可以补全 github issue PR 列表，同时可以补全本地log 信息： 
+
+
+[[https://pic1.zhimg.com/50/v2-c8a536a2f246e5c09083b6369abc4ef4_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-8b637499fb3ff2bf9b73cdee0d19778e_720w.jpg?source=2c26e567]]
+
+
+ 3， 快捷键太多，无法记忆，怎么办，SpaceVim 实现了快捷键 分组，导航，内置N多个快捷键，无需看文档记忆，直接实时导航。 
+
+
+[[https://picx.zhimg.com/50/v2-6b307e772bdc6e5630b9d3e0d695027e_720w.jpg?source=2c26e567]]
+
+
+ 4， 模块化状态栏，状态栏显示搜索结果index，提示当前结果和结果总数。 
+
+
+[[https://pica.zhimg.com/50/v2-b3a8e2b05b7fcb111487ba0a7058c890_720w.jpg?source=2c26e567]]
+
+
+ 5， 既然是装逼， 游戏怎么能少， 看看 这个2048游戏：顺便练习下 HJKL 
+
+
+[[https://pic1.zhimg.com/50/v2-4463d83fcec610c061fcba6f6781634f_720w.jpg?source=2c26e567]]
+
+
+ 6、异步文件搜索，再大项目也不怕卡顿，侧栏文件树， 
+
+
+[[https://picx.zhimg.com/50/v2-84128f47134d3748b14f146312a571ed_720w.jpg?source=2c26e567]]
+
+
+ 7、代码补全，错误提示： 
+
+
+[[https://picx.zhimg.com/50/v2-76a5f50a77ae83ad8b9650fbb824cc1a_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-929102211fdbd0f3b9cc587ad3a02183_720w.jpg?source=2c26e567]]
+
+8、编写markdown文件，侧边展示标题目录，子标题可折叠， 右侧展示文件树，显示 git 状态： 
+
+
+[[https://picx.zhimg.com/50/v2-ee982bf499159c22bda34c8dcd86086e_720w.jpg?source=2c26e567]]
+
+
+ 9、markdown 实时预览： 
+
+
+[[https://pica.zhimg.com/50/v2-b81d2e4de7f88e7d4a3394b8fc5946ed_720w.jpg?source=2c26e567]]
+
+最后推荐两个vim学习资料：
+
+1. vimscript教程， [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/) 。非常优秀的教程，打算深入学习vim的可以看看，vim文档虽然很详细，但是太零散了，这本书系统的讲解vimscript。另外，非常喜欢这个书名，Learn Vimscript the hard way，the hard way对于vim来说，太适合了。
+
+2. [http://vimcasts.org](http://vimcasts.org) ，一个关于vim的播客，分享一些很多很玄很酷的技巧，推荐被vim折腾过的人看看，可以大大增加你继续学习下去的信心。
+
+*另外，要想做一个靠谱程序员，多刷算法题好处多多，算法厉害的人进大厂非常容易，这里推荐一本BAT大佬的算法笔记：*
+
+[BAT大佬的刷题笔记，进大厂必看！](https://mp.weixin.qq.com/s?__biz=MzA3MzA5MTU4NA==&mid=2247488289&idx=2&sn=070290bbca59a40673bc49ba8ea1386b&chksm=9f150c4ea8628558e035353af2dca72017afd5952b77c5a645a8580a6a7adef566faa62bb1ca&token=1093012184&lang=zh_CN#rd)
+
+
+ *祝大家都能在程序员的道路上一马平川。*
+
+*要是觉得不错的话，那就帮我*
+
+[@findyi](https://www.zhihu.com/people/747cf0e886f38ff62eea3fbfe0542ed5)
+
+*点个赞，一键三连呗哈哈哈，半夜码字不容易（现在是凌晨1点40......）*

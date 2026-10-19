@@ -1,0 +1,68 @@
+#+TITLE: 编程新手如何提高编程能力？
+#+LINK: https://www.zhihu.com/question/27574436/answer/2933037500
+#+AUTHOR: 朱卫军
+#+CREATED: 2023-03-12
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+去每天花两小时写代码，去研读各种开源项目源代码。
+
+去写技术博客，去蹭技术讲座、会议、公开课程。
+
+去逛Github，去StackOverflow上提问，去论坛上找技术大佬聊天
+
+去参加软考，去参加ACM等正规编程比赛。
+
+去尝试自己写一个个人网站，或者开发一个游戏APP。
+
+......
+
+只要你愿意提高代码能力，有无数种方法能帮到你，但你需要让你的意愿充斥整个身体，并相信能做好。
+
+俗话讲，不积跬步无以至千里，新手想要成为高手，疯狂的练习是第一步。
+
+*很多事都是孰能生巧，没有足够多练习不要提天赋。*
+
+编程应该是最能体验prctice make perfect的技能之一，在前期积累的阶段，往往要大量的去刷题、比赛、模仿，才能显得游刃有余。
+
+资深码农就像是老师傅，哪个不是键盘敲到发白。
+
+可能练习不一定会让你完美，但大量的练习会让你产生 [髓磷脂](https://www.zhihu.com/search?q=%E9%AB%93%E7%A3%B7%E8%84%82&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2765526057%7D) ，一种神经元外侧的脂质，能让你的脑回路更加灵活。
+
+人的大脑可以分为反射、思考、记忆三个功能，大脑可以通过大量的反复练习让思考演变成习惯，最后跳过思考只需要反射的指令操控就能完成，从而达到“生巧”的效果。
+
+当然作为程序员，练习不是一味的重复，或者去完全复刻别人的代码，每一次练习都应该增加难度，有突破自己认知的成长。
+
+这样经过反复的输入、评估、输出、纠正，你会有惊人的变化。
+
+记得工作第二年我和组里同事一起参加某个交通数据科学比赛，根据历史数据预测未来车流数据。
+
+为了找到好的算法模型，我高强度地开始使用google，翻遍了kaggle、 [stackoverflow](https://www.zhihu.com/search?q=stackoverflow&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2749018597%7D) 、github等编程网站，也看了很多相关的交通车流论文。
+
+前前后后代码写了有上万行（包括数据探索、新老方案），比赛后发现自己在编程和算法上比以前通透了不少，也知道哪里有宝藏，哪里有大神。
+
+这是我编程能力第一次开始突飞猛进，发现编程真的是一门熟能生巧的手艺，不管是比赛、项目、习题，哪怕是抄代码（初学），都会让你快速进步。但真正想要成为大佬，还得要勤于思考，不然久而久之会变成没有灵魂的代码机器。
+
+以学习Python为例，有很多网站可以提供练习精进的资源。
+
+*** Github
+
+Github是全球最大的代码托管网站，也是Python资源最多的网站。
+
+各种Python相关的教程、开源项目、技术书籍、数据资源层出不穷，比如说大名鼎鼎的pandas、django、tensorflow、pytorch、requests等都在github上有开 [源代码](https://www.zhihu.com/search?q=%E6%BA%90%E4%BB%A3%E7%A0%81&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2924314854%7D) 。
+
+还有诸如awe-some python、Python-100-Days、ML-For-Beg [inne](https://www.zhihu.com/search?q=inne&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2924314854%7D) rs等这样的资源教程，有十几万的star，非常适合初学者去学习。
+
+你用Python关键词搜索，会出来300多万的相关仓库，足够你花一辈子去学习。
+
+[[https://pic1.zhimg.com/50/v2-9683f8f149d852c32e9154611b556e31_720w.jpg?source=2c26e567]]
+
+*** kaggle
+
+Kaggle是世界上最大的数据科学比赛网站和社区，里面有成千山万个比赛项目，涉及数据分析、机器学习、深度学习、 [数理统计](https://www.zhihu.com/search?q=%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2924314854%7D) 、可视化分析等全方位的数据 [科学知识](https://www.zhihu.com/search?q=%E7%A7%91%E5%AD%A6%E7%9F%A5%E8%AF%86&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2924314854%7D) 。
+
+[[https://picx.zhimg.com/50/v2-81cef0487f24ef8ca6236d411b683c8e_720w.jpg?source=2c26e567]]
+
+kaggle还有各种各样的免费数据集、模型、教程文档，提供给数据科学爱好者使用。
+
+[[https://picx.zhimg.com/50/v2-8064153baafc1630f343390b530b7319_720w.jpg?source=2c26e567]]

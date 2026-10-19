@@ -1,0 +1,48 @@
+#+TITLE: 如何用OneNote做思维导图?
+#+LINK: https://www.zhihu.com/question/28053132/answer/1078733101
+#+AUTHOR: Jun哥笔记
+#+CREATED: 2020-03-14
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+一般而言，有三个方法比较常见：
+
+*1.用思维导图的插件* ：
+
+下载地址：
+
+[数字笔记珍宝 OneNoteGem - OneNote 插件](http://cn.onenotegem.com/)
+
+[[https://picx.zhimg.com/50/v2-ae491a8554dd6141307f93428a2e622c_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-91dc40b5986de7c183c6860ffa70edc9_720w.jpg?source=2c26e567]]
+
+缺点：要付费。
+
+另外，凡是提到要用插件的，只是适用于OneNote2016版。
+
+2. *用Visio画导图，然后发送到OneNote*
+
+看一下动图的演示效果：
+
+[[https://pic1.zhimg.com/50/v2-c0ea2d77c43cd52f1991f6af103ca665_720w.gif?source=2c26e567]]
+
+缺点：绘图稍微麻烦些。
+
+*3.用XMind 8画导图，也是发送到OneNote即可* ：
+
+[[https://picx.zhimg.com/50/v2-34ca0ba9c27361ae98a148ddc6cfdf5a_720w.gif?source=2c26e567]]
+
+注意，思维导图的软件版本是XMind 8。
+
+显然插件是比较好的方式，但要付费。
+
+思维导图XMind 8专业些，但打印到OneNote后有点不太清新。
+
+visio就相对好一些，可以参考楼上的关于用Visio画导图的方法，自己试试。
+
+公众号「 *Jun哥笔记* 」，可以来坐坐。
+
+END.
+
+[[https://pic1.zhimg.com/50/v2-4274b89779e10e3a4872e765b68f9791_720w.jpg?source=2c26e567]]

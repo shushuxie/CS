@@ -1,0 +1,172 @@
+#+TITLE: 网上到处转码编程成功的，现实中真的容易吗？
+#+LINK: https://www.zhihu.com/question/503266644/answer/2371819732
+#+AUTHOR: 谭庆波
+#+CREATED: 2022-03-03
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+先声明，不管你是想转码还是继续做原专业的事情，只要是你想做好一件事，就没有简单的，都很难。
+
+当然转行更是难上加难，就是我觉得每一个准备转码的同学心里都要有一个这样的预期：转行写代码这件事本来就很难，所以我在学习的过程中遇到的任何困难都是应该的，我应该想办法去克服，而不是打退堂鼓。
+
+而如果你看到网上很多转码成功，觉得这件事情应该挺简单的，那么你大概率坚持不下来，因为在这个过程中遇到一点困难可能就超出了你的心里预期，你就不想再坚持了。
+
+如果是零基础转行学编程的话，建议先对这一行增加点背景知识了解，这方面目前最好的读书是吴军老师的《浪潮之巅》，见解非常独到。
+
+然后接下来的一步比较重要，就是正式学习计算机专业知识，到这里很多人就会有困惑，自学，从哪里入手？上培训班，似乎很直接，但是很费钱；自己找书看，又不知道看哪些书。
+
+我个人的建议是 *看书、上课、和实践相结合，三管齐下，缺一不可。*
+
+*学编程最重要的就是要理论和实践想结合，两方面都需要兼顾好。不然，编程能力不会有真正提高。*
+
+所以我从三个方面来讲一下，先是 *书籍推荐，再是网课选择，最后是练习平台。*
+
+*** 1、书籍推荐
+
+*1.《 [深入理解计算机系统](https://www.zhihu.com/search?q=%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1972835826%7D) 》（CSAPP）*
+
+[[https://picx.zhimg.com/50/v2-9584f70cb5825e204c2ccbb98fc4091a_720w.jpg?source=2c26e567]]
+
+这是一本很基础的书，涵盖了计算机组成原理，操作系统，体系结构，网络编程，并行程序设计原理等课程的基础知识。无论是处于哪个阶段的同学，这部书都是必备的。正如此书开篇作者所言“ *如果你全心投身学习这本书中的概念，完全理解底层计算机系统以及它对应用程序的理解，你会步上成为为数不多的大牛之路* ”。
+
+- 链接： [https://pan.baidu.com/s/1RoDN317X-C6izxY6CwuxTA](https://pan.baidu.com/s/1RoDN317X-C6izxY6CwuxTA)
+- 提取码：iy8u
+
+*2.关于编程语言*
+
+到底哪种编程语言是世界上最好的语言是程序员永远无法达成一致的世界难题。我结合自身七年的学习经验以及针对当前社会的需求，给大家推荐三门编程语言（C++/Java/Python）以及相关的书籍。
+
+*1）《 [C++ Primer](https://www.zhihu.com/search?q=C%2B%2B+Primer&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1972835826%7D) 》*
+
+[[https://picx.zhimg.com/50/v2-4ec18e13a260b0308101f3e3cbb83a23_720w.jpg?source=2c26e567]]
+
+这是一本久负盛名的C++经典教程。无论是初学者入门，或是中/高级程序员提升，这本书都是不容置疑的首选！！！
+
+- 链接： [https://pan.baidu.com/s/1qqAR6iqjur1sfmzeZjcrwg](https://pan.baidu.com/s/1qqAR6iqjur1sfmzeZjcrwg)
+- 提取码：m6gx
+
+*2）《 [Java编程思想](https://www.zhihu.com/search?q=Java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1972835826%7D) 》*
+
+[[https://picx.zhimg.com/50/v2-fa9c3281f6bebafcbec639c0329721a5_720w.jpg?source=2c26e567]]
+
+这本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在作者的文字和示例面前都迎刃而解。从Java的基础语法到最高级特性，这本书都可以指导你一步步的轻松的去理解和掌握！这本书小编我在大二学了一整年，学完之后真的完成了质的飞跃！亲身体验，非常推荐给大家！
+
+- 链接： [https://pan.baidu.com/s/117eGadbs5iHCfmI29LEwEg](https://pan.baidu.com/s/117eGadbs5iHCfmI29LEwEg)
+- 提取码：du2r
+
+*3）《Fluent Python》*
+
+[[https://pic1.zhimg.com/50/v2-024ccfef5f10af364f6f19d09d7bf657_720w.jpg?source=2c26e567]]
+
+近两年我用的编程语言就是python。现在网络上对于python的教材真的是五花八门，内容过于重复和繁琐，对我们帮助并不大。关于这本书我可以很果断的说，这是世面上关于python最好的书！并且真是书的风格特别友好，读的时候你会感觉一个博学但是温柔的大叔再跟你侃侃而谈。
+
+- 链接： [https://pan.baidu.com/s/1gKqdaNH2SpwRCv7PO3HAzw](https://pan.baidu.com/s/1gKqdaNH2SpwRCv7PO3HAzw)
+- 提取码：0z6v
+
+*3.数据结构与算法分析*
+
+掌握了最基本的编程语言，就该学习更高级的知识了，也是程序员核心知识—— [数据结构与算法分析](https://www.zhihu.com/search?q=%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1972835826%7D) 。只有掌握了这些，才可能写的更好更高效的程序，才能将语言更好地用于实际问题的解决。当然，这部分知识也是比较难学的。接下来给大家推荐三本我认为非常好的三本相关书籍。
+
+*1)《我的第一本算法书》*
+
+这本书是 [京都大学](https://www.zhihu.com/search?q=%E4%BA%AC%E9%83%BD%E5%A4%A7%E5%AD%A6&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1972835826%7D) 一个计算机教授和朋友联合出品的动画讲解算法的App 所衍生出来的书籍，非常适合新手朋友们。里面没有枯燥的理论和复杂的公式，而是通过大量的步骤图帮助读者加深对数据结构原理和算法执行过程的理解，便于学习和记忆。将本书作为算法入门的第一步，是非常不错的选择。
+
+[[https://pic1.zhimg.com/50/v2-3f390cba3817152eb7669fd3d7dab609_720w.jpg?source=2c26e567]]
+
+- 链接： [https://pan.baidu.com/s/1r_lxqzfg7YTHvAEQhNJwnQ](https://pan.baidu.com/s/1r_lxqzfg7YTHvAEQhNJwnQ)
+- 提取码：en9j
+
+*2）《算法图解》*
+
+这是一本像小说一样有趣的算法入门书，示例丰富，图文并茂，以让人容易理解的方式阐释了算法，旨在帮助程序员在日常项目中更好地发挥算法的能量。书中的 *前三章将帮助你打下基础* ，带你学习二分查找、大O表示法、两种基本的数据结构以及递归等。 *余下的篇幅将主要介绍应用广泛的算法。*
+
+[[https://picx.zhimg.com/50/v2-582bcbc41e7b3dff93ab0269ff394e7f_720w.jpg?source=2c26e567]]
+
+- 链接： [https://pan.baidu.com/s/1GZEp8KI1Fm0U4Uek7BOWAw](https://pan.baidu.com/s/1GZEp8KI1Fm0U4Uek7BOWAw)
+- 提取码：am4o
+
+*3）《 [算法导论](https://www.zhihu.com/search?q=%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1972835826%7D) 》*
+
+emmmmm这本书真的是算“圣书”了，如果把它从头到尾看完并且搞明白了，那么恭喜你，月入百万不是梦！
+
+[[https://pica.zhimg.com/50/v2-f1a8f9e09d784b68ff3c634f42c7a31b_720w.jpg?source=2c26e567]]
+
+- 链接： [https://pan.baidu.com/s/1Y1kXAyQsZO3MA_kgfa5Jog](https://pan.baidu.com/s/1Y1kXAyQsZO3MA_kgfa5Jog)
+- 提取码：tl3x
+
+*** 2、网课选择
+
+课程的话，最重要的就是下面六门课：
+
+1. 数据结构与算法，
+2. 计算机组成原理，
+3. 计算机操作系统，
+4. 计算机网络，
+5. 数据库系统。
+
+上面的这六门课，无论你是将来找工作，读研，还是读博，都是最最重要的。而且学习的顺序就是上面的这样。
+
+*1. 数据结构与算法*
+
+[https://www.bilibili.com/video/av21620553](https://www.bilibili.com/video/av21620553)
+
+推荐看MIT的算法课，教程用的是《算法导论》，这门算法则基本不涉及到语言层面，主要是算法层面，讲得很好。
+
+[[https://picx.zhimg.com/50/v2-909f97dd4023897409acce778ee84b90_720w.jpg?source=2c26e567]]
+
+*组成原理与操作系统的话，强烈推荐去看下面这两位老师的课，B站上面有完整的视频，保证不水！*
+
+*1. ）2020 南京大学 操作系统：设计与实现 (蒋炎岩)* [https://www.bilibili.com/video/BV1N741177F5?p=1](https://www.bilibili.com/video/BV1N741177F5?p=1)
+
+南大的课质量真的硬， ~蒋炎岩~ 老师讲的是真滴好啊，把晦涩的东西讲的也非常的通俗易懂，豁然开朗，很多同学都是慕名而来，看完这个也算上过南大的操作系统啦 哈哈哈。
+
+[[https://picx.zhimg.com/50/v2-0999f88e727ba763ab025e8cebe00eb5_720w.jpg?source=2c26e567]]
+
+*2.） 操作系统（哈工大 [李治军](https://www.zhihu.com/search?q=%E6%9D%8E%E6%B2%BB%E5%86%9B&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1972835826%7D) 老师）* [https://www.bilibili.com/video/BV1d4411v7u7?p=1](https://www.bilibili.com/video/BV1d4411v7u7?p=1)
+
+个人觉得是 b 站上很不错的操作系统课程了，这门课的前几讲涉及 OS 启动，需要一点汇编知识，不过遇到不会的直接网上搜即可，大可不必因为汇编而被劝退；之后的内容如多进程、信号量、内存管理等讲得很好。
+
+[[https://picx.zhimg.com/50/v2-23240020d53c2ac2d19734ffce7cf0d7_720w.jpg?source=2c26e567]]
+
+*3.）计算机网络微课堂* *[https://www.bilibili.com/video/BV1c4411d7jb?p=1](https://www.bilibili.com/video/BV1c4411d7jb?p=1)*
+
+这个网课惊艳的地方在于，老师的话语没什么废话，基本都是知识要点，更重要的是他动图非常多，他动图非常多，他动图非常多，他动图非常多！！！所以非常适合小白入门学习，不能再生动形象！
+
+[[https://picx.zhimg.com/50/v2-3406b172a30ebadcc9d7e76ebce20153_720w.jpg?source=2c26e567]]
+
+*** 3、最后来说说练习平台
+
+光学不练，计算机知识是学不会的。
+
+*不管你是考研还是面试找工作，都一定会重点考查学生的动手能力，而动手能力主要考查的就是算法能力，所以大家一定要勤加训练！*
+
+** *LeetCode**
+
+leetcode是现在找工作最热门的刷题网站了，
+
+但LeetCode现在题目也太多了，一共1300+了，而且一直在增加！！！
+
+全刷完没必要，也不高效，推荐看下面这个leetcode刷题笔记：
+
+[[https://pic1.zhimg.com/50/v2-49c35df39108812e6eed0a8e93633ef7_720w.jpg?source=2c26e567]]
+
+这份笔记里面共包含作者刷LeetCode算法题后整理的数百道题，每道题均附有详细题解过程。很多人表示刷数据结构和算法题效率不高，甚是痛苦。
+
+有了这个笔记的总结，对校招和社招的算法刷题帮助之大不言而喻。
+
+*离线版笔记下载地址：*
+
+#+begin_quote
+链接： [https://pan.baidu.com/s/12VD7NnF2NJEgGsCoOIkNyw](https://pan.baidu.com/s/12VD7NnF2NJEgGsCoOIkNyw) 
+ 提取码：w31k
+#+end_quote
+
+** *4、一些建议**
+
+1）在大家学习计算机相关知识的时候，一定要好好利用网络上的资源，好好利用百度和谷歌。有什么不会的直接上网搜，肯定会有很多优秀的博主为你排忧解惑。
+
+2）对于编程语言的学习，一定要多动手写代码，在实战中掌握。而且C++/Java/Python掌握一门就够了。大同小异，当你精通一门语言之后，如果想要学习其他语言，就会非常的快。
+
+3）学习数据结构和算法分析，一定一定要在看懂之后自己用自己喜欢的编程语言实现一遍，一定要亲自实现一遍呀！！！这一点太重要了。这样你就能很快的掌握而且再一次加强编程能力。
+
+*以上，希望对想要转码的同学有帮助！*

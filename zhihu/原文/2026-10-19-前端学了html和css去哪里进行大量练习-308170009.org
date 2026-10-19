@@ -1,0 +1,8 @@
+#+TITLE: 前端学了html和css去哪里进行大量练习？
+#+LINK: https://www.zhihu.com/question/266413725/answer/308170009
+#+AUTHOR: HelloKaton
+#+CREATED: 2018-01-31
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+没有比 *[freecodecamp](https://www.freecodecamp.org/)* 更好的地方。

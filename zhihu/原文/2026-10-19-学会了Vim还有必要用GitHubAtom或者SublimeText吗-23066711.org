@@ -1,0 +1,23 @@
+#+TITLE: 学会了 Vim 还有必要用 GitHub Atom 或者 Sublime Text 吗？
+#+LINK: https://www.zhihu.com/question/22904741/answer/23066711
+#+AUTHOR: Boxsmia
+#+CREATED: 2014-03-03
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+转自国外网站，非原创，出处未明，请谅解。
+
+让我们把时间挪回你还是一个 Vim 新手的时候。和所有 noobs 一样，你打开了 vimtutor。「hjkl，J的意思就是下。很好理解嘛，J 就是 JJ，JJ 当然是在下面的！」你为自己的聪明的联想感到自豪。Vim 的学习曲线虽然陡峭，但是聪明的你经过三个月的学习终于初步掌握了基本的移动命令。
+
+接着你开始编程，你需要一个项目式的文件管理器，大部分 Vimmer 都知道NERDTree，可是 NERDTree 你很难搞清楚为啥有时候他不随着 buffer 一起关闭。所以你大概忍耐了一段时间终于发现了NERDTree tabs。是的，使用 Vim 你不单只需要找到一个「好插件」，还要找到一个「好插件」的插件。
+
+接下来你要在这个项目里查找文件了，当然你可以原生的grep及其延伸命令，但是你觉得每次都输入太麻烦了，于是你找到了 Command-T ，后来发现这货实在太 JB 慢了，然后你找到了 CtrlP ，终于变快了，又发现这货的模糊搜索有问题。而你打开 Sublime 按下 CtrlP，发现不但模糊搜索没问题，而且还快多了。
+
+接着你发现 Vim 内置的补全太弱了，你需要一个更强的补全和 snippets ，所以你找到了 snipmate ，然后你又发现了ultiSnips ，最后你终于找到了 neocomplete 。世界终于清净了。你在 Vundle 轻松安装成功。再次打开 Vim 却发现出现了错误。原来，你还要自己下载 Vim 7.4 源码 编译一个带 lua 支持的 Vim 才能支持 neocomplete。经过一番折腾，你终于成功编译在 Mac ，VM 上CentOS ，Ubuntu 的 Vim 7.4 with lua。虽然各个系统过程各有不同，但你还是成功了。你想到当年等待了10秒 VS 才打开的日子，含笑对着eclipse的图标说:"IDE ,suck it."。可当你打开 Sublime ，使用 Package Install 轻松安装SublimeCodeIntel 之后，发现 import 可以实时补全也就算了，可几乎所有主流语言都可以 ctrl+click 跳转定义之后，知道真相的你眼泪掉下来。
+
+装了28个插件之后，并且花了三个晚上的时间来解决你的键盘映射问题之后，你一脸满足地看着你手写了八百行带注释的 vimrc。发现，是时候为你挚爱的 Vim 做些什么了。你打开了 Vim Wiki 搜索 Vimscript 的教程，发现那教程写得和狗屎一样，但你早已习惯了，Vim 本身自带的 help 比起这教程也好多少不是吗？「相比大部分 Vim 插件的文档这教程已经很优雅了。」你安慰自己说。可当你看到 Vimscript 的语法时，你吐血三升，无刻板的 HKKB 终于有了鲜红的印迹。在你昏迷当中，你梦到了原来 Vim 的文档和 Vimscript 是未来机器人穿越过来改写了逗你玩的。
+
+
+
+
+Honey,why don't just try Sublime?It would't get pregnant.

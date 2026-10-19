@@ -1,0 +1,57 @@
+#+TITLE: 作为程序员，你有自己的代码片段库吗？
+#+LINK: https://www.zhihu.com/question/433240345/answer/2593690701
+#+AUTHOR: 黑马程序员
+#+CREATED: 2022-07-26
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+好的代码片段基于三个理念：同构、复用、开箱即用。分享5个代码片段工具以及9个代码片段资源网站。
+
+** 市面上的代码片段管理工具介绍
+
+*** SnippetsLab
+
+- 优点：界面好看，收集比较快
+- 缺点：复制查找还是比较慢
+
+*** Dash
+
+- 优点：中规中矩
+- 缺点：扩展缩写来快速使用代码片段的方式比较奇怪。
+
+*** Alfred
+
+- 优点：复制代码片段容易
+- 缺点：管理代码片段的页面较为简陋且无语法高亮
+
+*** Gist
+
+- 优点：在不少常用 IDE 可以用插件管理
+- 缺点：因某些原因，在国内访问不是很快
+
+*** 各种 IDE 内置代码片段管理
+
+- 优点：集成度高，使用体验不错
+- 缺点：无法跨 IDE 使用
+
+建议大家按照自己的习惯选一款代码片段工具，自己做好代码片段的命名。写代码的时候，就不需要记忆完整的代码了，简单记忆通过索引找到片段。代码片段索引是根据语法来的，不需要死记硬背。
+
+** 分享9个代码片段资源网站
+
+[Snipplr](http://snipplr.com/) *：* snipplr可以说是世界上最大的代码资源库。在过去的几年中，它发布了大量的代码片段，包括我们网站上的很多文章都引用了snipplr的大量代码。
+
+[DZone code snippets](http://snippets.dzone.com/) *：* 一个综合性质的代码库。拥有25中不同编程语言的代码集合，包含了几千的代码片段。
+
+[Jonas John snippet library](http://www.jonasjohn.de/snippets/) *：* 一个综合的代码库，包含了php，C#，visual Basic，javascript等。
+
+[Code Beach](http://codebeach.org/) *：* Mac开发者的代码库，包含了C，Ruby，C++，Python等代码片段
+
+[PHP Snips](http://phpsnips.com/) *：* 如果你做PHP开发，那么这个网站绝对是你需要的代码库。拥有几百号的免费使用的代码。超值！
+
+[WPRecipes](http://www.weprecipes.com/) *：* 一个专门收集wordpress代码的网站。大约拥有300个独立的代码片段可供用户选择。
+
+[Code Codex](http://www.codecodex.com/wiki/Main_Page) *：* 使用wiki方式构建的代码资源网站，拥有丰富的C，C++和Java的代码资源。
+
+[CodeKeep](http://codekeep.net/) *：* 上万的代码片段，绝对能够找到你需要的代码。包含，C，C++，ASP，VB ，actionscript等
+
+GBin1 jQuery/javascript *：* 这里收集了很多大家可能会常用的jQuery/javascript代码片段，如果你也有自己不错的代码片段，你也可以投递
