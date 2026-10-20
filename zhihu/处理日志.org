@@ -944,3 +944,15 @@ headline，满 50 条分卷 <主类>-part2.org）；原文全文在 zhihu/原文
 - 删藏方式：DELETE /api/v4/collections/379223291/contents/<裸ID>?content_id=<裸ID>&content_type=answer（venv python 直调，0.6s 间隔），88 条均返回 {"success":true}
 - 备注：第 9 条正文极短（两张已失效的 HTTP 状态码梗图）、第 24 条为书柜图集、第 47 条独角兽名单全在图片里、第 74 条为 20 多张梗图配文、第 61/63/71/76/77/80 条正文极短、第 14 条文不对题（83 条公众号项目链接）、第 43 条只是站内链接索引——以上均按「拿得到多少存多少」如实短写，未编造；第 65 条含大段机器码十六进制，只保留可读代码与运行步骤
 - 收尾：✅ 已归档并删除 88 条 ／ ⏸ 保留 0 条 ／ ⚠️ 失败 0 条
+* 2026-10-20 /collect-zhihu（无参数：BATCH=20，策略沿用状态 auto）（收藏夹：我的收藏 695024071）— 可列出 3 条，实际处理 3 条
+- ✅ 为什么国家不能直接规定每个公司都双休呢？（陳凱文的平常心） → 观点-part9.org（总结+原文；不直接谈立法，而是把「为什么企业宁可让人加班也不肯多放假」还原成一套工厂逻辑——工厂真正的主角是机器，休息是人的概念）
+- ✅ 为什么世界三大饮料都是苦的？（紫侠狼） → 个人思考-part2.org（总结+原文；把「咖啡可可茶为什么都苦」从味觉问题改写成情绪落差问题——快乐的可持续性取决于落差的方向，「先负后正」可以无限重复，）
+- ✅ 为什么网上有人说“才过几年就开始岁月史书了”？（楚虽三户） → 观点-part9.org（总结+原文；用一张时间线反驳「是国产新能源让我们开上便宜车」的说法——2023 年 1 月是特斯拉先降价、比亚迪跟进才引爆全行业）
+- 原文归档 3 篇入 zhihu/原文/（2026-10-20-*-<answer-id>.org）
+- 本批分布：观点-part9.org +2、个人思考-part2.org +1（合计 3，分布文件 2 个）
+- 分卷（写前复核）：无滚动（写后 观点-part9.org 6条/231行、个人思考-part2.org 12条/430行）
+- 条目不足说明：`collect view 695024071` 只返回 3 条，stderr 报 `API reported 177 total items but only 3 were returned (missing 174)`；另手工按 offset 0→200（步长 10）直扫 v4 接口、去重后仍只有 3 条，排除 CLI 翻页问题。按规则「可列出条目 > 0 即沿用状态夹、返回条数 < BATCH 按实际条数处理」，本批不换夹
+- 取全文兜底：`zhihu browse answer` 对 3 条全部返回 `HTML zh-zse-ck risk-control challenge`（403 风控，完整重试 1 次仍失败）；改用 MCP get_fulltext 拿到第 1、2 条，第 3 条 MCP 回落为 `browse question` 同样被挡；最终改走 v4 API `/api/v4/answers/<id>?include=content,excerpt,author,question` + CLI 自带 `content/utils/html2markdown.PageToMarkdown` 转 markdown，3 条全部取到全文并归档，未编造内容
+- 删藏方式：DELETE /api/v4/collections/695024071/contents/<裸ID>?content_id=<裸ID>&content_type=answer（本机 CLI `collect remove` 405，全程走 venv python 直调，0.6s 间隔），3 条均返回 {"success":true}
+- 状态文件：本批未换夹，仍写回 695024071 / 我的收藏 / auto
+- 收尾：✅ 已归档并删除 3 条 ／ ⏸ 保留 0 条 ／ ⚠️ 失败 0 条
