@@ -1,0 +1,64 @@
+#+TITLE: CPU 是怎么认识代码的？
+#+LINK: https://www.zhihu.com/question/348237008/answer/853654764
+#+AUTHOR: 老狼
+#+CREATED: 2019-10-11
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+谢邀。现代CPU是如何认识代码的？这个基本的知识实际上知道的人却十分少。其他答案都举了加法器等等逻辑运算单元做例子，但实际上它只是CPU decode的后端的末尾部分。真正复杂的逻辑在前端和后端发射，pipeline等部分。今天我们就从最新的Icelake的微结构 *Sunny Cove*
+
+[[https://picx.zhimg.com/50/v2-4d725457237e42f9ca6c9237f212b594_720w.jpg?source=2c26e567]]
+
+讲起，看看指令怎么被分解到运算单元去的。
+
+** 准备工作
+
+现代高级语言要被编译器编译成CPU认识的机器代码，才能够被CPU所识别并执行；而汇编语言只是被发明出来方便人类解读和产生机器代码的，这些基本知识我就不介绍了。一组机器代码和相应汇编语言的例子：
+
+[[https://picx.zhimg.com/50/v2-ba162ca227c8798e91c2cea227d21700_720w.jpg?source=2c26e567]]
+
+这些指令和数据流在被识别（decode）之前会被分别放入一级cache(L1 Cache)中，指令放在指令L1 Cache中，数据放在数据L1 Cache中。注意L1 Cache是唯一指令和数据单独分割的Cache。然后，指令Cache中的指令会进入解码器decode，那里才是神奇的开始：
+
+[[https://picx.zhimg.com/50/v2-94a37473f22afdcd1909de392631b626_720w.jpg?source=2c26e567]]
+
+** 微码/微指令
+
+现代CPU的指令解码器（Instruction Decode Unit ， *IDU* ）大致分成两种：硬件指令解码器和微码指令解码器。
+
+硬件指令解码器是完全由硬件连线（hardwired)完成的机器代码解码。它是最原始的解码器，由有限状态机驱动，解码速度十分快。它现在还在很多精简指令CPU（RISC）中发挥作用。
+
+我们现在普遍使用的电脑X86 CPU，采用的是复杂指令集（CISC)，指令很多，而且长短不一。如果所有的指令全部采用硬件解码，那将是一个不可能完成的任务。所以一条机器指令，将被拆解成数个类似RISC的精简微操作：微码，Micro-Ops。而这些Micro-Ops，则可以完全被硬件执行。如下面这个例子：
+
+[[https://picx.zhimg.com/50/v2-ab4bf863a0c7b5cb932f5d4112664b9f_720w.jpg?source=2c26e567]]
+
+那么每个X86指令会被分解成多少个micro-ops呢？这和该指令的复杂程度相关，很简单的指令甚至只有一个micro-ops，一般3个左右，复杂的可以4个以上。
+
+这么做除了能化繁为简外，它的输出Micro-Ops作为可以执行的最小单位，可以被调度入Pipeline中来 *提高指令的并行性* ：
+
+[[https://pic1.zhimg.com/50/v2-52ed4831e59662194b39e56ddcfb74f9_720w.jpg?source=2c26e567]]
+
+然后才会进入ALU，IMUL等等逻辑运算单元。它们基本是由逻辑门搭出来的。
+
+** 其他
+
+这么神奇的Micro-Ops，我们是不是不会碰到它呢？实际上 *，很多人都听过它并还在每次重启都更新过它！！*
+
+是的，你没有看错，它的另一个名字就是Microcode，Kabylake等等CPU的Meltdown问题就是用它来修正的。微指令的解码是从CPU中的一个ROM中得到翻译过的微指令的：
+
+[[https://picx.zhimg.com/50/v2-bba4bb6261f592fe01a07a1a6f44dd7d_720w.jpg?source=2c26e567]]
+
+而CPU中出了Bug等等问题，它还有一块RAM来patch这个Rom:
+
+[[https://picx.zhimg.com/50/v2-850737f7c9f1b6401c90285e209f7538_720w.jpg?source=2c26e567]]
+
+既然是RAM， *这就是为什么Microcode的Patch每次重启都要重新打上去的原因* 。这个Patch在指令decode这么底层来进行干预， *所以才能修正很多有时候需要重新修改硬件才能解决的问题* 。
+
+** 后记
+
+一条机器指令，经过重重解码，才会流到逻辑运算单元。而这个decode的过程，让曾经泾渭分明的RISC和CISC两种CPU架构的界限变得模糊了起来。RISC CPU加入了越来越多的指令，很多CPU也不再仅仅是硬件指令解码，而对部分指令采取了微码解码方式。而CISC CPU因为加入了Micro-Ops，而在decode后端显示出了RISC的特性。
+
+[]()
+
+[]()
+
+欢迎大家关注我的专栏和用微信扫描下方二维码加入微信公众号"UEFIBlog"，在那里有最新的文章。

@@ -1,0 +1,71 @@
+#+TITLE: 既然有些人喜欢开挂，为啥不开发一款网游，提供编程接口，允许玩家自行用各种软件，同时允许计算机参与计算？
+#+LINK: https://www.zhihu.com/question/320155407/answer/667103724
+#+AUTHOR: 麋路
+#+CREATED: 2019-04-29
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+真有这种游戏啊。。。
+
+《Screeps》
+
+[[https://pic1.zhimg.com/50/v2-bbb9196f570df5f76b584191a8fa8a22_720w.jpg?source=2c26e567]]
+
+steam链接： [https://store.steampowered.com/app/464350/Screeps/](https://store.steampowered.com/app/464350/Screeps/)
+
+有想要挑战一下的可以看这个live demo，不需要注册就可以立刻试玩： [https://screeps.com/a/#!/sim](https://screeps.com/a/#!/sim)
+
+游戏的介绍：Screeps is an open source MMO RTS sandbox game for programming enthusiasts, wherein the core mechanic is programming your units AI. You control your colony by writing JavaScript which operates 24/7 in the single persistent world filled by other players on par with you.
+
+介绍的翻译：Screeps是一个为代码变态(划掉)爱好者设计的开源的MMO RTS（大规模多人在线即时战略）游戏。这个游戏的核心机制就是来为你控制的单位写AI。你可以用JavaScript来控制你殖民地（里的一切），并且这些内容7*24小时运行的，并且充满其他玩家来与你对抗。
+
+说白了就是给你提供一个JavaScript的接口，用来写一个“AI”来跟其他玩家对抗。可以简单的基于规则，也可以写有限状态自动机，也可以写增强学习之类的agent ai（但性能其实很受限）。
+
+现在这个游戏已经变得巨复杂了。从能源到采集，从防御到进攻策略甚至还有贸易等等等等。。。
+
+这个游戏有多复杂？首先想要入门，游戏是全英文的，除了写code要用纯英文，最重要的是所有的官方文档也都是英文的。你需要通过阅读文档来学习这个游戏的API： [https://docs.screeps.com/architecture.html](https://docs.screeps.com/architecture.html)
+
+（这文档一看就是API Reference的风格）
+
+[[https://pic1.zhimg.com/50/v2-fc92d565ed8a26a7f6dc5437f69e31c4_720w.jpg?source=2c26e567]]
+
+文档中包括整个游戏系统的运行逻辑、写code的接口和一大堆内部机制。
+
+当然，还有API References！来来来，请随意体验一下被代码支配的恐惧：
+
+[[https://pica.zhimg.com/50/v2-4ebe8e4235be3f2a471d5f7ccb45a923_720w.jpg?source=2c26e567]]
+
+然后看看大佬开源出来的code： [https://github.com/TooAngel/screeps](https://github.com/TooAngel/screeps)
+
+（是的，放在了全球最大宅男/女交友社区）
+
+[[https://pica.zhimg.com/50/v2-78043d0439fba0870f5f6e4c5649f485_720w.jpg?source=2c26e567]]
+
+这个游戏的收费是花钱买算力(subscription token)。。而游戏中你可以获得算力再出售。所以完全有可能通过写一个巨厉害的code来赚钱……
+
+详细信息建议看steam页面中 *Attack.On.Pika[AFK]* 的评论。。。分析的已经很透彻了
+
+---
+
+更：附上tutorial里的第一段代码：
+
+#+begin_src js
+module.exports.loop = function () {
+    var creep = Game.creeps['Harvester1'];
+    var sources = creep.room.find(FIND_SOURCES);
+    if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE){
+        creep.moveTo(sources[0]);
+    }
+}
+
+#+end_src
+
+大致的意思是这样的：从场景中找到名为Harvester1的一个creep(既游戏种的一种基本单位)。然后寻找当前房间中的所有source。然后命令creep去harvest 所有source中的第1个source。但这个过程有可能返回值是“ERR_NOT_IN_RANGE”这个错误，说明creep距离source太远了。然后就命令creep moveTO那个source里。然后整个函数永不间断地执行下去。
+
+如此，万里长征第一步搞定了！你得到了一个可以遍历采集资源的creep。但是抵御不了入侵者，也很难最优化效率等等。想要更高端的agent，还是要多烧脑了。
+
+---
+
+更：看了一下API，这玩意居然还支持Binary Module。就是说一些要求性能的地方，你可以写个C语言的code然后编译成二进制的library再在JavaScript脚本里调用。
+
+[[https://picx.zhimg.com/50/v2-7cbedec2bd7270a6d11e1bd37070a5c4_720w.jpg?source=2c26e567]]

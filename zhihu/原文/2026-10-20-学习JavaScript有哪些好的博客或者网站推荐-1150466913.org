@@ -1,0 +1,128 @@
+#+TITLE: 学习JavaScript，有哪些好的博客或者网站推荐？
+#+LINK: https://www.zhihu.com/question/19651401/answer/1150466913
+#+AUTHOR: 麻瓜编程
+#+CREATED: 2020-04-13
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+简单整理了一些，整理得不全，但是感觉是比较有用的，大家可以参考一下！以后看到了再继续更新！
+
+* *教程类**
+
+- *[ 现代 JavaScript 教程 ]*
+
+[现代 JavaScript 教程](https://zh.javascript.info/)
+
+[[https://pica.zhimg.com/50/v2-ca9c9e078164be1ad51758bb45b3a5ee_720w.jpg?source=2c26e567]]
+
+- *[ MDNJS ]*
+
+[重新介绍 JavaScript（JS 教程）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+
+[[https://picx.zhimg.com/50/v2-e58f73328b616de1cc81f922b91f6b2c_720w.jpg?source=2c26e567]]
+
+- *[ 前端九部 - 入门者手册2019 · 语雀 ]*
+
+[前端九部 - 入门者手册2019 · 语雀](https://www.yuque.com/fe9/basic)
+
+[[https://pic1.zhimg.com/50/v2-ac0e3b0b98326f865612acfcfb78fd55_720w.jpg?source=2c26e567]]
+
+- *[ JavaScript 秘密花园 ]*
+
+[JavaScript 秘密花园](https://bonsaiden.github.io/JavaScript-Garden/zh/)
+
+[[https://pic1.zhimg.com/50/v2-bfa5eca017d4fb91e62125530e0cdcec_720w.jpg?source=2c26e567]]
+
+- *[ Js Tips - A JavaScript tip per day! ]*
+
+[Js Tips - A JavaScript tip per day!](https://www.jstips.co/zh_CN/)
+
+每天一个 Javascript 小知识
+
+[[https://pic1.zhimg.com/50/v2-e980bf90a37d34641e21aad076b34c79_720w.jpg?source=2c26e567]]
+
+---
+
+* *问答社区**
+
+- *[掘金 - 一个帮助开发者成长的社区]*
+
+[掘金 - juejin.im - 一个帮助开发者成长的社区](https://juejin.im/)
+
+掘金技术社区是质量很高的技术分享社区，技术大牛和极客们共同编辑筛选的优质干货，这些技术文章包括Android、iOS、前端、后端资源等。
+
+[[https://pica.zhimg.com/50/v2-a032096f0f026e5ba25da2603e837bf2_720w.jpg?source=2c26e567]]
+
+- *[Stack Overflow]*
+
+[Stack Overflow - Where Developers Learn, Share, & Build Careers](https://stackoverflow.com/)
+
+全球IT界最受欢迎的技术问答网站之一，一个解决 bug 的社区，被称为编程界的十万个为什么。
+
+[[https://pic1.zhimg.com/50/v2-8d3e5808e7c1e63bff763c69910f792c_720w.jpg?source=2c26e567]]
+
+- *[ JavaScript Weekly]*
+
+[JavaScript Weekly](https://javascriptweekly.com/)
+
+专门讲解 Javascript 的技术周刊。
+
+[[https://pica.zhimg.com/50/v2-576283fc676858d5859f7e545d6a8737_720w.jpg?source=2c26e567]]
+
+---
+
+* *在线IDE**
+
+- *[CodePen]*
+
+[https://codepen.io](https://codepen.io)
+
+一个前端网站设计开发平台，针对前端代码的一个工具，上面有各种效果的案例特效，可以在他们的 demo 基础上开发自己的前端设计。
+
+[[https://pic1.zhimg.com/50/v2-56ec2394f9e1187c187ec5738c7a2f07_720w.jpg?source=2c26e567]]
+
+- *[ CodeSandBox ]*
+
+[https://codesandbox.io/s/](https://codesandbox.io/s/)
+
+站如其名，CodeSandBox 网站提供一个在线开发环境的“沙盒”，主流的框架如 React、Vue、Angular 等，都可即开即用、实时编译预览，非常方便。
+
+[[https://pica.zhimg.com/50/v2-032f854745018716d91b482ce12feae2_720w.jpg?source=2c26e567]]
+
+- *[ JS Bin ]*
+
+[JS Bin](https://jsbin.com/)
+
+另一个轻量级在线编辑器网站，界面简洁干净，临时想调试简单的 HTML 或 JS 代码可以考虑去这里试一试。
+
+[[https://picx.zhimg.com/50/v2-803ad82343fa8dc6d4044a0aa193b7da_720w.jpg?source=2c26e567]]
+
+---
+
+* *资源**
+
+- *[ Beautiful Open ]*
+
+[Beautiful Open](https://beautifulopen.com/)
+
+收集各类卓越设计的开源项目，大到CMS内容管理系统，小到常用的Javascript库，适合网站开发的用户使用。
+
+[[https://pica.zhimg.com/50/v2-5a1c3c0b3f1e1f12e2be0a066d23a450_720w.jpg?source=2c26e567]]
+
+- *[ CDNJS ]*
+
+[libraries - cdnjs.com - The best FOSS CDN for web related libraries to speed up your websites!](https://cdnjs.com/libraries)
+
+CDNJS 是一个互联网上的 JavaScript 资料库，为开发者提供最新的前端 Web 开发资源，免费使用，无使用限制。你可以直接在自己的网页上引用这些 JS 文件，实现用户浏览网站的最佳速度体验，使用浏览器进入 CDNJS 网站后，搜索你想要的资源库，找到后点击项目后方的[ Copy Script Tag] ，然后贴上就可以用了。目前 CDNJS 在 Web 前端的 CDN 服务中排名第二（第一名是 Google），性能出色。
+
+[[https://picx.zhimg.com/50/v2-b4ed4a6f27fc8870d0c026f095a9addd_720w.jpg?source=2c26e567]]
+
+---
+
+你还在低效努力吗？
+
+用 Python 提升效率，4 小时工作 20 秒完成
+
+《Python 效率 Up 计划》新课发布会，点击免费参加
+
+[Python 效率 Up 计划新课发布会](https://ke.study.163.com/topic/mugglecode/mg_fbh_gzh.html)

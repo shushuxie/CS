@@ -1,0 +1,238 @@
+#+TITLE: 作为程序员的你，常用的工具软件有哪些？
+#+LINK: https://www.zhihu.com/question/22867411/answer/474349470
+#+AUTHOR: 慕课网
+#+CREATED: 2018-08-21
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+来一波工具推荐，无利益相关，如果觉得是广告的，麻烦艾特相关甲方爸爸把广告费结一下。
+
+好了，直接上重点：
+
+[[https://picx.zhimg.com/50/v2-10e1fedbeac7d401016b81e98b38836c_720w.jpg?source=2c26e567]]
+
+** 工具类
+
+** Postman
+
+• 地址： [https://www.getpostman.com/](https://www.getpostman.com/)
+
+• 应用场景：接口调试
+
+• 安装方式：客户端/浏览器插件
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆☆
+
+• Postman 是一款非常强大的接口调试工具，不仅可以模拟各种各样的HTTP请求，还可以保存cookie和session等信息，甚至还可以把请求的内容转换成常见编程语言的代码。
+
+[[https://picx.zhimg.com/50/v2-3c506470f311ff16043b5f529c4031db_720w.jpg?source=2c26e567]]
+
+** Restlet Client
+
+• 地址： [https://restlet.com/modules/client/](https://restlet.com/modules/client/)
+
+• 应用场景：接口调试
+
+• 安装方式：浏览器插件
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆
+
+• Restlet Client 是为数不多能够跟Postman相媲美的接口调试工具，和Postman一样，都可以作为Chrome浏览器的插件运行。不同的是，Postman还提供了客户端。不习惯使用Postman的同学，不妨试试它，或许能给你带来不一样的惊叹。
+
+[[https://pic1.zhimg.com/50/v2-724988c8999fffe95e7d87adf5166bf6_720w.jpg?source=2c26e567]]
+
+** FeHelper [Web前端助手]
+
+• 地址： [https://chrome.google.com/webstore/detail/web%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8Bfehelper/pkgccpejnmalmdinmhkkfafefagiiiad?utm_source=chrome-ntp-icon](https://chrome.google.com/webstore/detail/web%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8Bfehelper/pkgccpejnmalmdinmhkkfafefagiiiad?utm_source=chrome-ntp-icon)
+
+• 应用场景：辅助工具
+
+• 安装方式：浏览器插件
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆☆
+
+• 如果说现在工作中哪个工具使用的最多，那么我敢说，除了IDE和Postman以外，就是它了。这款工具提供了json字符串美化，代码美化/压缩，二维码生成，字符串编解码，截图，网页取色，等等。很多非常方便又常用的功能，用了以后你一定会像我一样爱上它的。
+
+[[https://picx.zhimg.com/50/v2-c6fcc2a2ccd190a2c570d12be8907745_720w.jpg?source=2c26e567]]
+
+** Set Character Encoding
+
+• 地址： [https://chrome.google.com/webstore/detail/set-character-encoding/bpojelgakakmcfmjfilgdlmhefphglae?utm_source=chrome-ntp-icon](https://chrome.google.com/webstore/detail/set-character-encoding/bpojelgakakmcfmjfilgdlmhefphglae?utm_source=chrome-ntp-icon)
+
+• 应用场景：辅助工具
+
+• 安装方式：浏览器插件
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆
+
+• 我们都知道在IE浏览器中可以设置网页的编码格式，但是在新版的Chrome浏览器中取消了这一功能，那我们前端的同学有时候需要检查网页在不同编码下的展示就很困难了。装了这个插件，我们只需要在网页上右键单击选择此工具，然后就可以随意更换任何你想要的编码格式了。
+
+[[https://pic1.zhimg.com/50/v2-14c1dd90f767a4097cd8cc4fd7f86a8c_720w.jpg?source=2c26e567]]
+
+** Momentum
+
+• 地址： [https://momentumdash.com](https://momentumdash.com)
+
+• 应用场景：待办事项工具
+
+• 安装方式：浏览器插件
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆☆
+
+• 在我们工作中，经常会有很多的任务。开发新功能，修复BUG，完成领导口头交代给你的任务。并不是所有的任务都会在公司内部的OA系统上列举出来，当任务多了以后难免会遗忘。Momentum就是一款非常强大好用的待办事项插件，可以默认设置为浏览器的标签页，只要你打开浏览器就能看到自己还有哪些任务没有完成，非常的方便。
+
+[[https://pic1.zhimg.com/50/v2-6260a8baff176311be5bd8b723b764d8_720w.jpg?source=2c26e567]]
+
+** Visual Studio Code
+
+• 地址： [https://code.visualstudio.com](https://code.visualstudio.com)
+
+• 应用场景：开发工具
+
+• 安装方式：客户端
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆☆
+
+• 最好用的前端开发和文本编辑工具，简洁的风格，种类丰富的插件，绝对是每个程序员都必须要安装的工具。无论是用来写代码或者是用来写markdown文档，都是你不二的选择。
+
+[[https://pica.zhimg.com/50/v2-d538140ee99233177c1d874b3fa09d03_720w.jpg?source=2c26e567]]
+
+** 7zip
+
+• 地址： [https://www.7-zip.org](https://www.7-zip.org)
+
+• 应用场景：解压工具
+
+• 安装方式：客户端
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆☆
+
+• 最好用的解压工具，没有之一。
+
+[[https://pic1.zhimg.com/50/v2-28e8ff0465d0623988023f3a58e1715e_720w.jpg?source=2c26e567]]
+
+** Github客户端
+
+• 地址： [https://desktop.github.com](https://desktop.github.com)
+
+• 应用场景：Git管理工具
+
+• 安装方式：客户端
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆☆
+
+• 非常方便的同步代码，提交代码，发现冲突，查看修改内容，切换分支，等等。Github出品，像Github一样出色。
+
+[[https://picx.zhimg.com/50/v2-f1e06a1ec075eeda12cce2c37635af7e_720w.jpg?source=2c26e567]]
+
+** Navicat
+
+• 地址： [https://www.navicat.com/en/products](https://www.navicat.com/en/products)
+
+• 应用场景：数据库管理工具
+
+• 安装方式：客户端
+
+• 类型：付费
+
+• 推荐指数：☆☆☆☆☆
+
+• 最好用的数据库管理工具，可以连接任何主流数据库。界面美观，功能强大，还提供中文版的。
+
+[[https://pic1.zhimg.com/50/v2-1d715ebc849665e0324b97e3c22a50fe_720w.jpg?source=2c26e567]]
+
+** xshell
+
+• 地址： [https://www.netsarang.com/products/xsh_overview.html](https://www.netsarang.com/products/xsh_overview.html)
+
+• 应用场景：服务器SSH连接工具
+
+• 安装方式：客户端
+
+• 类型：学校及个人免费使用
+
+• 推荐指数：☆☆☆☆☆
+
+• 在Windows上想要连接Linux无疑是一件非常困难的事情，传统的putty完全依靠命令，使用有很多不便，上传文件更是困难。xshell可以一键连接服务器，并且能够保存账号密码，同时开启多个窗口。可视化的文件上传与下载，让你从痛苦中解脱出来。
+
+[[https://picx.zhimg.com/50/v2-5a9b399713b414c536142e144cc1a1c5_720w.jpg?source=2c26e567]]
+
+** 有道云笔记
+
+• 地址： [https://note.youdao.com/](https://note.youdao.com/)
+
+• 应用场景：云笔记
+
+• 安装方式：客户端
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆
+
+• 在工作或学习中，难免会遇到一些想记录下来的东西，毕竟好记性不如烂键盘。记录下来，等下次需要的时候就能方便查看。云笔记我用过很多种，最后发现还是有道云笔记比较适合。支持markdown语法，方便的导入导出，支持在线分享和多人协作。美中不足的是，没有印象笔记好看，长得有点丑。
+
+[[https://picx.zhimg.com/50/v2-80fb0cc5e6eebec93879bcea41205532_720w.jpg?source=2c26e567]]
+
+** Tower
+
+• 地址： [https://tower.im/](https://tower.im/)
+
+• 应用场景：项目进度管理
+
+• 安装方式：网页
+
+• 类型：免费
+
+• 推荐指数：☆☆☆☆☆
+
+• 团队开发或者多人协作的时候，总会出现任务分配以及任务进度管理的情况。Tower是一款非常轻量级的在线项目管理系统，非常适合小中型公司或者创业型团队使用。非常方便的创建任务，维护进度，查看文档等等。
+
+[[https://picx.zhimg.com/50/v2-b8020eed77f629cd758f6a2dc9967b3b_720w.jpg?source=2c26e567]]
+
+以上，希望能帮到你。
+
+[[https://picx.zhimg.com/50/v2-3d2cbc5745b832761bcffffe859f2f0a_720w.jpg?source=2c26e567]]
+
+---
+
+*推荐阅读：*
+
+[如何确定自己是否适合做程序员？](https://www.zhihu.com/question/35256075/answer/256747303)
+
+[半路学编程，可以成为大牛吗？](https://www.zhihu.com/question/34101611/answer/370155398)
+
+[如何使用 GitHub？](https://www.zhihu.com/question/20070065/answer/415539043)
+
+[在做程序员的道路上，你掌握了什么概念或技术使你感觉自我提升突飞猛进？](https://www.zhihu.com/question/68611994/answer/445456606)
+
+[你看过/写过哪些有意思的代码？](https://www.zhihu.com/question/275611095/answer/432656082)
+
+[如何在程序里留下彩蛋？](https://www.zhihu.com/question/271409373/answer/375941716)
+
+[为什么部分程序员下班后只关显示器不关电脑？](https://www.zhihu.com/question/59303310/answer/399313148)
+
+[有哪些好笑的关于程序员的笑话？](https://www.zhihu.com/question/19909094/answer/288419603)
+
+[如何防止自己被人肉搜索到？](https://www.zhihu.com/question/48691691/answer/434635442)
+
+[面试必备之乐观锁与悲观锁](https://zhuanlan.zhihu.com/p/40211594)
+
+[搞定计算机网络面试，看这篇就够了（补充版）](https://zhuanlan.zhihu.com/p/42298499)
+
+[哪些 Python 库让你相见恨晚？](https://www.zhihu.com/question/24590883/answer/473556258)

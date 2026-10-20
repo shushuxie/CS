@@ -1,0 +1,320 @@
+#+TITLE: 怎样用好电脑？
+#+LINK: https://www.zhihu.com/question/36374362/answer/1012221230
+#+AUTHOR: 什么值得买
+#+CREATED: 2020-02-12
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+[[https://picx.zhimg.com/50/v2-b8f5806985c543b8bd2d9d5464ab6d8f_720w.jpg?source=2c26e567]]
+
+「真香警告」十五款神级浏览器插件，高效实用、不容错过！
+
+今天来分享一波15款「 *好用到爆* 」的神级插件，这些插件不仅适合新版Edge，对于 [谷歌](https://pinpai.smzdm.com/2047/) chrome用户来说，也是不容错过，所以今天就不讨论chrome 和 新版Edge的孰优孰劣，只要适合自己的才是最好的。
+
+*注意：目前正式版Edge可以直接在谷歌应用商店下载安装插件，但是反过来不行，所以chrome用户需自行按以下插件名搜索下载。*
+
+* *微软扩展商店**
+
+先从微软扩展商店开始，相比谷歌应用商店，微软最大的优势就在于，你无需借助任何ti子也能正常访问微软扩展商店，并进行扩展插件的下载安装。
+
+** *1. Adblock Plus**
+
+[[https://picx.zhimg.com/50/v2-92d0b9262439f4a78b56f8e149d54eef_720w.jpg?source=2c26e567]]
+
+*老牌广告拦截插件，多种自定义拦截规则*
+
+和AdGuard一样，都是非常好用的浏览器广告拦截插件，甚至你在手机端都能看到它的身影，不同的是，Adblock更加老牌，目前全球下载量第一，至于广告拦截能力更不必担心。
+
+[[https://pic1.zhimg.com/50/v2-9832002dde86fdbad102bc1abd875ca9_720w.jpg?source=2c26e567]]
+
+平时刷网页、逛论坛，最恼火的就是各种广告和弹窗，自从有了广告拦截插件之后，整个浏览器都清净了，浏览体验也得到大幅提升；现在无论是chrome浏览器，还是新版edge，只要是我使用过的，都会第一时间装上Adblock Plus，或者AdGuard。
+
+[[https://picx.zhimg.com/50/v2-08d0dcab03907299ce145be92876678d_720w.jpg?source=2c26e567]]
+
+Adblock Plus 支持自定义拦截、白名单、非侵入式广告、隐私与安全等功能，其中「隐私和安全」，用于阻止某些网站的跟踪和信息收集，「非侵入式广告」可使网站处于广告屏蔽和支持在线内容之间的中间位置，为网站所有者创造了收入的同时，又能减少广告的侵扰。
+
+**下载入口：** [Adblock Plus](https://go.smzdm.com/688329d03196abdf/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+** *2. Tampermonkey**
+
+[[https://pica.zhimg.com/50/v2-e69d13320f8436ba0a18cf532c21307d_720w.jpg?source=2c26e567]]
+
+*突破网站限制，让你的浏览器无所不能*
+
+Tampermonkey也就是站内大家常说的“油猴”，相信懂得使用chrome的小伙伴，肯定不会错过这款无法强大插件，我们通过它和对应的脚本可以突破任何网站的限制，实现一些意想不到的功能，毫不夸张的说，一个“油猴”可以顶无数个插件，而且很多功能只有你想到，没有它办不到的。
+
+[[https://picx.zhimg.com/50/v2-68263af8566db4f1a3cd4b4b68e9ff88_720w.jpg?source=2c26e567]]
+
+其实，说简单点“油猴”只是一个脚本管理器，默认是没有安装任何脚本的，如果想要实现某些功能，那么必须要下载相对应的脚本，在这里推荐几个厉害的脚本网站： [Greasy Fork](https://greasyfork.org/zh-CN) 、 [OpenUserJS](https://openuserjs.org/) 、 [Userscripts Mirror](https://userscripts-mirror.org/) ，其中Greasy Fork支持中文，另外听说还有一个适合绅士的sleazy。
+
+[[https://picx.zhimg.com/50/v2-30ca647dc6b5ec878671fb0c570d7bb7_720w.jpg?source=2c26e567]]
+
+脚本是一段代码，它们能够优化您的网页浏览体验。安装之后，有些脚本能为网站添加新的功能，有些能使网站的界面更加易用，有些则能隐藏网站上烦人的部分内容等等。
+
+**下载入口：** [Tampermonkey(油猴)](https://go.smzdm.com/1ef997734f71d270/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+** *3. !! MONKNOW 新标签页**
+
+[[https://picx.zhimg.com/50/v2-94d8269e59d8f2f0155d5b2a5153a0ca_720w.jpg?source=2c26e567]]
+
+*超级好用的个性化新标签页，定制度高，绿色不流氓！*
+
+!! MONKNOW 是一款特色鲜明的个性化新标签页，支持网站网址URL分组管理，数据实时云同步，黑暗深色夜间主题模式，界面清爽不杂乱，定制度高。
+
+[[https://picx.zhimg.com/50/v2-54a1e85bc89c308fc097bb1df7bdca4d_720w.jpg?source=2c26e567]]
+
+支持GIF图标，可以自定义图标大小、间距、圆角、透明度等，默认将图标分为详细和简单两个模式，能自行添加新图标，并且有着自己的图标库和网站分类集合。
+
+[[https://picx.zhimg.com/50/v2-79e464fe5718538484853c6cb2155825_720w.jpg?source=2c26e567]]
+
+值得一提的是，!! MONKNOW 有着超丰富的 [壁纸](https://www.smzdm.com/fenlei/qiangzhi/) ，包含各种类型，比如风景、人物、卡通、建筑等，壁纸清晰漂亮，可以设置时间自动更换和本地上传，另外!! MONKNOW还能自定义搜索引擎、书签导入，以及书签侧边栏。
+
+[[https://picx.zhimg.com/50/v2-0694b29127522eeb1c6cf4d0a4e12de9_720w.jpg?source=2c26e567]]
+
+需要注意的是，之所没有推荐 [Infinity](https://pinpai.smzdm.com/8233/) ，是因为Infinity早前会将用户保存的购物网站，偷偷修改为推广链接，存在流氓行为，而!! MONKNOW不会。
+
+**下载入口：** [!! MONKNOW](https://go.smzdm.com/3e589ab00b382441/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+** *4. LastPass**
+
+[[https://pic1.zhimg.com/50/v2-1d590f05b5b56ab4e3da331bc1d6a475_720w.jpg?source=2c26e567]]
+
+*免费强大的密码管理器，支持自动登录、云同步、跨平台*
+
+现在无论访问哪个网站或者哪个论坛，都会提示你注册账号密码，时间一长注册的账号越多，想要记起账号密码就越发困难，互联网上充斥着各种不确定因素，账号安全也是令人头疼的问题，而这款密码管理插件就能很好的解决大家的痛点。
+
+[[https://picx.zhimg.com/50/v2-ffd3a5f135eb8bf33e540b82a0f089e1_720w.jpg?source=2c26e567]]
+
+我们知道chrome 和edge 都自带有密码保存功能，但是如果有人知道了你的电脑开机密码，那么你保存在chrome， 或者edge上的所有账号密码都能被查看，安全性令人担忧。
+
+[实用插件 篇三：账号密码多到记不清？——这款密码管理器可以帮您_值客原创_什么值得买](https://post.smzdm.com/p/a07mxl80)
+
+而LastPass 采用256位AES加密算法，对本地和网站上的密码数据库进行加密，并在数据传输时使用SSL加密连接等措施确保数据安全，且支持自动登录、云同步、跨平台等，你只需要记住一个LastPass的密码，它就可以帮你守护好所有的账号密码。 *提醒：LastPass只有密码提示，没有密码找回这一项，*
+
+**下载入口：** [LastPass](https://go.smzdm.com/99e6c9c2ed4c3898/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+** *5. Saladict 沙拉查词**
+
+[[https://picx.zhimg.com/50/v2-d040a19d9ac9b5cb9d219b957d7fe0d4_720w.jpg?source=2c26e567]]
+
+*超好用的划词翻译，集合有谷歌翻译和有道翻译*
+
+之所以这款插件叫做沙拉查词，我想最主要的原因是它聚合有多款主流翻译软件，包括谷歌翻译、有道翻译、必应翻译等，并且涵盖有中英日韩法德等权威词典，就像沙拉一样。
+
+[[https://picx.zhimg.com/50/v2-fee5fcf95756ac8cc8715b957323f634_720w.jpg?source=2c26e567]]
+
+支持四种划词方式与鼠标悬浮取词同时设置，不同情况自动切换不同划词方式，翻译非常高效，灵活，自带有完善的单词管理，可开启查词历史记录，保存生词、查询单词等。
+
+[[https://picx.zhimg.com/50/v2-981a5e33109a0af6c602216e042ac869_720w.jpg?source=2c26e567]]
+
+之前我推荐过谷歌翻译这款插件，但是众所周知的原因，谷歌翻译在国内使用起来并不友好，经常无法加载，或者加载失败，而沙拉查词可以直接调用谷歌翻译，并且支持全局翻译。
+
+**下载入口：** [Saladict 沙拉查词](https://go.smzdm.com/4d25dd6969600857/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+** *6. Vimium C - 全键盘操作浏览器**
+
+[[https://pic1.zhimg.com/50/v2-b6c82c866b7daf88de898e733fb856d2_720w.jpg?source=2c26e567]]
+
+*效率神器，是极客上网的不二选择*
+
+Vimium 是一款能让使用者丢掉鼠标，仅通过键盘就可以在 Chrome，或者edge上快捷浏览网页的插件，和桌面端的另一款神级软件 quicker 类似，门槛较高，不过当你能熟练的使用时，你就会对他爱不释手。
+
+[[https://picx.zhimg.com/50/v2-5421e4a5ba4ff2a719bcbf3642bceaa1_720w.jpg?source=2c26e567]]
+
+Vimium C 是改进后的 Vimium 版本，增加了baidu搜索引擎，方便国内用户使用，据说这个“C”是China的意思，即中国特别版，这款插件可以为各种命令设置快捷键，只要有一个键盘，就能轻松操纵浏览器标签页，自由点击网页中的链接和按钮，或者选择和复制文字和网址等。
+
+[[https://pic1.zhimg.com/50/v2-ef8a5ae04d13a2180cc9e0c71328e4c2_720w.jpg?source=2c26e567]]
+
+Vimium C 的默认命令非常全面，我们在初次使用时只需要记住一些基本的命令，然后逐次加深，比如在浏览器标签页下点击键盘的“F”，开启该网页的快捷编号，我们只需输入对应的编号，即可打开编号对应的链接，如上图我想进行搜索操作，那么只需按下键盘的“AS”键，就立马回到输入框，全程无需借助鼠标，高效快捷。
+
+**下载入口：** [Vimium C](https://go.smzdm.com/9e765c265900dec9/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+** *7. 京价保**
+
+[[https://picx.zhimg.com/50/v2-16c5a8e93f26dfdeaa61caeb349d5f85_720w.jpg?source=2c26e567]]
+
+*这才是薅羊毛的正确打开方式！*
+
+京价保——顾名思义就是一款面向京东商城的插件，之所以被称为“薅羊毛的正确打开方式”，就在于它能自动监控最近订单商品的价格变化，在商品降价时自动申请价格保护，而且还能自动签到领取京豆、自动签到领取钢镚，以及领券等。
+
+[[https://picx.zhimg.com/50/v2-2b2668e8cf76e3f2d0c38b1cf53841ce_720w.jpg?source=2c26e567]]
+
+需要注意的是，使用这款插件必须登录桌面端和移动端的京东账号和保存，所以安全性方面大家可能会比较担心，但是这款开源代码，代码能够禁得起检测，所以在安全性方面还是比较可靠的。
+
+[[https://pic1.zhimg.com/50/v2-939d057f863982217f2b22497e656f7f_720w.jpg?source=2c26e567]]
+
+说实话，如果大家手动去签到领取京豆、领取钢镚，或者保价，是非常麻烦的，而且还浪费时间，这款插件对于我这种懒癌晚期，简直不要太方便。
+
+**下载入口：** [京价保](https://go.smzdm.com/8023de4120a882c1/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+** *8. 网页截图:注释&录屏**
+
+[[https://pica.zhimg.com/50/v2-e3a95bda2823828a8953a5fcae6626cb_720w.jpg?source=2c26e567]]
+
+*优秀的截图插件，能进行全屏截图和注释*
+
+这是一款集合了截图、注释，以及录屏为一体的插件，在edge上拥有着非常高的下载量，而且完全免费，能捕获任何网页的全部或部分，支持滚动截图，全屏截图，以及桌面窗口截图等。
+
+[[https://picx.zhimg.com/50/v2-9dec2e85f4fd7fcf1951ff71fac03d85_720w.jpg?source=2c26e567]]
+
+右键点击上方的插件图标，选择需要的截图功能，便能开启页面截图操作，除此之外还可以使用快捷键快速开启和自定义组合快捷键。
+
+[[https://picx.zhimg.com/50/v2-85ff7dfa244cf04abe56a7616accffe5_720w.jpg?source=2c26e567]]
+
+在截图完成后，会自动跳转到标注页面，可以对截图进行下一步的编辑，编辑工具比较全面，基本上常用的工具都有，比如涂鸦、模糊、添加文字、记号、裁剪、标记等。
+
+**下载入口：** [网页截图](https://go.smzdm.com/c85d8c8c1de6cfca/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+** *9. 谷歌访问助手**
+
+[[https://pic1.zhimg.com/50/v2-b5008bf3c7db4ba0a8135f7b7e963388_720w.jpg?source=2c26e567]]
+
+*简单好用的谷歌服务访问助手*
+
+我想，不用多说，大家也能知道这款插件的核心用处——访问「谷歌服务」；众所周知的原因，在国内不借助ti子的话，是无法正常使用谷歌服务，而这款良心插件可以很好的解决大家的烦恼。
+
+[[https://picx.zhimg.com/50/v2-fec6bc910a5884246f965a336cbf80dd_720w.jpg?source=2c26e567]]
+
+像谷歌翻译、谷歌邮箱、谷歌搜索，谷歌应用商店、以及 *维基百科* 等，都能通过它正常浏览，速度还不错，多的就不解释，大家趁着还没和谐，赶紧下载吧。
+
+[[https://picx.zhimg.com/50/v2-0474928a77f893c6de265d0f1cb8d85e_720w.jpg?source=2c26e567]]
+
+注意这款谷歌访问助手，并不是我早前在chrome里推荐的那款，这款不需要绑定主页，完全免费，大家且用且珍惜，如果觉得好用建议打赏下创作者。
+
+**下载入口：** [谷歌访问助手](https://go.smzdm.com/cd08f57b6fe15b32/ca_bb_yc_163_70658260_511_1461_1641_0)
+
+---
+
+* *谷歌应用商店**
+
+微软扩展商店虽好，但是正式版edge发布还不到一个月，能找的扩展插件并不多，据说总共不到200个，所以既然我们已经解决了访问谷歌服务这一大难度，那么可以抛开微软扩展商店，直接去谷歌应用商店下载安装插件即可。
+
+** *10. Extension Manager 扩展管理器**
+
+[[https://picx.zhimg.com/50/v2-8daae75ca409297c3155eb21f1b32d54_720w.jpg?source=2c26e567]]
+
+*超级好用的插件管理器，方便高效*
+
+如果说“油猴”是最好用的脚本管理器，那么这款 Extension Manager  无疑是chrome和新版edge上不可多得的扩展管理器，它功能简单不复杂，操作界面清爽友好，像一些平时浏览网页用不到的插件通过它可以一键关闭，想用的时候随时打开，并且卸载也是十分方便。
+
+[[https://pic1.zhimg.com/50/v2-b7e910ac555d5d5071aa5685722fac94_720w.gif?source=2c26e567]]
+
+**下载入口：** [扩展管理器](https://chrome.google.com/webstore/detail/extension-manager/gjldcdngmdknpinoemndlidpcabkggco)
+
+---
+
+** *11. crxMouse 手势**
+
+[[https://picx.zhimg.com/50/v2-60ec8fab0f457f6fe53b6bf6334f23c6_720w.jpg?source=2c26e567]]
+
+*一款功能全面的鼠标手势插件，大幅提升浏览器体验*
+
+要知道，chrome 和新版Edge 并没有像国内浏览器那样过度包装，比如大家在评论中问的最多的鼠标手势，这两款浏览器都没有集成，我们需要做的就是借助其他扩展插件来实现，而 CrxMouse 就是这样一款解决大家烦恼的鼠标手势插件。
+
+[[https://picx.zhimg.com/50/v2-15795835ff98aa0497da73129f7d42cb_720w.jpg?source=2c26e567]]
+
+**下载入口：** [crxMouse](https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo)
+
+---
+
+** *12. 图片助手(ImageAssistant)**
+
+[[https://picx.zhimg.com/50/v2-05255d181d5ca28bf7d62148017bd073_720w.jpg?source=2c26e567]]
+
+*找素材下壁纸，突破网站限制*
+
+这是一款功能强大的网页图片提取插件，可嗅探、分析网页中图片，提供筛选，收藏 、检索、分享，以及批量下载等功能；像我们平时上网，看到一些漂亮的壁纸、美女图片、设计素材等，都能通过这款插件跳过限制直接批量下载，所见即可得。
+
+[[https://picx.zhimg.com/50/v2-27ee2dc20c23e96245580e23f35a11ab_720w.jpg?source=2c26e567]]
+
+**下载入口：** [图片助手](https://chrome.google.com/webstore/detail/imageassistant-batch-imag/dbjbempljhcmhlfpfacalomonjpalpko)
+
+---
+
+** *13. IE Tab**
+
+[[https://picx.zhimg.com/50/v2-92fd46e5b9f58eac4596041f443fcedf_720w.jpg?source=2c26e567]]
+
+*chrome和新版edge上的IE解决方案*
+
+记得在评论中有个别朋友提到，一些政府机构的电脑需要用到IE内核的浏览器，比较麻烦，而这款插件就能够让chrome和新版edge兼容IE模式，在标签页中右键点击，选择以IE内核显示网页，可以准确地模拟IE，快捷、方便、可靠；注意首次使用时需要另外下载安装一个本地exe安装包，左键点击插件图标即可进入下载通道。
+
+[[https://pic1.zhimg.com/50/v2-9f44ae3885c25caf65f9f3f9d85da436_720w.jpg?source=2c26e567]]
+
+**下载入口：** [IE Tab](https://chrome.google.com/webstore/detail/ie-tab/hehijbfgiekmjfkfjpbkbammjbdenadd)
+
+---
+
+** *14. The Great Suspender**
+
+[[https://picx.zhimg.com/50/v2-3b133db4a424db51dacdb2792e667942_720w.jpg?source=2c26e567]]
+
+*冻结你暂时不用的标签页，释放 [内存](https://www.smzdm.com/fenlei/neicun/) 让你的电脑流畅运行*
+
+chrome之所以被大多数人又爱又恨，除了难以登录的谷歌商店之外，就是其较高的内存占用率，特别时在你打开多个标签页时，这种情况尤为明显，这时如果你的电脑配置较低的话，就会出现卡顿、页面无反应，而通过 The Great Suspender 这款插件，就可以冻结你暂时不用的标签页，释放内存让你的电脑流畅运行；支持自定义冻结时间和快捷键操作，冻结的标签页会变为灰色。
+
+[[https://picx.zhimg.com/50/v2-dbd88bba03c0f9858e0057c5d0d0ecb2_720w.jpg?source=2c26e567]]
+
+**下载入口：** [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
+
+---
+
+** *15. Markdown Here**
+
+[[https://pic1.zhimg.com/50/v2-7b2cb0dd06b41e8f996d7fbdbd92c158_720w.jpg?source=2c26e567]]
+
+*一键渲染插件，实现Mardown文档在编辑器内的格式控制*
+
+这款插件之所以最后推荐，因为能够用到的小伙伴并不多，但是如果你平时喜欢码码字，发发文章，又对Mardown这种格式控制语法感兴趣的话，那么Markdown Here这款渲染插件绝对值得推荐，像一些基本的Mardown格式语法和CSS渲染语法都能很好的支持，比如这篇文章中的标题居中、字体颜色、字体大小间隔等等。
+
+[[https://pica.zhimg.com/50/v2-cafb64f1c320f05c627202f147eef54e_720w.jpg?source=2c26e567]]
+
+**下载入口：** [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa)
+
+---
+
+* *将标签移动至菜单**
+
+[[https://pica.zhimg.com/50/v2-dd6eea54f927a056abf9e5347086a274_720w.jpg?source=2c26e567]]
+
+安装的插件越多，各种插件图标就会在工具栏里排成一列，影响美观，这时我们可以右键点击插件图标，将一些用的比较少或者只需在后台运行的插件，逐个移动到菜单栏，以改变浏览器观感。
+
+[[https://pic1.zhimg.com/50/v2-ae6cace20d30b90653947f26ee57dff8_720w.jpg?source=2c26e567]]
+
+移动完成后，插件图标会被隐藏在菜单栏的上方，所谓眼不见心不烦，如果想要恢复到的话，还是右键点击，选择其中的「移动到工具栏」即可。
+
+---
+
+* *说在最后**
+
+好了，本期就是我的分享内容，希望对大家有有所帮助；
+
+如果在下载安装过程中，有任何疑问欢迎大家在底下评论中自由留言讨论；
+
+当然最重要的是，大家有好的插件也希望大家能积极分享
+
+[[https://pica.zhimg.com/50/v2-9f42f59dca52b2853000ca192100e046_720w.jpg?source=2c26e567]]
+
+by：什么值得买生活家 [梦里梦外梦轮回](https://zhiyou.smzdm.com/member/5054863944/)
+
+*本内容来源于@什么值得买 [http://SMZDM.COM](http://SMZDM.COM)*
+
+*原文链接：* [「真香警告」十五款神级浏览器插件，高效实用、不容错过](https://post.smzdm.com/p/az5024zn/)
+
+[[https://pic1.zhimg.com/50/v2-966fbcd40d78d65531009a503061355b_720w.jpg?source=2c26e567]]

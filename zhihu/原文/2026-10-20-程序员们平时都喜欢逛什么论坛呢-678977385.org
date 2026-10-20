@@ -1,0 +1,134 @@
+#+TITLE: 程序员们平时都喜欢逛什么论坛呢？
+#+LINK: https://www.zhihu.com/question/27145069/answer/678977385
+#+AUTHOR: 力扣（LeetCode）
+#+CREATED: 2019-05-10
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+程序员作为一个经常和互联网打交道的人群，他们喜欢浏览那些网站呢？力扣君略整理了一二供大家参考，排名不分先后。
+
+** 1. Github - 汇集全世界人类智慧的代码“基因库” : [https://github.com](https://github.com/)
+
+[[https://picx.zhimg.com/50/v2-0540bd190a727865f0a837d631ba93bb_720w.jpg?source=2c26e567]]
+
+每天看一下 Github 上新鲜有趣的项目，学习一些大牛们的厉害代码简直是每一个优秀程序员的日常。
+
+作为全世界最大的代码托管平台，Github 为程序员们提供了代码管理、项目协作等许多极其方便的功能。每一天，有许多优秀的项目在其中诞生并茁壮成长，全球的顶级科技公司与开源项目也都纷纷选择在 GitHub 上公开它们的代码，如：
+
+#+begin_src text
+Linux: https://github.com/torvalds/linux
+Node.js: https://github.com/nodejs/node
+Ruby: https://github.com/ruby/ruby
+Google: https://github.com/google
+Microsoft: https://github.com/microsoft
+Alibaba: https://github.com/alibaba
+#+end_src
+
+## 
+ 2. 力扣 LeetCode  : [https://leetcode-cn.com](https://leetcode.cn/?utm_campaign=lcsocial&utm_medium=question&utm_source=zhihu&utm_content=27145069&utm_term=678977385)
+
+[[https://pica.zhimg.com/50/v2-1bdf7ca65cacd6044c6ec0c76d698935_720w.jpg?source=2c26e567]]
+
+作为一个全球极客挚爱的技术成长平台，力扣致力于帮助程序员们学习算法知识、训练算法题目，以提升自身技术能力、斩获 Dream Offer。
+
+值得一提的是，力扣提供了针对算法的 *[初级算法 - 帮助入门](https://leetcode.cn/leetbook/detail/top-interview-questions-easy/?utm_campaign=lcsocial&utm_medium=question&utm_source=zhihu&utm_content=27145069&utm_term=678977385)* 、 *[中级算法 - 巩固训练](https://leetcode.cn/leetbook/detail/top-interview-questions-medium/?utm_campaign=lcsocial&utm_medium=question&utm_source=zhihu&utm_content=27145069&utm_term=678977385)* 、 *[高级算法 - 提升进阶](https://leetcode.cn/leetbook/detail/top-interview-questions-hard/?utm_campaign=lcsocial&utm_medium=question&utm_source=zhihu&utm_content=27145069&utm_term=678977385)* 三个不同栏目与针对数据结构的 [数据结构探索板块](https://leetcode.cn/leetbook/?utm_campaign=lcsocial&utm_medium=question&utm_source=zhihu&utm_content=27145069&utm_term=678977385) ，能够帮助大家科学有效、循序渐进地学习，有兴趣的小伙伴可以试一试。
+
+除此之外，力扣的 *[题解](https://leetcode.cn/problems/two-sum/solutions/?utm_campaign=lcsocial&utm_medium=question&utm_source=zhihu&utm_content=27145069&utm_term=678977385)* 版块可谓是汇集了各路算法大神的解题思路，优秀的题解不少，非常值得一看。
+
+如果你是一名正在准备技术面试的程序员，想测试一下自己在真实面试中的水平可以来一场 *[模拟面试](https://leetcode.cn/interview/?utm_campaign=lcsocial&utm_medium=question&utm_source=zhihu&utm_content=27145069&utm_term=678977385)* 。力扣的模拟面试还是相对比较有挑战的，尤其是在有限的时间内能快速 bug free AC 这些题目。！
+
+[[https://pic1.zhimg.com/50/v2-342c8b11366c0decbfac3cfd4832ba34_720w.gif?source=2c26e567]]
+
+** 3. Stack Overflow : [https://stackoverflow.com](https://stackoverflow.com/)
+
+[[https://picx.zhimg.com/50/v2-bde6d1333b91b89ea082beda4017ee47_720w.jpg?source=2c26e567]]
+
+这是一个面向程序员的问答网站，用户可以在网站免费提交问题、浏览问题、索引相关内容。如果同学们在编程中遇到了棘手的 Bug ，只要在这里搜一搜基本都能找到解决方案，是程序员居家写代码，工作修 Bug 的必备良品。
+
+** 4. SegmentFault - 思否 : [https://segmentfault.com](https://segmentfault.com/)
+
+如果有同学觉得 Stack Overflow 是一个全英文网站，不乐意使用的话，那么 ~SegmentFault - 思否~ 非常适合你。作为一个中文版的 ~S.O.~ ，思否同样也帮助数以万计的开发者们解决各种各样的技术问题，帮助他们在程序员之路上走得更远。
+
+** 5. V2EX - 创意与想法 : [https://www.v2ex.com](https://www.v2ex.com/)
+
+[[https://picx.zhimg.com/50/v2-4665dfec819b13af4789a6c295be29dd_720w.jpg?source=2c26e567]]
+
+V2EX = way to explore，一个关于分享和探索的地方。这里汇集着各类奇妙好玩的话题和各种新鲜有趣的想法，是技术宅与极客们茶余饭后吐槽人生、释放压力、交流讨论、寻找灵感的好去处。它的一大特点就是发帖 300 秒后无法修改与删除，这也造就了内容质量高、人人对自己言论负责的良好氛围。
+
+** 6. Kaggle : [https://www.kaggle.com](https://www.kaggle.com/)
+
+[[https://picx.zhimg.com/50/v2-de1849cbb1e4a7eff3cdd39e5b9f8a45_720w.jpg?source=2c26e567]]
+
+Kaggle 是一个举办机器学习竞赛、托管数据库、编写和分享代码的平台。网站提供各种免费的数据，并定期举办有奖金的比赛，在这个机器学习火爆了的时代里，吸引了无数的程序员。
+
+** 7. 知乎 : [https://www.zhihu.com](https://www.zhihu.com/)
+
+知乎是一个网络问答社区，用户在上面分享自己专业的知识和见解，其中自然不乏程序员们。话不多说，力扣君也在知乎上就证明了这点。
+
+** 8. 博客园 : [https://www.cnblogs.com](https://www.cnblogs.com/)
+
+博客园一个面向开发者的知识分享社区，有很多很多大牛都将自己的技术博客落座于这个网站。
+
+** 9. Coding : [https://coding.net](https://coding.net/)
+
+与 Github 类似，CODING 是一个国内的代码共享平台，允许开发者们随时随地开发、 协作与部署自己的代码。它秉承 “让开发更简单” 的使命，致力于提升软件研发的管理效率。
+
+* *10. Trello**
+
+Trello 是一个团队协作网站，对于个人短期计划的话，可以作为一个个人的短期任务安排防止忘记做什么事情，对于团队协作项目的话可以协调整个项目的进度，并且及时进行调整，防止项目跑偏。
+
+[[https://pica.zhimg.com/50/v2-9a03655ad4539b44193f8dd475b56318_720w.jpg?source=2c26e567]]
+
+* *11. Datadog**
+
+相信对于大多数程序员来说，对 VPS 肯定不陌生，且可能拥有不止一台 VPS，对于多机器的同时管理/监控就是一个比较麻烦的问题，对于这个问题，除了自建 Grafana 之外可以考虑尝试一下 Datadog，官方提供的教程中可以一键安装监控程序 dd-agent，然后剩下的就是在一个有好的 Web 界面查看自己所有服务器的当前状态了，且会在服务器的一些参数出现异常的时候邮件通知用户。
+
+[[https://pic1.zhimg.com/50/v2-2b54e903da8d35861e2ab3db6092aea7_720w.jpg?source=2c26e567]]
+
+* *12. Inoreader**
+
+[[https://pic1.zhimg.com/50/v2-7b3347facf4e0f42dbfe6ecf8eea902c_720w.jpg?source=2c26e567]]
+
+技术更新太快，需要关注的东西太多，如果没有一个内容整合的平台，要么会错失很多消息，要么会被各种消息源困扰，此时一个消息聚集平台的存在就非常有必要了，Inoreader 便是一个这样的平台，无论是新闻，博客还是自媒体，一个平台，解决所有的问题。
+
+* *13. IFTTT**
+
+[[https://pic1.zhimg.com/50/v2-49c8bf94fc3dc935a9b7e4a640eed8db_720w.jpg?source=2c26e567]]
+
+程序员生活中遇到的一些琐碎的事情应该是被高度自动化的，曾经有个 GitHub 仓库，可针对各个不同情况下的问题进行自动处理（比如收到了包含“抱歉”，“数据库”之类的的邮件就自动回滚数据库并且自动回复“好了，数据库已经回滚，没有事情啦”的邮件）。
+
+[[https://pic1.zhimg.com/50/v2-da054e7841314ed2998e588dcc73e0c2_720w.jpg?source=2c26e567]]
+
+现在有一个更加贴合日常生活的产品——IFTTT（If This Then That），可以在各类事件（比如女朋友发了一条微博）触发的时候自动完成某些操作（比如 Telegram 或者 SMS 推一个提醒并且自动点赞）。
+
+下面推荐两个算法学习的网站：
+
+** Topcoder（ [http://topcoder.com](http://topcoder.com/) )
+
+想挑战自我？可以试下 TopCoder
+
+参加过 TopCoder 比赛的童鞋可能会对它印象深刻，它有它独特的魅力。TopCoder 没有测试用例，在比赛中，完成代码后可以去直接阅读别人的算法，并构造错误用例来为对方扣分。
+
+可以说 TopCoder 很适合学有所成的人去寻找下刺激，不过建议有一定的刷题基础再进行尝试。
+
+** Coursera（ [Coursera | Online Courses & Credentials by Top Educators. Join for Free](https://www.coursera.org/) ）
+
+Coursera 上有各所大学的算法课程。有很多都是世界顶尖的算法课，有兴趣学习的程序员也可以不妨前去一试。
+
+---
+
+** Last but not least
+
+[力扣（LeetCode）：视频 | 手撕九大经典排序算法，看我就够了！](https://zhuanlan.zhihu.com/p/52884590)
+
+[程序员必须掌握哪些算法？](https://www.zhihu.com/question/23148377/answer/602761180)
+
+[互联网公司最常见的面试算法题有哪些？](https://www.zhihu.com/question/24964987/answer/586425979)
+
+[力扣（LeetCode）：面试中的递归算法，先收藏没准哪天就用上了！](https://zhuanlan.zhihu.com/p/59685884)
+
+[力扣（LeetCode）：7 个世界上最高质量的机器学习公开课](https://zhuanlan.zhihu.com/p/42706902)
+
+---
+
+欢迎各位知友关注力扣官方微信公众号：「 *LeetCode力扣* 」，更多关于程序员面试、技术干货的内容等你来啃！

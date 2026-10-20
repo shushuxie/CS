@@ -1,0 +1,217 @@
+#+TITLE: 有哪些好玩的免费的API接口?
+#+LINK: https://www.zhihu.com/question/32225726/answer/1341443803
+#+AUTHOR: 简道云
+#+CREATED: 2020-07-16
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+【2022.3.4更新】
+
+之前被用户安利过一篇API接口合集，有用有趣！还有他们投稿来的一些极有用的API玩法经验，趁此机会，都分享一下！
+
+---
+
+** API接口合集
+
+*** 生活常用
+
+- 常见疾病查询： [https://www.apishop.net/#/api/detail/?productID=215](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D215)
+- 全国天气预报： [https://www.apishop.net/#/api/detail/?productID=76](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D76)
+- 今日热闻查询： [https://www.apishop.net/#/api/detail/?productID=92](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D92)
+- 邮编查询： [https://www.apishop.net/#/api/detail/?productID=73](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D73)
+- 实时空气质量数据查询： [https://www.apishop.net/#/api/detail/?productID=83](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D83)
+- 邮编查询： [https://www.apishop.net/#/api/detail/?productID=73](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D73)
+- 成语大全： [https://www.apishop.net/#/api/detail/?productID=93](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D93)
+- 万年历查询： [https://www.apishop.net/#/api/detail/?productID=89](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D89)
+- 二十四节气查询： [https://www.apishop.net/#/api/detail/?productID=88](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D88)
+- 节假日查询： [https://www.apishop.net/#/api/detail/?productID=90](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D90)
+- PM2.5空气质量指数查询： [https://www.apishop.net/#/api/detail/?productID=94](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D94)
+- 标准中文电码查询： [https://www.apishop.net/#/api/detail/?productID=96](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D96)
+- BMI计算： [https://www.apishop.net/#/api/detail/?productID=104](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D104)
+- 区号查询： [https://www.apishop.net/#/api/detail/?productID=106](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D106)
+- 简繁体转换： [https://www.apishop.net/#/api/detail/?productID=121](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D121)
+
+*** 文体娱乐
+
+- 笑话大全： [https://www.apishop.net/#/api/detail/?productID=122](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D122)
+- 菜谱大全： [https://www.apishop.net/#/api/detail/?productID=171](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D171)
+- 新华字典： [https://apistore.eolinker.com/#/api/detail/?productID=98](https://link.jianshu.com/?t=https%3A%2F%2Fapistore.eolinker.com%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D98)
+- NBA赛事： [https://www.apishop.net/#/api/detail/?productID=125](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D125)
+- 周公解梦： [https://www.apishop.net/#/api/detail/?productID=126](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D126)
+- 电视节目： [https://www.apishop.net/#/api/detail/?productID=129](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D129)
+- 炉石传说卡牌： [https://www.apishop.net/#/api/detail/?productID=203](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D203)
+- 万智牌卡牌： [https://www.apishop.net/#/api/detail/?productID=204](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D204)
+- 绕口令： [https://www.apishop.net/#/api/detail/?productID=127](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D127)
+
+*** 电商服务
+
+- 快递物流查询： [https://www.apishop.net/#/api/detail/?productID=103](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D103)
+- 短信服务（验证码、通知）：
+- 淘宝热词搜索： [https://www.apishop.net/#/api/detail/?productID=212](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D212)
+- 京东热词搜索： [https://www.apishop.net/#/api/detail/?productID=211](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D211)
+- 商品评价分析： [https://www.apishop.net/#/api/detail/?productID=208](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D208)
+
+*** 人工智能
+
+- OCR-身份证识别： [https://www.apishop.net/#/api/detail/?productID=186](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D186)
+- OCR-营业执照识别： [https://www.apishop.net/#/api/detail/?productID=196](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D196)
+- OCR-行驶证识别： [https://www.apishop.net/#/api/detail/?productID=197](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D197)
+- 银行卡识别： [https://www.apishop.net/#/api/detail/?productID=205](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D205)
+- 名片识别： [https://www.apishop.net/#/api/detail/?productID=206](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D206)
+- 车牌识别： [https://www.apishop.net/#/api/detail/?productID=207](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D207)
+- 《机动车合格证》二维码解码： [https://www.apishop.net/#/api/detail/?productID=216](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D216)
+
+*** 交通出行
+
+- 公交及站点查询： [https://apistore.eolinker.com/#/api/detail/?productID=77](https://link.jianshu.com/?t=https%3A%2F%2Fapistore.eolinker.com%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D77)
+- 经纬度地址转换： [https://apistore.eolinker.com/#/api/detail/?productID=78](https://link.jianshu.com/?t=https%3A%2F%2Fapistore.eolinker.com%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D78)
+- 中国省市区查询： [https://apistore.eolinker.com/#/api/detail/?productID=75](https://link.jianshu.com/?t=https%3A%2F%2Fapistore.eolinker.com%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D75)
+- 全国油价查询： [https://apistore.eolinker.com/#/api/detail/?productID=82](https://link.jianshu.com/?t=https%3A%2F%2Fapistore.eolinker.com%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D82)
+- POI检索： [https://apistore.eolinker.com/#/api/detail/?productID=97](https://link.jianshu.com/?t=https%3A%2F%2Fapistore.eolinker.com%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D97)
+- 公交、地铁路线规划查询： [https://apistore.eolinker.com/#/api/detail/?productID=105](https://link.jianshu.com/?t=https%3A%2F%2Fapistore.eolinker.com%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D105)
+- 车型大全： [https://apistore.eolinker.com/#/api/detail/?productID=117](https://link.jianshu.com/?t=https%3A%2F%2Fapistore.eolinker.com%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D117)
+- 火车票查询： [https://www.apishop.net/#/api/detail/?productID=91](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D91)
+- 长途汽车查询： [https://www.apishop.net/#/api/detail/?productID=100](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D100)
+- 汽车尾号限行： [https://www.apishop.net/#/api/detail/?productID=194](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D194)
+- 驾考题库： [https://www.apishop.net/#/api/detail/?productID=187](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D187)
+
+*** 开发工具
+
+- 四位图片验证码生成： [https://www.apishop.net/#/api/detail/?productID=102](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D102)
+- 六位图片验证码生成： [https://www.apishop.net/#/api/detail/?productID=101](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D101)
+- 中文分词： [https://www.apishop.net/#/api/detail/?productID=120](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D120)
+- 二维码编解码： [https://www.apishop.net/#/api/detail/?productID=128](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D128)
+- 网站排名查询： [https://www.apishop.net/#/api/detail/?productID=214](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D214)
+
+*** 金融服务
+
+- 汇率查询： [https://www.apishop.net/#/api/detail/?productID=84](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D84)
+- 虚拟货币交易行情： [https://www.apishop.net/#/api/detail/?productID=182](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D182)
+- 区块链今日快讯： [https://www.apishop.net/#/api/detail/?productID=185](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D185)
+- 银行卡信息查询（含归属地）： [https://www.apishop.net/#/api/detail/?productID=191](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D191)
+
+*** 通讯服务
+
+- 手机号归属地查询： [https://www.apishop.net/#/api/detail/?productID=72](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D72)
+- IP地址查询： [https://www.apishop.net/#/api/detail/?productID=118](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D118)
+
+*** 教育文化
+
+- 成语大全： [https://www.apishop.net/#/api/detail/?productID=93](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D93)
+- 新华字典： [https://www.apishop.net/#/api/detail/?productID=98](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D98)
+- 汉语词典： [https://www.apishop.net/#/api/detail/?productID=99](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D99)
+- 名言警句： [https://www.apishop.net/#/api/detail/?productID=123](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D123)
+- 英语名言： [https://www.apishop.net/#/api/detail/?productID=124](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D124)
+- 驾驶员从业资格题： [https://www.apishop.net/#/api/detail/?productID=190](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D190)
+- 猫咪大全： [https://www.apishop.net/#/api/detail/?productID=193](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D193)
+- 狗狗大全： [https://www.apishop.net/#/api/detail/?productID=192](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D192)
+- 小型宠物大全： [https://www.apishop.net/#/api/detail/?productID=195](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D195)
+- 水族宠物大全： [https://www.apishop.net/#/api/detail/?productID=200](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D200)
+- 爬行类宠物大全： [https://www.apishop.net/#/api/detail/?productID=201](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D201)
+- 植物大全： [https://www.apishop.net/#/api/detail/?productID=199](https://link.jianshu.com/?t=https%3A%2F%2Fwww.apishop.net%2F%23%2Fapi%2Fdetail%2F%3FproductID%3D199)
+
+*** 聚合数据
+
+手机号码归属地API接口： [https://www.juhe.cn/docs/api/id/11](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/11) 
+ 历史上的今天API接口： [https://www.juhe.cn/docs/api/id/63](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/63) 
+ 股票数据API接口： [https://www.juhe.cn/docs/api/id/21](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/21) 
+ 全国WIFI接口： [https://www.juhe.cn/docs/api/id/18](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/18) 
+ 星座运势接口： [https://www.juhe.cn/docs/api/id/58](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/58) 
+ 黄金数据接口： [https://www.juhe.cn/docs/api/id/29](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/29) 
+ 语音识别接口： [https://www.juhe.cn/docs/api/id/134](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/134) 
+ 周公解梦接口： [https://www.juhe.cn/docs/api/id/64](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/64) 
+ 天气预报API接口： [https://www.juhe.cn/docs/api/id/73](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/73) 
+ 身份证查询API接口： [https://www.juhe.cn/docs/api/id/38](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/38) 
+ 笑话大全API接口： [https://www.juhe.cn/docs/api/id/95](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/95) 
+ 邮编查询接口： [https://www.juhe.cn/docs/api/id/66](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/66) 
+ 老黄历接口： [https://www.juhe.cn/docs/api/id/65](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/65) 
+ 网站安全检测接口： [https://www.juhe.cn/docs/api/id/19](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/19) 
+ 手机固话来电显示接口： [https://www.juhe.cn/docs/api/id/72](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/72) 
+ 基金财务数据接口： [https://www.juhe.cn/docs/api/id/28](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/28) 
+ 成语词典接口： [https://www.juhe.cn/docs/api/id/157](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/157) 
+ 新闻头条接口： [https://www.juhe.cn/docs/api/id/235](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/235) 
+ IP地址接口： [https://www.juhe.cn/docs/api/id/1](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/1) 
+ 问答机器人接口： [https://www.juhe.cn/docs/api/id/112](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/112) 
+ 汇率API接口： [https://www.juhe.cn/docs/api/id/80](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/80) 
+ 电影票房接口： [https://www.juhe.cn/docs/api/id/44](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/44) 
+ 万年历API接口： [https://www.juhe.cn/docs/api/id/177](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/177) 
+ NBA赛事接口： [https://www.juhe.cn/docs/api/id/92](https://link.jianshu.com/?t=https://www.juhe.cn/docs/api/id/92)
+
+*** 百度AI开放平台
+
+[http://ai.baidu.com/](https://link.jianshu.com/?t=http%3A%2F%2Fai.baidu.com%2F) 
+ 涵盖图像处理、自然语言、语音技术、知识图谱、数据智能、AR、视频技术和深度学习八大方面。看需选择即可。
+
+*** 人脸识别Face++
+
+[http://www.faceplusplus.com.cn/](https://link.jianshu.com/?t=http%3A%2F%2Fwww.faceplusplus.com.cn%2F) 
+ 注：申请试用的API Key可以免费试用他上面的接口
+
+*** 各平台开放接口
+
+1. 豆瓣开放平台 [https://developers.douban.com/wiki/?title=guide](https://link.jianshu.com/?t=https://developers.douban.com/wiki/?ti%3Cx%3Etle=guide)
+2. 淘宝开放平台 [http://open.taobao.com/?spm=a219a.7395905.1.1.YdFDV6](https://link.jianshu.com/?t=http://open.taobao.com/?spm=a219a.7395905.1.1.YdFDV6)
+3. 微博开放平台 [http://open.weibo.com/wiki/API](https://link.jianshu.com/?t=http://open.weibo.com/wiki/API)
+
+*** 其他接口
+
+讯飞语音 [http://www.xfyun.cn/robots/solution](https://link.jianshu.com/?t=http://www.xfyun.cn/robots/solution) 
+ 马化腾的微信开放平台（对应的还有腾讯开放平台） 
+ [https://open.weixin.qq.com/](https://link.jianshu.com/?t=https://open.weixin.qq.com/) 
+ 融云IM [https://developer.rongcloud.cn/signin?returnUrl=%2Fapp%2Fappkey%2FPv4vYQwaxSZdfpLX5AI%3D](https://link.jianshu.com/?t=https://developer.rongcloud.cn/signin?returnUrl=%2Fapp%2Fappkey%2FPv4vYQwaxSZdfpLX5AI%3D) 
+ 高德地图 [http://lbs.amap.com/](https://link.jianshu.com/?t=http://lbs.amap.com/)
+
+** 再分享一些极有用的对接各类平台/工具的实际经验：
+
+*1、对接短信平台和钉钉，打通家校考勤流程*
+
+- 技术架构
+
+[[https://pic1.zhimg.com/50/v2-c42d6d3320203eec10702cd9c95aa08f_720w.jpg?source=2c26e567]]
+
+具体流程演示： [厚一学堂：打通钉钉考勤，让家长实时获知孩子在校动态 - 简道云 - 开放平台](https://hc.jiandaoyun.com/open/12021)
+
+*2、对接数据库，实现数据自动备份*
+
+[[https://picx.zhimg.com/50/v2-e412823d1380e1174b97ab614f818159_720w.jpg?source=2c26e567]]
+
+将简道云插入数据库后，数据在桥科院的自研信息平台可直接进行数据分析，数据处理效率有效提升，同时，通过API+webhook，数据再也不需导出excel进行备份，成功实现了自动备份，免去人工成本的投入。
+
+*3、对接摄像头，监测门店每日客流量*
+
+弥补了门店数据统计漏洞，便于业绩影响因素分析，为提高门店业绩做支撑。
+
+[[https://picx.zhimg.com/50/v2-b7efa04ffc2353ba83bcfb1ce812f541_720w.jpg?source=2c26e567]]
+
+*4、对接各种接口，串连成一个智慧工厂*
+
+将所有IOT设备与简道云打通，设备数据直接采集到后台自动汇总，为工厂管理做数据支撑，真正实现了数据的百分百利用：
+
+- 对接【人脸考勤】设备，实现：人员借调、工时计算、加班控制
+- 对接【人证比对】设备，实现：身份核验、自主拍照、拍照留证
+- 对接【无线监控】设备，实现：智能药箱、违规抓拍
+- 对接【移动打印】设备，实现：栈板标签、不良标识、盘点标签
+- 对接【AGV调度】设备，实现：报数触发、排队联动
+- 对接【e_WI中控】设备，实现：一键切换、节能息屏、特需点亮
+
+还有很多用户有意思又极有用的玩法，以后有机会再分享。
+
+从各式各样的API接口就足以见得，API能玩的真的很多~
+
+如果有其他更好用好玩的API接口欢迎分享呀！
+
+*合集参考：* [https://www.jianshu.com/p/3f224c33dd97](https://www.jianshu.com/p/3f224c33dd97)
+
+*有帮助，记得点赞+关注 [@简道云](https://www.zhihu.com/people/ef107b75e1aaf4025dce59f3d69a4bf9) ~ 和千万职场人一起成长*
+
+----更新-----
+
+这篇随手的分享，没想到能受到那么多欢迎。这些接口只是纯分享，源于用户推荐的一篇文章，上面分享的这些接口来自于各大API平台，大部分是免费试用/有使用次数限制的。
+
+*补充一波不错的合集（部分为博客主自己编写）：*
+
+[各大平台的免费api接口_bubbleTg](https://blog.csdn.net/qq_36570464/article/details/82561056?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161933472416780366546000%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161933472416780366546000&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~times_rank-9-82561056.pc_search_result_no_baidu_js&utm_term=%E5%85%8D%E8%B4%B9%E7%9A%84API%E6%8E%A5%E5%8F%A3&spm=1018.2226.3001.4187) ——主要为电商、物流、谷歌、视频、音乐、腾讯、IP的开放接口
+
+[免费开放接口API_peakchao](https://blog.csdn.net/c__chao/article/details/78573737?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161933457316780271540778%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161933457316780271540778&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-78573737.pc_search_result_no_baidu_js&utm_term=%E5%85%8D%E8%B4%B9%E7%9A%84API%E6%8E%A5%E5%8F%A3&spm=1018.2226.3001.4187) ——由于是个人编写，所以覆盖了非常细碎的使用场景，生活工作都有，很好玩。比如“通过Id查段子”、“随机一首诗词推荐”、“每日一首歌”
+
+[整理一些完全免费开放的API接口_Allen . Liu](https://blog.csdn.net/qq_41856814/article/details/89290195?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161933457316780271540778%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161933457316780271540778&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-89290195.pc_search_result_no_baidu_js&utm_term=%E5%85%8D%E8%B4%B9%E7%9A%84API%E6%8E%A5%E5%8F%A3&spm=1018.2226.3001.4187) ——非常全，适合开发测试阶段使用。完全免费，不用注册，返回格式全是JSON，所有接口均可无限制使用，有需要的小伙伴可看

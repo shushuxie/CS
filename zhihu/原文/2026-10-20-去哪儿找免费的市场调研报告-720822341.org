@@ -1,0 +1,108 @@
+#+TITLE: 去哪儿找免费的市场调研报告？
+#+LINK: https://www.zhihu.com/question/22149167/answer/720822341
+#+AUTHOR: 乐为
+#+CREATED: 2019-06-19
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+推荐几个经常用的经济、互联网、科技相关报告网站（免费）。
+
+*一、经济、金融数据报告*
+
+*1、国家统计局*
+
+[数据 - 国家统计局](http://www.stats.gov.cn/sj/)
+
+[[https://picx.zhimg.com/50/v2-e34b158efa05e409bb018720a58937d1_720w.jpg?source=2c26e567]]
+
+*2、中国人民银行*
+
+[http://www.pbc.gov.cn/diaochatongjisi/116219/116225/index.html](http://www.pbc.gov.cn/diaochatongjisi/116219/116225/index.html)
+
+[[https://picx.zhimg.com/50/v2-18cd95a295745cba34cfd1dcbaa84c87_720w.jpg?source=2c26e567]]
+
+*3、证监会官网*
+
+[中国证券监督管理委员会](http://www.csrc.gov.cn/pub/newsite/sjtj/)
+
+在证监会网站可以了解到各个行业的发展情况、统计数据，最新动态、相关监管政策。
+
+[[https://picx.zhimg.com/50/v2-e2621a1bddde435cc7fb49d7378151cf_720w.jpg?source=2c26e567]]
+
+*4、东方财富网、雪球*
+
+[东方财富(300059)股票价格_行情_走势图-东方财富网](http://quote.eastmoney.com/sz300059.html?from=BaiduAladdin)
+
+用于上市企业研究，内容较多，可以了解到一个公司的 *概况、经营分析、行业相关情况* 。
+
+[[https://picx.zhimg.com/50/v2-13da66e18600751294b7232d26d4d3a1_720w.jpg?source=2c26e567]]
+
+还可以看到各个行业的研究报告。
+
+[[https://pic1.zhimg.com/50/v2-13ebc3e989ef04111271bbd1e336ad07_720w.jpg?source=2c26e567]]
+
+*二、互联网数据*
+
+*1、艾瑞网*
+
+[报告_艾瑞网](http://report.iresearch.cn/)
+
+[[https://pic1.zhimg.com/50/v2-0d31568cc23bb16457056172393040d2_720w.jpg?source=2c26e567]]
+
+[研究报告-艾瑞咨询](https://www.iresearch.com.cn/report.shtml)
+
+*这一个链接不用登录，可以直接下载报告。*
+
+*2、中文互联网数据资讯中心*
+
+[互联网数据资讯中心-199IT | 发现数据的价值-199IT | 中文互联网数据研究资讯中心-199IT](http://www.199it.com/)
+
+[[https://pic1.zhimg.com/50/v2-f5bc619c475b00407ada3174e7c2dfb9_720w.jpg?source=2c26e567]]
+
+*3、中国互联网络信息中心*
+
+[中国互联网络信息中心](http://www.cnnic.net.cn/hlwfzyj/hlwxzbg/hlwtjbg/)
+
+[[https://picx.zhimg.com/50/v2-4ef2edd45b648a7376602e42539d682f_720w.jpg?source=2c26e567]]
+
+*4、易观智库*
+
+[数据新知 - 易观](https://www.analysys.cn/article/analysis/701/1)
+
+[[https://pic1.zhimg.com/50/v2-e0ae9c5e3ba3b183af02624426998fd7_720w.jpg?source=2c26e567]]
+
+*5、Talkingdata移动观象台*
+
+[数据报告-移动观象台-TalkingData](http://mi.talkingdata.com/reports.html?category=all)
+
+[[https://pic1.zhimg.com/50/v2-84c6f0a835733f63c3f7efa7f285a6e4_720w.jpg?source=2c26e567]]
+
+*6、艾媒网*
+
+[艾媒网-全球领先的新经济行业数据分析报告发布平台](https://www.iimedia.cn/#shuju)
+
+[[https://pic1.zhimg.com/50/v2-53b1594ad6a8b79ed4ae8c6c01ca4f33_720w.jpg?source=2c26e567]]
+
+*7、七麦数据*
+
+[七麦数据（原ASO100）- 专业移动推广数据分析平台 - ASO优化|ASM竞价广告|iOS|App Store|苹果应用商店|安卓市场|榜单](https://www.qimai.cn/research)
+
+[[https://picx.zhimg.com/50/v2-526764b888ad22e7b0a8f151b26b45c6_720w.jpg?source=2c26e567]]
+
+*8、企鹅智酷*
+
+[企鹅智酷_腾讯网](http://tech.qq.com/biznext/list.html)
+
+*9、腾讯大数据*
+
+[腾讯大数据](https://data.qq.com/reports)
+
+[[https://pic1.zhimg.com/50/v2-41669df9b625c5f0467d3d044b2f8eee_720w.jpg?source=2c26e567]]
+
+*10、阿里研究院*
+
+[阿里研究院](http://www.aliresearch.com/blog/index/lists/tag/3831.html)
+
+[[https://pica.zhimg.com/50/v2-d5582bd8b8d64c03f90e59b060ced82d_720w.jpg?source=2c26e567]]
+
+[如何快速地了解一个陌生行业/领域？](https://www.zhihu.com/question/19698319/answer/1221809295)

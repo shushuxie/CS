@@ -1,0 +1,102 @@
+#+TITLE: 一般人用 Linux 算是找虐吗？
+#+LINK: https://www.zhihu.com/question/24389813/answer/392409566
+#+AUTHOR: sinux
+#+CREATED: 2018-05-15
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+我闺女今年5岁，使用过的唯一一种桌面系统是kubuntu。由于KDE的缺省鼠标操作是单击打开文件，她是不知道双击是何种操作的。我家电脑上只有Firefox浏览器，所以她的观念里没有IE，360之类的东西，上网就点小狐狸。。。估计给她个Windows，她想看个小猪佩奇都费劲。
+
+目前她对终端和shell产生了浓厚兴趣，而且自己发现了sl命令。小火车开出来的时候她很惊奇。
+
+Linux桌面一点都不难用，我闺女就会。相反，家里的Windows平板只有我媳妇用的明白，她比我和我闺女都高明。虽说上面的Win10是我升级的。
+
+更新一下，不少网友对现代linux桌面发行版怕是有若干错觉，以为缺这少那什么都干不了。
+
+我发几个截图看看
+
+[[https://picx.zhimg.com/50/v2-2483e49d9ade2b5ddefdd247fd782400_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-f24c5a0f45c85809caba3b0c4b466826_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-ea13bbcc149d887f3c2e6941bc191108_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-b7f0db0b3b896e75c7c748041f707cfe_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-b97ed323d920756eaf628e0d96fc926b_720w.jpg?source=2c26e567]]
+
+更新一下
+
+许多知友关心怎么装的Tim，这里统一答复一下。我使用的下面这个项目，很方便。需要注意，装好之后立刻关闭Tim的自动更新，也不要理会Tim弹出的更新提醒。一更新就坏事。想用最新版就给这个项目的维护者发issue吧。
+
+[https://github.com/hillwoodroc/winetricks-zh](https://github.com/hillwoodroc/winetricks-zh)
+
+如果用deepin会更方便，自带了。
+
+#+begin_quote
+2019年6月更新：安装TIM的最佳方法，见文末。以上方法可以不看了。
+#+end_quote
+
+再补充两句。这个回答只是想说一个观点，即如今的Linux没那么虐。儿童都能简单的用起来。这里只有个习惯问题，不存在使用难度上的差别。
+
+绝不是鼓动任何人用Linux。如果产生这种错误观念是你自己的问题，不要试图在评论区证明Linux不好使。我家夫人觉得Windows好使，我很佩服，并支持她继续用。然而仅限于她的平板，想反过来以Windows对她来讲好使为理由让我把我的台式机换成Windows，那是不可能成功的。对我来讲，Windows才是那个用不明白的高难度系统。
+
+再更新一下。
+
+特意赶来抬杠的，我还是直接删评论吧。
+
+再更新
+
+竟然被小人举报了个人信息。各位觉得滑稽吧。果然这个世界上有许多人是连搭理都不必的。
+
+[[https://pic1.zhimg.com/50/v2-6ad3a6700f0736fe4c5ae24fdd4ea96b_720w.jpg?source=2c26e567]]
+
+更新一下
+
+有几个知友问我半透明效果是怎么做到的，这里统一回复一下。
+
+KDE桌面可供设置的地方是很多的。有几个专有名词需要说一下，以免误解。
+
+观感：也就是 look and feel。可以理解为一整套完整的主题方案
+
+[[https://pic1.zhimg.com/50/v2-9595d39f941a0a8a02ddf7327a3160d6_720w.jpg?source=2c26e567]]
+
+桌面主题：即plasma theme。导航栏，启动器，任务栏等等非应用程序部分的主题
+
+[[https://pica.zhimg.com/50/v2-5159bfaeeb8a1781e87a57ec590f6997_720w.jpg?source=2c26e567]]
+
+应用程序部件风格：即窗体、按钮、控件等样式风格
+
+[[https://picx.zhimg.com/50/v2-39faebf3194cec3da248274507b1b5b1_720w.jpg?source=2c26e567]]
+
+窗口装饰： *Aurorae Theme* 窗框风格
+
+[[https://pic1.zhimg.com/50/v2-e101d23688217ed54a6d1bcd0945b4ec_720w.jpg?source=2c26e567]]
+
+在KDE里面想获得半透明效果有几个办法，我这里采用的是kvantum
+
+[tsujan/Kvantum](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
+
+ubuntu用户可以在github项目中的release页下载deb包，或者查看项目文件中的INSTALL文件。
+
+安装好之后系统设置-部件风格中会有一个名为kvantum的部件样式。
+
+然而这并没完，我们现在只是用kvantum接管了程序风格样式。想解决半透明需要使用kvantum的管理工具，选择一个半透明的主题。这类主题可以在
+
+[Kvantum - www.opendesktop.org](https://www.opendesktop.org/browse/cat/123/)
+
+下载。
+
+[[https://picx.zhimg.com/50/v2-e3c61c03cf85d56fd08ff2b29f5cfc9f_720w.jpg?source=2c26e567]]
+
+然后选择一个与之搭配的窗口标题栏效果（aurorae theme）就可以了。
+
+比如这个设计师的作品，我全套用的他的。
+
+[opendesktop.org](https://www.opendesktop.org/member/6612/)
+
+---
+
+时隔一年，更新一下安装TIM/QQ等软件的新方法，详见我的新文章
+
+[sinux：Ubuntu上的QQ/TIM和微信究极方案](https://zhuanlan.zhihu.com/p/68117556)

@@ -1,0 +1,390 @@
+#+TITLE: 怎么吃透一个java项目？
+#+LINK: https://www.zhihu.com/question/422346147/answer/1640213200
+#+AUTHOR: 你丫才码农
+#+CREATED: 2020-12-22
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+** 整理了一些Java项目，分享给大家
+
+*1、一款 Java 开源的 Spring Boot 即时通讯 IM 聊天系统*
+
+地址： [一款 Java 开源的 Spring Boot 即时通讯 IM 聊天系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488740&idx=2&sn=7f8babf532cddeeb87d88f2d0e2ea1ad&chksm=971b8aefa06c03f923cc67ea242a3af0e19ec480aae73575265c050bf8faa825a23bae80b8bf&scene=21#wechat_redirect)
+
+*2、Java外卖点餐系统【附全部代码】*
+
+地址： [Java外卖点餐系统【附全部代码】](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488720&idx=2&sn=9937a4b2d7b6d72c43ea5c61e31dfab4&chksm=971b8adba06c03cddbad13abad594996c8778c53ae292cf550e4103e9d7c9d43029cfd1933e3&scene=21#wechat_redirect)
+
+*3、一个基于spring boot的Java开源商城系统*
+
+地址： [一个基于spring boot的Java开源商城系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488698&idx=2&sn=12f4db560305f3f047431d96ac1c8522&chksm=971b8ab1a06c03a768fd7f82016ce6a9799f2d6f37f64bec6e9fc8c46d41f07275875b93f644&scene=21#wechat_redirect)
+
+*4、推荐一款开源java版的视频管理系统*
+
+地址： [推荐一款开源java版的视频管理系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488664&idx=2&sn=31e8dbdc448b866f5dbe1faa042bf7a9&chksm=971b8a93a06c03850203badb3040b452e1a522963dae700093863d4b69e75c74e851a3f54c85&scene=21#wechat_redirect)
+
+*5、分享一个在线考试系统，练手项目用他很香*
+
+地址： [分享一个在线考试系统，练手项目用他很香](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488556&idx=2&sn=dc8ccf4ff8461dcb4fbf7f452c365a66&chksm=971b8a27a06c03316f6da3dc707526e0c30f2fd7494ccaf6425cf731a0c3209e041e37a6a182&scene=21#wechat_redirect)
+
+* *关于Java项目还整理了100+Java项目视频+源码+笔记**
+
+地址： [100+Java项目视频+源码+笔记](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490956&idx=2&sn=e6b6164eb275d49b29240c06fa4576aa&chksm=971b8387a06c0a91a9f96578bf3cb3514d9f1a8beb8b080ee2adf6faae105a30d90b6d9252b7&scene=21#wechat_redirect)
+
+*6、一款轻量级，可快速上手的开源后台系统*
+
+地址： [一款轻量级，可快速上手的开源后台系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488531&idx=2&sn=7c231f83db5acc02f3c105920cbef55e&chksm=971b8a18a06c030e0e9c85b7377d570dc3b23be6e4201aa76e0933f37235f44a49bccb3e9830&scene=21#wechat_redirect)
+
+*7、推荐一个基于 SpringBoot2 + MybatisPlus 的商城管理系统*
+
+地址： [推荐一个基于 SpringBoot2 + MybatisPlus 的商城管理系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488501&idx=2&sn=1c81ec774bb2c5c94ae64cd601e11b4a&chksm=971b8dfea06c04e8c75577e3729fab1b6fcbe85ff5677bf15afde7a79a368cbdaf3cb95d671a&scene=21#wechat_redirect)
+
+*8、SpringBoot库存管理系统，拿来学习真香*
+
+地址： [SpringBoot库存管理系统，拿来学习真香](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488418&idx=2&sn=2039b878bbb9b3d68a15c5ff74374003&chksm=971b8da9a06c04bfff29791d20780592f842607d939191a19b40c915098606b418ce5c17d642&scene=21#wechat_redirect)
+
+*9、分享一套开源的监控系统（附源码）*
+
+地址： [分享一套开源的监控系统（附源码）](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488373&idx=2&sn=cd34f61189b483a5cab49b1f88ed154a&chksm=971b8d7ea06c0468bd01221e51ef1ff044b222c0c3c2583e10be99d1df51475c72c7e5aef0d7&scene=21#wechat_redirect)
+
+*10、推荐一个基于 SpringCloud 设计精良的网上商城*
+
+地址： [推荐一个基于 SpringCloud 设计精良的网上商城](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488353&idx=2&sn=40ae55c408c904826e27d883a91737ff&chksm=971b8d6aa06c047c8af37974b72e98e6f045c296e8773f5edb4b95bb22fdd514948ca03773ab&scene=21#wechat_redirect) 到极致
+
+---
+
+*给大家推荐一本书《Java项目案例分析》*
+
+本书从软件工程的角度出发，按照项目的开发顺序，系统、全面地介绍了Java项目开发的流程。从项目概述、数据库设计、公共类设计到主要模块设计，每一过程都进行了详细地介绍。
+
+本书向读者介绍了6个实用项目和两个毕业设计，实用项目包括超市管理系统、物资管理系统、网上商城系统、英汉双语词典、学生成绩管理系统、彩票预测系统；毕业设计包括进销存管理系统和图书馆管理系统。
+
+*本书内容详尽、实例丰富，非常适合作为零基础学习人员的学习用书。*
+
+[]()
+
+---
+
+*11、基于 Spring Boot 的车牌识别系统（附项目地址）*
+
+地址： [基于 Spring Boot 的车牌识别系统（附项目地址）](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488831&idx=2&sn=db1d71c7b69ed8d2c89db14b612558c4&chksm=971b8b34a06c0222170da30ed986f34c10220f152c14e775c9835bb18ac51e4efbcc84fadbdb&token=1302350546&lang=zh_CN#rd)
+
+*12、Spring Boot vue完整的外卖系统，手机端和后台管理api 源码赠送*
+
+地址： [Spring Boot vue完整的外卖系统，手机端和后台管理api 源码赠送](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488938&idx=2&sn=b6e2dc26a4b69fa706f80e6b5d36a187&chksm=971b8ba1a06c02b7af23bdf10c60bf87d1bd209430b5c54d99e18c484e8cf8d68146016a2913&token=1302350546&lang=zh_CN#rd)
+
+*13、「开源」目前见过的最好的开源OA产品*
+
+地址： [「开源」目前见过的最好的开源OA产品](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489050&idx=2&sn=7548d2a72e33bf319b441a1fcd11ebf4&chksm=971b8811a06c01074abf0a108b4d7adf3dc506630d5b40507a4106c880e4636f81ea4ddd7749&token=1302350546&lang=zh_CN#rd)
+
+*14、基于SpringBoot和Vue的企业级中后台开源项目，这个项目有点哇塞！*
+
+地址： [基于SpringBoot和Vue的企业级中后台开源项目，这个项目有点哇塞！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489068&idx=2&sn=6329137614d5361bfd9d4ee3dd715a24&chksm=971b8827a06c013154da0384e8da921b54bf35956f1e4b19b7f9de5260a28b95b549fd6fbceb&token=1302350546&lang=zh_CN#rd)
+
+*15、Java身份证号码识别系统（开源项目）*
+
+地址： [Java身份证号码识别系统（开源项目）](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489085&idx=2&sn=746694f7495ff7f02091804de04c8e04&chksm=971b8836a06c01203698b72b8a81dd15f2de0f0ec73c496deb7ddfb42e59bb6b96759fb737c9&token=1302350546&lang=zh_CN#rd)
+
+* *100+Java项目视频+源码+笔记**
+
+地址： [100+Java项目视频+源码+笔记](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490620&idx=2&sn=ce5244bad34c17950289f01cb0ed255c&chksm=971b8237a06c0b21c3d0ca9c78bae1b8c99b77b38e3815f71753d9fc1a4227958fe909880467&token=479471946&lang=zh_CN#rd)
+
+*16、有人靠"抢茅台"月入百万，脚本曝光，开源可用！*
+
+地址： [有人靠"抢茅台"月入百万，脚本曝光，开源可用！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489346&idx=2&sn=51a5d15efad59e17fb4620f6e1f6f338&chksm=971b8949a06c005f9dd3787f7f6287d3340ceaee6e1dfa0009625978f98c2bb2c44f400c802b&token=1164980268&lang=zh_CN#rd)
+
+*17、基于 Vue3.0+ElementPlus 后台精简模板*
+
+地址： [基于 Vue3.0+ElementPlus 后台精简模板](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489330&idx=2&sn=3b2c6cfbbdb7f477399fe829a53e0134&chksm=971b8939a06c002f788c15c42cfbd55cd8d0a14654f87ae059924fa66e397680426a81216b2d&token=1164980268&lang=zh_CN#rd)
+
+*18、强！腾讯开源的kotlin高性能特效动画组件！*
+
+地址： [强！腾讯开源的kotlin高性能特效动画组件！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489302&idx=2&sn=456bf83d50566a8f6d17a465ae2fc5b5&chksm=971b891da06c000b0e3a498a1ff0b500f40d7c25d90ea5157a2113ec0324f61edb378ec8f4de&token=1164980268&lang=zh_CN#rd)
+
+*19、炫酷，SpringBoot+Echarts实现用户访问地图可视化（附源码）*
+
+地址： [炫酷，SpringBoot+Echarts实现用户访问地图可视化（附源码）](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489279&idx=2&sn=3a0af4de37804aea4e0a23365b9e8d3c&chksm=971b88f4a06c01e2c282cd689a3e9c4970086f23cbbf647acdbabe4c56aeeb74cceae702810c&token=1164980268&lang=zh_CN#rd)
+
+*20、微信小程序开发【前端+后端（Java）】附完整源码*
+
+地址： [微信小程序开发【前端+后端（Java）】附完整源码](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489269&idx=2&sn=02615e65f542dabd40851c34e0cbc5ee&chksm=971b88fea06c01e81c2aebdbfeff430113ae37f04263a0ab305455e5477fc94624e80cc1040d&token=1164980268&lang=zh_CN#rd)
+
+*21、炫酷的 Markdown 渲染阅读工具（附开源地址）*
+
+地址： [炫酷的 Markdown 渲染阅读工具（附开源地址）](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489406&idx=2&sn=1f4f1bcd67776f815ed3e7c65482869a&chksm=971b8975a06c0063bab19291965ec677ddf6257535bbfababb8ed1894f8a870cf38831473ccc&scene=21#wechat_redirect)
+
+*22、炫酷，SpringBoot+Echarts实现用户访问地图可视化（附源码）*
+
+地址： [炫酷，SpringBoot+Echarts实现用户访问地图可视化（附源码）](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489279&idx=2&sn=3a0af4de37804aea4e0a23365b9e8d3c&chksm=971b88f4a06c01e2c282cd689a3e9c4970086f23cbbf647acdbabe4c56aeeb74cceae702810c&scene=21#wechat_redirect)
+
+*23、springboot+vue.js搭建图书管理系统开源项目*
+
+地址： [springboot+vue.js搭建图书管理系统开源项目](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489206&idx=2&sn=efaefc2005068907207967e3ba439a05&chksm=971b88bda06c01abd7a6a94ce4940387f25253eec3b107bb28ac86c3167bd536c48dbded1004&scene=21#wechat_redirect)
+
+*24、仿百度网盘的一款轻量级微服务架构网盘系统*
+
+地址： [仿百度网盘的一款轻量级微服务架构网盘系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489167&idx=2&sn=f1f3a9a2f55245b6376c28174611f0ea&chksm=971b8884a06c019212f3083a179196f16860bf606e5cce88db6b7a6e8f3c62679be6dd430232&scene=21#wechat_redirect)
+
+*25、仿京东电商项目终于开源了~项目经验不愁喽！*
+
+地址： [仿京东电商项目终于开源了~项目经验不愁喽！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489146&idx=2&sn=39883e267133c974f7e216ad188eac19&chksm=971b8871a06c0167a5c6569037b7ff81bc67beeea1618bbc614165a0637b99981c7eb1263e51&scene=21#wechat_redirect)
+
+*26、一个基于SpringBoot开源的小说和漫画在线阅读网站*
+
+地址： [一个基于SpringBoot开源的小说和漫画在线阅读网站](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489124&idx=2&sn=521fab6c6a5884afc8b1a01e7b37eb3f&chksm=971b886fa06c0179d5bb47a476b8ee5c9c23c9e6347b1ed9d5c0ee22d821fc177c04747daf9a&scene=21#wechat_redirect)
+
+*27、基于 Vue+Spring 前后端分离管理系统ELAdmin*
+
+地址： [基于 Vue+Spring 前后端分离管理系统ELAdmin](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489475&idx=2&sn=ff77fe9fa596e60aef2f963fb049ef21&chksm=971b89c8a06c00deb2b8bd929f82534c54b12cf41aff442794f6b01bebc49fce7e56b8244c2e&scene=21#wechat_redirect)
+
+*28、腾讯又一开源神器发布！程序员也能成视频剪辑大神*
+
+地址： [腾讯又一开源神器发布！程序员也能成视频剪辑大神](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489445&idx=2&sn=dfcca29508e96a0f40c8a6f8c7b845a2&chksm=971b89aea06c00b8f4f00d71e4884ebab8ff62b34b428b5e1ae216248b555ac95ccaca1bd181&scene=21#wechat_redirect)
+
+*29、基于Java开发一套完整的区块链系统（附完整源码）*
+
+地址： [基于Java开发一套完整的区块链系统（附完整源码）](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489524&idx=2&sn=e52def14c42c5282cb51afcf2b56b09a&chksm=971b89ffa06c00e9ec07c3f8c2472547b77b46c3a86404efb2f84d6a908138a198c13739f51e&scene=21#wechat_redirect)
+
+*30、这个开源项目火了！直接解锁网易云变灰音乐，谁用谁爽*
+
+地址： [这个开源项目火了！直接解锁网易云变灰音乐，谁用谁爽](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489544&idx=2&sn=ee945d7eb4e72f2708e94ecfa0aa37a8&chksm=971b8603a06c0f157e63d7f03c24056f06e1b997d5d3c0521ed8f9ba245cf2aaed8e2b3bb854&scene=21#wechat_redirect)
+
+*31、能挣钱的 SpringBoot 项目，真香！*
+
+地址： [能挣钱的 SpringBoot 项目，真香！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489669&idx=2&sn=623adf56c8048ba5a8dc9cdb8c72da6c&chksm=971b868ea06c0f98abd90c68acda21381b4176ab338595b528565a39a173f51f8ac3b0b1f38a&scene=21#wechat_redirect)
+
+*32、淘宝开源的代码质量检测工具，太强大了！！*
+
+地址： [淘宝开源的代码质量检测工具，太强大了！！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490596&idx=2&sn=a1ecca1e18d441629bee5495e83aaef2&chksm=971b822fa06c0b397011a08eb0c75d6fcb679ccee321ab02d3313f8e8878db390d35a1c3732b&scene=21#wechat_redirect)
+
+*33、GitHub标星 10k+ 的后台管理系统*
+
+地址： [GitHub标星 10k+ 的后台管理系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490574&idx=2&sn=80f8d13912c0ed3855f001994598c416&chksm=971b8205a06c0b134289a9dafc4d7dbb57c3486b0d6e2bbcd7de7f02ac0dab257994ca7b6487&scene=21#wechat_redirect)
+
+*34、基于SpringBoot 的CMS系统，拿去开发企业官网真香*
+
+地址： [基于SpringBoot 的CMS系统，拿去开发企业官网真香](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490490&idx=2&sn=81c3a093bd16795257d6d748fbffe2fb&chksm=971b85b1a06c0ca7272817bd1ee6a8c7400cd694cf220ce056fe0fa60f0b0343b57490d8c039&scene=21#wechat_redirect)
+
+*35、推荐一款高颜值的 Spring Boot 快速开发框架*
+
+地址： [推荐一款高颜值的 Spring Boot 快速开发框架](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490456&idx=2&sn=d3c16669e817869b324b23f2c0d038a3&chksm=971b8593a06c0c85c8915ffe335c5afc74dca72ed0bcdb231e9a8bc3523bb609f2424109cbf6&scene=21#wechat_redirect)
+
+*36、一个基于Docker、无状态、简单、快速、高质量的文档转换服务！瞬间就爱上了！*
+
+地址： [一个基于Docker、无状态、简单、快速、高质量的文档转换服务！瞬间就爱上了！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490400&idx=2&sn=89bb50d7c241344ba87aecf10f7931ab&chksm=971b856ba06c0c7d2e0a89a3d938e4a7795297f93eb41e933f87dcca5f691e866e1e1ab3524e&scene=21#wechat_redirect)
+
+*37、再见了，收费的Navicat*
+
+地址： [再见了，收费的Navicat](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490380&idx=1&sn=aa4aa7f865fb5f5d98e67938d4e34e2a&chksm=971b8547a06c0c51c3657c1ac045e41d1a6d4893aaa784dd401ced7a0aa8059479754d5471f3&scene=21#wechat_redirect)
+
+*38、GitHub 近两万 Star，无需编码，可一键生成前后端代码，这个开源项目有点强！*
+
+地址： [GitHub 近两万 Star，无需编码，可一键生成前后端代码，这个开源项目有点强！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490345&idx=1&sn=5c7b01b15d1e6a431f18b71e3012101c&chksm=971b8522a06c0c34269b03bf361ff6b1c343218e4ebb5fa611574d16d46b2990141f7d0b9537&scene=21#wechat_redirect)
+
+*39、30 行代码实现蚂蚁森林自动收能量(附送源码)*
+
+地址： [30 行代码实现蚂蚁森林自动收能量(附送源码)](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490225&idx=1&sn=312fdb6e15a7f2e92511ae8650f77bcd&chksm=971b84baa06c0dac00ee5853a56f0bdcc4e325c108696d5a7655c1e157ca76638b35880c759c&scene=21#wechat_redirect)
+
+*40、发现一款牛逼的 IDEA 插件：检测代码漏洞，一键修复！*
+
+地址： [发现一款牛逼的 IDEA 插件：检测代码漏洞，一键修复！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490166&idx=1&sn=b62e017a7b63a46a98c6d39627998b4b&chksm=971b847da06c0d6b0637de9830aad4456f6b884af81753f93fdc129d192fc87464ce8f2a7e72&scene=21#wechat_redirect)
+
+*41、一个轻量级的跨平台模块化游戏引擎*
+
+地址： [一个轻量级的跨平台模块化游戏引擎](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490112&idx=2&sn=69d18c90d10d305d196d2007f414530b&chksm=971b844ba06c0d5d795167121ea976b2e9baebe34f068daa2c44e7f783317656ab8b1ed7a5a0&scene=21#wechat_redirect)
+
+*42、GitHub 热榜：被网友疯狂恶搞的「蚂蚁呀嘿」项目终于开源了！*
+
+地址： [GitHub 热榜：被网友疯狂恶搞的「蚂蚁呀嘿」项目终于开源了！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490929&idx=2&sn=eab70a3349ed792070616ec51ab20dd4&chksm=971b837aa06c0a6c99d0497a01c22bc56c39901eb3c188cc5fb855e26c91418e77c90d50de2e&scene=21#wechat_redirect)
+
+*43、火爆全网！Github标星8.6K，这个项目能将任何设备转换为计算机的辅助屏幕*
+
+地址： [火爆全网！Github标星8.6K，这个项目能将任何设备转换为计算机的辅助屏幕](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490905&idx=2&sn=a08a75331ff94e288376186e3b7b5a70&chksm=971b8352a06c0a4423470fca2e29b75d370a7438608d93d12011c6c9c4f7e498e65b089e270e&scene=21#wechat_redirect)
+
+*44、基于SpringBoot的ERP系统，自带进销存+财务+生产功能*
+
+地址： [基于SpringBoot的ERP系统，自带进销存+财务+生产功能](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490856&idx=2&sn=6cdf081fd1111c9c7c920ffdb0c6c171&chksm=971b8323a06c0a353761ce54fd5fdeafc53ed96036a97d9ed7266a27369f7a8c7de9e09dcb63&scene=21#wechat_redirect)
+
+*45、Linux服务器上必备的4个开源工具*
+
+地址： [Linux服务器上必备的4个开源工具](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490826&idx=2&sn=2138a94965a60f7fecb3dded818d0582&chksm=971b8301a06c0a17cdb11483970c4a2acc550cc0dbc8f4f1d59ddbda6f35c943381a5882d789&scene=21#wechat_redirect)
+
+*46、这个开源项目可能是功能最全的 Java 权限认证框架！*
+
+地址： [这个开源项目可能是功能最全的 Java 权限认证框架！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490744&idx=2&sn=2cea21ce873cae0cc4a1c5097265e678&chksm=971b82b3a06c0ba573560d3a526ed69aa3a8e6309cd9d1528ab2e3999e2c0f1e29f593092bc5&scene=21#wechat_redirect)
+
+*47、腾讯，干掉 Redis 项目，正式开源、太牛逼啦！*
+
+地址： [腾讯，干掉 Redis 项目，正式开源、太牛逼啦！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490697&idx=2&sn=949b89e25a0ac9884e6400b5b2dc6032&chksm=971b8282a06c0b9470c48dfc995850fea198a5771fe22e5991b70316c08a139d70f7dcc1fc99&scene=21#wechat_redirect)
+
+*48、推荐 7 个非常实用的OAuth开源项目！*
+
+地址： [推荐 7 个非常实用的OAuth开源项目！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490681&idx=2&sn=f1e5a5a1690e354ac7779a6091462317&chksm=971b8272a06c0b64879676c361ec8e7b52af91656e66d54ac1a87714227f88c28d935b1048ce&scene=21#wechat_redirect)
+
+*49、这个高仿小米商城项目，拿来学习再好不过了！*
+
+地址： [这个高仿小米商城项目，拿来学习再好不过了！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490658&idx=2&sn=6cb707b17310a500687226cf66d5ab0b&chksm=971b8269a06c0b7f74e2e904438e3ee11516249e80dd4c51a624243912a9d27faf53fbb11233&scene=21#wechat_redirect)
+
+*50、 1月份Github上最热门的Java开源项目*
+
+地址： [1月份Github上最热门的Java开源项目](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490875&idx=2&sn=e92755f45ac573e1075b54e010b874f9&chksm=971b8330a06c0a261bcc4271b116b92871f17dfe2d89c4c0a6ef57bb25dfb624685626a219de&scene=21#wechat_redirect)
+
+*51、 2月份Github上最热门的Java开源项目*
+
+地址： [2月份Github上最热门的Java开源项目](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490887&idx=2&sn=18c9d0a94a097b879973dd52d5db95d1&chksm=971b834ca06c0a5af0a04a123c64062d524ec3c3328ef519e654d5a6844941fb6baeff47abb0&scene=21#wechat_redirect)
+
+*52、推荐一款搜索开源代码的神器—Kooder！*
+
+地址： [推荐一款搜索开源代码的神器—Kooder！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491280&idx=2&sn=a10c6f71e26e5fbb2a2fedce797ed401&chksm=971b80dba06c09cdf399119291530b30e3515f434a478cdb7cf0eca132c696f2785935103ab5&scene=21#wechat_redirect)
+
+*53、推荐一个高仿微信的开源项目，有点屌！*
+
+地址： [推荐一个高仿微信的开源项目，有点屌！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491246&idx=2&sn=8cdecc185ed7e469c050ef58a0934131&chksm=971b80a5a06c09b355a0aad558c41cb9506f825c5ade3702c1980f8b4364e1d3fc5ce7dcafaa&scene=21#wechat_redirect)
+
+*54、好未来开源项目——柯南流量回放平台*
+
+地址： [好未来开源项目——柯南流量回放平台](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491206&idx=2&sn=9954b335fa824d2196bc7a61d1d1665e&chksm=971b808da06c099b4b597b0ce6313ec763a5daecdb6b03102e63096d5a581323fd59411c5eaf&scene=21#wechat_redirect)
+
+*55、GitHub 访问不了？用这个方法轻松解决*
+
+地址： [GitHub 访问不了？用这个方法轻松解决](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491168&idx=2&sn=88d38bfb92788bb69e793ff61bf4bed6&chksm=971b806ba06c097d79ced38cf511f7954d3d37a2a41b877e33a6097262d5f9b10daef50bf87a&scene=21#wechat_redirect)
+
+*56、谷歌大神又一开源神器！代码调试不选它选谁？*
+
+地址： [谷歌大神又一开源神器！代码调试不选它选谁？](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491117&idx=2&sn=f87a1b7432b770a4f2dd8ff8ddc5f52a&chksm=971b8026a06c0930f13f8191fe61ae2c4b4ab0c495281c6387f3c6ddc1c5249bef48ec4b7d9a&scene=21#wechat_redirect)
+
+*57、高仿的今日头条开源项目，牛逼！*
+
+地址： [高仿的今日头条开源项目，牛逼！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491055&idx=2&sn=a409130e3bbb753895707850532922b7&chksm=971b83e4a06c0af2d2dbf042c2c70864b38eaaf11423add89f534c9ce76c17ba64b46d389b33&scene=21#wechat_redirect)
+
+*58、携程开源又一力作——小程序构建工具*
+
+地址： [携程开源又一力作——小程序构建工具](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491031&idx=2&sn=bd26b18cefb7ca86ecc2ce31a101c47d&chksm=971b83dca06c0aca28f858e75b4a5aa0a68519857d67d650dd7f612830fc6e4d67bd1427ca80&scene=21#wechat_redirect)
+
+*59、拿这个开源项目来入门Spring Cloud微服务很香呀*
+
+地址： [拿这个开源项目来入门Spring Cloud微服务很香呀](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491013&idx=2&sn=5aecb8cb300c37428f9219b159087651&chksm=971b83cea06c0ad80f8fbc1f2b48e34b363fbb76a40ab1453a0d01a4ecfeda92fdd4f4529a07&scene=21#wechat_redirect)
+
+*60、一款不可多得的 SpringBoot+JPA 博客入门学习项目。*
+
+地址： [一款不可多得的 SpringBoot+JPA 博客入门学习项目。](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490982&idx=2&sn=abb129667765ac0b84ba5b8c192f0e26&chksm=971b83ada06c0abbe41bbfa0d16b6a1d658d814e2683d3129b1b3f58c939ea5c6f565df3c625&scene=21#wechat_redirect)
+
+*61、SpringBoot+vue.js搭建图书管理系统*
+
+地址： [SpringBoot+vue.js搭建图书管理系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491330&idx=2&sn=9ad6f53b9ef6c094854ca15a40990343&chksm=971b8109a06c081fe43fc31303d527024d8a38c32b19c97531da360f433947eff988d2716705&token=2137147134&lang=zh_CN#rd)
+
+*62、SpringBoot+ Mybatis 前后端分离后台管理系统项目*
+
+地址： [SpringBoot+ Mybatis 前后端分离后台管理系统项目](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491421&idx=2&sn=e8ddec8ce322d4209a12ccf32bc8af72&chksm=971b8156a06c0840d33fb2e3aad78e0037b24813bf4600494898a82664296400b63c0b9c1947&token=2137147134&lang=zh_CN#rd)
+
+*63、Spring Boot + Security + MyBatis + Thymeleaf + Activiti 快速开发平台*
+
+地址： [Spring Boot + Security + MyBatis + Thymeleaf + Activiti 快速开发平台](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491458&idx=2&sn=3e86b077352fab639bf3385df6e44894&chksm=971b8189a06c089f2953f8fd6878e8d57f6c47ad74ebafeeeaa38ad3bbde8a614aeaf45c548b&token=2137147134&lang=zh_CN#rd)
+
+*64、企业开发必备的6个Spring Cloud微服务开源项目！*
+
+地址： [企业开发必备的6个Spring Cloud微服务开源项目！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491483&idx=2&sn=8dd01f39b848321af24fbd3d5683b4d9&chksm=971b8190a06c08866c7d86558072217ca55b1557d19a7049377c31409a663c76e27fcbd7a286&token=2137147134&lang=zh_CN#rd)
+
+*65、微信小程序商城项目（Java版），拿去毕设又省2千块*
+
+地址： [微信小程序商城项目（Java版），拿去毕设又省2千块](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491768&idx=2&sn=3dffd34beb0be8192485f84c2b9ee62d&chksm=97187eb3a06ff7a50939ddcb426199b8e0593bfdcb4f2c017cd73f826ed8cf084016656dc671&scene=21#wechat_redirect)
+
+*66、 12 个非常适合做外包项目的开源后台管理系统*
+
+地址： [12 个非常适合做外包项目的开源后台管理系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491746&idx=2&sn=f7dd425c0032a31eaea7a51388b57bb5&chksm=97187ea9a06ff7bf1fe9ff4db3a4314bd1f640f55db4176efd111913fcc6f251f58d161a89b4&scene=21#wechat_redirect)
+
+*67、推荐3个快速开发平台，前后端都有！*
+
+地址： [推荐3个快速开发平台，前后端都有！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491603&idx=2&sn=eaaf30dbc1d65efcaeb98b2f83a490e3&chksm=97187e18a06ff70e45cdbc1513edf573ddfc96e054c08c1d8d3de1a48b9808ca493a262d0596&scene=21#wechat_redirect)
+
+*68、徒手给小区开发一套系统！看能换一个停车位不....*
+
+地址： [徒手给小区开发一套系统！看能换一个停车位不....](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247492306&idx=2&sn=b0b9ade6c7d33ee65c7b042cca7aa8c2&chksm=97187cd9a06ff5cf132ac58b22ab477bbebb701488f4045c89db105f2ecdb5fb0d2ba179e768&token=182727013&lang=zh_CN#rd)
+
+*69、【项目】Java学生宿舍管理系统，赠予即将毕业的兄弟！*
+
+地址： [【项目】Java学生宿舍管理系统，赠予即将毕业的兄弟！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247492245&idx=2&sn=5640beb495f82a77691bf2542ba8de79&chksm=97187c9ea06ff588b444a933c1f07486ee0d68803e9ab265baf01d08ddc7a2d8d1a178de5cf6&token=182727013&lang=zh_CN#rd)
+
+*70、Nginx 可视化配置神器*
+
+地址： [Nginx 可视化配置神器](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491918&idx=2&sn=94df4691001ee79ee4b633a6de2332f5&chksm=97187f45a06ff653559de367fafe4590945d2aa06ecf551a3770f2ed8deed28cfccd12ce205a&token=182727013&lang=zh_CN#rd)
+
+*71、精选的8个小程序源码*
+
+地址： [精选的8个小程序源码](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491903&idx=2&sn=66f9d76ffb1d9857e591bcfdc39b97f6&chksm=97187f34a06ff6223e3f965e02edb92849ae30c55a389f13da106752ca33cab5e7a1c2919d24&scene=21#wechat_redirect)
+
+*72、基于Spring+SpringMVC+Mybatis的分布式敏捷开发系统架构（附源码）*
+
+地址： [基于Spring+SpringMVC+Mybatis的分布式敏捷开发系统架构（附源码）](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247491837&idx=2&sn=70350afb12e12c2c500c47daac18d27b&chksm=97187ef6a06ff7e0b2cb5e2d7e4f2ea0bf80cd642f2840ba77e78b2c904d294176ba3dd746e9&scene=21#wechat_redirect)
+
+*73、 SpringBoot版的迷你天猫商城系统（附源码），改改就能接外包换钱！*
+
+地址： [SpringBoot版的迷你天猫商城系统（附源码），改改就能接外包换钱！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247493292&idx=2&sn=469457599ee7d85245d5f320d760e68d&chksm=971878a7a06ff1b11cc62c0c9834c1867f36643be91734f6a70c9167c28b6dbbfd0de91e466c&token=881626183&lang=zh_CN#rd)
+
+*74、有了这个开源项目，小白也能搭建电商系统*
+
+地址： [有了这个开源项目，小白也能搭建电商系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494114&idx=2&sn=712c74abcd2554e842045d679338d22b&chksm=971877e9a06ffeffed8d8b9f8a4d677feeec94a5d3cc00b2f7ae54f819cfac24ec744b2117e5&token=1676617392&lang=zh_CN#rd)
+
+*75、重磅推荐：很全的 Java 权限认证框架！*
+
+地址： [重磅推荐：很全的 Java 权限认证框架！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494076&idx=2&sn=297ce4f99ef0e1814ab8d91ead6eb4b3&chksm=971877b7a06ffea158687131a10cc95dc3e786f75389af6ed3ce829e78c5ea0f6fbc9549035b&token=1676617392&lang=zh_CN#rd)
+
+*76、基于SpringBoot的仿豆瓣平台【源码分享】*
+
+地址： [基于SpringBoot的仿豆瓣平台【源码分享】](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247493912&idx=2&sn=5138f945672fa54b304650e7020bb841&chksm=97187713a06ffe057d64e19ab75b6ee74924782832f1a4f66e6020f2f6640101e0833bdabb45&token=1676617392&lang=zh_CN#rd)
+
+*77、Spring-Boot-Pay 支付服务升级为 Nacos+Dubbo*
+
+地址： [Spring-Boot-Pay 支付服务升级为 Nacos+Dubbo](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247493593&idx=2&sn=ba71db89b0d2f791ecec4569b37694a8&chksm=971879d2a06ff0c4ba03749fa55865b9f56d9f7f5776e736b515f9114bd28cb714ae6576e6a8&token=2024715618&lang=zh_CN#rd)
+
+*78、推荐一个工作流自动化工具*
+
+*地址：* [推荐一个工作流自动化工具](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494270&idx=2&sn=104b16c4cd505fe7a3cbd7f1666f5aef&chksm=97187475a06ffd63a0c2f2ca080633a4689f4d7eccfcc2b1a8196af53d3a119d43d300b7abf0&token=2024715618&lang=zh_CN#rd)
+
+*79、 [腾讯又一开源项目发布，好用！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494442&idx=2&sn=2d8d2d810888041253b56d14b0dbcff6&chksm=97187521a06ffc379a5142e59506b80fc1fa1330364ebddee928af45d419767e503bbdff2571&token=2024715618&lang=zh_CN#rd)*
+
+地址： [腾讯又一开源项目发布，好用！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494442&idx=2&sn=2d8d2d810888041253b56d14b0dbcff6&chksm=97187521a06ffc379a5142e59506b80fc1fa1330364ebddee928af45d419767e503bbdff2571&token=2024715618&lang=zh_CN#rd)
+
+*80、 [推荐一个国人开源的推荐系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494487&idx=2&sn=0ac47b0f24ab2426f7e84cab4afc7ad5&chksm=9718755ca06ffc4a96e244a2154faa9aaeee75f85308c68e4350acadcf42ada9cd49fc576c93&token=2024715618&lang=zh_CN#rd)*
+
+地址： [推荐一个国人开源的推荐系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494487&idx=2&sn=0ac47b0f24ab2426f7e84cab4afc7ad5&chksm=9718755ca06ffc4a96e244a2154faa9aaeee75f85308c68e4350acadcf42ada9cd49fc576c93&token=2024715618&lang=zh_CN#rd)
+
+*81、 [一款神仙接私活儿软件，吊到不行！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494539&idx=2&sn=6bb2366c77596d479514692fb0bc4793&chksm=97187580a06ffc96122f1502ba90572d5dfdc9cfb7ca449d68cc37a50e06038ea7d735faaecf&token=2024715618&lang=zh_CN#rd)*
+
+地址： [一款神仙接私活儿软件，吊到不行！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494539&idx=2&sn=6bb2366c77596d479514692fb0bc4793&chksm=97187580a06ffc96122f1502ba90572d5dfdc9cfb7ca449d68cc37a50e06038ea7d735faaecf&token=2024715618&lang=zh_CN#rd)
+
+*82、 [分享一个基于 Jedis 的 Redis 工具类](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494618&idx=2&sn=cfea22c1c5473f16d0d051268f5935c6&chksm=971875d1a06ffcc7551ffc9afae1360668032de5a0f7733e90a59d3ef45478a0af07114ddec6&token=2024715618&lang=zh_CN#rd)*
+
+*地址：* [分享一个基于 Jedis 的 Redis 工具类](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494618&idx=2&sn=cfea22c1c5473f16d0d051268f5935c6&chksm=971875d1a06ffcc7551ffc9afae1360668032de5a0f7733e90a59d3ef45478a0af07114ddec6&token=2024715618&lang=zh_CN#rd)
+
+*83、 [推荐一个酷炫的监控系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494648&idx=2&sn=273d914cfb5e25916a6c5829e77227f8&chksm=971875f3a06ffce50c38933944f1d479ddcc0cd8c780fe4f068b8d9b6635fa58af0269bf1987&token=2024715618&lang=zh_CN#rd)*
+
+地址： [推荐一个酷炫的监控系统](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247494648&idx=2&sn=273d914cfb5e25916a6c5829e77227f8&chksm=971875f3a06ffce50c38933944f1d479ddcc0cd8c780fe4f068b8d9b6635fa58af0269bf1987&token=2024715618&lang=zh_CN#rd)
+
+* *关于Java项目还整理了100+Java项目视频+源码+笔记**
+
+地址： [100+Java项目视频+源码+笔记](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247490956&idx=2&sn=e6b6164eb275d49b29240c06fa4576aa&chksm=971b8387a06c0a91a9f96578bf3cb3514d9f1a8beb8b080ee2adf6faae105a30d90b6d9252b7&scene=21#wechat_redirect)
+
+** 下面是一些大厂的开源项目
+
+*美团 5 大最受欢迎的开源项目*
+
+地址： [美团 5 大最受欢迎的开源项目，牛批！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247493680&idx=2&sn=fa5f6d52b2f9ddf47be9489da7184949&chksm=9718763ba06fff2dc2d83200042b15246e3d375cfae72dce83239ea27122e370ad20723cf13f&token=2024715618&lang=zh_CN#rd)
+
+*腾讯10 大开源项目*
+
+地址： [腾讯10 大开源项目出炉！](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247488773&idx=2&sn=4bee7ca731066cca7dfc3771ddf3a798&chksm=971b8b0ea06c0218d9d38304df5768d5fdff3a0965fc5bf51078bf496c11982b8212ce2fe5c3&token=1477534426&lang=zh_CN#rd)
+
+*27个阿里 Java 开源项目总结*
+
+地址： [非常全面的27个阿里 Java 开源项目总结](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247486298&idx=1&sn=9002d1deac35af5d17aadee9533ae45f&chksm=971b9551a06c1c4712cd7ad1eede4168eea13ef0fe49bc49f0c90c5b216554060fb72762d235&token=1477534426&lang=zh_CN#rd)
+
+*滴滴开源项目*
+
+地址： [一起来看看滴滴都开源了哪些有意思的项目](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247486151&idx=1&sn=1cdce0007f137bb67438d3a4403e049e&chksm=971b94cca06c1dda0e64c1febe5d1c0a5e595ad545fa1d3fc1fa8d810766d81c8b59e26d0abf&token=1477534426&lang=zh_CN#rd)
+
+*百度开源的 71 个项目，你用过几个 ？*
+
+地址： [百度开源的 71 个项目，你用过几个 ？](https://mp.weixin.qq.com/s?__biz=MzIwNjg4MzY4NA==&mid=2247489561&idx=2&sn=71e6a41a2d11fe017c031c252e3623c2&chksm=971b8612a06c0f045312595efe365cf129b269fb995c21ea5e0b70029a24202b555619117646&scene=21#wechat_redirect)
+
+** 后期整理了会再和大家分享！

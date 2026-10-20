@@ -1,0 +1,202 @@
+#+TITLE: 计算机专业有哪些不错的公开课资源？
+#+LINK: https://www.zhihu.com/question/38335108/answer/1008758952
+#+AUTHOR: 暮秋君
+#+CREATED: 2020-02-10
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+插一条消息，本人本科数学专业，目前工作两年多，做了一些数据挖掘，算法相关的项目。目前想组队参加阿里天池、kaggle等数据科学竞赛，目的是想获得一个不错的成绩。有意向的可以私聊我。当然，如果有研究生或phd，参加过这方面竞赛的高手的话，那大佬求带，感激不尽。相信我们能成为很好的朋友。有意向可以联系我
+
+---
+
+来吧，最全的计算专业公开课资源整理
+
+我翻阅了网易公开课大部分名校的计算机专业公开课资源，按照学校分类整理。
+
+并且还爬取了B站分类为编程的所有学习视频，共计8000个视频链接
+
+下面，我把整理的资源列举出来分享给大家
+
+** 一、网易云公开课
+
+*麻省理工学院*
+
+[算法导论](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Falgorithms.html)
+
+[多变量微积分](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fmultivariable.html)
+
+[单变量微积分](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fcalculus.html)
+
+[人工智能](http://open.163.com/newview/movie/free?pid=MCTMNN3UI&mid=MCTMNR8QS)
+
+[信号与系统：模拟与数字信号处理](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fsignals.html)
+
+[线性代数](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fdaishu.html)
+
+[计算机科学及编程导论](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fbianchengdaolun.html)
+
+[多核编程](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fbianchengmit.html)
+
+[信息与熵](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Finformation.html)
+
+*斯坦福大学 （网易上没有斯坦福系列的公开课，这是我在B站上爬取的所有有关斯坦福公开课视频，只给出了播放量较高的一部分，爬取的内容放一张图片给大家看一下）*
+
+*(需要excel的话，仔细看我个人资料说明)*
+
+[[https://picx.zhimg.com/50/v2-c05524fd4dcfc14de5d268c8dec45a87_720w.jpg?source=2c26e567]]
+
+[机器学习（Machine Learning）- 吴恩达（Andrew Ng）](http://www.bilibili.com/video/av9912938)
+
+[斯坦福大学公开课：编程方法学28集全](http://www.bilibili.com/video/av8048664)
+
+[【斯坦福大学】吴恩达 机器学习 CS229 Machine Learning by Andrew Ng](http://www.bilibili.com/video/av28468522)
+
+[斯坦福大学公开课——机器人学](http://www.bilibili.com/video/av4506104)
+
+[【英文字幕】2019最新版斯坦福大学 CS224n 深度学习自然语言处理](http://www.bilibili.com/video/av46166627)
+
+[【中英字幕_全集】斯坦福大学公开课cs229_机器学习_吴恩达](http://www.bilibili.com/video/av49432977)
+
+[斯坦福大学JAVA教程，编程方法学。共24讲（本篇1--4）](http://www.bilibili.com/video/av8249414)
+
+[【斯坦福大学】CS224n NLP/自然语言处理课程(中英字幕)](http://www.bilibili.com/video/av76819237)
+
+[【斯坦福大学李飞飞】深度学习与计算机视觉入门教程](http://www.bilibili.com/video/av74900460)
+
+[【斯坦福大学】Convolutional Neural Networks for Visual Recognition 计算机视觉与卷积神经网络必看！【生肉】](http://www.bilibili.com/video/av27892037)
+
+*加州理工大学*
+
+[机器学习与数据挖掘](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Flearningfromdata.html)
+
+*密西西比河谷州立大学*
+
+[Android应用程序开发](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fdevelopingandroidapplications.html)
+
+*哈佛大学*
+
+[构建动态网站](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fbuildingdynamicwebsites.html) 
+ 
+ [计算机科学cs50](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fcs50.html)
+
+[2006年计算机科学](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fcomputerscience2006.html)
+
+[计算机科学导论](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Flectureroncomputerscience.html)
+
+*纽约大学*
+
+[Google vs Apple谁会笑到最后？](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fopencourse%2Fgooglevsapple.html)
+
+*北京大学*
+
+[人工智能原理](http://open.163.com/newview/movie/free?pid=MEFE7I48P&mid=MEFE7PN82)
+
+[程序设计与算法（一）C语言程序设计](http://open.163.com/newview/movie/free?pid=MEJ6H0HPG&mid=MEJ6HAJN3)
+
+[离散数学](http://open.163.com/newview/movie/free?pid=MEJEAEUR5&mid=MEJEAIBG9)
+
+[程序设计与算法基础](http://open.163.com/newview/movie/free?pid=MDVKV3H5A&mid=MDVL8KVS3)
+
+[程序设计与算法（三）C++面向对象程序设计](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fcuvocw%2Fmianxiangduixiangchengxusheji.html)
+
+[计算概论与程序设计基础](http://open.163.com/newview/movie/free?pid=MEMB06U9O&mid=MEMB0E5S4)
+
+*复旦大学*
+
+[人工智能哲学](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fcuvocw%2Frengongzhinengzhexue.html)
+
+*浙江大学*
+
+[程序设计入门——C语言](http://open.163.com/newview/movie/free?pid=ME7HONPPN&mid=ME7HP0U90)
+
+[概率论与数理统计](http://open.163.com/newview/movie/free?pid=MEC1U20OT&mid=MEC1U8MR6)
+
+*武汉大学*
+
+[数字图像处理](http://open.163.com/newview/movie/free?pid=MEK2TFDFQ&mid=MEK2TQOFJ)
+
+[信息检索](http://open.163.com/newview/movie/free?pid=MEKSKDJNA&mid=MEKT3D6A7)
+
+*中国人民大学*
+
+[数据库系统概论](http://open.163.com/newview/movie/free?pid=MEKSKDJNA&mid=MEKT3D6A7)
+
+*北京航空航天大学*
+
+[电子信息专业导论-从智能手机谈起](http://open.163.com/newview/movie/courseintro?newurl=%2Fspecial%2Fcuvocw%2Fdianzixinxi.html)
+
+** 二、B站计算机学习资源（格式：播放量+视频链接）
+
+我把爬取的资源整理成了一个excel，一共8000个视频（实际不止8000，有些视频链接进去是一个系列课程，具体多少我也不知道）
+
+(需要excel的话，仔细看我个人资料说明)
+
+给大家截个图感受一下
+
+[[https://pic1.zhimg.com/50/v2-0523316bbd914089b017eb3858ce69f1_720w.jpg?source=2c26e567]]
+
+由于资源太多，只截取了一部分资源。每个视频包括6个特征：链接、播放量、搜藏量、评论人数、弹幕数、视频名称
+
+下面我选取了播放量排名前30个视频列举出来
+
+所有链接本人亲自测试，直接点击就能观看
+
+162893 [裸机电脑被黑客瞬间秒杀！主持人都懵了](http://www.bilibili.com/video/av79481298)
+
+152594 [当程序员遇到bug的时候，太真实了](http://www.bilibili.com/video/av78620345)
+
+44581 [用Python开发双人对战乒乓球小游戏](http://www.bilibili.com/video/av80942357)
+
+43036 [软件工程—Python—清华大学](http://www.bilibili.com/video/av80893577)
+
+32206 [刚学完c基础能做些啥?窗口界面程序怎么写?想摆脱黑窗口?](http://www.bilibili.com/video/av80237712)
+
+30099 [《Python语言程序设计》 国家二级Python辅助教程](http://www.bilibili.com/video/av82064400)
+
+28037 [培训机构出来的程序员或者专科毕业程序员能不能加入大公司](http://www.bilibili.com/video/av81754008)
+
+25837 [技术大神也有中年危机？《专访左耳朵耗子》听技术大神讲述他的中年危机以及如何渡过的故事](http://www.bilibili.com/video/av82384806)
+
+24995 [考验我磨钻头技术的时刻来了，能不能打出卷屑就看这一下了](http://www.bilibili.com/video/av79768690)
+
+20045 [计算机三大基础](http://www.bilibili.com/video/av82761629)
+
+19868 [web前端:程序员相亲对象是产品经理时、当场吓鸟！](http://www.bilibili.com/video/av80772550)
+
+17370 [外挂与语言无关，Python开发游戏外挂！](http://www.bilibili.com/video/av79606793)
+
+17319 [刚面试了一个在微软工作了5年的软件工程师，最后没有要。谈一下在大公司工作的优势和劣势。如何把握机遇？ 小公司的优势和劣势。](http://www.bilibili.com/video/av79915625)
+
+17261 [螺纹估计都一头雾水，它是怎么出来的！这就是机械的魅力！](http://www.bilibili.com/video/av79770345)
+
+16123 [2019 Python3.7零基础入门【初级】（含课件和代码）](http://www.bilibili.com/video/av80274875)
+
+15836 [用开源项目的方式学习编程](http://www.bilibili.com/video/av81505689)
+
+15818 [延世韩国语 第一册 上 第一期](http://www.bilibili.com/video/av82883689)
+
+15372 [气死人的人工智能，笑死我了](http://www.bilibili.com/video/av79080269)
+
+15175 [Python从负基础到入门（一）给Python安个家](http://www.bilibili.com/video/av78292541)
+
+14418 [【嵌入式】你觉得汇编语言有用吗？用处大吗？为什么说汇编语言与嵌入式息息相关](http://www.bilibili.com/video/av78140323)
+
+13514 [跟麦叔学Python - 1小时开发太空侵略者游戏](http://www.bilibili.com/video/av78341324)
+
+12901 [MIT在读博士生胡渊鸣：Taichi编程语言—高性能稀疏视觉计算与可微编程](http://www.bilibili.com/video/av82789606)
+
+12428 [不止代码！硬核程序员副业收入超过主业，我是怎么做到的？](http://www.bilibili.com/video/av81184079)
+
+12265 [【浙江大学】机器学习课程](http://www.bilibili.com/video/av82557490)
+
+12217 [为什么Visual Studio Code成了最好用的代码编辑工具](http://www.bilibili.com/video/av81753623)
+
+11953 [【邓俊辉】算法训练营第一期](http://www.bilibili.com/video/av81207108)
+
+11882 [我是怎么成为一个程序员的（1）儿时的兴趣是一直延续到今天的动力](http://www.bilibili.com/video/av83328158)
+
+11793 [2020年最新springboot2.0+shiro+jwt+redis+swagger+layui+thymeleaf 前后端分离权限管理系统](http://www.bilibili.com/video/av78917587)
+
+11547 [2019年我在Youtube和B站挣了多少钱？做Youtube和B站可以挣到钱么？](http://www.bilibili.com/video/av83757761)
+
+11457 [程序员与产品经理的恩怨，这次真打起来了](http://www.bilibili.com/video/av79968092)

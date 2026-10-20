@@ -1,0 +1,125 @@
+#+TITLE: 想成为一名linux运维该如何做?
+#+LINK: https://www.zhihu.com/question/337177489/answer/947144445
+#+AUTHOR: Wayne
+#+CREATED: 2019-12-23
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+*作为一名新手，到底该如何入门Linux?*
+
+Linux入门其实是很简单的，问题是你是否能有足够的耐心，花相应的时间和精力来折腾，是否不排斥重装系统这种枯燥且万能的学习手段。如果不愿意折腾可以说是学不好Linux的，要真正了解Linux的分区机制，对LVM使用相当熟练，没有个20次以上的Linux装机经验是积累不起来的，所以一定不要怕折腾。
+
+学习大多类似庖丁解牛，对事物的认识一般都是由浅入深、由表及里的过程，循序才能渐进。学习 Linux 同样要有一定的顺序和方法。如果你是初学者，那么建议按照本教程的顺序阅读，不要跳跃，欲速则不达，揠苗也不见得能助长。
+
+*linux入门其实并不是很难，我之前学习的时候大概整理了几类的资源，正好分享给大家：*
+
+*第一：业内公认的Linux优质教程*
+
+*[Linux 教程 | 菜鸟教程](https://www.runoob.com/linux/linux-tutorial.html)*
+
+菜鸟教程提供了大量的在线实例，通过实例可以更好的入门以及学习Linux，所有的资源是安全免费的；
+
+[[https://picx.zhimg.com/50/v2-709e540127e7cae8f83e8840a97ee57e_720w.jpg?source=2c26e567]]
+
+- *[Linux教程_w3cschool](https://www.w3cschool.cn/linux/)*
+
+在这个教程站上你可以找到你所需要的所有的网站建设教程。从基础的 HTML 到 CSS，乃至进阶的XML、SQL、JS、PHP 和 [http://ASP.NET](http://ASP.NET) ；
+
+[[https://pic1.zhimg.com/50/v2-3e30ecd175a73deffdb19c79c3203a6a_720w.jpg?source=2c26e567]]
+
+- *[Linux命令大全(手册) - 真正好用的Linux命令在线查询网站](https://www.linuxcool.com/)*
+
+准确，丰富，稳定；
+
+- *[Linux命令大全(手册)_Linux常用命令行实例详解_Linux命令学习手册](https://man.linuxde.net/)*
+
+[[https://pica.zhimg.com/50/v2-1b41a63653d73a7a73c76978b02daeb7_720w.jpg?source=2c26e567]]
+
+*** 第二：专业的linux技术书籍
+
+- *[鸟哥的Linux私房菜 : 基础学习篇](https://book.douban.com/subject/4889838/)*
+
+[[https://picx.zhimg.com/50/v2-f3c090dce925ddf446a495b8a25748ea_720w.jpg?source=2c26e567]]
+
+- *[Linux多线程服务端编程 : 使用muduo C++网络库](https://book.douban.com/subject/20471211)*
+
+[[https://pic1.zhimg.com/50/v2-aa9bba1e6b69394ed4867636928d186c_720w.jpg?source=2c26e567]]
+
+- *[深入Linux内核架构 : 全球开源社区集体智慧结晶，领略Linux内核的绝美风光](https://book.douban.com/subject/4843567/)*
+
+[[https://pic1.zhimg.com/50/v2-0b8679c9dbe38359e7f4bd2ea2c342d1_720w.jpg?source=2c26e567]]
+
+- *[Linux内核设计与实现(原书第3版)](https://book.douban.com/subject/6097773/)*
+
+[[https://pic1.zhimg.com/50/v2-df7d663728bab1456d591a44655d77c0_720w.jpg?source=2c26e567]]
+
+- *[鸟哥的Linux私房菜](https://book.douban.com/subject/10794788/)*
+
+[[https://pic1.zhimg.com/50/v2-22da1b87d59c2d1e9291b80ca401c249_720w.jpg?source=2c26e567]]
+
+*第四：Linux技术工具*
+
+- *[Docker](https://www.docker.com/)*
+
+Docker在一定程度上是LXC的增强版，早期的Docker使用LXC作为容器引擎，目前docker使用的容器引擎为runC，其是容器运行时标准的实现之一；
+
+[[https://pic1.zhimg.com/50/v2-dcd7e39fcfb1e440c5b6bc2229a949c9_720w.jpg?source=2c26e567]]
+
+- *[Kubernetes](https://kubernetes.io/)*
+
+Kubernetes（k8s）是自动化容器操作的开源平台，这些操作包括部署，调度和节点集群间扩展。如果你曾经用过Docker容器技术部署容器，那么可以将Docker看成Kubernetes内部使用的低级别组件。Kubernetes不仅仅支持Docker，还支持Rocket，这是另一种容器技术；
+
+[[https://picx.zhimg.com/50/v2-c06d395c53269809c8b3eb7490755860_720w.jpg?source=2c26e567]]
+
+- *[Zabbix](https://baike.so.com/doc/6744799-6959342.html)*
+
+监控一切需要监控的东西，只要能够想到，能够用命令实现的都能用来监控；
+
+[[https://picx.zhimg.com/50/v2-29d1096777cae87a69d7e63a8c5c2c95_720w.jpg?source=2c26e567]]
+
+- *[Nginx](https://baike.so.com/doc/5380532-5616806.html)*
+
+Nginx 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务；
+
+[[https://picx.zhimg.com/50/v2-b168c2591c2b38b77e7d4bc798b6ba21_720w.jpg?source=2c26e567]]
+
+- *[istio](https://istio.io/)*
+
+”连接、安全加固、控制和观察服务的开放平台“。开放平台就是指它本身是开源的，服务对应的是微服务，也可以粗略地理解为单个应用；
+
+[[https://picx.zhimg.com/50/v2-470dd66beffdc420c9a00e41be2c92b6_720w.jpg?source=2c26e567]]
+
+- *[Jenkins](https://jenkins.io/zh/)*
+
+Jenkins是开源CI&CD软件领导者， 提供超过1000个插件来支持构建、部署、自动化， 满足任何项目的需要；
+
+[[https://pica.zhimg.com/50/v2-64a30162cfd1e5a0798e6a0ccd3ae68f_720w.jpg?source=2c26e567]]
+
+- *[apche](http://www.apache.org/)*
+
+Apache源于NCSAhttpd服务器，经过多次修改，成为世界上最流行的web服务器软件之一。Apache的特点是简单、速度快、性能稳定，并可做代理服务器来使用；
+
+[[https://picx.zhimg.com/50/v2-960f74931e777e248c725cd8c5af75ff_720w.jpg?source=2c26e567]]
+
+*第五：成为一名合格的Linux运维工程师必备的技术点*
+
+- 掌握 Iptables 防火墙体系，实现防火墙实现数据包过滤和转发；
+- 掌握用户权限安全控制 Sudo 体系与配置；
+- 掌握 DNS 服务的原理、部署、安装和企业级应用；
+- 实现文件共享服务 NFS、Vsftpd、Samba 配置和应用；
+- 实现 Jumpserver 堡垒机 安装、配置、使用和运维体系融合；
+- brctl 命令创建管理虚拟网桥；Ip Netns 创建管理虚拟路由；
+- 常见的网络客户端工具 Ping/Lftp/Ftp/Lftpget/Wget；
+- 利用 Rsync 和 Inotify 实现多台机器数据分发和配置同步；
+- Jumpserver 跳板机基本功能应用，认证、授权、审计；
+- https 概念及对应的模块 mod_ssl 应用配置；
+- 运维必备 Web 服务开源解决⽅案 Nginx，全面讲解 Nginx 程序架构；
+- Nginx 内部框架、模块功能、事务处理机制、安装⽅法、CPU 亲缘优化、配置⽂件；
+- SQL 语句增删改查、常⽤命令使⽤、⽤户授权、字符集修改、表、索引、库管理等；
+- 对⽐介绍图形化管理软件，如 PhpMyAdmin、SQLyog、Navicat 等
+- Keepalived 工作方式，Keepalived 核心组件、报警机制、切换机制、心跳信息传输等；
+- Centos7 上实现 LVS 集群配置、服务管理、调度算法修改；
+- 全面熟悉 Ansible 用法、以及安装方法、配置文件详解、模块说明、基于私钥认证、批量操 作等；
+- Redis 扩展方式对比介绍，Redis Cluster 的基础应用；
+- Vmware Esxi 创建 Linux 及 Windows 虚拟机，并实现虚拟机跨宿主机迁移；
+- Docker 镜像、仓库管理、启动⽅法、数据卷使⽤、备份恢复，网络模型、容器间依赖关系、容器资源限制、Docker 的监控；

@@ -1,0 +1,19 @@
+#+TITLE: C++ 如何入门？
+#+LINK: https://www.zhihu.com/question/38828701/answer/304982605
+#+AUTHOR: 预言家
+#+CREATED: 2018-01-27
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+我最初开始学C++的时候，虽然我有C语言和C#的基础，但是还是完全学崩了，以致于我在好几个月的时间里都不敢再碰C++。
+
+直到有一天，我看到了Bjarne Stroustrup大神的文章：Five Popular Myths about C++
+
+这篇文章彻底拯救了我，不仅让我重拾信心，而且让我轻松地掌握了过去对我而言难以掌握的C++知识。现在C++是我最爱用的编程语言，写起来轻松愉快。
+
+所以树立好正确的观念很重要。希望想要学C++的同学都读一下这篇文章，真的很精彩。
+
+放个链接吧：
+
+[Five Popular Myths about C++, Part 1](https://isocpp.org/blog/2014/12/myths-1) 
+ [Five Popular Myths about C++, Part 2](https://isocpp.org/blog/2014/12/myths-2)

@@ -1,0 +1,104 @@
+#+TITLE: 如何看待 Windows Terminal（Windows 终端）？
+#+LINK: https://www.zhihu.com/question/323284458/answer/1240556831
+#+AUTHOR: 易哥
+#+CREATED: 2020-05-23
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+香！
+
+我看了Build 2020的主题演讲，发现微软在做的是为开发者提供全流程服务，从开发套件到托管工具到部署工具。尤其是对市民开发者（原词Citizen Developer，指非专业的开发者）提供了大量的便利工具。所以，GitHub对个人开发者全免费，提供Action功能，甚至提供在线的VS Code界面变得顺理成章。
+
+再说回Windows Terminal。我一直是试用版本的用户，而在5.20日发布了正式版。
+
+然后我干的第一件事情是：卸载Xshell！（家庭电脑，只需连接一台机器。）
+
+然后上班时，旁边同事也各种口嗨，称赞Windows Terminal。
+
+来，一起看一看。
+
+** 首先，支持连接众多平台。
+
+PowerShell与cmd自然不在话下。当然，建议大家多用PowerShell，这才是微软主推的命令行。除了命令有些长之外且不如Bash普及之外，其实还是不错的。生产上我们用它管理众多机器，木有问题。而且，PowerShell的中文说明界面也真是良心了。
+
+题外话，微软这些年的开放精神有些让人摸不着头。太赞！
+
+给Apple各设备上了Office组件，开源了自己的编辑器，现在搞个PowerShell竟然是开源+多平台支持。
+
+[[https://picx.zhimg.com/50/v2-219e62fbaaf0a86951ec93860b42975e_720w.jpg?source=2c26e567]]
+
+人家用不用不说，反正微软态度到位了。
+
+到位了。
+
+另外，PowerShell支持ssh登陆远端机器，所以……Xshell我要你有何用？！
+
+[[https://pic1.zhimg.com/50/v2-821a3905c1ae138871ac9c0b8015f70c_720w.jpg?source=2c26e567]]
+
+微软自家的云Azure自然也要支持。而且对Azure登陆方式的支持真是极为友好了。
+
+而且，演讲中炫耀，Azure的节点数目已经超过了谷歌和亚马逊两家的节点数目之和，且对边缘网络有着良好的支持。感觉微软这闷声搞大动作啊。
+
+不过，我并没有用他家的云，没那个需求。
+
+[[https://pic1.zhimg.com/50/v2-c88fab39dcd0e7d7c2867dbd9850657e_720w.jpg?source=2c26e567]]
+
+然后，重头戏，我最喜欢的支持Ubuntu。
+
+这里的Ubuntu指的是系统内置的Ubuntu运行环境。就是它，在Windows商店就能找到并直接安装。
+
+[[https://pic1.zhimg.com/50/v2-d7f9def4c1c4ea23c6040efed429187c_720w.jpg?source=2c26e567]]
+
+说实话，我主要还是用Windows，毕竟图形界面是真的爽。但是因为之前一段时间的大数据，所以，有时候做某些事情第一反应是用Bash完成。如果没有Linux就会有些难受。但是真的装个双系统，又太麻烦。
+
+Win10现在内置的Ubuntu简直不要太棒。
+
+这意味着，还要啥Mac啊，我用Win10就爽飞了。这不一下省了接近一万元的MacBook钱！
+
+香！
+
+[[https://picx.zhimg.com/50/v2-7cc7c10a9879dfea896710b0f09e308d_720w.jpg?source=2c26e567]]
+
+** 其次，漂亮。
+
+码农天天就对着电脑。看电脑的时间比看人多。电脑漂亮，就是世界都漂亮了。
+
+Windows Terminal主题多啊，漂亮！
+
+这个地址，全是主题，去选吧！
+
+[Windows Terminal Themes](https://atomcorp.github.io/themes/)
+
+[[https://picx.zhimg.com/50/v2-a4443d43a9e2f9883a17ba244ecf9909_720w.jpg?source=2c26e567]]
+
+这个地址，全是主题，去选吧：
+
+[>_TerminalSplash - Windows Terminal Themes](https://terminalsplash.com/)
+
+还能支持设置背景图。只要在设置中修改json文件即可。
+
+例如打开设置后，出现一个json文件。通过下面的两行就指定了背景的图片位置和透明度。并且，四类TAB（PowerShell\cmd\Azure\Linux）的背景可以分别设置。下面的示例是设置的PowerShell。
+
+#+begin_src text
+        {
+            // Make changes here to the powershell.exe profile
+            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "name": "Windows PowerShell",
+            "commandline": "powershell.exe",
+            "hidden": false,
+           "backgroundImage":"E:\\图片\\壁纸\\morning_shine_by_yiyaro-d5isa7y.jpg",
+           "backgroundImageOpacity" : 0.4
+        },
+#+end_src
+
+[[https://picx.zhimg.com/50/v2-38513b4d0ad57251f406a51ec84d0bf9_720w.jpg?source=2c26e567]]
+
+当然，背景图设置完后漂不漂亮，主要取决于你有没有漂亮的图还有你的审美。
+
+感觉微软自从搞了VS Code，就成了为程序员输出生产力工具的宅男之友。现在成了开源社区的中坚力量。
+
+对的，Windows Terminal也是开源的。
+
+Windows Terminal，爱了！
+
+好了，欢迎关注我。我是一名 *软件架构师* ，偶尔出没分享 *软件架构* 和 *开发* 相关的知识。

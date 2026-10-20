@@ -1,0 +1,225 @@
+#+TITLE: 编程初学者如何在GitHub寻找适合自己的小项目？
+#+LINK: https://www.zhihu.com/question/21612257/answer/928278410
+#+AUTHOR: Rocky0429
+#+CREATED: 2019-12-09
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+*当初学了三个月就找到后台开发的工作，我练手的项目真的都来自这里！！*
+
+*GitHub 标星 8.1w+，这个神级宝藏项目，作为编程新手有福了！！*
+
+*让走在开源路上的开发者不再孤单，让想进入开源世界的人不再畏惧。*
+
+---
+
+虽然我很早就知道 GitHub，但是学会逛 GitHub 的时间特别晚。当时一方面是因为菜，看着这种全是英文的东西难受，不知道该怎么去玩，另一方面是一直在搞 ACM，没有做一些工程类的项目，所以想当然的以为和 GitHub 也没什么关系（当然这种想法是错误的）。
+
+后来自己花了一个星期看完了 Python 的基础知识，就想着找点项目看一看，学一学，练一练，这个时候我才真正的去了解 GitHub，开始了在 GitHub 的瞎逛之旅，在开始之初，随之而来的问题是我不知道哪些项目当时还是新手的我，哪些项目是好项目，哪些项目好玩有价值。
+
+虽然现在我已经在 GitHub 上逛的相当流畅，但我还是想如果有一个东西可以收集这些对新手友好的东西，那么我当时可以少走更多的弯路，节省更多的时间吧。
+
+那么有这么一个东西么？
+
+有的，而且已经做了三年多，这就是 *HelloGitHub* ，一个分享 GitHub 上有趣，入门级的开源项目。
+
+[[https://picx.zhimg.com/50/v2-696f3022e0884e58ee33f9764c0183b7_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+GitHub 网址： [https://github.com/521xueweihan/HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
+#+end_quote
+
+在项目中，内容每月 28 号以月刊的形式更新发布，主要是面向编程新手、热爱编程、对开源社区感兴趣人群的项目。更新的内容主要包括：各种语言的流行项目、入门级项目、让生活变得更美好的工具、书籍、学习心得笔记、企业级项目等。
+
+[[https://picx.zhimg.com/50/v2-08c70b9d3eb9a0bcafac6dc523ccb614_720w.jpg?source=2c26e567]]
+
+这些项目都有一些共同的特征，那就是很酷，非常容易上手的项目，编程的魅力和便捷体验起来就是这么简单。
+
+[[https://picx.zhimg.com/50/v2-0dd29b558060709fb465d19c16c84d08_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+再次给出 GitHub 地址: [https://github.com/521xueweihan/HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
+#+end_quote
+
+后来在这上面找到了几个入门的项目，花了两个多月的时间研究，然后就开始了求职之路。
+
+一边找一边在这个网站上看了看校招信息和一些大厂真题，练了练 Python 开发的练习题。
+
+下面我们就来看看，这个项目具体包括啥，我们以最新的月刊（43 期）为例。
+
+[[https://picx.zhimg.com/50/v2-69f3f2a7eb14fd9f2087587aad6500d3_720w.jpg?source=2c26e567]]
+
+* *0x00 简介**
+
+[[https://pic1.zhimg.com/50/v2-b7246002f0cc9d5596f144a5239b28f8_720w.jpg?source=2c26e567]]
+
+* *0x01 目录**
+
+[[https://picx.zhimg.com/50/v2-ea14380c16e2392ea2538f7d9fa4c82a_720w.jpg?source=2c26e567]]
+
+* *0x02 内容**
+
+每个类型的项目我们挑一个来看。
+
+*C 项目*
+
+tmux：一个终端复用工具，可极大的提高工作效率。
+
+- 提供了强劲的、易于使用的命令行界面；
+- 可横向和纵向分割窗口；
+- 窗格可以自由移动和调整大小，或直接利用四个预设布局之一；
+- 可在多个缓冲区进行复制和粘贴；
+- 可通过交互式菜单来选择窗口、会话及客户端；
+- 等等。
+
+[[https://pica.zhimg.com/50/v2-59d5bdcf77746003fe593a0e2749e61d_720w.jpg?source=2c26e567]]
+
+*C# 项目*
+
+BenchmarkDotNet：功能强大的用于基准测试 .NET 库。
+
+[[https://picx.zhimg.com/50/v2-5fff128abfbb91852d2e0217ac0ce041_720w.jpg?source=2c26e567]]
+
+*C++ 项目*
+
+dbg-macro：打日志是 C++ 开发中必不可少的一种 debug 方式，dbg-macro 受 rust-lang 中 的 dbg 启发，提供比 printf 和 std::cout 更好的宏函数。主要有如下特点：
+
+- 美观的彩色输出（当输出不是交互式终端时，颜色将自动禁用）；
+- 兼容 C++11，并且是 header-only；
+- 支持基础类型和 STL 容器类型的输出；
+- 除了基本信息外，还输出变量名和类型；
+- 启用 DBG_MACRO_DISABLE 生成 release 版。
+
+#+begin_src text
+#include <vector>
+#include <dbg.h>
+
+// You can use "dbg(..)" in expressions:
+int factorial(int n) {
+  if (dbg(n <= 1)) {
+    return dbg(1);
+  } else {
+    return dbg(n * factorial(n - 1));
+  }
+}
+
+int main() {
+  std::string message = "hello";
+  dbg(message);  // [example.cpp:15 (main)] message = "hello" (std::string)
+  const int a = 2;
+  const int b = dbg(3 * a) + 1;  // [example.cpp:18 (main)] 3 * a = 6 (int)
+  std::vector<int> numbers{b, 13, 42};
+  dbg(numbers);  // [example.cpp:21 (main)] numbers = {7, 13, 42} (size: 3) (std::vector<int>)
+  dbg("this line is executed");  // [example.cpp:23 (main)] this line is executed
+  factorial(4);
+  return 0;
+}
+#+end_src
+
+[[https://picx.zhimg.com/50/v2-58e5a742bcac0513f9cb244ed56ab473_720w.jpg?source=2c26e567]]
+
+*Go 项目*
+
+go-admin：基于 Golang 语言的数据可视化与管理平台。特性如下：
+
+- 高生产效率：10 分钟内做一个好看的管理后台；
+- 主题：默认为 adminlte，更多好看的主题正在制作中，欢迎给我们留言；
+- 插件化：提供插件使用，真正实现一个插件解决不了问题，那就两个；
+- ✅认证：开箱即用的 rbac 认证系统；
+- ⚙️框架支持：支持大部分框架接入，让你更容易去上手和扩展。
+
+[[https://picx.zhimg.com/50/v2-160978ce90da4ef6e2520553b5416719_720w.jpg?source=2c26e567]]
+
+*Java 项目*
+
+eladmin：基于 Spring Boot 2.1.0、Vue 的前后端分离的后台管理系统，支持数据字典与数据权限管理、一键生成前后端代码、前端菜单动态路由等。基于 Spring Boot2.1.0 框架，涉及的技术栈：非关系数据库 redis、接口测试工具 swagger、druid 数据源驱动、邮件依赖（javax.mail）、三方支付和云存储 SDK、页面模板引擎 freemarker。技术栈丰富，初学者可以作为实战项目学习和使用。
+
+[[https://pic1.zhimg.com/50/v2-796e6030b1933ab49a9f213c04de37f6_720w.jpg?source=2c26e567]]
+
+*JavaScript*
+
+chart-race-react：一个简单易用的 Bar Chart Race（长条图赛跑动画） React 组件。示例代码：
+
+#+begin_src text
+import ReactDOM from 'react-dom';
+import BarChart from 'chart-race-react';
+
+ReactDOM.render(<BarChart />, document.getElementById('root'));
+#+end_src
+
+[[https://picx.zhimg.com/50/v2-a2f8494b6ecc84d4e33017d309ecc164_720w.gif?source=2c26e567]]
+
+*Python 项目*
+
+TagUI-Python：一个 Python 自动化操作的库。比如：自动打开网页并截图，示例代码：
+
+#+begin_src text
+t.init()
+t.url('https://www.google.com')
+t.type('q', 'decentralization[enter]')
+t.snap('page', 'results.png')
+t.close()
+#+end_src
+
+*Ruby 项目*
+
+shift：一个 Ruby 语言写的在线 MySQL 数据库迁移工具。
+
+[[https://pic1.zhimg.com/50/v2-1b27ca15d1c4484e047f68e3d625faa4_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-244d28a5cfef33dfdb47cb0d7fa986c8_720w.jpg?source=2c26e567]]
+
+*Swift 项目*
+
+Percent：让 Swift 语言支持百分比类型，消除精度缺失的烦恼。示例代码：
+
+#+begin_src text
+import Percent
+
+10% + 5.5%
+//=> 15.5%
+-10% / 2
+//=> -5%
+#+end_src
+
+*开源书籍*
+
+python_ebook：Python 编程相关的电子书资源集合项目。
+
+book：（英文）《Cosmic Python》讲述如何管理复杂性的 Pythonic 应用程序结构的书籍。
+
+*教程*
+
+BigData-Notes：大数据入门教程，该教程介绍了大数据常用技术栈的基础和核心知识。内容涵盖：Hadoop、Spark、Storm、HBase、Hive、ZooKeeper、Kafka 等。
+
+*机器学习*
+
+dimensionality_reduction_alo_codes：该项目使用 Python 实现了 11 种经典的数据抽取（数据降维）算法。同时附有相关资料、展示效果，适用于机器学习初学者和刚刚入坑数据挖掘的小伙伴。
+
+[[https://pic1.zhimg.com/50/v2-f671b372fe7886945ae45cce5b4755f7_720w.jpg?source=2c26e567]]
+
+* *0x03 写在之后**
+
+以上，就是今天分享的内容，希望更多的人能够知道 HelloGitHub 这个项目，内容已经在这了，万事俱备，差的就是你学习的驱动力和对作者 Star 的支持了。
+
+*当然不止于此，作为计算机的学生来说，下面这些高赞的回答/文章你也会需要：*
+
+1、都说 SQL 学习 SQL 学习，初学者上来安装版本太劝退， *那去哪里练习呢？* 来这里。
+
+[Rocky0429：在线就能用的 SQL 练习平台我给你找好了！](https://zhuanlan.zhihu.com/p/92590262)
+
+2、Python 学习不只是看完知识点就算了，还要大量练习，Python 新手就在这里练习把。
+
+[有没有适合新手练习 Python 的做题类网站？](https://www.zhihu.com/question/442492817/answer/2351637993)
+
+3、C、C++、Python 哪个更适合新手？说一下我的想法
+
+[C、C++、Python 哪个更适合新手？](https://www.zhihu.com/question/34763352/answer/2307443109)
+
+4、对于计算机专业的选择， *不要人家说什么就信什么，自己喜不喜欢适不适合要自己尝试一下才知道，不要听到别人说吃香就闷头冲进来！*
+
+[计算机类的什么专业更好？](https://www.zhihu.com/question/466282831/answer/2100154640)
+
+5、算法小白刷 LeetCode 怎么刷？【 *LeetCode 刷题顺序* 】，希望能帮助大家少走一些弯路。 *按照知识点进行分类* ，大家可以根据知识点，有针对性地刷题。
+
+[LeetCode按照怎样的顺序来刷题比较好？](https://www.zhihu.com/question/36738189/answer/2146423887)

@@ -1,0 +1,39 @@
+#+TITLE: 学会了 C 语言真的可以开发出很多东西吗？
+#+LINK: https://www.zhihu.com/question/23844552/answer/91887947
+#+AUTHOR: Wayne Shi
+#+CREATED: 2016-03-22
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+你能想到的，C语言都能搞，可以说是无所不能，把C学好，上手其他语言也会事半功倍。题主只是还没有入门，只看教程不动手永远学不会，推荐5个免费的C语言入门小项目，由易到难，开始动手做一些常见的小东西吧。
+
+1. [C/C++ - C语言制作简单计算器](https://www.shiyanlou.com/courses/75)
+
+用C语言做一个简单的计算器，进行加、减、乘、除操作。项目涉及的所有数学知识都很简单，但输入过程会增加复杂性。
+
+[[https://picx.zhimg.com/50/daa1a832d45da6cadb62fd168d8532f9_720w.jpg?source=2c26e567]] 2. [C/C++ - C语言制作2048](https://www.shiyanlou.com/courses/155)
+
+2048是之前十分火爆的一款益智游戏。项目将使用 C 语言完成一个2048游戏。
+
+[[https://pica.zhimg.com/50/d6cbd086d9a5ec5e28294858143e7de6_720w.jpg?source=2c26e567]]
+
+3. [C/C++ - C语言版扫雷游戏](https://www.shiyanlou.com/courses/116)
+
+扫雷是Window系统中自带的经典游戏。项目将使用 C 语言完成一个简单的扫雷游戏。
+
+[[https://picx.zhimg.com/50/048680efc7266b615f7680b5a20a0c3a_720w.jpg?source=2c26e567]] 4. [C/C++ - C语言编写万年历](https://www.shiyanlou.com/courses/126) 
+
+
+本次课程将使用 C 语言完成一个简单的日历功能。输入相应的年/月即可看到当月的日历。
+
+[[https://picx.zhimg.com/50/496ab6c9ffebd991b24fc721024016d4_720w.jpg?source=2c26e567]]
+
+5.
+
+[C/C++ - C语言快速实现五子棋](https://www.shiyanlou.com/courses/313)
+
+用最最简单的代码来实现五子棋游戏，帮助大家复习基础知识，了解一个项目的开发流程。
+
+[[https://picx.zhimg.com/50/v2-8cf4a209937916496a2b5311e66e8e6a_720w.jpg?source=2c26e567]]
+
+收藏的童鞋们顺便点个赞吧：）

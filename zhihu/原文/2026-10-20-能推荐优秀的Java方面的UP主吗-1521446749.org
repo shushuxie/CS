@@ -1,0 +1,68 @@
+#+TITLE: 能推荐优秀的Java方面的UP主吗？
+#+LINK: https://www.zhihu.com/question/424363061/answer/1521446749
+#+AUTHOR: 程序员晓凡
+#+CREATED: 2020-10-13
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+推荐几个自己关注和比较喜欢的b站关注的up主
+
+---
+
+** 1、遇见狂神说
+
+B站主页： [https://space.bilibili.com/95256449](https://space.bilibili.com/95256449)
+
+up主已经投稿视频教程55个，其中包含了（javase、javaee、springboot、springmvc、springcloud 等spring全家桶、各种常用技术：ajax、redis、ElasticSearch、docker、linux等基础视频教程）。如果是初学者，可以关注
+
+[[https://pic1.zhimg.com/50/v2-c12b78c7b192f91dd7d993aa1c56f553_720w.jpg?source=2c26e567]]
+
+** 2、codesheep--程序羊
+
+B站主页： [https://space.bilibili.com/384068749](https://space.bilibili.com/384068749)
+
+程序羊，羊哥是我关注的up主中现在粉丝数（40.6万）最多的。平常会更新一些工作中常用的编程技巧、各种学习路线不限于java，还有c、c++。还会分享一些常用编程工具
+
+[[https://picx.zhimg.com/50/v2-9b813299572431a05dd6f6233c145cb3_720w.jpg?source=2c26e567]]
+
+** 3、三太子敖丙
+
+b站主页： [https://space.bilibili.com/130763764](https://space.bilibili.com/130763764)
+
+会分享一些工作中常用技术、面试分享（经常会有模拟面试），也会分享一些日常生活
+
+[[https://picx.zhimg.com/50/v2-66e3118b04e32c4f6237d7f241b482c9_720w.jpg?source=2c26e567]]
+
+** 4、我是程序汪
+
+b站主页： [https://space.bilibili.com/83853950](https://space.bilibili.com/83853950)
+
+从事编程时间比较长，老程序员了。平常会分享各种面试技巧、也会帮公司招人面试、平常也会有很多粉丝模拟面试，周末可能会直播跟粉丝一起交流。更新还是比较快的
+
+[[https://pic1.zhimg.com/50/v2-ba10ac877e35979e56eb00644dd4622c_720w.jpg?source=2c26e567]]
+
+** 5、Guide哥
+
+b站主页： [https://space.bilibili.com/504390397](https://space.bilibili.com/504390397)
+
+up主是开源Java学习/面试指南——JavaGuide（75k+Star）的作者。关于java技术面试总结的比较全的。平常会分享一些编程技巧、生活日程。偶尔也会撒撒狗粮
+
+[[https://picx.zhimg.com/50/v2-8c2f3a718c57d4ce949055d156ea96fc_720w.jpg?source=2c26e567]]
+
+** 6、心静思远-9527
+
+b站主页： [https://space.bilibili.com/394607967](https://space.bilibili.com/394607967)
+
+会分享一些面试中经常问到的技术知识
+
+[[https://pica.zhimg.com/50/v2-18c94c3021a0609859cbdebf4b268761_720w.jpg?source=2c26e567]]
+
+** 7、黎曼的猜想
+
+b站主页： [https://space.bilibili.com/14163840](https://space.bilibili.com/14163840)
+
+up主会上传各种培训机构的视频教程（包括黑马、尚硅谷等）。需要下载视频的可以关注。关注后不再会为找视频教程发愁了。。。
+
+[[https://pic1.zhimg.com/50/v2-ee23690bae6d110bbce60fc2cc166e67_720w.jpg?source=2c26e567]]
+
+以上都是自己关注和比较喜欢的up主，排序部分先后。希望对你有帮助。

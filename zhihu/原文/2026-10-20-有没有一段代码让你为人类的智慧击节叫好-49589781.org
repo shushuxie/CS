@@ -1,0 +1,316 @@
+#+TITLE: 有没有一段代码，让你为人类的智慧击节叫好？
+#+LINK: https://www.zhihu.com/question/30262900/answer/49589781
+#+AUTHOR: 刘巍然-学酥
+#+CREATED: 2015-05-31
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+0 引言
+
+这个题我已经留坑很久很久了，但是最近忙于赶一篇论文，5月31日是投稿截止日期。今天终于是把论文写完了，于是准备把留的坑都填一填。
+
+前辈们已经把很多经典的、让人眼前一亮的代码展示出来了。我虽然不是码农，但也经常会看一些奇怪的代码。这里我列举五个我觉得最有趣、最好玩的代码给大家。这些代码一部分已经在之间的回答给出了，但为了Self-Contained，我也把这些已经给出的代码再次展示出来，并给出原始答案的链接、作者以及出处。
+
+前方多图预警，超长答案预警，建议在WiFi环境下观看。
+
+=============================
+
+1. 真正改变世界的算法：向杰出的数学和计算机科学家们致敬
+
+真正改变世界的是那些依托于数学的，真正高大上的代码。知乎er
+
+[@张狗狗](https://www.zhihu.com/people/49f133a379291e65e1c78bd98f1b99a2)
+
+提到的“支配世界的10个算法”（The real 10 algorithms that dominate our world，
+
+[The real 10 algorithms that dominate our world](https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04)
+
+）就是10个这类典型的算法。让我惊喜的是，这10个算法中竟然有4个与密码学相关（RSA算法，安全Hash算法，整数分解算法，随机数生成算法）。难道说真正掌控世界的是密码学嘛（笑）。作为一个密码学研究者，我感觉很激动啊！具体的内容 知乎er
+
+[@张狗狗](https://www.zhihu.com/people/49f133a379291e65e1c78bd98f1b99a2)
+
+已经回答的非常详细了，请大家参考他的答案（
+
+[有没有一段代码，让你觉得人类的智慧也可以璀璨无比？ - 张狗狗的回答](http://www.zhihu.com/question/30262900/answer/47747654)
+
+）。作为致敬，我仅列出这10个算法，并请大家一起像这些杰出的科学家们致敬。
+
+- 三种排序算法。 *归并排序* （Mergesort），提出者：约翰·冯·诺尼曼（John von Neumann），现代计算机创始人； *快速排序* （Quicksort），提出者：托尼·霍尔（Tony Hoare），1980年图灵奖获得者； *堆排序* （Heapsort），基于计算机基本数据结构堆（Heap）的排序方法。
+- *傅里叶变换* （Fourier Transform），提出者：约瑟夫·傅立叶（Joseph Fourier），温室效应的发现者，名字被刻在埃菲尔铁塔的72位法国科学家与工程师的其中一位。小行星10101号以傅里叶命名； *快速傅里叶变换* （Fast Fourier Transform），原始提出者：约翰·卡尔·弗里德里希·高斯（Carolus Fridericus Gauss），历史上最重要的数学家之一，被誉为“数学王子”。
+- *Dijkstra最短路径算法* （Dijkstra Shortest Path Algorithm）。提出者：艾兹赫尔·戴克斯特拉（Edsger Wybe Dijkstra），1972年图灵奖获得者。 
+
+- *RSA公钥密码体制* （RSA Public Key Cryptosystem）。提出者：罗纳德·李维斯特（Ron Rivest）、阿迪·萨莫尔（Adi Shamir）和伦纳德·阿德曼（Leonard Adleman）。他们为2002年图灵奖获得者。
+- *安全Hash算法* （Secure Hash Algorithm）。一些经典的安全Hash算法及其提出者们。MD5算法，提出者：罗纳德·李维斯特（Ron Rivest），2002年图灵奖获得者。SHA家族（SHA-1，SHA-224，SHA-256，SHA-384，SHA-512），提出者：美国国家安全局（National Security Agency）。值得注意的是，MD5以及SHA-1算法在2005年由中国密码学家王小云、殷益群、于红波从理论上破解。王小云因“国际通用Hash函数的破解”获颁陈嘉庚科学奖信息技术科学奖。
+- *整数分解* （Integer Factorization）。该问题已可以在量子计算机上以多项式复杂度解决，被称为秀尔算法（Shor Algorithm），提出者：彼得·威廉·秀尔（Peter Williston Shor），1998年奈望林纳奖（Nevanlinna Prize，计算机科学的数学方面重要贡献奖，每4年一届，得奖者在获奖当年不得大于40岁）获得者。
+- *链接分析* （Link Analysis）。提出者：Gabriel Pinski、Francis Narin。
+- *比例积分微分算法* （Proportional Integral Derivative Algorithm）。提出者：尼古拉斯·米诺尔斯基（Nicolas Minorsky）。
+- *数据压缩算法* （Data Compression Algorithms）。包括数据压缩、图像压缩等等。
+- *随机数生成器* （Random Number Generation）。
+
+=============================
+
+2. 数学拯救计算机科学算法：Quake III源代码中的玄机
+
+很多知乎er们都提到了一个神奇的数0x5f3759df（
+
+[@高城](https://www.zhihu.com/people/854dd72dd5963039c46ef65c2d38f000)
+
+，
+
+[@陆天培](https://www.zhihu.com/people/f67c2302d70cd91f0d8388dfac509ea3)
+
+等）。追溯这个数的来源，我们就要谈到一个经典游戏Quick III了。Quick III从现在的眼光看来实在不是一个很精细的游戏。但是在当时，Quick III的画质简直是狂暴酷炫掉渣天。在Quick系列，Doom系列，及其3D引擎出现之前，有谁能想到计算机也可以显示如此神奇的3D效果呢？
+
+这个3D引擎的开发者是约翰·卡马克（John Carmack）。他是美国电子游戏程序员，ID Software（一个著名游戏开发公司）的创始人之一。他在1999年，被时代杂志评选为科技领域50大影响力人物榜单，并列名列第10位。为表彰他的在电子游戏和电视游戏领域所作出的杰出贡献，卡马克称为第四位进入互动艺术和科学学院（The Academy of Interactive Arts and Science）名人堂的人物。我们来看看其余人物的名字吧（
+
+[美国互动艺术与科学学院（AIAS）名人堂_smile_新浪博客](http://blog.sina.com.cn/s/blog_446f8e0901007z50.html)
+
+）：
+
+- 宫本茂：任天堂公司，《超级马里奥兄弟》的创始人。
+- 丹妮·邦顿·贝瑞：名人堂游戏《M·U·L·E》的制作人。 
+
+- 席德·梅尔：FiraxisGames公司，《文明》系列的制作人。 
+
+- 铃木裕：世嘉公司，众多街机游戏的制作人。
+- 威尔·赖特：Maxis公司，《模拟城市》系列的制作人。 
+
+- 坂口博信：Square Enix公司，《最终幻想》系列的制作人。 
+
+- 理查德·加略特：NCsoft / DestinationGames公司，《创世纪》系列的制作人。 
+
+- 彼得·莫利纽克斯：牛蛙公司，《上帝也疯狂》，《主题公园》，《主题医院》，《地牢守护者》制作人。 
+
+- 特里普·霍金斯：3DO公司，《魔法门》系列，《英雄无敌》系列，《玩具兵》系列制作人。 
+
+- 麦克：暴雪公司，《魔兽世界》制作人。
+
+卡马克在计算机领域最重要的贡献是，极大限度地压榨计算机计算性能，实现了一系列令人惊叹的数学函数。其中最知名的就是很多知乎er们提到的开平方取倒数算法，这个算法的基本原理是牛顿迭代法。原文出处来自
+
+[一个Sqrt函数引发的血案](http://www.cnblogs.com/pkuoliver/archive/2010/10/06/1844725.html)
+
+。
+
+#+begin_src c
+float Q_rsqrt( float number )
+{
+    long i;
+    float x2, y;
+    const float threehalfs = 1.5F;
+
+    x2 = number * 0.5F;
+    y  = number;
+    i  = * ( long * ) &y;
+    i  = 0x5f3759df - ( i >> 1 ); // what the fuck?
+    y  = * ( float * ) &i;
+    y  = y * ( threehalfs - ( x2 * y * y ) ); // 1st iteration
+    // y   = y * ( threehalfs - ( x2 * y * y ) ); // 2nd iteration, this can be removed
+
+    #ifndef Q3_VM
+    #ifdef __linux__
+        assert( !isnan(y) ); // bk010122 - FPE?
+    #endif
+    #endif
+    return y;
+}  
+
+#+end_src
+
+看看这段代码吧，只用了2次叠代，而且其实根本上就没用叠代，因为算一次直接就得到结果了。这个函数的效率比C库函数中执行sqrt()函数再取倒数要快4倍。
+
+为什么能得到如此令人惊叹的效果呢？这段代码最让人费解的就是下面这行代码：
+
+#+begin_src text
+i  = 0x5f3759df - ( i >> 1 ); // what the fuck?
+
+#+end_src
+
+这个0x5f3759df是个什么鬼？牛顿迭代法的原理是先猜测一个值，然后从这个值开始进行叠代。因此，猜测的值越准，叠代的次数越少。卡马克选了0x5f3759df这个值作为猜测的结果，再加上后面的移位算法，得到的y非常接近1/sqrt(n)。这样，我们只需要2次牛顿迭代法就可以达到我们所需要的精度。
+
+#+begin_quote
+普渡大学的数学家Chris Lomont看了以后觉得有趣，决定要研究一下卡马克弄出来的这个猜测值有什么奥秘。在精心研究之后，Lomont从理论上也推导出一个最佳猜测值，和卡马克的数字非常接近, 0x5f37642f。Lomont计算出结果以后非常满意，于是拿自己计算出的起始值和卡马克的神秘数字做比赛，看看谁的数字能够更快更精确的求得平方根。结果是卡马克赢了... 
+ Lomont怒了，采用暴力方法一个数字一个数字试过来，终于找到一个比卡马克数字要好上那么一丁点的数字，虽然实际上这两个数字所产生的结果非常近似，这个暴力得出的数字是0x5f375a86。 Lomont为此写下一篇论文，"Fast Inverse Square Root"（这里原文给出的地址有误，论文的地址为 [http://www.files.sauliaus.info/InvSqrt.pdf](http://www.files.sauliaus.info/InvSqrt.pdf) ）。
+#+end_quote
+
+感谢开源GPL协议，Quick III的源代码已经公开，我们可以目睹一下Quick III的风采了。源代码下载地址为：
+
+[ftp://ftp.idsoftware.com/idstuff/source/quake3-1.32b-source.zip](ftp://ftp.idsoftware.com/idstuff/source/quake3-1.32b-source.zip))
+
+。这个地址需要翻墙才能下载。而那个传说中的代码，位于game/code/q_math.c中。
+
+=============================
+
+3. 二进制的神奇应用：基于位运算的代码系列
+
+看到了Quick III中神奇的代码，想必知乎er们也对二进制和位运算的神奇有了一些感觉了。我最开始觉得二进制运算很有趣，是因为Leetcode中的一道题：Single Number（
+
+[Single Number](https://leetcode.com/problems/single-number/)
+
+）。题目如下：
+
+#+begin_quote
+Given an array of integers, every element appears *twice* except for one. Find that single one.
+#+end_quote
+
+问题在于，如何在线性复杂度下实现呢？这里就要用到与或运算了。
+
+二进制运算还有哪些神奇的应用呢？Stanford的一个Ph.D学生Sean Eron Anderson（
+
+[Sean Anderson](http://graphics.stanford.edu/~seander/)
+
+）自己维护了一个网站，里面列举了一大堆二进制运算的神奇应用，链接为：
+
+[Bit Twiddling Hacks](http://graphics.stanford.edu/~seander/bithacks.html)
+
+。
+
+我们来简单看几个运算：
+
+1. 计算一个整数的符号：
+
+#+begin_src text
+int v;      // we want to find the sign of v
+int sign;   // the result goes here 
+
+// CHAR_BIT is the number of bits per byte (normally 8).
+sign = -(v < 0);  // if v < 0 then -1, else 0. 
+// or, to avoid branching on CPUs with flag registers (IA32):
+sign = -(int)((unsigned int)((int)v) >> (sizeof(int) * CHAR_BIT - 1));
+// or, for one less instruction (but not portable):
+sign = v >> (sizeof(int) * CHAR_BIT - 1); 
+#+end_src
+
+2. 检测两个整数的符号是否一致：
+
+#+begin_src text
+int x, y;               // input values to compare signs
+bool f = ((x ^ y) < 0); // true iff x and y have opposite signs
+
+#+end_src
+
+3. 计算一个整数的绝对值：
+
+#+begin_src text
+int v;           // we want to find the absolute value of v
+unsigned int r;  // the result goes here 
+int const mask = v >> sizeof(int) * CHAR_BIT - 1;
+
+r = (v + mask) ^ mask;
+
+#+end_src
+
+[@高城](https://www.zhihu.com/people/854dd72dd5963039c46ef65c2d38f000)
+
+还提到了Google Code上面的一个基于浮点数标准的快速算法库，里面也用到了各种二进制运算，链接为：
+
+[fastapprox -
+ 
+ 
+ Fast approximate functions](https://code.google.com/p/fastapprox/)
+
+。
+
+=============================
+
+4. 能不能把代码写的够混乱：世界混乱C代码大赛
+
+后面的几个就是比较好玩的东西了。首先我们来看看计算机学科的怪胎们是怎么玩坏C语言的。
+
+[@毛草](https://www.zhihu.com/people/ed140cda00060748e60a06dc0806b02c)
+
+提到了一个神奇的代码，通过计算代码本身的面积，来计算圆周率的近似值。这个代码来自世界混乱C代码大赛（International Obfuscated C Code Contest，IOCCC）。这个大赛的宗旨是，在C语言本身可以执行的条件下，看谁能写出最有创意的最让人难以理解的C语言代码。代码的长度要求限制在4kb以内。大赛的官方链接为：
+
+[The International Obfuscated C Code Contest](http://www.ioccc.org/)
+
+。
+
+第23届IOCCC竞赛已经在2014年10月27日结束，但是我似乎找不到源代码。我们来看看第22届IOCCC竞赛中的代码中又没有什么好玩的东西吧。因为有些代码知乎上显示的不太好，我用截图的形式给出。
+
+*Best Painting Tool* （
+
+[http://www.ioccc.org/2013/birken/hint.html](http://www.ioccc.org/2013/birken/hint.html)
+
+）
+
+[[https://pic1.zhimg.com/50/16fee2f5c7744168817d72c8247cce9f_720w.jpg?source=2c26e567]]
+
+
+
+
+*Most Lazy SKLer* （
+
+[Most lazy SKIer](http://www.ioccc.org/2013/endoh1/hint.html)
+
+）
+
+[[https://picx.zhimg.com/50/fcb28d8cf34a351281060c53da6bd746_720w.jpg?source=2c26e567]]
+
+*Best Use of 1 Infinite Loop* （
+
+[Best use of 1 Infinite Loop](http://www.ioccc.org/2013/hou/hint.html)
+
+）
+
+[[https://picx.zhimg.com/50/f70bc5cee277b08c682c156061d5ef8f_720w.jpg?source=2c26e567]]
+
+下面是以前一些比较有趣的代码：
+
+2012， *Most Elementray Use of C* （
+
+[Most elementary use of C](http://www.ioccc.org/2012/hamano/hint.html)
+
+）
+
+[[https://pica.zhimg.com/50/78786c9650410776cbff8bceab1741bc_720w.jpg?source=2c26e567]]
+
+2012， *Most Functional* （
+
+[Most functional](http://www.ioccc.org/2012/tromp/hint.html)
+
+）
+
+[[https://pic1.zhimg.com/50/084cbf67ce5d40e990f5b6ef2c208357_720w.jpg?source=2c26e567]]
+
+1998， *Best of Show* （
+
+[Carl Banks' Blog: IOCCC Flight Simulator](http://blog.aerojockey.com/post/iocccsim)
+
+）
+
+[[https://picx.zhimg.com/50/a2f573a0c13efc4c71ba608a4a0798eb_720w.jpg?source=2c26e567]]
+
+=============================
+
+5. 数学也可以画图：用公式绘制任意图形
+
+还记得一直在电视上播放的百岁山广告吗？很多人都说看不懂那个广告。其实那个广告参考了1650年著名数学家笛卡尔与瑞典公主克莉丝汀相恋的故事。具体的故事我就不再赘述了。最后，笛卡尔写给克莉丝汀的情书中出现了这样的公式：
+
+$r = a(1 - \sin \theta)$
+
+这个公式对应的几何图形为心形，是著名的“心形线”。笛卡尔用这样一种方式，通过数学表达了对克莉丝汀的深深爱意。这封情书最后也被收录到欧洲笛卡尔博物馆中。
+
+浪漫的故事到此为止，这引发了一个有趣的问题：我们能不能用数学公式，来构造任意几何图形呢？这个问题实际上是有解的。有人真的研究了这个问题，并给出了肯定的答案。链接如下：
+
+[http://blog.wolfram.com/2013/05/17/making-formulas-for-everything-from-pi-to-the-pink-panther-to-sir-isaac-newton/](http://blog.wolfram.com/2013/05/17/making-formulas-for-everything-from-pi-to-the-pink-panther-to-sir-isaac-newton/)
+
+。我们来看一看一些有趣的图形吧~具体的生成算法课参考上面给出的链接。
+
+*美国队长曲线* （Captain America-like curve）
+
+[[https://picx.zhimg.com/50/240e8402aee06093290dbcc5e00019f4_720w.jpg?source=2c26e567]]
+
+*台灯曲线* （Luxo Jr.like curve）
+
+[[https://picx.zhimg.com/50/17abe1818af49c95fc5343698e8dbb75_720w.jpg?source=2c26e567]]
+
+*a^2 + b^2 = c^2*
+
+[[https://pica.zhimg.com/50/7a54651628bd547139bac2f469683dd5_720w.jpg?source=2c26e567]]
+
+*牛顿曲线*
+
+[[https://picx.zhimg.com/50/7f42fd558119b2257c014637629172b0_720w.jpg?source=2c26e567]]
+
+=============================
+
+以上。

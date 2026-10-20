@@ -1,0 +1,87 @@
+#+TITLE: 有什么在线的编程游戏？
+#+LINK: https://www.zhihu.com/question/316844185/answer/762831508
+#+AUTHOR: 力扣（LeetCode）
+#+CREATED: 2019-07-26
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+#+begin_src text
+游戏 == 编程
+>> True
+#+end_src
+
+电子游戏和编程充满联系。从雅达利兴盛的年代开始，游戏就已经开始影响一代又一代程序员。他们开发游戏，在游戏过程中获得快乐。随着机器学习的兴起，程序员们让人工智能学会游戏技巧，战胜人类。在 9102 年，很多计算机技术完全可以通过游戏轻松快乐地学习，本文将从三方面提供从游戏到编程的入门指南：
+
+* *用玩游戏的方式学编程**
+
+*VIM-Adventures：打游戏学 Vim*
+
+Vim 在众多程序员心中拥有举足轻重的地位。用 Vim 编程的人不管水平如何，总会给人「这是大佬」的第一印象。但是 Vim 的学习曲线十分陡峭，学习过程又枯燥乏味。《 [VIM-Adventures](https://vim-adventures.com/) 》是一款从零开始教你学习 Vim 的游戏。
+
+[[https://picx.zhimg.com/50/v2-add9ccebac7fdc7225fbaadf71d78973_720w.jpg?source=2c26e567]]
+
+在游戏里，你要不断收集钥匙开门前进。这期间，你不断地收集快捷键，使用快捷键，通过与 NPC 对话获得提示，打开宝箱，等到游戏通关，你会发现自己已经掌握了大量 Vim 技巧，并在游戏过程中练习了无数次。
+
+*注意，这款游戏后期是收费的* 。
+
+*Learn Git Branching：通关 Git 指令*
+
+每个程序员都清楚 Git 的重要性。但 Git 的理念却不如它的那几条常用指令那样好记。Learn Git Branching 通过可视化和闯关的方式满足了各个阶段玩家的学习需求。每一关会先进行教程，告诉你基本的理念和指令效果，之后你需要自己输入指令实操，可视化区域则会给你实时反馈。 *这款游戏支持中文版* 。
+
+[[https://pic1.zhimg.com/50/v2-f96fe64c92907f959099e4dafcf56600_720w.jpg?source=2c26e567]]
+
+*程序员升职记：重温计算机基础*
+
+Steam 上知名的《程序员升职记》（《HUMAN RESOURCE MACHINE》），画风有趣，剧情感人。在玩游戏的过程中，你能温习/学习计算机专业基本的标准输入流、标准输出流、寄存器、指针等概念，同时考验逻辑思维能力。随着剧情的层层推进，你还能经历城市骚乱，职场中形形色色的人，以及随着不断升职迎接着你的最终结局。
+
+[[https://pica.zhimg.com/50/v2-32c580143572d2b4ba809f99a7d7feb8_720w.jpg?source=2c26e567]]
+
+同时，制作该款游戏的公司 Tomorrow Corporation 还新推出了一款《七十亿人类》（《7 Billion Humans》），这款游戏继承了《程序员升职记》的风格，并新加入了一个能让许多工人们一起执行的全新编程语言。
+
+[[https://picx.zhimg.com/50/v2-3dc7073a307ab3806cf11ae77b30840a_720w.gif?source=2c26e567]]
+
+如果你还没玩过这两款游戏，不妨在假期感受一下。
+
+*CodeCombat：快速上手一门脚本语言*
+
+CodeCombat（又名《极客战记》）可以帮助你通过打游戏快速上手一门语言，它支持 JavaScript、Python、CoffeeScript 等编程语言。通过控制英雄挑战难关，你可以在不知不觉间了解其语法。在社区中，你甚至可以创建自己的关卡，物品及指令，通过与他人竞技提升自己的编程水平。
+
+[[https://pic1.zhimg.com/50/v2-a1628c789a6795d2f7e010fc771a78ee_720w.jpg?source=2c26e567]]
+
+除此之外， *Screeps* 是一个为程序员制作的MMO战略沙盘游戏，通过编写 JavaScript 在游戏中对战；在 *checkiO* 中使用 JavaScript 或 Python 可以不断解决挑战...... 更多类似的游戏可以在我们之前的文章 [《玩游戏还能学编程？》](http://mp.weixin.qq.com/s?__biz=MzI4Mzc5NDk4MA==&mid=2247484416&idx=1&sn=46b858aa14c7cda143d19b3438fbecbf&chksm=eb840f4bdcf3865d89b07c6b42c08c152a6d22245c4c21c06e21f677b60caf81f86a0dc58c4e&scene=21#wechat_redirect) 查看。
+
+* *用强化学习让机器学会玩游戏**
+
+除了与编程相关的游戏之外，你还可以做一个 AI 打游戏。
+
+[这篇文章](https://blog.paperspace.com/dino-run/) 教你用强化学习自动玩 Dino Run（就是那个谷歌浏览器的断网小游戏），使用简单的 Python 程序，你可以让自己的机器轻松跑到 4000 分。
+
+[[https://picx.zhimg.com/50/v2-3e4cd4883913eec6397b53c284aa226d_720w.gif?source=2c26e567]]
+
+相应的 [Github 仓库](https://github.com/maurock/snake-ga) 则使用强化学习玩起了贪食蛇。
+
+[[https://pica.zhimg.com/50/v2-59737a91729e6b3b0e1e61ba5a02d5be_720w.gif?source=2c26e567]]
+
+图片左边是刚还是训练时的模型，右边是训练成熟的模型。
+
+跟着教程练一遍，阅读相关书籍，或学习 [相关课程](https://www.coursera.org/courses?query=reinforcement+learning) ，你不仅能通过这个假期训练出自己的模型，打到所有人难以企及的高分，还能学会一门新兴领域的技术。
+
+*甚至，你还可以自己做一个游戏* 。
+
+* *自己做一个游戏**
+
+游戏开发的门槛正在逐渐降低，形式和语言也越来越多样化，使用 JavaScript 或 TypeScript 进行游戏开发不失为一种假期快速入门游戏开发的好方法。基于 JavaScript 或 TypeScript 有足够多的游戏引擎和图形库。
+
+[这篇文章](https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/) 教你使用大名鼎鼎的 WebGL 图形库 Three.js 制作一款打飞机游戏。
+
+[[https://picx.zhimg.com/50/v2-50de50f0b57941d16fedd4a54aa25ed8_720w.jpg?source=2c26e567]]
+
+从场景，细节到操控，制作这款游戏可以很细致地帮助你熟悉 Three.js 的大部分常用功能。
+
+TypeScript 是 JavaScript 的超集，也是近年来非常流行的语言， [这篇文章](https://www.freecodecamp.org/news/how-to-build-a-simple-game-in-the-browser-with-phaser-3-and-typescript-bdc94719135/) 教你使用 TypeScript 和游戏引擎 Phaser 3 开发一款简单的游戏，你可以通过它快速上手 TypeScript 和游戏开发。
+
+[[https://picx.zhimg.com/50/v2-59ca3a8229a13e80d29bf38f540b9f37_720w.jpg?source=2c26e567]]
+
+---
+
+欢迎各位知友关注力扣官方微信公众号：「 *LeetCode力扣* 」，更多关于程序员面试、技术干货的内容等你来啃！

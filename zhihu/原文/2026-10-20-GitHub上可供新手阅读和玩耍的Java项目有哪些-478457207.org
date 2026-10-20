@@ -1,0 +1,155 @@
+#+TITLE: GitHub 上可供新手阅读和玩耍的 Java 项目有哪些？
+#+LINK: https://www.zhihu.com/question/34544815/answer/478457207
+#+AUTHOR: 景略集智
+#+CREATED: 2018-08-26
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+在 GitHub 上有很多项目，能够帮我们优化手头的编程项目，或学习更多编程知识。下面我们分享 GitHub 上 14 个既有趣又有用的 Java 项目。
+
+* *Bootique——让 Java 应用开发更简单**
+
+Bootique 是一个面向创建无容器、可运行 Java 应用的项目，能让你基于模块创建 REST 服务、 web 应用、DB 迁移任务等等。这样，你就能像运行简单命令一样运行它们。
+
+该项目的目的就是将应用从 Java 容器中解放出来，让开发者回收它们的 main() 方法。此外项目还有一些内置命令，所以如果你代码不足，或者没有向应用中导入任何模块，仍然能使用 Bootique 来执行它们。
+
+项目地址：
+
+[https://github.com/bootique/bootique](https://github.com/bootique/bootique)
+
+* *99-problems——优雅地解决问题**
+
+项目的名字叫 99-problems，你应该也猜到了，它是一系列 Java 问题的合集，旨在帮你练习逻辑编程技能。你可以选择用 Java 8，Scala 或 Haskell 解决这些问题，而且你的最终目标就是找到解决这些问题的最优雅方法。
+
+项目所含的问题也分为不同的难度，问题的解答时间从 15 分钟到几个小时不等。如果比较喜欢这类做题挑战，还可以试试“Java Deathmatch”（ [http://www.javadeathmatch.com/](http://www.javadeathmatch.com/) ），像做游戏一样完成Java挑战，答案在这里： [https://blog.takipi.com/4-out-of-5-java-developers-failed-to-solve-this-question/](https://blog.takipi.com/4-out-of-5-java-developers-failed-to-solve-this-question/)
+
+项目地址：
+
+[https://github.com/shekhargulati/99-problems](https://github.com/shekhargulati/99-problems)
+
+* *Strman-java——字符串操作**
+
+Strman-java 是一个 Java 库，专门用于字符串。由于它在 Maven 上可用，所以你只需向你选择的创建工具添加一个依赖即可。
+
+另外，该项目还包含了一列函数，包括向值添加字符串，以特定索引获取字符，返回字符串起始和结尾之间的数组等等。
+
+项目地址：
+
+[https://github.com/shekhargulati/strman-java](https://github.com/shekhargulati/strman-java)
+
+* *Dex——数据分析**
+
+如果你想以一种很酷的方式和自己的数据交互，那应该看看 Dex 这个项目。借助 Dex，你可以提取、转换和可视化你的数据，也会获得一些预测功能。
+
+Dex 能让你生成超过 50 种可视化模式，包括世界地图、时间线等。可以将它和 R 的运行实例整合，接入统计分析和预测分析。
+
+项目地址：
+
+[https://github.com/PatMartin/Dex](https://github.com/PatMartin/Dex)
+
+* *Tablesaw——让大数据轻量化**
+
+Tablesaw 是一个内存数据表，包括数据工具和面向列的存储格式。其设计理念就是很小的任务不需要分布式分析，我们可以在单个服务器上处理多达 2 百万行的图表。
+
+你可以用 Tablesaw 来应用一些规则，以确定显示布局、数据优先度或添加一系列的扩展程序，让用户控制数据展示和交互。用 Tablesaw 可以从 RDBMS 和 CSV 文件中导入数据，添加和移除列，或以压缩的列存储格式来存储表格。
+
+项目地址：
+
+[https://github.com/lwhite1/tablesaw](https://github.com/lwhite1/tablesaw)
+
+* *Chronicle Map —— key value 存储**
+
+Chronicle Map 是一个内存 key-value 存储，面向低延迟或多进程应用设计，比如交易和金融市场应用。该项目面向中等延迟的读写查询，能让你编写的查询很好地扩展至服务器上硬件执行线程的数量。
+
+其主要用途是替换用在单个服务器（比如 Redis）上的速度缓慢的 key-value 存储，或替换相似的 JVM 解决方法用以加快它们的速度。还能将你的部分应用状态移出 Java 堆内存，降低堆大小和 GC 压力。
+
+项目地址：
+
+[https://github.com/OpenHFT/Chronicle-Map](https://github.com/OpenHFT/Chronicle-Map)
+
+* *Gumshoe——应用数据统计**
+
+Gumshoe 能让你监控你的应用性能统计数据。有了它，我们可以精确地找到代码行，获取调用栈和单独栈帧相关的统计信息。这意味着你能够分析资源使用状况（TCP，UDP等）。
+
+使用 Gumshoe 还可以筛选和可视化它所生成的统计数据。
+
+项目地址：
+
+[https://github.com/dcm-oss/gumshoe](https://github.com/dcm-oss/gumshoe)
+
+* *SoundSea——Java 音乐**
+
+SoundSea 能让你通过其内置元数据和专辑封面来搜索及下载歌曲。在你搜索某首歌曲时， SoundSea 会在 iTunes 上寻找相关元数据和专辑封面，并展示给你。
+
+歌曲本身是从 [Pleer.com](http://Pleer.com) 上下载的，可以按照高、低或 VBR 比特率进行筛选。SoundSea 还能充当一个迷你播放器，可以直接听歌。
+
+项目地址：
+
+[https://github.com/sacert/SoundSea](https://github.com/sacert/SoundSea)
+
+* *LeakCanary —— 检测内存泄露**
+
+LeakCanary 是一个开源库，用来帮我们阻止内存泄露。可以用它在调试版中检测 Java 中的内存泄露。
+
+设置好 LeakCanary 后，可以对其配置，当出现内存泄露时就会自动通知你。
+
+项目地址：
+
+[https://github.com/square/leakcanary](https://github.com/square/leakcanary)
+
+* *ND4J——多维数组**
+
+ND4J 是一个开源库，将 Python 中直观的科学计算工具带入 Java 虚拟机中。由于面向生产环境，所以它运行很快，且只需很小的 RAM。有了它，你就能很容易的将算法和接口植入其它 Java库中。
+
+ND4J 的主要功能就是提供通用的 n 维数组对象、包括 GPU 在内的多平台功能、线性代数和信号处理函数。
+
+项目地址：
+
+[https://github.com/deeplearning4j/nd4j](https://github.com/deeplearning4j/nd4j)
+
+* *Automon —— Java监控工具**
+
+Automon 结合了 AOP 的强大功能，能够以声明的方式监控你的 Java 代码、JDK 和依赖库。
+
+可以用 Automon 追踪方法调用时间、异常次数、存储和展示你所选工具内的数据。
+
+项目地址：
+
+[https://github.com/stevensouza/automon](https://github.com/stevensouza/automon)
+
+* *Jvm-tools——帮你照顾好你的Java**
+
+Jvm-tools 或 SJK，是一组工具，用于 Java 虚拟机排错、监控和性能分析。它算是一款命令行工具，充分利用 Java 虚拟机的标准检测接口，在此基础上又补充了一些逻辑，更加适合常用排错操作。
+
+项目地址：
+
+[https://github.com/aragozin/jvm-tools](https://github.com/aragozin/jvm-tools)
+
+* *Awsome-java：Java框架、工具合集**
+
+Awesome-java 集合了一系列功能优异的 Java 框架、库和软件，并且按需分类，方便你查找。
+
+项目地址：
+
+[https://github.com/akullpp/awesome-java](https://github.com/akullpp/awesome-java)
+
+* *Java-design-pattern——设计模式**
+
+该项目为使用 Java 实现的设计模式。
+
+设计模式能让开发人员用来验证设计应用和系统过程中的常见问题，它能提供经过测试和验证的开发范式，从而大大加快开发进度。
+
+重新利用设计模式可以帮你防止出现一些导致重大故障的小问题，也能为开发者优化代码可读性。
+
+项目地址：
+
+[https://github.com/iluwatar/java-design-patterns](https://github.com/iluwatar/java-design-patterns)
+
+当然这些项目只不过是冰山一角，还有很多值得学习的 Java 项目，后面我们也会陆续补充新资源，欢迎关注。
+
+---
+
+#+begin_quote
+**参考资料：** 
+ **[https://dzone.com/articles/the-hitchhikers-guide-to-github-13-java-projects-y](https://dzone.com/articles/the-hitchhikers-guide-to-github-13-java-projects-y)**
+#+end_quote

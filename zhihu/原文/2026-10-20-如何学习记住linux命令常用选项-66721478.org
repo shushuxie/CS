@@ -1,0 +1,211 @@
+#+TITLE: 如何学习（记住）linux命令（常用选项）？
+#+LINK: https://www.zhihu.com/question/21690166/answer/66721478
+#+AUTHOR: 林果皞
+#+CREATED: 2015-10-07
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+Unix & Linux 命令行特别之处在于，一些选项的设计是遵循传统的， 只需认识一个就能在其它命令使用相似的功能。选项通常都是相关功能的英文缩写，并非毫无意义的英文字。
+
+1. -h 通常意指 'h' + uman, 也就是 human-readable，能让人类方便读的格式输出， 比如 1.3 GB  格式, 而不是 1300000000 bytes, 代表者有: ls -lth, sort -h
+
+2. -v (小写) 通常意指 'v' erbose, 代表者有: curl -v, ssh -v, python -v 
+ 2.1 -V (大写) 通常意指 ‘V’ ersion，与 --version 相比之下比较冷门，代表者有: gedit -V, firefox -V, openvt -V 
+ 2.2 --version (小写 v) 也是意指 ‘V’ ersion，代表者是九成的命令: python --version， konsole --version， gnome-shell --version， firefox --version， chromium-browser --version， bash --version, curl --version, tree --version, ls --version, journalctl --version, gedit --version, unp --version。 除了 java 和 javac 使用 [非 GNU 标准](https://softwareengineering.stackexchange.com/a/70485/125837) 的  -version (少了一个 '-') 
+ 2.3 --help， 同上, 九成的命令都有。不推荐 -h, 很多命令没有 -h， 亦或已经用来代表  'h'uman-readable。
+
+3. -a 通常意指 'a'll， 全部文件的意思（因为开头 "." 命名的文件是默认隐藏的如 vim 的 .swp 恢复文件， 历史原因和后果请看此 [https://plus.google.com/+RobPikeTheHuman/posts/R58WgWwN9jp](https://plus.google.com/+RobPikeTheHuman/posts/R58WgWwN9jp) ）， 代表者有: ls -a, tree -a 
+
+
+4. -r 通常意指:
+
+[a]. 'r' + everse, 上下颠倒的意思，代表者有: ls -lthr, sort -r 
+ - 本人的 l alias 是 `ls -larthiF --context --color'， 其中 t+r 排列最新更改日期的文件在最下方，毕竟大多数情况下，我只关心最近的文件。
+
+[b]. 'r' + ecursive, 递归的意思，普遍用于遍历目录的子目录，代表者有: grep -r, rm -r
+
+[c]. 'R'  也可能意指 'R' ecursive ， 代表者有: 
+ [c.1] ls -R, chmod -R 
+ [c.2] grep -R (--dereference- 'R' ecursive)
+
+[d]. rm 和 cp 的 -r 和 -R 同样是 recursive。切记有些平台只有 -r,  有些平台只有 -R， 有些平台两者都有。
+
+5. --exclude-dir 排除某个目录，代表: cloc . --exclude-dir=xxx, grep -rniI --exclude-dir=xxx abc ./* 。 
+ 
+ 5.1 "exclude" 是排除的意思，对立的就是 "include"。"dir" 是 "directory" 的缩写，表示 "目录"。Unix 传统不使用 "folder" 这个英文表示目录。 
+
+
+建议: 
+ 
+ 0. 学习命令选项不需要英文很好，manual 的英文简单，而且重复频率很高, 如 invoke,  locale，compatible, configure, ... etc 不像英文小说每一段都有新词囧。
+
+1. 不仅仅是 man，当不确定的时候，可以用 --help 快速一览选项。切记 --help 不等同于 man， 有时需要两个命令互补。也别忘了 info。要切记的是 man 本身有 section 分类 ，如图所示， ~man 1 ls~ 和 ~man 1posix ls~ 可以浏览两个不同的 manual， 用 ~apropos -e~ 或 ~whatis~ 可以显示 section 代号:
+
+[[https://picx.zhimg.com/50/v2-eb4f8c51254eb49c9ade02f07b3fe1c5_720w.jpg?source=2c26e567]]
+
+p/s: 有些  manual 要特地安装后才有。如 ~sudo apt-get install glibc-doc manpages-dev glibc-doc-reference~， ~sudo apt-get install manpages-posix manpages-posix-dev~ (~man 1posix ls~ 就是这儿来的)
+
+2.  如果 php 是世界上最好的语言，那么 *"你使用过的命令行历史记录"* 就是世界上最好的笔记。善用 history | grep 'xxx' 搜索之前用过的命令/选项，如:
+
+[[https://pica.zhimg.com/50/4dbe7eeccfbaa889f83ee7710564d8cd_720w.jpg?source=2c26e567]]
+
+p/s: h 是 history 的 [alias](https://askubuntu.com/a/17537/265303) ， g 则是 ~grep -n~ 的 alias。| 是 pipeline， 这里把 history 输出给下一个命令 grep， 过滤成只有 ' -u ' 的历史记录。 
+ 
+ 2.1 history 潜力无限，比如搜索 curl 命令历史，可以知道使用过的 url， 方便再度使用：
+
+[[https://pic1.zhimg.com/50/v2-f853b46d0f9ca5e11d0fbb1f486c5b85_720w.jpg?source=2c26e567]]
+
+我的历史命令分成有时间和没时间输出两种。~h~ 是没时间的，方便快速看(时间占位子)。而 ~histime~ 是有时间的。 切记别更改 history (比如 alias history='xxx')，因为这会影响其它命令使用 history 。这是我的 ~/.bash_aliases 有关 history 的部分:
+
+#+begin_src text
+HISTTIMEFORMAT="%Y/%m/%d %T " 
+alias histime='history'
+alias hisdefault='(HISTTIMEFORMAT=""; history;)'
+alias h=hisdefault
+HISTFILESIZE= 
+HISTSIZE= 
+HISTCONTROL=ignoreboth
+function hisunique()
+{
+    hisdefault | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | cat -v | column -c3 -s " " -t | sort -nr | nl |  head -n100000
+}
+#+end_src
+
+2.2 别忘了提升 history 记录上限。如 HISTSIZE=70000000 （ HISTSIZE=<设空> 曾在旧的 gdb 造成有趣的 bug， 参考 [linux - GDB up arrow doesnt work](http://unix.stackexchange.com/a/213595/64403) ）。HISTSIZE 和 HISTFILESIZE 两个都需要设置，切记！ 
+
+
+[提醒] 如果你像我一样把  HISTSIZE 和 HISTFILESIZE 放在 bash_aliases，那么别忘了把 /root/.bahsrc 和 /home/<用户名>/.bashrc 的预设 ~HISTSIZE=1000~ 和 ~HISTFILESIZE=2000~ 删除，否则你会奇怪干嘛最多储存 2000 行记录。 
+ 
+ [提醒二] 尝试 HISTSIZE 和 HISTFILESIZE 设置的时候请先备份 ~/.bash_history ， 因为如果你设置 HISTSIZE 和 HISTFILESIZE=1 ， 那么你 ~/.bash_history 以前的记录就只剩下一个了。又或者 >~/.bash_aliases 的危险实验会造成 ~/.bash_history 失去大量的记录。 
+ 
+ [提醒三] 该历史记录设置只有 tab 正常关闭才会写入 ~/.bash_history， 所以 /bin/bash 崩溃时也会损失当前历史记录的，为了避免此状况发生，如果你觉得已经输入很多重要的记录， 就应该关闭 tab (Ctrl+D) 重启新的 tab (Ctrl+Shift+T)。 
+ 
+ 2.3 我也写了一个小工具，用不同高亮颜色，排列不同时间段的历史记录。如图所示，假设两个命令间隔超过 60 秒为新的时间段颜色，可以一眼看出同一时间段所使用的命令组。我之所以有这个构思是源自于我需要重复使用某个时间段的命令，却难以在 history 下找出该命令组的范围(因为邻近命令很相似， 只路径稍微不一样)。 [github 代码](https://github.com/limkokhole/hisblock) 。
+
+[[https://picx.zhimg.com/50/v2-06dc1bbb59c73a046dc0ac3470d4dc71_720w.jpg?source=2c26e567]]
+
+
+ 2.4 这里必须安利 konsole 终端程序， 下图左 konsole 右 gnome-terminal， 只有 konsole 才有同时高亮的功能 (支持  regex)。这也是我仍然坚持用 konsole 的唯一原因， 而不是能显示缩略图的 terminology 终端:
+
+[[https://picx.zhimg.com/50/v2-fd5ee0d3af0aef8eaaec61b6c625583b_720w.jpg?source=2c26e567]]
+
+
+ 3. 善用自动完成，比如 ls --s<敲 Tab 键>， Tab 键不仅仅可以查找命令， 找选项，还可以找文件名。
+
+3.1 新手会觉得 Tab 键很强大， 但是同等强大的 Page Up/Down 被一般的教程所忽略了。输入 ls 再按 Page Up/Down 可以自动完成且浏览之前的命令历史。 不需要完整的命令。如输入 fi 再按 Page Up，就会自动完成 ~file /etc/gdm3/Xsession~， 再按 Page Up，就会自动完成 ~find . -iname pool.jpg~，以上都是我输入过的 fi 开头的历史记录， 加上 Page Down 就可以上下浏览。购买键盘时请确保 Page Up/Down/Home/End 拥有独立的键，而不是需要 Fn。Home/End 键的好处是快速切换去命令行的前方和后方。
+
+p/s: 如果没有 Page Up/Down 功能，请新建文件 ~/.inputrc ， 确保有以下内容 [:](http://superuser.com/a/600431/248836)
+
+#+begin_src text
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+"\e[1;5D": vi-prev-word
+"\e[1;5C": vi-next-word
+#+end_src
+
+前两者是启动  Page Up/Down 自动完成历史记录功能。后两者是启动 Ctrl+左右键， 可以以每个完整英文字的空格间隔来快速浏览+编辑一条命令行。"\e[1;5D" 和 "vi-prev-word" (空格间隔), "backward-word" (空格 ?=./ 间隔)  此类的关键字可以通过 bind -P 或 bind -p 取得。
+
+3.2 基本的上下键则适用于浏览当前 session 最近的历史记录。 
+ 
+ 3.3 Ctrl+Alt+] 再输入 -a 可以把光标移动去当前命令的 -a 选项 (不限于选项，任何字都行)。缺点是只能输入一个字， 多字可以使用 Ctrl+R 解决。输入 Ctrl+R 再输入选项 -a 可以出现之前的 -a 选项历史纪录， 然后敲左右键能停留且编辑。连续的 Ctrl+R 可以浏览更前的命令。 
+
+
+4. 善于在 ~/.bashrc 或 ~/.bash_aliases 上制作 alias 或 function， 好处是: 
+ [a]. 省却记忆量。 
+ [b]. 提升使用命令速度。 
+ [c]. 可以在命令旁加入 #comment (或 <<"COMMENT" 开端， COMMENT 结尾), 随时打开 ~/.bash_aliases 复习。也可以用 ~type -a 命令~ 快速复习。我通常也会记录命令的相关讨论链接和心得撰写在 note 文件，有需要就 grep 或 vi 里头搜索即可。告诉你一个小技巧，把笔记后缀命名为相应的编程语言， 如 note.sh, note.c, note.java，打开时就可以直接获得美美的高亮。
+
+4.1 写一些有用的小工具。小工具本身就集成了很多选项的实践，往后若要编写相似功能的小工具，只需参考先前的选项是怎么用的。比如本人写了recursive+高亮的 recurcat :
+
+[[https://picx.zhimg.com/50/v2-3ae20ae8850dec1fb097780252d1ba9d_720w.jpg?source=2c26e567]]
+
+代码包含了 find 的选项用法 ( [github 代码](https://github.com/limkokhole/recurcat) ):
+
+[[https://picx.zhimg.com/50/v2-a77e781cf087d6e151b37dec9e7de981_720w.jpg?source=2c26e567]]
+
+（p/s: 没看过  typea 命令？ 当然， typea 也是我写的小工具， 是进阶版的 type -a， [github 代码](https://github.com/limkokhole/typea) )
+
+5. 善用英文搜索 stackexchange( 也就是 [Unix Linux Stack Exchange](http://unix.stackexchange.com/) ), stackoverflow，bash(大多数的命令问题都与 bash tag 相关) 关键字。有一点很重要，搜索 stackexchange 可以找到包括 stackoverflow 的结果：
+
+[[https://picx.zhimg.com/50/v2-bbaba3bbe5b1a48b3fac5a262986c62f_720w.jpg?source=2c26e567]]
+
+p/s: 搜索选项时别放减号， 如上图，输入 ff 而不是 -ff。因为减号在搜索引擎是排除的意思。 
+ 
+ 5.1 在 stackexchange 或类似网站帮助别人。你不需要本来就很了解答案，但是在强答的过程中，你为了保证答案的准确性，权威性，你会参考不同的资源，反复研究命令，这个过程可以学习到很多，特别是别人的问题很多都是 real-world problem，与工作环境息息相关的实践，有助你未来的编程工作。而且这也是一种笔记， 当你忘了某个命令课题， google 搜的答案就是你自己的回答，囧。 
+
+
+6. 常备份 ~/.bashrc, ~/.bash_aliases,  ~/.bash_history 以及 note。安装新的 os 时也可以直接迁移。说个题外话，其它如 ~/.vimrc 的备份也很重要。 [limkokhole/hisblock](https://github.com/limkokhole/hisblock) 最下方会教导你如何让 gdrive 关机时自动备份 ~/.bash_history。
+
+7. 善用懒人包命令，比如 unp 足以应付大多数解压需求。懒人包带来的是好处(不用记忆)还是坏处(用 Linux 十年也不懂 xvfz)有待斟酌。顺便安利我最近写的 [limkokhole/unx](https://github.com/limkokhole/unx) 取代无法自动新建 (1),(2) 目录的 unp。
+
+8.  打开 man 时要找选项是一件头疼的事，用 /<空格>-Wall 搜索， 敲 -i 切换大小写敏感性，这个 一般的 regex 其实无法囊括所有的选项的情况 (不信 ？ 请现在 ~man mplayer~ 之下 /<空一格> scale 进行搜索)，要不然就是大海捞针。
+
+我编写了 superman 函数 ( [github 代码](https://github.com/limkokhole/superman) ):
+
+#+begin_src text
+function superman () {
+    if [[ "$1" == "-I" || "$1" == "-i" ]]; then
+        man "$2" | less -I -p "^[ ]+\"*-*$3( |=|,|$|\[|\+|\")"
+    else
+        man "$1" | less -p "^[ ]+\"*-*$2( |=|,|$|\[|\+|\")"
+    fi
+}
+#+end_src
+
+使用方式 (-i 表示 case insensitive) (本人 alias superman 去 sman 更方便):
+
+#+begin_src text
+$ superman -i gcc wall
+#+end_src
+
+能够直接跳跃至 Wall 选项 (通常都是有几个结果，可以用 n 和 Shift+n 快速上下跳跃):
+
+[[https://picx.zhimg.com/50/v2-a3738de5bc9c5c904b7307a95c1b3fcd_720w.jpg?source=2c26e567]]
+
+跳跃至 mplayer 的 scale:
+
+[[https://picx.zhimg.com/50/v2-c12840f39f6b1e53183ccf6260dd9953_720w.jpg?source=2c26e567]]
+
+我也写了 info 版本的 superinfo 函数:
+
+#+begin_src text
+function superinfo () {
+    if [[ "$1" == "-I" || "$1" == "-i" ]]; then
+        info "$2" | less -I -p "^ *‘*'*\"*-*\** *$3’*( |=|,|$|\[|:|'|\+|\")"
+    else
+        info "$1" | less -p "^ *‘*'*\"*-*\** *$2’*( |=|,|$|\[|:|'|\+|\")"
+    fi
+}
+#+end_src
+
+使用方式和 ~superman~ 一样:
+
+#+begin_src text
+$ superinfo -i gcc werror
+#+end_src
+
+9. 有少许命令是 shell built-in， 不能直接 man:
+
+#+begin_src text
+$ man cd
+No manual entry for cd
+$ type -a cd
+cd is a shell builtin
+#+end_src
+
+你需要使用 ~man bash~(假设你是使用 bash shell) ，然后在里头搜索，或者用这个自制的 bashman 函数: 
+
+
+#+begin_src text
+$ type -a bashman
+bashman is a function
+bashman () 
+{ 
+    man bash | less -p "^       $1 "
+}
+$ bashman cd
+#+end_src
+
+直接跳跃至 ~man bash~ 的 ~cd~ 部分 (当然，~ superman bash cd~ 也可以)：
+
+[[https://picx.zhimg.com/50/v2-12ecccb7b396d73e2efac4dd3fc86737_720w.jpg?source=2c26e567]]

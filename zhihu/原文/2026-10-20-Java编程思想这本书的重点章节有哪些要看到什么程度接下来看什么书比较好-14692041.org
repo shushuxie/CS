@@ -1,0 +1,16 @@
+#+TITLE: 《Java 编程思想》这本书的重点章节有哪些？要看到什么程度？接下来看什么书比较好？
+#+LINK: https://www.zhihu.com/question/20169741/answer/14692041
+#+AUTHOR: 李路
+#+CREATED: 2012-06-20
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+这本书不是很好，在细节，概念和文化上没有取得一个平衡的折中，尤其不适合入门，因为有大量不需要一开始就掌握的细节，至于做参考手册，又有些难以查询和过时，而且bruce的写作风格相当罗嗦，他更多方面不是一个hacker，更像是专门的教育作者。
+
+java学习我推荐以下几本：
+
+1. Head First Java : 这本才是最适合入门的，也是整个Head First系列奠基之作。
+2. Java Programming Language ： 恐怕没有人比java的作者Gosling更有资格诠释java背后的设计哲学和使用思想了，进阶之选。
+3. Effective Java:  这本是真正的经典，以小见大，其中编程相关的内容已经超越了单一语言本身，无论是否java使用者都值得一看
+4. Core Java: 在以前这本可以做参考手册，现在不好说。
+5. 从总的趋势来看，Java社区在逐渐转向scala或clojure，推荐继续学习这两门语言，并比较他们与java的优越之处。

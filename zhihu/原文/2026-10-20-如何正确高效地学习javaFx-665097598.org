@@ -1,0 +1,58 @@
+#+TITLE: 如何正确高效地学习javaFx？
+#+LINK: https://www.zhihu.com/question/272448753/answer/665097598
+#+AUTHOR: 吴思挺
+#+CREATED: 2019-04-27
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+我觉得学习一下JavaFx是没什么坏处的，做做自己的桌面小应用程序也挺好的。对说学习JavaFx半小时足矣的我就不做评论了。我推荐用Scene Builder来写UI。
+
+如果你已经有了一定的JavaFx的基础知识，推荐你看一下这个这个网站的教程
+
+[JavaFX 教程 （中文） | code.makery.ch](https://code.makery.ch/zh-cn/library/javafx-tutorial/)
+
+这是外国人写的一个教程，但是可以选择中文格式进行浏览。它可以说是一个实战教程吧，你能够学会一个真正的JavaFx应用程序怎么开发，它会手把手教你怎么做出一个通讯录应用，即使你而且提供了全套的源码，跟着他的教程来做，你也可以迅速地在自己的电脑上搭建好这个应用（从环境的搭建到最后打包成.exe文件）
+
+网站首页可以先看一下
+
+[[https://picx.zhimg.com/50/v2-615e9dc8f637af0073514b63619cb541_720w.jpg?source=2c26e567]]
+
+如果想学习JavaFx的基础知识，就需要到这种类似的网站学习一下了
+
+[JavaFX教程™](https://www.yiibai.com/javafx/)
+
+当然看书也是可以的，如果学习Java时买的是 梁勇编著的《Java语言程序设计》（基础篇  原书第10版），那么书中就有介绍JavaFx的章节。
+
+如果觉得学习资料少的话，建议多到Github上面逛一逛了
+
+[[https://picx.zhimg.com/50/v2-cc03c8decd1852b904432022c5c7346a_720w.jpg?source=2c26e567]]
+
+[mhrimaz/AwesomeJavaFX](https://github.com/mhrimaz/AwesomeJavaFX)
+
+通过上面这个链接你可以获取到很多的学习资料，至于怎么取舍就只能取决于自己了
+
+如果你可以很好地利用一些现有的工具，也会大大地加快你的开发速度而且心情愉悦
+
+我发现了一个JavaFX的组件库
+
+就是这一个 [https://github.com/jfoenixadmin/JFoenix](https://github.com/jfoenixadmin/JFoenix)
+
+它的官网是 [http://www.jfoenix.com/documentation.html#Download](http://www.jfoenix.com/documentation.html#Download)
+
+关于组件库的，我贴几张图吧
+
+[[https://pic1.zhimg.com/50/v2-39473e078d117258e65c60be5f05048d_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-512d9c3c9fc824f0b03bba25edb28f20_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-7804c41cc03798cb4960f9b64b0ba928_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-1d7a686426def41200a728d1f5273dcf_720w.jpg?source=2c26e567]]
+
+啊，图片放到这边好像变了，原本的动图可以来看下我的博客
+
+[https://blog.csdn.net/godelgnis/article/details/89473896](https://blog.csdn.net/godelgnis/article/details/89473896)
+
+其实最近也是因为课程需要写一些小的桌面应用程序，C++,C#选修我都没有学（不好意思，我又懒又菜，听说.net写桌面小程序很简单？？？），依靠以前看过的一点JavaFx知识又觉得不够用，才上网搜集一下学习资料。
+
+话说这问题都过去这么久了，也不知道这回答有没有用，写着给有需要的人看。

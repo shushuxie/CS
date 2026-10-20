@@ -1,0 +1,16 @@
+#+TITLE: Linux中常用的命令都是哪些单词的缩写？
+#+LINK: https://www.zhihu.com/question/49073893/answer/114912329
+#+AUTHOR: 极客学长Bravo
+#+CREATED: 2016-08-04
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+知道下面这些...
+
+#+begin_quote
+awk = "Aho Weinberger and Kernighan" 这个语言以作者 Al Aho, Peter Weinberger 和 Brian Kernighan 的姓来命名。 grep = "Global Regular Expression Print" grep 来自 ed 的列印所有符合某 pattern 指令 g/re/p "re" 代表 regular expression fgrep = "Fixed GREP". fgrep: 找固定的字串。"f" 不是代表 "fast" - 事实上, "fgrep foobar *.c" 通常比 "egrep foobar *.c" 来得慢(有点意外吧, 不信的话, 自己试试喽)。 尽管如此，Fgrep 仍然有可取之处，在档案中搜寻字串的时候，Fgrep能处理的字串数目较 egrep 多。 egrep = "Extended GREP" egrep 用比 grep 更 fancy 的 regular rexpression。许多人始终只用 egrep，因为它用的 algorithm 比 grep 或 fgrep 用的高级，而且通常是三个程式中最快的。 cat = "CATenate" catenate 是一个艰深难懂的单字，意思是"把它连成一串", 这就是"cat" 这个指令对一个或多个档案所做的处理。 请不要跟 C/A/T 混淆了，C/A/T 是指电脑辅助排版系统(Computer Aided Typesetter)。 gecos = "General Electric Comprehensive Operating Supervisor" 不过，当通用电器 (GE) 的大型系统部门卖给 Honeywell 的时候，Honeywell 就把 GECOS 的 E 拿掉了。 目前 Unix 的密码档里面仍保有 "pw_gecos" 这个栏位。这个名字是从古早的年代沿用过来的。 Dennis Ritchie 曾经说过： "有时候我们会把印表输出或整批工作丢到 GCOS 机器。密码档里面的 gcos 栏位是用来隐藏 $IDENT 卡片上的资讯，这样做不够优雅"。 nroff = "New ROFF" troff = "Typesetter new ROFF" 这些字都是从"roff"衍生的, roff 是重写 Multics 上的 runoff 程式得来的 (runoff 的意思就是"印出文件")。 tee = T 这是管线工人的术语，代表 T 型的管线分叉器。 bss = "Block Started by Symbol" (由符号启始的区块） Dennis Ritchie 曾说过： 这个缩写也许有其他说法，但事实上我们采用这个缩写的本意是"Block Started by Symbol"。它是 FAP 上的虚拟指令，FAP(Fortran Assembly [-er?] Program) 是指 IBM 704-709-7090-7094这种机型的组译器。这个指令可定义自己的标号，并且预留一定数目的字组空间。 还有另一个虚拟指令 BES，是 "Block Ended by Symbol"，跟 BSS 指令几乎一样，不同点在于标号是定义在预留字组空间尾端的位址 + 1 的 地方。在这些机器上，Fortran 的阵列是以反方向储存，而且阵列的索引是从 1 算起。 这种用法是合理的，因为这跟 UNIX 上标准的程式载入器一样，程式码当中并非真的放入这一整块预留空间，而是先用一个数目表示，在载入时 才真的把所需的预留空间定出来。 biff = "BIFF" 这个指令是用来设定当您有新邮件进来时，是否要通知您。这是柏克莱大学校园内一只狗的名字。 我可以确定这个名称的起源，如果您有兴趣的话，Biff 是 Heidi Stettner 养的宠物，想当年 Heidi (还有我，跟 Bill Joy) 都还是UCB的 研究生时，早期的 BSD 版本还在发展中。Biff 受到流连于Evans Halls 这些人的喜爱，也因为它会对前来的邮差吠叫而闻名；因此就以 biff 当作指令的名称。(这是卡内基美浓大学的 Eric Cooper 证实的） rc (像是 ".cshrc" 或 "/etc/rc" 中的 rc 这两个字母) = "RunCom" "rc" 是取自 "runcom", 来自麻省理工学院在 1965 年发展的 CTSS系统。相关文献曾记载这一段话: '具有从档案中取出一系列命令来执行的功能；这称为 "run commands" 又称为 "runcom"，而这种档案又称为一个 runcom (a runcom)。' Brian Kernighan 与 Dennis Ritchie 告诉 Vicki Brown 说: "rc" 也是Plan 9 作业系统 shell 的名字。 Perl = "Practical Extraction and Report Language" Perl = "Pathologically Eclectic Rubbish Lister" Perl是 Larry Wall 所发展的一种相当受欢迎的语言， Perl 在处文字, process，与档案时非常便利，可以说是兼得 shell 与 C 之长。想知道更多关于Perl 的讯息，请看 Usenet newsgroup comp.lang.perl。
+#+end_quote
+
+Don Libes 的 *"Life with Unix"* 一书里有更多这类的珍闻轶事。
+
+注: 上述内容来自于网络...

@@ -1,0 +1,33 @@
+#+TITLE: 《计算机程序的构造和解释（SICP）》讨论的核心问题是什么？
+#+LINK: https://www.zhihu.com/question/26549715/answer/52631551
+#+AUTHOR: strint
+#+CREATED: 2015-06-25
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+SICP可以看做是讲系统设计的书。
+
+计算机专业的核心：算法和系统。（参考Stanford的CS Core分成了Theory和System两块）。这里要提一下软件工程，软件工程是个有点像工程项目管理的科目，说SICP是在讲软件工程还是挺奇怪的。
+
+算法设计和分析的书挺多，流传也很广。与之对比的是，系统设计和分析没有像算法一样总结出一套系统的概念，形成一个独立的课程，大多通过操作系统、数据库、编译原理这样的课程来学习系统设计，这样Case Study的方式一方面使得计算机专业的课程量过大，另一方面使得重要的概念被淹没在具体的系统中。所以系统设计相对于算法而言，是个不太好说清楚的领域。
+
+SICP主要在讲的就是如何构造和分析复杂系统（程序），并提出了一套方法论：
+
+1. 构造过程抽象（Building Abstractions with Procedures）
+2. 构造数据抽象（Building Abstractions with Data）
+3. 模块化、对象和状态（Modularity, Objects, and State）
+4. 元语言抽象（Meta-Linguistic Abstraction） 
+
+5. 寄存器机器里的计算（Register Machine' Model of Control）
+
+书中构建了很多小系统。比如第一章的计算素数、最大公因数、平方根、积分、黄金比例等，讨论了递归、迭代过程；第二章的图形语言，赫夫曼编码解码、泛型算数包，多项式计算包等，讨论了数据结构和数据类型系统；第三章实现了一个面向对象系统等；第四章实现Scheme的解释器；第五章我还没看：）。
+
+SICP在计算机知识领域中位置不明的问题，其实是系统设计在国内计算机课程中位置不明确导致的。系统设计入门书籍方面，感觉SICP在核心概念方面讲解是很精彩的，但在语言（scheme）、内容（实现数值计算系统、编程语言系统）、时间（最新版第二版1996年出版）方面都太非主流，所以不知道里面讲解的概念现在是否算得上主流。当前众多名校CS系统设计入门教材好像是一本叫
+
+*Principles of Computer System Design: An Introduction*
+
+的书，也是MIT出的，读过的大牛点评一下~
+
+附上我做的前两章的课后习题答案，140道题，还有别人做的答案的链接：
+
+[GitHub - strint/sicpAns: 《计算机程序的构造和解释》编程题解](https://github.com/strint/sicpAns)

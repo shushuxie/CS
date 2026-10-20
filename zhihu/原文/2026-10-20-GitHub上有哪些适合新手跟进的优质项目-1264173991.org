@@ -1,0 +1,160 @@
+#+TITLE: GitHub 上有哪些适合新手跟进的优质项目？
+#+LINK: https://www.zhihu.com/question/22744854/answer/1264173991
+#+AUTHOR: 程序员吴师兄
+#+CREATED: 2020-06-04
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+#+begin_quote
+GitHub 上有哪些适合新手跟进的优质项目？
+#+end_quote
+
+作为一名在 GitHub 上收获 60k star 的 *资深（* 秃头 *）程序员* ，这个问题真的是太符合我的胃口了。
+
+*授人以鱼不如授人以渔* 。
+
+我先介绍一下适合新手跟进的优质项目，再告诉你新手该如何使用 GitHub 寻找自己心仪的优质项目？
+
+[[https://picx.zhimg.com/50/v2-35857a56d994279631f313f45c70ef05_720w.jpg?source=2c26e567]]
+
+** 一、适合新手跟进的优质项目
+
+#+begin_quote
+或者说大神们刚上GitHub的时候都是fork的哪些项目？（c/c++, Python, Java都可以。）
+#+end_quote
+
+*我依次来介绍，满足题主的要求。*
+
+*1、C/C++ 项目*
+
+*首推* 一个开源的、C++实现的任天堂红白机模拟器。
+
+项目地址： [https://github.com/amhndu/SimpleNES](https://github.com/amhndu/SimpleNES)
+
+[[https://picx.zhimg.com/50/v2-67569ee3c701009b9bdfa2c62a369e39_720w.jpg?source=2c26e567]]
+
+这个项目十分有趣，可以玩游戏呀！
+
+并且项目的代码也很少，就 20 几个文件，逻辑条理很清晰，一天左右就能了解个七七八八，同时项目使用到的有 C++11 的基本语法和 STL 库，就这点而言， *非常适合刚读完教材的初学者阅读* 。
+
+关于新手如何学习 C++ ，我前不久分享过一篇文章，感兴趣可以查看一下。
+
+[GitHub 热榜：C++ 快速入门指南！](https://mp.weixin.qq.com/s/6jZEy_kOv6IQ2njYNF9syA)
+
+*2、Java 项目* 
+ 
+ *商城系统*
+
+#+begin_quote
+下面的商城系统大多比较复杂比如 mall ,如果没有 Java 基础和 Spring Boot 都还没有摸熟的话不推荐过度研究下面几个项目或者使用这些项目当作毕业设计。
+#+end_quote
+
+1. [mall](https://github.com/macrozheng/mall) ：mall 项目是一套电商系统，包括前台商城系统及后台管理系统，基于 SpringBoot+MyBatis 实现。
+2. [mall-swarm](https://github.com/macrozheng/mall-swarm) : mall-swarm 是一套微服务商城系统，采用了 Spring Cloud Greenwich、Spring Boot 2、MyBatis、Docker、Elasticsearch 等核心技术，同时提供了基于 Vue 的管理后台方便快速搭建系统。
+3. [onemall](https://github.com/YunaiV/onemall) ：mall 商城，基于微服务的思想，构建在 B2C 电商场景下的项目实战。核心技术栈，是 Spring Boot + Dubbo 。未来，会重构成 Spring Cloud Alibaba 。
+4. [litemall](https://github.com/linlinjava/litemall) ： 又一个小商城。litemall = Spring Boot 后端 + Vue 管理员前端 + 微信小程序用户前端 + Vue 用户移动端。
+5. [xmall](https://github.com/Exrick/xmall) :基于SOA架构的分布式电商购物商城 前后端分离 前台商城:Vue全家桶 后台管理系统:Spring/Dubbo/SSM/Elasticsearch/Redis/MySQL/ActiveMQ/Shiro/Zookeeper等
+6. [newbee-mall](https://github.com/newbee-ltd/newbee-mall) :newbee-mall 项目（新蜂商城）是一套电商系统，包括 newbee-mall 商城系统及 newbee-mall-admin 商城后台管理系统，基于 Spring Boot 2.X 及相关技术栈开发。
+
+*博客/论团/其他*
+
+#+begin_quote
+下面这几个项目都是非常适合 Spring Boot初学者学习的，下面的大部分项目的总体代码架构我都看过，个人觉得还算不错，不会误导没有实际做过项目的老哥，特别是前两个项目 vhr 和 favorites-web 。
+#+end_quote
+
+1. [vhr](https://github.com/lenve/vhr) ：微人事是一个前后端分离的人力资源管理系统，项目采用 SpringBoot+Vue 开发。
+2. [favorites-web](https://github.com/cloudfavorites/favorites-web) :云收藏 Spring Boot 2.X 开源项目。云收藏是一个使用 Spring Boot 构建的开源网站，可以让用户在线随时随地收藏的一个网站，在网站上分类整理收藏的网站或者文章。
+3. [community](https://github.com/codedrinker/community) ：开源论坛、问答系统，现有功能提问、回复、通知、最新、最热、消除零回复功能。功能持续更新中…… 技术栈 Spring、Spring Boot、MyBatis、MySQL/H2、Bootstrap。
+4. [VBlog](https://github.com/lenve/VBlog) ：V部落，Vue+SpringBoot实现的多用户博客管理平台!
+5. [My-Blog](https://github.com/ZHENFENG13/My-Blog) ： My Blog 是由 SpringBoot + Mybatis + Thymeleaf 等技术实现的 Java 博客系统，页面美观、功能齐全、部署简单及完善的代码，一定会给使用者无与伦比的体验。
+
+*权限管理系统*
+
+#+begin_quote
+权限管理系统在企业级的项目中一般都是非常重要的，如果你需求去实际了解一个不错的权限系统是如何设计的话，推荐你可以参考下面这些开源项目。
+#+end_quote
+
+1. [Spring-Cloud-Admin](https://github.com/wxiaoqi/Spring-Cloud-Admin) ：Cloud-Admin 是国内首个基于 Spring Cloud 微服务化开发平台，具有统一授权、认证后台管理系统，其中包含具备用户管理、资源权限管理、网关 API 管理等多个模块，支持多业务系统并行开发，可以作为后端服务的开发脚手架。代码简洁，架构清晰，适合学习和直接项目中使用。核心技术采用 Spring Boot2 以及 Spring Cloud Gateway 相关核心组件，前端采用 vue-element-admin 组件。
+2. [pig](https://gitee.com/log4j/pig) ：（gitee）基于 Spring Boot 2.2、 Spring Cloud Hoxton & Alibaba、 OAuth2 的 RBAC 权限管理系统。
+3. [FEBS-Shiro](https://github.com/wuyouzhuguli/FEBS-Shiro) ：Spring Boot 2.1.3，Shiro1.4.0 & Layui 2.5.4 权限管理系统。
+4. [eladmin](https://github.com/elunez/eladmin) : 项目基于 Spring Boot 2.1.0 、 Jpa、 Spring Security、redis、Vue的前后端分离的后台管理系统，项目采用分模块开发方式， 权限控制采用 RBAC，支持数据字典与数据权限管理，支持一键生成前后端代码，支持动态路由。
+
+*3、Python 项目*
+
+哈哈，这里也推荐一个游戏类项目。
+
+项目地址： [https://github.com/CharlesPikachu/Games](https://github.com/CharlesPikachu/Games)
+
+里面有支持人机对战和联机对战的五子棋、坦克大战、炸弹人、Flappybird 等热门小游戏。
+
+正经一些，推荐一下 Python 的小例子或小项目。
+
+1、 [batch_file_rename.py](https://github.com/geekcomputers/Python/blob/master/batch_file_rename.py) 批量重命名指定目录下面所有文件的后缀名。
+
+2、 [create_dir_if_not_there.py](https://github.com/geekcomputers/Python/blob/master/create_dir_if_not_there.py) 如果不存在的目录。
+
+3、 [Fast Youtube Downloader](https://github.com/geekcomputers/Python/blob/master/youtube-downloader%20fast.py) 多线程高速下载Youtube视频。
+
+4、 [Google Image Downloader](https://github.com/geekcomputers/Python/tree/master/Google%20Image%20Downloader) 根据指定词语从Google搜索图片并下载。
+
+5、 [dir_test.py](https://github.com/geekcomputers/Python/blob/master/dir_test.py) 检查目录 ~testdir~ 是否存在, 如果不存在则创建一个。
+
+6、 [env_check.py](https://github.com/geekcomputers/Python/blob/master/env_check.py) 检查环境变量
+
+7、 [fileinfo.py](https://github.com/geekcomputers/Python/blob/master/fileinfo.py) 展示文件的元信息
+
+8、 [folder_size.py](https://github.com/geekcomputers/Python/blob/master/folder_size.py) 统计当前当前文件夹的大小
+
+9、 [logs.py](https://github.com/geekcomputers/Python/blob/master/logs.py) 搜索指定目录下所有 ~*.log~ 文件，并压缩以日期格式转储。
+
+10、 [move_files_over_x_days.py](https://github.com/geekcomputers/Python/blob/master/move_files_over_x_days.py) 移动所有满足指定时间日期的文件从源目录到目标文件。
+
+** 二、新手该如何使用 GitHub 寻找自己心仪的优质项目？
+
+GitHub 成立于 2008 年，截止到 2015 年，GitHub 已经有超过两千八百万注册用户和5700万代码库。
+
+对于新手而言，要从这浩瀚的代码库中找到适合自己小项目无异于大海捞针，如果有个类似于 hao123 那样的导航网站就好了！
+
+登登登，还真有，一个国人建立的开源项目： *HelloGitHub，致力于分享 GitHub 上有趣，入门级的开源项目，对于编程新手而言十分友好。*
+
+*地址：* [https://github.com/521xueweihan/HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
+
+[[https://pica.zhimg.com/50/v2-5d65e8194fe16ea231d76b75d460c627_720w.jpg?source=2c26e567]]
+
+在项目中，内容每月 28 号以月刊的形式更新发布，主要是面向编程新手、热爱编程、对开源社区感兴趣人群的项目。更新的内容主要包括：各种语言的流行项目、入门级项目、让生活变得更美好的工具、书籍、学习心得笔记、企业级项目等。
+
+这些开源项目大多都是非常容易上手、很 Cool，能够让你用很短时间感受到编程的魅力和便捷。从而让大家感受到编程的乐趣，动手开始编程。
+
+[[https://pic1.zhimg.com/50/v2-6e853b8bf4ee883ddfb5b6ee1dcb0dba_720w.jpg?source=2c26e567]]
+
+这些项目都有一些共同的特征，那就是很酷，非常容易上手的项目，编程的魅力和便捷体验起来就是这么简单。
+
+对于编程新手而言，不管你是学 Java，还是学 Python，哪怕你是编程小白，不懂代码，也总能在里面找到适合你的项目。
+
+*这个新手项目还不够？那在推荐一个类似但更有趣的开源项目：GitHubDaily。*
+
+[@GitHub Daily](https://www.zhihu.com/people/1751d571cd57282c0451bc022ce7c1ce)
+
+链接： [https://github.com/GitHubDaily/GitHubDaily](https://github.com/GitHubDaily/GitHubDaily)
+
+GitHubDaily 每日不定时推送一批 GitHub 上优秀的开源项目给开发者, 帮助开发者们发现当下最火的开源项目, 令开发者们得以掌控技术脉搏, 扩大自己的技术视野, 并从开源项目的学习中获得技术能力的提升。
+
+它分门别类的整理了好多有趣的项目，适合新手在零碎时间去阅读学习，了解 GitHub 的生态。
+
+[[https://pic1.zhimg.com/50/v2-211dad807b0bfecb5d31fe33df64a532_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-e55d6382486c022328030f40b88dc47c_720w.jpg?source=2c26e567]]
+
+---
+
+想进大厂少不了学习算法，我写了三百篇算法题解，在 GitHub 上收获了 63k 的star，关于如何刷题有些话我想对你说。
+
+[写了三百篇算法题解，关于如何刷题有些话我想对你说](https://mp.weixin.qq.com/s/Fc6_EfODhiqoQZ5AYLiuRA)
+
+*我的不少粉丝拿到腾讯字节快手offer，因为用了这套算法刷题笔记：*
+
+[BAT大佬写的Leetcode刷题笔记，看完秒杀80%的算法题！](http://mp.weixin.qq.com/s?__biz=MzA3NzM0NzMxMA==&mid=100000618&idx=1&sn=756944c7216c7636d1b229bb010d553b&chksm=1f5223eb2825aafd5713d2fbf49b84bc26db6e99c5e69228301a544d3d6c9093f82e3b1e1e27#rd)
+
+*推荐我自己搭建的一个不错的算法学习网站，讲解视频短，每个视频都精心规划过，全部都有动画过程，争取五分钟讲清楚。*
+
+[AlgoMooc-一个专属于程序员的平台，和大家一起刷题](https://www.algomooc.com)

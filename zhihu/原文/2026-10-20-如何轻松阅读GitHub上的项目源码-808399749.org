@@ -1,0 +1,54 @@
+#+TITLE: 如何轻松阅读 GitHub 上的项目源码 ?
+#+LINK: https://www.zhihu.com/question/27821340/answer/808399749
+#+AUTHOR: 牛岱
+#+CREATED: 2019-08-30
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+在 Chrome 浏览器上浏览的话，装上这两个插件，就足够你畅游了。
+
+我试过 Octotree，但它只是支持在浏览器左侧生成文件树，我也试过 GitHub Linker，它可以让你进行 import 的包跳转，我也试过 Github 新出的代码跳转功能，可惜支持的项目有限。
+
+我用过的这些辅助浏览插件里面，个人觉得最好的，一个可以顶所有的就是：
+
+* *SourceGraph** 插件
+
+插件市场搜 *SourceGraph* 即可：
+
+[[https://pica.zhimg.com/50/v2-992bf6460a8a93c7052b7b5361852230_720w.jpg?source=2c26e567]]
+
+*SourceGraph 可以同时提供 Octotree 提供的文件树浏览和 Github Jump to definition 的定义跳转功能，而且还支持 Jump to reference 引用跳转。*
+
+使用十分方便，安装上它后，随便打开一个 Github 项目：
+
+[[https://picx.zhimg.com/50/v2-617ea46cd8863a8aca2e736c8336f75c_720w.jpg?source=2c26e567]]
+
+我们会发现项目首页多了一个图标，它就是 Source Graph，点击它，即可打开 Source Graph 项目浏览页面：
+
+[[https://pica.zhimg.com/50/v2-653ce13da666dc7b270cb41aeb3f929b_720w.jpg?source=2c26e567]]
+
+可以看到类似于 Octotree 插件提供给我们的文件树，也支持快速搜索。
+
+[[https://pic1.zhimg.com/50/v2-9231d8662959401a184cd7e88421dc56_720w.jpg?source=2c26e567]]
+
+基本上，在代码的浏览这个层面，已经具备了 IDE 的样子，而且整个过程都在网页里进行，十分方便，无需将代码 clone 至本地，方便快速浏览代码。
+
+第二个我要推荐的，不是辅助浏览的插件，但是胜似辅助浏览。
+
+很多时候，我们发现一个 Github 项目中装着很多东西，比如有的代码仓库中装着几十个教学实例代码，但是你只是想把其中的一个教学实例下载下来。
+
+使用 git clone 命令克隆的是整个代码仓库，如何你轻松地获取一个仓库中的部分代码？
+
+** GitZip 插件：下载仓库中部分代码
+
+[[https://pic1.zhimg.com/50/v2-bd6ba13ec87fdcf1b7fa53afed74df8c_720w.jpg?source=2c26e567]]
+
+装上即可，即装即用，非常方便。
+
+只需定位到某个项目子文件夹上，在空白区域右键点击：
+
+[[https://picx.zhimg.com/50/v2-049da7d4408b48e68f80cd0c4748f3d2_720w.jpg?source=2c26e567]]
+
+选择 *Download [XXX]* 即可，图中我们下载了 spring-boot-autoconfigure 这个子模块的代码。
+
+宁缺毋滥，有这两个完全够用了，不用再找别的了。

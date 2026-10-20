@@ -1,0 +1,187 @@
+#+TITLE: 有哪些让人惊艳的数据可视化工具？
+#+LINK: https://www.zhihu.com/question/365133034/answer/1234210874
+#+AUTHOR: 邵云蛟
+#+CREATED: 2020-05-20
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+分享3个超好用的傻瓜式图表可视化工具！让你忍不住惊艳！小白也能做出逼格图表！
+
+[[https://picx.zhimg.com/50/v2-6fccc4d981a9841b87f2cfd1812440eb_720w.jpg?source=2c26e567]]
+
+*看完后，你能轻松做出这样的页面：*
+
+[[https://picx.zhimg.com/50/v2-f1e095dd647e46cff4fd313456d6bfe7_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-d91102c92007f41b21d0a4e108bc560f_720w.gif?source=2c26e567]]
+
+提前声明，这是一篇纯技术教程的文章。这就意味着，各位在阅读的时候，不用带脑子，只需要用眼睛，轻轻地看上那么一遍，你就能够做出的数据图表。
+
+** 01 镝数
+
+利用这个网站，你可以轻松做出人民日报的南丁格尔玫瑰图！
+
+今年，这个图表还挺火的，人民日报的公众号文章里，经常会出现，那这个是怎么做的呢？
+
+*很简单，我们可以利用一款在线图表工具，镝数，直接生成即可。*
+
+[[https://pic1.zhimg.com/50/v2-7c347871f30d2de0d63cf2461ebad977_720w.jpg?source=2c26e567]]
+
+那具体是如何生成的呢？咱们结合一个实际的 PPT 案例，来演示一下。
+
+这是原稿信息：
+
+[[https://picx.zhimg.com/50/v2-35e587bf83a0ce0b2b3aa5e6dd5f0562_720w.jpg?source=2c26e567]]
+
+打开镝数官网，我们选择做图表，找到玫瑰图：
+
+[[https://picx.zhimg.com/50/v2-d7c684af98bc66dbd57d9e0fed8d011b_720w.jpg?source=2c26e567]]
+
+然后，会进入到后台的编辑界面，这里，我们可以点击编辑数据，对模板中的数据进行修改：
+
+[[https://picx.zhimg.com/50/v2-28e22eff0614daac4e6a055258b9cff6_720w.jpg?source=2c26e567]]
+
+在右侧输入原稿 PPT 页面中的图表数字信息：
+
+[[https://picx.zhimg.com/50/v2-c4bd67a6f6b992f4e5848159c26c2675_720w.jpg?source=2c26e567]]
+
+*接下来，为了去除模板中的水印或者一些干扰信息，我们把这里的信息全部勾选取消，而后，选择保存为 SVG 格式。*
+
+之所以选择这个，主要是为了方便后期对图表进行编辑修改：
+
+[[https://picx.zhimg.com/50/v2-e66784947e1624e1a0cac6d19ac139be_720w.jpg?source=2c26e567]]
+
+*这里每天有3次免费保存为 SVG 格式的机会，不过，够用了。*
+
+随后，我们把 SVG 格式的图表拖拽，注意是拖拽到 PPT 页面上，大概长这个样子：
+
+[[https://pic1.zhimg.com/50/v2-79f1ac7e0336bfe43346d2d2ba608716_720w.jpg?source=2c26e567]]
+
+对其进行取消组合两次：
+
+[[https://pica.zhimg.com/50/v2-9feb171222396107a2bac05f8e6c1bac_720w.jpg?source=2c26e567]]
+
+这时候，我们就可以自由地对图表进行编辑修改，比如更改颜色：
+
+[[https://picx.zhimg.com/50/v2-03aeee559c1f3f2635270ce2b6d055ad_720w.jpg?source=2c26e567]]
+
+好了，到这一步，我们的图表部分就算制作完成。
+
+接下来，我们把原稿中的数字信息，放在图表对应的位置上：
+
+[[https://pic1.zhimg.com/50/v2-c96d19102bd6db8378663417d6887358_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-8e001c8dcd5c5f33484259be4abc0cc0_720w.jpg?source=2c26e567]]
+
+最后，简单地对文字进行排版即可：
+
+[[https://picx.zhimg.com/50/v2-87ea7ae6df8982c8e1f4643d374e9e47_720w.jpg?source=2c26e567]]
+
+另外，我还给你准备了102页的高逼格PPT图表模板：
+
+[[https://picx.zhimg.com/50/v2-e30d5e563f53b8296495a49550248a16_720w.jpg?source=2c26e567]]
+
+如果你有需要，可以直接分享给你！领取方式如下图：
+
+[[https://pic1.zhimg.com/50/v2-3a4dba65b233cd4ef6a194ca8d3f9cc0_720w.gif?source=2c26e567]]
+
+* *再来说第二个动态数据跑分图**
+
+听名字就知道，这是用来动态地进行数字呈现，主要是表现出数字的变化状况。
+
+[[https://picx.zhimg.com/50/v2-d91102c92007f41b21d0a4e108bc560f_720w.gif?source=2c26e567]]
+
+那这个图表是如何制作的呢？同样需要借用一款在线工具，叫做 *flourish* ：
+
+[[https://picx.zhimg.com/50/v2-12d05db4620c351e921bcef1996c0415_720w.jpg?source=2c26e567]]
+
+网址是： [https://app.flourish.studio](https://app.flourish.studio)
+
+打开网站后，点击顶部的 *Example* 按钮，就可以找到内置模板。
+
+在这里，排名第一位的就是动态跑分图表，我们点击 *Make your own* ，选择使用此模板：
+
+[[https://pic1.zhimg.com/50/v2-946bdfb1adb64d5f4dbcbc9eee58223b_720w.jpg?source=2c26e567]]
+
+然后，点击进入，选择创建可视化图表：
+
+[[https://picx.zhimg.com/50/v2-5816afefd62314a028a665e788b0aa45_720w.jpg?source=2c26e567]]
+
+这里的界面很简单，分为两个板块，一是预览动态图表，二是修改数据：
+
+[[https://picx.zhimg.com/50/v2-30e349226908740667cc1d790844f4ec_720w.jpg?source=2c26e567]]
+
+我们先来对数据进行修改：
+
+[[https://picx.zhimg.com/50/v2-d60f5603cf29ee027d3ede5ab750ec41_720w.jpg?source=2c26e567]]
+
+*这里，需要我们在 Excel 中完成数据编辑。*
+
+比如我们可以做一份2019年度汽车销量排名变化的图表，这是我制作的表格数据：
+
+[[https://picx.zhimg.com/50/v2-e8b210f4dde48815df82c8ad066e04e1_720w.jpg?source=2c26e567]]
+
+上传数据后，回到预览界面，就变成了这样：
+
+[[https://pic1.zhimg.com/50/v2-4fc85085e00fc2a1502ac15fa9171629_720w.jpg?source=2c26e567]]
+
+*这里所呈现的样式，可能并不是我们想要的，不过，好在，这里所有的样式，都是可以重新进行编辑的。*
+
+在图表的右侧，有非常详细的参数修改：
+
+[[https://picx.zhimg.com/50/v2-2fdcf40cb07a5cfc4462629b85a2e6c6_720w.jpg?source=2c26e567]]
+
+但我们也没必要全部使用，有几个关键的参数修改即可。
+
+*01. 图表的颜色和背景修改*
+
+我们可以在这里，自定义图表的颜色，也可以选择一些字体，但数量不多：
+
+[[https://picx.zhimg.com/50/v2-bab71b44da07d9cf25392d5953984191_720w.jpg?source=2c26e567]]
+
+*02. 图表字号和文字颜色的修改*
+
+注意，这里修改字号是修改 Size 的数值：
+
+[[https://picx.zhimg.com/50/v2-8a5c83b0684f7e844fe0f0de13667516_720w.jpg?source=2c26e567]]
+
+我们可以通过一个对比图，来看下修改的效果：
+
+[[https://picx.zhimg.com/50/v2-2a2e33c5fe0b56a4b6f5c75e971315e9_720w.jpg?source=2c26e567]]
+
+*03. 修改图表时间和数值总量*
+
+如果你不想显示图表右下角一直变换的信息，可以在这里调整：
+
+[[https://picx.zhimg.com/50/v2-c292d5b87e0b41ea2f99c07a5116da01_720w.jpg?source=2c26e567]]
+
+这是对比的效果图：
+
+[[https://pic1.zhimg.com/50/v2-2f5af3d15e5a46e2d70c67c5ae0aa0e4_720w.jpg?source=2c26e567]]
+
+简单的调整之后，就到了非常关键的一步，动图录制。
+
+*因为这个网站不支持导出为 Gif 格式，所以，我们需要使用动图录制软件，来完成动图录制：*
+
+[[https://picx.zhimg.com/50/v2-25c394cb7b0d5c82283575c0fc21354f_720w.jpg?source=2c26e567]]
+
+我使用的是 ScreenToGif
+
+最后，把图表插入到 PPT 页面上即可：
+
+[[https://picx.zhimg.com/50/v2-d91102c92007f41b21d0a4e108bc560f_720w.gif?source=2c26e567]]
+
+这就是网上较火的两个图表的制作方法，纯教程，按以上操作即可完成，这次再有人说脑子会了手不会，就过分了啊。
+
+好了，不多废话了，各位可以动手试一试。
+
+另外，我还给你准备了102页的高逼格PPT图表模板：
+
+[[https://picx.zhimg.com/50/v2-e30d5e563f53b8296495a49550248a16_720w.jpg?source=2c26e567]]
+
+如果你有需要，可以直接分享给你！领取方式如下图：
+
+[[https://picx.zhimg.com/50/v2-3a4dba65b233cd4ef6a194ca8d3f9cc0_720w.gif?source=2c26e567]]
+
+
+ 也欢迎大家关注我的知乎号 [@邵云蛟](https://www.zhihu.com/people/e88619a209fe6c707a20e0a3b30da8a9) ，浏览我的主页，获取更多优质内容哦~

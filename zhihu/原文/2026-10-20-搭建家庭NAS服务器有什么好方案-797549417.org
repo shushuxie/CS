@@ -1,0 +1,52 @@
+#+TITLE: 搭建家庭 NAS 服务器有什么好方案？
+#+LINK: https://www.zhihu.com/question/21359049/answer/797549417
+#+AUTHOR: 孙吾饭
+#+CREATED: 2019-08-21
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+家里常年跑一台Win PC，挂1块SSD + 6块 HD，接电视大屏上，做file server + media player  + game机，蛮稳定的。
+
+某天开始研究新搞台NAS玩。不满足于群辉的低性能低性价比，HP那几款准系统也不喜欢，还是决定自己DIY。选择方案时考量如下：
+
+1. 高性价比：显然得上AMD，选择了APU方案
+2. 低功耗，小体积：选了ITX微机箱，标配250w电源，不上独显足够了
+3. 多功能 - NAS，KVM，Web Server，Media Center。。。各路服务，至少不能比群辉少
+
+最终定的硬件方案如下：
+
+[[https://pic1.zhimg.com/50/v2-135ce4cb1768dbbeeb408a608bf9d1ef_720w.jpg?source=2c26e567]]
+
+机箱是专门为Nas设计的Mini箱子，4x3.5盘位热插拔，还能挂2个2.5盘。
+
+[[https://pic1.zhimg.com/50/v2-a61ac5288ae33fcb91a539393926033e_720w.jpg?source=2c26e567]]
+
+APU+ITX主板几个月前买有点小贵，现在新一代Ryzen上市了，上代板卡应该降价了。NVME SSD直接插到主板背面，这很爽。机箱太小，上第三方风扇时只能把主板原带的散热挡板卸掉了。
+
+[[https://picx.zhimg.com/50/v2-a6cdfa493389f0c768a6b82d9541730d_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-17448e475c11f772475a864b4d4a5364_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-edf7d268d12896ed7edd5de3f7511ce4_720w.jpg?source=2c26e567]]
+
+上好板子走好线，几块闲置HDD一插，装机结束。放一张和标准塔式PC的对比，差不多1/4的体积。
+
+[[https://pic1.zhimg.com/50/v2-b519de1893a8ac39a8546d2d6eab31f0_720w.jpg?source=2c26e567]]
+
+硬件好了，再折腾软件。决定不用Win，搞搞Linux，上KVM虚拟化。选择了口碑不错的Proxmox VE。安装步骤如下：
+
+- SSD安装Debian 9.8，开通SSH服务。
+- 增加Proxmox VE源和密钥，然后安装PVE 5.x。
+- 安装Webmin，基于HTTP的远程管理软件
+- Debian并未内置Intel无线网卡驱动（属于商业软件），所以只用到了有线网卡。增加虚拟网卡，设置与真实显卡做桥接。
+- 新增虚拟机，分配资源，指定虚拟网卡，安装Ubuntu 19.04。
+- 安装Seafile Server企业版做Nas服务，自己用的话3个账号的限制够了，不够的话需要手动破解license文件了。常用办公文件放进Seafile，方便异地和手机端读取。
+- 四块HDD阵列做大规模冷文件备份用。放弃了Raid设置，首先是因为每个HD容量不同，其次看了一堆分析，Raid5不靠谱呀。选择了灵活方便的mergerfs硬盘合并工具，反正也是仓库盘做PC主机文件备份的，这个方案可以最大化的利用异构硬盘的空间，任何HD坏掉不会影响其他HD，也不存在重建Raid的危险。设置好后，四块HD mount为一个目录。
+- 设置好samba，Win端即可访问到Linux端mount出来的目录了。装个PC版的GoodSync，即可自动化定时备份Win端目录到Linux端了。
+- 设置好DDNS动态域名（找电信要个公网IP先），路由器做好端口映射，即可从公网访问到Nas咯
+
+运行了几个月，安静，稳定，基本上免维护，满意。
+
+软件安装步骤文档在此：
+
+链接： [https://pan.baidu.com/s/1zGcDjkaebYCl6ZwPCYEXKw](https://pan.baidu.com/s/1zGcDjkaebYCl6ZwPCYEXKw) 提取码：7ryg

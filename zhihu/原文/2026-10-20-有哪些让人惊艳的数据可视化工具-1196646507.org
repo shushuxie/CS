@@ -1,0 +1,124 @@
+#+TITLE: 有哪些让人惊艳的数据可视化工具？
+#+LINK: https://www.zhihu.com/question/365133034/answer/1196646507
+#+AUTHOR: 王龙
+#+CREATED: 2020-05-03
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+*有没有一个网站汇集了所有的可视化图表并且详细了图表的功能、使用场景和制作工具？* 答案是有的，我第一次见到这个网站就被他惊艳了，他不仅解决了可视化图表有什么、什么时候、什么地方用的科普性问题，还告诉我们用什么制作、以及怎么制作的问题。
+
+*收藏这个网站，你不需要再特意去找其他的可视化工具，这里全都有。*
+
+这就是图之典 [http://tuzhidian.com/](http://tuzhidian.com/) 一个简单易用的图表词典，为你的学习和工作提供科学的可视化建议。
+
+[[https://pic1.zhimg.com/50/v2-a4ca135ac144cc3f9da0e9c2b9862008_720w.jpg?source=2c26e567]]
+
+他不仅对每一种图表的属性特征、使用场景进行了详细的介绍，还给出了经典设计案例，详细的制作教程。我们可以根据需要选择里面推荐的可视化工具。以 [弦图](http://tuzhidian.com/chart?id=5c56e33d4a8c5e048189c6cb) 为例：
+
+[[https://picx.zhimg.com/50/v2-c9881cca638351dd6783f13925cb0de9_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-9435f3d6aaaff5f5348e1b14a49aebc3_720w.jpg?source=2c26e567]]
+
+网站还告诉我们不适用场景，避免新手常见的误区，简直良心。
+
+[[https://picx.zhimg.com/50/v2-e3ae3e1abfa82167ba7ffe3886a72990_720w.jpg?source=2c26e567]]
+
+网站推荐了多种可视化工具，既有整合性的工具，也有专项工具。
+
+[[https://pic1.zhimg.com/50/v2-cfc76c6cdfb211222f1135409835da22_720w.jpg?source=2c26e567]]
+
+======================
+
+接下来我再结合自己的实际体验介绍几款好用的可视化工具，这里只介绍免费工具，或者说常用功能免费的工具，收费软件等你成为高手以后再考虑吧，免费软件已经足够使用。
+
+*1、微软Power BI [https://powerbi.microsoft.com/zh-cn/](https://powerbi.microsoft.com/zh-cn/)*
+
+强烈推荐Power BI，可视化工具基本有这一个就足够了。你能想到的可视化效果他都有，你想不到的他也有。而且不仅仅是可视化效果强大，从数据加载、数据清洗、数据加工、数据分析都可以在一个软件里搞定，相比于独立的可视化网站，这才是真正的流程化，自动化神器。
+
+Power BI 是微软出品的，在Excel 里也能整合了power query插件，有很多小伙伴使用的是公司的电脑，并不允许安装其他软件，学习Power  BI 就可以规避这一问题，一次学习，多次受益。
+
+更重要的是，他除了协同编辑分享，其他都是免费的！下面是我使用他做过的一些案例，本人在工作学习中实际用到的，不求花哨，但求实用。
+
+1.0 Power BI 提供了丰富的可视化表格，还支持第三方插件，有大量的第三方开发者为他开发，基本你想要的都可以在这里找到。
+
+[[https://pic1.zhimg.com/50/v2-80ee461a0419c50fa90415dfcdc2e7e8_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-934e88537f5ea3b570580700cdfdbf12_720w.jpg?source=2c26e567]]
+
+1.1 、决策树分析，适合做假设分析，可以自定义变量，并建立变量之间的相互关系，并拖动改变数值，牵一发而动全身，观察他对最终结果的影响，是财务收益和风险测试的最佳工具。
+
+[决策树模型——适用于假设分析https://www.zhihu.com/video/1240216979594022912](https://www.zhihu.com/video/1240216979594022912)
+
+1.2 树状图，适用于分析复杂的框架结构，快速对数据进行分解。
+
+[[https://pic1.zhimg.com/50/v2-81c18d4fbe2f8f5d3af7e1698df6f115_720w.jpg?source=2c26e567]]
+
+1.3 环型图
+
+[[https://pica.zhimg.com/50/v2-b6626a6fbac3b6819caef0471b473fe3_720w.jpg?source=2c26e567]]
+
+1.4 其他普通图表，用Power BI 做表，要比Excel的表格美观太多了。
+
+[[https://picx.zhimg.com/50/v2-e697832429d97fc4b617188526f8ca2a_720w.jpg?source=2c26e567]]
+
+关于Power BI 在财务分析上的应用，我有一篇专门的回答，移步：
+
+[怎样理解「现金流比利润更重要」？](https://www.zhihu.com/question/22005099/answer/1184815144)
+
+[如何写出有深度的财务分析报告？](https://www.zhihu.com/question/38624533/answer/1189022361)
+
+2、但Power BI 也不是没有缺点，最大的问题在于地图可视化的体验还不够好。（如果要求不高的话，绝对够用。）下面介绍一些地图类可视化工具。
+
+最方便使用的就是 [高德地图开放平台](https://lbs.amap.com/dev/mapstyle/index) ，注册后就可免费使用： [https://lbs.amap.com/dev/mapstyle/index](https://lbs.amap.com/dev/mapstyle/index)
+
+常用的功能简单介绍一下：
+
+2.1 数据可视化
+
+可以制作多种多样的炫酷的效果，在我使用过多个地图开放平台后，这是国内颜值最高，使用最方便的地图可视化了，而且对于我们少量使用的人群来说，基本等于免费。感谢 [@高德开放平台](https://www.zhihu.com/people/9a4cb3f84278abd236ff5bd6dfe820f2)
+
+[[https://pic1.zhimg.com/50/v2-191640b213b3337ee719f0ae9dd2b789_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-d19acb802a9a09582a4b7bd36512a147_720w.jpg?source=2c26e567]]
+
+以下是两个我做的热点分布，效果如下
+
+[[https://pic1.zhimg.com/50/v2-3ee57de7f5765dfc10ab4bb02de70f3c_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-af9fe33c3af920b91496ef8609e9d4f2_720w.jpg?source=2c26e567]]
+
+2.2 自定义地图
+
+[[https://picx.zhimg.com/50/v2-f370899f40a1ebe79f532c80e23f2198_720w.jpg?source=2c26e567]]
+
+2.2.1 交通区位
+
+我们根据自己的需要制作地图，如果我们只要看交通线路，我们就可以把其他因素都不显示，然后根据自己的需要将不同等级的交通线路用不同颜色、不同粗细的线条标识出来，让可视化简洁清晰。
+
+这是我制作的公路等级地图，亦庄附近的交通情况一目了然： [https://lbs.amap.com/dev/mapstyle/mapshare/3a6ea5b9e4bdd3574f4a9c76d022a9ad](https://lbs.amap.com/dev/mapstyle/mapshare/3a6ea5b9e4bdd3574f4a9c76d022a9ad)
+
+[[https://pic1.zhimg.com/50/v2-982c5d41d4baa43f4e8d75d54dc0892e_720w.jpg?source=2c26e567]]
+
+2.2.2 周边设施
+
+我们在分析一个地块的时候经常会用到周边配套，直接从地图上截图得到的结果非常杂乱，用自定义地图也可以轻松搞定，比如科教文化，那我就只显示科教文化就可以了。我制作的示例如下： [lbs.amap.com/dev/mapstyle/mapshare/bc16a658422776975456a970b08ccc0e](http://lbs.amap.com/dev/mapstyle/mapshare/bc16a658422776975456a970b08ccc0e)
+
+[[https://pica.zhimg.com/50/v2-9c875dd5f96a33d32439208e8fdc54e1_720w.jpg?source=2c26e567]]
+
+2.2.3 城市俯瞰
+
+城市分析的时候用来当封面很实用，制作高逼格PPT，也能对城市风貌有一个比较直观的认识。
+
+[[https://pic1.zhimg.com/50/v2-d742d7689df1d908f6e298e41919c121_720w.jpg?source=2c26e567]]
+
+3、再来一个交通区位分析进阶版本—— *交通等时圈* ，衡量从某地出发在特定时间内能倒到啊区域，是衡量地点交通区位的好帮手。 [@Mapbox中国](https://www.zhihu.com/people/8053553b28cbc8af0fccaf35e141963d) 第一次见到他就是题主说的惊艳之感，实用、方便又好看，强烈推荐。
+
+使用地址： [https://www.mapbox.com/api-documentation/#isochrone](https://www.mapbox.com/api-documentation/#isochrone)
+
+[[https://picx.zhimg.com/50/v2-2bd2a96e9592f383340e04068078ac86_720w.jpg?source=2c26e567]]
+
+写在后面：
+
+告诉大家一个很多人都不知道的秘密—— *仅仅把文章收藏到文件夹并不会让你掌握该技能。*
+
+如果你是个数据小白，我想要告诉你的是不要沉迷于工具本身，工具就是工具，解决问题才是实质，与其对几个可视化工具浅尝辄止，不如对一个工具熟能生巧。 *练习，只有练习，才是通往高手的进阶之路。*

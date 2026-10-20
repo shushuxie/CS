@@ -1,0 +1,64 @@
+#+TITLE: 百度指数，好搜指数，微指数，google趋势，淘宝指数，各种指数有什么特点，优缺点的？
+#+LINK: https://www.zhihu.com/question/37868245/answer/179461020
+#+AUTHOR: 王大划
+#+CREATED: 2017-06-06
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+指数分析工具-除了百度指数，还有很多其他指数网站，可以配合使用，效果更明显
+
+百度指数： [http://index.baidu.com/](http://index.baidu.com/)
+
+[[https://picx.zhimg.com/50/v2-fa0eb7e936fe78c0b7432756ca7d8820_720w.jpg?source=2c26e567]]
+
+特点：百度旗下的免费海量数据分析服务，用以反映不同关键词在过去一段时间里的“用户关注度”和“媒体关注度”，反馈面广、覆盖时间长。而且功能丰富，支持基于单个词的趋势研究、需求图谱、舆情管家、人群画像；基于行业的整体趋势、地域分布、人群属性、搜索时间特征。
+
+头条指数： [https://index.toutiao.com/](https://index.toutiao.com/)
+
+[[https://picx.zhimg.com/50/v2-d751be438ad387fa20765f8bb1121a02_720w.jpg?source=2c26e567]]
+
+今日头条的新闻是通过机器人进行智能分发，也就是所谓的“千人千面”，那么问题来了，如果每个人看到的头条都是不一样的，那到底哪条新闻或者哪个事件是真正的头条呢？据说“头条指数”就能解决这个问题。
+
+微指数： [http://data.weibo.com/index](http://data.weibo.com/index)
+
+[[https://pica.zhimg.com/50/v2-266d1562584cfde28324f6b067c5a3d6_720w.jpg?source=2c26e567]]
+
+特点：微指数基于微博海量用户行为数据、博文数据，统计得出的反映不同事件领域发展状况，旨在帮助用户了解其关注事件在微博的发展趋势。用户搜索的词必须收录在微博热词库才能查询到相关结果，微博用户登录后，可在微指数页面设置“定制热词”。
+
+微信指数：没有连接，扫码手机微信打开
+
+[[https://picx.zhimg.com/50/v2-a88073f749c027a2a6e137a6bdda1033_720w.jpg?source=2c26e567]]
+
+特点：立足于微信生态，依托海量用户数据，微信指数具有天生优势。目前仅支持呈现某关键词在7日、30日、90日内的热度变化趋势和最新指数动态。虽然能一定程度上反应微信用户对某一事物的关注度，但有一定滞后性。
+
+搜狗指数： [http://zhishu.sogou.com/](http://zhishu.sogou.com/)
+
+[[https://pica.zhimg.com/50/v2-db47cb72e881506224cde15ca66098c4_720w.jpg?source=2c26e567]]
+
+阿里指数： [https://alizs.taobao.com/?spm=0.0.0.0.yhqwuK](https://alizs.taobao.com/?spm=0.0.0.0.yhqwuK)
+
+[[https://pica.zhimg.com/50/v2-b0f354e260c05c574bf6678d89246b9c_720w.jpg?source=2c26e567]]
+
+淘宝指数16年更新为阿里指数后就不太好用了，一般会用：
+
+1688指数： [http://index.1688.com/](http://index.1688.com/)
+
+[[https://picx.zhimg.com/50/v2-717a7738fcb776d7f909849f44755ace_720w.jpg?source=2c26e567]]
+
+其他指数：
+
+*好搜指数* ： [http://index.haosou.com/](http://index.haosou.com/)
+
+google指数： [http://www.google.cn/trends/?hl=zh-CN](http://www.google.cn/trends/?hl=zh-CN)
+
+推荐阅读：如果连接不能打开，查看相邻发布文章即可
+
+[如何有效的利用指数进行-趋势研究](http://mp.weixin.qq.com/s?__biz=MzIxNzc4MTM1Ng==&mid=100000122&idx=1&sn=5c6712e9a7cf82386d8c5ea4edcb5055&chksm=17f5c47920824d6fe421928c38400d40317e90c044d7c7f8237968781a7c173da83014bc60ef#rd)
+
+[如何有效的利用指数进行-竞品研究](http://mp.weixin.qq.com/s?__biz=MzIxNzc4MTM1Ng==&mid=100000122&idx=2&sn=407867b3e70641f15ee8f8d2dee80bf6&chksm=17f5c47920824d6fd438b2fe3f94b46e0c3056d507ea48b22f7cc2c22a44c69433b902cabdf2#rd)
+
+[如何有效的利用指数进行-营销分析](http://mp.weixin.qq.com/s?__biz=MzIxNzc4MTM1Ng==&mid=100000122&idx=3&sn=aac7d8c6af6b2c6965556c423236877d&chksm=17f5c47920824d6fe9f15f50de6bfbc939f4a0e893e81d90af91a857cd263a6bc525da62b370#rd)
+
+[指数分析工具-除了百度还有……](http://mp.weixin.qq.com/s?__biz=MzIxNzc4MTM1Ng==&mid=100000122&idx=4&sn=d96d54f0256f39356c728c7a2c35385c&chksm=17f5c47920824d6f0013f4f56d1e1c0e81887b1784706defbc0d8dcc27c728b74fca3b36b39a#rd)
+
+来源于： [知乎专栏](https://zhuanlan.zhihu.com/p/27222188)

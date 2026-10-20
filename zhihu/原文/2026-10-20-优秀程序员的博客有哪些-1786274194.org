@@ -1,0 +1,131 @@
+#+TITLE: 优秀程序员的博客有哪些？
+#+LINK: https://www.zhihu.com/question/19934502/answer/1786274194
+#+AUTHOR: 谭庆波
+#+CREATED: 2021-03-18
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+#+begin_quote
+原作者： [@三分恶](https://www.zhihu.com/people/476eb7d1914f122b5135426deba872f7) 
+ 原出处：博客园 
+ 原文链接： [https://www.cnblogs.com/three-fighter/p/13641835.html](https://www.cnblogs.com/three-fighter/p/13641835.html)
+#+end_quote
+
+** 1、美团技术团队
+
+- 地    址: [美团技术团队](https://tech.meituan.com/)
+- 简    介：美团技术团队的博客，干货满满。
+- 推荐指数：⭐⭐⭐⭐⭐
+
+[[https://picx.zhimg.com/50/v2-1f1ccf003a07aba3515413284296afd9_720w.jpg?source=2c26e567]]
+
+** 2、阮一峰的网络日志
+
+- 地    址: [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
+- 简    介：大神阮一峰，博客风格真正做到深入浅出。
+- 推荐指数：⭐⭐⭐⭐⭐
+
+[[https://pic1.zhimg.com/50/v2-82866264b7eff2f3d6edec2e8ce96825_720w.jpg?source=2c26e567]]
+
+** 3、Spring Boot中文导航
+
+- 地    址: [Spring Boot中文导航](http://springboot.fun/)
+- 简    介：汇总了一些比较优秀的Spring Boot博客、开源作品等。
+- 推荐指数：⭐⭐⭐⭐
+
+[[https://pica.zhimg.com/50/v2-1fd28f2fd3c3b77571f0fb034daa7b93_720w.jpg?source=2c26e567]]
+
+** 4、Spring Cloud中文导航
+
+- 地    址: [Spring Cloud中文导航](http://springcloud.fun/)
+- 简    介：汇总了一些比较优秀的Spring Cloud 博客、开源作品等。
+- 推荐指数：⭐⭐⭐⭐
+
+[[https://picx.zhimg.com/50/v2-25c931d797660cbb8ef4c4afb2dd88eb_720w.jpg?source=2c26e567]]
+
+#+begin_quote
+上面两个索引里已经有了一些比较优秀的个人博主的相关博客地址，所以里面出现的个人博客，后面就不再列出了。 
+
+#+end_quote
+
+** 5、Web前端导航
+
+- 地    址: [Web前端导航](http://www.alloyteam.com/nav/)
+- 简    介：比较全的Web前端导航，包括 团队组织 、开发社区 、 前端门户、框架类库 等等网站的导航。
+- 推荐指数：⭐⭐⭐⭐
+
+[[https://picx.zhimg.com/50/v2-541bace02afbbe20c9e60c0239551bfe_720w.jpg?source=2c26e567]]
+
+** 6、Spring For All
+
+- 地    址: [Spring For All](http://www.spring4all.com/)
+- 简    介：目标是做最专业的的民间Sptng组织。
+- 推荐指数：⭐⭐⭐⭐
+
+[[https://pic1.zhimg.com/50/v2-2b55dd112c04d9c7c117b271db1af071_720w.jpg?source=2c26e567]]
+
+** 7、廖雪峰的官方网站
+
+- 地    址: [廖雪峰的官方网站](https://www.liaoxuefeng.com/)
+- 简    介：廖雪峰老师的网站，有一些不错的入门教程。
+- 推荐指数：⭐⭐⭐
+
+[[https://pic1.zhimg.com/50/v2-d09f32a7a161e2ef56f8b4bfcf2f9e4d_720w.jpg?source=2c26e567]]
+
+** 8、bugstack
+
+- 地    址: [bugstack](https://bugstack.cn/)
+- 简    介：博主是京东架构师，产出非常丰富，包括框架、源码、设计模式等。
+- 推荐指数：⭐⭐⭐
+
+[[https://picx.zhimg.com/50/v2-fa431c6c001f7b3c7c9fbc22388f8af7_720w.jpg?source=2c26e567]]
+
+** 9、Java技术驿站
+
+- 地    址: [Java技术驿站](http://cmsblogs.com/)
+- 简    介：有很多不错的Java系列文章。
+- 推荐指数：⭐⭐⭐
+
+** 10、酷壳
+
+- 地    址: [酷壳](https://coolshell.cn/)
+- 简    介：可以了解陈皓，是个很有个性的人。
+- 推荐指数：⭐⭐⭐
+
+[[https://pic1.zhimg.com/50/v2-a4b8baa493f78719fa9ce6ebcdc35ca3_720w.jpg?source=2c26e567]]
+
+** 11、床长人工智能教程
+
+- 地    址: [床长人工智能教程](https://www.captainbed.net/blog-neo/)
+- 简    介：不搞人工智能也可以看看，写的很有意思的教程，可以作为科普看看。
+- 推荐指数：⭐⭐⭐
+
+[[https://pic1.zhimg.com/50/v2-8f2065f66890eeb6194a089a4f243d5d_720w.jpg?source=2c26e567]]
+
+** 12、IT码农
+
+- 地 址: [IT码农 - 一个专注于程序员成长的网站](https://tanqingbo.cn/)
+- 简 介：程序员学习网站，收集了和程序员学习相关的各种教程和资料，主要包括：计算机专业必读经典书籍下载、工具介绍和下载、各种编程语言教程、机器学习教程等。
+- 推荐指数：⭐⭐⭐
+
+[[https://pica.zhimg.com/50/v2-8816b9398a7adf42fef1988bde14d1af_720w.jpg?source=2c26e567]]
+
+** 13、犬小哈教程网
+
+- 地    址: [犬小哈教程网](https://www.exception.site/)
+- 简    介：一些哈士奇的技术问答漫画很有意思。
+- 推荐指数：⭐⭐⭐
+
+[[https://pic1.zhimg.com/50/v2-e9ed1a532a92dcaa3c0ea944a893fbb3_720w.jpg?source=2c26e567]]
+
+** 15、原创技术大联盟
+
+- 地    址: [原创技术大联盟](http://techblog.pub/)
+- 简    介：优秀的技术博主实在太多了，列不完，也看不完，这里有一个导航页，有上百个优秀博主的博客链接，感兴趣的按需去找吧。
+- 推荐指数：⭐⭐⭐
+
+[[https://picx.zhimg.com/50/v2-556cda4ecb1a3dd06dadc7e230d56ac1_720w.jpg?source=2c26e567]]
+
+当然作为一名程序员，除了要阅读优秀的技术博客之外，自己的硬件设备也不能差，这样写起代码来才更加舒服，可以考虑给自己的电脑换一个好用的机械键盘，我写了一篇机械键盘选购指南，大家也可以参考一下：
+
+[https://zhuanlan.zhihu.com/p/360347851](https://zhuanlan.zhihu.com/p/360347851)

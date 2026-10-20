@@ -1,0 +1,655 @@
+#+TITLE: 为什么 CSS 这么难学？
+#+LINK: https://www.zhihu.com/question/66167982/answer/1920506545
+#+AUTHOR: 牛客
+#+CREATED: 2021-06-03
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+CSS难学就一定要抓住重点知识逐个突破，这里分享一篇牛客大佬写的 [CSS 重点知识汇总](https://www.nowcoder.com/discuss/642120?from=zhnkw) ，希望可以帮到大家。
+
+** 目录
+
+1. CSS 权重及引入方式
+2. 标签全部作用
+3. 用CSS画三角形
+4. 元素水平垂直居中的方案
+5. 元素固定宽高
+6. 元素不固定宽高
+7. 元素种类的划分
+8. 盒子模型及其理解
+9. margin塌陷及合并问题
+10. 浮动模型及清除浮动的方法
+11. IFC与BFC
+12. 圣杯布局与双飞翼布局 
+ 圣杯布局 
+ 双飞翼布局
+13. Flex 布局 
+ 容器的属性 
+ 项目的属性
+14. px,em,rem的区别
+15. 媒体查询
+16. HTML5 新特性
+17. 理解 BFC
+18. Grid 布局
+19. 行内元素的间距怎么解决
+20. 伪类和伪元素有什么不同
+
+** 1. CSS 权重及引入方式
+
+CSS权重可以分为四个等级：
+
+- 内联样式，如 style=xxx，权重为 1000
+- id选择器，权值为 100
+- *class、伪类和属性选择器* ，如 .content, :hover, [attribute]，权值为 10
+- *元素选择器和伪元素选择器* ，权值为 1
+
+*需要注意的是：通用选择器(*)，子选择器(>)和相邻同胞选择器(+)并不在这四个等级中，所以它们的权重都为 0* 。
+
+权重大的选择器优先级也越高，相同权重的优先级又遵循后定义覆盖前面定义的情况。
+
+*伪类和伪元素* ：
+
+一个 : 的为伪类: ~:hover~ , ~:focus~ , ~:first-of-type~ , ~:first-child~
+
+两个 :: 为伪元素: ~:: before~ , ~::after~
+
+** 2. <a></a>标签全部作用
+
+1. 超链接
+2. 锚链接
+3. 打电话，发邮件
+
+** 3. 用CSS画三角形
+
+实现原理：
+
+首先来看一下我们平时为一个盒子添加border的情况：
+
+#+begin_src text
+div {
+    width: 100px;
+    height:100px;
+    border: 4px solid blue;
+}
+#+end_src
+
+效果如下：
+
+[[https://pica.zhimg.com/50/v2-e34941ecddbceb1028cb9c67ae9078aa_720w.jpg?source=2c26e567]]
+
+这是我们平时使用 border 最常见的场景——往往只给border一个较小的宽度；然而这样的日常用***让我们对border的形成方式产生误解，即认为border是由四个矩形边框拼接而成的。
+
+然而事实并不是如此。实际上，border是由三角形组合而成的。为了说明这个问题，我们可以增大border的宽度，并为他们设置不同的颜色：
+
+#+begin_src text
+div {
+    width: 100px;
+    height:100px;
+    border: 40px solid;
+    border-color: blue red yellow pink;
+}
+#+end_src
+
+效果如下：
+
+[[https://picx.zhimg.com/50/v2-1dd64f579b0afbbaf3f46fb4d8c68c3e_720w.jpg?source=2c26e567]]
+
+由此我们可以看出，border确实是由三角形组成的。那么我们把元素的内容尺寸设为0会发生什么呢？
+
+#+begin_src text
+div {
+    width:0;
+    height:0;
+    border: 40px solid;
+    border-color: blue red yellow pink;
+}
+#+end_src
+
+效果如下：
+
+[[https://pica.zhimg.com/50/v2-2097de430a6814336d9e4ba69feda2d0_720w.jpg?source=2c26e567]]
+
+这样我们就得到了四个三角形，如果想要其中一个，只需要把另外三个的颜色都设为 transparent:
+
+#+begin_src text
+div {
+    width:0;
+    height:0;
+    border: 40px solid;
+    border-color: transparent red transparent transparent;
+}
+#+end_src
+
+效果如下：
+
+[[https://pica.zhimg.com/50/v2-ba357941314a1554fb3542fb1575802b_720w.jpg?source=2c26e567]]
+
+不过其他隐藏的左边框依然占据着空间，因此我们可以把左边框的 border-width 设为 0 ：
+
+#+begin_src text
+div {
+    width:0;
+    height:0;
+    border-style: solid;
+    border-width: 40px 40px 40px 0;
+    border-color: transparent red transparent transparent;
+}
+#+end_src
+
+** 4. 元素水平垂直居中的方案
+
+*** 1. 元素固定宽高
+
+定位 + 负margin
+
+#+begin_src text
+.wrapper {
+    height: 900px;
+    background-color: gray;
+    position: relative;
+}
+.content {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+.content {
+    position: absolute;
+    /* top-left 相对于第一个 position 不为 static 的父元素的 height-width 定位 */
+    left: 50%;
+    top: 50%;
+    /* 相对于元素自己的 height-width 定位 */
+    margin-left: -200px;
+    margin-top: -200px;
+}
+<div class="wrapper">
+    <div class="content">
+    </div>
+</div>
+#+end_src
+
+*** 2. 元素不固定宽高
+
+方案一：定位 + transform
+
+#+begin_src text
+.wrapper {
+    height: 900px;
+    background-color: gray;
+    position: relative;
+}
+.content {
+    background-color: red;
+    width: 400px;
+    height: 400px;
+}
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 相对于元素的自身宽高进行平移 */
+    transform: translate(-50%, -50%);
+}
+#+end_src
+
+方案二：定位 + margin:auto
+
+#+begin_src text
+.wrapper {
+    height: 900px;
+    background-color: gray;
+    position: relative;
+}
+.content {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+}
+.content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+#+end_src
+
+方案三：display:flex
+
+#+begin_src text
+.wrapper {
+    height: 900px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+}
+#+end_src
+
+方案四：display:table-cell + vertical-align:middle *需要父元素固定宽高*
+
+#+begin_src text
+.wrapper {
+    width: 900px;
+    height: 900px;
+    background-color: gray;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+.content {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+#+end_src
+
+对于display: tabel-cell的元素，height和padding同时设置会出现问题：
+
+- 当padding与内容高度超过设置的高度时，元素的高度取决于padding和内容的高度，最初为元素设置的高度就不生效了；
+- 当padding与内容的高度小于设置的高度时，元素的高度取决于设置的高度；
+
+** 5. 元素种类的划分
+
+CSS元素可分为行内元素，行内块级元素以及块级元素。
+
+行内元素 *设置宽高无效* ，可以 *设置左右外边距，上下外边距无效* 。如：span，a，em，label，strong
+
+行内块级元素可以设置宽高， *可以设置外边距* 。如：img，input，video，audio
+
+块级元素独占一行。如：div，p，ul，li，h1-h6，table，form
+
+通过 display 可以更改元素的表现形式
+
+** 6. 盒子模型及其理解
+
+CSS盒模型包含了元素内容区域（content）、边框（border）、内边距（padding）、外边距（margin）。在标准盒模型中，元素的width和height属性为元素的content的宽高。但是在实践中发现，当我们想要一个固定宽高的盒子，并给元素增加padding之后，元素的实际宽高会变大，需要我们自己去手动修改height和width的值，很不方便。因此在 CSS3 中提供了 box-sizing 属性用来改变标准盒模型。
+
+box-sizing: content-box：元素的height和width为元素content区域的宽高
+
+box-sizing: border-box：元素的height和width为元素 content+padding+border的宽高，当设置padding或border时，内容content会自动缩小
+
+box-sizing: inherit
+
+** 7. margin塌陷及合并问题
+
+margin塌陷： *父子嵌套元素在垂直方向的margin,父子元素是结合在一起的,他们两个的margi会取其中最大的值.*
+
+如下所示：
+
+#+begin_src text
+.parent {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    margin-top: 100px;
+}
+.child {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+<div class="parent">
+    <div class="child"></div>
+</div>
+#+end_src
+
+当给子元素设置 margin-top: 150px 的时候，子元素会带着父元素往下移动50px。
+
+*正常情况下,父级元素应该相对浏览器进行定位,子级相对父级定位。但由于margin的塌陷,父级相对浏览器定位.而子级没有相对父级定位,子级相对父级,就像坍塌了一样* 。
+
+解决方法：
+
+- position:absolute/fixed
+- float:left/right
+- display:inline-block
+- overflow:hidden
+
+这四种方法都能触发BFC，但是使用的时候会带来不同的麻烦，需要根据具体情况解决 margin 塌陷。
+
+margin合并： *两个兄弟结构的元素在垂直方向上的 margin 是合并的*
+
+如下所示：
+
+#+begin_src text
+.div1 {
+    height: 200px;
+    margin: 20px 0;
+    background-color: red;
+}
+.div2 {
+    height: 100px;
+    margin: 10px 0;
+    background-color: blue;
+}
+<div class="div1"> </div>
+<div class="div2"></div>
+#+end_src
+
+div1 与 div2 的之间的 margin 取两者的最大值。
+
+[参考文章](https://www.cnblogs.com/freefy/p/9376684.html)
+
+** 8. 浮动模型及清除浮动的方法
+
+1. 父元素添加 overflow:hidden 
+
+2. 在父元素添加最后一个子元素，并设置 clear:both
+
+#+begin_src text
+<style>
+    .parent p {
+      clear:both
+    }
+    .left {
+      float: left;
+      height: 200px;
+      width: 100px;
+      background-color: red;
+    }
+    .right {
+      float: right;
+      height: 200px;
+      width: 100px;
+      background-color: blue;
+    }
+</style>
+<body>
+  <div class="parent">
+    <div class="left"></div>
+    <div class="right"></div>
+    <p></p>
+  </div>
+</body>
+#+end_src
+
+3. 通过伪元素清除浮动
+
+#+begin_src text
+<style>
+    .parent::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .left {
+      float: left;
+      height: 200px;
+      width: 100px;
+      background-color: red;
+    }
+    .right {
+      float: right;
+      height: 200px;
+      width: 100px;
+      background-color: blue;
+    }
+</style>
+<body>
+  <div class="parent">
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+#+end_src
+
+4. 通过BFC的方式清除浮动
+
+- position:absolute/fixed，不为 static 或 relative
+- float:left/right
+- display:inline-block，table-cell
+- overflow:hidden，scroll，不为 visible
+
+** 9. IFC与BFC
+
+** 10. 圣杯布局与双飞翼布局
+
+圣杯布局与双飞翼布局是为了 *实现一个两侧固定宽度，中间自适应的三栏布局* 。两者需要遵循以下要点：
+
+- 两侧固定宽度，中间自适应
+- 中间部分在DOM结构上优先，以便先行渲染
+- 允许三列中的任意一列成为最高列
+- 只需要使用一个额外的 div 标签
+
+核心是左边的 ~div margin-left:-100%~ 。
+
+[参考文章](https://www.jianshu.com/p/81ef7e7094e8)
+
+除此之外，两者还可以用 flex 布局实现。
+
+*** 圣杯布局
+
+#+begin_src text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      min-width: 500px;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 0 200px 0 150px;
+      overflow: hidden;
+    }
+    .center {
+      background-color: blue;
+      height: 800px;
+      width: 100%;
+    }
+    .left {
+      background-color: yellow;
+      width: 150px;
+      height: 200px;
+      margin-left: -100%;
+      position: relative;
+      left: -150px;
+    }
+    .right {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      margin-right: -200px;
+
+    }
+    .container > div {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="center"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>
+#+end_src
+
+圣杯布局的flex实现：
+
+#+begin_src text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>圣杯布局的flex实现</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+    }
+    .center {
+      background-color: blue;
+      height: 800px;
+      flex: 1;
+    }
+    .left {
+      background-color: red;
+      height: 400px;
+      width: 200px;
+      order: -1;
+    }
+    .right {
+      background-color: yellow;
+      height: 400px;
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="center"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>
+#+end_src
+
+双飞翼布局
+
+#+begin_src text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>双飞翼布局</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-width: 500px;
+    }
+    .left {
+      background-color: red;
+      width: 150px;
+      height: 150px;
+      margin-left: -100%;
+    }
+    .right {
+      background-color: yellow;
+      width: 200px;
+      height: 150px;
+      margin-left: -200px;
+    }
+    .container {
+      width: 100%;
+
+    }
+    .center {
+      margin-left: 150px;
+      margin-right: 200px;
+      height: 300px;
+      background-color: blue;
+    }
+    .column {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container column">
+    <div class="center"></div>
+  </div>
+  <div class="left column"></div>
+  <div class="right column"></div>
+</body>
+</html>
+#+end_src
+
+** 11. Flex 布局
+
+flex 布局意为“弹性布局”，用来为盒模型提供最大的灵活性。任何一个元素都可以指定为 flex 布局。
+
+注意，设为 flex 布局以后，子元素的 ~float~ 、 ~clear~ 、 ~vertical-align~ 属性将失效。
+
+*** 容器的属性
+
+[[https://picx.zhimg.com/50/v2-6cad8dd9fbe252662c6071ba74447f47_720w.jpg?source=2c26e567]]
+
+*项目的属性*
+
+[[https://pic1.zhimg.com/50/v2-02c323dc9e79e0166ecd514b397bcddb_720w.jpg?source=2c26e567]]
+
+** 12. px,em,rem的区别
+
+px：像素px是相对于显示器屏幕分辨率而言的。
+
+em：相对于当前父元素的字体大小
+
+rem：rem相对于根元素设置字体大小
+
+对于只需要适配少部分手机设备，且分辨率对页面影响不大的，使用px即可
+
+对于需要适配各种移动设备，使用rem
+
+** 13. 媒体查询
+
+#+begin_src text
+@media screen and (max-width: 300px) {
+    body {
+        background-color:lightblue;
+    }
+}
+#+end_src
+
+** 14. HTML5 新特性
+
+音频、视频、地理位置、localStorage、sessionStorage
+
+** 15. 理解 BFC
+
+[参考文章](https://zhuanlan.zhihu.com/p/25321647)
+
+更多名企笔试真题解析、面试经验交流、招聘信息内推，尽在牛客！
+
+求职之前，先上牛客！快快下载拿offer！
+
+[牛客APP下载_C++Java前端经典笔试面试题库_牛客网](https://www.nowcoder.com/app?fromPut=zhihu_zhihu)
+
+** 16. Grid 布局
+
+Flex 布局是轴线布局，只能指定” [项目](https://www.zhihu.com/jump/super-jump/word?word=%E9%A1%B9%E7%9B%AE) “针对轴线的位置，可以看作是一维布局。
+
+Grid 布局则是将容器划分为 ”行“ 和 ”列“，产生单元格，然后指定 [项目](https://www.zhihu.com/jump/super-jump/word?word=%E9%A1%B9%E7%9B%AE) 所在的单元格，可以看作是二维布局。
+
+** 17. 行内元素的间距怎么解决
+
+1. 行内元素写在一行，中间不留空格
+2. 父元素 font-size 设为 0
+3. 使用 float
+
+** 18. 伪类和伪元素有什么不同
+
+*伪类用于当已有元素处于的某个状态时，为其添加对应的样式，这个状态是根据用户行为而动态变化的* ，比如说，当用户悬停在指定的元素时，我们可以用:hover来描述这个元素的状态。虽然它和普通的css类相似，可以为已有的元素添加样式，但是 *它只有处于dom树无法描述的状态下才能为元素添加样式* ，所以将其称为伪类。
+
+*伪元素不是 DOM 中的真实元素，但是存在于最终的渲染树中，可以为其添加样式，比如说，我们可以通过：before来在一个元素前增加一些文本* 。
+
+---
+
+[CSS 重点知识汇总_技术交流_牛客网](https://www.nowcoder.com/discuss/642120?from=zhnkw)
+
+如果觉得有用，就给牛妹点个赞吧~ღ( ´･ᴗ･` )比

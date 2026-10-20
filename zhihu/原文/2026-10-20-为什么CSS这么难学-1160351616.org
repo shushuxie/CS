@@ -1,0 +1,122 @@
+#+TITLE: 为什么 CSS 这么难学？
+#+LINK: https://www.zhihu.com/question/66167982/answer/1160351616
+#+AUTHOR: 麻瓜编程
+#+CREATED: 2020-04-17
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+CSS 还是需要多尝试，多踩坑啊，给大家分享一些学习 CSS 的网站和工具，以及一些素材网站，希望可以帮助到大家！
+
+* *[CSS Battle - 在线比拼 CSS]**
+
+[CSSBattle](https://cssbattle.dev/)
+
+在线比拼 CSS,一个挺有趣的竞争性游戏，一共有12个级别，需要你用 HTML和 CSS 100%还原它给出的页面，然后再尽量减少代码，你也可以查看全球的排行榜。
+
+[[https://pic1.zhimg.com/50/v2-f19660d6e34d2562094ba16fab5caa16_720w.jpg?source=2c26e567]]
+
+* *[ Learn CSS Layout -学习 CSS 布局]**
+
+[Learn CSS Layout](http://learnlayout.com/)
+
+在线CSS布局学习，它会一步一步引导初学者学习 CSS 基础知识，在实践中帮助初学者掌握好 CSS 的布局知识，改善初学者对 CSS 的编写习惯和正确方法。
+
+[[https://pic1.zhimg.com/50/v2-f98baedf9a51a782ed4a61a8ce599a8e_720w.jpg?source=2c26e567]]
+
+* *[学习 Flex 布局的小游戏]**
+
+[Flexbox Froggy](http://flexboxfroggy.com/)
+
+一个引导式的学习 flex 布局的游戏，用 flex 布局让青蛙跳到荷叶上就算完成，游戏里面几乎包含了所有常用的属性，这样学习起来很有趣嘞，形象好记忆，谁要是 flex 布局还不熟的话，在这多练练。
+
+[[https://picx.zhimg.com/50/v2-51bf2f173d7ca2e19a8f39346520fa37_720w.jpg?source=2c26e567]]
+
+* *[CSS-Tricks-CSS技巧]**
+
+[CSS-Tricks](https://css-tricks.com/)
+
+这个网站不断的在更新一些关于 CSS 的技巧优秀的教程和技巧，每天都会更新文章。
+
+[[https://picx.zhimg.com/50/v2-f421c5ddafadffdf7fbb0daf9bc1cf0a_720w.jpg?source=2c26e567]]
+
+* *[Codrops-网页设计开发博客]**
+
+[Codrops](http://tympanus.net/codrops/)
+
+发表技术文章和网页教程，提供经验，少踩坑，很多优秀的技术都是从这里来的。
+
+[[https://picx.zhimg.com/50/v2-165bddfe9c6759930f1b44fe27754f86_720w.jpg?source=2c26e567]]
+
+* *[EnjoyCSS-在线CSS代码可视化工具]**
+
+[Online CSS3 Code Generator With a Simple Graphical Interface - EnjoyCSS](https://enjoycss.com/)
+
+在线版的 CSS3 代码生成工具，基于可视化操作，能快速在无编码的环境下调整网页效果和图形样式，就像是在本地使用 PS或 AI 软件一样。
+
+[[https://pic1.zhimg.com/50/v2-180af3b1981a06d101935693ae4a5965_720w.jpg?source=2c26e567]]
+
+* *[CodePen]**
+
+[https://codepen.io](https://codepen.io/)
+
+一个网站前端设计开发平台，针对网站前端代码的一个工具，上面有各种效果的案例特效（炫技），可以在他们的 demo 基础上开发自己的前端设计。
+
+[[https://picx.zhimg.com/50/v2-cc009a8808ed51aadcea9296c8849788_720w.jpg?source=2c26e567]]
+
+* *[Neumorphism-实现新拟态效果]**
+
+[https://neumorphism.io/#55b9f3](https://neumorphism.io/#55b9f3)
+
+可以修改颜色或填写色值，也可以修改尺寸、半径、距离、强度、模糊效果以及形状等参数，同时提供了 CSS 代码可以直接Copy。
+
+[[https://picx.zhimg.com/50/v2-df9132f9d601ba36727a0ebdbf11fa07_720w.jpg?source=2c26e567]]
+
+* *[uiGradients - 分享好看的渐变色]**
+
+[uiGradients - Beautiful colored gradients](https://uigradients.com/#VerBlack)
+
+提供渐变色效果的站点，里面接近上百种渐变配色方案，可根据自己风格来选择搭配，能直接获得对应渐变配色的 CSS 代码。
+
+[[https://picx.zhimg.com/50/v2-52a543aa5fbbc7150310ede6f0ebe349_720w.jpg?source=2c26e567]]
+
+* *[HTML5 + CSS 3 免费模版]**
+
+[HTML5 UP](https://html5up.net/)
+
+提供大量的 HTML5 模版，用户可以自己分享和修改模版。
+
+[[https://picx.zhimg.com/50/v2-9e5880c454f36f3edaf5ee585e761351_720w.jpg?source=2c26e567]]
+
+* *[ICONSVG-在线自定义设计SVG图标素材]**
+
+[Find, customize & generate common SVG icons for your project](https://iconsvg.xyz/)
+
+是一个在线可自定义设计 SVG 图标的网站，前端设计师找到想要的图标素材，这些图标素材都是常用图标，可以点击官方提供的素材进行二次设计，同时也可以把设计好的图标导出。
+
+[[https://picx.zhimg.com/50/v2-fdf95d41ee36b8cd59c5a5990ac3b68e_720w.jpg?source=2c26e567]]
+
+* *[OpenMoji-免费表情符号库]**
+
+[OpenMoji](https://www.openmoji.org/)
+
+提供源代码的，可以免费下载使用。
+
+[[https://picx.zhimg.com/50/v2-5e06465f8b94255fe8feba2abe012866_720w.jpg?source=2c26e567]]
+
+* *[Share Icon - 免费矢量素材图库]**
+
+[Share Icon - more than 250.000 free icons](https://www.shareicon.net/)
+
+提供超过25万中 ICON 矢量图片素材的站点，120多种分类，所有的素材都提供PNG、SVG格式，素材有多种尺寸 512*512、256*256、128*128、64*64、32*32、16*16 等，非常适合前端设计师收藏备用。
+
+[[https://picx.zhimg.com/50/v2-47acebd9b5aed8aff28e736b1e6da682_720w.jpg?source=2c26e567]]
+
+---
+
+你还在低效努力吗？
+
+用 Python 提升效率，4 小时工作 20 秒完成
+
+《Python 效率 Up 计划》新课发布会，点击免费参加
+
+[Python 效率 Up 计划新课发布会](https://ke.study.163.com/topic/mugglecode/mg_fbh_gzh.html)
