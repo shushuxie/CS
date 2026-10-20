@@ -1,0 +1,103 @@
+#+TITLE: 有哪些鲜为人知的网络冷知识和技巧？
+#+LINK: https://www.zhihu.com/question/31008989/answer/210853403
+#+AUTHOR: 吕俭SVM
+#+CREATED: 2017-08-08 17:53:00
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+赞数还没的收藏一半多....
+
+不知道算不算“鲜为人知”，不过应该偏冷门。
+
+以下肯定能对你有用
+
+*一.不错的搜索引擎 [Shodan](https://www.shodan.io/)*
+
+用来搜索网络空间中在线设备，可用于帮助发现主要的互联网系统漏洞（包括路由器，交换机，工控系统等）
+
+Shodan能找到的设备：
+
+1.服务器 
+ 2.路由器 
+ 3.交换机 
+ 4.公共ip的打印机 
+ 5.网络摄像头 
+ 6.加油站的泵 
+ 7. Voip电话和所有数据采集监控系统
+
+.....
+
+Shodan能做的：
+
+1.用户搜索制定的项目 
+ 2.Shodan寻找端口并拦截数据 
+ 3.Shodan为拦截的数据设置索引 
+ 4.显示结果
+
+......
+
+关于详细的介绍和用法：
+
+[https://www.exploit-db.com/docs/33859.pdf](https://www.exploit-db.com/docs/33859.pdf) （英文版）
+
+[Shodan搜索引擎介绍 | 邪恶十六进制](http://www.evil0x.com/posts/893.html) （中文版-原文来自乌云知识库）
+
+使用实例：
+
+[xiaix&amp;amp;amp;amp;amp;amp;#x27;s Blog](http://xiaix.me/shodan-xin-shou-ru-keng-zhi-nan/)
+
+希望对你们有用。
+
+*二.网页快照可删除*
+
+如果自己在网上到处留过个人信息，即使自己主动删除了，也可能会留有网页快照。
+
+如何删除？投诉就行，一般三天之内就能删除。理由写泄露个人隐私。
+
+1. 百度投诉地址： [百度用户服务中心-百度搜索-用户反馈](http://help.baidu.com/webmaster/add)
+2. 搜狗投诉地址： [个人反馈](http://fankui.help.sogou.com/index.php/web/web/index?type=4)
+3. Google投诉地址： [https://support.google.com/websearch/troubleshooter/3111061?hl=zh-Hans](https://support.google.com/websearch/troubleshooter/3111061?hl=zh-Hans)
+4. 必应： [Request Form to Block Search Results in Europe](https://www.bing.com/webmaster/tools/eu-privacy-request?from_33lc.com) （有点麻烦）
+5. 360： [快照删除申请_360搜索](http://info.so.com/cache_remove.html)
+
+一般在百度和Google投诉就够了
+
+*三.虚拟电话号码*
+
+可以一定程度上防信息泄露或者骚扰
+
+目前比较正规的app有：
+
+1. [阿里小号-阿里通信](https://aliqin.tmall.com/xiaohao_intro.htm?spm=a1z2p.7404678.a1zll.4.64eee3f0y2wac9)
+2. [天翼小号 贴心上线](http://shop.xj.189.cn:8084/cms/2016/tyxh20160926_wap_xh.html)
+
+阿里的用过，还行
+
+*四.Google相册实际上是不限存储空间的*
+
+*五.macOS上不少需要注册码才能使用的软件，其实许多注册码是可以重复使用的....*
+
+*六.有不少磁力云播网站，可以在线观看....*
+
+网站我就不放了，搜索引擎能找到
+
+[[https://pic1.zhimg.com/50/v2-6b3c749fdcfff22dd5dc88062fe0c36d_720w.jpg?source=2c26e567]]
+
+*七.临时邮箱*
+
+即可丢弃式邮箱
+
+比较常规的有：
+
+1. [https://10minutemail.net/?lang=zh](https://10minutemail.net/?lang=zh)
+2. [YOPmail : 临时、匿名的免费邮箱地址](http://www.yopmail.com/zh/)
+3. [NowMyMail](http://www.nowmymail.com/)
+4. [Disposable Temporary Email Addresses](http://mailcatch.com/en/disposable-email)
+5. [Mailinator](http://www.mailinator.com/)
+6. [Jetable.org - Home](http://www.jetable.org/zh/index)
+7. [Incognito Mail - Temporäre E-Mail-Adressen](http://www.incognitomail.com/)
+
+在论坛访问一些帖子时，有时需要注册才能访问，可以用到
+
+当然还有更多的用途... 
+ 说到论坛，一般论坛下载资源都需要金币一些的玩意儿，不妨先去某宝看看，一般一两块钱能买好多金币账号

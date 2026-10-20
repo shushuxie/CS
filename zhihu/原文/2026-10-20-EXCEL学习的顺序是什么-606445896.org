@@ -1,0 +1,243 @@
+#+TITLE: EXCEL学习的顺序是什么？
+#+LINK: https://www.zhihu.com/question/29086276/answer/606445896
+#+AUTHOR: 指北针
+#+CREATED: 2019-02-23 19:30:24
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+*** 干货预警！使用Excel也有几年了，把自己学习Excel的经历整理出来了，并且做成了课程，分享给大家，希望能帮到大家~
+
+#+begin_quote
+另外我录制的关于Excel的免费课程，也分享给大家： 
+ 01 [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseMain.htm?share=2&shareId=400000000690013&courseId=1208938801&_trace_c_p_k2_=4f3fb0655fe7410dbd8fbdd5fb05a2b4) 
+ 未经允许，禁止转载。
+#+end_quote
+
+将Excel划分成几个部分来进行系统学习，如：软件操作、函数进阶、图表基础、数据透视表、实战应用、VBA编程，因为VBA涉及的知识点就比较复杂了，会单独更新，先来看下学习的大纲。
+
+[[https://pica.zhimg.com/50/v2-9d175a5a16f46040593d2940b4f427f8_720w.jpg?source=2c26e567]]
+*Excel技能树*
+
+将从上面整个大纲来给大家罗列知识点、学习内容、需要掌握的程度。
+
+*** 01 软件基础操作
+
+软件基础操作是学习Excel的第一步，也是最重要的一步，软件操作不熟练，在使用Excel的时候回碰上很多问题，甚至别人给了解答，也看不懂怎么操作，知识点：排版、单元格、数据验证/筛选/分列、序列、查找替换、文件保护/打印等等。
+
+*1.1 排版相关*
+
+排版所涉及的知识点会比较零散，不过都是一些常用的操作：单元格合并/拆分/隐藏、新增/删除行、单元格样式、格式刷等。
+
+[[https://picx.zhimg.com/50/v2-519995c0ed6f03426d8c1e45cb36fc33_720w.jpg?source=2c26e567]]
+*知识点*
+
+排版相关的操作对大部分同学来说，上手非常容易，但是要排版出好看的Excel表格，仍然需要耗费大量的时间来练习，并且平时注重对优秀文档的收集、理解。
+
+[[https://picx.zhimg.com/50/v2-3f34939d6973c915ad1a46fa2d2d6bfc_720w.jpg?source=2c26e567]]
+*知识点掌握程度*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278406633&courseId=1208938801)
+
+*1.2 单元格格式*
+
+单元格格式是大部分Excel使用者都会忽略掉的知识点，看起来平平无奇，但是在关键时刻总能帮我们快速定位问题。大部分的Excel文件都存在数据不规范，明明计算出来的结果跟显示的结果天差地别，但是就是找不到问题在哪里，这个时候往往需要单元格格式背锅。
+
+知识点： *几种常用的单元格格式符号、条件格式、强制查询字符*
+
+[[https://pic1.zhimg.com/50/v2-9f4fa3f198d9600df0827fc793163bae_720w.jpg?source=2c26e567]]
+*单元格格式知识点*
+
+这一节课主要需要掌握各种单元格格式之间的转换，可以完成日常常用数据的快速修正显示，如下图所示：
+
+[[https://pic1.zhimg.com/50/v2-b5d25e095ac17557420f12c16338c7e4_720w.jpg?source=2c26e567]]
+*单元格格式掌握知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278436141&courseId=1208938801)
+
+*1.3 数据分列/验证*
+
+数据分列主要出现在Excel数据清洗阶段，这个知识点也是大部分Excel使用者的盲区，数据分列除了用来拆分数据之外，还可以用来规范数据，将假数据转换成真数据，知识点如下：
+
+[[https://pic1.zhimg.com/50/v2-98b8fa3ad6db3085e91507d23d9dafc3_720w.jpg?source=2c26e567]]
+*数据分列知识点*
+
+数据分列中包括：分隔符分割、固定宽度分割两种分割方式，并且支持将数据导出到其他表格，利用该知识点可以轻易完成下面的操作。
+
+[[https://picx.zhimg.com/50/v2-db782b0da18b3f6be9fdf053da55f3da_720w.jpg?source=2c26e567]]
+*数据分列功能*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278445308&courseId=1208938801)
+
+*1.4 序列填充*
+
+序列填充的知识点主要有：填充句柄、填充等差序列、填充等比序列、填充日期序列、填充格式、Ctrl+E智能填充，主要知识点也给大家罗列出来了。
+
+[[https://picx.zhimg.com/50/v2-6107393aca867796a6c1f351c238453d_720w.jpg?source=2c26e567]]
+*序列填充知识点*
+
+对于大部分同学来说，只会填充最基础的序列，如1,2,3,4,...，其实序列填充能做很多非常强大的事情，如：
+
+[[https://pic1.zhimg.com/50/v2-f70374c6a73bf30989ab071cb952b3e8_720w.jpg?source=2c26e567]]
+*序列填充*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278454233&courseId=1208938801)
+
+*1.5 查找与替换*
+
+Ctrl+F和Ctrl+H大部分同学都非常熟悉，相信很多同学在Office中也用过这两个快捷键（查找与替换），但是大部分同学只使用过最简单的查找替换。其实在Office中是能查找替换格式的，并且支持通配符*和?查询，知识点可以看下下方：
+
+[[https://picx.zhimg.com/50/v2-efd6e9e1e413b6d8a40247e81a04081b_720w.jpg?source=2c26e567]]
+*查找替换知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278458391&courseId=1208938801)
+
+*1.6 文档保护/打印*
+
+文档保护/打印在办公中非常常见，常见的文档保护类型有：工作表保护、工作簿保护，对于打印来说，大部分同学也非常不熟悉，在办公室打印的时候经常会浪费纸张，并且效率非常低，这一块也是Excel进阶必学的技能，知识点如下：
+
+[[https://pic1.zhimg.com/50/v2-31a55d84e833de063e7d6452900a8d11_720w.jpg?source=2c26e567]]
+*文档保护/打印知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278480003&courseId=1208938801)
+
+*** 02 Excel函数篇
+
+*2.1 常用的数学函数*
+
+Excel中的数学函数有几十个，但是大部分对我们的日常工作来说都是用不着的，掌握最常用的几个就行：SUM、SUMIF、SUMIFS、ROUND、MOD、INT和引用，知识点如下：
+
+[[https://pica.zhimg.com/50/v2-0a8f40815614d3186e859688c1dd5e5a_720w.jpg?source=2c26e567]]
+*数学函数知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278486425&courseId=1208938801)
+
+*2.2 常用的逻辑函数*
+
+逻辑函数是Excel效率最高的函数，并且数量也不多，但是非常的有效，最常用的逻辑函数主要有：IF、IFS、AND、OR、NOT和6个逻辑符号。
+
+[[https://pica.zhimg.com/50/v2-8a1452b4cdc546f8348edd45a98a9fa9_720w.jpg?source=2c26e567]]
+*逻辑函数知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278511223&courseId=1208938801)
+
+*2.3 常用的时间/日期函数*
+
+时间函数虽然在Excel中用的不多，但是在合同中使用的效率非常高，常用的时间/日期函数有：DATE、YEAR/MONTH/DAY、TODAY/NOW、DATEDIF、EOMONTH和常用的时间计算法则，知识点如下：
+
+[[https://picx.zhimg.com/50/v2-ad566c3bad929d35cde63947c235fa86_720w.jpg?source=2c26e567]]
+*时间/日期函数知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278513423&courseId=1208938801)
+
+*2.4 查找与引用函数*
+
+查找与引用函数在Excel使用的频率非常高，如：MATCH、INDEX、ROW/COLUMN、VLOOKUP，需要掌握几个函数的综合应用，VLOOKUP单条件、多条件、反向、返回多列查询等多种应用技巧，知识点如下：
+
+[[https://picx.zhimg.com/50/v2-ec1fddb22e25b4a9f44e7a9ed45986ed_720w.jpg?source=2c26e567]]
+*引用函数知识点*
+
+[[https://picx.zhimg.com/50/v2-58a1358c2b5b025330cf4cea23c6b7a5_720w.jpg?source=2c26e567]]
+*VLOOKUP知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278552111&courseId=1208938801)
+
+*2.5 常用的文本类函数*
+
+文本函数在Excel中用来匹配字符串出现的位置，其中SEARCH函数配合通配符可以快速查找某种类型的数据，MID/LEFT/RIGHT函数可以用来快速截取数据中的某部分，知识点如下：
+
+[[https://picx.zhimg.com/50/v2-a8fd5d7bb7a3d42922674aea08b0b4e2_720w.jpg?source=2c26e567]]
+*文本函数知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278558205&courseId=1208938801)
+
+*2.6 数组公式*
+
+数组公式是大部分Excel使用者的知识盲区，数组配合公式能快速将中间步骤给省略掉，写更少的公式，用更少的数据就能完成更多的需求，数组的知识点有：数组的基本形式、多个单元格的数组公式、单个单元格的数组公式。
+
+[[https://picx.zhimg.com/50/v2-5efb4268e80dada7e2017445c5723442_720w.jpg?source=2c26e567]]
+*数组公式知识点*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278543792&courseId=1208938801)
+
+当然还有一个非常好的函数学习途径，就是微软官方提供的函数支持，每个函数都有详细的说明和案例.
+
+#+begin_quote
+链接： [公式和函数 - Excel](https://support.office.com/zh-cn/article/%E5%85%AC%E5%BC%8F%E5%92%8C%E5%87%BD%E6%95%B0-294d9486-b332-48ed-b489-abe7d0f9eda9?ui=zh-CN&rs=zh-CN&ad=CN#ID0EAABAAA=More_functions)
+#+end_quote
+
+可以根据函数的种类或者名称来进行查询，如下：
+
+[[https://picx.zhimg.com/50/v2-36b9c249be7c2658a0a340d40814a3ca_720w.jpg?source=2c26e567]]
+*函数说明*
+
+官方的资料是最准确无误，并且是更新最及时的，如果平时遇到不了解的函数，不妨查阅下官方的资料，30%左右的函数配有小视频讲解，一分钟可以快速掌握一个函数。
+
+*** 03 图表基础
+
+*3.1 图表基础知识*
+
+Excel中的图表很多种，常用的主要有：柱形图、折线图、饼图、条形图、散点图、气泡图，除了掌握这几种图表之外，图表的组成元素，也需要学会如何添加、删除、排版、设置样式，主要知识点如下：
+
+[[https://picx.zhimg.com/50/v2-fef820accfcfed6a43561e2b1fc40e05_720w.jpg?source=2c26e567]]
+*图表基础知识*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278558511&courseId=1208938801)
+
+*3.2 动态图表基础*
+
+Excel中的动态图表，可以通过插入组件、数据透视表、切片器、筛选来完成，使用动态图表能增强交互效果，对于追求Excel高效率表达数据的同学来说，动态图表也是必学的。
+
+[[https://pic1.zhimg.com/50/v2-1f461db3ba579431a945a19a28a66f25_720w.gif?source=2c26e567]]
+*动态图表-案例1*
+
+[[https://pica.zhimg.com/50/v2-b2aa7967d3149262ccf7da00cccff626_720w.gif?source=2c26e567]]
+*动态图表-案例2*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278572110&courseId=1208938801)
+
+*** 04 数据透视表
+
+4.1 数据透视表基础
+
+数据透视表的基础包括：创建/删除透视表、四维布局、切片器、透视图表，数据透视表存在的意义就是帮助使用者进行快速数据分析，往常我们需要使用函数、筛选或者其他方式来进行数据分析，非常的繁琐，而使用数据透视表就可以快速完成，例如下面的需求，使用透视表就可以快速完成。
+
+[[https://pic1.zhimg.com/50/v2-799e86c19abfc49d048b6a88c4d338ae_720w.jpg?source=2c26e567]]
+*透视表-需求*
+
+[[https://pic1.zhimg.com/50/v2-364ff2cbfb0f528fbbd209d6ff8e03ba_720w.jpg?source=2c26e567]]
+*透视表快速需求*
+
+学习传送门： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278571585&courseId=1208938801)
+
+当然数据透视表也有一个官方非常好的学习渠道，虽然是比较基础，好在都是视频讲解，对数据透视表零基础的人来说，是一个不错的入门途径。
+
+[官方参考：创建数据透视表以分析工作表数据](https://support.office.com/zh-cn/article/%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86%E8%A1%A8%E4%BB%A5%E5%88%86%E6%9E%90%E5%B7%A5%E4%BD%9C%E8%A1%A8%E6%95%B0%E6%8D%AE-a9a84538-bfe9-40a9-a8e9-f99134456576)
+
+*** 05 实战案例（暂时更新2个）
+
+实战案例在这里就不贴图了，一个是邮件合并、一个是员工考勤表。邮件合并是HR最常用的一个技巧，利用邮件合并功能来快速群发邮件工资条，而员工考勤表则会涉及到多个函数的综合应用。
+
+点击传送门即可参与学习： [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseLearn.htm?courseId=1208938801&share=2&shareId=400000000690013#/learn/video?lessonId=1278582102&courseId=1208938801)
+
+*暂时分享这么多，持续更新中～*
+
+我的其他关于Excel的回答，可以看下哦，都是非常有用的资料：
+
+- [你用过哪些强大的快捷键？](https://www.zhihu.com/question/276786944/answer/560097467)
+- [有哪些实用的 Word、PPT 和 Excel 小技巧？](https://www.zhihu.com/question/35295574/answer/557415626)
+- [Excel 有哪些可能需要熟练掌握而很多人不会的技能？](https://www.zhihu.com/question/21758700/answer/556112975)
+- [Excel 有什么好用的技巧，让你相见恨晚？](https://www.zhihu.com/question/27720960/answer/553172799)
+- [Excel 有什么好用的技能，可以让人眼前一亮？](https://www.zhihu.com/question/301235411/answer/551444603)
+- [你见过最漂亮的 Excel 表格什么样？](https://www.zhihu.com/question/56375334/answer/581751002)
+- [excel 键盘操作技巧有哪些？](https://www.zhihu.com/question/25671374/answer/605521894)
+- [Excel 有什么神奇用途？](https://www.zhihu.com/question/26619945/answer/592255244)
+
+课程总链接传送门，所有的资料都可以在下方进行下载：
+
+- [【训练营】职场Excel零基础入门 - 网易云课堂](https://study.163.com/course/courseMain.htm?share=2&shareId=400000000690013&courseId=1208938801&_trace_c_p_k2_=d261f6c3e3394fcea7b2a656d72e32a5)
+
+#+begin_quote
+未经允许，禁止转载。
+#+end_quote
+
+** 如果觉得有用，点个赞再走呗~持续更新哦！！

@@ -1,0 +1,105 @@
+#+TITLE: 那些复杂的折纸艺术是怎么想到的？
+#+LINK: https://www.zhihu.com/question/24051788/answer/38771338
+#+AUTHOR: D Flip Flop
+#+CREATED: 2015-02-03 11:35:22
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+占坑稍后开电脑答（
+
+[@许肯](https://www.zhihu.com/people/f5aa47757c727dad90607836e9d3e30e)
+
+这也能有一个赞？）
+
+===================================
+
+折纸设计的基本流程是这样的
+
+[[https://pica.zhimg.com/50/8687034d31a8f87e1c5e5bc9cc67d218_720w.jpg?source=2c26e567]]
+
+第一步是最简单的，第三步有些经验的人也很容易做到
+
+第二步要将树的特征和纸的特征组合起来，通常是需要些“奇技淫巧”了
+
+首先是纸的特征，看一看折到Base之后再展开的纸会是什么样子
+
+[[https://picx.zhimg.com/50/7f4b002bf085bfc3402d0fe96862867c_720w.jpg?source=2c26e567]]
+
+左图称为Crease Pattern，或叫CP图，由于Base通常仍然是平面结构（如果不是则下面的规律可能不适用），CP图有几个显著特征
+
+- 可用两种颜色着色
+- 对于折痕线上的每个点，与之相连的峰线数M和谷线数V满足$\left| M-V \right| = 2$。
+
+[[https://pic1.zhimg.com/50/fa797dbf6de3432ffa33a8b9dae0c94f_720w.jpg?source=2c26e567]]
+
+- 对于矩形内部的折痕线交点，围绕它的角的交错和为零，即下图中$<1 - <2 + <3 - <4 + <5 - <6 = 0$
+
+[[https://pica.zhimg.com/50/bc1acfa493dc35ce648c8d81e2c086e6_720w.jpg?source=2c26e567]]
+
+- 另外还有一个纸的特征是从CP图上看不出的，纸层不能相互穿透
+
+[[https://pica.zhimg.com/50/5b73635f7f179153bf911f2097bcf000_720w.jpg?source=2c26e567]]
+
+
+
+
+上面我暂时叫它们“CP构造基本规则”吧
+
+==================================================================
+
+接下来的 *设计方法* 就是最重要的
+
+设计方法里最重要的是 *树状设计*
+
+*一、圆圈法*
+
+树的一个叶子分支是由纸上一个区域构成的
+
+[[https://pica.zhimg.com/50/a1fd96ec1f61260b2375487b1d12eea6_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/ed310dbca244c05994c8a92e1482dad9_720w.jpg?source=2c26e567]]
+
+这个区域是一个圆的外切多边形，在设计中我们通常只关注这个圆
+
+另外树的枝干，在设计中，我们就关注两条由平行线或同心圆弧构成的“河流”
+
+比如通过11个圆和三条“河流”就可以设计如下的昆虫折纸（注意这里的分支J在最后的整形中被压平了所以看不太出）
+
+[[https://pic1.zhimg.com/50/b0ac47207724e676ae9989de0c4e2d07_720w.jpg?source=2c26e567]]
+
+至于如何由圆圈与河流画CP，参见上面的CP构造规则
+
+以上所有图片来自
+
+[Robert Lang: The math and magic of origami](http://www.ted.com/talks/robert_lang_folds_way_new_origami)
+
+*二、蛇腹法*
+
+（以下的图出处我不记得了，知道的告诉我一下）
+
+由于我们用的是矩形纸，在矩形里填圆似乎还有些难度，那么在矩形里填矩形就是自然而然的想法了
+
+于是叶子分支变成了正方形，枝干变成了平行四边形或直角梯形组成的“直角河流”，为了不破坏CP图的规则，通常使折痕线之间成直角或45度角，也就是要画格子，所有的正方形边长和河流宽度都是整数个格子
+
+[[https://picx.zhimg.com/50/319efacaa39b97ca60138d76ee93da74_720w.jpg?source=2c26e567]]
+
+于是可以画出CP
+
+[[https://picx.zhimg.com/50/68ab341f2076a50fdf08e1780b158d64_720w.jpg?source=2c26e567]]
+
+并折出实物
+
+[[https://picx.zhimg.com/50/57b1bf23c579b78df275cd0a129ba4bd_720w.jpg?source=2c26e567]]
+
+
+
+
+因为这种画格子的方法比较简单，折出来的形状也是方方正正的，可以用来折字（其实是我就只会折字_(:з」∠)_，要看真东西的找楼下@Milo Yip）
+
+[[https://picx.zhimg.com/50/3b34efb9cfd457b5e216ffe3fb3c1d53_720w.jpg?source=2c26e567]]
+
+=========================================================================
+
+实际中两种方法是综合运用的，比如用圆圈法设计的千纸鹤，可以用蛇腹法改造，加上尾羽
+
+[[https://pic1.zhimg.com/50/82b461ee0313c2087f689939cb812679_720w.jpg?source=2c26e567]]

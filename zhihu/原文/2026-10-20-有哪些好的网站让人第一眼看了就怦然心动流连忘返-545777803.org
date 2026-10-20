@@ -1,0 +1,147 @@
+#+TITLE: 有哪些好的网站，让人第一眼看了就怦然心动，流连忘返？
+#+LINK: https://www.zhihu.com/question/26380791/answer/545777803
+#+AUTHOR: 利兄
+#+CREATED: 2018-12-05 15:18:17
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+分享几个个神奇的网站，不仅很神奇，还很实用，第一次发现的时候，我就“心动了”。
+
+如果你也喜欢，记得点个赞哦。
+
+** [第一个网站  Weavesilk](http://weavesilk.com/)
+
+weavesilk是一个 *光线的绘画* 网站，可以用鼠标绘制一些简单但是很科幻的图。
+
+如果你功底好，那你画出来的就太酷了。
+
+[[https://pic1.zhimg.com/50/v2-3f113ce114cd38c103605a542679783d_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-6a099957ba570e5bd3a0d164639336b1_720w.jpg?source=2c26e567]]
+
+## 
+
+
+** [第二个网站 WordArt](https://wordart.com/)
+
+这是一个文字云生成的网站，我给好多人推荐过，大家都非常喜欢，它可以将一些文字自动排版成图形。
+
+[[https://pic1.zhimg.com/50/v2-631cdb95984dfaaed5dd79f9c763a6f1_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-a7cb81e04b0e2a203af9f3275e307e62_720w.jpg?source=2c26e567]]
+
+** [第三个网站 SmallPDF](https://smallpdf.com/)
+
+这是一个PDF处理网站，我们可以将pdf文件导出PPT文件，可以将PDF文件进行编辑，压缩和加密。
+
+[[https://picx.zhimg.com/50/v2-bca5f1a07b74e3a056a9f89d98608cbe_720w.jpg?source=2c26e567]]
+
+## 
+ [第四个网站 Mosh](https://getmosh.io/)
+
+MOSH *，* 这是一个故障效果的生成网站。什么事故障效果呢，你在一些悬疑电影或者电视剧里应该会经常看到，比如，电视监控画面突然出现了故障，屏幕模糊，一闪一闪的。
+
+[[https://pic1.zhimg.com/50/v2-ccba9bfcac94d9b945f1cb024dd8058d_720w.gif?source=2c26e567]]
+
+
+ 这个网站的首页是这样的，非常简洁，点击左侧的USE image File可以上传图片。
+
+[[https://picx.zhimg.com/50/v2-1935bafbf1a103f008b37a23e2f97934_720w.jpg?source=2c26e567]]
+
+
+ 上传之后，右侧我们可以看到许多的故障效果，有像素化，摇晃，点矩阵、坏电视等等效果。
+
+[[https://picx.zhimg.com/50/v2-f0fc07010eba18e74c0966ba689aabdd_720w.jpg?source=2c26e567]]
+
+点击mosh可以随机生成，在页面左上角，还可以切换为录像形式，点下record可以进行录制，录制完为GIF的动图。
+
+[[https://picx.zhimg.com/50/v2-99fefa0ce06ef54b6ff2a0ba3f062eb7_720w.gif?source=2c26e567]]
+
+** [第五个网站geektyper](http://geektyper.com/)
+
+geektyper *，* 这是模拟黑客电脑界面的网站。相信很多人都有一个黑客的梦想，看到电影里那些黑客们敲击着键盘，电脑屏幕快速走动的代码，那就一个酷。
+
+这个网站就可以让你体会一次当黑客的感觉，你只要随便敲打键盘，就会不断有代码飞快显出，是不是非常酷。
+
+[[https://picx.zhimg.com/50/v2-dce2b93d851a2fe9fa028cb9e77397bc_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-ae564615e2127873e4c64a8de74a5398_720w.gif?source=2c26e567]]
+
+## 
+ 
+ 
+ [第六个网站、Bigjpg](http://bigjpg.com/)
+
+
+ 这是一个图片高清化处理的网站，可以将一些比较模糊的图片，进行高清化的处理。
+
+在设计的时候，我们经常会用一些自己的素材，而这些素材很多可能已经很模糊了，这个时候，打开这个网站就对了
+
+还记得一些电影中的场景吗？
+
+一张破旧模糊的老照片，经常成为破案的线索，靠的就是图片的还原技术。
+
+首先打开网站，上传一张照片。
+
+[[https://picx.zhimg.com/50/v2-f4f34c66f9e309b26d44fec7e271e042_720w.jpg?source=2c26e567]]
+
+点击开始，就会跳出一个窗口，我们可以对优化的参数进行一个选择。主要有图片类型，放大倍数，还有降噪程度三个选项。
+
+
+ 选择好之后，点击确定，然后稍等一会，大概1-2分钟，等优化完成就可以点击下载了。
+
+[[https://pic1.zhimg.com/50/v2-ce3e23302822eb7276117112ff86bded_720w.jpg?source=2c26e567]]
+
+** [第七个网站Stars-Emmision](https://wangyasai.github.io/Stars-Emmision/)
+
+*这是一个放射图片的生成网站。*
+
+打开网站之后，首页如下，我们可以在右侧设置它的各种参数，包括 *颜色，速度，点的尺寸，放射的方向* 等。
+
+[[https://pic1.zhimg.com/50/v2-e114ab19ce65dd64f1ee04c06dfb829a_720w.jpg?source=2c26e567]]
+
+
+ 设置完之后，点击保存，图片就已经下载了。下载之后，我们将它放在PPT里面作为背景，效果非常赞。
+
+[[https://pic1.zhimg.com/50/v2-1f7fb0a81142d9c459b53fc9fbd3824d_720w.jpg?source=2c26e567]]
+
+** [第八个网站Flat Surface Shader](http://matthew.wagerfield.com/flat-surface-shader/)
+
+这是一个在线制作 *lowpoly背景* 的网站，我们可以直接调节低面的多个参数来实现我们想要的效果，操作非常简单，用来做ppt的背景非常棒。
+
+[[https://picx.zhimg.com/50/v2-f4476e7fb964af8eade3dc62a875f5e9_720w.gif?source=2c26e567]]
+
+** [第九个网站ShapeFactory](https://shapefactory.co/)
+
+这是一个非常酷的图片滤镜网站，非常非常酷。你只要上传一张图片，它就可以 *将图片生成炫酷的色调风格。*
+
+[[https://picx.zhimg.com/50/v2-1901947b33713b1dcf775fcb111f154c_720w.jpg?source=2c26e567]]
+
+这种图片处理方法，在一些海报设计中，经常会见到。Duotone使用起来非常方便，我们点击右上角可以上传图片（直接将图片拖进去也可以）。
+
+[[https://picx.zhimg.com/50/v2-ad7749da5d5553b7b30714301ec38fb4_720w.gif?source=2c26e567]]
+
+
+ 我们用这种风格，随便做一页，大家看一下，效果是不是还不错。
+
+[[https://picx.zhimg.com/50/v2-70b7dcc79837152de56f80c1e57f87c6_720w.jpg?source=2c26e567]]
+
+就这些，看完有没有喜欢上。
+
+**各位知友，喜欢记得点个赞哦。**
+
+PS：我是利兄，与PPT打交道有5年了，本文首发 *利兄日志（lixiongppt）* ，一个我分享PPT教程的自留地。
+
+[[https://pic1.zhimg.com/50/v2-68f7b231ffd11b0d0e8431efe83a55e7_720w.jpg?source=2c26e567]]
+
+**其它很酷的网站：**
+
+[哪里可以下载 PPT 中常用的透明背景 PNG 图片？](https://www.zhihu.com/question/309786320/answer/643655515)
+
+[有哪些相见恨晚的PPT模板网站？](https://www.zhihu.com/question/22762525/answer/180603287)
+
+**P圈高赞回答：**
+
+[PowerPoint 到底有多厉害？](https://www.zhihu.com/question/27666000/answer/520481975)
+
+[有没有一个 PPT 技巧让自己觉得人生都亮了？](https://www.zhihu.com/question/21638597/answer/544176795)

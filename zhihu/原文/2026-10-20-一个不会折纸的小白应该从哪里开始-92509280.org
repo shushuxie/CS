@@ -1,0 +1,151 @@
+#+TITLE: 一个不会折纸的小白应该从哪里开始？
+#+LINK: https://www.zhihu.com/question/41600472/answer/92509280
+#+AUTHOR: 崔李辉
+#+CREATED: 2016-03-27 12:04:04
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+不知题主怎么界定入门这个程度？我就按照自己理解的折纸进阶之道介绍一下。
+
+网上有大量折纸网站和论坛，我可以找出一堆链接放这里。但是选择太多反而不利于行动，所以我觉得最好是买几本折纸书来入门。一是因为书的内容经过筛选比较系统，二是使用网站学习太多干扰（广告，突然弹出的QQ信息，突然产生的各种冲动。。）
+
+看书之前可以参考我后面介绍的折纸进阶之道，心里有个大概的技能树形状。如果不打算买书，也可对照相应的链接学习。有的链接可能引出很多感兴趣的内容，切忌贪多！！一味收藏链接和资源毫无用处，建议先把链接对应的内容扎实做好。
+
+因此，首先推荐可以方便买到的纸质书 最折纸 系列的三本书
+
+《激情折纸》《唯美折纸》《折纸新世代》
+
+里面有折纸最基础的符号认识，各个作品包含了各种折纸的基本形，还有干折、湿折等折纸技术的介绍。而关于折痕图(Crease Pattern, 简称CP)，有一点引导，但是没有详细指导如何阅读和使用。这是我觉得不足的地方。大概通过折叠里面的作品，再对照折痕图研究可以逐渐摸索些门道出来吧。
+
+[[https://picx.zhimg.com/50/d291bbd8566573379705d19cc859ca43_720w.jpg?source=2c26e567]]
+
+
+
+
+然后推荐Robert J. Lang的《Origami Design Secrets》，这本书我感觉已经集折纸理论之大成。前面4章入门的时候看也是极好的。后面的章节则是入门之后折纸技术快速提高的必修法门！！遗憾的是这本书只有英文版，而且纸质书非常贵。。有兴趣的自己找PDF版本吧。
+
+[[https://pic1.zhimg.com/50/a700e610b36787fee4407b98136e039a_720w.jpg?source=2c26e567]]
+
+
+
+
+
+
+
+下面按我理解的折纸进阶之道，简略介绍几个关键点，然后放一些挑选的链接。
+
+*一、能够按照步骤图折纸*
+
+这个阶段是我理解的入门。
+
+首先要认识折纸符号，如果可以读懂步骤图，按照步骤图折纸，可以跳过。
+
+[新手扫盲贴之认识折纸符号1：谷线和山线](http://zhezhixueyuan.com/forum.php?mod=viewthread&tid=4188&extra=page%3D2)
+
+新手扫盲贴之认识折纸符号2：各种箭头
+
+[http://zhezhixueyuan.com/forum.php?mod=viewthread&tid=5406&extra=page%3D1](http://zhezhixueyuan.com/forum.php?mod=viewthread&tid=5406&extra=page%3D1)
+
+
+
+
+
+
+
+然后是基本形
+
+[折纸必备-各种基础形](http://zhezhixueyuan.com/forum.php?mod=viewthread&tid=18495&extra=page%3D2)
+
+熟悉各种基础形有助于快速阅读步骤图，理解折纸作品的构造基础
+
+接下来是不断练习，按照书里或者网上找到的步骤图折叠二三十个作品大致完成入门。
+
+*二、能够阅读折痕图并折出作品*
+
+现在的很多折纸大师发布作品大多只提供折痕图(CP)，而不会提供按流程一步一步折出作品的步骤图。原因嘛，一是他们设计的时候就不是按步骤图一步步设计的，所以在设计过程中不会顺带产出步骤图。完成作品之后再考虑入门学习者的需求来制作步骤图非常耗费功夫。二是折痕图更加体现设计的思路，并且折痕图本身具有一定的美感，在折纸艺术家眼里也是一种艺术品。所以除非要出书，不然基本不会制作步骤图了。那么我们要学习最新的折纸作品，或者要研究设计折纸作品的思路，都需要掌握折痕图。
+
+掌握蛇腹折(box pleating)，这是现代折纸非常基础而重要的技术。
+
+[“叹为观纸”第一期：现代折纸介绍](http://www.guokr.com/article/63817/)
+
+[蛇腹CP全攻略](http://zhezhixueyuan.com/forum.php?mod=viewthread&tid=3856&from=recommend_f)
+
+
+
+
+[蛇腹折基础练习](http://zhezhixueyuan.com/forum.php?mod=viewthread&tid=890&extra=page%3D2)
+
+
+
+
+看懂折痕图
+
+这部分比较推荐的还是国外对折痕图的相关文章（英文）
+
+Robert J. Lang的
+
+[crease patterns](http://www.langorigami.com/articles/crease-patterns)
+
+[Origami Österreich](http://www.origamiaustria.at/articles.php?lang=2#a4)
+
+
+
+
+
+
+
+下面给出3个中文网页链接供参考
+
+[“叹为观纸”第二期：现代折纸方法初探](http://www.guokr.com/article/64800/)
+
+[如何看懂crease pattern(折痕展开图)的教程-jadeleaf](http://zhezhixueyuan.com/forum.php?mod=viewthread&tid=2688&from=recommend_f)
+
+
+
+
+[CP折制的小心得](http://zhezhixueyuan.com/forum.php?mod=viewthread&tid=15360&extra=page%3D2)
+
+
+
+
+
+
+
+支线任务：湿折技术，对于作品的生动性有极大提高
+
+[[https://pic1.zhimg.com/50/07fa4c7620398da89c98c27e8b64bd2c_720w.jpg?source=2c26e567]]
+
+按照折痕图练习二三十个作品
+
+Robert J. Lang 的作品
+
+[Crease Patterns](http://www.langorigami.com/crease-patterns)
+
+[Origami Österreich](http://www.origamiaustria.at/en/cp.php)
+
+
+
+
+神谷哲史的作品（网上可以找到他的作品集PDF版本）
+
+[[https://picx.zhimg.com/50/226f58939a5e6dc0ccd94b7d71755a35_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/6a010ff97b46e1005a41bd29fe1c1d16_720w.jpg?source=2c26e567]]
+
+
+
+
+
+
+
+*三、设计折纸作品*
+
+这部分我还没有实践经验。。打算未来学习的步骤：
+
+首先是通读 Robert J. Lang的《Origami Design Secrets》
+
+[Robert Lang: The math and magic of origami](http://www.ted.com/index.php/talks/robert_lang_folds_way_new_origami.html)
+
+然后是研究各个折纸大师的折痕图所展示的设计思路
+
+最后，折纸不会给我们带来很现实的利益，但是在折的过程中那种专注的体验以及完成作品之后的满足感，这是我喜欢折纸的地方。希望各位享受折纸的乐趣！
