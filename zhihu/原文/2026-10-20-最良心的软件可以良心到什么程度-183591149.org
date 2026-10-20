@@ -1,0 +1,93 @@
+#+TITLE: 最良心的软件可以良心到什么程度？
+#+LINK: https://www.zhihu.com/question/52157612/answer/183591149
+#+AUTHOR: 利兄
+#+CREATED: 2017-06-14 12:18:46
+#+TYPE: answer
+#+DATE: 2026-10-20
+
+我来推荐几个工具，都是我常用的。
+
+*1.Listary*
+
+电脑上文件一多，总是有些文件不知道放哪了，虽然电脑也自带文件搜索，但很慢，我看到有人推荐everything了，所以我就不推荐了，我推荐的Listary，一款可能比everything更好用的软件.
+
+everything还需要打开相应的软件，而Listary，双击ctrl键即可弹出检索框，输入文字即可检索相关的内容并打开，非常快捷，整个用时也不会超过5秒。
+
+[[https://pic1.zhimg.com/50/v2-1f638da511344e91b00ad617d107d420_720w.jpg?source=2c26e567]]
+
+*2.图片助手*
+
+这是一个图片下载的神器，做PPT经常需要到网上下载图片，有时候需要下载很多，而这款神器就可以一键下载网页上的所有图片。是不是很赞，以后去官网抠图，不用再截图了，直接用这款软件，就可以下载官网上的所有图片。
+
+[[https://picx.zhimg.com/50/v2-0443795d2175339df32c4041df7f4743_720w.jpg?source=2c26e567]]
+
+*3、Pixel Map Generator*
+
+网址： [Pixel Map Generator](http://pixelmap.amcharts.com/)
+
+*这真是一个非常良心的软件，第一，免费，第二，好用，是做 PPT图表的必备！使用它非常简单就能生成好看地理图表。*
+
+[[https://picx.zhimg.com/50/v2-ca7cf7f42cee56a387d26976d107801d_720w.jpg?source=2c26e567]]
+
+*4、smallpdf*
+
+网址： [Smallpdf.com](https://smallpdf.com/cn)
+
+这是一个PDF解决方法的网站，如果你经常逛一些PPT的论坛和公众号，应该对他不陌生,它可以免费解决pdf的所有问题。像PDF转化为PPT、word的都是小菜一碟，他还可以编辑PDF，还是将一个PDF分成两个，还可以加密PDF等等，非常好用。
+
+[[https://picx.zhimg.com/50/v2-0210990aaa33f1abea027c2c899ae2b9_720w.jpg?source=2c26e567]]
+
+*5、WordArt*
+
+*网址：* [http://WordArt.com](http://WordArt.com)
+
+WordArt是一个 *文字云* 的在线生成网站，我们可以用它一键将文字排布成任何形状。除了支持英文外，他还支持中文字体。
+
+[[https://pic1.zhimg.com/50/v2-d9a515f5739f043acd823aff402f0b47_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-c94b692dd4e117d9f5d6e10f5cc2197b_720w.jpg?source=2c26e567]]
+
+*6、* *Shape Collage Pro*
+
+既然提到了文字云，那么有没有一种方式，可以将图片排版成各种形状的呀？
+
+真有，那就是 *Shape Collage Pro* ，这是一个 *图片拼贴制作工具* 。 可以轻松制作任意形状的图片拼图，如矩形、心形、圆形、字母形状，甚至绘制自定义形状。
+
+[[https://pic1.zhimg.com/50/v2-0a880e484007e7bb70ae2043fedcbe6b_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-fef03b123b7e5c081dbaa00ba2c0cc58_720w.jpg?source=2c26e567]]
+
+*7、* *图标云：bgpatterns*
+
+网址： [Pattern maker](http://bgpatterns.com/)
+
+既然提到了文字云和图片云，那么接下来我在提一种图标云，用它可以轻松制作任意的图标拼接的背景。
+
+[[https://picx.zhimg.com/50/v2-676c48f8f25a834192ee272dadaeb4d8_720w.jpg?source=2c26e567]]
+
+*8、BenVista PhotoZoom Pro*
+
+Photo zoom Pro 是一款图片的放大工具。
+
+最牛的地方就是对图片进行放大不会出现轻微马赛克的状况，能较好的保持原始图片的特色。具体怎么用，试试就知道。
+
+[[https://picx.zhimg.com/50/v2-4da84a7f9b7f5965145f69cc411427c1_720w.jpg?source=2c26e567]]
+
+*9、markdown here* 
+ 这是一款谷歌的插件 *，强烈推荐！*
+
+有个它再也不用担心编辑器不支持markdown语法了。它能把浏览器中的文本编辑器里的 Markdown 格式的文本转换成格式化之后的 html，并可以预先定制 css 样式。
+
+而且也是一个跨平台神器， *比如我们可以把其它平台写好的文章直接复制到微信公众号上。*
+
+[[https://pic1.zhimg.com/50/v2-9fad2906c83534546cb3fa82b3648704_720w.jpg?source=2c26e567]]
+
+先写这么多了，还有很多，有兴趣可以去看看。
+
+本文作者利兄，首发利兄日志。
+
+[[https://picx.zhimg.com/50/v2-1604a51a5336f7508b736fc20f9cef93_720w.jpg?source=2c26e567]]
+
+*类似回答*
+
+[有哪些软件堪称「神器」，却不为大众所知？ - 知乎](https://www.zhihu.com/question/36546814/answer/95955418) [有哪些时间管理类的 App 推荐？](https://www.zhihu.com/question/27433886/answer/170716897)
