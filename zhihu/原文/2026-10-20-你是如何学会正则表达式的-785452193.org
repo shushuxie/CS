@@ -1,0 +1,62 @@
+#+TITLE: 你是如何学会正则表达式的？
+#+LINK: https://www.zhihu.com/question/48219401/answer/785452193
+#+AUTHOR: 量子位
+#+CREATED: 2019-08-12
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+GitHub上的有个2万星的项目，叫 *[learn-regex](https://github.com/ziishaned/learn-regex)* ，可以解决初学者的难题。
+
+并且，这个教程刚完成了汉化工作，还附有在线练习，帮助萌新快速入门正则表达式。 
+
+
+* *什么是正则表达式**
+
+*正则表达式（ Regular expression）是一组由字母和符号组成的特殊文本, 它可以用来从文本中找出满足你想要的格式的句子。*
+
+比如我们在网站中看到对用户名规则做出了如下限制：只能包含小写字母、数字、下划线和连字符，并且限制用户名长度在3~15个字符之间，如何验证一个用户名是否符合规则呢 ？我们使用以下正则表达式：
+
+[[https://picx.zhimg.com/50/v2-4cb2f732ff1c853a203a303f87d42d7d_720w.jpg?source=2c26e567]]
+
+以上的正则表达式可以接受john_doe、jo-hn_doe、john12_as，但不能匹配Jo，因为它包含了大写字母而且长度不到3个字符。
+
+* *项目内容**
+
+learn-regex整个教程分为6节，内容比较简短，很快就能阅读完。
+
+[[https://pica.zhimg.com/50/v2-43b60567e19c4769d5f541a34538598c_720w.jpg?source=2c26e567]]
+
+教程从最简单的正则表达式入手，紧接着又介绍了核心内容 *元字符* ，然后由简到难介绍正则表达式的各种用法。
+
+[[https://pica.zhimg.com/50/v2-fda815867fc309f1e7d51a421bbd1310_720w.jpg?source=2c26e567]]
+
+* *在线练习**
+
+如果你以为learn-regex只是个简单的汉化教程就大错特错了。learn-regex之所以能获得2万星的高赞，还有个重要原因就是它提供了在线练习，直观地展示了正则表达式的匹配方式。
+
+比如(c|g|p)ar是如何匹配The car is parked in the garage.这句话中的几个单词的：
+
+[[https://picx.zhimg.com/50/v2-9426074afae2b9d7f46408bf34be339d_720w.jpg?source=2c26e567]]
+
+我们可以直观地看到以c、g、p开头并且紧跟ar的单词都能很正则表达式匹配。网页的右侧还会给出相应的解释：
+
+[[https://picx.zhimg.com/50/v2-9434007d1d439e37dd7aacb30864b3a8_720w.jpg?source=2c26e567]]
+
+是不是比枯燥的文字解释要生动很多呢？那你也来试试吧！
+
+* *传送门**
+
+项目地址： 
+ [https://github.com/ziishaned/learn-regex](https://github.com/ziishaned/learn-regex)
+
+在线练习地址： 
+ [https://regex101.com/](https://regex101.com/)
+
+— *完* — 
+ 量子位 · QbitAI 
+ վ'ᴗ' ի 追踪AI技术和产品新动态 
+
+
+[量子位](https://www.zhihu.com/org/liang-zi-wei-48)
+
+欢迎大家关注我们，以及订阅 [我们的知乎专栏](https://zhuanlan.zhihu.com/qbitai)

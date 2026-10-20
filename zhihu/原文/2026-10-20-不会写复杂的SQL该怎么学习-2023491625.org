@@ -1,0 +1,124 @@
+#+TITLE: 不会写复杂的SQL，该怎么学习？
+#+LINK: https://www.zhihu.com/question/327369469/answer/2023491625
+#+AUTHOR: 金哥数据
+#+CREATED: 2021-07-27
+#+TYPE: answer
+#+DATE: 2026-10-19
+
+太太太太太太太太巧了。。。。
+
+我可能是数据分析界，最能理解从SQL入门 到 工作中写SQL中间就差着一个 "复杂SQL“ 这句话的人了。当年为了写”复杂SQL“， 真的是为了工作中写 ”复杂SQL“， 整整花了我 300大洋，求教了一个老鸟才彻底的把我的SQL能力惊醒了。
+
+---- 分隔符----
+
+[[https://pica.zhimg.com/50/v2-3bd736aba57819aedbf7b06554cfd0ce_720w.jpg?source=2c26e567]]
+*为什么简单SQL会写 一到工作就废*
+
+如果我没有猜错，90%的人都看过下面这本SQL神书：
+
+[[https://pic1.zhimg.com/50/v2-d391867acfb9cacaf169f282c841cff6_720w.jpg?source=2c26e567]]
+
+另外99%的人都用过下面这些SQL练习网站：
+
+[
+
+[自学SQL](http://www.xuesql.cn/)
+
+]( [自学SQL](http://www.xuesql.cn/) )
+
+#+begin_quote
+这个网站特点是比较清晰简单，中文的，马上可以练习，主要训练查询能力
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-8bf28a3511f734f5eef56530142f2e70_720w.jpg?source=2c26e567]]
+
+sqlzoo练习网站，牛客网SQL面试题 。。。。
+
+----- 非常非常不幸，我也是这些练习网站的重度用户----
+
+比如这个:
+
+[自学SQL网(教程 视频 练习全套)](http://xuesql.cn)
+
+我真的是从头到尾，把所有的练习题目过了一遍，感觉自身的SQL水平飞速上升。那感觉真的是没有哪个实际问题可以难倒我了。。
+
+直到工作中遇到了 ”复杂SQL“， 才彻底败下阵来。
+
+我就举一个例子：
+
+#+begin_src sql
+SELECT sum(Domestic_sales+International_sales) as sum_sale,director,
+   count(*) as count, 
+   sum(Domestic_sales+International_sales)/count(*) as avg_sale 
+
+FROM movies left join boxoffice on movies.id = boxoffice.movie_id 
+
+group by director 
+having count > 1 
+order by avg_sale 
+desc limit 1
+#+end_src
+
+---- 第一次看到这个SQL什么感觉？
+
+好家伙，好像一切我见过的SQL知识点都用上了！但是我这个简单SQL的能力也彻底不知道怎么解释了。
+
+幸好得到高人指点，最核心的一个思想是，不管多复杂的一个SQL，先要归结到最简单的SQL法则上。
+
+[[https://picx.zhimg.com/50/v2-7e89bb4baa2d495e54c45faf8e91cdaa_720w.jpg?source=2c26e567]]
+
+凡是sql都分为，select，from，where 3段，你复杂的sql也是这3段。
+
+只不过，复杂sql这3段都不简单，那既然这样，我们就把它分开来解决就好了。
+
+比如上面的复杂sql，我们先解决from这一段，
+
+#+begin_src text
+SELECT * 
+
+FROM movies left join boxoffice on movies.id = boxoffice.movie_id 
+
+where 1
+#+end_src
+
+你不要关心select 和 where的情况下，只关心这个from，并且想象一下这个from的联表之后生成了新的table，我们叫 t1吧。
+
+这会，这条sql是不是一下就简单了。
+
+--- t1 现在看一下t1的内容 
+
+
+[[https://pic1.zhimg.com/50/v2-a13289449f63ebe8a7fca6c50ef15295_720w.jpg?source=2c26e567]]
+
+把两个表连在一起，形成表t1，现在请你记住这个t1，我们的select 和 where操作都在t1上进行
+
+---- 现在我们把group等结果集操作放到一边，我们先只关心select部分。
+
+#+begin_src text
+SELECT sum(Domestic_sales+International_sales) as sum_sale,director,
+   count(*) as count, 
+   sum(Domestic_sales+International_sales)/count(*) as avg_sale 
+
+FROM t1
+
+#放一边
+#+end_src
+
+你看，这个简单SQL就是做了几个统计，每一个函数拆开来是不是很简单
+
+--- 接下来，我们把select里的算法放在一边，我们去看看结果集的分组和排序
+
+#+begin_src text
+SELECT # 
+
+FROM t1
+
+group by director 
+having count > 1 
+order by avg_sale 
+desc limit 1
+#+end_src
+
+一个复杂sql其实都是由简单的部分组成，只要你按照这个方法一层层的拆解，你会发现复杂sql不过如此！
+
+---- 未完待续
