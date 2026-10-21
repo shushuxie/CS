@@ -1,0 +1,181 @@
+#+TITLE: 微软的 Office 软件有什么实用但一般人不知道的功能？
+#+LINK: https://www.zhihu.com/question/53679523/answer/943399509
+#+AUTHOR: iSlide
+#+CREATED: 2019-12-20 14:13:09
+#+TYPE: answer
+#+DATE: 2026-10-21
+
+又实用又比较冷门的功能在PPT里还真有不少，
+
+其实很多朋友自己的设计审美都不错，但是要想把PPT做得高大上一些，
+
+那确实需要一点大多数人不知道的技巧。
+
+* *一、字体中插入图片**
+
+## 
+ 插入图片法：
+
+[[https://picx.zhimg.com/50/v2-287bf4cbc795dd51152f19abfb9cf61c_720w.jpg?source=2c26e567]]
+
+#操作方法#
+
+1.找到一张合适的图片，右键复制。（截图也可以哦）
+
+[[https://pic1.zhimg.com/50/v2-22b3c8c5173a7967acef40141ff860a9_720w.jpg?source=2c26e567]]
+
+2.在PPT中输入文字，右键设置形状格式。
+
+[[https://picx.zhimg.com/50/v2-dcba60ee0eef99e0b3a91616a944d0e0_720w.jpg?source=2c26e567]]
+
+3.在形状格式-文本选项中（注意不要选成形状选项）选择图片或纹理填充，点击剪贴板。
+
+[[https://pic1.zhimg.com/50/v2-de90e752064f63167fca68031210ff85_720w.jpg?source=2c26e567]]
+
+升级版：还可以在图片填充的字体外面加点小元素 比如说一道光 一片掉出来的树叶等和你的主题相关的元素。
+
+[[https://pic1.zhimg.com/50/v2-f994aca16e355b627ee1ca605ca4f22b_720w.jpg?source=2c26e567]]
+
+* *二、补间动画提升视觉冲击力**
+
+* *补间动画：**
+
+[[https://picx.zhimg.com/50/v2-3b55c1ec662c582809042f6763067259_720w.gif?source=2c26e567]]
+
+以上操作利用了PPT插件里的补间动画， 这种叠影效果来自插件里的 *补间动画功能* ，原本是一个为了做动画而开发的功能，基本原理是在两个元素A和B之间插入若干过渡关键帧， *在放映过程中这些“关键帧”以极快的速度依次闪现一次，由于人眼的视觉暂留现象，我们会看到连贯的由A变化为B的完整动画过程。*
+
+[[https://picx.zhimg.com/50/v2-18d0b83c339e9b260d8d064f1bc206cd_720w.gif?source=2c26e567]]
+
+只需要调一调参数就可以完成。
+
+[[https://picx.zhimg.com/50/v2-c85da4d2206fb345017c8837ab33c1ce_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-422790571c6b9693ad88ce76a38432fd_720w.gif?source=2c26e567]]
+
+如果我们把【补间帧数】设置得高一点，还可以为字体做出立体的感觉。
+
+[[https://pica.zhimg.com/50/v2-50cca9902b460a22d80b956d01ffadbf_720w.jpg?source=2c26e567]]
+*图片来自于@小木Arvin*
+
+为文本框加上【三维旋转】的效果后，又是一种不一样的字效：
+
+[[https://pic1.zhimg.com/50/v2-93400412aea243a093880334c9cf1024_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-7cefc6e572bdc95bc6280c2ae5f8d2eb_720w.jpg?source=2c26e567]]
+*图片来自于@小木Arvin*
+
+* *三、智能参考线（预设参考线）** 
+
+
+ppt的参考线，也叫辅助线，是水平和垂直的线，专门用于在视觉上对齐对象。单击“视图”菜单上的“辅助线”就可以显示它。
+
+参考线好用，但是每次新建PPT都要一根根手工设置也是挺麻烦的。现在比较习惯将常用的参考线设置自定义存储到 iSlide 【智能参考线】的“预设参考线”中，下一次使用直接打开记录就可以 
+
+
+[[https://picx.zhimg.com/50/v2-9413eeb9de6c57e9c199aef95305f727_720w.gif?source=2c26e567]]
+
+*对齐参考线*
+
+在 PPT 中“对齐”工具只支持对象“对齐到对象”或“对齐到幻灯片”，但是实际制作时，为了保持设计统一，需要对齐到参考线，手工对齐又慢还有误差，对强迫症患者及其不友好
+
+[[https://picx.zhimg.com/50/v2-8746526ae7b95d2672c643d5bfbffa92_720w.gif?source=2c26e567]]
+
+iSlide 【设计工具】中的对齐参考线可以说是完美的戳中了我的痛点
+
+[[https://picx.zhimg.com/50/v2-8746526ae7b95d2672c643d5bfbffa92_720w.gif?source=2c26e567]]
+
+其中“扩展的参考线区域”在 PPT 排版时也是好用到不可思议
+
+如下图的阶梯状四项关系，只需简单点击几下功能按钮，小白都能快速完成 
+
+
+[[https://pica.zhimg.com/50/v2-f4e7c8cb307720eeb4315057d485a528_720w.gif?source=2c26e567]]
+
+参考线布局功能在母版中也可以使用
+
+[[https://picx.zhimg.com/50/v2-9104f28ea844a67cdbe0f4784bde7f2a_720w.gif?source=2c26e567]]
+
+## 
+ *四、矩阵裁剪*
+
+在 iSlide 【设计排版】中的矩阵裁剪，在单图排版时非常好用 
+
+
+[[https://picx.zhimg.com/50/v2-070708354ae6a7981d2746a46948e11e_720w.jpg?source=2c26e567]]
+
+只需直接选中图片，设置需要裁剪的参数，一键可以完成 
+
+
+[[https://pic1.zhimg.com/50/v2-871bc2a31067265a6d2ea0acdeb4cfcc_720w.gif?source=2c26e567]]
+
+实际案例效果：
+
+[[https://picx.zhimg.com/50/v2-5c73e0d538a991896e8be56aa80686ce_720w.jpg?source=2c26e567]]
+
+*图片批量裁剪*
+
+当需要一次性将很多张大小不一的图片处理成统一大小时，图片批量裁剪功能简直就是救星
+
+[[https://pic1.zhimg.com/50/v2-a14589da16e6d9558ce929aebb6b32ad_720w.jpg?source=2c26e567]]
+
+实际操作效果
+
+[[https://picx.zhimg.com/50/v2-a3696221be18cda4ee61ec21e800ad7a_720w.gif?source=2c26e567]]
+
+也可以用“矩阵裁剪”或“矩阵布局”将版面分割成网格状，然后将图片与文字等素材插入其中，使设计看起来井井有条。
+
+[[https://picx.zhimg.com/50/v2-392288e95d8e1aa81ceb6d44da9bf256_720w.gif?source=2c26e567]]
+
+* *五、PPT里插入公式**
+
+*插入内置公式*
+
+在 PowerPoint 菜单栏选择 “插入 » 公式”，然后选择所需公式即可
+
+插入公式后，在菜单栏“公式”选项，可以看到更多的公式编辑选项
+
+[[https://picx.zhimg.com/50/v2-93823c883e62f21450481718c5a672c2_720w.jpg?source=2c26e567]]
+
+* *编辑公式**
+
+1.在 PowerPoint 菜单栏选择 “插入 » 公式”，鼠标选中插入的公式，功能区会出现“公式”选项
+
+[[https://pic1.zhimg.com/50/v2-4bbac6f3c698d326e3a6779a49fbe03f_720w.jpg?source=2c26e567]]
+
+2.在“ *符号* ”组中，可以找到相关的数学符号。点击右上角的小箭头，可以查看其它符号集，很方便。
+
+[[https://pic1.zhimg.com/50/v2-d8473096a244548c20b0a1041c70912e_720w.jpg?source=2c26e567]]
+
+3.在“结构”组中，可以选择性插入自己所需的公式结构，然后用自己的值替换占位符、小虚线框。
+
+[[https://pica.zhimg.com/50/v2-b14e36568c51fc144089a65136efc244_720w.jpg?source=2c26e567]]
+
+* *墨迹公式**
+
+在 PowerPoint 菜单栏选择 “插入 » 公式”，在公式库底部选择“墨迹公式”
+
+[[https://pica.zhimg.com/50/v2-6ab8393e52ed0ff887483e44028f816d_720w.jpg?source=2c26e567]]
+
+你可以直接使用鼠标手写出公式，如果写错了，可以使用“擦除”或“选择和更正”进行修改
+
+[[https://pic1.zhimg.com/50/v2-6a7b77a9ac9c2925888e756ccf89d62a_720w.jpg?source=2c26e567]]
+
+墨迹公式，黄色是手写编辑区域，上方可以实时预览生成的公式效果，确认无误后，点击“插入”即可
+
+[[https://picx.zhimg.com/50/v2-a666d8624e99f641b26ab5127323ebcd_720w.jpg?source=2c26e567]]
+
+* *向公式库中添加公式**
+
+如果是在 Word 中，还支持将自定义公式添加到公式库中
+
+1. 选择要添加的公式
+2. 点击下拉菜单，选择“另存为新公式”
+3. 在“新建构建基块”对话框中键入公式名称
+4. 在“库”列表中选择“公式”
+5. 点击确定
+
+[[https://pica.zhimg.com/50/v2-0bef3cbced155e8a80d5ced9f6ce8109_720w.jpg?source=2c26e567]]
+
+iSlide - 让PPT设计简单起来！
+
+[戳进去：20W+PPT素材一键导入，提升90%工作效率](http://www.islide.cc/)

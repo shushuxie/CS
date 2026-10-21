@@ -1,0 +1,118 @@
+#+TITLE: 有什么不错的搜索引擎推荐？
+#+LINK: https://www.zhihu.com/question/309999864/answer/729644272
+#+AUTHOR: 少数派
+#+CREATED: 2019-06-27 14:50:44
+#+TYPE: answer
+#+DATE: 2026-10-21
+
+想要在互联网获得有用信息并保护自己的隐私， *你可以试试这 15 个小众实用的搜索引擎* ， *帮你从海量信息中找到真正需要的那一个。*
+
+** [必应](https://cn.bing.com/?mkt=zh-CN&FORM=BEHPTB)
+
+必应是一款由微软公司推出的网络搜索引擎，分为国内版和国际版。与百度相比，国内版的必应广告更少，并且更加保护用户隐私，对于不能科学上网的用户来说，是代替百度的最佳选择。除此之外，可以用来做壁纸的「每日一图」功能也颇受欢迎。
+
+[[https://pic1.zhimg.com/50/v2-bc85e4ac3be12554fb7d18ef496354fa_720w.jpg?source=2c26e567]]
+
+** [秘迹](https://mijisou.com/)
+
+秘迹搜索是一款致力于保护个人隐私的网络搜索服务，在使用秘迹搜索时，秘迹的服务器会将用户的浏览器的数据剥离开，在将关键词上传到搜索引擎，这样搜索引擎就不能精准的画出用户的画像。
+
+除此之外，它还会阻止来自搜索引擎的广告数据和跟踪数据，将保护隐私的职责发挥到极点，由于阻止了广告和跟踪，也能节省下浏览时间提高获取信息的效率。
+
+[[https://pica.zhimg.com/50/v2-f14ba704a32d4bed987cc8f78b5c161c_720w.jpg?source=2c26e567]]
+
+** [DuckDuckGo](https://duckduckgo.com/) ：一款不追踪你的搜索引擎
+
+DuckDuckGo 对于用户的承诺是：它既不会记录你的 User Agent（用户识别符，用于识别你所用的浏览器）、IP 地址、搜索关键词等被动传来的信息，也不会主动通过 Cookies（网页存储在本地的缓存）等机制识别你的身份。
+
+总之，如同 DuckDuckGo 的口号一样，是「一款不追踪你的搜索引擎。」
+
+DuckDuckGo 目前无法在国内直接访问，体验时请自行准备相应条件
+
+[[https://pica.zhimg.com/50/v2-602b77ae663cf75679177bf9e71747fb_720w.jpg?source=2c26e567]]
+
+** [Semantic Scholar](https://www.semanticscholar.org/) ：免费学术搜索引擎
+
+[Semantic Scholar](https://www.semanticscholar.org/) 是由微软联合创始人 Paul Allen 所开发的免费学术搜索引擎，你可以在 Semantic Scholar 上搜索到来自学术期刊、学术会议及学术机构的文献。在搜索学术文献的时候，你不但可以通过时间线快速找到具体年份范围的文献，还可以通过强大的筛选功能更加精准地找到自己所需要的文献。
+
+当然，Semantic Scholar 上的文献都是英文的，且更偏重于计算机科学及医学的范畴，如果你希望找到优秀的中文文献，不妨尝试一下同样优秀的 [中国知网](http://cnki.net/) 。
+
+[[https://pica.zhimg.com/50/v2-1bef2234a8ff55639efbf92b67126d33_720w.jpg?source=2c26e567]]
+
+** [WolframAlpha](http://www.wolframalpha.com/) ：知识搜索引擎
+
+当我们用问句在谷歌和百度搜索时，搜索结果有时却只是对我们的问句进行匹配而得到的信息。在搜索学术性问题的时候，这种情况尤为严重。每当遇到这种情况，总会让人觉得谷歌和百度太「笨」。而 [WolframAlpha](http://www.wolframalpha.com/) 却能够通过其优秀的语义分析为我们提供详细的答案。比起搜索引擎，WolframAlpha 的定位更像是知识引擎。你可以在 WolframAlpha 上找到有关各种知识的答案，在你问它有关音乐的问题时，它甚至可以为你演奏出来。
+
+[[https://pica.zhimg.com/50/v2-fc9c9b7175a3a81cf5afa13b66bf91a9_720w.jpg?source=2c26e567]]
+
+** [Google 图书搜索](https://books.google.com/)
+
+Google 是个好东西，如果你懂一些搜索语法的话，那就更好了。老生常谈的 ~filetype:~ 和 ~site:~ 等我们暂且不表，今天主要来谈谈时常被忽略的图书搜索功能。
+
+[Google 图书搜索](https://books.google.com/) 被藏在结果页的「更多」选项中，索引了大部分正规出版的书籍、杂志、报纸等的摘要。对于已上架 Play Store 的书刊，还提供了全文检索及部分内容预览。其语法也十分直观： ~intitle:~ 指定标题所包含内容、 ~inauthor:~ 指定作者名称、 ~inpublisher:~ 指定出版商名称，你还可以用 ~isbn:~ 和 ~issn:~ 直接找到相应 ISBN 和 ISSN 编号的图书。
+
+[[https://picx.zhimg.com/50/v2-de39470cff141ce7f990c8fea95f8818_720w.jpg?source=2c26e567]]
+
+** [LibreStock](https://librestock.com/) ：优质的免费图片及视频素材
+
+如果你想要找优质的免费图片及视频素材，那么 [LibreStock](https://librestock.com/) 是一个很好的选择。不同于 Unsplash 直接提供原创图片的下载，LibreStock 提供的是素材的一站式搜索服务，你可以在 LibreStock 上搜索到来自不同网站的免费图片及视频素材。LibreStock 会在网站上提供预览，在你点击图片后则会跳转到对应的网站下载。
+
+需要注意的一点是，LibreStock 的图片及视频搜索服务是分开的，你需要在网页右上角的菜单中手动切换。
+
+[[https://pic1.zhimg.com/50/v2-c918c48907bf146fcd52392891f423bc_720w.jpg?source=2c26e567]]
+
+* [Internet Archive](https://archive.org/) *：** 「互联网档案室」
+
+[Internet Archive](https://archive.org/) 正如它的名字一样，是一个「互联网档案室」，你可以在 Internet Archive 搜索到上百万的免费资源，这些资源囊括了图书、电影、软件、音视频、图片等。网站也提供了非常详细的筛选功能来帮助我们更加高效地找到
+
+[[https://pic1.zhimg.com/50/v2-5561ddda64ff0c77b21729ffe70e759f_720w.jpg?source=2c26e567]]
+
+除此之外，Internet Archive 还收录了许多网站的历史快照，你可以在 Internet Archive 上找到谷歌、苹果等许多网站的历史页面。如果你想发掘一个网站的历史（或黑历史），Internet Archive 这个「互联网档案室」绝对是你不可错过的地方。
+
+[[https://picx.zhimg.com/50/v2-bc71081acd92d5dbb972ec6e6e4eaaf7_720w.jpg?source=2c26e567]]
+
+** [TinEye](https://www.tineye.com/) ：以图搜图
+
+如果你有以图搜图的需求，那么 [TinEye](https://www.tineye.com/) 绝对是你不容错过的一个网站。它的资料库收录了数十亿张图片，你只需要上传图片或输入图片的 URL，它便会调用其特有的算法进行图像识别并给你提供相似的图片。除了 TinEye 的网站外，它还提供了不同的浏览器插件，让你可以在浏览网页时以最快速度搜索类似的图片。如果你需要高频使用 TinEye 的服务，你不妨注册一个账户，TinEye 会为你保存你的搜索记录。
+
+[[https://pic1.zhimg.com/50/v2-d0683355a1624ec2d3cd3c872dd7557a_720w.jpg?source=2c26e567]]
+
+* [SimilarWeb](https://www.similarweb.com/) *：** 「有没有类似 XXX 的网站」
+
+我们经常能看到有人提出「有没有类似 XXX 的网站」这样的问题，当这个问题困扰你的时候，你不妨打开 [SimilarWeb](https://www.similarweb.com/) ，把你知道的网址输入进去。你不但可以找到类似的网站，你甚至可以找到 App Store 及 Google Play 上与这个网站相关的 App。
+
+[[https://picx.zhimg.com/50/v2-8f1f3494f39ad372a8cc81941c0b63f5_720w.jpg?source=2c26e567]]
+
+* [WikiHow](https://www.wikihow.com/) *：** 解决生活中各种「How」的问题
+
+[WikiHow](https://www.wikihow.com/) 就像它的名字一样，是一个帮我们解决生活中各种「How」的问题。无论是「如何睡得更香」这样的日常问题，还是「如何找到人生的意义」这样的哲学问题，你都能在 WikiHow 上找到解答。WikiHow 上的回答大多是按照一定步骤来撰写的，你只需要按照上面的步骤来操作即可。
+
+[[https://pica.zhimg.com/50/v2-24f1b187138801fa40d697139411d195_720w.jpg?source=2c26e567]]
+
+* [FindIcons](https://findicons.com/) *：** 优秀图标素材库
+
+如果你需要跟图标打交道，那么你或许曾因为找不到优秀的图标素材而苦恼。 [FindIcons](https://findicons.com/) 号称拥有全球最大的图标库，你可以使用 FindIcons 强大的过滤器来找到特定的颜色、大小、类型甚至是不同授权方式的图标。除此之外，FindIcons 还提供了图标的多种格式及尺寸的下载，如果你对某个图标的风格感兴趣，你甚至可以在 FindIcons 上找到该设计师所设计的其它图标。
+
+[[https://picx.zhimg.com/50/v2-2502ed3ab72aaefe391603d4ff025bb7_720w.jpg?source=2c26e567]]
+
+** [Subzin](http://www.subzin.com/) ：求片名，在线等
+
+看到一段熟悉的句子，却不知出自何方；想给喜欢的台词配个图，又懒得重看整部电影。有了 [Subzin](http://www.subzin.com/) ，这些都不是问题。你可以直接输入想查询的关键词或句子，Subzin 就会告诉你它在哪部电影或电视剧中出现过，简洁明了。
+
+[[https://picx.zhimg.com/50/v2-a8ca5a7587cec0b3378c0d1ad36bcfda_720w.jpg?source=2c26e567]]
+
+** [Tunefind](https://www.tunefind.com/) ：搜索 BGM 它更在行
+
+看电影或玩游戏时，你或许曾被其中的 BGM 所吸引。要知道它们的名字，必须翻遍整个片尾名单么？ [Tunefind](https://www.tunefind.com/) 给出了更好的解决方案。你可以直接搜索心动的电影、电视节目、游戏或艺人名称，并获取对应歌单。Tunefind 提供了 Spotify、Apple Music、YouTube 等主流平台的跳转按钮，并可以直接播放。
+
+[[https://picx.zhimg.com/50/v2-de8d311d42759387436e871451e2586c_720w.jpg?source=2c26e567]]
+
+** [trace.moe](https://trace.moe/) ：再也不做伸手党
+
+[trace.moe](https://trace.moe/) 是一款识别率惊人的开源动画搜索引擎，只需一张截图，就能为你找到其相应出处。在下图中，我从 B 站随便截了一张裁剪过的低分辨率剧照，而 trace.moe 不仅正确识别了番名，还告诉我它具体出现在几分几秒，再也不用四处求人了。
+
+[[https://picx.zhimg.com/50/v2-cd403cb2cdcc7da5950e5de0fb7306a2_720w.jpg?source=2c26e567]]
+
+以上是少数派作者们分享的一些比百度体验更好的搜索引擎。
+
+但是，如果你会遇到不知道某个产品怎么用的时候，用淘宝搜索试试看？商品卖家的详情页可能比百度更好用
