@@ -1,0 +1,191 @@
+#+TITLE: Excel 的 VBA 现在还算是办公利器吗？
+#+LINK: https://www.zhihu.com/question/24833569/answer/377125592
+#+AUTHOR: 武旭鹏
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+近一年来的感受，当然，作为程序员，VB是比较老的一门语言，但是只是为了办公，使用office软件处理数据，那VBA确实很有用。你也说了，你只是处理少量的数据，所以只需要简单的VBA基础知识，不要纠结，先从VBA开始学起，如果你真感兴趣，学完VBA再去学别的，会学的比较快。
+
+下面是我学习写的一些笔记，你可以参考下
+
+*四、走进VBA的世界*
+
+001、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485496&idx=1&sn=8e4b4c87eb8f92bc367b5117917fb075&chksm=ec4126d5db36afc3cf4f9dea09575247c67b7255e32a54097089082b7046c41cd362e26caf21&scene=21#wechat_redirect][多表合并]]
+
+002、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485584&idx=1&sn=226a559ec56b6f3de7577f91bcacc5f6&chksm=ec41267ddb36af6b48df5db38e9a7c23eb8b0df4ba1883e3ee6f4ad7fccbeda0cc8d33cd6dc1&scene=21#wechat_redirect][学习VBA之前先了解几个基本概念]]
+
+003、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485585&idx=1&sn=a1d6b38adb8369e84cabb9c3b652ed39&chksm=ec41267cdb36af6a5e63b6f577325b83b3ccd39d7fdf8088b73164e279a4300e18cc07674e93&scene=21#wechat_redirect][Excel中的宏]]
+
+004、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485613&idx=1&sn=c6b1975b04824a3179d3f84514baf7fb&chksm=ec412640db36af5654b4521343e4efa45d90ff5becea1f3fe2ae7e52baf7ae50216dc840de9b&scene=21#wechat_redirect][宏操作举例：用宏实现点击按钮跳转的功能]]
+
+005、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485629&idx=1&sn=b420837877ce103e30a69798c1b7b4bd&chksm=ec412650db36af46ea78d035c8b2ce91211ae4c87463fc191011189d9c72d6471e3ee34ca10a&scene=21#wechat_redirect][宏操作举例：用宏实现数据查询功能]]
+
+006、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485635&idx=1&sn=00c55e1dc5fa81ecda740f5afa8d7329&chksm=ec41262edb36af386de2e23625bf5e8e510f13aaa790793c1c415f3de2173e7c2ecf4df0677a&scene=21#wechat_redirect][宏操作举例：用宏做个采购录入系统]]
+
+007、 *[[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485657&idx=1&sn=2c1c725ef94503f62b2babf018b19398&chksm=ec412634db36af22cbba6e393353f4bc74d9da89fd6939683c687bb37b7aa00b38a5f746bd72&scene=21#wechat_redirect][VBA代码该如何调试]]*
+
+008、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485662&idx=1&sn=2f0399dfe617910053b36c240a7cf26c&chksm=ec412633db36af25974baac17e215d2ab9682a576943029efbb1c491a73b73a6ba7fca48b958&scene=21#wechat_redirect][VBA代码注释]]
+
+009、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485689&idx=1&sn=04eedca036aa01f57b909e4e6ca458fe&chksm=ec412614db36af02cfe92a9ed9249b0ceb0d969a9f3fdad949feee54f305ab2ad5948f7c09fc&scene=21#wechat_redirect][VBA中的运算符]]
+
+010、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485710&idx=1&sn=8aac858fd2d289f8ca0e84f5e0050f5b&chksm=ec4127e3db36aef582227b04d4dbf45a7754940bd354fb9b6429c19c8298e1aab975b6f4b210&scene=21#wechat_redirect][VBA中的变量及数据类型]]
+
+011、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485711&idx=1&sn=fb6352b66a3db27d52d570e6bb15b5f8&chksm=ec4127e2db36aef490c131ac7cbfe830b75f38713606884d90c0da2b7d8d1b62bbf3cda73cbf&scene=21#wechat_redirect][VBA中的变量的声明方式]]
+
+012、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485721&idx=1&sn=411c9f14b868e31cf14d02e974ea7eb8&chksm=ec4127f4db36aee2452a42f4580881ad77d8d18310f5919501a2d0f3b9dd100817f16a273847&scene=21#wechat_redirect][VBA中变量的生存期限]]
+
+013、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485742&idx=1&sn=3d9181a98d12c8d09e70a68b85f41abc&chksm=ec4127c3db36aed54a4cc536e3c69aa019346c7f484df4c39f3cc0d4e9228d36c1264e9c65c0&scene=21#wechat_redirect][VBA中四种常用的语句（with语句）]]
+
+014、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485738&idx=1&sn=d605b89e241527cd48b53551292d1c5c&chksm=ec4127c7db36aed19a7511cb99f27108e7b54128659e2f8f3d7bf98c55fefba1b9dace3fd332&scene=21#wechat_redirect][VBA中四种常用的语句（判断语句）]]
+
+015、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485765&idx=1&sn=d2f642edb7308af780ca7928d1ece541&chksm=ec4127a8db36aebe3038bd5e386aad3ce1bd08cdabfd63248b6696c910569225a3ea3d7d07bf&scene=21#wechat_redirect][VBA中条件判断函数IIF]]
+
+016、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485739&idx=1&sn=9be347f5633780fef88fb1bd40be2d6b&chksm=ec4127c6db36aed00ad08bfa7a552cb879edae000b079e45d46734c27efc70e2b537402cfd05&scene=21#wechat_redirect][VBA中四种常用的语句（循环语句for next）]]
+
+017、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485766&idx=1&sn=ff8fd6100cce64c26d77c97c338e5dd7&chksm=ec4127abdb36aebdd6e4445790daa6243fd122b1df9633b69605ad8adfb578e80fb75bca7288&scene=21#wechat_redirect][循环语句FOR NEXT 举例（数字验证）]]
+
+018、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485770&idx=1&sn=ff4693b09b5b04253a9d7fe9b2e3875f&chksm=ec4127a7db36aeb142ac325f443f3136e1778bb827198c6afc64aa6bda226888615887f9ff55&scene=21#wechat_redirect][循环语句FOR NEXT中的嵌套（九九乘法表）]]
+
+019、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485774&idx=1&sn=88bc7a50aa90e3938b43c7b5b2db95bf&chksm=ec4127a3db36aeb518d6de9efc8a88e2fddff4896322dd3f4efd20a602b0317b99859b976011&scene=21#wechat_redirect][循环语句FOR EACH NEXT]]
+
+020、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485775&idx=1&sn=cb626bc75d14af73785ad720a4dd02e2&chksm=ec4127a2db36aeb407570dcc21f29c8eb296dede088e30a2e338705e3947c22b4bf6eeff7d36&scene=21#wechat_redirect][循环语句DO LOOP]]
+
+021、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485792&idx=1&sn=96da6a7f85da6a50d4a2a3e80069a94e&chksm=ec41278ddb36ae9b97d81f9ca857ccb84ac2174e4838f300ce91341768bbebddb81fe7e9ce09&scene=21#wechat_redirect][结束DO LOOP循环语句UNTIL、WHILE]]
+
+022、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485793&idx=1&sn=e536db22fe19594d5cefca2e8a07f983&chksm=ec41278cdb36ae9adac46aff27f8113eeae2b9786451647195151b12f86645aadab043647514&scene=21#wechat_redirect][循环语句总结]]
+
+023、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485740&idx=1&sn=602fe3850955700d831840bb32b122e3&chksm=ec4127c1db36aed74ceec10dd43175cd679ed70165920730aa8399f126c3d9c91e80aa1447f1&scene=21#wechat_redirect][VBA中四种常用的语句（错误转移语句）]]
+
+024、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485741&idx=1&sn=428555b4b1c30d7194fbb237653fc422&chksm=ec4127c0db36aed62216eaae7875ef00c29ad5ab6b265632d9307d1dee61b4984571be71af2d&scene=21#wechat_redirect][VBA中函数的使用]]
+
+025、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485794&idx=1&sn=db6deb1fecf2210c5b7c3d35209407dc&chksm=ec41278fdb36ae990218535db900ac6fa9310b17607d7b20a265c01a0155401143b282e6a1f4&scene=21#wechat_redirect][一个重要且强大的的运算符（like）]]
+
+026、 *[[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485821&idx=1&sn=bb9693571ff996d05179089b20a62ab8&chksm=ec412790db36ae867bda87763dbf53c58e68100f6dc05aac90ef3271dbd2b073b0f485624a7b&scene=21#wechat_redirect][VBA中单元格相对偏移的两种处理办法]]*
+
+027、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485836&idx=1&sn=92624985d1bc70197a7d6a737c692b13&chksm=ec412761db36ae779fdc46ab94fc02463e114d667effc288f6ac723cd6ec8084278b8ec0bfa3&scene=21#wechat_redirect][单元格区域的选择（resize）]]
+
+028、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485840&idx=1&sn=bda8f08776889668b47874a8eaa06955&chksm=ec41277ddb36ae6bd02ab5b3303e6d9e6976824a3a8675e296d27eecc0d80bdb54e4af3e8f72&scene=21#wechat_redirect][单元格区域的并集（union）]]
+
+029、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485850&idx=1&sn=46e205599b8bbef0c1c0bc3c5dce6b7d&chksm=ec412777db36ae61176486fab13465763c87e8601a90b220615df3fd5731f2d07b960f47f64c&scene=21#wechat_redirect][听说这是制作工资单最快的办法]]
+
+030、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485841&idx=1&sn=f1ab9f8d201cc6206aafa0ef29992a51&chksm=ec41277cdb36ae6aff9f51bae95b0cba8e110f5bdc8ce0479ee8a8af430b132b6a2878ff269e&scene=21#wechat_redirect][单元格区域的交集（intersect）]]
+
+031、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485870&idx=1&sn=983f85438d58bcbd03f5543f4c6bd94a&chksm=ec412743db36ae5518625e67bdcafdbeb086522a19945c8d518bedc92f533a60ad32d8df0708&scene=21#wechat_redirect][动态获取单元格区域（currentregion）]]
+
+032、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485886&idx=1&sn=fc9ae42b97022ad8ac13536646b396cb&chksm=ec412753db36ae459f2ea2de67f3dc1973cf7b833ccede50213444621206a1954dba202f6ab8&scene=21#wechat_redirect][动态获取单元格区域（usedrange）]]
+
+033、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485892&idx=1&sn=a418ec7b3e4dc84fc6aed28489fa45bb&chksm=ec412729db36ae3faa64d5f1bb4d339fe83c60f436b714048341d25e1d396831893f05eca4b7&scene=21#wechat_redirect][动态获取单元格区域（end）]]
+
+034、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485855&idx=1&sn=24d974b8281ecad33243d1d5e76f2fbb&chksm=ec412772db36ae648737dbb330599b30c3eb79fcfa9cc9ce2337dece38bf33d9574eafffb348&scene=21#wechat_redirect][单元格基础操作（select、insert、delete）]]
+
+035、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485904&idx=1&sn=5908b8bd5912053d443b136aba41de0c&chksm=ec41273ddb36ae2b1ff1985e984cced4c578c588f77c4823dd5cd0ab47e2db4ec24e2cd974f1&scene=21#wechat_redirect][单元格基础操作（cut、copy）]]
+
+036、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485915&idx=1&sn=a683ba3cd0084db222205bd3f41002ce&chksm=ec412736db36ae20b8c1f243842c3e79169ebaad4e74837c359fb290a347072b2c1086aa65c0&scene=21#wechat_redirect][单元格基础操作（find、findnext）]]
+
+037、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485916&idx=1&sn=33e0cca7c7a1e72fcca504433f47657d&chksm=ec412731db36ae279fb9928ef0dfce9795fa22d05eb87c56dfb69d576b9d20da77fe240fbf4c&scene=21#wechat_redirect][VBA合并单元格（merge）]]
+
+038、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485922&idx=1&sn=3c5515a00a9e1d2e1aae047fb360fc44&chksm=ec41270fdb36ae19a094aba4e9e3c52cba4aa147f4b84c6cf29b94b9468ade902252c53b93f9&scene=21#wechat_redirect][用VBA创建超链接（hyperlinks.add）]]
+
+039、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485923&idx=1&sn=eec6d723d32e757ceb5709124d4f80e5&chksm=ec41270edb36ae18403863e924f5d623f9d2a9c2d7cbd4395323a5e9c5846fe1bcff97a0f49f&scene=21#wechat_redirect][用VBA提取超链接（Hyperlink.address）]]
+
+040、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485901&idx=1&sn=ad44255a882ab75b90c3b18978572921&chksm=ec412720db36ae36d99651ed11fcfdcac957b071b823da218d91243a2c1571a19d948f765e81&scene=21#wechat_redirect][用VBA实现朗读功能（speak）]]
+
+041、 *[[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485924&idx=1&sn=75230f7ece5d21eaf16cd6f7f960c0a9&chksm=ec412709db36ae1f2958b3f61ca72db078a14e89d4c06a1200784cc9f075f0738b487028413d&scene=21#wechat_redirect][新建、打开、保存、关闭工作簿]]*
+
+042、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485930&idx=1&sn=376d9c4924d2481e78b420f3727e24ae&chksm=ec412707db36ae1155b4e8ceafbfab3489ce068be5c1cede7fc31369174f8c0c1fa2209a3788&scene=21#wechat_redirect][根据分公司拆分工作表到工作簿]]
+
+043、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486036&idx=1&sn=f672c9efe5dd5252f4f10ececada0776&chksm=ec4124b9db36adaf2ac99b399b42a0e6404abf1290a44b0b8b9e0d440e3642aa8c33a2b948c7&scene=21#wechat_redirect][工作表的基本操作（新建、命名、移动、删除）]]
+
+044、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486037&idx=1&sn=ac30acc9956c2fc0ea8cd95201727182&chksm=ec4124b8db36adaebcaecba89bee4ffa4a60175bd28fb9bd233c7cfc9351aa3d545ed15fe756&scene=21#wechat_redirect][给工作簿里的各个工作表做个目录]]
+
+045、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247485951&idx=2&sn=ea0bf8d297ec45e693c8407fdafde93f&chksm=ec412712db36ae0481b4e10a478cb63d98b39fcda9c6ccf658ea24121ade51186d4cfbf607d6&scene=21#wechat_redirect][VBA中遍历文本名的函数（dir）]]
+
+046、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486038&idx=1&sn=73560560a86fb1fbcc0504d9e42831bf&chksm=ec4124bbdb36adad4ef478ccbedec3983c61af661a9beba32e5f99ff740c4847b12c5a683a04&scene=21#wechat_redirect][把每个工作簿中指定的表汇总到一起]]
+
+047、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486053&idx=1&sn=d5282a6d55c99989668776c0115d789f&chksm=ec412488db36ad9e78eaeddcb1d0b819ce4f3941058c29f842822b60a75d14243bbc65f67855&scene=21#wechat_redirect][把一个工作簿中的各个工作表拆分成工作簿]]
+
+048、 *[[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486058&idx=1&sn=0d4409c2d62927b5a2564a287aea56ed&chksm=ec412487db36ad91faeadc380cbd91d0b17d5f78ce241b69c82f76373a681051ae1f942b8cc2&scene=21#wechat_redirect][VBA中数组的相关概念]]*
+
+049、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486059&idx=1&sn=fbe233c107b3ebf34a45138ed4c5a4f2&chksm=ec412486db36ad902b217e027341220ef7c103c12fd290fa5f6c9fec34a7191916f5ac166f95&scene=21#wechat_redirect][数组的读取]]
+
+050、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486070&idx=1&sn=716ed9a9fb1da83649a2f76afc93f025&chksm=ec41249bdb36ad8dfcb0ba620df58d9f4ec11a54c9c4652d1cb72edd63bffaff18c13e7e8511&scene=21#wechat_redirect][数组的写入]]
+
+051、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486071&idx=1&sn=c7afb216291bbf4b0638456ab4b8d562&chksm=ec41249adb36ad8ca66214aa5e278ff468cbcea3069eddb8f83d4468ec8153f5bc55efebfedf&scene=21#wechat_redirect][动态数组]]
+
+052、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486073&idx=1&sn=ccb1140defe6552c04e5a8a3b172e881&chksm=ec412494db36ad824f5bdd087ce476950d80733c55aed14e2fe6b23d16b4f3f536538f426513&scene=21#wechat_redirect][数组的下标及其获取方法（ubound、lbound）]]
+
+053、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486096&idx=1&sn=6e4ef4bc9f7bf0410e5467969eba0caa&chksm=ec41247ddb36ad6b8fe7436096eb4362fe19dbb5bc361cc50ed4215cd76528451d89b205f53d&scene=21#wechat_redirect][一维数组转变二维数组的办法]]
+
+054、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486097&idx=1&sn=9d7a626f4c1ff5ba9f22cfac760a9d8d&chksm=ec41247cdb36ad6a70b4eb56b126ccb614fee94b48638a81c4bb1a94994402d7ec01afd9c144&scene=21#wechat_redirect][与数组相关的一些函数（join）]]
+
+055、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486056&idx=1&sn=2ac6521dc1436f48ed864db9442529d6&chksm=ec412485db36ad938819d6723e725a78ff8d4546265f529e7d050591918f66c5e8a2f39bc346&scene=21#wechat_redirect][join实例练习]]
+
+056、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486099&idx=1&sn=27035c15fb11b5eb4049c0f5e502e2a5&chksm=ec41247edb36ad68ec02f19c9072063f53c92c8103db599a3942e18c21a3c381869f1bf5d329&scene=21#wechat_redirect][与数组相关的一些函数（split）]]
+
+057、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486100&idx=1&sn=73fbfe207124d06f1f79680844cd7e80&chksm=ec412479db36ad6fcb0ad062c67c213fca9447d5751d99383c39049d65c48a5d4b57bf846bb1&scene=21#wechat_redirect][与数组相关的一些函数（filter）]]
+
+058、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486108&idx=1&sn=a9e0ee8744bb784a7e86e1b497406b96&chksm=ec412471db36ad678de855a778d5e804e550499565cef1d82adaa1a9d596788dc76516d7d0ac&scene=21#wechat_redirect][数组实例练习]]
+
+059、 *[[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486111&idx=1&sn=9ef96d83fa327592ebcd01cc517ac118&chksm=ec412472db36ad6469bf1b1f2f65d57113acd5c23301990469941b6a4e0835c67ddb2298a06e&scene=21#wechat_redirect][工作表事件之SelectionChange事件、事件的启用和禁用]]*
+
+060、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486150&idx=1&sn=7b073381b2f27f2d6799cdb1be085022&chksm=ec41242bdb36ad3d8a39bd783f3ca994b0d04db87047f1032f07ccc48fb50210bcc3b5aef71a&scene=21#wechat_redirect][工作表事件之Change事件]]
+
+061、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486168&idx=1&sn=ad660478cc48864dbe6e39b401d18b13&chksm=ec412435db36ad2327d76947ba6f21b5b41cf6a0d3a203c8e808fd64cffc61b9f319c8f3b880&scene=21#wechat_redirect][工作表事件之Activate事件]]
+
+062、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486176&idx=1&sn=271d5d73a740b0de4ebfbb799cc3f954&chksm=ec41240ddb36ad1bd19a2727e4e4e3ce9f35f76495682e6bff1e6f0384e6659123eae197e667&scene=21#wechat_redirect][工作表事件之Deactivate事件]]
+
+063、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486177&idx=1&sn=4ee9f34b38e376d5f0e22973c0e210aa&chksm=ec41240cdb36ad1ae756e21327b210da84c05d7191f4e5f4dff98696f2049df66893f1d407a8&scene=21#wechat_redirect][工作表事件之BeforeDoubleClick事件]]
+
+064、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486179&idx=1&sn=bfd4854d5cf4ac015f88d2fe319c9b2b&chksm=ec41240edb36ad1843a573b54d63c7a76f8dcb9321bc1f993d1ece6c4b77ecc405f12117710e&scene=21#wechat_redirect][工作表事件之BeforeRightClick事件]]
+
+065、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486190&idx=1&sn=1d1a0aa9434bf5a152b0b3cccbf41ead&chksm=ec412403db36ad15ddefe8babc53e912b4726dc203ac1dd0c82da86bce0287818aa1782c2785&scene=21#wechat_redirect][工作簿事件之Open事件]]
+
+066、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486208&idx=1&sn=03b08821395c050b01011c53de9086f6&chksm=ec4125eddb36acfb05618532feee7b19618bf0bacc8966e8e6c2e7acbfc7a0d4427ba46ffa89&scene=21#wechat_redirect][工作簿事件之AfterSave事件]]
+
+067、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486209&idx=1&sn=b71dbf4f800d7a419d06964732046377&chksm=ec4125ecdb36acfaa56923a743d6fef8a72b8822a91da90c45e6a693e607a6c354b70646ac4f&scene=21#wechat_redirect][工作簿事件之BeforeClose事件]]
+
+068、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486226&idx=1&sn=4c2c7e9a694e371c4611307af55c45bf&chksm=ec4125ffdb36ace93827b6dfad8932a3870e33a4405ca08bca7a0b0b8661f4d4fefac7902647&scene=21#wechat_redirect][工作簿事件之BeforePrint事件]]
+
+069、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486240&idx=1&sn=416c91c715f6dca1b44040f4d012649a&chksm=ec4125cddb36acdbd852c0dd7c421886da1895913fa67dab0a401644960f6e88ed58cdcfeb08&scene=21#wechat_redirect][工作表、工作簿事件一览表]]
+
+070、 *[[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486241&idx=1&sn=af40066400e314e45e50c7d87014a4a1&chksm=ec4125ccdb36acdad220dfcf054cd54c1450ab0cac2ab68effe93972aacb657aa2775a76b3c3&scene=21#wechat_redirect][VBE窗口无法返回默认排列的解决办法]]*
+
+071、 *[[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486251&idx=1&sn=b921d985ed3b35d65f2db3baf55ec925&chksm=ec4125c6db36acd0337006915672c22b05e71857afbbd155d3c49a0dd2c7cd8e00a3506628f0&scene=21#wechat_redirect][字典的基础概念及调用方法]]*
+
+072、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486257&idx=1&sn=3c6bd48525347597fd928ad742bcac1f&chksm=ec4125dcdb36acca84be3823bffe86e4bd52803ed7ed92e858ae78f10151e7ebfc787b97866b&scene=21#wechat_redirect][字典的属性和方法（一）]]
+
+073、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486263&idx=1&sn=d7c932747c9d30b4f373578faf79a728&chksm=ec4125dadb36accc00ee757156a8ffedb95c1cd75439f04700ef393098c116d71e83fb50e41a&scene=21#wechat_redirect][字典的属性和方法（二）]]
+
+074、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486265&idx=1&sn=50d2267815c30c1c910abe9fbb68b321&chksm=ec4125d4db36acc2eb1cb00bb4fd0f7ee44a3408eb1a8864b4e3ed7e62cb8c754f05ab235657&scene=21#wechat_redirect][字典数据的写入技巧]]
+
+075、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486268&idx=1&sn=0c830b829a29a7bdb7dd2959bf6c4ded&chksm=ec4125d1db36acc7379a883c72b4d9ee352b13de9ec402e76f1f6ba069d5fab9165d17c450f4&scene=21#wechat_redirect][字典实例一（提取第一次和最后一次）]]
+
+076、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486275&idx=1&sn=565191ff618d3196cb85e32b9e64454c&chksm=ec4125aedb36acb8fd4200b7bdc14bf5b50c5d45330cefb14b7ba8c15d34a9c28e44245a02db&scene=21#wechat_redirect][字典实例二（多表求不重复值）]]
+
+077、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486276&idx=1&sn=89a5a8a24419b35d543f81cb69e7cdd6&chksm=ec4125a9db36acbf77e305fec6b67e9895e3589da5ab8766957d746006335691797128352229&scene=21#wechat_redirect][字典实例三（每行都要去重复值）]]
+
+078、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486295&idx=1&sn=29a174ce8675e8f1f4b7dc8593910046&chksm=ec4125badb36acac75b9cd5467849f0b717fc26aa01292bfe3e2b2be535a1b49639c457dd1b7&scene=21#wechat_redirect][字典实例四（单列分类统计）]]
+
+079、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486299&idx=1&sn=8d860308253d7525f9f9ecad938b221f&chksm=ec4125b6db36aca005d47dbb54485e770511cde796dcf27a0d58a9127ab5e7450986105435d2&scene=21#wechat_redirect][字典实例五（多列分类统计）]]
+
+080、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486300&idx=1&sn=bcf7901df224d03f0ac48587c01e6670&chksm=ec4125b1db36aca76b2ecf3d93854bf3df5968e9644097a08f84cf9249679b6f6b784cd186ab&scene=21#wechat_redirect][字典实例六（条目数组的用法）]]
+
+081、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486301&idx=1&sn=8d50ab463d231cc22ca5d1f43830bd4e&chksm=ec4125b0db36aca6c21161b07e84f27ef20dcef71e691ed95f670c5f3288f6bccd3bab3a07b6&scene=21#wechat_redirect][字典实例七（需要写入key的值有重复怎么办）]]
+
+082、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486302&idx=1&sn=781d4205cf4265bf0e3873172d07bbda&chksm=ec4125b3db36aca596c0020103c88d298cfff0b5c0406599cc932b9666b4941f54593c289671&scene=21#wechat_redirect][正则的基础概念及引用方法]]
+
+083、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486303&idx=1&sn=78112729f6a5e5e96bfe224d256af27f&chksm=ec4125b2db36aca46b98f50163f3bfa79701ba2cd18a378ced384946049547b1ecdf2b0697e7&scene=21#wechat_redirect][正则表达式的基本语法]]
+
+084、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486325&idx=2&sn=7b56e29680327bf13b419af1396ea0df&chksm=ec412598db36ac8e2c4cba7c52dfaee17bd9320cd9483f039801ca9223fd6743169210ba404b&scene=21#wechat_redirect][正则表达式之元字符]]
+
+085、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486325&idx=1&sn=09ef7ef65c76ff575c693a0126085950&chksm=ec412598db36ac8ea626ac304b87960e3f13956a16e0d21c891f1925234fd562ea49152d498d&scene=21#wechat_redirect][正则表达式之量词]]
+
+086、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486331&idx=1&sn=fbd33e5ca8b13ef57112d60594fb49a9&chksm=ec412596db36ac80cfb71065f108ed0e226d953e220b661f81999b88d79e727c8148c3c72227&scene=21#wechat_redirect][正则表达式之分组]]
+
+087、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486334&idx=1&sn=2477c4647815925895cfb35151afbce2&chksm=ec412593db36ac853eea14f608ce16147cd56137d2daa3c3352ffb8d77dbd910d9ee9c0bc8d8&scene=21#wechat_redirect][正则表达式中的或]]
+
+088、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486342&idx=1&sn=c95d84b0a45153a3ffd5db81b7f5d855&chksm=ec41256bdb36ac7d5a19361ad96ca4b50433057c1fc9f02d2c2c3a9263754e8e51b0691ce6b6&scene=21#wechat_redirect][正则表达式中的后向引用与非捕获分组]]
+
+089、 [[http://mp.weixin.qq.com/s?__biz=MzI5NjY5NjcwNg==&mid=2247486378&idx=1&sn=4ae787f16a8610eed7bf11cf83874ccc&chksm=ec412547db36ac5145e93dd510580c7e778f67fbcc794e0792c729537dc3feb35872c0bc4f3a&scene=21#wechat_redirect][正则表达式之字符组]]
+
+学习还在继续中，每天更新！

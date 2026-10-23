@@ -1,0 +1,118 @@
+#+TITLE: VLOOKUP 到底有多重要？
+#+LINK: https://www.zhihu.com/question/27224727/answer/608904047
+#+AUTHOR: 指北针
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+这几天刚刚录制完Excel的教程，都说Excel要掌握“4+1”，4个核心函数：vlookup、if、sum、sumif，1个核心功能：数据透视表。
+
+#+begin_quote
+本文首发于公众号： *芒种学院* ，未经允许，禁止转载。
+#+end_quote
+
+看了下回答，大部分都是在强调VLOOKUP的基础语法，借着这个话题，给大家分享下VLOOKUP的4种查询技巧： *基础查询、反向查询、多条件查询、返回多列* 。
+
+#+begin_quote
+很多同学私信问怎么学习Excel，太多就不一一回复了。这里给大家推荐两门课程，收好啦，就不一一回复了： 
+ 01 [[https://study.163.com/course/courseMain.htm?share=2&shareId=400000000690013&courseId=1208938801&_trace_c_p_k2_=4f3fb0655fe7410dbd8fbdd5fb05a2b4][【训练营】职场Excel零基础入门 - 网易云课堂]] 
+ 02 [[https://study.163.com/course/courseMain.htm?share=2&shareId=400000000690013&courseId=1209048894&_trace_c_p_k2_=7a55c3590a964d5fb6c4042a272eba96][【实战】Excel就该这样用，数据透视表篇 - 网易云课堂]]
+#+end_quote
+
+另外不少小伙伴在后台咨询，问有没有适合零基础入门的书籍，恰逢暑假京东购书有优惠，推荐给大家几本，也希望对大家有所帮助~（适合零基础）
+
+[]()
+
+** 01 VLOOKUP函数基础语法
+
+先来看下VLOOKUP的最基础用法，为了方便大家理解，做成了图片。
+
+[[https://pica.zhimg.com/50/v2-bd40a0c4d341722cd2b9bd123f4b1344_720w.jpg?source=2c26e567]]
+
+总共只有4个参数，分别是：用谁去找、匹配对象范围、返回第几列、匹配方式（0表示精确匹配，1表示模糊匹配）。
+
+然而学会了基础语法，就会VLOOKUP了么？NO，对大部分同学来说，VLOOKUP只会最基础的查找方式，碰上了返回多列、多条件、反向位置的就一脸懵逼了，可以继续往下面看VLOOKUP的4中查询方式。
+
+** 02 4种查询方式
+
+vlookup是Excel中的效率之王，是每个Excel使用者都会使用到的一个函数，先来分享下vlookup的几个用法，由浅入深。
+
+*** *2.1 基础单条件查找*
+
+VLOOKUP的基础单条件用法是简单的一种用法，使用单个检索关键字，并且检索关键字在选择区域的第1列，直接使用普通公示就可以解决。
+
+[[https://pic1.zhimg.com/50/v2-9d47eda4cdeb0c5d52f7cd5d5b9ad503_720w.jpg?source=2c26e567]]
+*VLOOKUP单条件查找*
+
+总结一下，基础查询公式的用法：
+
+*=VLOOKUP(用谁找，去哪里找，找到了返回什么，怎么着)*
+
+*** *2.2 反向查找*
+
+反向查找跟普通的VLOOKUP查找存在什么差异，我们都知道检索关键字必须在查找区域的第1列，反向查找的检索关键字不在查找区域的第1列，可以使用虚拟数组公式IF来做一个调换。
+
+[[https://pica.zhimg.com/50/v2-2d5c0f0613c03f8fdb955027884d9a8a_720w.jpg?source=2c26e567]]
+*VLOOKUP反向查找*
+
+总结一下，反向查找的固定公式用法：
+
+*=VLOOKUP(检索关键字，IF({1,0},检索关键字所在列，查找值所在列)，2，0)*
+
+*注意事项，所有使用了数组的公式，不能直接回车，需要使用Ctrl+Shift+Enter，否则会出错。*
+
+*** *2.3 多条件查询*
+
+在使用VLOOKUP匹配数据的时候，往往条件不是单一的，是由多个一起组成的，那么也可以利用&将字段拼接起来，并且利用IF数组公式构建出一个虚拟的区域。
+
+[[https://pic1.zhimg.com/50/v2-8c5ede07efb9b074310f20a4943a753b_720w.jpg?source=2c26e567]]
+*VLOOKUP多条件查询*
+
+总结一下，多条件查找的固定公式用法：
+
+*=VLOOKUP(关键字1&关键字2，IF({1,0},序列1&序列2，查找值所在列)，2，0)*
+
+*注意事项，所有使用了数组的公式，不能直接回车，需要使用Ctrl+Shift+Enter，否则会出错。*
+
+*** 2.4 查询返回多列
+
+查询返回一列的情况很容易就能完成，如果是返回多列呢？这个时候就要借助另外一个辅助函数——column函数，有关column函数的简介可以看下：
+
+[[https://pic1.zhimg.com/50/v2-c8c779b235b49bfb3d7a62812749bade_720w.jpg?source=2c26e567]]
+
+COLUMN返回的结果为单元格引用的列数，例如：column(B1)返回值为2，因为B1为第2列。
+
+[[https://pic1.zhimg.com/50/v2-30a04acd2b4b3c2275fe3b1552ad3845_720w.jpg?source=2c26e567]]
+*VLOOKUP返回多列*
+
+总结一下，返回多列的固定公式用法：
+
+*=VLOOKUP(混合引用关键字，查找范围，COLUMN(xx)，0)*
+
+返回第几列就开始引用第几列的单元格即可。
+
+*暂时分享这么多，祝大家学习愉快，想要学习【Word、PPT、Excel】的也可以关注下我哦~*
+
+#+begin_quote
+本文首发于公众号： *芒种学院* ，未经允许，禁止转载。
+#+end_quote
+
+我的其他关于Excel的回答，可以看下哦，都是非常有用的资料：
+
+- [[https://www.zhihu.com/question/276786944/answer/560097467][你用过哪些强大的快捷键？]]
+- [[https://www.zhihu.com/question/35295574/answer/557415626][有哪些实用的 Word、PPT 和 Excel 小技巧？]]
+- [[https://www.zhihu.com/question/21758700/answer/556112975][Excel 有哪些可能需要熟练掌握而很多人不会的技能？]]
+- [[https://www.zhihu.com/question/27720960/answer/553172799][Excel 有什么好用的技巧，让你相见恨晚？]]
+- [[https://www.zhihu.com/question/301235411/answer/551444603][Excel 有什么好用的技能，可以让人眼前一亮？]]
+- [[https://www.zhihu.com/question/56375334/answer/581751002][你见过最漂亮的 Excel 表格什么样？]]
+- [[https://www.zhihu.com/question/25671374/answer/605521894][excel 键盘操作技巧有哪些？]]
+- [[https://www.zhihu.com/question/26619945/answer/592255244][Excel 有什么神奇用途？]]
+
+课程总链接传送门，所有的资料都可以在下方进行下载：
+
+- [[https://study.163.com/course/courseMain.htm?share=2&shareId=400000000690013&courseId=1208938801&_trace_c_p_k2_=d261f6c3e3394fcea7b2a656d72e32a5][【训练营】职场Excel零基础入门 - 网易云课堂]]
+
+#+begin_quote
+未经允许，禁止转载， *更多Excel教程、模板* ，可以前往公众号： *芒种学院*
+#+end_quote
+
+** 如果觉得有用，点个赞再走呗~持续更新哦！！

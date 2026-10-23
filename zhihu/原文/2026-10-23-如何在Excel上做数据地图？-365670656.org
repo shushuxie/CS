@@ -1,0 +1,180 @@
+#+TITLE: 如何在 Excel 上做数据地图？
+#+LINK: https://www.zhihu.com/question/30073147/answer/365670656
+#+AUTHOR: 刘万祥ExcelPro
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+我来回答一下这个问题，就 Excel 数据地图做个总结，希望能帮助关心这个问题的人减少搜索时间的浪费。
+
+关心这个问题的人，通常是希望：
+
+1. 不需要学习和使用其他工具，最好是用现成的 Excel 功能或者模板
+2. 做出杂志或媒体上的专业数据分析地图，干净简洁的风格
+3. 能做出自己业务所需要的省、市、县的地图，而不仅仅是中国地图
+
+[[https://pica.zhimg.com/50/v2-bcdf43b5b4dc62fd7dbc1bbd21ce05c7_720w.jpg?source=2c26e567]]
+
+先看一些媒体上的专业数据分析地图的例子：▼
+
+[[https://picx.zhimg.com/50/v2-b7ce1d135cdbb54b8f99748df5b3ad98_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-1dbb180385ae27ebd3c8789749ba4786_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-9441fcaef6f88c6598660f4fc075a5b3_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-e5cc41ba36b0d49e0f5f20960aab4e3f_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-d02aba0645bbb392818404ab78e31c59_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-081802a061651d24e54159a3406fcac7_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-e33370b7a2b8e8e8e696c901e50e2517_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-5575c002f7330008edb0f2d0607c49d3_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-b362c38c2f63546eddc9c793fa710e83_720w.jpg?source=2c26e567]]
+
+那这些地图是怎么做的呢？
+
+- GIS专业人士：Arcgis、QGIS等行业专门软件工具
+- 商业媒体人士：AI、CD、PS、D3等各种图形与可视化工具
+
+你也可以去学习这些专业工具，但显然不划算。我们普通非专业人士，职场商务人群、数据分析人士，可以使用 Office、数据分析工具：
+
+- Office 365		云端版 office
+- Bing maps		应用商店
+- Power Map		2016/365 内置，2013 插件
+- Power BI desktop	商业智能
+- Excel DIY		传统 Excel+vba 自制地图
+- Tableau		商业智能
+- ggplot2		编程图形语言
+- 在线网站		在线工具
+
+这些做法里，像很多人炫耀的 Power map、Bing maps 以及 Power bi desktop 里的多种地图功能，其实出图效果均不佳，无关信息太多，不符合数据分析地图要求。更严重的是，中国地图边界多数是错误的，你在正式场合是不能使用的。365的地图比较干净，基本符合数据分析要求，但只有云端365才有此功能。Tableau里的地图也是有边界问题的。ggplot画地图则需要学习R ggplot编程。
+
+[[https://pic1.zhimg.com/50/v2-ddc4e10543b610520288ebc62dabdb98_720w.jpg?source=2c26e567]]
+
+因此，最后我只重点推荐两种做法：
+
+1. Excel diy 自制热力填色地图，Excel 2003/2007/2010/2013/2016版本均可以实现
+2. Power BI desktop 里的自定义形状地图，需要 Power BI desktop
+
+这两种做法都可以制作不同层级的地图，地图素材使用官方的地图素材，保证边界正确。
+
+Excel diy 自制的中国热力填色地图模板：▼
+
+[[https://picx.zhimg.com/50/v2-88d82a812f697eecde0fee5ce9120eba_720w.jpg?source=2c26e567]]
+
+拷到PPT里之后的地图，干净简洁，没有冗余信息，边界正确，南海有示意图：▼
+
+[[https://picx.zhimg.com/50/v2-0d39468a187f7fa8e1e6e3d109c88450_720w.jpg?source=2c26e567]]
+
+因为已经做好了模板，你只需①填入数据，②设置阈值，③选择配色，即可完成并拷走地图：▼
+
+[[https://picx.zhimg.com/50/v2-90f1e30baba1eaba7d4c28e31cc5e0ea_720w.gif?source=2c26e567]]
+
+也可以自己 diy 自己业务需要的省、市、县的地图：▼
+
+[[https://picx.zhimg.com/50/v2-0db5015b1462f7bc78efa963519d18ea_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-3c597ec056e44f94f0a6de8efabbf25a_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-ce2c7be7df56359789ad3919dc284c40_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-bd51aac689f2b74c354b73efcfeed714_720w.jpg?source=2c26e567]]
+
+Power BI desktop 里的自定义形状地图，同样可制作不同层级：▼
+
+[[https://picx.zhimg.com/50/v2-9043a695e0c016fd8788e47b5cb533a1_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-2dd488d9489c10aea6308200a44f694d_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-fcf8984ca45f268132a5da18c902a4d0_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-3c49c86606d540b1231901a6f90cec87_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-2b3dd2dadccb2558e0c323d3c11f4f0c_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-1e8db33123546a425c09fbc29d940f1b_720w.jpg?source=2c26e567]]
+
+在《用地图说话》课程里，全面总结了各种地图做法，内置的和diy的，静态和动态交互的，Excel和PPT里的，均提供相应的素材和模板。除了以上重点推荐的做法，还有其他多种形式的地图做法：▼
+
+[[https://pica.zhimg.com/50/v2-630e9b2a13aa5ea7ed952f6e7ab521f7_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-7a7fa5060a1f3a91dd21444561c4a1d4_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-c3dfbba264ba0bcd3e2221486399a76c_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-7346558ef07cdd4a58a2166ff8f3a63c_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-27d77650234268c6ce98b68a2cb7a38b_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-ae99cc76d8eca010c69e882551314966_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-0ab2b8c26d6db77319c19b1e38f2722d_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-bfe396278a99867288c566d00074b1c0_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-a48a69e38c62c81241991f1dcc062b1d_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-0f48386447fd243404d017511d0931ca_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-36e6b04059a5e20967898374f598a569_720w.jpg?source=2c26e567]]
+
+各种动态交互地图（部分动态上传未成功）：▼
+
+[[https://picx.zhimg.com/50/v2-cacfa32760c9f81936424d2057f72db7_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-915cdd9261915ed0807aae13962df427_720w.gif?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-d83c7f3ec9c722d98f0f490288c051c9_720w.gif?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-a6b7147bb40ba279c14847fdec46ee75_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-4c0f1534dd701cc0d93691b33a4ac694_720w.gif?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-a62eb9d43e89ec9b7f7fe5763cf09d4e_720w.gif?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-f1864e1333efbf2596d333fee502531e_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-44675da701cd596693d3068caab77f86_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-7b2ea71637c27629a0267b05d37006c8_720w.gif?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-75535301590824a1359595406fd935c4_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-5a5abe38f6ce00b043ac8796ca87274b_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-27bf95d885b1516ed42b155b25c4ba0b_720w.gif?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-cdd79e12509914f172ac2a08acb88217_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-92ee842d0704d449c1b7175d5195f915_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-e2ac5db98a3f2622d63010e001daaffa_720w.gif?source=2c26e567]]
+
+课程里所有地图做法的总结列表和推荐指数：▼
+
+[[https://picx.zhimg.com/50/v2-012471b178dc22f315d4ae0c77dc06b7_720w.jpg?source=2c26e567]]
+
+最后，提醒大家，国家现在对地图的使用审查非常严格，大家在公司内部日常使用不要紧，在对外正式场合必须反复检查确认无误，不要犯下政治错误。你看阿里、奥迪、三星......太多公司掉进这个坑：▼
+
+[[https://picx.zhimg.com/50/v2-fe687d9bf9eb97cdf1ceb0a0b84101ca_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-b66adeb858055c028c2213160ef4b0c4_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-2fafae71c30f5cfa12ab00af3cdb065d_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-4da885e2f482ba031a7e9b820349317f_720w.jpg?source=2c26e567]]
+
+因部分图片上传不成功，想预览全部地图做法的截图、动图，可下载以下免费预览资料包：
+
+#+begin_quote
+ExcelPro图表系列课程，免费预览资料包：链接： [[https://pan.baidu.com/s/1eS1vo0i][https://pan.baidu.com/s/1eS1vo0i]] 密码：ukoe
+#+end_quote
+
+欲参加这个课程的话，点击链接：用地图说话： [[http://t.cn/RQhUKjq][http://t.cn/RQhUKjq]] ，点击可观看视频预览。
+
+前面所有截图，课程里均有范例源文件供练习或直接套用。▼
+
+[[https://pica.zhimg.com/50/v2-8a8fa0373c7302cd41613a7bef1901b6_720w.jpg?source=2c26e567]]

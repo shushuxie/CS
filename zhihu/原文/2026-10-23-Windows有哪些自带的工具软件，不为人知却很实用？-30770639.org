@@ -1,0 +1,25 @@
+#+TITLE: Windows有哪些自带的工具/软件，不为人知却很实用？
+#+LINK: https://www.zhihu.com/question/25343481/answer/30770639
+#+AUTHOR: sherlock99
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+按下win+R：
+
+计划任务：taskschd.msc
+
+启动项：msconfig
+
+远程桌面：mstsc
+
+证书管理：Certmgr.msc
+
+查看系统事件：eventvwr
+
+磁盘管理：diskmgmt.msc
+
+磁盘碎片整理：dfrgui.exe
+
+磁盘清理：cleanmgr.exe
+
+最后神器：cmd

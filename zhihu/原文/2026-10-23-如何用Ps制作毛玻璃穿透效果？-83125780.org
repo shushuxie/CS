@@ -1,0 +1,55 @@
+#+TITLE: 如何用 Ps 制作毛玻璃穿透效果？
+#+LINK: https://www.zhihu.com/question/38593674/answer/83125780
+#+AUTHOR: 张默陌
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+很有意思的一张海报，模拟过程重在毛玻璃后边的空间感，要通过深浅拉开景深，素材也很重要，侧面图不大适合，正面图需要伸张肢体，要挑选合适的素材确实挺难。
+
+先上效果图:
+
+[[https://picx.zhimg.com/50/4e90f4363fbcac1c6000f2e457f5c899_720w.jpg?source=2c26e567]]
+
+一、准备恰当的素材图，我勉强选了一张正面角度的图片：
+
+[[https://picx.zhimg.com/50/c8b8d37d8fa05dd12d247ef17c341e4c_720w.jpg?source=2c26e567]]
+
+二、新建一个图片，参照原图色彩，拉一个渐变背景色。把素材图中左边的马抠出来，拖放到新建图层上，执行 *去色—拉低曲线，* 如下：
+
+[[https://picx.zhimg.com/50/c6c3013bdaaa286bc35bdc6b680d28d4_720w.jpg?source=2c26e567]]
+
+三、执行 *滤镜—高斯模糊 ，* 采用适当参数，保证基本轮廓要在
+
+[[https://pica.zhimg.com/50/c7a19ed00f8492280606d7810d285198_720w.jpg?source=2c26e567]]
+
+四、关键一步，通过 *加深、减淡* 做出毛玻璃后边的空间感
+
+[[https://picx.zhimg.com/50/e969e53dbe1f08a9cbda0f82ab2af7b5_720w.jpg?source=2c26e567]]
+
+五、部分位置加使用深减淡工具效果不理想，可以用 *画笔* 画上去，差不多以下效果：
+
+[[https://picx.zhimg.com/50/7b0d2f0e9e8b12d2a50a7ef60ea7b18f_720w.jpg?source=2c26e567]]
+
+六、将暴露在毛玻璃之外的部分从素材图中抠出来，并执行 *去色—拉低曲线—色彩平衡* （由于原来是白马，处理成暗色之后失真，干脆强调金属感）
+
+[[https://picx.zhimg.com/50/bdc1ffc318f7923ad86ae856c849ee49_720w.jpg?source=2c26e567]]
+
+七、新建一个图层，用画笔勾勒马和毛玻璃的交界线，以便形成过渡效果。
+
+[[https://picx.zhimg.com/50/41af05a4b4c437828e2391324f3bb659_720w.jpg?source=2c26e567]]
+
+看看这样，是不是好些：
+
+[[https://picx.zhimg.com/50/34a0439a248f5b0c649b63c026a452d6_720w.jpg?source=2c26e567]]
+
+八、最后加上文字，完成整幅作品。
+
+[[https://picx.zhimg.com/50/4e90f4363fbcac1c6000f2e457f5c899_720w.jpg?source=2c26e567]]
+
+---------------硬广分割线---------------
+
+公众号:默陌蚁
+
+【默陌字库原创小店】
+
+[[https://shop156391729.taobao.com/][首页-默陌手写-淘宝网]]
