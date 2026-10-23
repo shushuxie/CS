@@ -948,3 +948,56 @@
   #+end_quote
   【我的想法】
   这九行命令本身就是全部价值，属于"知道就省事、不知道就永远找不到"的那类东西，我在装完系统后常用 ~cleanmgr~ 和 ~diskmgmt.msc~，比装第三方管家干净得多。原文没有任何解释，命令名也没标全后缀，新手容易在 ~Certmgr.msc~ 的大小写上卡一下（其实不区分）。另外它成文较早，Win10/11 里「启动项」已经搬到任务管理器的启动页，~msconfig~ 更多是引导配置入口；碎片整理对 SSD 也应改成"优化"而非真去整理碎片。
+
+* Excel 到底有多厉害？  :技巧:Excel:彩蛋:VBA:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/27588491/answer/37233008
+  :作者:  澄澄澄
+  :原文:  [[file:原文/2026-10-23-Excel到底有多厉害？-37233008.org][本地原文]]
+  :抓取:  2026-10-23
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-23-Excel到底有多厉害？-37233008.org][打开本地归档]]
+  - 一句话概括：一份 Excel 能力清单：三国杀、项目计划模板、计算器、内置彩蛋和 VBA 小游戏，值得收是因为彩蛋那段能照着做一遍。
+  【方法/论点要点】
+  - 打游戏：著名的 Excel 三国杀“是马蜂窝团队制作的”，VBA 还能写 2048 之类小游戏；当计算器则微软官方有教程。
+  - 做项目：古侯子的 Excel 2010 模板“通过Group的功能实现任务/子任务分层显示”，条件格式化画计划条、完成条和当前日期线，“周期”只算工作日、扣了节假日；加任务用插入行，免改公式。
+  - 激活彩蛋：空文件（Excel2007 SP 以上）→ 关掉其它 Excel 表格 → 文件名改为“ARoofPill.xlsx” → C23 宽度调 30、字体调 20 → 粘贴公式 ~=SUBSTITUTE(ADDRESS(BIN2DEC(1&REPT("0",5)),6*7,4) & CHAR(82)&MID("SMILE",3,2) & ADDRESS(2^5,57*3,4) & MID("COOL",3,456789),"32","")~ → 回车。
+  【原文摘录】
+  #+begin_quote
+  这个是著名的Excel三国杀，马蜂窝团队制作的。
+
+  你可能听说过旧版本的Excel内置的彩蛋赛车游戏，现在新版Excel又添加了热门的愤怒小鸟，不过激活它有点小麻烦。
+
+  然后……:)
+  #+end_quote
+  【我的想法】
+
+* Excel 到底有多厉害？  :技巧:Excel:VBA:爬虫:
+  :PROPERTIES:
+  :链接:  https://www.zhihu.com/question/27588491/answer/596527355
+  :作者:  纸枫林
+  :原文:  [[file:原文/2026-10-23-Excel到底有多厉害？-596527355.org][本地原文]]
+  :抓取:  2026-10-23
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-23-Excel到底有多厉害？-596527355.org][打开本地归档]]
+  - 一句话概括：用不到 50 行 VBA 爬完一个博主的所有微博并批量下载高清配图，顺带演示 VBA 动态图表和 VBA 绘图；值得收是因为它把「Python 才做爬虫」的成见打破，而且 API 定位、JSON 解析、图片下载三段都能照着写。
+  【方法/论点要点】
+  - 找接口：Chrome 开发者工具里能翻到微博核心 api，参数 value 就是微博 ID，page 就是页数，“写代码的时候只要循环修改page参数就可以获取全部微博”；页数按主页总条数除以每页 10 条算。
+  - 发请求与防爬：用 ~CreateObject("WinHttp.WinHttpRequest.5.1")~ 建对象，~.Open "GET", url, False~、~.setRequestHeader "user-agent", "Mozilla/5.0 (iPhone; ...)"~、~.Send~，取 ~response = .responsetext~；WinHttp 对象销毁前可自行处理 cookie，省去很多工作。再 ~Private Declare Sub Sleep Lib "kernel32.dll" (ByVal dwMilliseconds As Long)~ 引入 API，每次循环末尾 ~Sleep Int((300 * Rnd) + 100)~ 随机暂停以规避防爬措施。“*重要强调：WinHttp对象必须设置：user-agent*，否则api接口不会返回数据”。
+  - 解析 JSON：VBA 不擅长解析 json，借 ~CreateObject("ScriptControl")~、~jsobj.Language = "JScript"~，addcode 一个取 ~a.data.cards~ 的 js 函数，再由 ~jsobj.Run("json_vba", strjson)~ 拿到 cards 数组。
+  - 写表：把字段名放在「微博」工作表第一行，~For i = 1 To 34~ 逐列读 ~Cells(1, i).Value~，用 ~CallByName(wb.mblog, field, VbGet)~ 写值；因并非每条微博所有字段都存在，加 ~On Error Resume Next~ 容错。
+  - 下图：~URLDownloadToFile~ 来自 urlmon，取 ~CallByName(CallByName(pic, "large", VbGet), "url", VbGet)~ 得到高清原图，用 ~Split(picurl, ".")~ 取后缀，存到 ~ThisWorkbook.Path & "\wbpic\" & pid & "." & imgtype~；作者提醒不要把 js 对象赋给 VBA 对象，否则取不到下一级数据，必须链式 CallByName。
+  - 另外两节：VBA 可实现动态图表，也能绘图，作者贴了自己画的《星月夜》和《蒙娜丽莎的微笑》。
+  【原文摘录】
+  #+begin_quote
+  是用Python来做爬虫，其实Excel也可以！用不到50行的代码就可以爬取一个博主的所有微博，并下载高清微博配图！
+
+  这里主要是引入两个Windows api，URLDownloadToFile是为了下载图片使用，kernel32.dll是为了防爬措施，程序随机暂定一定时间再执行。
+
+  weibo()是主过程，这里使用WinHttp模拟请求，WinHttp对象在销毁前可以自行处理cookie相关信息，可以省去很多工作，创建WinHttp对象以后使用一个for循环来修改page参数，关于页数的计算，微博主页可以看到微博总条数，一页返回10条微博，那么就知道总共需要循环多少页了。
+
+  数据主要包含在data里，data下cards是一个数组，很容易就可以看出是10条微博，微博相关数据都在mblog里，其中pics是图片列表，每张图表都有压缩图和高清原图，原图就是large下的url，解析出来这个地址就可下载图片了。
+  #+end_quote
+  【我的想法】

@@ -1,0 +1,103 @@
+#+TITLE: 如何用 Ps 或 Ai 做出这种效果？
+#+LINK: https://www.zhihu.com/question/34916081/answer/620391972
+#+AUTHOR: 阿伟来灵感了
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+这是很久之前在公众号就发过了，知乎也发过。（ *公众号更多原创设计教程，公众号与知乎同名* ）
+
+今天无意看到这个问题，就直接公众号复制粘贴过来了，希望你们别建议，但愿能喜欢
+
+*这里我先大概讲一下置换功能的原理。*
+
+其实简单的来说，它就是使对象A按照对象B的显示纹理进行凹凸变形。
+
+*对象A* 就是教程中输入的文字图层，而以科比画像储存的PSD文件就是 *对象B。*
+
+也就是说，我们根据科比画像的纹理，将文字贴在了科比“脸”上！
+
+[[https://picx.zhimg.com/50/v2-10a35e63da62de985341d220331af1ba_720w.jpg?source=2c26e567]]
+
+*—效果图—*
+
+[[https://picx.zhimg.com/50/v2-17fdb00cb1800d2744164435b124c281_720w.jpg?source=2c26e567]]
+
+*—高清图文教程—*
+
+老规矩，先打开ps，导入科比素材图片：
+
+[[https://pic1.zhimg.com/50/v2-4f5b3218977665bcab9cf0da7d614c36_720w.jpg?source=2c26e567]]
+
+先来个 *shift+ctrl+u去色* 处理：
+
+[[https://pica.zhimg.com/50/v2-26a44c8606eb994d7cb49ef852cf6de9_720w.jpg?source=2c26e567]]
+
+随后选择快速选择工具，把科比给抠出来。大致抠出来就可以，这里不需要多精致：
+
+[[https://picx.zhimg.com/50/v2-ffd9f49890a1990f01b67b8daaaf57bc_720w.jpg?source=2c26e567]]
+
+因为我们需要利用置换功能，为了达到更好的置换效果，我们需要对图画进行调色，使明暗对比更加强烈，但是别把人给整没了。
+
+先来个色阶图层，如图所示：
+
+[[https://pic1.zhimg.com/50/v2-0096e3ef472c02096d37c8d7b8665264_720w.jpg?source=2c26e567]]
+
+再添加曲线图层，采用“ *S* ”型曲线，可以增强对比度，如图所示：
+
+[[https://pic1.zhimg.com/50/v2-4b4d5b4d39d731bc2b8f31dad93facd5_720w.jpg?source=2c26e567]]
+
+执行 *滤镜—模糊—高斯模糊* ，调节数值如图，具体参数按照你的感觉来：
+
+[[https://picx.zhimg.com/50/v2-8cf245b8251edc21ea9d0f7209df3bac_720w.jpg?source=2c26e567]]
+
+然后将其 *保存为PSD文档* ，并命名为“ *置换* ”。
+
+这样做出来的目的是为了后面的置换做准备，如果你还不理解，可以把这个文件理解为 *文字的扭曲纹理样本：*
+
+[[https://picx.zhimg.com/50/v2-d0fecb2cae12bbe55b10be2d75679f40_720w.jpg?source=2c26e567]]
+
+然后输入大量英文，并覆盖整个画面，文字尽量紧凑点，不要有段落分隔：
+
+[[https://pic1.zhimg.com/50/v2-2c71c45d2c4973eada205ce391addabe_720w.jpg?source=2c26e567]]
+
+选择文字图层，然后执行 *滤镜—扭曲—置换* ，选择“ *转换为智能对象* ”：
+
+[[https://pica.zhimg.com/50/v2-eba977f676f5e94c9494f865b19e68b4_720w.jpg?source=2c26e567]]
+
+置换参数如图所示，比例我选择的是5，随后选择前面保存的“ *置换* ”PSD文件，点击打开：
+
+[[https://pic1.zhimg.com/50/v2-e2d39b3249c9155f38202552adec0840_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-a06817516391d49885cfc74a5ec149c6_720w.jpg?source=2c26e567]]
+
+得到下图效果：
+
+[[https://pic1.zhimg.com/50/v2-682df7112b47222ff821ea9ae85dcac5_720w.jpg?source=2c26e567]]
+
+*选择人物背景图层* ，然后 *按住Ctrl键点击文字图层缩略图* ，得到文字的选区，如图所示：
+
+[[https://pic1.zhimg.com/50/v2-bc0e2d2e3fb25db4d16654dc485df924_720w.jpg?source=2c26e567]]
+
+ctrl+ j拷贝图层，得到“图层2”：
+
+[[https://picx.zhimg.com/50/v2-d2b299174f5095ecbd3cf41346a16096_720w.jpg?source=2c26e567]]
+
+随后将除 *图层2* 的其余图层隐藏，在图层2下方添加填充为黑色的图层，得到下图效果：
+
+[[https://picx.zhimg.com/50/v2-e0abebcb45af2d6ba45f8b9ae7299339_720w.jpg?source=2c26e567]]
+
+最后，码字排版出效果图：
+
+好啦，今天的分享就到这里，想要 *源文件原教程以及更多原创设计教程* 的童鞋
+
+*更多内容欢迎关注公众号：*
+
+*** 微信公众号：平面设计派
+
+阿伟微信：zdczawei
+
+本文由“平面设计派”发布
+
+转载前请联系阿伟
+
+私转必究

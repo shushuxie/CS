@@ -1,0 +1,175 @@
+#+TITLE: Windows 10 上有什么值得推荐的软件？
+#+LINK: https://www.zhihu.com/question/36847530/answer/611292852
+#+AUTHOR: Jackpop
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+好的软件能够让你的电脑如虎添翼，使用体验成倍增加，平时爱试用不同工具和软件，总结推荐10我认为非常不错的windows 10软件， */文末有下载方式/* 。
+
+-----
+
+* 1. 音视频处理工具：万兴优转
+
+*推荐理由：一站式音视频处理工具*
+
+[官网] [[https://uniconverter.wondershare.cn/?utm_source=zhihu&utm_medium=social&utm_campaign=jackpop-double-12&utm_content=link_vc-cn_vc-cn_cn_21038719_2021-11-30][万兴优转13 - 音视频格式转换&视频压缩&视频录制&DVD刻录全能视频格式转换器]]
+
+分享过很多工具，但是一直有一个经久不衰的问题： *如何转换视频格式？*
+
+这的确是一个非常棘手的问题，我们在优爱腾芒各大平台下载的视频都会保存为仅该平台能够支持的独特格式。这样，我们观看、分享、剪辑都会受到很大的限制。
+
+网络上工具层出不穷，但是，要么限制转换时长、要么支持格式有限、要么转换效率极低。
+
+[[https://picx.zhimg.com/50/v2-47553c506e6eac63f0c9c077081abd65_720w.gif?source=2c26e567]]
+
+万兴优转的出现则让我眼前一亮，它支持超过 *1000+* 种音视频格式转换，不仅支持MP4/ AVI /MOV /MKV等常用格式，也支持KUX，QSV，QLV等特殊格式。而且，它还支持微博、B站、YouTube网络格式，以及3D、4K格式转换。
+
+[[https://pic1.zhimg.com/50/v2-ad14f4e12231d88bc98b227124facf4f_720w.gif?source=2c26e567]]
+
+除了强大的格式转换功能，它还支持 *视频压缩* 、 *视频录屏* 、 *视频编辑* 功能。
+
+[[https://pica.zhimg.com/50/v2-d36b4e3e9f05287053bed4799b22446b_720w.gif?source=2c26e567]]
+
+它的无损视频压缩功能，能够实现效果与尺寸的完美兼顾，在保证视频质量的前提之下，能够最大化压缩视频大小，便于分享、存储，能够节省大量的硬盘空间和传输时间。
+
+视频录屏方面，它支持，高清无损画质全屏录制，而且，在录制游戏的过程中没有帧率损失，这是目前绝大多数专业录屏软件都无法做到的。
+
+[[https://picx.zhimg.com/50/v2-45c0260d223f4e2ebe1eb1599ee5af0f_720w.gif?source=2c26e567]]
+
+视频编辑方面，它支持快速删减、视频拆分、字幕编辑、智能裁剪、水印编辑 ，也就是说，我们不需要安装臃肿的PR即可解决视频编辑过程中遇到的绝大多数问题。
+
+* 2. Excel保姆级教程：夜曲Excel
+
+说到【值得推荐】，我首先想到的就是Office。
+
+无论目前是否毕业、从事何种岗位，想必绝大多数同学的电脑上都会安装Office。
+
+而作为Office三件套之一的Excel是我认为最有必要系统学习一种办公软件。
+
+例如，当我们需要对几张Excel表进行数据关联分析时，不会开发的同学可能会选择最笨拙的手动逐条处理。而会写代码的同学会好一些，但是也需要先后经过文件读写、数据预处理、数据转换…等复杂环节，经过这一系列的操作都要耗费很长时间。
+
+而如果精通Excel，只需要借助内置的函数三五分钟即可解决。
+
+正因如此，我决定系统学习一下Excel知识。
+
+先后经过很长时间的尝试、对比，最终我选定了夜曲Excel。
+
+[[https://picx.zhimg.com/50/v2-b1e23c2887f6dd679c15010110d63de6_720w.jpg?source=2c26e567]]
+
+夜曲Excel是来自百词斩旗下的一门课程，和之前学过的百词斩其他课程一样，非常精良，而夜曲Excel同样没让我失望。
+
+[[https://pic1.zhimg.com/50/v2-de6b9b7b5fccc4c1dcc7d2e927d315c4_720w.jpg?source=2c26e567]]
+
+每节课都分别通过讲案例、拆原理、学操作、连项目这几个环节详细阐述，可以称得上是“保姆级”课程。而且，交互式的课堂，让我们在学习过程中能够实时的回答一些问题，实时反馈，能够牢牢的抓住学习注意力，避免无效学习。此外，它还有老师在线助学答疑，不用像无头苍蝇一样无处寻求帮助，避免学习中踩坑现象。
+
+感兴趣的话可以公众号搜索【夜曲Excel】体验6元课。三节课，也能让你了解到Excel常用的知识点。
+
+* [[http://www.1218.io/seer.html][3. 文件预览工具：seer]]
+
+*推荐理由：强大快速的预览功能*
+
+#+begin_quote
+平时会不会有这种困扰？只想看一眼文件里的内容，却不得不打开文件，比如图片、压缩包等等，seer这款软件就解决了这么一个问题，这和Mac下的预览功能非常相似，不需要打开软件只需要点击一次 *空格键* 就可以预览压缩包、图片、文件夹等内部内容。
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-14294fcd0bc60c11da92dc3f08c8cc32_720w.jpg?source=2c26e567]]
+
+[[http://www.1218.io/seer.html][Seer]]
+
+* [[https://www.typora.io/][4. Markdown编辑器：Typora]]
+
+*推荐理由：小巧、简洁、实时预览、功能全面*
+
+#+begin_quote
+markdown编辑器有很多，但是我觉得这一款是非常好的，非常简洁，而且能够实时的预览，支持TOC目录，支持LaTeX公式。
+#+end_quote
+
+[[https://picx.zhimg.com/50/v2-80a832f51bfc0264a98f4b4d6d63e2b1_720w.jpg?source=2c26e567]]
+
+[[https://www.typora.io/][https://www.typora.io/]]
+
+* [[https://mobaxterm.mobatek.net/download.html][5. 全能终端神器：mobaxterm]]
+
+[[https://pica.zhimg.com/50/v2-6037b152c7cc259dc40cec8dd8f019e6_720w.jpg?source=2c26e567]]
+
+*推荐理由：全能*
+
+#+begin_quote
+可能有的人喜欢用putty远程服务器，我更喜欢用mobaxterm，支持SFTP文件传输、支持xserver，能够弹出服务器窗口，支持宏录制等等，全面而强大。
+#+end_quote
+
+[[https://picx.zhimg.com/50/v2-b81878985a8aae8ab06dc199c2e6e781_720w.jpg?source=2c26e567]]
+
+[[https://mobaxterm.mobatek.net/download.html][MobaXterm free Xserver and tabbed SSH client for Windows]]
+
+* [[https://q-dir.en.softonic.com/][6. 多窗口文件整理工具：Q-dir]]
+
+*推荐理由：高效的多窗口*
+
+#+begin_quote
+平时整理或移动文件时可能会有这么一种苦恼，需要不停的在不同窗口之间切换，Q-dir就可以解决这个问题，能够在同一界面同时打开多个窗口。
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-4b4b8d20f56fcd1e09b4f3997bd31a73_720w.jpg?source=2c26e567]]
+
+[[https://q-dir.en.softonic.com/][Q-Dir]]
+
+-----
+
+* [[https://www.stardock.com/products/fences/][7. 桌面管理工具：fences]]
+
+*推荐理由：栅栏管理桌面，使桌面更加整洁有条理*
+
+#+begin_quote
+时间久了桌面都会放很多东西，不同类型的文件、图标，想找某个内容却无从下手，fences能够在桌面创建多个栅栏，自动整理桌面，使得桌面更加清晰有条理。
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-73937d6369bc5d495e63f771447ba665_720w.jpg?source=2c26e567]]
+
+[[https://www.stardock.com/products/fences/][Software from Stardock]]
+
+* [[http://www.wox.one/][8. 启动搜索神器：Wox]]
+
+#+begin_quote
+Wox是一款启动器，和Listary有相同之处，但是定位却不同。Listary本身兼顾搜索与启动，但是在搜索方面不如everything，如果想使用更加丰富的搜索功能需要在设置里配置一下everything，如果满足于Listary提供的快速搜索功能则无需配置。而Wox的定位就是一个简单、纯净的启动器。它可以快速的启动本机安装的各种程序、文件、网页等。当然，它也可以用于文件搜索，它指定的后端搜索工具是everything，所以在打开Wox之前需要先启动everything，这样才能够使用强大的搜索功能。它不仅可以用于搜索程序和文件，还可以配置各种丰富的插件满足更多场景的需求，例如计算器、天气、翻译、网页搜索等。
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-1bf7121aef267dd9add6235a9d870093_720w.gif?source=2c26e567]]
+
+[[http://www.wox.one/][Wox]]
+
+* [[http://www.dropitproject.com/][9. 文件整理工具：DropIt]]
+
+#+begin_quote
+工作中，日积月累会积攒很多各种各样的文件，有word、Excel、powerpoint、pdf等文档，有png、jpg等图片，有zip、tgz、7z等压缩包，尤其是很多同学都有个习惯，为了方便会放在桌面上，当想要找自己需要的东西时如同大海捞针一样，不知道从何下手。我想这是困扰很多人的问题，删除--积累，不断的重复，但是始终没有找到一个高效的解决文件分类方法。我想说，有了DropIt，再也不用担心文件分类与管理了，只需要简单的对不同文件配置协议，然后全选拖动就可以快速把各种类型的文件按照预先设置的协议整理到不同的文件夹下。
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-69239f3805de7508d07fd9ab237fdaf1_720w.gif?source=2c26e567]]
+
+[[http://www.dropitproject.com/][Personal Assistant to Automatically Manage Your Files]]
+
+[[https://pic1.zhimg.com/50/v2-69239f3805de7508d07fd9ab237fdaf1_720w.gif?source=2c26e567]]
+
+[[http://www.dropitproject.com/][Personal Assistant to Automatically Manage Your Files]]
+
+* [[https://iobit-uninstaller.en.softonic.com/][10.  强力卸载工具：IObit Uninstaller]]
+
+#+begin_quote
+流氓软件，应该很多同学都遇到过，让人非常无奈。安装之后如论如何都无法卸载干净，尤其是鸡肋的windows自带的卸载，简直形同虚设。直到有一天我突然遇到IObit这款神器，瞬间解决了让我头疼的卸载问题。它不仅免费、小巧，而且功能非常强大，支持拖动卸载、文件粉碎、缓存清理，无论是注册表、还是在控制面板找不到的垃圾软件，均可以卸载。
+#+end_quote
+
+[[https://pic1.zhimg.com/50/v2-29418f14a8890e69c8977ebb4f7fbc3e_720w.gif?source=2c26e567]]
+
+-----
+
+* 干货
+
+[[https://mp.weixin.qq.com/s?__biz=MzI0NTM1MzA2Mw==&mid=2247484955&idx=1&sn=fa9827493c135096729fac6cd8b54fb2&chksm=e94e9913de391005dc83393528bef4530875108a2fc5fbe0e9de0da87a96a4b146621288f7f8&token=2086279066&lang=zh_CN#rd][干货 | 2019年共享免费资源整理(上)：学习资源篇]]
+
+[[https://mp.weixin.qq.com/s?__biz=MzI0NTM1MzA2Mw==&mid=2247484959&idx=1&sn=628c532c9504cbdb17bcd75fee354292&chksm=e94e9917de391001c367b78cedc19276a398c8675e9c9b5c590d02e90efdd1fc5f2e3e816db9&token=2086279066&lang=zh_CN#rd][干货 | 2019年共享免费资源整理(下)：实用工具篇]]
+
+* 更多我的作品
+
+[[https://www.zhihu.com/answer/765281284][Jackpop：Android 有哪些精致的 App?]]
+
+[[https://www.zhihu.com/question/289779838/answer/613456459][Jackpop：初学 Python 需要安装哪些软件？]]

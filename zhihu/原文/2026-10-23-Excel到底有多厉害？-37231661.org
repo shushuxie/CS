@@ -1,0 +1,37 @@
+#+TITLE: Excel 到底有多厉害？
+#+LINK: https://www.zhihu.com/question/27588491/answer/37231661
+#+AUTHOR: Alex Tse
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+[[http://jandan.net/2013/03/27/rpg-in-excel.html][蛋疼会计师：Excel 里做 RPG 游戏]]
+
+[[https://picx.zhimg.com/50/2d62c2c97e7b8f61ba5a797b542ed556_720w.jpg?source=2c26e567]]
+
+每一个会计或即将成为会计的人儿都会惊叹于 Excel 的强大功能与神力。但这款名叫 Microsoft Excel 的神秘办公软件却并不是你想驾驭就能驾驭得了的。 [[http://carywalkin.wordpress.com/2013/03/17/arena-xlsm-released/][Cary Walkin]] 是一名来自加拿大多伦多的会计师。Walkin 在 Excel 软件里制作出了一款完成的 RPG 游戏，而且，真的可以玩了啦...
+
+这款游戏名为“竞技台.Xlsm”（Arena）～文件可以在 Excel 2007，2010和2013版上运行。不幸的是，鱿鱼由于这是微软的办公套件，所以在 mac 系统中无法打开。游戏内容包括：
+
+随机对手：超过2000个随机对手，每个都具有不同的 AI 能力。
+
+随机物件：39个不同物件可组成超过1000种不同组合和物品属性。
+
+四个不同结局，8个拥有不同战术的大 boss。
+
+4种预先设定的竞技台和更多衍生竞技台，每个关卡都不同。
+
+31个咒语，超多通关策略。
+
+15种特殊屌爆掉宝。
+
+36项成就。
+
+全都能在 Excel 中实现。
+
+据说这个游戏玩起来就像是一个 RPG 游戏被搬到了科学计算器上，蛋友们蛋疼的赶快下来玩玩吧，顺便打开好久没用的 Excel！
+
+[[https://picx.zhimg.com/50/3b41b24838432243c0e114d1d91d146c_720w.jpg?source=2c26e567]]
+
+下载链接：
+
+[[http://wmos.info/archives/8553][Arena.Xlsm 1.3]]

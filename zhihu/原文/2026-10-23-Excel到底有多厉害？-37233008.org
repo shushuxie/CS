@@ -1,0 +1,80 @@
+#+TITLE: Excel 到底有多厉害？
+#+LINK: https://www.zhihu.com/question/27588491/answer/37233008
+#+AUTHOR: 澄澄澄
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+*1.最厉害的……打三国杀*
+
+[[https://pic1.zhimg.com/50/aba8856391f2405e43ece627722ee84f_720w.jpg?source=2c26e567]]
+
+这个是著名的Excel三国杀，马蜂窝团队制作的。
+
+*2.制作项目计划*
+
+[[http://www.houqun.me/articles/project-plan-template-based-on-excel-2010.html][基于Excel 2010的项目计划模板]]
+
+[[http://www.zhihu.com/people/houqun][古侯子]] 老师的作品
+
+通过Excel 2010实现的项目计划的模板，本模板实现的功能如下：
+
+1、通过Group的功能实现任务/子任务分层显示
+
+2、节假日的设置说明，见Holiday表
+
+3、使用条件格式化，绘制条形图，包括：计划任务的条形图、完成任务的条形图、当前日期的日期线
+
+4、“完成率”手工填写，未做自动计算
+
+5、“周期”计算的是工作日，扣除了节假日
+
+6、“当前日期”为工作日时，条形图中以红色线显示
+
+7、右边条形图上方的日期只显示工作日，每周5天，未扣除节假日
+
+8、“起始日期”为右边条形图上方日期条的初始日期。修改起始日期时，右边条形图上方的日期自动计算变更，但第几周和月份需要手工处理
+
+9、使用时，最好通过插入行的方式，在当前任务区域内增加任务，如此不需要修改条件格式化的公式以及其他相关计算公式；条形图日期长度不够的时候，通过拖拽单元格，复制公式的方式增加条形图日期长度
+
+制作方法 [[http://www.houqun.me//articles/how-to-make-project-plan-template-based-on-excel.html][http://www.houqun.me//articles/how-to-make-project-plan-template-based-on-excel.html]]
+
+3.计算器
+
+[[https://support.office.com/zh-cn/article/%E5%B0%86-Excel-%E4%BD%9C%E4%B8%BA%E8%AE%A1%E7%AE%97%E5%99%A8-a1abc057-ed11-443a-a635-68216555ad0a?ad=CN&rs=zh-CN&ui=zh-CN][将 Excel 作为计算器]]
+
+微软官方链接，不多说。
+
+4.彩蛋
+
+[[http://blog.sina.com.cn/s/blog_79173c430101dggv.html][如何激活Excel2010内置游戏《愤怒的小鸟》]]
+
+你可能听说过旧版本的Excel内置的彩蛋赛车游戏，现在新版Excel又添加了热门的愤怒小鸟，不过激活它有点小麻烦。
+
+*步骤* ：
+
+- 打开一个空的文件，必须是Excel2007 SP以上版本。
+- *备注: 要关掉其它Excel表格*
+- 把文件名改为“ARoofPill.xlsx” ( ARoofPill 是微软Excel内置宏的名称)
+- 点击单元格 C23，把宽度调为30（确保一定是30）
+- 把C23字体调为20
+- 把以下公式粘贴到C23
+
+  #+begin_src text
+  =SUBSTITUTE(ADDRESS(BIN2DEC(1&REPT("0",5)),6*7,4) & CHAR(82)&MID("SMILE",3,2) & ADDRESS(2^5,57*3,4) & MID("COOL",3,456789),"32","")
+  #+end_src
+
+- 点击Enter
+
+然后……:)
+
+4.万能的VBA
+
+①写游戏
+
+除了三国杀外 还有这个
+
+[[http://www.zhihu.com/question/23417080/answer/28066983][用excel VBA 可以做哪些简单的小游戏？ - ENZE HONG 的回答]]
+
+[[https://pic1.zhimg.com/50/5b296dfa3f4bd4d8296df405314ed713_720w.jpg?source=2c26e567]] 来自 [[http://blog.sina.com.cn/s/blog_9f56a65f0102v7f8.html][Excel潜能系列——Excel游戏 2048_Einsphoton_新浪博客]]
+
+Einsphoton“呆呆”的作品

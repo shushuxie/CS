@@ -1,0 +1,95 @@
+#+TITLE: 如何使用 Excel 绘制甘特图？
+#+LINK: https://www.zhihu.com/question/20995941/answer/51147928
+#+AUTHOR: qezh
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+-----
+
+*甘特图* 画法：先上图
+
+[[https://picx.zhimg.com/50/34d3d25585ae2c966f3303e5cebbd315_720w.jpg?source=2c26e567]]
+
+*一，原始数据（B2:D10）*
+
+[[https://picx.zhimg.com/50/9783de4b814e0e2711b26cfa1ea585bd_720w.jpg?source=2c26e567]]
+
+*二，做法（以下操作适用于Excel 2013 for win 版本）*
+
+- 先分析一下这个计划：从2015年6月1日到2015年7月1日， *总共31天* 。
+
+- 任意找一个单元格， *输入0~30之间的任意数字（共31天）* ，如在D13单元格输入11，然后在C13单元格输入公式：=D13+C3，在这种情况下，显示的是2015年6月12日。
+
+[[https://picx.zhimg.com/50/f7359fc90faa207cba60b987ed24a467_720w.jpg?source=2c26e567]]
+
+- 在F、G两列中插入辅助系列： *已完成和未完成* ，
+- 已完成系列的公式：以 *F3单元格* 为例：=IF(C3>=$C$13,0,IF(C3+D3>=$C$13,$C$13-C3,D3))
+- 未完成系列的公式，以 *G3单元格* 为例：=D3-F3
+
+[[https://picx.zhimg.com/50/3eb9d268dd9bb1f99af04bf0ff2a6afa_720w.jpg?source=2c26e567]]
+
+- 选中 *B、C、F、G列* 相应数据，插入 *堆积条形图*
+
+[[https://pic1.zhimg.com/50/06e43f5c2b0d1a543e1dbba2f01bf204_720w.jpg?source=2c26e567]]
+
+- 隐藏“计划开始日”系列的数据，这一系列数据在这里起到 *占位* （参见： [[http://www.zhihu.com/question/21758700/answer/34705774][Excel 有哪些可能需要熟练掌握而很多人不会的技能？ - 吴下锕蒙的回答]] ）的作用。
+
+[[https://pica.zhimg.com/50/cd54e826c24d514790fe284a74a4316e_720w.jpg?source=2c26e567]]
+
+- 选择纵坐标轴，设置格式为 *逆序类别* 。
+
+[[https://picx.zhimg.com/50/ca791cb54a4781dc4bf845b797034ec4_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/cdb7a3a36470b810c92c837019e2b7cb_720w.jpg?source=2c26e567]]
+
+- 设置 *横坐标轴范围* 为2015年6月1日到2015年7月1日，即42156到42186，并删除“计划开始日”系列的图例
+
+[[https://picx.zhimg.com/50/ab3f090d8130a9cbd96885cc0e91e838_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/8e0a67c68d34104a68285d7c79ff96b6_720w.jpg?source=2c26e567]]
+
+- 以下介绍 *动态* 甘特图
+- 在上面的基础上，只要 *改变D13单元格中的数字* ，则整幅图也会发生相应的变化。
+- 插入滚动条，设置控件格式
+
+[[https://picx.zhimg.com/50/6a383f4bf02cf72f7a6fa9be0e69e0bd_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/b02e4cbde11c9ab358650e96a1e442bd_720w.jpg?source=2c26e567]]
+
+- 这时候就可以通过 *拖动滚动条* 来改变甘特图，实现每天的变化。
+
+[[https://pic1.zhimg.com/50/acc556b983f34fc272261e4ff4f3abc9_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/e060b56f2e12e1a2ddce3a573ed33cc7_720w.jpg?source=2c26e567]]
+
+- 为了方便在图中看出日期，再插入一个文本框，设置文本框等于C13。
+
+[[https://picx.zhimg.com/50/51706a92fd46e82ee00c977f97d54046_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/09ab9c539bbe3ccad0888334afffca79_720w.jpg?source=2c26e567]]
+
+- 其他格式化（参见 [[http://www.zhihu.com/question/21758700/answer/34705774][Excel 有哪些可能需要熟练掌握而很多人不会的技能？ - 吴下锕蒙的回答]] ，以及《Excel图表之道》一书）
+
+以上。
+
+-----
+
+-------------硬广---------------------
+
+下面是我的微信公众号，欢迎大家关注。谢谢。
+
+-------------我的其他回答--------------
+
+[[http://www.zhihu.com/question/21758700/answer/40733680][Excel 有哪些可能需要熟练掌握而很多人不会的技能？ - 知乎用户的回答]]
+
+[[http://www.zhihu.com/question/22484899/answer/39933218][Excel数据透视表有什么用途？ - 知乎用户的回答]]
+
+[[http://www.zhihu.com/question/28190744/answer/40926101][怎样在excel中插入另一个excel表格里面的图片？ - 知乎用户的回答]]
+
+-------------附件--------------
+
+链接:
+
+[[http://pan.baidu.com/s/1gdAgGkb][百度云 请输入提取密码]]
+
+密码: svrs

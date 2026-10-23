@@ -1,0 +1,381 @@
+#+TITLE: PowerPoint 到底有多厉害？
+#+LINK: https://www.zhihu.com/question/27666000/answer/665214212
+#+AUTHOR: 邵云蛟
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+作为一位入行5年的 PPT 设计师，帮助腾讯等知名大厂做过无数PPT！分享7个让领导忍不住发出“牛X”的隐藏PPT操作！超厉害但少有人知！高能预警！不厉害你找我！附赠源文件。
+
+如果你经常做 PPT 的话，就会发现， *网上那些所有的酷炫 PPT 效果，* 都是基于一个基础的元素创作出来的。你看到的这个问题下90%的回答都是这个功能的演变！
+
+比如这样：
+
+[[https://picx.zhimg.com/50/v2-f9843bc1eb91028f94b8600ba043e59d_720w.jpg?source=2c26e567]]
+
+这样：
+
+[[https://pic1.zhimg.com/50/v2-b810324f0c567c9ff9699026b1e4b1e7_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-4dea513dd787d8cc533e568c1d48e04d_720w.jpg?source=2c26e567]]
+
+其实本质都是使用了一个功能——形状！
+
+比如说这份摩托罗拉的场站介绍PPT，全部元素均为形状绘制，在一页 PPT 上构建了一个完整的工作流程：（建议点击视频观看）
+
+[[https://www.zhihu.com/video/1105493555585466368][摩托罗拉场站工作流程https://www.zhihu.com/video/1105493555585466368]]
+
+[[https://pic1.zhimg.com/50/v2-0b10bf26508ae83cea6cab43da9cf2c5_720w.jpg?source=2c26e567]]
+
+对，如果你能够把形状玩的很熟练，那么，你就能产生出无限的创意，让别人觉得很有创意。那么，利用形状，我们到底能玩出哪些厉害的作品呢？
+
+*评论中，很多人在询问一些操作问题，为了方便大家，我把回答中的PPT课件分享出来。*
+
+*/*领取方式如下： [[https://docs.qq.com/doc/DS1lVUmF6VVlzdmhk][【点击此处一键拿走】]]*/*
+
+** /1. 线条描边动画/
+
+顾名思义，这里用到的是线条型状。 *当我们需要呈现一件事物被创作的过程，* 可以用线条进行描边，并且为线条添加上相应的动画即可。
+
+比如之前我们曾为泰和地产设计的一页PPT，就是利用了这个动画：
+
+[[https://pic1.zhimg.com/50/v2-85561bc60b0fec30c84225f3a8e46f42_720w.jpg?source=2c26e567]]
+
+创作的过程很简单，就是一笔一划地把轮廓描出来，但是需要有耐心。只需要我们利用任意多边形工具，对建筑进行描边即可：
+
+[[https://pic1.zhimg.com/50/v2-8ee466d15f056b7ec264d02220f7c702_720w.jpg?source=2c26e567]]
+
+不知道什么是任意多边形的同学，可以看这个图：
+
+[[https://pic1.zhimg.com/50/v2-3ded3cb93bf2f3a36756f98046701903_720w.jpg?source=2c26e567]]
+
+当然，除了这个之外，我们还可以用它来呈现房间的布局，也是一个不错的选择：
+
+[[https://picx.zhimg.com/50/v2-d8414e6715fe5ee92bea573dc10f773e_720w.jpg?source=2c26e567]]
+
+这些也是一笔一笔描出来的：
+
+[[https://pic1.zhimg.com/50/v2-bb5b33f9328d2c1868b1a6ba50f554e2_720w.jpg?source=2c26e567]]
+
+没看明白的话，我做完客户的PPT回来更新详细的制作步骤：
+
+[[https://picx.zhimg.com/50/v2-a6417ba9fc0d68f9205521a6d4268f83_720w.jpg?source=2c26e567]]
+
+** /2. 元素变形动画/
+
+听名字相信大家也知道，它的作用就是把一个元素，变成另外一个元素。举个例子。
+
+比如我们可以把汽车变成大黄蜂：
+
+[[https://picx.zhimg.com/50/v2-10c2acd4c0beeb42df3e8e093c4dd0fc_720w.jpg?source=2c26e567]]
+
+当然，除了这个之外，其它所有的图形，都可以在 PPT 中，自由地进行变换。那么，问题来了，这个该怎么操作呢？
+
+只需要4个步骤就好：
+
+*第一步，找到两个变换前后的物体，放在两个页面上：*
+
+[[https://picx.zhimg.com/50/v2-ffde6a4ee870e2981c658a22d326ffeb_720w.jpg?source=2c26e567]]
+/比如我们要把乐高的飞行器，变为机器人/
+
+*第二步，分别将物体变为矢量形状。* 为了方便，可以借用一个 PPT 插件，叫做 PA口袋动画，安装后，一键即可将图片变为形状。
+
+首先，选中图片后，点击创意图形中的 *矢量描边：*
+
+[[https://pic1.zhimg.com/50/v2-f7136432e2cf0e008c28a41ca96d30f7_720w.jpg?source=2c26e567]]
+
+接下来，会有这样的一个弹窗界面，我们点击 *生成矢量形状* 即可：
+
+[[https://picx.zhimg.com/50/v2-5c731b9cfa1d2972a1275fe1783ba413_720w.jpg?source=2c26e567]]
+
+然后，我们选中图片，点击剪切后，再选中矢量形状，选择设置形状格式，在图片和纹理填充的选项中，选择自剪贴板，把图片填充到形状中：
+
+[[https://pic1.zhimg.com/50/v2-3391b750eb1d00e4c508de49eb041d96_720w.jpg?source=2c26e567]]
+
+第三步，很关键，修改图层的名称，统一改为< *!!1* >。注意，一定要是英文的叹号。因为只有这样，两个页面上的元素才会发生形变：
+
+[[https://picx.zhimg.com/50/v2-4774e79efb12f3f46f02fa4d8508948e_720w.jpg?source=2c26e567]]
+
+第四步，为后面的页面添加平滑动画即可：
+
+[[https://pic1.zhimg.com/50/v2-41fbb7afb35c297e7adee99838ce5663_720w.jpg?source=2c26e567]]
+
+明白了吗？
+
+*为了大家更加清楚这些操作步骤，我把这次的PPT源文件整理出来了，需要的朋友，可以下载一下， /领取方式： [[https://docs.qq.com/doc/DS1lVUmF6VVlzdmhk][【点击此处一键拿走】]]/*
+
+** /3. 立体3D图片/
+
+很多时候，我们遇到的图片都是平面的，这样的效果往往中规中矩，缺少创意。但是如果我们做出一点3D的效果呢？就像这样：
+
+[[https://picx.zhimg.com/50/v2-b810324f0c567c9ff9699026b1e4b1e7_720w.jpg?source=2c26e567]]
+
+是不是会觉得很有立体的感觉呢？
+
+在PPT中，这种创意的图片形式的制作过程也很简单。只需三步就可以完成：
+
+第一步，将图片复制一张：
+
+[[https://picx.zhimg.com/50/v2-cd7472d5e6d0f66377959922a5ae849f_720w.jpg?source=2c26e567]]
+
+第二步，对下层图片进行裁剪，比如我们想让头部露出，那么，就把头部给删除。另外，对上层图片进行删除背景，仅保留主题部分：
+
+[[https://picx.zhimg.com/50/v2-3f498b8f6cda3b534cf65f30592d9b88_720w.jpg?source=2c26e567]]
+
+第三步，将二者拼合即可：
+
+[[https://picx.zhimg.com/50/v2-b810324f0c567c9ff9699026b1e4b1e7_720w.jpg?source=2c26e567]]
+
+明白了吗？
+
+当我们学会了这个操作之后，就可以轻松地创建出很多具有立体感，且创意十足的PPT页面：
+
+[[https://picx.zhimg.com/50/v2-bde78067ddc53b5b9458795a5f6c6de9_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-78aca2bc81b992ca8f4d17a9d155bf03_720w.jpg?source=2c26e567]]
+
+大家可以看到，这些创意的 PPT 页面，其实无非也就是两张图片拼合起来的：
+
+[[https://pic1.zhimg.com/50/v2-9fcf0f92c1d9e1a53f1760fff17b60bb_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-28cfcbcf30c7c1f126a834103f2dc5b9_720w.jpg?source=2c26e567]]
+
+** /4. 穿插渐隐文字/
+
+这里用到的是形状的剪除功能，所谓穿插文字， *无非就是把文字的部分笔画，* 隐藏在某些图层之后，就像这样：
+
+[[https://pic1.zhimg.com/50/v2-abb9942481ae402711ee173f32e26516_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-2dfaa0befcaeaa2b6c0e14be06396507_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-fd0d686de334cafca1a58a27bd43fddd_720w.jpg?source=2c26e567]]
+
+对吗？
+
+那怎么隐藏呢？我们以下图为例，来具体说一下，一共分为三个步骤：
+
+[[https://picx.zhimg.com/50/v2-d09d8128d499ac7705bced05823b49ec_720w.jpg?source=2c26e567]]
+
+*第一步，先把文字矢量化。怕有些朋友不知道怎么做，我录了一个动图：*
+
+[[https://picx.zhimg.com/50/v2-9a1fece15e208ed1e017be1db46190cc_720w.jpg?source=2c26e567]]
+/在页面上插入一个色块，先选中文本框，再选中形状，点击格式，选择合并形状中的剪除即可。/
+
+第二步，在建筑物于文字重叠区域，绘制一个形状。
+
+[[https://pic1.zhimg.com/50/v2-229a653662a9bfc44023ce5d04d59340_720w.jpg?source=2c26e567]]
+
+第三步，依旧是先选择文字，再选择形状，把与建筑物重叠部分的文字剪除掉即可：
+
+[[https://pica.zhimg.com/50/v2-e6a182322c0930b4a58fbed8e8e6fc8d_720w.jpg?source=2c26e567]]
+
+** /5. 遮罩动画/
+
+这里用到的，也是形状的剪除功能，以及路径动画功能。什么意思呢？其实很简单， *无非就是上层覆盖一个形状，其中部分区域是镂空的，而下层有些元素在不断运动，就可以营造出遮罩动画的感觉：*
+
+[[https://pica.zhimg.com/50/v2-2db1943476f1349ae95bb6fefdbed0d2_720w.jpg?source=2c26e567]]
+
+看一个具体的案例，比如我们用来进行团队介绍：
+
+[[https://picx.zhimg.com/50/v2-a7abd4f1cb5a9d8d7f2d7085c674a61f_720w.jpg?source=2c26e567]]
+
+当然，还可以做出这样的效果：
+
+[[https://picx.zhimg.com/50/v2-84317e60994bf89c41cfe9caa90ebe09_720w.jpg?source=2c26e567]]
+
+或者是这样的创意数据图表：
+
+[[https://pica.zhimg.com/50/v2-f9b4493b792cf12b361a428a68412d86_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-f9843bc1eb91028f94b8600ba043e59d_720w.jpg?source=2c26e567]]
+
+以及像苹果发布会上的这种文字渐变效果：
+
+[[https://picx.zhimg.com/50/v2-746c9f34fcd5216d6ccc20fe1cc3b4c7_720w.jpg?source=2c26e567]]
+
+好了，问题来了，它是怎么实现的呢？咱们就以苹果发布会这个遮罩动画为例，来具体地说一下。
+
+原理都是一样，分为3个步骤。
+
+第一步，在页面上写出文字，以及插入相应的图标。
+
+[[https://picx.zhimg.com/50/v2-415e6dae8cba3a8ad38ae7fea1ace63d_720w.jpg?source=2c26e567]]
+
+第二步，在页面上插入一个与背景相同样式的渐变矩形，并且， *剪除掉文字和图标的区域，使其镂空：*
+
+[[https://pic1.zhimg.com/50/v2-598d7bad101b5747fcba88785b3ee05e_720w.jpg?source=2c26e567]]
+
+第三步，在形状底部， *插入一个彩色的渐变图片，* 我这张是在花瓣找的，网上有很多：
+
+[[https://picx.zhimg.com/50/v2-51753080ccf1ac593698e1ba70a6b1df_720w.jpg?source=2c26e567]]
+
+第四步，为底部的图片添加动画效果，可以是直线动画，从右向左直线运动即可：
+
+[[https://picx.zhimg.com/50/v2-c5aef4d738052087819747912d73cdd5_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-714737402864c7179536c34070ab58ee_720w.jpg?source=2c26e567]]
+
+明白了吗？
+
+[[https://picx.zhimg.com/50/v2-7cd7675ed73e6112d4f925c09b25598d_720w.jpg?source=2c26e567]]
+/不仅有遮罩动画，还有其它动画效果/
+
+** /6. 字体设计/
+
+有些时候我们为了呈现出字体的创意， *可能会考虑使用连笔，把文字的部分笔画串联一起，或者是用一些图标，来代替部分的笔画。* 就像这样：
+
+[[https://picx.zhimg.com/50/v2-1f729292bec197b145efae0991583fb2_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-0a9586bfd47c5868fc004b191226f0cf_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-d789bf2b5c37d97f20442b63d768dea5_720w.jpg?source=2c26e567]]
+
+可以让文字更具可视化的效果。
+
+那这种创意是怎么完成的呢？ *也很简单，也是基于形状的功能来完成。*
+
+举个例子，以下面的一页封面为例：
+
+[[https://picx.zhimg.com/50/v2-49171955515bff718d7fed117cbcc7d5_720w.jpg?source=2c26e567]]
+
+我们可以把<未来>二字的笔画，替换成<V>，来表现出胜利的感觉：
+
+[[https://pic1.zhimg.com/50/v2-18ff7f2b7347cada578e93f9621ffe10_720w.jpg?source=2c26e567]]
+
+接下来，找一张科技感的配图，放在文字的底部，就可以轻松地完成一页还不错的 PPT 封面，对吗？
+
+[[https://picx.zhimg.com/50/v2-9561aebdef941d02e91cb32debc14632_720w.jpg?source=2c26e567]]
+
+** /7. 特殊质感文字/
+
+有些时候，我们为了能够呈现出文字的质感，可能会考虑将文字进行处理， *在文字中叠加一层纹理。*
+
+比如像下面这个年货大集的文字效果，视觉效果就会更丰富：
+
+[[https://pica.zhimg.com/50/v2-353094344944a700cf1ef6260f46961e_720w.jpg?source=2c26e567]]
+
+再比如，还有像这个金属的纹理质感：
+
+[[https://picx.zhimg.com/50/v2-9ffa5e5abf96f7feaeeb39a65ebb9853_720w.jpg?source=2c26e567]]
+
+以及这个金属的纹理质感：
+
+[[https://picx.zhimg.com/50/v2-3912a65e0a07d0064415f3053c946718_720w.jpg?source=2c26e567]]
+
+那这个是怎么完成的呢？其实也非常简单，一样是利用图片与文字相交完成。什么意思呢？
+
+举个例子。第一步，准备文案以及一张适合的纹理素材：
+
+[[https://picx.zhimg.com/50/v2-25cba439a2b774173fa8b6092ab405b1_720w.jpg?source=2c26e567]]
+
+第二步，将纹理素材移动至文案的底部后，先选择图片素材，再选择文字，点击格式，合并形状中的相交即可：
+
+[[https://pic1.zhimg.com/50/v2-9f955d4826387049762d1dbb6212ac7e_720w.jpg?source=2c26e567]]
+
+到这里，基本上就已经完成了。明白了吗？
+
+再来个例子。利用这个方法，我们不仅可以让它与纹理素材相交，还可以与图片进行相交，做出这样的 PPT 页面：
+
+[[https://picx.zhimg.com/50/v2-7f0bacfddfbbba64d09c68d03e19455a_720w.jpg?source=2c26e567]]
+
+怎么做的呢？简单放个动图，很好理解：
+
+[[https://picx.zhimg.com/50/v2-3681596bf7908d88cff1c8d493e29978_720w.jpg?source=2c26e567]]
+
+当然，除了这些基础的形状玩法之外，powerpoint之所以厉害，还体现在它支持外接一些 *非常炸裂的第三方插件* 。我也跟各位分享一些我常用的插件！
+
+跟 Google 浏览器一样， PowerPoint 软件也支持丰富的第三方插件，如果运用得当，做出的 PPT 效果真的很惊艳。
+
+*评论中，很多人在询问一些操作问题，为了方便大家，我把回答中的PPT课件分享出来，领取方式如下： /[[https://docs.qq.com/doc/DS1lVUmF6VVlzdmhk][【点击此处一键拿走】]]/*
+
+/08 小众但超级强悍的插件 OneKey 插件/
+
+这是我最常用的一个插件，里面的功能非常丰富，但没必要全部掌握，知道几个特别厉害的就够了。
+
+[[https://pic1.zhimg.com/50/v2-9e7ec7f15ceb46c77b993d0048c62507_720w.jpg?source=2c26e567]]
+
+哪几个呢？
+
+*01. OK神框*
+
+哈哈，听名字是不是感觉就是一个特别厉害的功能呢？它是干嘛的呢？很简单，举个实际的场景。
+
+比如我们想要在每一页 PPT 上插入 LOGO ，一般操作是在母版中进行，但这么做的问题在于， *如果页面上有一张铺满页面的图片， LOGO 就会被图片遮盖，就像这样：*
+
+[[https://picx.zhimg.com/50/v2-06ae70f3ea20369440b8233ced7a8f54_720w.jpg?source=2c26e567]]
+/LOGO被遮挡/
+
+而 OK 神框的作用，就是帮你 *在每一页 PPT 的同一位置，放上一个你想要添加的元素，录个动图，* 大家可以看下：
+
+[[https://pica.zhimg.com/50/v2-4fb627a63951d3112a0f4ac824c807a9_720w.jpg?source=2c26e567]]
+
+*02. 特殊选中*
+
+这是干嘛的呢？很简单，一般情况下，我们用鼠标点击一个元素，就会选中它，对吗？ *而特殊选中的意思就是，你可以按照元素的类型，进行批量选中。*
+
+比如批量选中页面上所有的红色形状；
+
+比如批量选中页面上所有的圆角矩形；
+
+比如批量选中页面上所有的渐变形状；
+
+......
+
+*这对于提高操作效率来说，简直太赞了，录一个动图，让大家感受一下。* 比如我想批量选择这个页面上所有的竖线：
+
+[[https://picx.zhimg.com/50/v2-26827253e78a20e2a6866e7a020abde8_720w.jpg?source=2c26e567]]
+
+*03. 图表互转*
+
+简单点来说，这个功能的作用就是帮你实现表格和图表的互相转换。为什么说它是个很好用的效率工具呢？
+
+*因为很多时候，当我们在 Word 上写好文档之后，把表格复制到 PPT 中，如果需要将其可视化呈现，那么，就需要重新把表格数据输入一遍，很麻烦。*
+
+而使用这个功能的话，则会方便很多，而且，还会帮你自动选择合适的图表类型：
+
+[[https://picx.zhimg.com/50/v2-1bab7df97cfca9a2fa0c85400435e351_720w.jpg?source=2c26e567]]
+
+** /被很多人推荐过的插件 iSlide 插件/
+
+这个插件被很多人推荐过了，但我依旧玩出了一些新的创意。
+
+[[https://picx.zhimg.com/50/v2-613395e2a2dc8eed28d678f51d8c8b9b_720w.jpg?source=2c26e567]]
+
+比如我们可以用它的 *环形复制功能* ，来做出这样的 PPT 创意图表：
+
+[[https://picx.zhimg.com/50/v2-5da18bf51160f1652870df8b55066fe5_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-d2c2d50f7010ce54b5ea12605b180448_720w.jpg?source=2c26e567]]
+
+或者是利用 *补间动画* ，做出这样的 PPT  图标排版页面：
+
+[[https://picx.zhimg.com/50/v2-1c2333e8bd59642c0710ce43f31d046d_720w.jpg?source=2c26e567]]
+
+当然，也可以利用 *平滑过渡* 进行创意的动画设计：
+
+[[https://picx.zhimg.com/50/v2-4b42cfe66f3299102b12cee619a55300_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-bb9e6ad380a7f33016726b050c97e274_720w.jpg?source=2c26e567]]
+
+这些内容我在我的公众号上写过了，感兴趣的朋友可以前往查看：
+
+[[https://mp.weixin.qq.com/s/EeypYieav99JrV9OqqSFAQ][这款好用的PPT辅助工具，我发现了一些新玩法]]
+
+另外，推荐一篇很优秀的回答，让你的PPT结尾页大不同：
+
+[[https://www.zhihu.com/question/25852732/answer/1026593065][PPT 最后一页写什么结束语既得体又能瞬间提升格调？]]
+
+好了，就先写到这里吧！至少这些操作，在我看来是厉害的！
+
+甲方也忍不住称赞“牛”“你确定这是用PPT做的吗？”我觉得就够了！
+
+我会不断回来更新答案的哈~我先去做客户PPT了哦！
+
+另外，为了方便您学习和了解，我课件PPT源文件分享给你，以上所有的操作的详细步骤都有，直接学习，模仿哦！
+
+*/*领取方式如下： [[https://docs.qq.com/doc/DS1lVUmF6VVlzdmhk][【点击此处一键拿走】]]*/*
+
+辛苦码字作图一整天，弄得头晕
+
+觉得不错，给个赞鼓励下吧！❤
+
+最后的最后，欢迎关注我的原创知乎账号 [[https://www.zhihu.com/people/e88619a209fe6c707a20e0a3b30da8a9][@邵云蛟]] ，你会发现超多的PPT干货，还有许多高效率的办公神器，而且，还会时不时的发红包福利哦！

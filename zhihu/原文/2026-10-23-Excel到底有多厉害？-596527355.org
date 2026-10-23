@@ -1,0 +1,200 @@
+#+TITLE: Excel 到底有多厉害？
+#+LINK: https://www.zhihu.com/question/27588491/answer/596527355
+#+AUTHOR: 纸枫林
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+** 一、Excel VBA爬取新浪微博
+
+[[https://www.zhihu.com/video/1130313516304920576][Excel VBA爬取新浪微博https://www.zhihu.com/video/1130313516304920576]]
+
+是用Python来做爬虫，其实Excel也可以！用不到50行的代码就可以爬取一个博主的所有微博，并下载高清微博配图！
+
+#+begin_src text
+Private Declare PtrSafe Function URLDownloadToFile Lib "urlmon" Alias "URLDownloadToFileA" (ByVal pCaller As LongPtr, ByVal szURL As String, ByVal szFileName As String, ByVal dwReserved As LongPtr, ByVal lpfnCB As LongPtr) As LongPtr
+Private Declare Sub Sleep Lib "kernel32.dll" (ByVal dwMilliseconds As Long)
+Sub weibo()
+
+With CreateObject("WinHttp.WinHttpRequest.5.1")
+
+    For i = 1 To 81
+      .Open "GET", "https://m.weibo.cn/api/container/getIndex?jumpfrom=weibocom&type=uid&containerid=1076033669102477&value=3669102477&page=" & i, False
+      .setRequestHeader "user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1"
+      .Send
+      response = .responsetext
+      Call json_arr_to_vba(response)
+      Sleep Int((300 * Rnd) + 100)
+    Next i
+
+End With
+
+End Sub
+
+Sub json_arr_to_vba(strjson)
+  Set jsobj = CreateObject("ScriptControl")
+  jsobj.Language = "JScript"
+  jsfun = "function json_vba(jsondata){a=eval('(' + jsondata + ')');return a.data.cards;}"
+  jsobj.addcode jsfun
+  Set vbadata = jsobj.Run("json_vba", strjson)
+
+  For Each wb In vbadata
+      j = Sheets("微博").Range("A65536").End(xlUp).Row
+      For i = 1 To 34
+          field = Sheets("微博").Cells(1, i).Value
+          On Error Resume Next:
+          Sheets("微博").Cells(j + 1, i).Value = CallByName(wb.mblog, field, VbGet)
+      Next i
+
+      '下载图片
+      pics = CallByName(wb.mblog, "pics", VbGet)
+
+      For Each pic In CallByName(wb.mblog, "pics", VbGet):
+          '高清原图
+          picurl = CallByName(CallByName(pic, "large", VbGet), "url", VbGet)
+          '压缩图片
+          'picurl = CallByName(pic, "url", VbGet)
+          pid = CallByName(pic, "pid", VbGet)
+          imgarr = Split(picurl, ".")
+          imgtype = imgarr(UBound(imgarr))
+          URLDownloadToFile 0, picurl, ThisWorkbook.Path & "\wbpic\" & pid & "." & imgtype, 0, 0
+      Next     
+  Next
+End Sub
+#+end_src
+
+[[https://pic1.zhimg.com/50/v2-5d69f630fdedb9e64f214860e22da9cc_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-3a06a2c8d95a2f794dcad3f2196ddd88_720w.jpg?source=2c26e567]]
+
+** ①、获取api地址
+
+[[https://pica.zhimg.com/50/v2-0e8fd0549155f494d26ecc2038b90a98_720w.gif?source=2c26e567]]
+
+通过Chrome开发者工具不难发现新浪微博的核心api地址就是： [[https://m.weibo.cn/api/container/getIndex?type=uid&value=3669102477&containerid=1076033669102477&page=4%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%E6%88%91%E4%BB%AC%E4%BF%AE%E6%94%B9%E5%8F%82%E6%95%B0%E6%A8%A1%E6%8B%9F%E8%AF%B7%E6%B1%82%E8%BF%99%E4%B8%AA%E5%9C%B0%E5%9D%80%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%8F%96%E5%88%B0%E5%BE%AE%E5%8D%9A%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%8F%82%E6%95%B0value%E5%B0%B1%E6%98%AF%E5%BE%AE%E5%8D%9AID%EF%BC%8Cpage%E5%B0%B1%E6%98%AF%E9%A1%B5%E6%95%B0%EF%BC%8C%E5%86%99%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%AA%E8%A6%81%E5%BE%AA%E7%8E%AF%E4%BF%AE%E6%94%B9page%E5%8F%82%E6%95%B0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%8F%96%E5%85%A8%E9%83%A8%E5%BE%AE%E5%8D%9A%E3%80%82%E6%8E%A5%E4%B8%8B%E6%9D%A5%E6%88%91%E4%BB%AC%E5%88%86%E6%9E%90%E4%B8%8B%E8%BF%99%E4%B8%AAapi%E8%BF%94%E5%9B%9E%E7%9A%84%E6%95%B0%E6%8D%AE%E3%80%82][https://m.weibo.cn/api/container/getIndex?type=uid&value=3669102477&containerid=1076033669102477&page=4]]
+
+也就是说我们修改参数模拟请求这个地址就可以获取到微博相关数据，参数value就是微博ID，page就是页数，写代码的时候只要循环修改page参数就可以获取全部微博。接下来我们分析下这个api返回的数据。
+
+api返回数据（已删减）：
+
+#+begin_src text
+ 1{
+ 2    "ok":1,
+ 3    "data":{
+ 4        "cardlistInfo":{
+ 5            "containerid":"1076033669102477",
+ 6        },
+ 7        "cards":[
+ 8            {
+ 9                "card_type":9,
+10                "itemid":"1076033669102477_-_4302949377758792",
+11                "scheme":"https://m.weibo.cn/status/H1eJ3wypO?mblogid=H1eJ3wypO&luicode=10000011&lfid=1076033669102477",
+12                "mblog":{
+13                    "created_at":"2018-11-05",
+14                    "id":"4302949377758792",
+15                    "text":"昨日份故宫打卡~ ",
+16                    "textLength":15,
+17                    "source":"iPhone客户端",
+18                    "pics":[
+19                        {
+20                            "pid":"dab20f8dly1fwwzpax10qj21mx26ku0x",
+21                            "url":"https://wx2.sinaimg.cn/orj360/dab20f8dly1fwwzpax10qj21mx26ku0x.jpg",
+22                            "size":"orj360",
+23                            "geo":{
+24                                "width":360,
+25                                "height":479,
+26                                "croped":false
+27                            },
+28                            "large":{
+29                                "size":"large",
+30                                "url":"https://wx2.sinaimg.cn/large/dab20f8dly1fwwzpax10qj21mx26ku0x.jpg",                
+31                            }
+32                        }
+33
+34}
+#+end_src
+
+数据主要包含在data里，data下cards是一个数组，很容易就可以看出是10条微博，微博相关数据都在mblog里，其中pics是图片列表，每张图表都有压缩图和高清原图，原图就是large下的url，解析出来这个地址就可下载图片了。
+
+** ②、源码解析
+
+#+begin_src text
+Private Declare PtrSafe Function URLDownloadToFile Lib "urlmon" Alias "URLDownloadToFileA" (ByVal pCaller As LongPtr, ByVal szURL As String, ByVal szFileName As String, ByVal dwReserved As LongPtr, ByVal lpfnCB As LongPtr) As LongPtr
+Private Declare Sub Sleep Lib "kernel32.dll" (ByVal dwMilliseconds As Long)
+#+end_src
+
+这里主要是引入两个Windows api，URLDownloadToFile是为了下载图片使用，kernel32.dll是为了防爬措施，程序随机暂定一定时间再执行。
+
+#+begin_src text
+Sub weibo()
+
+With CreateObject("WinHttp.WinHttpRequest.5.1")
+
+    For i = 1 To 81
+      .Open "GET", "https://m.weibo.cn/api/container/getIndex?jumpfrom=weibocom&type=uid&containerid=1076033669102477&value=3669102477&page=" & i, False
+      .setRequestHeader "user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1"
+      .Send
+      response = .responsetext
+      Call json_arr_to_vba(response)
+      Sleep Int((300 * Rnd) + 100)
+    Next i
+
+End With
+
+End Sub
+#+end_src
+
+weibo()是主过程，这里使用WinHttp模拟请求，WinHttp对象在销毁前可以自行处理cookie相关信息，可以省去很多工作，创建WinHttp对象以后使用一个for循环来修改page参数，关于页数的计算，微博主页可以看到微博总条数，一页返回10条微博，那么就知道总共需要循环多少页了。 *重要强调：WinHttp对象必须设置：user-agent* ，否则api接口不会返回数据。中间调用了json_arr_to_vba过程，这个过程主要用于解析json数据，并写入到Excel工作表中，接着sleep一个随机时间，主要目的是规避防爬措施。
+
+#+begin_src text
+Sub json_arr_to_vba(strjson)
+
+  Set jsobj = CreateObject("ScriptControl")
+  jsobj.Language = "JScript"
+  jsfun = "function json_vba(jsondata){a=eval('(' + jsondata + ')');return a.data.cards;}"
+  jsobj.addcode jsfun
+  Set vbadata = jsobj.Run("json_vba", strjson)
+
+  For Each wb In vbadata
+      j = Sheets("微博").Range("A65536").End(xlUp).Row
+      For i = 1 To 34
+          field = Sheets("微博").Cells(1, i).Value
+          On Error Resume Next:
+          Sheets("微博").Cells(j + 1, i).Value = CallByName(wb.mblog, field, VbGet)
+      Next i
+
+      '下载图片
+      pics = CallByName(wb.mblog, "pics", VbGet)
+
+      For Each pic In CallByName(wb.mblog, "pics", VbGet):
+          '高清原图
+          picurl = CallByName(CallByName(pic, "large", VbGet), "url", VbGet)
+          '压缩图片
+          'picurl = CallByName(pic, "url", VbGet)
+          pid = CallByName(pic, "pid", VbGet)
+          imgarr = Split(picurl, ".")
+          imgtype = imgarr(UBound(imgarr))
+          URLDownloadToFile 0, picurl, ThisWorkbook.Path & "\wbpic\" & pid & "." & imgtype, 0, 0
+      Next
+
+  Next
+
+End Sub
+#+end_src
+
+VBA不能直接解析json数据，或者说解析比较麻烦，这个需要借助JavaScript，3-7行都是创建js对象，jsfun实际是一个js函数，这个函数也很简单，实际只有三行代码，返回的是api接口返回数据中的cards数组，然后使用for each遍历这个数组，for循环1-34实际是api数据字段名称，我把字段都放在的微博工作表的第一行，循环读取，使用On Error Resume Next是因为并不是每条微博所有字段都存在，所以需要容错。 *重要强调：不要把js对象赋值给VBA对象，这样取不到想要的数据，比如：large=CallByName(pic, "large", VbGet)，这样赋值以后large中已经不是js对象，所有就不包含原来的信息的，这就是为什么取下一级json的时候使用CallByName(CallByName(pic, "large", VbGet), "url", VbGet)这样的形式。* 解析出来图片原图url以后，就可以使用URLDownloadToFile把图片下载到本地了，到这就完成了新浪微博文本及图片的下载。
+
+** 二、Excel VBA实现动态图表
+
+[[https://www.zhihu.com/video/1130314731633987584][Excel VBA实现动态图表https://www.zhihu.com/video/1130314731633987584]]
+
+** 三、Excel VBA绘图
+
+关于使用Excel绘图，已经分享了很多了，我也上传几张吧。
+
+[[https://pic1.zhimg.com/50/v2-c581dd9cf3153857dbe1ef0b6c6e14ca_720w.jpg?source=2c26e567]]
+/Excel VBA绘制梵高星月夜/
+
+[[https://picx.zhimg.com/50/v2-150e01e4a6c5e85d9667941fc8619129_720w.jpg?source=2c26e567]]
+/Excel VBA绘制蒙娜丽莎的微笑/
+
+[[https://picx.zhimg.com/50/v2-f9e5e6c74133c2f4f47691549918f8ae_720w.jpg?source=2c26e567]]

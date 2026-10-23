@@ -1,0 +1,251 @@
+#+TITLE: 做PPT时有哪些神操作？
+#+LINK: https://www.zhihu.com/question/65019555/answer/598882729
+#+AUTHOR: 邵云蛟
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+作为一名从事PPT设计4年的发烧友，我一直觉得PPT中有个特别厉害的“ *神操作* ”，这功能十分基础，却能然你情不自禁发出“ *牛X* ”的称赞！绝对称的上神操作！
+
+不废话，开盘！
+
+[[https://picx.zhimg.com/50/v2-3681596bf7908d88cff1c8d493e29978_720w.gif?source=2c26e567]]
+
+如果你经常留意 PPT 相关的教程，就会发现一个很神奇的事情，但凡提到这个功能，都能引起很多人的颅内高潮。
+
+很多人会拿它来做一些，看似特别厉害的作品，比如像这样：
+
+[[https://pic1.zhimg.com/50/v2-24126d44a6bb8b091736a7672cf6ae6e_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-84317e60994bf89c41cfe9caa90ebe09_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-b28214c040d1fd66a3787416eef648f2_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-b05ae3dbec082e6361ce9c8a9a843cef_720w.jpg?source=2c26e567]]
+
+是不是觉得超牛X！
+
+但其实，你大可不必羡慕别人的作品，因为接下来的三分钟，你也会学会这个功能，并且做出更厉害的作品。
+
+好了，废话不说，咱们直接进入正题。
+
+这个神操作就是「 *布尔运算* 」，学会你也能成为拥有「神操作」的人！给大家总结下别人眼中利用布尔运算都进行的神操作有什么：
+
+** 1.制作图片型文字
+
+简单点来说，就是把图片填充在文字中，利用的功能是图片和文字的相交：
+
+[[https://picx.zhimg.com/50/v2-3681596bf7908d88cff1c8d493e29978_720w.gif?source=2c26e567]]
+
+*这样的做法，在PPT设计中，可以让文字更具可视化效果。*
+
+简单举几个例子，比如我们可以用在年终总结 PPT 的封面：
+
+[[https://picx.zhimg.com/50/v2-3402229c0b7e4e77533952710a476580_720w.jpg?source=2c26e567]]
+
+是不是感觉超级高大上！
+
+再比如，我们把电影画面填充在文字中，用来更好地表现文字含义：
+
+[[https://pica.zhimg.com/50/v2-48cb51f93e6dd97f620987286abba356_720w.jpg?source=2c26e567]]
+
+** 2 制作镂空字
+
+利用剪除功能，在形状上将文字的区域剪出，可以做出类似剪纸的效果，就像这样：
+
+[[https://picx.zhimg.com/50/v2-2917123baf67ef5cb5fe6d63396fb3ab_720w.gif?source=2c26e567]]
+
+那么，在PPT设计中，它有什么用呢？
+
+比如就那上面的案例来说吧，我们可以自由地更换背景元素：
+
+[[https://pic1.zhimg.com/50/v2-3af6ea16fc6dae39f0ddbc1ffdb7d661_720w.gif?source=2c26e567]]
+
+再比如，我们还可以利用剪除功能，制作遮罩动画：
+
+[[https://picx.zhimg.com/50/v2-84317e60994bf89c41cfe9caa90ebe09_720w.gif?source=2c26e567]]
+
+** 3 制作个性化形状样式
+
+PPT软件中，仅提供了一些比较基础的形状，像三角形，矩形等，那如果想要个性化图形，就需要亲自动手来做。
+
+比如把圆角矩形和直角矩形剪除可得到这样的图形：
+
+[[https://pic1.zhimg.com/50/v2-b3ce440db348ede87a657ca5e865d884_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-ccf0e20be1e4dce3e1ae53cc23fbf2fd_720w.jpg?source=2c26e567]]
+
+把圆形和三角形组合，可以得到这样的图形：
+
+[[https://pic1.zhimg.com/50/v2-a6a7ba7586f5fe9b5ae7b769fd0fcddc_720w.jpg?source=2c26e567]]
+
+把三角形和矩形联合，可以得到这样的图形：
+
+[[https://pica.zhimg.com/50/v2-4591909862ec4a3c037dfe2fbdce21f8_720w.jpg?source=2c26e567]]
+
+再比如像这样的图形，就是矩形与三角形的结合：
+
+[[https://picx.zhimg.com/50/v2-3f237d6598ca64ef4e4e9aa434159135_720w.jpg?source=2c26e567]]
+
+** 4.文字矢量化
+
+当我们在制作PPT中，使用了某些特殊字体，但又不能嵌入， *为了防止字体丢失，我们可以将文字矢量化。*
+
+比如像下面这个页面，使用了书法字体：
+
+[[https://picx.zhimg.com/50/v2-321c8f55833aebc2422627f0dfdb70a5_720w.jpg?source=2c26e567]]
+
+*我们只需要利用文字剪除形状，就可以将其矢量化。这样，即便你拿到 Keynote 中进行播放，渐变效果也不会丢失。*
+
+录个动图，大家看下：
+
+[[https://picx.zhimg.com/50/v2-4f2dbed0cb8ed4ba8041c9d1ab549832_720w.gif?source=2c26e567]]
+
+当然，除了这些之外呢，你还可以做很多事情， *比如你可以用来做抖音字效果：*
+
+[[https://pic1.zhimg.com/50/v2-c2370b31c01a0a541d76389d414e31e9_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-d4086863da8917fd8772df7be7f26cff_720w.jpg?source=2c26e567]]
+
+还可以将文字的笔画进行拆分，进行化处理艺术：
+
+[[https://pica.zhimg.com/50/v2-3c3f5d6fb2196113e2c219fddcaea479_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-af1efb941bc197e8eddf966ef3f47be0_720w.jpg?source=2c26e567]]
+
+这都是布尔运算能够够完成的一些效果，怎么样？是不是非常简单？
+
+这个功能是不是可以称的上神操作呢！其实这个功能你也能学会，它就是 *布尔运算* ！
+
+*先来了解一下什么是布尔运算。*
+
+其实很简单，跟数学运算有点像，一共有5个，分别是形状联合，组合，拆分，相交以及剪除。
+
+[[https://picx.zhimg.com/50/v2-0b16801521c51a570f20bda080ba080c_720w.jpg?source=2c26e567]]
+
+当我们同时选中多个元素时，就可以调出这一功能。挨个解释一下。
+
+- *形状结合*
+
+就是把两个独立的元素，变为一个形状。比如我们把三角形和圆角矩形结合，就可以拼一个对话框：
+
+[[https://picx.zhimg.com/50/v2-563283224832cb3a5003e0e0038e119b_720w.jpg?source=2c26e567]]
+
+- *形状组合*
+
+也是把两个独立的元素，变为一个形状。 *但区别在于，它把重合的部分给除掉了。*
+
+比如我们把两个圆形组合，中间重合的部分，就被裁掉了：
+
+[[https://pic1.zhimg.com/50/v2-9f350fc93e702e971aa9093078593df7_720w.jpg?source=2c26e567]]
+
+- *形状拆分*
+
+是把两个独立的元素的各个区域拆散 *。* 比如我们把两个圆角矩形拆分，就被完全拆分了。我特意用5个色彩做了标注：
+
+[[https://picx.zhimg.com/50/v2-4a6316201cefd0573b0db5235f87ff1c_720w.jpg?source=2c26e567]]
+
+- *形状相交*
+
+两个元素进行相交，只保留重合的区域。比如我们把两个圆角矩形相交，仅留下了中间重合的部分：
+
+[[https://pic1.zhimg.com/50/v2-729167a207574d7eb0d6c54060c31467_720w.jpg?source=2c26e567]]
+
+- *形状剪除*
+
+你可以简单地理解为是 A形状减去B形状。比如我们用圆形剪除三角形，那么，圆形中间就镂空了：
+
+[[https://picx.zhimg.com/50/v2-48bc91335f22cee0841d838b02c152cd_720w.jpg?source=2c26e567]]
+
+所以，作为旁门左道的读者，下次当你再看到有人利用布尔运算进行故弄玄虚时，你就可以高傲地发出一声：
+
+#+begin_quote
+*呵呵（微笑脸）*
+#+end_quote
+
+玩过PS的朋友都知道，一切图片都是由一个个图层组成的，但图层并不是PS的专属功能，在PowerPoint中，同样有图层这个功能，我命名为PPT图层。
+
+另外个大家补充一个同样很厉害的神操作！而且如果这个神操作你也能掌握，相信做出一份厉害的PPT应该没啥问题！
+
+这个神操作就叫做——图层
+
+玩过PS的朋友都知道，一切图片都是由一个个图层组成的，但图层并不是PS的专属功能，在PowerPoint中，同样有图层这个功能，我命名为PPT图层。
+
+ *首先，什么叫图层呢？* 看图：
+
+[[https://picx.zhimg.com/50/v2-268b7e5f31c7a54ea234e7562c7759d7_720w.jpg?source=2c26e567]]
+
+ 这是一个简单的图层概念图， *一共有4层，因为最上层是浅蓝色，它遮挡着下面的3层，所以，我们只能看到第一层，但如果把顶层设置为隐藏，那我们就只能看到第二层的图层。*
+
+ 俯视图看上面的4个层，我们看到的会是这样：
+
+[[https://picx.zhimg.com/50/v2-03b6757cb99f521fb17d15819f2dbc9f_720w.jpg?source=2c26e567]]
+
+如果我们把最底层设置为置为顶层，会是什么样呢？图层上显示就是这样的：
+
+[[https://picx.zhimg.com/50/v2-360af227247a946159587ac7749e11ae_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-5bb8b6a8a826ccea814cf93b32fd723d_720w.jpg?source=2c26e567]]
+
+ 我们看起来就会从浅蓝色变成深蓝色：
+
+[[https://pic1.zhimg.com/50/v2-4e04cb4fe2ca934fbe350de9256b074a_720w.jpg?source=2c26e567]]
+
+ 解释到这里，希望你能明白图层的概念。
+
+ 那PPT图层有什么用呢？
+
+ 举个例子，假如我们要做出一个这样的动画效果：
+
+[[https://pica.zhimg.com/50/v2-b8d23e3059b9a0bc6fcafca304d7c25a_720w.gif?source=2c26e567]]
+
+ 我们需要将【我是邵云蛟】5个字重叠起来，分别添加动画，就像这样：
+
+[[https://picx.zhimg.com/50/v2-c1c23398ea452f7928f91101e3f9164e_720w.jpg?source=2c26e567]]
+
+ 那我们怎么添加呢？几乎不可能嘛！除非一个一个添加完动画之后，再堆放在一起。
+
+ 但如果你知道了图层，这个事情就简单多了，为什么？
+
+ *因为你可以挨个图层设置动画，暂时不需要设置动画的图层就设置为隐藏。*
+
+[[https://picx.zhimg.com/50/v2-6869f4a9d757ea8a95edaa29f53b25d5_720w.jpg?source=2c26e567]]
+
+ 再举个例子，假如我们做了这么一个封面：
+
+[[https://pica.zhimg.com/50/v2-d74124b6439918d63a6c1513ede08a23_720w.jpg?source=2c26e567]]
+
+ 这个封面一共分为3个图层，【时尚之都】和【Fashion capital】两段文字算一个图层。
+
+[[https://picx.zhimg.com/50/v2-d8b09279fd0bc9b9d9806b46d384ba8c_720w.jpg?source=2c26e567]]
+
+ 如果在做好之后，我们想把底部的图层模糊处理，我们只需要将矩形和文本框的图层设置为隐藏，等将图片模糊处理后，再设置为显示就好了。
+
+ 具体操作方法是：
+
+ 先把无需修改的图层设置为隐藏：
+
+[[https://picx.zhimg.com/50/v2-34b6fb5c19df58544e31b97b15ffdc16_720w.jpg?source=2c26e567]]
+
+ 然后，图片模糊化处理：
+
+[[https://pic1.zhimg.com/50/v2-2783f6928a73117419b1cbbb0471bfd1_720w.jpg?source=2c26e567]]
+
+ 最后，将隐藏的图层修改为显示：
+
+[[https://picx.zhimg.com/50/v2-aa5b8c21c81d5f5a02e4f83fc8728737_720w.jpg?source=2c26e567]]
+
+ 是不是方便多了？
+
+好了，先写到这里，我还会回来补充的，其实PPT中的动画也是超级厉害的神操作，等我回来更新哈~
+
+另外，你还可以看看我的这些文章：
+
+[[https://www.zhihu.com/question/31008989/answer/621056354][有哪些鲜为人知的网络冷知识和技巧？]]
+
+[[https://www.zhihu.com/question/20987759/answer/54505327][如何为 PPT 找合适的配图？]]
+
+[[https://www.zhihu.com/question/35133756/answer/648186147][PPT图片质量比较低的情况下，如何保证PPT的“高大上”?]]
+
+辛苦码字，记得点赞哈~
+
+也欢迎关注我的原创公众号 [[https://www.zhihu.com/people/e88619a209fe6c707a20e0a3b30da8a9][@邵云蛟]] ，解锁更多的新知识，还有很多的干货和福利哦~

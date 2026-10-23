@@ -1,0 +1,100 @@
+#+TITLE: 如何制作图表非常精美的 Excel 文档？
+#+LINK: https://www.zhihu.com/question/24450523/answer/148171395
+#+AUTHOR: 地远我心知
+#+TYPE: answer
+#+DATE: 2026-10-23
+
+学习Excel不短时间了，这里将我在图表学习方面一些心得体会分享一下。下面我将介绍一下Excel图表的一些神器与资源。
+
+Excel图表入门级别：
+
+[[https://pica.zhimg.com/50/v2-282232c382fb6e25220592e337685708_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-f02067cb52b90258450cd0426dd54bb0_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-31faf1317cf04e86b2f0988d5532e9e9_720w.jpg?source=2c26e567]]
+
+* 这几幅图是不很漂亮美观，但是请别欢呼， *还有！！！！！！*
+
+想不想知道什么是数据地图？请看下方。
+
+[[https://pica.zhimg.com/50/v2-34a30d5ba1d208b927eed40509c5e1c4_720w.jpg?source=2c26e567]]
+
+想不想知道这些看起来具有强烈商业风格极其专业的图表是怎样做出来的？想不想要告别自己那low逼到爆平平无奇的图表？想不想下次汇报工作时老板用欣赏的眼光看你。注意我要放大招了。
+
+一本书：
+
+《Excel 数据之美：科学图表与商业图表的绘制（全彩）》，作者张杰，由电子工业出版社2016年10月出版。
+
+[[https://picx.zhimg.com/50/v2-d5451f4936112ffd18e6feff26d0e831_720w.jpg?source=2c26e567]]
+
+小白入门EXCEL图表的最好书籍，案例详实，易上手，配套资源较好。上面几幅图都摘自这本书的案例文件。
+
+一门课：Excel商业图表修炼秘笈-基础篇 - 网易云课堂
+
+[[https://picx.zhimg.com/50/v2-e828e0c4f25b82b3e9df27ac0a5a69b1_720w.jpg?source=2c26e567]]
+
+[[http://study.163.com/course/introduction/1003592008.htm#/courseDetail][http://study.163.com/course/introduction/1003592008.htm#/courseDetail]] 嗯！上面那本书的配套网课，以视频的形式来讲解图表，内容大同小异，不多说。
+
+一个公众号：EasyCharts。本书以及课程案例文件可以从此免费获得，无论你买没买书或者上课。
+  这个公众号呢会不定期推送一些高级图表教程，有一定基础的图表达人可以尝试模仿做一下。
+
+一本书，一门课，一个公众号，小白把这个资源吃透了，不敢说大神，起码你可以鄙视85%的人做出来的图表。
+
+对了，如果对数据可视化感兴趣，我再推荐一本书，《数据可视化之美》，数据可视化入门必读。
+
+下面我再来推荐几款图表制作神器：
+1. 国产良心之作——百度图说
+
+[[https://picx.zhimg.com/50/v2-f7494dd73e083fa063731c038e2f13b4_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-533f78c4e897b7a44a43d6526955fd20_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-8ff37dad9d696372653fc5fd557157fc_720w.jpg?source=2c26e567]]
+
+工作忙没时间琢磨图表，但是又想把图表做的好看些。这个时候就排上用场了，一键生成美观好看的图表，从此不用费心图表制作。但是！这个工具只能制作出介于一般水准和专业风格之间的图表，要想真正做出好图表，还是自己做比较好。
+百度 · 图说 [[http://tushuo.baidu.com/wave/index#/gallery][http://tushuo.baidu.com/wave/index#/gallery]]
+
+2. 地图慧
+
+[[https://picx.zhimg.com/50/v2-0393e2983dc7438a8006d9866015eab1_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-6cb4b34465079b8855ed23590856260c_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-7dbc7c18a43dce41171cbf876880f3dd_720w.jpg?source=2c26e567]]
+
+不多说！数据地图的专业制作工具。唯一麻烦的在于好像免费用户做出的图有水印，得自己想办法去掉。
+
+地图慧-在线制作地图,数据地图,专题地图,用地图说话 [[http://c.dituhui.com/apps][http://c.dituhui.com/apps]]
+
+3.BDP——（喵！好晚了好累，我去睡觉了。咱们下次聊，这个也是神器之一）
+
+想知后事如何且听下回分解。求赞哦，奔宝宝需要一点激励来继续分享干货。
+
+我的风格就是不多说，就放图。
+
+[[https://pica.zhimg.com/50/v2-961841b5aba62039a376830c271ef3af_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-9ceb37576dc68fe7c75bc66bda0e3636_720w.jpg?source=2c26e567]]
+
+懒人想要省事儿不费心滴做出较为好看的图表，BDP也是一个很好的选择。
+
+最重要的以上三款工具全都可以免费使用好不好，亲，对于我们这些苦逼制表穷狗来说，这真的好重要。
+
+最后再来推荐国外出品的一款神器。
+
+4.Create infographics & online charts | [[http://infogr.am][http://infogr.am]] [[https://infogr.am/app/#/library][https://infogr.am/app/#/library]]
+
+这款了呢是国外出品的，商业风格更强烈一些，更具有专业气息，主题也更为多变一些。唯一我觉得不舒服的就是一些高级图表制作收费。不过这无损于它神器的地位。
+
+*放图!放图！放图！*
+
+[[https://pic1.zhimg.com/50/v2-bba092cbec0f630c7951cf55ed3032e1_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-75fd5d4ccbce8c0f35f875068355786c_720w.jpg?source=2c26e567]]
+
+界面右侧有着灵活多样的风格主题可供选择！哈哈哈哈哈，麻麻再也不用担心我的图表丑了！
+
+[[https://pic1.zhimg.com/50/v2-2d82b4ac94cd4558a3444c3e894893e0_720w.jpg?source=2c26e567]]
+
+Excel图表入门篇从此结束，更多高级图表制作技巧可以关注我即将开设的专栏Excel数据可视化与我的个人文章。
