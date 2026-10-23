@@ -225,3 +225,10 @@ zhihu CLI 里，直接用 CLI 读取收藏、归档、删收藏。
    并给出：本批用的收藏夹（含是否自动换夹）、本批删除策略、本批条目
    落进的聚合文件 zhihu/<主类>.org、原文目录 zhihu/原文/（本批新存
    文件名）、日志 zhihu/处理日志.org。
+
+   **最后必须再输出一行机器可读的结果行**（定时任务靠它取数，格式不
+   要改，三个数字用纯阿拉伯数字，夹 ID 不带前缀）：
+
+   #+begin_example
+   RESULT: deleted=N kept=M failed=K folder=<收藏夹ID> policy=<auto|keep|ask>
+   #+end_example
