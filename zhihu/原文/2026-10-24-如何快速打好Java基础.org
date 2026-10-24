@@ -1,0 +1,46 @@
+#+TITLE: 如何快速打好Java基础？
+#+LINK: https://www.zhihu.com/question/50904128/answer/702934642
+#+AUTHOR: 九章算法
+#+TYPE: answer
+#+DATE: 2026-10-24
+
+推荐一个国外大佬的Java学习路线（附完整视频：油管 playlist PLFE2CE09D83EE3E28）。
+
+## Java学习网课资源
+- **CodeGym**：在线Java编程课程，80%练习内容，适合零基础入门
+- **Wibit Online Java Courses**：动画形象教学，零基础友好
+- **Stanford CS106A: Programming Methodology**：斯坦福经典课程，完全没经验的可以学
+- **Bloombenc**：交互式学习平台，自适应教学节奏
+- **CodeAcademy**：实用导向，注重找工作时用的技术能力
+- **PLURALSIGHT**：整合型平台，部分免费
+- **Lynda**：进阶课程(JDBC/Reflection API/文件管理)
+- **九章算法基础班(Java)**：中文互动课，硅谷工程师讲授
+
+## 学习网站
+- **BeginnersBook**：免费教程+可练习代码
+- **docs.oracle.com/javase/tutorial**：官方指南
+- **JournalDev**：教程及问答
+- **JavaWorld / developer.com / IBM DeveloperWorks**：老牌Java社区
+- **IBM Developerworks/java**：IBM官方Java专区
+
+## 书籍推荐
+
+### Java语言本身
+#### 入门
+- 《Head First Java》：图文并茂搞笑轻松，从基础到线程/网络/分布式项目一站式学会
+- 《疯狂Java讲义》：国人原创经典，细致全面系统通俗，考虑了版本升级
+
+#### 进阶
+- 《Java编程思想》：全球公认最好Java书，不同水平读有不同感觉，进阶必看
+- 《Java核心技术卷1+2》：与《编程思想》齐名的大全式图书，更偏重API讲解和实用性
+- 《Effective Java》(Joshua Bloch)：谷歌首席架构师，78条实用经验规则；中文版翻译不好建议看原版
+- 《Java性能权威指南》：JIT编译器/GC算法/线程同步/性能调优深入解读
+
+### 重构与设计模式
+- 《HeadFirst设计模式》：23个设计模式用场景对话+打比方讲清，最友好的入门书
+- 《设计模式》(GoF)：开山鼻祖必读多遍，虽然是C++例子
+- 《设计模式解析》：如果你觉得GoF太晦涩、HF太不技术，这本刚好
+- 《重构：改善既有代码的设计》(Martin Fowler)：程序员必读书，java示例代码
+- 《代码整洁之道》：命名规范/减少注释做到代码即文档/良好编程规范
+
+最后附有完整Java技能图谱。

@@ -1,0 +1,70 @@
+#+TITLE: 作为刚工作的java菜鸟，怎么样做三年后才能成为月薪10k+的大牛？
+#+LINK: https://www.zhihu.com/question/26434494/answer/623588238
+#+AUTHOR: JavaGuide
+#+TYPE: answer
+#+DATE: 2026-10-24
+
+**自学能力！自学能力！自学能力！** 如何对待业余时间决定未来几年与周围同事的差异。
+10k+在北上广很低了，大牛应该年薪40w+以上。
+
+作者双非一本出身，大二定方向后制定学习计划暑假+半个学期过完Java后端必备技术并做了两个实战项目。开源项目JavaGuide已获100K+star。
+
+---
+
+## Java 基础
+- **入门视频**: 尚硅谷《Java基础教程》、韩顺平《零基础30天学会Java》
+- **入门书籍**: 《Head First Java》(最轻松有趣)、《Java核心技术卷1+2》(当工具书)、《Java编程思想》(稍后再读)
+- **Java 8**: Lambda/Stream API必掌握 → 《Java 8实战》
+- **进阶**: 《Effective Java》、《重构》、多总结记笔记
+- 不建议初学者上来就通过做游戏学习，先用简单算法题实践
+
+## 并发（多线程）
+推荐：**《Java并发编程之美》**(通俗易懂)、**《实战Java高并发程序设计》**(理论+实战)、**《深入浅出Java多线程》**(大厂大佬开源)、**《Java并发实现原理》**(JDK源码剖析)
+自测清单：线程vs进程、上下文切换、死锁避免、sleep vs wait、JMM/happen-before、synchronized/volatile、ThreadLocal、ThreadPoolExecutor参数和饱和策略、AQS及其组件(Semaphore/CountDownLatch/CyclicBarrier)、ReentrantLock/RWLock、CAS原理、Atomic原子类、并发容器(ConcurrentHashMap等)、CompletableFuture
+
+## JVM
+面试大厂核心考点。必读书：**《深入理解Java虚拟机》**(第三版含ZGC剖析，豆瓣9.6分)**
+补充：《实战Java虚拟机》、《自己动手写Java虚拟机》(Go实现)、宋红康老师B站JVM全套教程(400节)
+自测清单：内存区域划分/GC算法/类加载流程/双亲委派模型/Tomcat打破双亲委派机制/JVM调优参数
+
+## 数据库
+### MySQL
+三本书：**《MySQL必知必会》**(新手薄册入门)、**《高性能MySQL》**(经典进阶，重点看第5章索引和第6章查询优化)、**《MySQL技术内幕》**(存储引擎深挖)
+必掌握：索引(优缺点/B树vsB+树/聚集vs非聚集/覆盖索引)、事务(ACID/隔离级别)、存储引擎(MyISAM vs InnoDB)、锁机制(InnoDB锁算法)
+
+### Redis
+内存数据库。**《Redis设计与实现》**(深入)、**《Redis实战》**(应用)、**《Redis开发与运维》**(一线经验)
+自测：Redis vs Memcached、数据结构与应用场景、Redis多线程演进(6.0引入)、过期策略/内存淘汰/持久化(RDB/AOF)、缓存穿透/雪崩/击穿、缓存与数据库一致性
+
+## 常用工具
+- **IDEA**: IntelliJ IDEA中文专题教程 + 丰富插件生态
+- **Maven**: 学框架前先花几天掌握(代替到处找Jar包)
+- **Git**: Learn Git Branching交互式学习 + 《Pro Git》
+- **Docker**: 容器化解决环境问题一致性问题，《Docker从入门到实践》
+
+## 常用框架
+### Spring/SpringBoot
+核心概念：IOC/AOP/Bean生命周期作用域/SpringMVC工作原理
+必做：SpringBoot整合MyBatis/ElasticSearch/SpringSecurity/Redis
+书籍：《Spring实战5》、《Spring Boot实战派》、《Spring Boot编程思想》、《2021版SpringBoot2零基础入门》(雷神B站)
+
+### Netty
+Java网络编程必备。TCP/UDP套接字简化器，Dubbo/RocketMQ/ES/gRPC底层都用它。
+书籍：《Netty实战》(入门)、《Netty进阶之路》(进阶案例)、《Netty入门与实战：仿写微信IM》
+
+## 搜索引擎
+Elasticsearch 或 Solr。极客时间课程《Elasticsearch核心技术与实战》(基于7.1版/eBay资深专家)。进阶：《Elasticsearch源码解析与优化实战》
+
+## 分布式与微服务
+核心书：**《从零开始学架构》**(李运华)、**《软件架构设计》**(余承欢)
+知识点覆盖：CAP理论/BASE理论/Paxos&Raft/RPC( Dubbo)/服务注册发现(Eureka/Zookeeper/Consul/Nacos)/API网关(SpringCloud Gateway)/配置中心(Apollo/Nacos)/分布式ID(UUID/Snowflake/UidGenerator/Leaf)/分布式事务(Seata/Hmily)/链路追踪(Pinpoint/SkyWalking/CAT)
+
+## 高并发与高可用
+- **消息队列**: RocketMQ/Kafka/RabbitMQ — 用于解耦和削峰
+- **读写分离&分库分表**: Sharding-JDBC推荐
+- **负载均衡**: DNS硬件(F5)/软件(Nginx)
+- **限流降级熔断**: Hystrix/Sentinel — 限流防突发/降级保核心/熔断应对第三方故障
+- **集群**: 相同服务部署多份避免单点故障
+- **超时重试**: 一般设3次，再多次加重服务器压力
+
+来源：JavaGuide (Snailclimb)，GitHub 100K+ star

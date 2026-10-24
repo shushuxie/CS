@@ -1,0 +1,13 @@
+{
+  "batches": [
+    {"name":"程序员","cid":"379223291","count":14,"ids":[1,2,3,4,5,6,7,8,9,10,11,12,13,14]},
+    {"name":"绘画","cid":"284170218","count":11,"ids":[15,16,17,18,19,20,21,22,23,24,25]}
+  ],
+  "status":{1:"done",2:"done",3:"done",4:"done",5:"done",6:"done",7:"done",8:"done",9:"done",10:"done",11:"done",12:"done",13:"done",14:"done",15:"done",16:"done",17:"done",18:"done",19:"done",20:"done",21:"done",22:"done",23:"done",24:"done",25:"done"},
+  "policy":"auto",
+  "start_date":"2026-10-24",
+  "end_date":"2026-10-24",
+  "category_counts":{"个人思考":2,"技巧":13,"科普":2,"推荐":5,"故事娱乐":3},
+  "total_done":25,"total_target":25,"completed":true,
+  "aggregated_files":["个人思考-part2.org","技巧-part9.org","科普-part6.org","推荐-part7.org","故事娱乐-part3.org"]
+}

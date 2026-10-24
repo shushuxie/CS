@@ -1,0 +1,29 @@
+#+TITLE: 目前 Java 后端有哪些不是很有必要去学的？
+#+LINK: https://www.zhihu.com/question/305924723/answer/557800752
+#+AUTHOR: 沈世钧
+#+TYPE: answer
+#+DATE: 2026-10-24
+
+接触Java近20年，见证技术变迁：JavaEE框架从百家混战→Spring一统；Web从SSH→SpringMVC+MyBatis；IDE从JBuilder→Eclipse→IDEA。
+
+判断标准：①实际开发能否用到 ②是否有助于加深技术理解 ③对面试是否有用。
+
+---
+
+## JSP — 完全放弃学习
+前后端分离时代后端只提供REST接口返回JSON，与View相关的一切模板技术(JSP/FreeMarker/Velocity)都失去学习的必要。
+
+## Struts — 不要再学
+Spring MVC作为"MVC亲儿子"设计之初就参考了Struts优缺点，一统天下。老项目还在维护但新项目全部转向SpringMVC。新手直接从SpringMVC开始。
+
+## Hibernate — 不需要学了
+Hibernate优点=缺点：过度追求彻底OR映射→隔离SQL→调优困难(必须深入理解框架才能优化)。现代实践更偏爱MyBatis这种轻量级框架——既保留配置灵活性又能接触SQL调试优化。
+
+## Servlet — 必须要精通！
+各种MVC框架最底层都以Servlet为基础。不深刻理解Servlet生命周期就无法真正掌握SpringMVC等框架。价值在于底层的Request拦截(权限判定)/Response拦截(统一检查)。
+
+## 其他不必深学
+- **Applet**：连Flash都快被淘汰的技术
+- **Swing**：桌面应用现在用C++(MFC)/C#(Winform/WPF)
+- **JDBC**：被MyBatis等框架封装，优先级排低，时间有限可以不先学
+- **XML**：数据传输正被JSON替代；简单了解即可，XPath等庞杂API不必学

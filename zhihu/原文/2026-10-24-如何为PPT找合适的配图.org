@@ -1,0 +1,22 @@
+#+TITLE: 如何为 PPT 找合适的配图？
+#+LINK: https://www.zhihu.com/question/20987759/answer/48523540
+#+AUTHOR: 璞石PPT
+#+TYPE: answer
+#+DATE: 2026-10-24
+
+## 全能型在线设计平台：Canva（强烈推荐）
+
+Canva收购了全球两家最大的免费可商用图库：**Pexels** + **Pixabay**，支持中文搜索，访问稳定。
+
+### 优势
+- 图片颜值高且免费可商用，付费素材明确标注不用担心版权问题
+- 节省找图搜图的时间
+- 除了PPT还有很多模板：名片/海报/易拉宝等可直接套用或做灵感参考
+- 现在推出中文网站，国内访问非常稳定
+
+### 核心资源
+- [Pexels](https://www.pexels.com) — 高质量免费图片
+- [Pixabay](https://www.pixabay.com) — 海量免费图片+视频+插画
+- Canva整合版直接搜索即可用
+
+高清免费可商用图片很多，建议收藏备用。

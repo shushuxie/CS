@@ -1,0 +1,25 @@
+#+TITLE: java-Eclipse左边的那个框被我弄没了，该怎么办?
+#+LINK: https://www.zhihu.com/question/298670083/answer/511441976
+#+AUTHOR: 王小明
+#+TYPE: answer
+#+DATE: 2026-10-24
+
+谢邀
+
+![](https://pic1.zhimg.com/50/v2-c80255466eae83344f7a1fbc8e51f4d8_720w.jpg?source=1def8aca)
+
+那个窗口大概是 ProjectExplorer 或者 Package Explorer
+
+都打开瞅瞅，看哪个眼熟就是哪个
+
+这俩窗口都是用来展示和选取文件的
+
+=====
+
+看了一眼这个回答至少帮到了二十来个人了 
+ 但是这个问题其实不好描述和搜索 
+ 所以被此困扰的朋友肯定不少 
+ 这让我想起 SteakOverflow 上关于如何退出 vim 的问答 
+ 
+ 万事开头难 
+ 愿诸位披荆斩棘屠龙衣锦
