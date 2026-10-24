@@ -1,0 +1,11 @@
+#+TITLE: 有没有质量高一点的ai agent开发课程？
+#+LINK: https://www.zhihu.com/question/1893668410774254363/answer/1991080539034259617
+#+AUTHOR: 陈序猿技术后花园
+#+TYPE: answer
+#+DATE: 2026-10-24
+
+推荐一个 Google神级教程： [5-Day AI Agents Course。](https://www.kaggle.com/learn-guide/5-day-agents)
+
+这是一套专为开发者设计的 *硬核实战课程* ，旨在帮助你从零开始掌握构建 AI Agent（智能体）的核心技能。与市面上许多只会调用 API 的"Toy Project"不同，这套课程由 Kaggle 和 Google ADK 团队打造，深度涵盖了 Agent 开发的完整生命周期：从基础架构到多智能体协作，再到记忆管理、评估测试以及微服务化部署。
+
+如果你感兴趣的话可以参考下这一篇我发的文章： [Google神级教程：5-Day AI Agents Course (附LangChain本地运行版)](https://zhuanlan.zhihu.com/p/1989390837268898632)
