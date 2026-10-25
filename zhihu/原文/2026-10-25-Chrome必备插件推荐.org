@@ -1,0 +1,467 @@
+#+TITLE: 你极力推荐的 Chrome 扩展有哪些？
+#+LINK: https://www.zhihu.com/question/19594682/answer/693396771
+#+AUTHOR: 三顿
+#+TYPE: answer
+#+DATE: 2026-10-25
+
+*（20200418更新）分享16个我认为使用Chrome必备的神级插件* ，数量不多，但每个都好用到爆！！ *所有扩展都附上了详细的推荐理由和使用介绍* ，除此之外还准备了完整的安装指南，一起来看看吧！
+
+** 浏览器必备，这些神级插件一定要装
+
+#+begin_quote
+*Infinity New Tab*
+#+end_quote
+
+这是一款 *标签页美化工具* 。总觉得默认的标签页太鸡肋？安装这个插件后你的浏览器标签页 *立马就能变成这样：*
+
+[[https://pica.zhimg.com/50/v2-0cdbb5ed95a3fa45214e0360c668d9a8_720w.jpg?source=1def8aca]]
+
+不仅 *颜值提升很多，而且功能超级强大* 。页面上半部分支持直接搜索，而下半部分则可以放置常用的工具和网页。
+
+*网页支持自定义* ，点击右上角的按钮即可添加，除了收录大量常用工具和网页外，也可以自行添加网站。
+
+[[https://pic1.zhimg.com/50/v2-e7ef568f10ab8de8f03f8f3c5c2741a7_720w.jpg?source=1def8aca]]
+
+*标签页的背景也支持修改* ，除了自带的壁纸库外，同样支持自定义添加和修改。
+
+[[https://picx.zhimg.com/50/v2-08c143f3190aaccdec0518aaac76c388_720w.jpg?source=1def8aca]]
+
+除此之外，大到标签页的布局、字体，小到搜索框的形状、大小，都自定义调整。
+
+*不仅颜值超高、功能实用，而且自由度极高，这是三顿推荐这款插件的理由。*
+
+#+begin_quote
+*Imagus 鼠标悬停预览图片*
+#+end_quote
+
+平时浏览网页，经常会遇到一些图片太小看不清的情况， *如果想要放大，必须先把图片下载下来。*
+
+而安装这个插件后，只要 *将鼠标悬停在图片位置就能对图片进行放大预览* 。
+
+[[https://pic1.zhimg.com/50/v2-2704d6a7cfc186a14ed5b0a4f78ee27e_720w.jpg?source=1def8aca]]
+
+支持各种常规网站， *除了预览文章图片外，在搜索图片时也很实用。*
+
+[[https://picx.zhimg.com/50/v2-0b853b02b96f7abbdd226ce412e19bf6_720w.jpg?source=1def8aca]]
+
+*悬停即可预览，告别一切“图片看不清”，这是三顿推荐这款插件的理由。*
+
+#+begin_quote
+*集装箱*
+#+end_quote
+
+和它的名字一样，这是一个综合型的插件， *主要的功能有这样四个：谷歌助手、网盘助手、优惠购以及下载卫士。*
+
+[[https://picx.zhimg.com/50/v2-05bd91967362d286dc0f24cf57f11bdc_720w.jpg?source=1def8aca]]
+
+*谷歌助手，* 由于某些不可抗因素，我们通常无法直接访问谷歌网站。安装这个插件后，谷歌系的网站都能直接访问，包括我们下载插件需要的应用商店，也能直接访问。
+
+[[https://picx.zhimg.com/50/v2-f482d3183964b0ef9219ec1aa36af20f_720w.jpg?source=1def8aca]]
+
+*网盘助手，* 安装插件后支持直接下载百度网盘文件、自定义提取码以及一键生成分享链接等等，提升你的网盘实用效率。
+
+[[https://picx.zhimg.com/50/v2-251215d5b526b8f770f7b48a60bdad47_720w.jpg?source=1def8aca]]
+
+*优惠购* 的功能是支持查询领取优惠券、显示各个购物网站的历史价格，而 *下载卫士* 则是屏蔽各个下载网站的广告以及无关链接，都是非常实用的功能。
+
+*功能聚合，一个插件解决四大浏览网页常见的痛点，这是三顿推荐这款插件的理由。*
+
+#+begin_quote
+*Context Menus 右键搜*
+#+end_quote
+
+扩展你的右键菜单，安装插件后， *在页面空白处右键可以一键生成当前页面链接的二维码或短网址。*
+
+[[https://picx.zhimg.com/50/v2-8e1e32c9378a4fd23ca887f7941f9778_720w.jpg?source=1def8aca]]
+
+*如果鼠标选中的是文字* ，右键即可完成搜索、翻译以及生成对应二维码。
+
+[[https://picx.zhimg.com/50/v2-f13100073e0dfb0d564b8c82cdae01db_720w.jpg?source=1def8aca]]
+
+*如果鼠标选中的是图片* ，右键即可完成以图搜图，识别二维码等功能。
+
+[[https://pic1.zhimg.com/50/v2-9c1ce902b0b7f4374f3a75af2d811322_720w.jpg?source=1def8aca]]
+
+除此之外，在插件的设置中还可以对这些功能进行自定义的调整和修改， *让你的右键菜单不再鸡肋，这是三顿推荐这款插件的理由。*
+
+#+begin_quote
+*OneTab Plus*
+#+end_quote
+
+我相信你一定遇到过和三顿一样的情况，一不留神在浏览器打开了几十个网页， *一堆标签挤在一块，太头疼了。*
+
+[[https://picx.zhimg.com/50/v2-597b7dcfcd17e91d75ca260e67e58a29_720w.jpg?source=1def8aca]]
+
+而 *这个插件的功能正是一键整理标签页* ，点击插件按钮后，之前打开的标签都会被聚拢整理在一起。
+
+[[https://picx.zhimg.com/50/v2-2454446b2c56eaaf2d4bed1746c06e83_720w.jpg?source=1def8aca]]
+
+*聚拢后的页面非常清晰* ，所有标签一目了然，并且支持增加或删减。
+
+[[https://picx.zhimg.com/50/v2-2f831198ec93c323c9290dfb3ef0a457_720w.jpg?source=1def8aca]]
+
+*每次整理都会生成一个标签组* ，之前生成的标签组也会清晰保留，想要还原的时候，点击打开全部即可。
+
+[[https://pic1.zhimg.com/50/v2-d42cceca30755e08feb02e169c704e2c_720w.jpg?source=1def8aca]]
+
+*一键整理，一键还原，再也不用担心标签栏脏乱差，这是三顿推荐这款插件的理由。*
+
+#+begin_quote
+*Awesome screenshot*
+#+end_quote
+
+*浏览器截图工具千千万，这是三顿体验下来最好用的一款。* 除了基本截图功能外，还支持整页截图和录屏功能。
+
+[[https://picx.zhimg.com/50/v2-e1b686d8de0200920778790c7da68296_720w.jpg?source=1def8aca]]
+
+*截图后还提供了非常给力的编辑功能。* 支持调整尺寸、剪裁、添加文字以及添加框线箭头等等。
+
+[[https://pica.zhimg.com/50/v2-e7970198c54179a680b13d2952cc59cb_720w.jpg?source=1def8aca]]
+
+*编辑后除了直接下载，还支持打印或导出PDF格式：*
+
+[[https://pica.zhimg.com/50/v2-11c0ea12dcca1810b8b5f65f5f0a1e4c_720w.jpg?source=1def8aca]]
+
+*涵盖了有关截图，你能想到的全部功能，这是三顿推荐这款插件的理由。*
+
+#+begin_quote
+*SimpRead简悦*
+#+end_quote
+
+在浏览器进行阅读的时候，老是被各种广告和无关内容困扰？ *这款插件可以自动屏蔽无关信息，提取文章内容生成阅读页面。*
+
+[[https://pic1.zhimg.com/50/v2-c0638add369867c896732c8adaf9cdb0_720w.jpg?source=1def8aca]]
+
+除此之外 *还提供了诸如划词翻译、字数统计这样的插件* ，支持绝大多数主流网站。
+
+[[https://pica.zhimg.com/50/v2-a9456358b30d92289b7397de0f0f1ade_720w.jpg?source=1def8aca]]
+
+*告别广告和无关信息，拥有干净、清爽的阅读体验，这是三顿推荐这款插件的理由。*
+
+#+begin_quote
+*图片下载助手*
+#+end_quote
+
+作为一个PPT设计师，经常需要找各种各样的素材，然而很多网站上看到的好素材都无法直接右键另存为。
+
+[[https://pic1.zhimg.com/50/v2-aa1810706a955041759db5b5c9f50755_720w.jpg?source=1def8aca]]
+
+以往我们是通过浏览器中的审查元素功能获取，打开审查元素后要一个个文件夹去找，非常麻烦。
+
+因此我想向你推荐这个叫图片助手的浏览器插件，
+
+[[https://pic1.zhimg.com/50/v2-38ee441d3fde4728be3bb66063127b8f_720w.jpg?source=1def8aca]]
+
+使用它一键就可以完成网页中图片元素的获取，以锤子手机官网为例，给各位看一个动图。
+
+[[https://pic1.zhimg.com/50/v2-156e3f73182bd8bb018b3582e47d74fb_720w.jpg?source=1def8aca]]
+
+获取的图片都会呈现在这样一个页面中，不仅支持一键下载，还可以按图片的大小、属性进行筛选，过滤掉多余的图片。
+
+[[https://pic1.zhimg.com/50/v2-ee487faed874f1180822bb0fae118983_720w.jpg?source=1def8aca]]
+
+对我来说，这是一个好插件，因为它解决了这样几个应用场景：
+
+- 抱怨有很多实用但无法直接下载的图片
+- 几十张图片要一个个右键另存为
+- 网页上图片的格式、大小不一，找起来太麻烦
+
+如果你常和图片打交道，我推荐你实用这款插件。
+
+#+begin_quote
+*Adblock Plus*
+#+end_quote
+
+这是一款很火的广告拦截插件，顾名思义，它主要的功能就是拦截广告。拦截效果？给你们看一个对比，
+
+[[https://picx.zhimg.com/50/v2-a511c73c1558f7531645e76cd4b7dfb1_720w.jpg?source=1def8aca]]
+
+使用插件后，页面中多余的广告全部被删去了。看起来清爽，我们可以更快速的找到页面中需要的内容。
+
+[[https://pic1.zhimg.com/50/v2-7fef5b3a68123225168b8435625756be_720w.jpg?source=1def8aca]]
+
+对我来说，这个插件还有一个冷门的小功能。由于写推送的需要，三顿经常需要对各类网页进行截图。
+
+[[https://pic1.zhimg.com/50/v2-3ca741314f65dca11bc174225d4f5c63_720w.jpg?source=1def8aca]]
+
+导航条很丑，为了呈现效果，我要把它隐藏掉，这时候就可以用到插件中拦截元素的功能。
+
+[[https://picx.zhimg.com/50/v2-462306db3241c4c64c8c1c5d3fdbf950_720w.jpg?source=1def8aca]]
+
+像百度搜索右边烦人的推荐栏，三顿也会用这个功能来进行隐藏。
+
+[[https://pic1.zhimg.com/50/v2-11508342478a5366b3ec3db8699aff98_720w.jpg?source=1def8aca]]
+
+#+begin_quote
+*油猴脚本*
+#+end_quote
+
+*说到Chrome插件，油猴必须拥有姓名！* 啥是油猴脚本？简单的说它就是个多功能工具箱， *提供了很多超好用的工具：*
+
+*▼ AC-baidu（去广告+重定向）*
+
+百度上老是一大堆的广告？来看看装了这个工具之后的效果吧，
+
+[[https://picx.zhimg.com/50/v2-aa8637bb6dad8d744f83f88a68c0dde7_720w.jpg?source=1def8aca]]
+
+不仅 *完全没了广告，而且整个界面都清爽了很多* ，然而这，还不是它最重磅的功能。
+
+它 *最强大的地方在于重定向的功能* 。每次我们在百度上点开网页，你会发现百度会先跳转到自己的地址，再跳转回目标地址，
+
+[[https://picx.zhimg.com/50/v2-3c0d320b75ea3100cac8f6727ebff9f3_720w.jpg?source=1def8aca]]
+
+加载特慢不说，还容易加载出错。而用了这个工具的重定向功能之后， *直接跳转目标页面* ，不含中间商。
+
+[[https://pica.zhimg.com/50/v2-885ea3b2197037285b468432ff7e812c_720w.jpg?source=1def8aca]]
+
+除此之外，这个工具还设有 *“移除百度搜索预测”以及“自定义美化”* 等功能，在 *右上角的自定义选项* 就能设置。
+
+[[https://picx.zhimg.com/50/v2-f88d9a527c1fde68ee403a1b2202eb65_720w.jpg?source=1def8aca]]
+
+▼ *百度网盘直接下载助手*
+
+很多小伙伴用百度网盘的时候都遇到过这种情况， *大文件无法直接下载* ，就算装个百度网盘下起来也特别慢。
+
+[[https://picx.zhimg.com/50/v2-cd23e42237946cbeec119a5ba70f091f_720w.jpg?source=1def8aca]]
+
+而这个工具的功能就是 *跳过大小限制* ，安装后在页面上方会出现一个下载助手按钮，可以选择直接下载或是获取连接，非常方便。
+
+[[https://pic1.zhimg.com/50/v2-880db40b83615af54dda6ca7651ecc16_720w.jpg?source=1def8aca]]
+
+获取后的链接 *支持迅雷或是其他下载工具下载* ，也完全不用担心限速问题。
+
+[[https://pic1.zhimg.com/50/v2-369fbfafe417b70b455aa72444ef7947_720w.jpg?source=1def8aca]]
+
+▼ *全网音乐一键免费下载*
+
+想要在网上下载音乐，你会发现 *各种平台都会提示你安装它们自家的播放器* ，装了就能下载？太天真了，装了也只能用它们的播放器播放。
+
+[[https://pic1.zhimg.com/50/v2-2e5fd4d0aa67f49abc4650e51320c196_720w.jpg?source=1def8aca]]
+
+而用了这个工具后， *点击一键下载就会跳转到可以下载的网站* ，无需登录，而且支持各大主流的音乐平台。
+
+[[https://picx.zhimg.com/50/v2-2e5fd4d0aa67f49abc4650e51320c196_720w.jpg?source=1def8aca]]
+
+[[https://pic1.zhimg.com/50/v2-8a662f265ad681245d21b4fd0bdf815c_720w.jpg?source=1def8aca]]
+
+▼ *看真正想看的微博*
+
+工具名字即作用，和AC-baidu类似，它可以 *对你的微博进行优化* 。比如老是吐槽微博的时间轴混乱，使用这个工具就能 *让微博按时间排序* ，
+
+[[https://pic1.zhimg.com/50/v2-e30f7799cdc31f92d6dc2b45cbe0e0b4_720w.jpg?source=1def8aca]]
+
+经常被各种广告刷屏？使用这个工具直接屏蔽，
+
+[[https://picx.zhimg.com/50/v2-c8c07eae36ed1175552b08a588986e9d_720w.jpg?source=1def8aca]]
+
+安装工具后右上角新增的这个漏斗就是它设置选项卡，打开后你就会发现功能简直眼花缭乱，过滤微博内容，清理版面图标，修改外观样式， *微博一切的“不和谐”都能用它改造。*
+
+[[https://picx.zhimg.com/50/v2-cd31f738c48ec2bf75f833fae9f218a0_720w.jpg?source=1def8aca]]
+
+▼ *网页限制解除*
+
+很多网页 *设置了复制限制* ，想要复制网页上的某段内容，不是直接 *提示无法复制* 就是显示需要登录。
+
+[[https://pic1.zhimg.com/50/v2-877f2188b18cbd2f9302e31a2d3ed700_720w.jpg?source=1def8aca]]
+
+这个工具的作用就是 *直接解除网页限制* ，安装后没有任何按键和提示，但你会发现所有页面都已经是可直接复制的状态。
+
+[[https://pic1.zhimg.com/50/v2-117e5ad40415a435e3ceca4e1e7aa8cd_720w.jpg?source=1def8aca]]
+
+▼ *豆瓣资源下载大师*
+
+经常会上豆瓣看看有什么好看的小说、电影等等，往往看到一部想看的电影，你需要复制片名，打开百度，再去一个个链接找资源。
+
+安装这个工具后 *直接就能在界面右侧显示相关的资源* ，哪里下载哪里在线观看，连字幕都有对应的资源网站。
+
+[[https://picx.zhimg.com/50/v2-78e42bd815116f3da5c073d2f549c675_720w.jpg?source=1def8aca]]
+
+除此之外电影部分还可以 *显示IMDb以及烂番茄等评分* ，方便你进行对比，真的是非常体贴了。
+
+▼ *购物党比价工具*
+
+在电商平台浏览商品时，这个工具可用 *自动为你比对同款商品在不同平台上的价格* ，同时还可以 *显示历史最低价* ，对喜欢买买买的小伙伴来说再好用不过啦。
+
+[[https://picx.zhimg.com/50/v2-e00bd1f4cd4dac5f8ab8cd079792e162_720w.jpg?source=1def8aca]]
+
+▼ *右键新标签中打开图片时显示最优图像质量*
+
+工具的功能如名字所示， *找到的图片质量不高？* 以往我们需要用搜索引擎的以图搜图再次搜索，过程非常麻烦。
+
+安装这个工具后，在任意图片 *处右键选择在新的标签中打开图片，工具会自动优化图像质量。*
+
+[[https://pic1.zhimg.com/50/v2-d45a65b1bad34e2ff46ff6d4eaa9ee71_720w.jpg?source=1def8aca]]
+
+说实话三顿第一次用的时候都惊呆了，对设计师们来说，还有比这更好用的工具吗。有关油猴的安装和使用，我写过一篇超详细的文章，感兴趣的话可以点击下面的卡片进行查看。
+
+[[https://zhuanlan.zhihu.com/p/59400310][三顿：这款堪称神器的浏览器插件，让你上网爽的飞起]]
+
+-----
+
+[[https://pica.zhimg.com/50/v2-640f22ca1fa01f5fa9b877a92d6a4b82_720w.jpg?source=1def8aca]]
+
+** 20200418再给大家更新6款好用的插件！
+
+** SPS搜我听歌
+
+*这是一款三顿超舍不得分享给你的听歌插件，* 提供了搜我听歌、搜我广播和搜我播客三个功能。
+
+[[https://pica.zhimg.com/50/v2-53efa9ce84b06f9b4a2ca34547db8d31_720w.jpg?source=1def8aca]]
+
+*让三顿最爱的自然是听歌功能，* 打开插件输入歌名就能搜索播放，几秒钟就能让你边听歌边上网。
+
+[[https://picx.zhimg.com/50/v2-a8d0d9a5b701ecb000872be16616a5eb_720w.jpg?source=1def8aca]]
+
+*而且常规播放器有的功能它都有！* 支持调整音量、拖动进度条，支持收藏和查看歌词。
+
+播放歌曲时，插件皮肤还会随歌曲发生变化，颜值超高：
+
+[[https://picx.zhimg.com/50/v2-809fe359924f2a2f225c3fab87efc4d0_720w.jpg?source=1def8aca]]
+
+除此之外还提供了电台和博客的功能，支持按地区查找，主流的电台都可以搜索播放：
+
+[[https://pica.zhimg.com/50/v2-0e6a0905bebf5fba6a43aa8727b96faf_720w.jpg?source=1def8aca]]
+
+*如果你不愿意安装各种听歌软件，或者只是偶尔听歌，又或者是在浏览网页时有听歌的习惯，不妨可以试试这款插件。*
+
+[[https://pic1.zhimg.com/50/v2-640f22ca1fa01f5fa9b877a92d6a4b82_720w.jpg?source=1def8aca]]
+
+** Graphitabs
+
+我相信很多小伙伴都会有和三顿一样的遭遇，有时候一大堆网页密密麻麻，每页都要用但是很难快速找到需要的那一页。
+
+[[https://picx.zhimg.com/50/v2-f55f651580724f4afc777b017696b5fc_720w.jpg?source=1def8aca]]
+
+*这款插件唯一的功能就是帮你把打开的网页整理成思维导图的样式，而且真一键整理：*
+
+[[https://picx.zhimg.com/50/v2-671a6f7d00621a66b4bbde9d73f189de_720w.jpg?source=1def8aca]]
+
+‍整理完的思维导图支持拖动查看、支持随意放大调整位置：
+
+[[https://picx.zhimg.com/50/v2-8ceb33fd6dd9bb6c5d99338833d58dc5_720w.jpg?source=1def8aca]]
+
+同一个网页的标签会被归组到一起，另外也支持选择网页进行隐藏：
+
+[[https://picx.zhimg.com/50/v2-02317007becbc17771e60a1d2ed20213_720w.jpg?source=1def8aca]]
+
+*同类型的插件有很多，它给三顿的感觉是没有任何花里胡哨的功能，如果你只是临时需要整理标签页，它会是一个不错的选择。*
+
+[[https://picx.zhimg.com/50/v2-640f22ca1fa01f5fa9b877a92d6a4b82_720w.jpg?source=1def8aca]]
+
+** 沙拉查词
+
+*这是一款聚合了超多词典的划词翻译插件，* 本身在插件中输入单词就能查询：
+
+[[https://picx.zhimg.com/50/v2-6a274d419caa708947feac6b19ed084a_720w.jpg?source=1def8aca]]
+
+当然 *主打还是划词翻译功能，* 网页中划出词汇就能查看单词在多个词典中的释义：
+
+[[https://picx.zhimg.com/50/v2-06f1af68740a0342238df65768553dfd_720w.jpg?source=1def8aca]]
+
+*让三顿非常喜欢的还有它提供的单词本功能，* 可以将遇到的生词记录下来，包含单词的来源以及上下文内容：
+
+[[https://pica.zhimg.com/50/v2-85afa49b902dca45146679419800cbab_720w.jpg?source=1def8aca]]
+
+‍ *非常给力的是还支持PDF文件的划词翻译，* 不管是从网页打开还是电脑导入PDF文件，都可以对PDF文件内的词汇进行查询：
+
+[[https://picx.zhimg.com/50/v2-8e3fec82a9450a8462e4f2d4472e754e_720w.jpg?source=1def8aca]]
+
+插件本身还提供了丰富的配置功能，支持设置查词快捷键，调整查词习惯，提供了纯翻译、学术等多个情景模式。 *如果你需要一款专业的划词翻译工具，它会是一个不错的选择。*
+
+[[https://picx.zhimg.com/50/v2-640f22ca1fa01f5fa9b877a92d6a4b82_720w.jpg?source=1def8aca]]
+
+** 微信公众号同步助手
+
+*新媒体运营必备！这款插件的主要功能就是可以将写好的文章自动同时分发到主流的新媒体平台。*
+
+[[https://pic1.zhimg.com/50/v2-1f08f2e5510fb42f1b46b6627e330e65_720w.jpg?source=1def8aca]]
+
+做运营的小伙伴，每天都需要做大量文章同步工作，发到微信的文章要复制到头条、知乎等平台。然而直接复制不仅格式容易出错，复制后图片还会出现无法显示的情况。
+
+*使用这款插件，可以自动识别文章，进行多平台的同步：*
+
+[[https://pic1.zhimg.com/50/v2-119b23b50ad43e906425ff0d98fe7fae_720w.jpg?source=1def8aca]]
+
+在同步过程中会自动重新上传图片，给你们感受一下这个同步的过程：
+
+[[https://pica.zhimg.com/50/v2-d738466df17f0837a3e09e9c14f9402f_720w.jpg?source=1def8aca]]
+
+过程快慢取决于图片数量， *上传完毕后点击查看草稿就能打开对应平台的编辑页面，进行进一步的编辑和发布。*
+
+实际体验下来，插件存在出现页面错位等BUG，建议大家平时关闭插件，在需要同步时再进行开启。
+
+[[https://pic1.zhimg.com/50/v2-640f22ca1fa01f5fa9b877a92d6a4b82_720w.jpg?source=1def8aca]]
+
+*IE Tab*
+
+像企业网银、政府系统这样的网站往往只支持IE内核的浏览器，这让用Chrome的三顿特别头疼。
+
+而 *使用这款插件，只需要在插件中输入网址，就能访问只支持IE内核的网站：*
+
+[[https://pica.zhimg.com/50/v2-dc3f867cff9ce4c338500e75775565d3_720w.jpg?source=1def8aca]]
+
+工具 *提供了多种IE版本供你选择* ，再也不用额外安装IE浏览器：
+
+[[https://pic1.zhimg.com/50/v2-798343bbeb33e88fcacb81a532ccb03f_720w.jpg?source=1def8aca]]
+
+[[https://picx.zhimg.com/50/v2-640f22ca1fa01f5fa9b877a92d6a4b82_720w.jpg?source=1def8aca]]
+
+** Download+
+
+Chrome本身特别鸡肋的还有它的下载功能，不仅功能单一而且打开特别麻烦。
+
+*因此三顿想要给你安利这款下载管理插件：*
+
+[[https://pica.zhimg.com/50/v2-da01929e286e9cff8b3432592d7f93a9_720w.jpg?source=1def8aca]]
+
+*推荐它的第一个理由是管理下载超方便，* 通过右上角的插件按钮，就能对下载内容进行搜索、删除以及暂停等操作：
+
+[[https://pic1.zhimg.com/50/v2-a6c6c5b79aab6a09b522d7d16732e36d_720w.jpg?source=1def8aca]]
+
+‍ *推荐它的第二个理由是还提供了资源嗅探功能，* 网页上的图片和音视频都能分析提取，并且支持批量下载：
+
+[[https://pic1.zhimg.com/50/v2-1fc8ab5f6c8c0c814deabb33f2ccdfb8_720w.jpg?source=1def8aca]]
+
+*是的，它可不单单是一个下载管理工具，看到网页上有用的图片或者音视频，用它也可以直接下载。安装全攻略，插件网站及安装方法*
+
+-----
+
+三顿三顿，推荐那么多插件， *可要怎么安装呢？你又是从哪里找到这些好用的插件的？* 这个部分给大家做个分享。
+
+#+begin_quote
+*插件网站*
+#+end_quote
+
+除了安装前面提到的 *谷歌助手这类插件直接访问谷歌应用商店外（推荐）* ，这样几个网站也可以直接打开下载插件。
+
+*▼ [[http://crx4chrome.com][http://crx4chrome.com]]*
+
+老牌的插件下载网站，除了可以直接搜索插件下载外，还 *提供了热门插件排行、最新插件推荐* 等内容，帮你快速找到想要的插件。
+
+[[https://pic1.zhimg.com/50/v2-b48b764fae49a00ad0e3653f42468dde_720w.jpg?source=1def8aca]]
+
+*▼ [[http://chromecj.com][http://chromecj.com]]*
+
+*中文网站* ，同样提供了插件推荐与排行，除此之外还提供了一些插件安装与使用相关的教程。
+
+[[https://pic1.zhimg.com/50/v2-a1222bc7d0ca9679eaaeedeb458b4b01_720w.jpg?source=1def8aca]]
+
+#+begin_quote
+*插件安装*
+#+end_quote
+
+从网站下载下来的插件一般都是crx格式， *如何安装到浏览器中呢？分享两种方法。*
+
+*方法一，* 是点击设置-更多工具，扩展程序，将下载的crx格式文件直接拖拽到界面中安装。
+
+[[https://pica.zhimg.com/50/v2-e1000349851a33868c5ef73c76d00b21_720w.jpg?source=1def8aca]]
+
+*方法二，* 是将下载的crx文件扩展名更改为rar或zip，解压后，在浏览器扩展程序中勾选开发者模式，点击“下载已解压的扩展程序”
+
+[[https://pic1.zhimg.com/50/v2-b4e04a4cb2957c85143b9f55c41be7d5_720w.jpg?source=1def8aca]]
+
+*如果出现加载扩展程序出错，* 可以将解压文件中的_metadata文件夹名字改为metadata，去掉下划线就能解决。
+
+当然，如果你是 *用谷歌应用商店下载插件，完全没有这么麻烦* ，在插件页点击“添加到Chrome”就能搞定。
+
+以上就是要给大家分享的完整内容啦， *赶快收好这16款Chrome必备的神级插件吧！*
