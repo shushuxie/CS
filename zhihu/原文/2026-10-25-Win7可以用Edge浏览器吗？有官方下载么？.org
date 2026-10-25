@@ -1,0 +1,32 @@
+#+TITLE: Win7可以用Edge浏览器吗？有官方下载么？
+#+LINK: https://www.zhihu.com/question/31443774/answer/647550000
+#+AUTHOR: 杨葛格
+#+TYPE: answer
+#+DATE: 2026-10-25
+
+自从微软使用 Chromium内核 开发新版 Edge浏览器 后， Win7 其实已经支持运行 Edge浏览器 了。前一段时间笔者通过安装网络上泄漏的Edge安装包，证实了这一点。
+
+[[https://picx.zhimg.com/50/v2-dfca6106968d0988c783f883735c12fa_720w.jpg?source=2c26e567]]
+/在 Windows7 操作系统中运行的 Edge浏览器/
+
+我们可以看到菜单风格也沿用了 UWP版 的 Edge浏览器 风格，没错，这就是 Edge浏览器 ！
+
+[[https://picx.zhimg.com/50/v2-05196c82fe05702ef4c5ad5993214417_720w.jpg?source=2c26e567]]
+
+在关于菜单中，我们可以看到 Edge浏览器 的一些基本信息。
+
+[[https://picx.zhimg.com/50/v2-09aafa6a976c1a03a387ec820b63e244_720w.jpg?source=2c26e567]]
+
+但是笔者发现在 Win7 平台上， Edge浏览器 目前还无法通过登录微软账户来同步浏览器数据，而这一功能在 Win10 上是正常的。（2020.02.15更新：目前Win7平台正式版的Edge浏览器已经可以登录微软账户来进行数据同步了！文末附官方下载链接。）
+
+[[https://pic1.zhimg.com/50/v2-7067e36029c21dcb6db93d1c735157b0_720w.jpg?source=2c26e567]]
+
+在微软官方页面上，Edge浏览器 也有支持Win7的计划。相信在不久的将来，微软会完善在 Win7 平台上的数据同步功能吧，让我们拭目以待。
+
+2020.02.15更新：
+
+Edge浏览器 Chromium内核版（适用于 Win7、Win8、Win8.1、Win10、macOS 系统） 官方下载链接
+
+正式版 下载： [下载新版 Microsoft Edge 浏览器](https://www.microsoft.com/zh-cn/edge)
+
+测试版 下载： [下载 Microsoft Edge Insider Channel](https://www.microsoftedgeinsider.com/zh-cn/download/)

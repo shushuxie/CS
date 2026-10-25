@@ -1,0 +1,251 @@
+#+TITLE: 苹果的产品中哪些细节让你突然有感动的感觉？
+#+LINK: https://www.zhihu.com/question/376564041/answer/1060229840
+#+AUTHOR: 请叫我阿波罗
+#+TYPE: answer
+#+DATE: 2026-10-25
+
+** **本文首发我的专栏**
+
+欢迎关注 [阿波罗DEphone](https://zhuanlan.zhihu.com/c_1180844180765683712)
+
+开灯壁纸已经更新，见答案后面
+
+明星开灯壁纸也更新了！
+
+** 既然苹果点赞的震动这么爽，那你也双击一下咯（哈哈，我没有骗赞）
+
+下面是原答案
+
+---
+
+/所谓细节决定成败，苹果在细节上面到底有多高明，就让我们一探究竟。/
+
+** 一.短信
+
+短信界面的聊天气泡会随着时间的推移而颜色变淡来突出新信息（蓝色为苹果用户之间的iMessage信息， /是免费的/ ）
+
+[[https://picx.zhimg.com/50/v2-6bccc1b3d11b7ef0eace380d6235a1d0_720w.jpg?source=2c26e567]]
+
+** 二.闹钟
+
+当你的闹钟到点时，它会越来越响，而假如你将脸面视你的iPhone时 ，响声会越来越小。
+
+这就是iPhone的注重感知功能，当然这个功能 /也只有在iPhoneX及以上具有面容ID的iPhone才有的功能。/
+
+[[https://pica.zhimg.com/50/v2-4662e31dc3ab07ffadb3673befac5b45_720w.jpg?source=2c26e567]]
+/我的闹钟很真实/
+
+当然不仅仅是闹钟，接电话也是一样的！
+
+/有些人不会用，操作如下：/
+
+打开设置里面的注重面部感知，然后你闹钟响起了，你一看手机被手机识别你在看它，声音就会小哦
+
+** 三.智能降音
+
+在苹果Mac电脑上面使用Siri时， /电脑会自动降低散热风扇速度/ ，以便更好地听到使用者的声音来完成语音指令。
+
+[[https://pic1.zhimg.com/50/v2-63fc605d46281d4cbda0e6bd06f7008a_720w.jpg?source=2c26e567]]
+
+/智能降音就很细节很人性化了！/
+
+** 四.动画细节
+
+为了更清楚的表达，我特意做了一组动图。
+
+** 1.手电筒
+
+如图所示手电筒图标会随打开而变化，同样重按可以调节手电筒亮度， /上面的开关标志也会改变。/
+
+[[https://picx.zhimg.com/50/v2-71c3ad96d28b2df8c6966a94cc77599b_720w.gif?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-fcb2aab6bb67c78ef4597b7c8302d245_720w.gif?source=2c26e567]]
+
+【其他类似图标就不在重复讲解】
+
+** 2.飞行模式
+
+/飞机会随着飞行模式的开启而起飞/ ，动画十分舒服顺畅
+
+[[https://picx.zhimg.com/50/v2-3fd62d4e4b7015b4de9bb80f67eeb5fc_720w.gif?source=2c26e567]]
+
+** 3.时间
+
+时间图标是实时的，并且由秒针匀速运动，而重按进入软件删除界面， /秒针会变成滴答的机械转动。/
+
+[[https://pic1.zhimg.com/50/v2-0de75d744e8bb9f0f46dc102c4362ff4_720w.gif?source=2c26e567]]
+
+** 五.图标设计
+
+** 1.语音备忘录
+
+你以为上面的波形图是随便画的吗？其实上面的波形图 /是Apple发音的波形图。/
+
+[[https://picx.zhimg.com/50/v2-8e2b29960cf7e4b6458df1b392f14202_720w.jpg?source=2c26e567]]
+
+** 2.地图
+
+[[https://pic1.zhimg.com/50/v2-d069bef2f475dc9a53854d538f545aaf_720w.jpg?source=2c26e567]]
+
+图标上面的280是苹果总部的位置，而上面的圆环则 /是苹果总部的一角。/
+
+[[https://picx.zhimg.com/50/v2-11f2d772695e9f7e26b7d927657c7ea2_720w.jpg?source=2c26e567]]
+
+** 3.Safari浏览器
+
+图标由原来的45度变成了50度，是因为 /地磁的北极一直在向北移动/ ，所以图标开始变化。
+
+[[https://pic1.zhimg.com/50/v2-b6a577d58ed2f2414d7a6bc820f61179_720w.jpg?source=2c26e567]]
+
+当然上面的图标我也只是拿了一些出来作为参考
+
+** **六.捷径**
+
+这个我专栏有一篇文章（现在放在一篇回答上面了，专栏也有），我就不在转述了！（ps：捷径真的超级好用，这个虽然不是什么细节，不过我觉得还是有分享给大家的必要！）
+
+[苹果手机里有多少隐藏小功能？](https://www.zhihu.com/question/27343167/answer/1081558644)
+
+** 七.屏幕唤醒
+
+从iOS11开始iPhone会通过分析壁纸，来确定明暗关系，然后按次序点亮，这也火了许多开灯效果显示壁纸，当然这并不是出于好看，而是出于对人眼的保护作用
+
+[[https://picx.zhimg.com/50/v2-627d48bfe3a85165997dd77081c608b5_720w.gif?source=2c26e567]]
+
+最后分享一波开灯壁纸
+
+[[https://picx.zhimg.com/50/v2-250092e952a8ebca0ff30a3efc100d47_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-ae5e04f2f65fd15c6b031da5293e7c95_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-09cbc4471a27308d40d4bbef1710724e_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-0cfc5bfee70337d71ca71c5f1d22df06_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-f89a4a4e02cafc46e1ac977ae7286d47_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-8f0fb6e271a25a1e507200d33e399462_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-278b23c853f6e07fca3ab76296b269c9_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-625189134d772c8820da630198458da7_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-93967db85e804b808bcce5461a7ec2ca_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-aaa6187871e8affd6a123a229e738155_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-c4a3a4ebf53b2ca3973057ae84980b3b_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-8bd6843a98b954b5ae1ec2603ec837e1_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-d230de4c811a9c5ece4b45ac5b39d7a4_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-e986b185349e8ca806a2e7ca11f45152_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-d31e2867bcd4b35aca37f9688d655c23_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-05b74c2ffc75f45f760941da5e500fe7_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-a838a6d8a353be6a57911a164714f28a_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-85b568d9666e4ea1f57d67baaf46fbaf_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-64b87e08022ec89a21a1ef66b5fe02e0_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-452e938fa3a6340876a10d4b940c8d75_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-2305297a8b47947c485e737d918d7ce2_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-50cd46017c781306c8c0db779c27d982_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-2794625da094a632d0783c66d5e9efed_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-06b3d7498ad9e9f46e935eeb43108800_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-3b29c0ab6abd5c1ac0c9ae5a2e89e857_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-b13e34fea8305c0157701b4c90e8486b_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-41712fe47e561a7ec742c88f2bcaa5d0_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-fc730cf15bbffb2a08073efedf2d989e_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-0a7d5ed3a3202288ae2907eb7fe4d5e9_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-49be560c1c154359a19dfb29f9042c8a_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-d006967c1708b895f744fe64f0c12dac_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-f8cd016845652731827e5617c44fa575_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-d5817a22b47ba0296387a52baa583b43_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-beb1a2b2af437528349f556fd89295a9_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-407661dc2e8800b77e14da626d959a11_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-c2e23b6090c092cfd097e5a90a9ca558_720w.jpg?source=2c26e567]]
+
+---
+
+** 下面是更新的明星开灯壁纸
+
+[[https://picx.zhimg.com/50/v2-56e19db78b9ed78b44ad726f0811a3aa_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-9fa9b8a6d2006c1df28e3bafdb4f06d7_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-a4265c99a08cd18498ac87ce3794d1de_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-ad7b906c77aa4afebc485f342825ffda_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-df51eba2dc92543a180b3458a4d7d1b1_720w.jpg?source=2c26e567]]
+
+[[https://pica.zhimg.com/50/v2-a6b0a4dde135c99d0c0427d58cb182ea_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-ee3fad3067a83e55ce729b40706d74bc_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-56b9d1128d5d815f3c727b81ad7c9cb0_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-0baf3ee0b0f6007f8a07cf63675b56fa_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-5fee32585891b71e8ebbd821408c216b_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-d32edcc769694398b8721d6cf6053497_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-a32c55affee4c567d60d836304f1ad4c_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-cb6d4659028a5714d1106b1a477c1351_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-8b5103eb5da5c2af4c4dacd72575c66a_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-7fc729ff9c0b53fa855ca0feadcb4a4a_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-b107b441da71783296d63854850ae794_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-20a3ed8d2b75ef2a54e6348a7e287e60_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-fbc9704e37df2c4bf5ef6063c3188ad4_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-7c96bfcfad7a5f20c1beb568aa2d1f48_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-e193ab616e1ae5f9a300962ccfcc0982_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-77c2dbb1f8ee854ac1084e6e96c8e317_720w.jpg?source=2c26e567]]
+
+[[https://pic1.zhimg.com/50/v2-71dcea137ba1ac6dab8fc636541df242_720w.jpg?source=2c26e567]]
+
+[[https://picx.zhimg.com/50/v2-244876eb33e6be6034fe5290b7b72983_720w.jpg?source=2c26e567]]
+
+---
+
+##
+
+
+** 推荐大家阅读：
+
+[如何评价 2019 年 9 月发布的六种配色 iPhone 11？配置和性能如何？](https://www.zhihu.com/question/345431917/answer/824933988)
+
+[2019 年 10 月 28 日苹果发布的 AirPods Pro 有哪些亮点和不足？](https://www.zhihu.com/question/352988646/answer/873675958)
+
+[苹果为什么要下架 iPhone X？](https://www.zhihu.com/question/294440340/answer/801428232)
+
+[请叫我阿波罗：我有一个捷径——快捷指令](https://zhuanlan.zhihu.com/p/108725856)

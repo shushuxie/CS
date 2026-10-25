@@ -1,0 +1,26 @@
+#+TITLE: 矩阵乘法的本质是什么？
+#+LINK: https://www.zhihu.com/question/21351965/answer/516385585
+#+AUTHOR: YJango
+#+TYPE: answer
+#+DATE: 2026-10-25
+
+[7分钟入门线性代数+微积分https://www.zhihu.com/video/1045055752112746496](https://www.zhihu.com/video/1045055752112746496)
+
+这是一个系列短片，若感兴趣，观看顺序是：
+
+- /学习观01：/ [好多人一辈子都没搞清什么是学习](https://zhuanlan.zhihu.com/p/46841114)
+- /学习观02：/ [什么叫“先把书读厚，再把书读薄”](https://zhuanlan.zhihu.com/p/46853733)
+- /学习观03：/ [其实你早就学会了“英语”](https://zhuanlan.zhihu.com/p/47064025)
+- /学习观04：/ [为什么会觉得编程、解题毫无头绪](https://zhuanlan.zhihu.com/p/47221057)
+- /学习观4.5：/ [这些学习方法从何而来？](https://zhuanlan.zhihu.com/p/47322792)
+- /学习观05：/ [思维导图原理：人生与高手之差](https://zhuanlan.zhihu.com/p/49875593)
+- /学习观5.5：/ [怎么设计你自己的思维导图画法](https://zhuanlan.zhihu.com/p/50154707)
+- /学习观06：/ [为什么费曼技巧被称为终极学习法](https://zhuanlan.zhihu.com/p/51282869)
+- /学习观07：/ [如何正确使用人脑来在几个月内学会英语](https://zhuanlan.zhihu.com/p/51717106)
+- /超智能体01：/ [高考与机器学习](https://zhuanlan.zhihu.com/p/44217906)
+- /超智能体02：/ [线性代数与微积分](https://zhuanlan.zhihu.com/p/44852385)
+- /超智能体03：/ [9分钟入门深度学习](https://zhuanlan.zhihu.com/p/45516367)
+
+若没跟上，可看 [如何生动有趣的入门线性代数](https://zhuanlan.zhihu.com/p/23054096)
+
+[[https://pic1.zhimg.com/50/v2-e4b91080554f6200ccc923dbfb2d2454_720w.jpg?source=2c26e567]]
