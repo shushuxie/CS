@@ -1,0 +1,9 @@
+#+TITLE: 这是我的书库，341GB, 3万多本书
+#+LINK: https://www.zhihu.com/pin/2086352139526395454?native=1
+#+AUTHOR: 个人书库MyBooks
+#+TYPE: pin
+#+DATE: 2026-10-26
+
+这是我的书库，341GB, 3万多本书。去年11月一次性入库1万多本~
+
+[[https://picx.zhimg.com/v2-0a137be6a30b3b31754502c06847a82f.png?source=e3d01f54]]

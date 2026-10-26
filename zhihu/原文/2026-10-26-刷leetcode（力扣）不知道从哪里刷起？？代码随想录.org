@@ -1,0 +1,395 @@
+#+TITLE: 刷leetcode（力扣）不知道从哪里刷起？？代码随想录，你值得拥有
+#+LINK: https://zhuanlan.zhihu.com/p/339849416
+#+AUTHOR: 代码随想录
+#+TYPE: article
+#+DATE: 2026-10-26
+
+** **为什么会有这篇刷题攻略**
+
+很多刚开始刷题的同学都有一个困惑：面对leetcode上近两千到题目，从何刷起。
+
+其实我之前在知乎上回答过这个问题，回答内容大概是按照如下类型来刷*数组-> 链表-> 哈希表->字符串->栈与队列->树->回溯->贪心->动态规划->图论->高级数据结构*，再从简单刷起，做了几个类型题目之后，再慢慢做中等题目、困难题目。
+
+但我能设身处地的感受到：即使有这样一个整体规划，对于一位初学者甚至算法老手寻找合适自己的题目也是很困难，时间成本很高，而且题目还不一定就是经典题目。
+
+对于刷题，我们都是想用最短的时间把经典题目都做一篇，这样效率才是最高的！
+
+所以我整理了这篇leetcode刷题最强攻略：一个超级详细的刷题顺序，*每道题目都是我精心筛选，都是经典题目高频面试题*，大家只要按照这个顺序刷就可以了，*你没看错，就是题目顺序都排好了，文章顺序就是刷题顺序！挨个刷就可以，不用自己再去题海里选题了！*
+
+*大家可以先直接看网站：*
+
+[[https://link.zhihu.com/?target=https%3A//programmercarl.com/][代码随想录]]
+
+而且每道题目我都写了的详细题解（图文并茂，难点配有视频），力扣上我的题解都是排在对应题目的首页，质量是有目共睹的。
+
+*那么今天我把这个刷题顺序整理出来，是为了帮助更多的学习算法的同学少走弯路！*
+
+如果你在刷leetcode，强烈建议先按照本篇刷题顺序来刷，*刷完了你会发现对整个知识体系有一个质的飞跃，不用在题海茫然的寻找方向*。
+
+目前代码随想录已经有视频讲解版：
+
+[[https://link.zhihu.com/?target=https%3A//www.bilibili.com/video/BV1fA4y1o715/][手把手带你撕出正确的二分法 | 二分查找法 | 二分搜索法 | LeetCode：704. 二分查找_哔哩哔哩_bilibili]]
+
+完整视频目录在右侧：
+
+[[https://picx.zhimg.com/v2-892074f9012a91423740c2dfde69186b_r.jpg]]
+
+** **如何使用该刷题攻略**
+
+*目前已经更新了，数组-> 链表-> 哈希表->字符串->栈与队列->树->回溯->贪心，八个专题了，正在讲解动态规划！*
+
+在刷题攻略中，每个专题开始都有理论基础篇，并不像是教科书般的理论介绍，而是从实战中归纳需要的基础知识。每个专题结束都有总结篇，最这个专题的归纳总结。
+
+如果你是算法老手，这篇攻略也是复习的最佳资料，如果把每个系列对应的总结篇，快速过一遍，整个算法知识体系以及各种解法就重现脑海了。
+
+目前「代码随想录」刷题攻略更新了：*200多篇文章，精讲了200道经典算法题目，共60w字的详细图解，部分难点题目还搭配了20分钟左右的视频讲解*。
+
+*这里每一篇题解，都是精品，值得仔细琢磨*。
+
+*刷题攻略开源Github仓库： [[https://link.zhihu.com/?target=https%3A//github.com/youngyangyang04/leetcode-master][https://github.com/youngyangyang04/leetcode-master]] ，已经支持C++，Java，Python，Go，JS等语言版本！*
+
+说了这么多，那么你现在准备好了么，go go go！
+
+** **资源下载**
+
+我已经讲刷题攻略的一个重要专题整理出PDF，包括：二叉树，回溯算法，动态规划，贪心，等等。pdf中不仅有刷题大纲、刷题顺序，还有详细图解，每一本pdf发布之后都广受好评先，PDF中攻击20w字详细图解了 100多道力扣题目，先上图：
+
+[[https://pic4.zhimg.com/v2-8e4a10f39e24971aa747627b63b758c1_r.jpg]]
+
+赶紧去下载看看，你会发现相见恨晚！
+
+[[https://link.zhihu.com/?target=https%3A//programmercarl.com/other/algo_pdf.html][「代码随想录」PDF下载 | 代码随想录]]
+
+** **前序**
+
+- 编程素养
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E4%25BB%25A3%25E7%25A0%2581%25E9%25A3%258E%25E6%25A0%25BC.html][看了这么多代码，谈一谈代码风格！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E5%258A%259B%25E6%2589%25A3%25E4%25B8%258A%25E7%259A%2584%25E4%25BB%25A3%25E7%25A0%2581%25E6%2583%25B3%25E5%259C%25A8%25E6%259C%25AC%25E5%259C%25B0%25E7%25BC%2596%25E8%25AF%2591%25E8%25BF%2590%25E8%25A1%258C%25EF%25BC%259F.html][力扣上的代码想在本地编译运行？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E4%25BB%2580%25E4%25B9%2588%25E6%2598%25AF%25E6%25A0%25B8%25E5%25BF%2583%25E4%25BB%25A3%25E7%25A0%2581%25E6%25A8%25A1%25E5%25BC%258F%25EF%25BC%258C%25E4%25BB%2580%25E4%25B9%2588%25E5%258F%2588%25E6%2598%25AFACM%25E6%25A8%25A1%25E5%25BC%258F%25EF%25BC%259F.html][什么是核心代码模式，什么又是ACM模式？]]*
+
+- 工具
+
+- *[[https://link.zhihu.com/?target=https%3A//github.com/youngyangyang04/PowerVim][一站式vim配置]]*
+- *[[https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/Q_O0ey4C9tryPZaZeJocbA][保姆级Git入门教程，万字详解]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E7%25A8%258B%25E5%25BA%258F%25E5%2591%2598%25E5%2586%2599%25E6%2596%2587%25E6%25A1%25A3%25E5%25B7%25A5%25E5%2585%25B7.html][程序员应该用什么用具来写文档？]]*
+
+- 求职
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E7%25A8%258B%25E5%25BA%258F%25E5%2591%2598%25E7%25AE%2580%25E5%258E%2586.html][程序员的简历应该这么写！！（附简历模板）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com//%25E5%2589%258D%25E5%25BA%258F/BAT%25E7%25BA%25A7%25E5%2588%25AB%25E6%258A%2580%25E6%259C%25AF%25E9%259D%25A2%25E8%25AF%2595%25E6%25B5%2581%25E7%25A8%258B%25E5%2592%258C%25E6%25B3%25A8%25E6%2584%258F%25E4%25BA%258B%25E9%25A1%25B9%25E9%2583%25BD%25E5%259C%25A8%25E8%25BF%2599%25E9%2587%258C%25E4%25BA%2586.html][BAT级别技术面试流程和注意事项都在这里了]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E5%258C%2597%25E4%25BA%25AC%25E4%25BA%2592%25E8%2581%2594%25E7%25BD%2591%25E5%2585%25AC%25E5%258F%25B8%25E6%2580%25BB%25E7%25BB%2593.html][北京有这些互联网公司，你都知道么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E4%25B8%258A%25E6%25B5%25B7%25E4%25BA%2592%25E8%2581%2594%25E7%25BD%2591%25E5%2585%25AC%25E5%258F%25B8%25E6%2580%25BB%25E7%25BB%2593.html][上海有这些互联网公司，你都知道么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E6%25B7%25B1%25E5%259C%25B3%25E4%25BA%2592%25E8%2581%2594%25E7%25BD%2591%25E5%2585%25AC%25E5%258F%25B8%25E6%2580%25BB%25E7%25BB%2593.html][深圳有这些互联网公司，你都知道么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E5%25B9%25BF%25E5%25B7%259E%25E4%25BA%2592%25E8%2581%2594%25E7%25BD%2591%25E5%2585%25AC%25E5%258F%25B8%25E6%2580%25BB%25E7%25BB%2593.html][广州有这些互联网公司，你都知道么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E6%2588%2590%25E9%2583%25BD%25E4%25BA%2592%25E8%2581%2594%25E7%25BD%2591%25E5%2585%25AC%25E5%258F%25B8%25E6%2580%25BB%25E7%25BB%2593.html][成都有这些互联网公司，你都知道么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E6%259D%25AD%25E5%25B7%259E%25E4%25BA%2592%25E8%2581%2594%25E7%25BD%2591%25E5%2585%25AC%25E5%258F%25B8%25E6%2580%25BB%25E7%25BB%2593.html][杭州有这些互联网公司，你都知道么？]]*
+
+- 算法性能分析
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E5%2585%25B3%25E4%25BA%258E%25E6%2597%25B6%25E9%2597%25B4%25E5%25A4%258D%25E6%259D%2582%25E5%25BA%25A6%25EF%25BC%258C%25E4%25BD%25A0%25E4%25B8%258D%25E7%259F%25A5%25E9%2581%2593%25E7%259A%2584%25E9%2583%25BD%25E5%259C%25A8%25E8%25BF%2599%25E9%2587%258C%25EF%25BC%2581.html][关于时间复杂度，你不知道的都在这里！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/On%25E7%259A%2584%25E7%25AE%2597%25E6%25B3%2595%25E5%25B1%2585%25E7%2584%25B6%25E8%25B6%2585%25E6%2597%25B6%25E4%25BA%2586%25EF%25BC%258C%25E6%25AD%25A4%25E6%2597%25B6%25E7%259A%2584n%25E7%25A9%25B6%25E7%25AB%259F%25E6%2598%25AF%25E5%25A4%259A%25E5%25A4%25A7%25EF%25BC%259F.html][O(n)的算法居然超时了，此时的n究竟是多大？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E9%2580%259A%25E8%25BF%2587%25E4%25B8%2580%25E9%2581%2593%25E9%259D%25A2%25E8%25AF%2595%25E9%25A2%2598%25E7%259B%25AE%25EF%25BC%258C%25E8%25AE%25B2%25E4%25B8%2580%25E8%25AE%25B2%25E9%2580%2592%25E5%25BD%2592%25E7%25AE%2597%25E6%25B3%2595%25E7%259A%2584%25E6%2597%25B6%25E9%2597%25B4%25E5%25A4%258D%25E6%259D%2582%25E5%25BA%25A6%25EF%25BC%2581.html][通过一道面试题目，讲一讲递归算法的时间复杂度！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201210%25E5%25A4%258D%25E6%259D%2582%25E5%25BA%25A6%25E5%2588%2586%25E6%259E%2590%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（算法性能分析系列一）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E5%2585%25B3%25E4%25BA%258E%25E7%25A9%25BA%25E9%2597%25B4%25E5%25A4%258D%25E6%259D%2582%25E5%25BA%25A6%25EF%25BC%258C%25E5%258F%25AF%25E8%2583%25BD%25E6%259C%2589%25E5%2587%25A0%25E4%25B8%25AA%25E7%2596%2591%25E9%2597%25AE%25EF%25BC%259F.html][关于空间复杂度，可能有几个疑问？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E9%2580%2592%25E5%25BD%2592%25E7%25AE%2597%25E6%25B3%2595%25E7%259A%2584%25E6%2597%25B6%25E9%2597%25B4%25E4%25B8%258E%25E7%25A9%25BA%25E9%2597%25B4%25E5%25A4%258D%25E6%259D%2582%25E5%25BA%25A6%25E5%2588%2586%25E6%259E%2590.html][递归算法的时间与空间复杂度分析！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%258D%25E5%25BA%258F/%25E5%2588%25B7%25E4%25BA%2586%25E8%25BF%2599%25E4%25B9%2588%25E5%25A4%259A%25E9%25A2%2598%25EF%25BC%258C%25E4%25BD%25A0%25E4%25BA%2586%25E8%25A7%25A3%25E8%2587%25AA%25E5%25B7%25B1%25E4%25BB%25A3%25E7%25A0%2581%25E7%259A%2584%25E5%2586%2585%25E5%25AD%2598%25E6%25B6%2588%25E8%2580%2597%25E4%25B9%2588%25EF%25BC%259F.html][刷了这么多题，你了解自己代码的内存消耗么？]]*
+
+** **杂谈**
+
+- *[[https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/-6rd_g7LrVD1fuKBYk2tXQ][「代码随想录」刷题网站上线]]*。
+- *[[https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/wZRTrA9Rbvgq1yEkSw4vfQ][LeetCode-Master上榜了]]*
+- *[[https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/VJBV0qSBthjnbbmW-lctLA][上榜之后，都有哪些变化？]]*
+- *[[https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/lubfeistPxBLSQIe5XYg5g][大半年过去了......]]*
+- *[[https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/Vzq4zkMZY7erKeu0fqGLgw][一万录友在B站学算法！]]*
+
+** **数组**
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E6%2595%25B0%25E7%25BB%2584%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580.html][数组过于简单，但你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0704.%25E4%25BA%258C%25E5%2588%2586%25E6%259F%25A5%25E6%2589%25BE.html][数组：每次遇到二分法，都是一看就会，一写就废]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0027.%25E7%25A7%25BB%25E9%2599%25A4%25E5%2585%2583%25E7%25B4%25A0.html][数组：就移除个元素很难么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0977.%25E6%259C%2589%25E5%25BA%258F%25E6%2595%25B0%25E7%25BB%2584%25E7%259A%2584%25E5%25B9%25B3%25E6%2596%25B9.html][数组：有序数组的平方，还有序么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0209.%25E9%2595%25BF%25E5%25BA%25A6%25E6%259C%2580%25E5%25B0%258F%25E7%259A%2584%25E5%25AD%2590%25E6%2595%25B0%25E7%25BB%2584.html][数组：滑动窗口拯救了你]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0059.%25E8%259E%25BA%25E6%2597%258B%25E7%259F%25A9%25E9%2598%25B5II.html][数组：这个循环可以转懵很多人！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E6%2595%25B0%25E7%25BB%2584%25E6%2580%25BB%25E7%25BB%2593%25E7%25AF%2587.html][数组：总结篇]]*
+
+** **链表**
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E9%2593%25BE%25E8%25A1%25A8%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580.html][关于链表，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0203.%25E7%25A7%25BB%25E9%2599%25A4%25E9%2593%25BE%25E8%25A1%25A8%25E5%2585%2583%25E7%25B4%25A0.html][链表：听说用虚拟头节点会方便很多？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0707.%25E8%25AE%25BE%25E8%25AE%25A1%25E9%2593%25BE%25E8%25A1%25A8.html][链表：一道题目考察了常见的五个操作！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0206.%25E7%25BF%25BB%25E8%25BD%25AC%25E9%2593%25BE%25E8%25A1%25A8.html][链表：听说过两天反转链表又写不出来了？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0024.%25E4%25B8%25A4%25E4%25B8%25A4%25E4%25BA%25A4%25E6%258D%25A2%25E9%2593%25BE%25E8%25A1%25A8%25E4%25B8%25AD%25E7%259A%2584%25E8%258A%2582%25E7%2582%25B9.html][链表：两两交换链表中的节点]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0019.%25E5%2588%25A0%25E9%2599%25A4%25E9%2593%25BE%25E8%25A1%25A8%25E7%259A%2584%25E5%2580%2592%25E6%2595%25B0%25E7%25AC%25ACN%25E4%25B8%25AA%25E8%258A%2582%25E7%2582%25B9.html][链表：删除链表的倒数第 N 个结点]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E9%259D%25A2%25E8%25AF%2595%25E9%25A2%259802.07.%25E9%2593%25BE%25E8%25A1%25A8%25E7%259B%25B8%25E4%25BA%25A4.html][链表：链表相交]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0142.%25E7%258E%25AF%25E5%25BD%25A2%25E9%2593%25BE%25E8%25A1%25A8II.html][链表：环找到了，那入口呢？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E9%2593%25BE%25E8%25A1%25A8%25E6%2580%25BB%25E7%25BB%2593%25E7%25AF%2587.html][链表：总结篇！]]*
+
+** **哈希表**
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2593%2588%25E5%25B8%258C%25E8%25A1%25A8%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580.html][关于哈希表，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0242.%25E6%259C%2589%25E6%2595%2588%25E7%259A%2584%25E5%25AD%2597%25E6%25AF%258D%25E5%25BC%2582%25E4%25BD%258D%25E8%25AF%258D.html][哈希表：可以拿数组当哈希表来用，但哈希值不要太大]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/1002.%25E6%259F%25A5%25E6%2589%25BE%25E5%25B8%25B8%25E7%2594%25A8%25E5%25AD%2597%25E7%25AC%25A6.html][哈希表：查找常用字符]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0349.%25E4%25B8%25A4%25E4%25B8%25AA%25E6%2595%25B0%25E7%25BB%2584%25E7%259A%2584%25E4%25BA%25A4%25E9%259B%2586.html][哈希表：哈希值太大了，还是得用set]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0202.%25E5%25BF%25AB%25E4%25B9%2590%25E6%2595%25B0.html][哈希表：用set来判断快乐数]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0001.%25E4%25B8%25A4%25E6%2595%25B0%25E4%25B9%258B%25E5%2592%258C.html][哈希表：map等候多时了]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0454.%25E5%259B%259B%25E6%2595%25B0%25E7%259B%25B8%25E5%258A%25A0II.html][哈希表：其实需要哈希的地方都能找到map的身影]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0383.%25E8%25B5%258E%25E9%2587%2591%25E4%25BF%25A1.html][哈希表：这道题目我做过？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0015.%25E4%25B8%2589%25E6%2595%25B0%25E4%25B9%258B%25E5%2592%258C.html][哈希表：解决了两数之和，那么能解决三数之和么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0018.%25E5%259B%259B%25E6%2595%25B0%25E4%25B9%258B%25E5%2592%258C.html][双指针法：一样的道理，能解决四数之和]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2593%2588%25E5%25B8%258C%25E8%25A1%25A8%25E6%2580%25BB%25E7%25BB%2593.html][哈希表：总结篇！（每逢总结必经典）]]*
+
+** **字符串**
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0344.%25E5%258F%258D%25E8%25BD%25AC%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2.html][字符串：这道题目，使用库函数一行代码搞定]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0541.%25E5%258F%258D%25E8%25BD%25AC%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2II.html][字符串：简单的反转还不够！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%2591%25E6%258C%2587Offer05.%25E6%259B%25BF%25E6%258D%25A2%25E7%25A9%25BA%25E6%25A0%25BC.html][字符串：替换空格]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0151.%25E7%25BF%25BB%25E8%25BD%25AC%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2%25E9%2587%258C%25E7%259A%2584%25E5%258D%2595%25E8%25AF%258D.html][字符串：花式反转还不够！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%2591%25E6%258C%2587Offer58-II.%25E5%25B7%25A6%25E6%2597%258B%25E8%25BD%25AC%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2.html][字符串：反转个字符串还有这个用处？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0028.%25E5%25AE%259E%25E7%258E%25B0strStr.html][帮你把KMP算法学个通透]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0459.%25E9%2587%258D%25E5%25A4%258D%25E7%259A%2584%25E5%25AD%2590%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2.html][字符串：KMP算法还能干这个！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2%25E6%2580%25BB%25E7%25BB%2593.html][字符串：总结篇！]]*
+
+** **双指针法**
+
+双指针法基本都是应用在数组，字符串与链表的题目上
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0027.%25E7%25A7%25BB%25E9%2599%25A4%25E5%2585%2583%25E7%25B4%25A0.html][数组：就移除个元素很难么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0344.%25E5%258F%258D%25E8%25BD%25AC%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2.html][字符串：这道题目，使用库函数一行代码搞定]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2589%2591%25E6%258C%2587Offer05.%25E6%259B%25BF%25E6%258D%25A2%25E7%25A9%25BA%25E6%25A0%25BC.html][字符串：替换空格]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0151.%25E7%25BF%25BB%25E8%25BD%25AC%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2%25E9%2587%258C%25E7%259A%2584%25E5%258D%2595%25E8%25AF%258D.html][字符串：花式反转还不够！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0206.%25E7%25BF%25BB%25E8%25BD%25AC%25E9%2593%25BE%25E8%25A1%25A8.html][链表：听说过两天反转链表又写不出来了？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0019.%25E5%2588%25A0%25E9%2599%25A4%25E9%2593%25BE%25E8%25A1%25A8%25E7%259A%2584%25E5%2580%2592%25E6%2595%25B0%25E7%25AC%25ACN%25E4%25B8%25AA%25E8%258A%2582%25E7%2582%25B9.html][链表：删除链表的倒数第 N 个结点]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E9%259D%25A2%25E8%25AF%2595%25E9%25A2%259802.07.%25E9%2593%25BE%25E8%25A1%25A8%25E7%259B%25B8%25E4%25BA%25A4.html][链表：链表相交]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0142.%25E7%258E%25AF%25E5%25BD%25A2%25E9%2593%25BE%25E8%25A1%25A8II.html][链表：环找到了，那入口呢？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0015.%25E4%25B8%2589%25E6%2595%25B0%25E4%25B9%258B%25E5%2592%258C.html][哈希表：解决了两数之和，那么能解决三数之和么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0018.%25E5%259B%259B%25E6%2595%25B0%25E4%25B9%258B%25E5%2592%258C.html][双指针法：一样的道理，能解决四数之和]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%258F%258C%25E6%258C%2587%25E9%2592%2588%25E6%2580%25BB%25E7%25BB%2593.html][双指针法：总结篇！]]*
+
+** **栈与队列**
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E6%25A0%2588%25E4%25B8%258E%25E9%2598%259F%25E5%2588%2597%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580.html][栈与队列：来看看栈和队列不为人知的一面]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0232.%25E7%2594%25A8%25E6%25A0%2588%25E5%25AE%259E%25E7%258E%25B0%25E9%2598%259F%25E5%2588%2597.html][栈与队列：我用栈来实现队列怎么样？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0225.%25E7%2594%25A8%25E9%2598%259F%25E5%2588%2597%25E5%25AE%259E%25E7%258E%25B0%25E6%25A0%2588.html][栈与队列：用队列实现栈还有点别扭]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0020.%25E6%259C%2589%25E6%2595%2588%25E7%259A%2584%25E6%258B%25AC%25E5%258F%25B7.html][栈与队列：系统中处处都是栈的应用]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/1047.%25E5%2588%25A0%25E9%2599%25A4%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2%25E4%25B8%25AD%25E7%259A%2584%25E6%2589%2580%25E6%259C%2589%25E7%259B%25B8%25E9%2582%25BB%25E9%2587%258D%25E5%25A4%258D%25E9%25A1%25B9.html][栈与队列：匹配问题都是栈的强项]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0150.%25E9%2580%2586%25E6%25B3%25A2%25E5%2585%25B0%25E8%25A1%25A8%25E8%25BE%25BE%25E5%25BC%258F%25E6%25B1%2582%25E5%2580%25BC.html][栈与队列：有没有想过计算机是如何处理表达式的？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0239.%25E6%25BB%2591%25E5%258A%25A8%25E7%25AA%2597%25E5%258F%25A3%25E6%259C%2580%25E5%25A4%25A7%25E5%2580%25BC.html][栈与队列：滑动窗口里求最大值引出一个重要数据结构]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0347.%25E5%2589%258DK%25E4%25B8%25AA%25E9%25AB%2598%25E9%25A2%2591%25E5%2585%2583%25E7%25B4%25A0.html][栈与队列：求前 K 个高频元素和队列有啥关系？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E6%25A0%2588%25E4%25B8%258E%25E9%2598%259F%25E5%2588%2597%25E6%2580%25BB%25E7%25BB%2593.html][栈与队列：总结篇！]]*
+
+** **二叉树**
+
+题目分类大纲如下：
+
+[[https://pic3.zhimg.com/v2-fc5077e2646ac8b44620fe88608c96fe_r.jpg]]
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580.html][关于二叉树，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E9%2580%2592%25E5%25BD%2592%25E9%2581%258D%25E5%258E%2586.html][二叉树：一入递归深似海，从此offer是路人]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E8%25BF%25AD%25E4%25BB%25A3%25E9%2581%258D%25E5%258E%2586.html][二叉树：听说递归能做的，栈也能做！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E7%25BB%259F%25E4%25B8%2580%25E8%25BF%25AD%25E4%25BB%25A3%25E6%25B3%2595.html][二叉树：前中后序迭代方式的写法就不能统一一下么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0102.%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E5%25B1%2582%25E5%25BA%258F%25E9%2581%258D%25E5%258E%2586.html][二叉树：层序遍历登场！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0226.%25E7%25BF%25BB%25E8%25BD%25AC%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591.html][二叉树：你真的会翻转二叉树么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20200927%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（二叉树）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0101.%25E5%25AF%25B9%25E7%25A7%25B0%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591.html][二叉树：我对称么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0104.%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E6%259C%2580%25E5%25A4%25A7%25E6%25B7%25B1%25E5%25BA%25A6.html][二叉树：看看这些树的最大深度]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0111.%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E6%259C%2580%25E5%25B0%258F%25E6%25B7%25B1%25E5%25BA%25A6.html][二叉树：看看这些树的最小深度]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0222.%25E5%25AE%258C%25E5%2585%25A8%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E8%258A%2582%25E7%2582%25B9%25E4%25B8%25AA%25E6%2595%25B0.html][二叉树：我有多少个节点？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0110.%25E5%25B9%25B3%25E8%25A1%25A1%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591.html][二叉树：我平衡么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0257.%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E6%2589%2580%25E6%259C%2589%25E8%25B7%25AF%25E5%25BE%2584.html][二叉树：找我的所有路径？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201003%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周总结！二叉树系列二]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E4%25B8%25AD%25E9%2580%2592%25E5%25BD%2592%25E5%25B8%25A6%25E7%259D%2580%25E5%259B%259E%25E6%25BA%25AF.html][二叉树：以为使用了递归，其实还隐藏着回溯]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0404.%25E5%25B7%25A6%25E5%258F%25B6%25E5%25AD%2590%25E4%25B9%258B%25E5%2592%258C.html][二叉树：做了这么多题目了，我的左叶子之和是多少？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0513.%25E6%2589%25BE%25E6%25A0%2591%25E5%25B7%25A6%25E4%25B8%258B%25E8%25A7%2592%25E7%259A%2584%25E5%2580%25BC.html][二叉树：我的左下角的值是多少？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0112.%25E8%25B7%25AF%25E5%25BE%2584%25E6%2580%25BB%25E5%2592%258C.html][二叉树：路径总和]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0106.%25E4%25BB%258E%25E4%25B8%25AD%25E5%25BA%258F%25E4%25B8%258E%25E5%2590%258E%25E5%25BA%258F%25E9%2581%258D%25E5%258E%2586%25E5%25BA%258F%25E5%2588%2597%25E6%259E%2584%25E9%2580%25A0%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591.html][二叉树：构造二叉树登场！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0654.%25E6%259C%2580%25E5%25A4%25A7%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591.html][二叉树：构造一棵最大的二叉树]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201010%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（二叉树系列三）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0617.%25E5%2590%2588%25E5%25B9%25B6%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591.html][二叉树：合并两个二叉树]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0700.%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591%25E4%25B8%25AD%25E7%259A%2584%25E6%2590%259C%25E7%25B4%25A2.html][二叉树：二叉搜索树登场！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0098.%25E9%25AA%258C%25E8%25AF%2581%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591.html][二叉树：我是不是一棵二叉搜索树]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0530.%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591%25E7%259A%2584%25E6%259C%2580%25E5%25B0%258F%25E7%25BB%259D%25E5%25AF%25B9%25E5%25B7%25AE.html][二叉树：搜索树的最小绝对差]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0501.%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591%25E4%25B8%25AD%25E7%259A%2584%25E4%25BC%2597%25E6%2595%25B0.html][二叉树：我的众数是多少？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0236.%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E7%259A%2584%25E6%259C%2580%25E8%25BF%2591%25E5%2585%25AC%25E5%2585%25B1%25E7%25A5%2596%25E5%2585%2588.html][二叉树：公共祖先问题]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201017%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（二叉树系列四）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0235.%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591%25E7%259A%2584%25E6%259C%2580%25E8%25BF%2591%25E5%2585%25AC%25E5%2585%25B1%25E7%25A5%2596%25E5%2585%2588.html][二叉树：搜索树的公共祖先问题]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0701.%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591%25E4%25B8%25AD%25E7%259A%2584%25E6%258F%2592%25E5%2585%25A5%25E6%2593%258D%25E4%25BD%259C.html][二叉树：搜索树中的插入操作]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0450.%25E5%2588%25A0%25E9%2599%25A4%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591%25E4%25B8%25AD%25E7%259A%2584%25E8%258A%2582%25E7%2582%25B9.html][二叉树：搜索树中的删除操作]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0669.%25E4%25BF%25AE%25E5%2589%25AA%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591.html][二叉树：修剪一棵搜索树]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0108.%25E5%25B0%2586%25E6%259C%2589%25E5%25BA%258F%25E6%2595%25B0%25E7%25BB%2584%25E8%25BD%25AC%25E6%258D%25A2%25E4%25B8%25BA%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591.html][二叉树：构造一棵搜索树]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0538.%25E6%258A%258A%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591%25E8%25BD%25AC%25E6%258D%25A2%25E4%25B8%25BA%25E7%25B4%25AF%25E5%258A%25A0%25E6%25A0%2591.html][二叉树：搜索树转成累加树]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%25E6%2580%25BB%25E7%25BB%2593%25E7%25AF%2587.html][二叉树：总结篇！（需要掌握的二叉树技能都在这里了）]]*
+
+** **回溯算法**
+
+题目分类大纲如下：
+
+[[https://pica.zhimg.com/v2-b8a03d131a3b193e7a7f92f02c6a4f1a_r.jpg]]
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%259B%259E%25E6%25BA%25AF%25E7%25AE%2597%25E6%25B3%2595%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580.html][关于回溯算法，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0077.%25E7%25BB%2584%25E5%2590%2588.html][回溯算法：组合问题]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0077.%25E7%25BB%2584%25E5%2590%2588%25E4%25BC%2598%25E5%258C%2596.html][回溯算法：组合问题再剪剪枝]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0216.%25E7%25BB%2584%25E5%2590%2588%25E6%2580%25BB%25E5%2592%258CIII.html][回溯算法：求组合总和！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0017.%25E7%2594%25B5%25E8%25AF%259D%25E5%258F%25B7%25E7%25A0%2581%25E7%259A%2584%25E5%25AD%2597%25E6%25AF%258D%25E7%25BB%2584%25E5%2590%2588.html][回溯算法：电话号码的字母组合]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201030%25E5%259B%259E%25E6%25BA%25AF%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（回溯算法系列一）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0039.%25E7%25BB%2584%25E5%2590%2588%25E6%2580%25BB%25E5%2592%258C.html][回溯算法：求组合总和（二）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0040.%25E7%25BB%2584%25E5%2590%2588%25E6%2580%25BB%25E5%2592%258CII.html][回溯算法：求组合总和（三）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0131.%25E5%2588%2586%25E5%2589%25B2%25E5%259B%259E%25E6%2596%2587%25E4%25B8%25B2.html][回溯算法：分割回文串]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0093.%25E5%25A4%258D%25E5%258E%259FIP%25E5%259C%25B0%25E5%259D%2580.html][回溯算法：复原IP地址]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0078.%25E5%25AD%2590%25E9%259B%2586.html][回溯算法：求子集问题！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201107%25E5%259B%259E%25E6%25BA%25AF%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（回溯算法系列二）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0090.%25E5%25AD%2590%25E9%259B%2586II.html][回溯算法：求子集问题（二）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0491.%25E9%2580%2592%25E5%25A2%259E%25E5%25AD%2590%25E5%25BA%258F%25E5%2588%2597.html][回溯算法：递增子序列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0046.%25E5%2585%25A8%25E6%258E%2592%25E5%2588%2597.html][回溯算法：排列问题！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0047.%25E5%2585%25A8%25E6%258E%2592%25E5%2588%2597II.html][回溯算法：排列问题（二）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201112%25E5%259B%259E%25E6%25BA%25AF%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（回溯算法系列三）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%259B%259E%25E6%25BA%25AF%25E7%25AE%2597%25E6%25B3%2595%25E5%258E%25BB%25E9%2587%258D%25E9%2597%25AE%25E9%25A2%2598%25E7%259A%2584%25E5%258F%25A6%25E4%25B8%2580%25E7%25A7%258D%25E5%2586%2599%25E6%25B3%2595.html][回溯算法去重问题的另一种写法]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0332.%25E9%2587%258D%25E6%2596%25B0%25E5%25AE%2589%25E6%258E%2592%25E8%25A1%258C%25E7%25A8%258B.html][回溯算法：重新安排行程]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0051.N%25E7%259A%2587%25E5%2590%258E.html][回溯算法：N皇后问题]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0037.%25E8%25A7%25A3%25E6%2595%25B0%25E7%258B%25AC.html][回溯算法：解数独]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%259B%259E%25E6%25BA%25AF%25E6%2580%25BB%25E7%25BB%2593.html][一篇总结带你彻底搞透回溯算法！]]*
+
+** **贪心算法**
+
+题目分类大纲如下：
+
+[[https://pic4.zhimg.com/v2-da675b4b5bcc49b707dfd8f450e4761f_r.jpg]]
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E8%25B4%25AA%25E5%25BF%2583%25E7%25AE%2597%25E6%25B3%2595%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580.html][关于贪心算法，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0455.%25E5%2588%2586%25E5%258F%2591%25E9%25A5%25BC%25E5%25B9%25B2.html][贪心算法：分发饼干]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0376.%25E6%2591%2586%25E5%258A%25A8%25E5%25BA%258F%25E5%2588%2597.html][贪心算法：摆动序列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0053.%25E6%259C%2580%25E5%25A4%25A7%25E5%25AD%2590%25E5%25BA%258F%25E5%2592%258C.html][贪心算法：最大子序和]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201126%25E8%25B4%25AA%25E5%25BF%2583%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（贪心算法系列一）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0122.%25E4%25B9%25B0%25E5%258D%2596%25E8%2582%25A1%25E7%25A5%25A8%25E7%259A%2584%25E6%259C%2580%25E4%25BD%25B3%25E6%2597%25B6%25E6%259C%25BAII.html][贪心算法：买卖股票的最佳时机II]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0055.%25E8%25B7%25B3%25E8%25B7%2583%25E6%25B8%25B8%25E6%2588%258F.html][贪心算法：跳跃游戏]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0045.%25E8%25B7%25B3%25E8%25B7%2583%25E6%25B8%25B8%25E6%2588%258FII.html][贪心算法：跳跃游戏II]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/1005.K%25E6%25AC%25A1%25E5%258F%2596%25E5%258F%258D%25E5%2590%258E%25E6%259C%2580%25E5%25A4%25A7%25E5%258C%2596%25E7%259A%2584%25E6%2595%25B0%25E7%25BB%2584%25E5%2592%258C.html][贪心算法：K次取反后最大化的数组和]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201203%25E8%25B4%25AA%25E5%25BF%2583%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（贪心算法系列二）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0134.%25E5%258A%25A0%25E6%25B2%25B9%25E7%25AB%2599.html][贪心算法：加油站]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0135.%25E5%2588%2586%25E5%258F%2591%25E7%25B3%2596%25E6%259E%259C.html][贪心算法：分发糖果]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0860.%25E6%259F%25A0%25E6%25AA%25AC%25E6%25B0%25B4%25E6%2589%25BE%25E9%259B%25B6.html][贪心算法：柠檬水找零]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0406.%25E6%25A0%25B9%25E6%258D%25AE%25E8%25BA%25AB%25E9%25AB%2598%25E9%2587%258D%25E5%25BB%25BA%25E9%2598%259F%25E5%2588%2597.html][贪心算法：根据身高重建队列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201217%25E8%25B4%25AA%25E5%25BF%2583%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（贪心算法系列三）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E6%25A0%25B9%25E6%258D%25AE%25E8%25BA%25AB%25E9%25AB%2598%25E9%2587%258D%25E5%25BB%25BA%25E9%2598%259F%25E5%2588%2597%25EF%25BC%2588vector%25E5%258E%259F%25E7%2590%2586%25E8%25AE%25B2%25E8%25A7%25A3%25EF%25BC%2589.html][贪心算法：根据身高重建队列（续集）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0452.%25E7%2594%25A8%25E6%259C%2580%25E5%25B0%2591%25E6%2595%25B0%25E9%2587%258F%25E7%259A%2584%25E7%25AE%25AD%25E5%25BC%2595%25E7%2588%2586%25E6%25B0%2594%25E7%2590%2583.html][贪心算法：用最少数量的箭引爆气球]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0435.%25E6%2597%25A0%25E9%2587%258D%25E5%258F%25A0%25E5%258C%25BA%25E9%2597%25B4.html][贪心算法：无重叠区间]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0763.%25E5%2588%2592%25E5%2588%2586%25E5%25AD%2597%25E6%25AF%258D%25E5%258C%25BA%25E9%2597%25B4.html][贪心算法：划分字母区间]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0056.%25E5%2590%2588%25E5%25B9%25B6%25E5%258C%25BA%25E9%2597%25B4.html][贪心算法：合并区间]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20201224%25E8%25B4%25AA%25E5%25BF%2583%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（贪心算法系列四）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0738.%25E5%258D%2595%25E8%25B0%2583%25E9%2580%2592%25E5%25A2%259E%25E7%259A%2584%25E6%2595%25B0%25E5%25AD%2597.html][贪心算法：单调递增的数字]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0714.%25E4%25B9%25B0%25E5%258D%2596%25E8%2582%25A1%25E7%25A5%25A8%25E7%259A%2584%25E6%259C%2580%25E4%25BD%25B3%25E6%2597%25B6%25E6%259C%25BA%25E5%2590%25AB%25E6%2589%258B%25E7%25BB%25AD%25E8%25B4%25B9.html][贪心算法：买卖股票的最佳时机含手续费]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0968.%25E7%259B%2591%25E6%258E%25A7%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591.html][贪心算法：我要监控二叉树！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E8%25B4%25AA%25E5%25BF%2583%25E7%25AE%2597%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%25E7%25AF%2587.html][贪心算法：总结篇！（每逢总结必经典）]]*
+
+** **动态规划**
+
+动态规划专题已经开始啦，来不及解释了，小伙伴们上车别掉队！
+
+[[https://pic4.zhimg.com/v2-e5ad4bd32d275f2c78a95c1aa62cca65_r.jpg]]
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580.html][关于动态规划，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0509.%25E6%2596%2590%25E6%25B3%25A2%25E9%2582%25A3%25E5%25A5%2591%25E6%2595%25B0.html][动态规划：斐波那契数]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0070.%25E7%2588%25AC%25E6%25A5%25BC%25E6%25A2%25AF.html][动态规划：爬楼梯]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0746.%25E4%25BD%25BF%25E7%2594%25A8%25E6%259C%2580%25E5%25B0%258F%25E8%258A%25B1%25E8%25B4%25B9%25E7%2588%25AC%25E6%25A5%25BC%25E6%25A2%25AF.html][动态规划：使用最小花费爬楼梯]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20210107%25E5%258A%25A8%25E8%25A7%2584%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（动态规划系列一）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0062.%25E4%25B8%258D%25E5%2590%258C%25E8%25B7%25AF%25E5%25BE%2584.html][动态规划：不同路径]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0063.%25E4%25B8%258D%25E5%2590%258C%25E8%25B7%25AF%25E5%25BE%2584II.html][动态规划：不同路径还不够，要有障碍！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0343.%25E6%2595%25B4%25E6%2595%25B0%25E6%258B%2586%25E5%2588%2586.html][动态规划：整数拆分，你要怎么拆？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0096.%25E4%25B8%258D%25E5%2590%258C%25E7%259A%2584%25E4%25BA%258C%25E5%258F%2589%25E6%2590%259C%25E7%25B4%25A2%25E6%25A0%2591.html][动态规划：不同的二叉搜索树]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20210114%25E5%258A%25A8%25E8%25A7%2584%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（动态规划系列二）]]*
+
+背包问题系列：
+
+[[https://pic4.zhimg.com/v2-694164520a8365ce8c9c55efbafe5719_r.jpg]]
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E8%2583%258C%25E5%258C%2585%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%258001%25E8%2583%258C%25E5%258C%2585-1.html][动态规划：关于01背包问题，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E8%2583%258C%25E5%258C%2585%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%258001%25E8%2583%258C%25E5%258C%2585-2.html][动态规划：关于01背包问题，你该了解这些！（滚动数组）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0416.%25E5%2588%2586%25E5%2589%25B2%25E7%25AD%2589%25E5%2592%258C%25E5%25AD%2590%25E9%259B%2586.html][动态规划：分割等和子集可以用01背包！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/1049.%25E6%259C%2580%25E5%2590%258E%25E4%25B8%2580%25E5%259D%2597%25E7%259F%25B3%25E5%25A4%25B4%25E7%259A%2584%25E9%2587%258D%25E9%2587%258FII.html][动态规划：最后一块石头的重量 II]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20210121%25E5%258A%25A8%25E8%25A7%2584%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（动态规划系列三）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0494.%25E7%259B%25AE%25E6%25A0%2587%25E5%2592%258C.html][动态规划：目标和！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0474.%25E4%25B8%2580%25E5%2592%258C%25E9%259B%25B6.html][动态规划：一和零！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E8%2583%258C%25E5%258C%2585%25E9%2597%25AE%25E9%25A2%2598%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580%25E5%25AE%258C%25E5%2585%25A8%25E8%2583%258C%25E5%258C%2585.html][动态规划：关于完全背包，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0518.%25E9%259B%25B6%25E9%2592%25B1%25E5%2585%2591%25E6%258D%25A2II.html][动态规划：给你一些零钱，你要怎么凑？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20210128%25E5%258A%25A8%25E8%25A7%2584%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（动态规划系列四）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0377.%25E7%25BB%2584%25E5%2590%2588%25E6%2580%25BB%25E5%2592%258C%25E2%2585%25A3.html][动态规划：Carl称它为排列总和！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0070.%25E7%2588%25AC%25E6%25A5%25BC%25E6%25A2%25AF%25E5%25AE%258C%25E5%2585%25A8%25E8%2583%258C%25E5%258C%2585%25E7%2589%2588%25E6%259C%25AC.html][动态规划：以前我没得选，现在我选择再爬一次！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0322.%25E9%259B%25B6%25E9%2592%25B1%25E5%2585%2591%25E6%258D%25A2.html][动态规划： 给我个机会，我再兑换一次零钱]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0279.%25E5%25AE%258C%25E5%2585%25A8%25E5%25B9%25B3%25E6%2596%25B9%25E6%2595%25B0.html][动态规划：一样的套路，再求一次完全平方数]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20210204%25E5%258A%25A8%25E8%25A7%2584%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][本周小结！（动态规划系列五）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0139.%25E5%258D%2595%25E8%25AF%258D%25E6%258B%2586%25E5%2588%2586.html][动态规划：单词拆分]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E8%2583%258C%25E5%258C%2585%25E9%2597%25AE%25E9%25A2%2598%25E7%2590%2586%25E8%25AE%25BA%25E5%259F%25BA%25E7%25A1%2580%25E5%25A4%259A%25E9%2587%258D%25E8%2583%258C%25E5%258C%2585.html][动态规划：关于多重背包，你该了解这些！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E8%2583%258C%25E5%258C%2585%25E6%2580%25BB%25E7%25BB%2593%25E7%25AF%2587.html][听说背包问题很难？ 这篇总结篇来拯救你了]]*
+
+打家劫舍系列：
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0198.%25E6%2589%2593%25E5%25AE%25B6%25E5%258A%25AB%25E8%2588%258D.html][动态规划：开始打家劫舍！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0213.%25E6%2589%2593%25E5%25AE%25B6%25E5%258A%25AB%25E8%2588%258DII.html][动态规划：继续打家劫舍！]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0337.%25E6%2589%2593%25E5%25AE%25B6%25E5%258A%25AB%25E8%2588%258DIII.html][动态规划：还要打家劫舍！]]*
+
+股票系列：
+
+[[https://picx.zhimg.com/v2-091e00eaf4f472433f92d0aa8e213e3b_r.jpg]]
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0121.%25E4%25B9%25B0%25E5%258D%2596%25E8%2582%25A1%25E7%25A5%25A8%25E7%259A%2584%25E6%259C%2580%25E4%25BD%25B3%25E6%2597%25B6%25E6%259C%25BA.html][动态规划：买卖股票的最佳时机]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20210225%25E5%258A%25A8%25E8%25A7%2584%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][动态规划：本周我们都讲了这些（系列六）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0122.%25E4%25B9%25B0%25E5%258D%2596%25E8%2582%25A1%25E7%25A5%25A8%25E7%259A%2584%25E6%259C%2580%25E4%25BD%25B3%25E6%2597%25B6%25E6%259C%25BAII%25EF%25BC%2588%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592%25EF%25BC%2589.html][动态规划：买卖股票的最佳时机II]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0123.%25E4%25B9%25B0%25E5%258D%2596%25E8%2582%25A1%25E7%25A5%25A8%25E7%259A%2584%25E6%259C%2580%25E4%25BD%25B3%25E6%2597%25B6%25E6%259C%25BAIII.html][动态规划：买卖股票的最佳时机III]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0188.%25E4%25B9%25B0%25E5%258D%2596%25E8%2582%25A1%25E7%25A5%25A8%25E7%259A%2584%25E6%259C%2580%25E4%25BD%25B3%25E6%2597%25B6%25E6%259C%25BAIV.html][动态规划：买卖股票的最佳时机IV]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0309.%25E6%259C%2580%25E4%25BD%25B3%25E4%25B9%25B0%25E5%258D%2596%25E8%2582%25A1%25E7%25A5%25A8%25E6%2597%25B6%25E6%259C%25BA%25E5%2590%25AB%25E5%2586%25B7%25E5%2586%25BB%25E6%259C%259F.html][动态规划：最佳买卖股票时机含冷冻期]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%2591%25A8%25E6%2580%25BB%25E7%25BB%2593/20210304%25E5%258A%25A8%25E8%25A7%2584%25E5%2591%25A8%25E6%259C%25AB%25E6%2580%25BB%25E7%25BB%2593.html][动态规划：本周我们都讲了这些（系列七）]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0714.%25E4%25B9%25B0%25E5%258D%2596%25E8%2582%25A1%25E7%25A5%25A8%25E7%259A%2584%25E6%259C%2580%25E4%25BD%25B3%25E6%2597%25B6%25E6%259C%25BA%25E5%2590%25AB%25E6%2589%258B%25E7%25BB%25AD%25E8%25B4%25B9%25EF%25BC%2588%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592%25EF%25BC%2589.html][动态规划：买卖股票的最佳时机含手续费]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592-%25E8%2582%25A1%25E7%25A5%25A8%25E9%2597%25AE%25E9%25A2%2598%25E6%2580%25BB%25E7%25BB%2593%25E7%25AF%2587.html][动态规划：股票系列总结篇]]*
+
+子序列系列：
+
+[[https://picx.zhimg.com/v2-58545b1a2c35da301e7b6163deac427d_r.jpg]]
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0300.%25E6%259C%2580%25E9%2595%25BF%25E4%25B8%258A%25E5%258D%2587%25E5%25AD%2590%25E5%25BA%258F%25E5%2588%2597.html][动态规划：最长递增子序列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0674.%25E6%259C%2580%25E9%2595%25BF%25E8%25BF%259E%25E7%25BB%25AD%25E9%2580%2592%25E5%25A2%259E%25E5%25BA%258F%25E5%2588%2597.html][动态规划：最长连续递增序列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0718.%25E6%259C%2580%25E9%2595%25BF%25E9%2587%258D%25E5%25A4%258D%25E5%25AD%2590%25E6%2595%25B0%25E7%25BB%2584.html][动态规划：最长重复子数组]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/1143.%25E6%259C%2580%25E9%2595%25BF%25E5%2585%25AC%25E5%2585%25B1%25E5%25AD%2590%25E5%25BA%258F%25E5%2588%2597.html][动态规划：最长公共子序列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/1035.%25E4%25B8%258D%25E7%259B%25B8%25E4%25BA%25A4%25E7%259A%2584%25E7%25BA%25BF.html][动态规划：不相交的线]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0053.%25E6%259C%2580%25E5%25A4%25A7%25E5%25AD%2590%25E5%25BA%258F%25E5%2592%258C%25EF%25BC%2588%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592%25EF%25BC%2589.html][动态规划：最大子序和]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0392.%25E5%2588%25A4%25E6%2596%25AD%25E5%25AD%2590%25E5%25BA%258F%25E5%2588%2597.html][动态规划：判断子序列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0115.%25E4%25B8%258D%25E5%2590%258C%25E7%259A%2584%25E5%25AD%2590%25E5%25BA%258F%25E5%2588%2597.html][动态规划：不同的子序列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0583.%25E4%25B8%25A4%25E4%25B8%25AA%25E5%25AD%2597%25E7%25AC%25A6%25E4%25B8%25B2%25E7%259A%2584%25E5%2588%25A0%25E9%2599%25A4%25E6%2593%258D%25E4%25BD%259C.html][动态规划：两个字符串的删除操作]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0072.%25E7%25BC%2596%25E8%25BE%2591%25E8%25B7%259D%25E7%25A6%25BB.html][动态规划：编辑距离]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E4%25B8%25BA%25E4%25BA%2586%25E7%25BB%259D%25E6%259D%2580%25E7%25BC%2596%25E8%25BE%2591%25E8%25B7%259D%25E7%25A6%25BB%25EF%25BC%258C%25E5%258D%25A1%25E5%25B0%2594%25E5%2581%259A%25E4%25BA%2586%25E4%25B8%2589%25E6%25AD%25A5%25E9%2593%25BA%25E5%259E%25AB.html][为了绝杀编辑距离，Carl做了三步铺垫，你都知道么？]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0647.%25E5%259B%259E%25E6%2596%2587%25E5%25AD%2590%25E4%25B8%25B2.html][动态规划：回文子串]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0516.%25E6%259C%2580%25E9%2595%25BF%25E5%259B%259E%25E6%2596%2587%25E5%25AD%2590%25E5%25BA%258F%25E5%2588%2597.html][动态规划：最长回文子序列]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592%25E6%2580%25BB%25E7%25BB%2593%25E7%25AF%2587.html][动态规划总结篇]]*
+
+** **单调栈**
+
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0739.%25E6%25AF%258F%25E6%2597%25A5%25E6%25B8%25A9%25E5%25BA%25A6.html][单调栈：每日温度]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0496.%25E4%25B8%258B%25E4%25B8%2580%25E4%25B8%25AA%25E6%259B%25B4%25E5%25A4%25A7%25E5%2585%2583%25E7%25B4%25A0I.html][单调栈：下一个更大元素I]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0503.%25E4%25B8%258B%25E4%25B8%2580%25E4%25B8%25AA%25E6%259B%25B4%25E5%25A4%25A7%25E5%2585%2583%25E7%25B4%25A0II.html][单调栈：下一个更大元素II]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0042.%25E6%258E%25A5%25E9%259B%25A8%25E6%25B0%25B4.html][单调栈：接雨水]]*
+- *[[https://link.zhihu.com/?target=https%3A//programmercarl.com/0084.%25E6%259F%25B1%25E7%258A%25B6%25E5%259B%25BE%25E4%25B8%25AD%25E6%259C%2580%25E5%25A4%25A7%25E7%259A%2584%25E7%259F%25A9%25E5%25BD%25A2.html][单调栈：柱状图中最大的矩形]]*
+
+（持续更新中....）
+
+** **总结**
+
+这里我重点强调一下：*经典题目不是刷一遍就完事的，要刷很多遍*，因为大家在刷某个专题的时候，一定会忘一些之前的知识，例如刷到了贪心，可能回溯就已经有点想不起来了。
+
+*所以一定要多刷，加深记忆，然后面试之前一段时间就开始看各个专题的总结篇，进行快速回顾*。
+
+这份刷题攻略后续将陆续推出网页版本和pdf版本，方便大家在电脑上在线或者离线看文章学习。
+
+目前在电脑端查看文章，可以Github上：[[https://link.zhihu.com/?target=https%3A//github.com/youngyangyang04/leetcode-master][https://github.com/youngyangyang04/leetcode-master]]看。Github会定期更新，进度会较公众号慢1 - 2天，欢迎顺便给个star！
+
+去看看吧，这个Github算法学习项目会惊艳到你！
+
+[[https://link.zhihu.com/?target=https%3A//github.com/youngyangyang04/leetcode-master][GitHub - youngyangyang04/leetcode-master: LeetCode 刷题攻略：200道经典题目刷题顺序，共60w字的详细图解，视频难点剖析，50余张思维导图，支持C++，Java，Python，Go，JavaScript等多语言版本，从此算法学习不再迷茫！   来看看，你会发现相见恨晚！ ]]
+
+也可以在B站上关注我，上面有很多算法的讲解视频。
+
+[[https://link.zhihu.com/?target=https%3A//space.bilibili.com/525438321][代码随想录的个人空间_哔哩哔哩_Bilibili]]
+
+码字不已，希望对你有所帮助！
+
+[[https://www.zhihu.com/people/ff6c720c3c2c22f615c66c6a928352a4][@代码随想录]]
+
+点个赞就是对我最大的鼓励，笔芯~

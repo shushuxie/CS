@@ -1,0 +1,97 @@
+#+TITLE: 如何将本地音频添加到Apple Music
+#+LINK: https://zhuanlan.zhihu.com/p/704780791
+#+AUTHOR: 我的大号不记得了
+#+TYPE: article
+#+DATE: 2026-10-26
+
+*** 问题：Apple Music 的曲库原因，在b站或者其他地方找到好听的歌曲live但是Apple Music没有。
+
+*** 一：只是想将本地音乐导入Apple Music
+
+解决方案：
+
+*基于win10系统*
+
+1.打开微软商店
+
+[[https://pic2.zhimg.com/v2-0acb86a31498e3edaa5588e830e6fccd_r.jpg]]
+
+不会找就按win+q 搜索：商店
+
+2.下载Apple Music
+
+[[https://pica.zhimg.com/v2-e550ec44f4b4a465a32bf7fa6d4c36d0_r.jpg]]
+
+3.登录你的Apple id并且更新一下资料库(网速慢可能要等一会) ，同步你的资料库。
+
+[[https://pic3.zhimg.com/v2-fc9fdce340b33d1106e2ee31006bddb8_r.jpg]]
+
+[[https://pic3.zhimg.com/v2-4508ef6f7cde48cc6b999ab4a12c356c_r.jpg]]
+
+[[https://pic3.zhimg.com/v2-9cb9b76c39a3afcec4559272290b5b86_r.jpg]]
+
+出现跟你手机一样的资料库代表更新完成了
+
+4. *注意你的本地音乐源文件格式(即便是MP3格式也有几率出现问题)，建议转换wav格式*
+
+*这里贴一下官方的说明*
+
+[[https://pica.zhimg.com/v2-c86df4acc3f5583eefc011f86fc2ff50_r.jpg]]
+
+4.1如果你需要转换文件格式，这里推荐一个网址：免费且好用(文件大小不超过100M)
+
+[[https://link.zhihu.com/?target=https%3A//convertio.co/zh/][Convertio - 文件转换器]]
+
+  如果你的文件超过100M，那么推荐你用这个网址:免费但是不那么好用
+
+[[https://link.zhihu.com/?target=https%3A//www.aconvert.com/cn/audio/mp4-to-mp3/][MP4转MP3 - 在线转换音频文件]]
+
+5.文件格式都转换好之后就开始传输至你的Apple Music
+
+[[https://pic2.zhimg.com/v2-71263aabbe07db29eb195ab059c4b835_r.jpg]]
+
+[[https://picx.zhimg.com/v2-e724adaa2dd5f87851928886a369101f_r.jpg]]
+
+选择你需要传输的文件即可
+
+6.再次同步一次资料库，等待一会你的手机上Apple Music就会同步成功了
+
+[[https://pic2.zhimg.com/v2-d35b225be3d91dde390e9adb92b4648f_r.jpg]]
+
+[[https://pic2.zhimg.com/v2-3ad2fe1f7755913cac0a05f8c15ca639_r.jpg]]
+
+*** 二：将B站视频转换成音频导入Apple Music
+
+*基于window10*
+
+*开始都需要下载Apple Music，与上面相同步骤*
+
+*完成下载登录后下面是不同步骤*
+
+1.在 *Edge浏览器扩展* 中下载  *b站下载助手 (不知道如果下载扩展的同学可以本平台搜索，有很多教程)*
+
+[[https://pica.zhimg.com/v2-89f7c92263bff4b05ee823689f1743a4_r.jpg]]
+
+我用的是这个，第三个没用过
+
+2.打开b站你想要下载的视频，点击扩展选择 b站下载助手  点击下载即可
+
+[[https://pic4.zhimg.com/v2-9f5a4d57bf6691b735c7d0751ceefdd5_r.jpg]]
+
+[[https://pic4.zhimg.com/v2-f52ebf7946f23a06a7292b32a9e0cefd_r.jpg]]
+
+3.默认下载的格式为MP4，我们需要转换成wav(如果你找不到下载的东西在哪，按键盘的 CTRL  + J)。转换步骤跟上面一样。
+
+这里推荐一个网址：免费且好用(文件大小不超过100M)
+
+[[https://link.zhihu.com/?target=https%3A//convertio.co/zh/][Convertio - 文件转换器]]
+
+  如果你的文件超过100M，那么推荐你用这个网址:免费但是不那么好用
+
+[[https://link.zhihu.com/?target=https%3A//www.aconvert.com/cn/audio/mp4-to-mp3/][MP4转MP3 - 在线转换音频文件]]
+
+4.文件格式都转换好之后就开始传输至你的Apple Music，与上面相同
+
+本文仅供参考，只是因为深夜找不到好的教程，所以自己摸索并分享给同样需求的朋友。
+
+有任何更好的方法可以在评论区留言。

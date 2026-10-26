@@ -1,0 +1,65 @@
+#+TITLE: 游戏推荐（硬核数学/编程类）
+#+LINK: https://zhuanlan.zhihu.com/p/22579190779
+#+AUTHOR: 毁人不倦
+#+TYPE: article
+#+DATE: 2026-10-26
+
+以下的游戏仅适合对数学/编程特别感兴趣的小朋友，请谨慎入手。当然这些游戏本来设计出来就是给大人玩的，如果大朋友喜欢此类的也不妨入一个，比起 3A 大作来都很便宜。
+
+这些游戏其实都不需要编程基础，本身的教程都足以解释所有的玩法。但是对于玩家的逻辑能力要求较高。
+
+我儿子下面一和三都玩过一段时间不过因为时间跨度拉太长，后面被别的游戏吸引了注意力就弃了。
+
+*Human Resource Machine - 程序员升职记*
+
+Steam: [[https://link.zhihu.com/?target=https%3A//store.steampowered.com/app/375820/Human_Resource_Machine/][https://store.steampowered.com/app/375820/Human_Resource_Machine/]]
+
+[[https://link.zhihu.com/?target=https%3A//apps.apple.com/tw/app/human-resource-machine/id1005098334][‎]]AppStore: [[https://link.zhihu.com/?target=https%3A//apps.apple.com/tw/app/human-resource-machine/id1005098334][Human Resource Machine]]
+
+[[https://pica.zhimg.com/v2-b94d986f4dc9ed09bd633d4a7c1c4a50_r.jpg]]
+
+- 平台：Appstore, Google Play, Steam (我装的时候国区还有，自从要求防沉迷之后国内就下架了，现在需要跨区或者翻墙）
+
+这本质上是个模拟汇编语言的游戏，不需要任何编程基础。如果系统学过高级语言编程可能反而还会对其中一些硬核优化产生一些不适应。
+
+总体难度还是偏高的（不建议小朋友追求全星级，因为我也搞不定），我自己没通关也是因为觉得项目要编程，娱乐也还要编程就有点惨。
+
+同一个公司还有一款 "7 Billion Humans", 更高级一点是玩多线程编程的，难度就更高一点。
+
+*A = B*
+
+[[https://link.zhihu.com/?target=https%3A//store.steampowered.com/app/1720850/AB/][https://store.steampowered.com/app/1720850/AB/]]
+
+[[https://pic1.zhimg.com/v2-84d27aac82d930c1eb3da287497d8bb8_r.jpg]]
+
+平台：Steam (无中文）
+
+这是一个小品级的作品，不过挺适合头脑体操（这个价格还要什么自行车）
+
+*Turing Complete*
+
+[[https://link.zhihu.com/?target=https%3A//store.steampowered.com/app/1444480/Turing_Complete/][https://store.steampowered.com/app/1444480/Turing_Complete/]]
+
+[[https://pic4.zhimg.com/v2-88b17172ed3d8db24d9d47d17eb0183f_r.jpg]]
+
+[[https://picx.zhimg.com/v2-9ba2ef848fe12648d316b58f9a0f4f43_r.jpg]]
+
+这东西的前身好像是 MIT 用来教集成电路课程的。前面是通过与非门搭建各种基础电路，到后面可以自己定义高级编程语言。
+
+其实我觉得学 EE 的人都应该来玩一下。
+
+*while True: learn()*
+
+[[https://link.zhihu.com/?target=https%3A//apps.apple.com/tw/app/while-true-learn/id1443569124][‎Appstore：while True: learn()]]
+
+Steam: [[https://link.zhihu.com/?target=https%3A//store.steampowered.com/app/619150/while_True_learn/][Save 30% on while True: learn() on Steam]]
+
+[[https://picx.zhimg.com/v2-79d4f965ab62ed93530ea20d372c8e55_r.jpg]]
+
+- 平台：Appstore (国区没有）, Google Play, Steam
+
+这游戏宣称它是主玩人工智能训练的，但我玩下来感觉他这个训练水得不得了，只要多点几下就行了。我真正推荐这个游戏的原因主要是别的编程游戏都讲一个“精确”，但他这个主打就是“模糊”，大部分操作都是有概率的，你要做的就是在一个合理的成本下凑一个过得去的结果出来。这个思维方式其实是比纯粹的编程高一级，比较贴合现实的。当然这种思维方式可能不太适合初学编程的小朋友（我儿子最近学科内容压力比较大，还没玩过这个游戏)
+
+这篇是没那么硬核，游戏性更高一点的推荐
+
+[[https://zhuanlan.zhihu.com/p/20060132495][杨垒：游戏推荐（益智类）]]

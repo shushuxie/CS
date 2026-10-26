@@ -1,0 +1,9 @@
+#+TITLE: 这个东西，是一个你可以理解为是平民版战…
+#+LINK: https://www.zhihu.com/pin/2013730552897897874?native=1
+#+AUTHOR: 独元殇
+#+TYPE: pin
+#+DATE: 2026-10-26
+
+这个东西，是一个你可以理解为是平民版战情室，它是由 AI 驱动的全球情报聚合工具。把全球 170+ 的权威实时新闻源给整合到一个可视化面板里了。<br><br>github 的库是 hipcityreg/situation-monitor 这个，然后 demo 链接是 <a href="https://link.zhihu.com/?target=https%3A//hipcityreg-situation-monitor.vercel.app/" data-insert-way="force" data-draft-node="inline" data-draft-type="text-link" class="external" data-icon-type="link" data-original-url="https://hipcityreg-situation-monitor.vercel.app/" data-icon-name="zhicon_icon_24_link">链接</a> 。大家可以去玩玩。<br><br>但有意思的，并不是这个【聚合】，聚合的产品多了，没什么稀奇。而是作者的脑洞，把全球的发生的新闻，以地图的形式给映射出来了。<br><br>嗨，过去我们还真没人这么想过，真的有人做成这种了。以前我们看新闻，都是一个个陌生的人名，然后在我们脑子里面想象这个地方大概在哪里，现在直接根据这个工具，让我们可以以地点来看新闻。<br><br>真是地理爱好者的最爱啊！还有小孩子认识地球用。边看新闻边学地理。<br><br>虽然目前对于平民老百姓，我还不知道其使用场景，但是真的有意思。<br><br>这个面板上有 2D 3D 模式，以上帝视角看世界！冲击力不错。<br><br>另外，上面还叠加了多维的风险指数、实时热力信号，甚至是不同地区的局势紧张程度。<br><br>由于不是如信息流一样的线条式展示，因此，可以把零零散散的信息给一网打尽！<br><br>什么突发事件、自然灾害等等一目了然。<br><br>当然，更重要的是，则是 AI 加持，能根据 AI 来自动分类，去重、跨语言发艺，以及快速抓取关键信息，告别无效刷屏。<br><br>甚至还有「国家不稳定指数」。<br><br>当然这个工具肯定是可以本地部署的，完全开源，免费使用。<br><br>在我印象里，很少有开源项目是以地图为媒介来搞的，老外人真厉害！
+
+[[https://pic1.zhimg.com/v2-623dc9d41114e7291b2522d3f2b89fd6.png?source=e3d01f54]]

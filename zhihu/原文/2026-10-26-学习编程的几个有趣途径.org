@@ -1,0 +1,109 @@
+#+TITLE: 学习编程的几个有趣途径
+#+LINK: https://zhuanlan.zhihu.com/p/23783193
+#+AUTHOR: 李辉
+#+TYPE: article
+#+DATE: 2026-10-26
+
+今天天气不好，我来介绍三个比较有趣的编程学习平台。第一个适合入门后的同学用来练习编程（支持25+种语言）。后两个比较适合初学者，可以用来大概的了解一门语言的基本内容。它们可以激发你学编程的兴趣，让你的入门更轻松一点。
+
+有趣的未必是最高效的，但却可以让你保持对编程的热情。
+
+** **CodinGame**
+
+[[https://link.zhihu.com/?target=https%3A//codingame.com/][codingame.com]]
+
+它的网站上是这么介绍的：CodinGame is a challenge-based training platform for programmers where you can improve your coding skills with fun exercises (25+ languages supported).
+
+简单的说，就是一个通过玩游戏来学习编程的网站。你可以通过它来练习Python（或是其他语言）。当然，肯定没有直接玩游戏来的痛快，但它有独特的趣味。和游戏一样，你有一个等级，每完成一个挑战会有增加相应的经验值。
+
+这是一个Clash of Code模式（就是几个人一起在限定的时间里挑战一个编程题）的界面：
+
+[[https://pic1.zhimg.com/v2-07b4d51d28919ed8348ccb90ff4c1df4_r.jpg]]
+
+第一个完成会让你很有成就感~
+
+你也可以自己完成一些专项挑战，比如这个挑战是关于loop的：
+
+[[https://pic2.zhimg.com/v2-ffe4b23b3bf15838025441ddaf36d8e5_r.jpg]]
+
+你还可以和其他玩家聊天，而且已经有了中文频道：
+
+[[https://pica.zhimg.com/v2-f40117473261d6ca7ec0e094e8638ef6_r.jpg]]
+
+这些是多人游戏：
+
+[[https://pica.zhimg.com/v2-dd2862708dcb260c8f8d28aa181cdce4_r.jpg]]
+
+这些是分难度等级的单人训练：
+
+[[https://picx.zhimg.com/v2-afa9a412de17812732cbcd4495f25661_r.jpg]]
+
+还有会这样的竞赛：
+
+[[https://pica.zhimg.com/v2-5405a6b06d8ae2b4ac608024c751b634_r.jpg]]
+
+当然少不了奖品：
+
+[[https://pic2.zhimg.com/v2-d4080a52a6d0eb20140a41d7c6a7a983_r.jpg]]
+
+** **FreeCodeCamp**
+
+[[https://link.zhihu.com/?target=https%3A//freecodecamp.com][freecodecamp.com]]
+
+FreeCodeCamp是一个开源项目，在Github上有197k的Star。它是一个编程学习平台，你可以在里面学习编程，并且帮助非盈利组织。建议你*在学习Python和Flask的空闲时间完成它的前端内容，可以对整个前端开发有大概的了解。*
+
+和CodinGame一样，这个“免费编程训练营”也是基于各种编程挑战的，不过它更加系统化，有完整的任务列表，主要分三大部分：前端开发、数据可视化、后端开发。
+
+[[https://picx.zhimg.com/v2-ccfc716abbc4e7852115da5b9a51f511_r.jpg]]
+
+前端开发里有这些内容：
+
+[[https://pic2.zhimg.com/v2-8aca80722046987e2ef067a164ce6fd7_r.jpg]]
+
+每一个小节由由许多挑战组成，这是其中一个挑战的界面：
+
+[[https://pic4.zhimg.com/v2-13945d8a29ca82fc811311ebd4c7e0b1_r.jpg]]
+
+像CodeinGame一样，你可以很方便的和来自世界各地的同学们聊天：
+
+[[https://picx.zhimg.com/v2-d6d3b7cdf0a552e94c19f18a4b66a247_r.jpg]]
+
+除了聊天室，还有一个气氛活跃的论坛：[[https://link.zhihu.com/?target=https%3A//forum.freecodecamp.com/][https://forum.freecodecamp.com/]]
+
+完成每一部分的挑战会有一些实际的项目（比如做个番茄时钟或是Markdown预览器），而且学完每一大类有证书可以拿。这是网站的一些数据：
+
+[[https://pica.zhimg.com/v2-4c6d219c2b3345d734fdd79951d4d602_r.jpg]]
+
+另外，FreeCodeCamp在LinkedIn上被认证为大学了，你可以把它放到你的教育经历里。
+
+- LinkedIn大学页面：[[https://link.zhihu.com/?target=https%3A//www.linkedin.com/edu/free-code-camp-166029][https://www.linkedin.com/edu/free-code-camp-166029]]
+
+- Github项目：[[https://link.zhihu.com/?target=https%3A//github.com/FreeCodeCamp/FreeCodeCamp][https://github.com/FreeCodeCamp/FreeCodeCamp]]
+
+- Github Organization：[[https://link.zhihu.com/?target=https%3A//github.com/freecodecamp][https://github.com/freecodecamp]]
+
+** **Codecademy**
+
+[[https://link.zhihu.com/?target=https%3A//codecademy.com][codecademy.com]]
+
+Codecademy是一个和FreeCodeCamp类似的编程学习平台，但更加专业和完善。如果你觉得FreeCodeCamp太简单，而且完成完整的挑战耗时太长，那么可以试试Codecademy。它有很多非常好的专项课程和12种语言的学习教程：
+
+[[https://pic2.zhimg.com/v2-3ec24097a5831e8016f9b8ae73ce3833_r.jpg]]
+
+这是HTML&CSS的第一课：
+
+[[https://picx.zhimg.com/v2-1b48a20427658798201cc69cedd6e069_r.jpg]]
+
+如果你还是觉得这些都太麻烦，[[https://link.zhihu.com/?target=http%3A//www.w3schools.com/][W3Schools]]或是[[https://link.zhihu.com/?target=https%3A//developer.mozilla.org/zh-CN/][MDN]]也许可以满足你。它们更适合快速的入门一门语言（主要包含了前端内容）。
+
+** **给初学者的建议**
+
+对初学者来说，后两个学习平台适合用来熟悉语法和学习工具，但语法只是你的编程技能树的一小部分。而且除了学习语言，你还有很多基础知识（算法、计算机原理、网络原理等等）需要学习。过了初学阶段应该*多接触一些好书，尝试做一些实际的项目，抽空补一些基础知识*。
+
+关于基础知识的学习，可以参考这篇著名的[[https://zhuanlan.zhihu.com/p/19959253?refer=xiao-jing-mo][编程入门指南]]。
+
+好了，就这样，下次再介绍几个学习编程不那么有趣的途径：）
+
+- - - - -
+
+更多关于Flask和Web开发的优质内容，欢迎关注[[https://zhuanlan.zhihu.com/flask][Hello, Flask! - 知乎专栏]]。
