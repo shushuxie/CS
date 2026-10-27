@@ -1,0 +1,92 @@
+#+TITLE: 如何在 clion 运行多个 main 函数
+#+LINK: https://zhuanlan.zhihu.com/p/277990960
+#+AUTHOR: 泫zz
+#+TYPE: article
+#+DATE: 2026-10-27
+
+写 C++ 题时经常会遇到这样的问题，多个文件中写 main 函数在 clion 中编译报错不能同时存在 直接修改 CMake 自动遍历文件即可
+
+** **多个 main 函数的报错**
+
+在 clion 中写 LeetCode 题目的时候，写完一题，新建一个 cpp 文件写下一题，结果发现 main 函数不能运行
+
+https://pic2.zhimg.com/v2-fc883e223cf53e846883307229e42a7b_1440w.jpg
+
+
+** **不太优雅的方法**
+
+之前这里写了一个小程序解决这个问题，就是就是 *读文件名写字符串* 。 因为 Clion 使用的是 CMAKE 来管理编译执行，所以在其中加入对应的 ~add_executable(a a.cpp)~ 即可。遍历文件夹下的所有 ~.cpp~ 结尾的文件，然后在 ~CMakeLists.txt~ 加入对应的内容即可。
+
+举个例子，现在有 ~main.cpp~ 和 ~1.cpp~ 两个文件，里面都有 ~int main{}~ ，则可以让 ~CMakeLists.txt~ 写成如下的形式
+
+#+begin_src text
+cmake_minimum_required(VERSION 3.15)
+project(2)
+
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(1 main.cpp)
+add_executable(2 1.cpp)
+
+#+end_src
+
+尽管我自己写了一个程序每次手动更新 ~CMakeLists.txt~ ，但是依然不太优雅，因为 CMake 本来就是一个很强大的工具。
+
+** **正确的解决方法**
+
+在牛客用户 *[AAnonymous](https://www.nowcoder.com/profile/214695)* 的告知下，借鉴了他的 github 上的 *[CMakeLists.txt](https://github.com/anonymouss/my-leetcode-cpp/blob/master/CMakeLists.txt)* ， *直接修改 CMakeLists.txt 即可* ，之前自己写了一个傻傻的方法。以我的 Project 的 CMakeList.txt 为例
+
+#+begin_src text
+cmake_minimum_required(VERSION 3.15)
+project(JZ_offer)
+
+set(CMAKE_CXX_STANDARD 14)
+
+# 遍历项目根目录下所有的 .cpp 文件
+file (GLOB files *.cpp)
+foreach (file ${files})
+    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
+    add_executable (${exe} ${file})
+    message (\ \ \ \ --\ src/${exe}.cpp\ will\ be\ compiled\ to\ bin/${exe})
+endforeach ()
+
+#+end_src
+
+在新建对应的 ~xx.cpp~ 文件之后，创建 ~main~ 函数，在项目处右击，选择 ~Reload CMake Project~ ，在 ~main~ 函数旁边就会出现那个绿色的运行按钮了（ *快捷操作，按两次 shift，输入 reload，就会出现选项* ）
+
+https://pic1.zhimg.com/v2-f2b22a062166cce16f9311c21d25cd42_1440w.jpg
+
+
+在重新加载完之后可以看到 ~main~ 函数前面出现了运行按钮，运行框列表也有了对应的运行选项
+
+https://pic2.zhimg.com/v2-9d75aaabc276ab53aa2910288ac7a605_1440w.jpg
+
+
+之前尝试过 ~Auto-Reload CMake Project~ 选项，但是作者发现该选项应该是监听 ~CMakeLists.txt~ 文件修改的，在创建新的 cpp 文件后应该不会自动 reload，所以没有用这个功能
+
+** **进阶补充**
+
+博客底下有人问这种方法只能遍历根目录下的一层，如果根目录下还有文件夹，则里面的 cpp 文件没有被识别，查了一个有点旧的 *[官方文档](https://cmake.org/cmake/help/v2.8.8/cmake.html#command:add_library)* ，有 ~GLOB_RECURSE~ 的方法，不过也试了一种自己的方法
+
+#+begin_src text
+# 如果你只需要根目录下的 test 文件夹的所有 .cpp 文件
+file (GLOB files test/*.cpp)
+# 如果你只有两层目录的话
+file (GLOB files *.cpp */*.cpp)
+# 同理，三层的话
+file (GLOB files *.cpp */*.cpp */*/*.cpp)
+
+# 官方提供了一种递归的方法
+# 这样在运行框会多一个 CMakeCXXCompilerId，不过无伤大雅
+file (GLOB_RECURSE files *.cpp)
+
+#+end_src
+
+还有人问如果我想在运行框显示 *文件夹/文件名* 应该怎么做，经过测试对于 ~/~ 应该是 CMAKE 中使用的符号，不能在其中使用， ~\\1~ 和 ~\\2~ 之间可以用 ~.~ 和 ~-~
+
+#+begin_src text
+string(REGEX REPLACE ".+/(.+)/(.+)\\..*" "\\1-\\2" exe ${file})
+
+#+end_src
+
+这样可以按照文件夹层级在框中展示，但是排序可能会出现混乱

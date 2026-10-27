@@ -1,0 +1,273 @@
+#+TITLE: 死亡细胞全武器、全道具、全技能、全变异获得详解
+#+LINK: https://zhuanlan.zhihu.com/p/555235756
+#+AUTHOR: VianYe
+#+TYPE: article
+#+DATE: 2026-10-27
+
+https://pic3.zhimg.com/v2-6b34638d4eee5fbc89e9ad1e4bcaeec6_1440w.jpg
+
+
+更新时间：2023年11月12日
+
+学业繁忙，没有时间，抽空更新了 *两件新近战* （已经不新了），改正了部分错误。等下一个版本大更新！
+
+( *PS* :本文只针对 *PC* 版本的死亡细胞 *68* 种近战武器、 *40* 种远程武器、 *15* 种盾、 *12+1* 种安置型陷阱、 *12* 种手雷、 *34* 种力量（技能）和 *53* 种变异，不包括其他平台出现的道具，不包括已经被移除的道具。由于富文本表格不好使用，故我用图片的形式给大家作详解。若有错字或错误请及时批评指正)
+
+https://pic3.zhimg.com/v2-1ec7a8e8e8227657e5b26b2c6c0cfd16_1440w.jpg
+
+
+---
+
+更新时间：2023年3月8日
+
+最新dlc *《死亡细胞：重返恶魔城》* 已经更新，同时更新了 *6* 个近战， *3* 个远程， *1* 个盾， *1* 个手雷， *3* 个技能。爆肝！更新内容放在文章第三章末尾，之后会将其归类。
+
+---
+
+更新时间：2022年11月9日
+
+更新 *6款联动道具* ，武器效果还不错，获取方法有手即可。
+
+---
+
+更新时间：2022年10月7日
+
+今天更新 *Boss Rush* 模式正式上线，更新了1远程武器+1技能+1普通变异 *。*
+
+---
+
+更新时间：2022年8月18日
+
+快开学了，赶紧把全装备写完，内容比较多，可以根据目录阅读。
+
+---
+
+** 前言
+
+死亡细胞全道具（下文统称为道具）按照获取类型又可以大致分为3种，生来就有、场景互动（隐藏区域，拿钥匙开门等）和打怪爆装备。
+
+*生来就有* 不用解释，即第一次玩游戏就已经解锁。
+
+*场景互动* 更多的是需要玩家自己去寻找地图内的隐藏区域或隐藏钥匙开门等，基本上比较简单，所以本文大致说明道具蓝图的地点，较为复杂的道具蓝图会详细说明。
+
+*打怪爆装备* ，除了boss外最好就是拿猎人手雷去刷，当然这是一个比较痛苦的过程（这两天在刷银行拟态魔掉的变异蓝图，差点自闭）。
+
+本文所提到的所有道具的效果/伤害 均为初始效果/伤害，道具的效果会随获得对应的卷轴升级。
+
+** 一、全武器
+
+*** 1.1 近战武器
+
+截止目前死亡细胞一共有60种近战武器
+
+https://pic2.zhimg.com/v2-7056ce443cc314d60d8f9e66d8e49d1d_1440w.jpg
+
+
+https://picx.zhimg.com/v2-729050d5ab55db84f3a2d64ba78fe561_1440w.jpg
+
+
+https://picx.zhimg.com/v2-6e53d73477ecf5b48bb17f6bc9399395_1440w.jpg
+
+
+https://pic1.zhimg.com/v2-76956ae3a2f68b7d9bc285fd38a47190_1440w.jpg
+
+
+https://pic2.zhimg.com/v2-146718284b9ad35d921f62af8beb4a69_1440w.jpg
+
+
+https://picx.zhimg.com/v2-1715e382628bdfcf2b86b7d47808ec19_1440w.jpg
+
+
+https://pica.zhimg.com/v2-3b504f3bc1a1e0c8a2a60ad753b9b908_1440w.jpg
+
+
+*** 1.2 远程武器
+
+截止目前死亡细胞一共有37种远程武器
+
+https://pic4.zhimg.com/v2-fce966bba1a7a2eba374d7fd8e464f47_1440w.jpg
+
+
+https://pica.zhimg.com/v2-2f13aa9ddfc2ed7bdb518a4f0f31577e_1440w.jpg
+
+
+https://pic4.zhimg.com/v2-04304a3e8ed4c37be1afb92bd7df1737_1440w.jpg
+
+
+https://pic3.zhimg.com/v2-a9ad3e116769644e81fb9a1edae42416_1440w.jpg
+
+
+https://picx.zhimg.com/v2-4688570fbccd37e83de70b9bfe1e0fc9_1440w.jpg
+
+
+https://picx.zhimg.com/v2-9d143224a01a56c2ff4f8fad8f38ca3b_1440w.jpg
+
+
+*** 1.3 盾
+
+截止目前死亡细胞一共有14种盾
+
+https://picx.zhimg.com/v2-0208bfa3ed8ec9c716fe635a69ef3113_1440w.jpg
+
+
+https://pic3.zhimg.com/v2-e492bba1c966bb5c803f5904f185fb3a_1440w.jpg
+
+
+** 二、全道具/技能
+
+*** 2.1 安置型陷阱
+
+截止目前死亡细胞一共有12种安置型陷阱+1个小夜灯，小夜灯不算陷阱，但还是写上去了。
+
+https://pic4.zhimg.com/v2-b870811a33c6017358550b0ec6a7d9d9_1440w.jpg
+
+
+https://pic3.zhimg.com/v2-096f6c8b926fd21c5d61eb59341848ae_1440w.jpg
+
+
+*** 2.2 手雷
+
+截止目前死亡细胞一共有11种手雷（包括猎人手雷）
+
+https://picx.zhimg.com/v2-6a26b1e65b95861de9b8bdb46b85bc37_1440w.jpg
+
+
+###
+2.3 力量（技能）
+
+截止目前死亡细胞一共有30种力量（技能）
+
+https://pica.zhimg.com/v2-cfc1da51a8393faa495ddd9e6cd03ece_1440w.jpg
+
+
+https://pic3.zhimg.com/v2-35a50f61393cd2947ffe337ad24badca_1440w.jpg
+
+
+https://pica.zhimg.com/v2-9221894ae8ae4ed2ddb56c84818c31ae_1440w.jpg
+
+
+https://pica.zhimg.com/v2-b885f441c1f58f73119e2d629e6b2b7c_1440w.jpg
+
+
+https://pic2.zhimg.com/v2-1486ab70e6dda3a50dceb02039e3d873_1440w.png
+
+
+https://pic2.zhimg.com/v2-d237329af20ba504eb27ee3d6e85e33f_1440w.jpg
+
+
+** 三、全变异
+
+*** 3.1 暴虐变异
+
+截止目前死亡细胞一共有12种暴虐变异
+
+https://pic2.zhimg.com/v2-3b41c68fc11ec5a065cdfd81f779a91b_1440w.jpg
+
+
+https://pica.zhimg.com/v2-abb31df9e2dbff0580c796b76826e8b4_1440w.jpg
+
+
+*** 3.2 战术变异
+
+截止目前死亡细胞一共有12种战术变异
+
+https://picx.zhimg.com/v2-6c0006b9b0167c6a7ad9d5f179cdae25_1440w.jpg
+
+
+https://pica.zhimg.com/v2-a0b9c39c534bd9999ab50954a151da58_1440w.jpg
+
+
+*** 3.3 生存变异
+
+截止目前死亡细胞一共有13种生存变异
+
+https://pic4.zhimg.com/v2-8e7e30414c3957d4c27193b34776f927_1440w.jpg
+
+
+https://pic2.zhimg.com/v2-9a610d06c742781098c7354336fa48bd_1440w.jpg
+
+
+*** 3.4 一般变异
+
+截止目前死亡细胞一共有15种一般变异
+
+https://pic4.zhimg.com/v2-e55f68850c3eb9ed69991e910aec7a31_1440w.jpg
+
+
+https://pic3.zhimg.com/v2-7661a3e5043bff79f77cc31f336fb2d0_1440w.jpg
+
+
+https://pic2.zhimg.com/v2-251124dca4fca6f2cdcf600511a4cf27_1440w.jpg
+
+
+*更新*
+
+没有特别难活得的道具。up对这次的更新游戏背景没有了解过，感觉这次dlc还是贵了
+
+https://pic4.zhimg.com/v2-f1b7de4ebdfdbaf8eba30785c66b027d_1440w.jpg
+
+
+https://pic1.zhimg.com/v2-6ecba6b54082f6ea6516f904242c93e4_1440w.png
+
+
+https://pica.zhimg.com/v2-f44e70f7d77f48e5f5be312a2377a302_1440w.jpg
+
+
+https://pic4.zhimg.com/v2-3ef4e2605b43e8eddb0fb70cd62f099f_1440w.png
+
+
+https://pic1.zhimg.com/v2-52873f2dda0ee50bbaebb1294991329c_1440w.jpg
+
+
+https://pic4.zhimg.com/v2-dbab36687a3bf0b826a0bd913da59ec5_1440w.jpg
+
+
+阿鲁卡多的剑（里希达模式）：
+
+https://picx.zhimg.com/v2-2978486c953dd7a3e36724af35de7407_1440w.jpg
+
+
+美杜莎之首：
+
+https://picx.zhimg.com/v2-b04fcc008a6bcea477ba3e31d3156165_1440w.jpg
+
+
+玛莉亚的猫：
+
+https://picx.zhimg.com/v2-778beccfe6ab53c06f7cbbc87ed6b8cd_1440w.jpg
+
+
+https://pic2.zhimg.com/v2-6f57b40a1c7d17a12c5f0eea6b0e37bb_1440w.jpg
+
+
+裁缝剪刀
+
+https://pic3.zhimg.com/v2-9c144039c01c535ea38265158b3efac2_1440w.jpg
+
+
+巨型梳子
+
+https://pic1.zhimg.com/v2-2c94908ec1a38c8332afd95411f91bc6_1440w.jpg
+
+
+** 四、注意
+
+- 字数太多了，难免有错字，若有错字或错误请及时批评指正（留言或私信）
+- 后期有新套装我会持续更新内容。
+- 如果有时间我会写一篇死亡细胞其他方面的详解，如地图、NPC、怪物等。
+
+[VianYe：死亡细胞全成就详解](https://zhuanlan.zhihu.com/p/458912118)
+
+[VianYe：死亡细胞全套装（皮肤）获得详解](https://zhuanlan.zhihu.com/p/505569617)
+
+** 五、参考
+
+#+begin_quote
+参考wiki：
+#+end_quote
+
+[https://deadcells.fandom.com/wiki/Gear](https://deadcells.fandom.com/wiki/Gear)
+
+[https://deadcells.fandom.com/wiki/Mutations](https://deadcells.fandom.com/wiki/Mutations)
+
+*如需转载，请注明出处和相关链接*

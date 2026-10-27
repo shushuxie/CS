@@ -74,3 +74,415 @@
   本文仅供参考，只是因为深夜找不到好的教程，所以自己摸索并分享给同样需求的朋友。
   #+end_quote
   【我的想法】
+
+
+* 零基础速写入门（5）：如何练习「手绘线条」？  :技巧:绘画:速写:线条练习:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/596241032
+  :作者:  周磊
+  :原文:  [[file:原文/2026-10-27-零基础速写入门（5）：如何练习「手绘线条」？.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-零基础速写入门（5）：如何练习「手绘线条」？.org][打开本地归档]]
+  - 一句话概括：把「练线条」拆成三个目的——构成外形、构成光影颜色、构成质感，每个目的都给出格子尺寸、间距要求和具体画法；值得收是因为它纠正了「练线条是为了画得又快又圆」的误区，真正要练的是判断与调整能力。
+  【方法/论点要点】
+  - 线条控制最终服务于三件事：形状、光影、质感。
+  - 外形线条：直线与曲线，准备 4 个 5×5cm 格子，线距 1~2mm；眼睛别盯笔尖，要盯着两侧参考线。
+  - 斜线先画中间一根作参考，再平行补两边；曲线练不同方向的椭圆，慢画、边画边判断调整。
+  - 短线动手腕，超过 5cm 的长线改动手肘。
+  - 光影线条：4 个 1.5×7.5cm 长条各分 5 格，用「叠加层数」或「改变疏密」两种方法做出 5 个色阶。
+  - 质感四类：蓬松＝小曲线，柔软＝悠长完整的大曲线，坚硬＝规整直线或弧线，粗糙＝短小转折线。
+  - 在球体上画线条要用「包裹式」贴上去，才符合朝向规律。
+  - 收尾作业：4 个 4×4cm 质感方格；画树枝先画前面几棵粗树，再补中间，最后加远处细树。
+  【原文摘录】
+  #+begin_quote
+  练习这个更重要的目的是让你今后拥有控制线条的能力，而不是为了去复制一个外形结果。
+  #+end_quote
+  #+begin_quote
+  我们真正要去拥有的能力是能够判断哪里不够圆，哪里不够直的判断与调整能力！
+  #+end_quote
+  #+begin_quote
+  所以，慢点画，边画边判断哪里不够圆不够直，然后慢慢调整。反反复复的训练后，你在判断线条与调整线条的能力上就会比一般人要强了。
+  #+end_quote
+  #+begin_quote
+  所有的这些线条练习完成后，最重要的目的是让你在今后的绘画学习中，看到再复杂的线条不再害怕，或许还会有胆量愿意挑战一下。
+  #+end_quote
+    【我的想法】
+
+
+
+* 谭伯虎说画，教您钢笔画如何画树木  :技巧:绘画:钢笔画:树木:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/82186065
+  :作者:  谭伯虎
+  :原文:  [[file:原文/2026-10-27-谭伯虎说画，教您钢笔画如何画树木.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-谭伯虎说画，教您钢笔画如何画树木.org][打开本地归档]]
+  - 一句话概括：用几条口诀概括钢笔画树的要点：枝叶少用长实线、靠短碎排线组面、用疏密区分前后、重叠处留白；值得收是因为它把「怎么画像一棵树」压缩成了可以直接照着练的笔法规则。
+  【方法/论点要点】
+  - 树分枝叶与树干两部分，先分阳面阴面；树干按圆柱体理解，枝叶用几何体分析。
+  - 枝叶忌用实线或过长的线，善用短小不规则的排线去组成面。
+  - 多树时靠笔法疏密区分前后：近景枝叶稍细，远景只留大轮廓，阴面用断笔碎笔带过。
+  - 树与树重叠交界处适当留白，能很好地表现前后层次。
+  - 过渡处尽量用断笔碎笔带过，不要一根线画到底。
+  - 附前辈口诀：外形抖线思光源，阳面阴面过度难；大中变化要灵活，小变细节尖方圆；阳面单薄可断笔，枝叶打包在一起；过度小叶碎而稀，阴面叶片要清晰。
+  【原文摘录】
+  #+begin_quote
+  画树的时候枝叶尽量不要用实线或过长的线去刻画，善用短小不规则的排线去组成面。当树木较多的时候，利用笔法的疏密来区分前后空间感，近景的枝叶可稍微细致刻画，远景的只要大轮廓，阴面用断笔碎笔略略带过。
+  #+end_quote
+  #+begin_quote
+  树与树重叠交界的地方可适当留白，可以很好表现前后关系的层次感。
+  #+end_quote
+  #+begin_quote
+  外形抖线思光源，阳面阴面过度难。大中变化要灵活，小变细节尖方圆。阳面单薄可断笔，枝叶打包在一起。过度小叶碎而稀，阴面叶片要清晰。
+  #+end_quote
+    【我的想法】
+
+
+
+* 如何在 clion 运行多个 main 函数  :技巧:CMake:CLion:C++:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/277990960
+  :作者:  泫zz
+  :原文:  [[file:原文/2026-10-27-如何在 clion 运行多个 main 函数.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-如何在 clion 运行多个 main 函数.org][打开本地归档]]
+  - 一句话概括：解决 CLion 里一个项目多个 cpp 各带 main 的编译冲突：用 CMake 的 file(GLOB) + foreach 自动为每个 cpp 生成可执行文件，新增文件后 Reload CMake Project 即可；值得收是因为它把「每写一题改一次 CMakeLists」变成全自动，还附带了子目录递归写法。
+  【方法/论点要点】
+  - 报错原因：一个 target 只能有一个 main，多个 cpp 直接 add_executable 会冲突。
+  - 笨办法：手动为每个文件补一行 add_executable(a a.cpp)。
+  - 正确做法：file(GLOB files *.cpp) 遍历，foreach 里用正则取出文件名当 target 名。
+  - 新建 cpp 后按两次 Shift 输入 reload，执行 Reload CMake Project，main 旁就会出现绿色运行按钮。
+  - Auto-Reload 只监听 CMakeLists.txt 的修改，新建 cpp 不会触发，别指望它。
+  - 子目录：file(GLOB files test/*.cpp) 或 *.cpp */*.cpp；官方递归写法是 file(GLOB_RECURSE files *.cpp)。
+  - 想在运行框显示「文件夹/文件名」，可用两级正则替换，但排序可能会乱。
+  【原文摘录】
+  #+begin_quote
+  之前这里写了一个小程序解决这个问题，就是就是读文件名写字符串。因为 Clion 使用的是 CMAKE 来管理编译执行，所以在其中加入对应的 add_executable(a a.cpp) 即可。
+  #+end_quote
+  #+begin_src text
+  file (GLOB files *.cpp)
+  foreach (file ${files})
+      string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
+      add_executable (${exe} ${file})
+      message (\ \ \ \ --\ src/${exe}.cpp\ will\ be\ compiled\ to\ bin/${exe})
+  endforeach ()
+  #+end_src
+  #+begin_quote
+  在新建对应的 xx.cpp 文件之后，创建 main 函数，在项目处右击，选择 Reload CMake Project，在 main 函数旁边就会出现那个绿色的运行按钮了（快捷操作，按两次 shift，输入 reload，就会出现选项）。
+  #+end_quote
+  #+begin_quote
+  之前尝试过 Auto-Reload CMake Project 选项，但是作者发现该选项应该是监听 CMakeLists.txt 文件修改的，在创建新的 cpp 文件后应该不会自动 reload，所以没有用这个功能。
+  #+end_quote
+    【我的想法】
+
+
+
+* 建议收藏！SMS-Activate最新使用教程  :技巧:验证码:注册:教程:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/685150262
+  :作者:  零柒
+  :原文:  [[file:原文/2026-10-27-建议收藏！SMS-Activate最新使用教程.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-建议收藏！SMS-Activate最新使用教程.org][打开本地归档]]
+  - 一句话概括：记录 SMS-Activate 改版后的完整用法：免费号码、一次性号码、租号三类服务的入口与流程，重点是一次性号码的选服务、选地区、去前缀填号、2~4 分钟收不到就换号、未收到可退 RUB；值得收是因为这类教程过几个月就忘，步骤和坑都写全了。
+  【方法/论点要点】
+  - 用途：注册 ChatGPT 等不支持国内手机号的服务，用来接收验证码。
+  - 三类服务：免费号码（免注册但不好用）、一次性号码（最常用）、租用服务。
+  - 注册：官网右上角申请账号，QQ 邮箱即可，邮件里点验证。
+  - 免费号码：左上角「免费号码」→ 选国家/号码 → 填到目标网站 → 回来看验证码。
+  - 一次性号码：先充值 → 搜索服务（如 OpenAI）→ 选地区（非、美、欧成功率更高），按卢布计价。
+  - 填号规则：去掉国家前缀，只保留括号后的号码；等 2~4 分钟，收不到就换号；验证码出来前点 × 可退 RUB。
+  - 失败多与网络有关，换更快的网络或刷新重试即可。
+  【原文摘录】
+  #+begin_quote
+  该网站的使用方法大致可以分为三大类，即免费号码的使用、一次性号码以及租用服务。
+  #+end_quote
+  #+begin_quote
+  填号码的时候去掉前缀只保留括号与其后面的号码，例如下图只保留85738622081输入到文本框，等待2-4分钟收不到码就换下一个号码试试，收到验证码直接填入即可，最后如果没有收到验证码，或者不需要该服务了，在验证码出来之前点击×号会将RUB返还。
+  #+end_quote
+  #+begin_quote
+  多尝试几个地区或者号码，短时间内收不到号码，跟你的网络也有很大的关联。一句话就是多尝试，成功几率蛮大的。
+  #+end_quote
+    【我的想法】
+
+
+
+* Xcode 的基本操作和使用  :技巧:Xcode:iOS:快捷键:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/652276529
+  :作者:  封藏云典
+  :原文:  [[file:原文/2026-10-27-Xcode 的基本操作和使用.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-Xcode 的基本操作和使用.org][打开本地归档]]
+  - 一句话概括：一份 Xcode 界面与快捷键的系统速查：Toolbar、Editor、Navigator、Utilities、Debug Area 各区域的作用与常用组合键；值得收是因为它把「天天用却总记不住」的面板开关和编辑操作集中成表，适合放在旁边随时查。
+  【方法/论点要点】
+  - 五大区域：Toolbar、Editor Area、Navigator、Utilities、Debug Area。
+  - 面板开关：⌘0 Navigator、⌥⌘0 Utilities、⇧⌘Y Debug Area、⌥⌘T Toolbar、⇧⌘C Console。
+  - 三种编辑器：⌘↵ 标准、⌥⌘↵ 辅助（连 IB 用）、⌥⇧⌘↵ 版本对比。
+  - Navigator 八个页签：⌘1 项目、⌘2 符号、⌘3 查找、⌘4 问题、⌘5 测试、⌘6 调试、⌘7 断点、⌘8 报告。
+  - Utilities 上半是 Inspector（⌥⌘1 文件、⌥⌘2 快速帮助），下半是四个 Library（⌥⌘⌃1~4）。
+  - 代码操作：⌃I 智能缩进、⌘/ 注释、⌘\ 断点、⌥⌫ 删词、⌘⌫ 删到行首、⌥⇧←/→ 按词选择。
+  - 在 .h/.m 之间切换用 ⌃⌘↑/↓/←/→；⌥⌘←/→ 折叠展开代码。
+  【原文摘录】
+  #+begin_quote
+  先不先进的不知道，但是真的是使用起来不是很舒服，但是你却离不开它，除非你不上苹果商店，不做性能调试和异常排查。
+  #+end_quote
+  #+begin_quote
+  Xcode 对于游戏开发来说也是经常使用到的开发工具，比如SDK开发，性能测试，崩溃以及疑难问题排查，下面将工具的基本使用介绍下。
+  #+end_quote
+  #+begin_quote
+  边列（Gutter）：显示行号和断点。焦点列（Ribbon）：灰色深度与代码嵌套深度相关；鼠标悬停可突出显示右侧相应代码块，鼠标单击可折叠右侧相应代码块。
+  #+end_quote
+  #+begin_quote
+  Debug Area 主要用于应用调试，Console 可以输出日志信息、错误信息等，帮助跟踪错误。
+  #+end_quote
+    【我的想法】
+
+
+
+* Vim和中文输入法的完美结合  :技巧:Vim:输入法:Evil:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/108681375
+  :作者:  陈斌
+  :原文:  [[file:原文/2026-10-27-Vim和中文输入法的完美结合.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-Vim和中文输入法的完美结合.org][打开本地归档]]
+  - 一句话概括：用三句话讲清 Vim 与中文输入法共存的正确策略：normal 态需要中文时自动进 insert、insert 里关输入法仍留在 insert、insert 按 ESC 回 normal 时自动关输入法，并用 Evil + pyim 落地；值得收是因为它把「Vim 里打中文总是手忙脚乱」归结为状态同步问题，而不是换输入法。
+  【方法/论点要点】
+  - 原则一：只可能在 insert state 输入中文，所以从 normal 切到输入法时应自动进入 insert。
+  - 原则二：在 insert 里关输入法多半是为了输入英文，所以应该继续留在 insert。
+  - 原则三：在 insert 按 ESC 意味着回 normal，此时应自动关闭输入法。
+  - 实现：用 Emacs 的 Vim 模拟器 Evil + Emacs Lisp 写的中文输入法（作者用 pyim），才能精确控制状态。
+  - 其他编辑器/IDE 也能用同一算法，难点是编辑器与输入法之间要互相发信号。
+  【原文摘录】
+  #+begin_quote
+  只可能在insert state里输入中文，所以在normal state里切换至输入法时应该自动进入insert state
+  #+end_quote
+  #+begin_quote
+  在insert state里关闭输入法的目的可能是输入英文，所以应该还是呆在insert state
+  #+end_quote
+  #+begin_quote
+  在insert state按ESC键意味着切换回normal state，这时应自动关闭输入法
+  #+end_quote
+  #+begin_quote
+  其他编辑器或IDE也可以使用同样的算法，难点无非就是编辑器切换state时要给输入法发个信号，输入法切换时要给编辑器或者IDE也发个信号。
+  #+end_quote
+    【我的想法】
+
+
+
+* Emacs中的个人信息管理 — GTD收集  :技巧:Emacs:GTD:org-mode:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/685230171
+  :作者:  奔跑的小草
+  :原文:  [[file:原文/2026-10-27-Emacs中的个人信息管理 — GTD收集.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-Emacs中的个人信息管理 — GTD收集.org][打开本地归档]]
+  - 一句话概括：系统梳理 Emacs + Org 的 GTD 信息收集方案：内部用 org-capture 模板，外部用 org-protocol 一键收藏网页、手机端用 Orgzly/Jtx Board，再通过 CalDAV 与 Syncthing 同步；值得收是因为它覆盖了从浏览器划词到手机速记的完整入口，还给了可以直接抄的配置。
+  【方法/论点要点】
+  - 个人信息管理＝收集、整理、存储、利用；GTD 的核心是把任务从大脑搬到外部系统。
+  - 内部收集：org-capture 模板，快捷键呼出捕获窗口，不打断当前心流。
+  - 模板字段：按键、描述、entry 类型（entry/item/checkitem/table-line/plain）、目标 file+headline、模板内容。
+  - 外部收集（PC）：org-protocol + 浏览器书签脚本，划词或整页保存进 Org。
+  - 外部收集（手机）：Jtx Board 建任务 → DAVx 同步 CalDAV；长文本用 Orgzly 写 → Syncthing 同步。
+  - 同步方案：Radicale 提供 CalDAV/CardDAV；Syncthing 做 P2P 文件同步，不需要公网 IP。
+  - org-caldav 做双向同步，可用 org-caldav-exclude-tags 把某些标签排除在外。
+  【原文摘录】
+  #+begin_quote
+  GTD，全称Getting Things Done，是由David Allen提出的一种个人任务管理方法。它强调将任务和想法从大脑中转移到外部系统中，以减轻压力并提高生产力。
+  #+end_quote
+  #+begin_quote
+  内部收集使用Org的捕获模板来支撑。可以在Emacs的使用过程中，通过快捷键打开任务的捕获窗口，在完成之后，再回到之前的工作流。不担心心流的中断。
+  #+end_quote
+  #+begin_quote
+  在浏览器的网页中，选中一段文本，点击书签栏的这个书签，就可以把选中的文本保存的 Org 中。类似的，也可以直接收藏整个网页。
+  #+end_quote
+  #+begin_quote
+  Syncthing 是一个 P2P 的同步工具，跨多个常用的端。由于是去中化的，不需要一个可以访问的IP。
+  #+end_quote
+    【我的想法】
+
+
+
+* Emacs中的个人信息管理 — GTD整理  :技巧:Emacs:GTD:org-mode:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/687913062
+  :作者:  奔跑的小草
+  :原文:  [[file:原文/2026-10-27-Emacs中的个人信息管理 — GTD整理.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-Emacs中的个人信息管理 — GTD整理.org][打开本地归档]]
+  - 一句话概括：承接收集篇，讲 Emacs GTD 的整理工作流：所有事项收进单个 gtd.org、每天清空内外收集箱、用 TODO/NEXT/SOMEDAY/ABORT/WAITING 管状态、每周重规划、定期归档；值得收是因为它给了一套能长期跑下去的「单文件 + 日整理 + 周回顾」结构。
+  【方法/论点要点】
+  - 单文件原则：所有 GTD 条目放在 gtd.org；外部收集箱按同步来源拆成独立文件，避免一个同步出错拖累全部。
+  - gtd.org 结构：Inbox For GTD、Personal Task/Event/Project、Family、Work 等 headline。
+  - 每日流程：先 org-caldav 同步，整理外部收集箱（任务 Refile 进内部箱、笔记进 org-roam），再整理内部箱：归类、改状态、打标签、排期。
+  - 状态关键词：TODO、NEXT、SOMEDAY、ABORT、WAITING、DONE。
+  - 标签：personal / work / family / project，用于 CalDAV 筛选。
+  - 时间戳：SCHEDULED 排期、DEADLINE 截止、普通时间戳记事件。
+  - 四类事项：项目（可拆任务，分有/无完成条件）、任务（一次性/周期性）、习惯（只有开始日期）、事件（必须与时间挂钩）。
+  - 每周重规划所有非终态任务并检查 SOMEDAY，定期归档 DONE。
+  【原文摘录】
+  #+begin_quote
+  所有被维护的 GTD 相关的条目，都放在名为 gtd.org 的单个文件中。
+  #+end_quote
+  #+begin_quote
+  每天会对外部收集箱和内部收集箱进行整理，移动。清空收集箱
+  #+end_quote
+  #+begin_quote
+  项目不能够一次性完成的，需要拆解为多个任务分多次才能完成的，称之为项目。又可细分为有完成条件的项目和无完成条件的项目。
+  #+end_quote
+  #+begin_quote
+  事件和任务不一样的是，事件绝对和时间挂钩，时间是事件存在的前提。
+  #+end_quote
+    【我的想法】
+
+
+
+* 我如何用 Emacs 做笔记  :技巧:Emacs:org-roam:笔记流程:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/550989140
+  :作者:  陈一斌
+  :原文:  [[file:原文/2026-10-27-我如何用 Emacs 做笔记.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-我如何用 Emacs 做笔记.org][打开本地归档]]
+  - 一句话概括：受 Notion dashboard、Obsidian 插件、Logseq query 启发，用 org-ql + columnview + org-roam + org-capture + org-super-links 搭出四类笔记（知识/事实/项目/记录）各不相同的流程；值得收是因为它示范了「不追新工具，用 Org 拼出同类能力」的完整思路。
+  【方法/论点要点】
+  - 四类笔记：知识类（按领域）、事实类（可引用的事件与数据）、项目类（一项目一文件）、记录类（书影音与旅行）。
+  - 知识类：org-roam-capture 建节点，org-roam-insert-node 建关联；只在专门回顾时看 backlink。
+  - 事实类：全部塞进 readlog.org，一条一个 heading 加标签，再用 org-ql-search 按标签抓成视图。
+  - 项目类：一个项目一个 org 文件，用 columnview 做 dashboard（能识别链接、可跨文件取数），用 org-super-links 连日志与下一步任务。
+  - 记录类：org-capture 记书影音，值得做笔记的再用 org-roam-capture 新建笔记。
+  - 对三大件的判断：Notion 数据不本地、Obsidian 高级玩法要写代码、Logseq 的自动整理会把人变成「笔记机器」。
+  【原文摘录】
+  #+begin_quote
+  notion 数据不能本地存储，obsidian 里的高级玩法也需要用户写代码，如果这样我还不如用回自己熟悉的 emacs。
+  #+end_quote
+  #+begin_quote
+  logseq 这种直接进行自动化整理的方式，实际上是将笔记的反人类部分给磨平——但也去掉了笔记的意义，因为人必须得反思，才能进行有效的判断。
+  #+end_quote
+  #+begin_quote
+  我的笔记分成 4 类：知识类、事实类、项目类、记录类。
+  #+end_quote
+  #+begin_quote
+  我用 org-mode 的 columnview 来完成这一工作。不采用 org-ql 的原因是，它在输出对应的表格时，无法识别 org-mode 的链接语法，另外，columnview 可以添加 :file 语句，可以直接调用另外一个文件里的内容。
+  #+end_quote
+    【我的想法】
+
+
+
+* 阿里面试官：接口的幂等性怎么设计？  :技巧:后端:幂等:分布式:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/345512692
+  :作者:  蓬莱山辉夜
+  :原文:  [[file:原文/2026-10-27-阿里面试官：接口的幂等性怎么设计？.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-阿里面试官：接口的幂等性怎么设计？.org][打开本地归档]]
+  - 一句话概括：从「什么是幂等」讲到三类重复场景（前端重复提交、超时重试、消息重复消费），再给出 token、MySQL 唯一索引、Redis SETNX 三套落地方案；值得收是因为它把面试题答成了可实现的流程，还提醒了 Lua 原子性与唯一 ID 生成器。
+  【方法/论点要点】
+  - 定义：多次调用方法或接口不会改变业务状态，结果与单次调用一致。
+  - 场景一：用户注册/创建商品时多点几次，数据库重复建记录。
+  - 场景二：接口超时重试，第一次已执行一半，第二次撞上脏数据。
+  - 场景三：消息队列手动 ack 时消费者断开，消息被其他消费者重新消费。
+  - 方案一 token：先取全局唯一 token 存 Redis → 业务请求带上 → 校验成功则执行并删除 → 失败即重复操作。
+  - token 细节：查与删用 Lua 保证原子性；全局唯一 ID 可用百度 uid-generator、美团 Leaf。
+  - 方案二 MySQL：建去重表 + 唯一索引，插入成功才执行业务，插入失败即已执行过。
+  - 方案三 Redis SETNX：以业务唯一字段为 key，设置成功是首次，失败即已执行，记得设过期时间。
+  - 其他：状态机、悲观锁、乐观锁；转账、支付这类涉及钱的接口尤其要优先考虑幂等。
+  【原文摘录】
+  #+begin_quote
+  幂等性：多次调用方法或者接口不会改变业务状态，可以保证重复调用的结果和单次调用的结果一致。
+  #+end_quote
+  #+begin_quote
+  如果用户不小心多点了几次，后端收到了好几次提交，这时就会在数据库中重复创建了多条记录。这就是接口没有幂等性带来的 bug。
+  #+end_quote
+  #+begin_quote
+  对 redis 中是否存在 token 以及删除的代码逻辑建议用 Lua 脚本实现，保证原子性
+  #+end_quote
+  #+begin_quote
+  总之，当你去设计一个接口的时候，幂等都是首要考虑的问题，特别是当你负责设计转账、支付这种涉及到 money 的接口，你要格外注意喽！
+  #+end_quote
+    【我的想法】
+
+
+
+* 怎么把苹果「健康」数据导出使用  :技巧:AppleHealth:数据导出:CSV:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/351547315
+  :作者:  苍浪
+  :原文:  [[file:原文/2026-10-27-怎么把苹果「健康」数据导出使用.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-怎么把苹果「健康」数据导出使用.org][打开本地归档]]
+  - 一句话概括：两步解决「想自己分析 Apple Watch 数据但导出格式打不开」：从 iPhone「健康」导出 XML，再用免费的 Apple Health XML to CSV Converter 转成 CSV 做二次分析；值得收是因为它短，但正好卡在很多人的具体需求上。
+  【方法/论点要点】
+  - 前提：长期戴 Apple Watch，健康 App 里已有心率、运动等数据。
+  - 痛点：App 内报告够用，但想做自己的图表必须导出；导出的是 XML，不是 Excel/CSV。
+  - 工具：Eric Wolter 的 Apple Health XML to CSV Converter，网页版、免费。
+  - 用法：把导出的 XML 导入，自动按分类导出 CSV，再自行编辑分析。
+  - 作者建议给开发者买杯咖啡支持一下。
+  【原文摘录】
+  #+begin_quote
+  这些数据苹果会给你在「健康」中做出「报告」，基本可以满足需求，但是如果你想进行更多的数据加工做成自己想要的图表，那就必须要：导出苹果「健康」的数据。
+  #+end_quote
+  #+begin_quote
+  但你会发现，导出的数据是 XML 格式，不是常见的数据 Excel/CSV。
+  #+end_quote
+  #+begin_quote
+  你只要把 XML 导入进去，会自动把所有分类的「健康」数据给你导出成 CSV 格式，然后你再进行数据的二次编辑就可以了。
+  #+end_quote
+    【我的想法】
+
+
+
+* 第一次写稿：给在 Macbook M2 上玩Xbox 蓝牙手柄的玩家们  :技巧:Mac:手柄:Steam:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/556437548
+  :作者:  王三
+  :原文:  [[file:原文/2026-10-27-第一次写稿：给在 Macbook M2 上玩Xbox 蓝牙手柄的玩家们.org][本地原文]]
+  :抓取:  2026-10-27
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-27-第一次写稿：给在 Macbook M2 上玩Xbox 蓝牙手柄的玩家们.org][打开本地归档]]
+  - 一句话概括：记录 MacBook M2 上 Steam 版《古墓丽影：崛起》不认 Xbox 蓝牙手柄的两步修复：给 Steam 开「输入监听」权限，再在 Steam 控制器设置里选已识别的手柄做自动校准；值得收是因为第二条才是关键，很多人只做了第一步。
+  【方法/论点要点】
+  - 环境：MacBook M2 + Steam《古墓丽影：崛起》+ 2020 年款 Xbox 蓝牙手柄。
+  - 症状：手柄连上但不听使唤，人物无法正常前进。
+  - 步骤一：系统偏好设置 → 安全性与隐私 → 输入监听，加入 Steam 应用。
+  - 步骤二：Steam 偏好设置 → 控制器 → 选中已识别的 Xbox Controller → 自动校准（最关键）。
+  - 作者明确强调第二步比第一步更重要。
+  【原文摘录】
+  #+begin_quote
+  试了很多种方法，按下面方式尝试解决：
+  #+end_quote
+  #+begin_quote
+  1. 系统偏好-安全-输入监听，加入steam应用
+  #+end_quote
+  #+begin_quote
+  2. 在steam的偏好设置-控制器，选择下面已经识别的xbox controller，自动校准（这个很关键）
+  #+end_quote
+  #+begin_quote
+  上面的第2点最重要。
+  #+end_quote
+    【我的想法】
+

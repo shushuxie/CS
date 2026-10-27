@@ -1,0 +1,26 @@
+#+TITLE: 怎么把苹果「健康」数据导出使用
+#+LINK: https://zhuanlan.zhihu.com/p/351547315
+#+AUTHOR: 苍浪
+#+TYPE: article
+#+DATE: 2026-10-27
+
+如果你一直使用 Apple watch，那么会记录一些你的数据。
+
+比如：心跳、运动等。
+
+这些数据苹果会给你在「健康」中做出「报告」，基本可以满足需求，但是如果你想进行更多的数据加工做成自己想要的图表，那就必须要：导出苹果「健康」的数据。
+
+https://pic3.zhimg.com/v2-2e1228a67beb9028b0487dfe688b04c2_1440w.jpg
+
+
+但你会发现，导出的数据是 XML 格式，不是常见的数据 Excel/CSV。
+那你就需要用到这个工具了：
+
+[Apple Health XML to CSV Converter](https://www.ericwolter.com/projects/apple-health-export/)
+
+这个是一个开发者做的，你只要把 XML 导入进去，会自动把所有分类的「健康」数据给你导出成 CSV 格式，然后你再进行数据的二次编辑就可以了。
+
+https://pic2.zhimg.com/v2-a4c1a481750c632f89998b645b432743_1440w.jpg
+
+
+而且是免费的，但非常建议请开发者喝杯咖啡！

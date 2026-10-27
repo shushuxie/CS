@@ -1,0 +1,15 @@
+#+TITLE: 第一次写稿：给在 Macbook M2 上玩Xbox 蓝牙手柄的玩家们
+#+LINK: https://zhuanlan.zhihu.com/p/556437548
+#+AUTHOR: 王三
+#+TYPE: article
+#+DATE: 2026-10-27
+
+macbook M2 上玩steam的游戏 tomb raider, rise 版本，使用的是2020年出厂的xbox 蓝牙手柄。刚开始始终不听使唤，人物无法正常前进。
+
+试了很多种方法，按下面方式尝试解决：
+
+1. 系统偏好-安全-输入监听，加入steam应用
+2. 在steam的偏好设置-控制器，选择下面已经识别的xbox controller，自动校准（这个很关键）
+
+
+上面的第2点最重要。

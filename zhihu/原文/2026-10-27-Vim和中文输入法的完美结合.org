@@ -1,0 +1,25 @@
+#+TITLE: Vim和中文输入法的完美结合
+#+LINK: https://zhuanlan.zhihu.com/p/108681375
+#+AUTHOR: 陈斌
+#+TYPE: article
+#+DATE: 2026-10-27
+
+这个问题真的是老掉牙了。现在还反复地被很多人讨论来讨论去。
+
+实际上我2016年就提供了一个完美的解决方案。分析见，
+
+[https://blog.binchen.org/posts/how-to-input-non-english-character-in-evil-mode-efficiently.html](https://blog.binchen.org/posts/how-to-input-non-english-character-in-evil-mode-efficiently.html)
+
+说白了就三句话，
+
+- 只可能在insert state里输入中文，所以在normal state里切换至输入法时应该自动进入insert state
+- 在insert state里关闭输入法的目的可能是输入英文，所以应该还是呆在insert state
+- 在insert state按ESC键意味着切换回normal state，这时应自动关闭输入法
+
+具体实现意味着要精确控制各个state和输入法，那么只有用Emacs的Vim模拟器Evil和Emacs Lisp写的中文输入法(我用 [tumashu/pyim](https://github.com/tumashu/pyim) )才能很容易地实现以上策略。
+
+其他编辑器或IDE也可以使用同样的算法，难点无非就是编辑器切换state时要给输入法发个信号，输入法切换时要给编辑器或者IDE也发个信号。
+
+这也是个例证，证明我对于编辑器的文本文件操作术已完全掌握了。
+
+想学习我的文本文件操作术，可以访问 [如何提高编程速度 - Emacs高手教授轻松精通所有编辑器和IDE的秘诀](https://edu.51cto.com/sd/de7e7)
