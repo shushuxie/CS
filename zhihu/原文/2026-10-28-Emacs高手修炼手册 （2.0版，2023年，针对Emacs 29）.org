@@ -1,0 +1,436 @@
+#+TITLE: Emacs高手修炼手册 （2.0版，2023年，针对Emacs 29）
+#+LINK: https://zhuanlan.zhihu.com/p/655059463
+#+AUTHOR: 知乎用户9VQGtr
+#+TYPE: article
+#+DATE: 2026-10-28
+
+** Emacs高手修炼手册 （2.0版，2023年，针对Emacs 29）
+
+*** 写在前面的话
+
+《Emacs高手修炼手册》这个标题已经用了好几年了，但感觉自己始终没有达到自己心目中的〔高手〕的境界。所以我还是在〔修炼〕，用这个标题继续写一些自己的实践——当然更多的，还是配置。
+
+其实当我写2023这个2.0版本的时候，我一直在想，如何把这个系列写的跟之前的不一样。如果还是之前的样子，那么其实没有必要写新的一篇，读者也没有必要读新的一篇——我们都不喜欢水文。
+
+于是我回头看了自己这一年的使用上的变化，自己对比了自己在配置上的变化，我总结出了自己这篇文章需要有的特点：
+
+- 简洁，我的配置越来越简洁，代码行越来越少，但功能却不因此而变的简单；
+- 实用，Emacs终究还是一个工具，一个编辑器，一个可以让自己的想法得到验证的工具；
+- 速度，过去的一年，我有大量的时间是在使用Windows操作系统，所以速度对我来说，毫无疑问是一个挑战与要追求的点；
+
+虽然我在上面提到的这些特点，都是非常优美的词汇，但不可否认的是，我的这篇文章也有一些问题：
+
+- 不兼容旧版本，我的配置只兼容最新的版本，我希望自己（以及大家）能够尊重他们最新的努力，以及为最新版本付出更多的测试与反馈；
+- 追求新特性，这一点算优点也算缺点。比如29一出来，我就热烈的拥抱了treesit特性。
+
+我知道这样的一些特点，一定会有人喜欢，也一定会有人讨厌。但没关系，我们重在交流思路。如果你准备好了跟我一同前行，那么请升级你的Emacs到29版本，我们出发了。
+
+*** 关于安装
+
+由于这是2.0版本，我们不在安装部分下大篇幅。你直接在[官网](https://link.zhihu.com/?target=https%3A//gnu.org/software/emacs)下载你对应的操作系统的版本安装即可；或者使用你对应操作系统的包管理器（如apt，dnf，pacman，scoop，winget，homebrew等）进行安装即可。
+
+*** 先说说`early-init.el`
+
+这个文件是被非常早的加载的一个文件，所以我们可以适当的用来优化一些启动方面的参数。例如：
+
+#+begin_src text
+(setq gc-cons-threshold most-positive-fixnum)
+(add-hook 'after-init-hook #'(lambda () (setq gc-cons-threshold 800000)))
+#+end_src
+
+这样的代码已经被证实可以非常好的优化启动速度。
+
+同时你也可以把一些界面禁用的操作放到这里来，例如：
+
+#+begin_src text
+(push '(scroll-bar-mode . nil) default-frame-alist)
+(push '(tool-bar-mode . nil) default-frame-alist)
+
+(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+#+end_src
+
+你甚至还可以放一些其他的内容。看你喜欢。一般来说，我建议你也别放太多，因为从代码的管理上来看，我们把不影响启动的一些配置，还是放到~init.el~中更合适。
+
+#+begin_quote
+以下所有代码都会在`init.el`中进行配置，因为代码行总共约300行（含注释）而已，所以我们不再拆分不同的el文件，因为那样也会在读取文件上可能损耗一些（尽管微不足道）的时间。
+#+end_quote
+
+*** 几个自定义的变量
+
+由于后面的配置中，我们会需要使用到一些判断或者允许其他人在~custom.el~或者其他位置自定义的一些功能，所以我们提前定义几个变量。定义变量的基本格式是：
+
+#+begin_src text
+(defvar VAR-NAME DEFAULT-VALUE DOCUMENTS)
+#+end_src
+
+所以我们定义两个操作系统相关的：
+
+#+begin_src text
+(defvar cabins--os-win (memq system-type '(ms-dos windows-nt cygwin)))
+(defvar cabins--os-mac (eq system-type 'darwin))
+#+end_src
+
+由于名字取的〔非常好〕，所以我省略了注释。
+
+#+begin_quote
+这里没有定义Linux的原因，不是因为我不喜欢Linux（实际上，我是Linux的忠实粉丝，我甚至在B站有个系列叫《Linux体验周刊》），而是Linux的兼容性非常好，不需要特殊的设置，所以不需要额外的逻辑判断。
+#+end_quote
+
+此外我还定义了几个字体集变量：
+
+#+begin_src text
+(defvar cabins--fonts-default '("Sometype Mono" "Cascadia Code PL" "Menlo" "Consolas"))
+(defvar cabins--fonts-unicode '("Segoe UI Symbol" "Symbola" "Symbol"))
+(defvar cabins--fonts-emoji '("Noto Color Emoji" "Apple Color Emoji"))
+(defvar cabins--fonts-cjk '("KaiTi" "STKaiTi" "WenQuanYi Micro Hei"))
+#+end_src
+
+这里我解释一下，为什么我使用~楷体~作为默认的中文字体，因为我发现它通过我后面的配置可以非常完美的与英文字体进行等宽显示。至于英文字体，我最近迷上了~Sometype Mono~这款圆润（而毫无特色）的字体。如果你有自己的喜好，可以修改这几个变量，也可以在其他的位置通过~setq~函数来改变这几个变量的值。
+
+*** 字体配置
+
+一般来说，这样的配置应该最后讲，但，我偏偏要先说。因为这个地方困扰了太多的人了。为了实现从字体集中选择出最合适的字体（就像CSS中font-family那样），我们先来写一个函数：
+
+#+begin_src text
+(require 'subr-x) ;; cl-loop来自这里
+
+(defun cabins--set-font-common (character font-list &optional scale-factor)
+  "Set fonts for multi CHARACTER from FONT-LIST and modify style with SCALE-FACTOR."
+
+  (cl-loop for font in font-list
+       when (find-font (font-spec :name font))
+       return (if (not character)
+              (set-face-attribute 'default nil :family font)
+            (when scale-factor (setq face-font-rescale-alist `((,font . ,scale-factor))))
+            (set-fontset-font t character (font-spec :family font) nil 'prepend))))
+#+end_src
+
+这个函数看着很长，其实就是针对字符集来选择一个字体（如果这个字体已经安装，通过~find-font~查找），然后进行设置。~scale-factor~主要是针对中文来进行缩放的。
+
+所以接下来，我们就可以设置我们的字体了：
+
+#+begin_src text
+(defun cabins--font-setup (&optional default-fonts unicode-fonts emoji-fonts cjk-fonts)
+  "Font setup, with optional DEFAULT-FONTS, UNICODE-FONTS, EMOJI-FONTS, CJK-FONTS."
+
+  (interactive)
+  (when (display-graphic-p)
+    (cabins--set-font-common nil (if default-fonts default-fonts cabins--fonts-default))
+    (cabins--set-font-common 'unicode (if unicode-fonts unicode-fonts cabins--fonts-unicode))
+    (cabins--set-font-common 'emoji (if emoji-fonts emoji-fonts cabins--fonts-emoji))
+    (dolist (charset '(kana han bopomofo cjk-misc))
+      (cabins--set-font-common charset (if cjk-fonts cjk-fonts cabins--fonts-cjk) 1.2))))
+#+end_src
+
+这段代码应该比较容易理解，~interactive~让这个函数可以通过~M-x~来调用，那一堆~optional~的参数实现了你可以在代码中调用这个函数来设置自己的字体集。
+
+经过了上面这两个函数的配置（第一个函数是为了给第二个内部调用），我们的字体基本没有什么恼人的问题了。
+
+*** 主题
+
+说完了字体，我们干脆一起设置一个漂亮的主题。先上代码：
+
+#+begin_src text
+(defun cabins--load-theme()
+  "Load theme, Auto change color scheme according to system dark mode on Windows."
+
+  (interactive)
+  (when (display-graphic-p)
+    ;; choose theme according to system dark/light mode
+    (let* ((cmd (cond
+         (cabins--os-win
+          (concat
+           "powershell "
+           "(Get-ItemProperty -Path "
+           "HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize "
+           "-Name AppsUseLightTheme).AppsUseLightTheme"))
+         (cabins--os-mac
+          "defaults read -g AppleInterfaceStyle")
+         ((eq system-type 'gnu/linux)
+          "gsettings get org.gnome.desktop.interface color-scheme")))
+       (mode (string-trim (shell-command-to-string cmd))))
+      (if (member mode '("0" "Dark" "'prefer-dark'"))
+      (load-theme 'modus-vivendi t)
+    (load-theme 'modus-operandi t)))))
+#+end_src
+
+这个函数可以判断操作系统的暗黑模式或者明亮模式（其中Linux那里只判断了GNOME桌面的，其他桌面的用户可自形容补充），然后根据系统的主题色调来设置Emacs的亮色主题（modus-operandi）还是暗色主题(modus-vivendi)。
+
+针对~daemon~用户以及希望能够改变了亮暗色就立即生效的用户，我们可以添加如下的代码，使体验更好：
+
+#+begin_src text
+(defun cabins--reset-ui()
+  "Try to reset ui options."
+
+  (interactive)
+  (cabins--font-setup)
+  (cabins--load-theme))
+
+(add-hook 'after-init-hook #'cabins--reset-ui)
+;; 下面这条慎用，部分系统上可能有严重的性能问题
+;; (add-hook 'window-configuration-change-hook #'cabins--load-theme)
+(when (daemonp)
+  (add-hook 'after-make-frame-functions
+        (lambda (frame) (with-selected-frame frame
+                  (cabins--reset-ui)))))
+#+end_src
+
+*** package以及use-package
+
+好消息！Emacs 29已经将~use-package~这个大杀器内置（built-in）了。所以我们不需要在额外的安装它，而可以放心的直接使用它。那还说什么？先用它来配置一下~package~这个内置包管理器试试。
+
+#+begin_src text
+(use-package package
+  :config
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+  (unless (bound-and-true-p package--initialized)
+    (package-initialize)))
+#+end_src
+
+如果你对~use-package~有更多的选项配置，其实也可以一起写在这里。
+
+*** 关于内置包
+
+我一定要给你们推荐一些内置包，这些包可以极大程度地减少你对第三方包的依赖。
+
+- global-auto-revert-mode(since v25.1) 可以让你的文件内容（因为其他原因改变了的时候）自动加载到最新的内容
+- auto-save-visited-mode（since v26.1) 可以自动保存，有这个内置包，其他的自动保存的包都扔掉吧
+- delete-selection-mode(since v20.1) 这个在编辑（删除文字）的时候有用
+- fido-vertical-mode(since v28.1) 可以让你的minibuffer变成垂直的，非常推荐
+- flyspell-mode(since v20.3) 拼写检查，依赖系统安装~aspell~程序，Windows系统慎用，疑似有性能问题〔笔者个人体验结论，非大众普遍观点〕
+- global-hl-line-mode(since v21.1) 高亮当前行，这个建议图形化（display-graphic-p)情况下使用，感觉在命令行下使用的时候，有的时候体验不好，看个人喜好
+- recentf-mode(since v22.1)，其中v29添加了~recentf-open~函数，可以打开近期文件。如果你不喜欢~recentf-open~的行为，可以试试~recentf-open-files~
+- repeat-mode(since v28.1) 这个命令我不知道怎么描述，比如你想不停的撤销的时候，你就可以只按一次~C-x u~而之后就只按~u~即可，能支持很多类似的命令
+
+*** 几个够用的第三方包
+
+*** company
+
+第一个当然是自动补全，这对于我们程序员来说，是不能缺少的东西。
+
+#+begin_src text
+(use-package company :ensure t :defer t
+  :hook (after-init . global-company-mode))
+#+end_src
+
+如果你只喜欢在编程的时候启用，可以将~:hook~一行改成~:hook (prog-mode . company-mode)~。默认输入第三个字母的时候开始出现补全选项。我最早会改出1个，但后来发现，完全没有必要，默认3个就很好，毕竟~int~~def~这样的关键字，输入比补全更快。
+
+*** exec-path-from-shell
+
+这个包你还真必须得安装，它可以帮助读取你的环境变量。不然很多的时候，我们会出现找不到我们〔明明就在那里〕的一些命令。
+
+#+begin_src text
+;; Settings for exec-path-from-shell
+;; fix the PATH environment variable issue
+(use-package exec-path-from-shell
+  :ensure t
+  :when (or (memq window-system '(mac ns x))
+        (unless cabins--os-win
+          (daemonp)))
+  :init (exec-path-from-shell-initialize))
+#+end_src
+
+*** format-all
+
+我不知道从什么时候开始，依赖上了格式化工具。我想可能是学习Go与Rust以来，它们提供的gofmt以及rustfmt让我感觉代码格式化是一种必要的东西。所以我就希望，我所有的代码都能够格式化。然后format-all这个工具包就走入了我的必备清单。
+
+#+begin_src text
+;; great for programmers
+(use-package format-all :ensure t :defer t
+  ;; 开启保存时自动格式化
+  :hook (prog-mode . format-all-mode)
+  ;; 绑定一个手动格式化的快捷键
+  :bind ("C-c f" . #'format-all-region-or-buffer))
+#+end_src
+
+*** gnu-elpa-keyring-update
+
+这个是个可选包，只是我还是希望能够更新下校验的keyring，所以就保留了。
+
+#+begin_src text
+(use-package gnu-elpa-keyring-update :ensure t :defer t)
+#+end_src
+
+*** iedit
+
+这个包我一直没怎么用，直到有一天我在重构代码的时候。它可以让你快速的一次性修改buffer中出现的变量名称。（使用的时候要小心）
+
+#+begin_src text
+(use-package iedit :ensure t :defer t)
+#+end_src
+
+*** move-dup
+
+我承认，我需要这个包，完全是因为被VSCode以及JetBrains系列惯坏了。我需要把代码行移上去，或者移下来的。但其实吧，内置的~transpose-line~也能完成类似的功能，只是我感觉有的时候跟我想的可能有差距。我需要停下来想一下。所以就保留了这个包。
+
+#+begin_src text
+(use-package move-dup :ensure t :defer t
+  :hook (after-init . global-move-dup-mode))
+#+end_src
+
+*** which-key
+
+啊，我一直想如果这个能作为一个内置包就好了。虽然很多的时候我是在使用~M-x~，但，这个东西可以提示接下来可能用到的快捷键，会让我的安全感爆棚。
+
+#+begin_src text
+(use-package which-key :ensure t :defer t
+  :hook (after-init . which-key-mode))
+#+end_src
+
+我一共就使用了这7个第三方包，这也是我的配置速度运行快的一个重要的原因。其他的第三方包对我来说没有吸引力主要是因为：
+
+- 可能拖慢速度（毕竟我过去一年有很多的时间在使用Windows这样的操作系统）
+- 内置包可替代，比如Magit，啊，我已经深深爱上了内置的VC
+- 想不出什么第三方包对我来说是必不可少的了
+
+*** 操作系统相关设置
+
+如果你有我这样的使用Windows系统的经历，你就不应该错过这个小的篇章。
+
+#+begin_src text
+;;Configs for OS
+;; Special configs for MS-Windows
+(when (and cabins--os-win
+       (boundp 'w32-get-true-file-attributes))
+  (setq w32-get-true-file-attributes nil
+    w32-pipe-read-delay 0
+    w32-pipe-buffer-size (* 64 1024)))
+
+;; Special configs for macOS
+(when cabins--os-mac
+  (setq mac-command-modifier 'meta
+    mac-option-modifier 'super
+    ns-use-native-fullscreen t))
+
+;; solve the Chinese paste issue
+;; let Emacs auto-guess the selection coding according to the Windows/system settings
+(unless cabins--os-win
+  (set-selection-coding-system 'utf-8))
+#+end_src
+
+主要是设置文件、编码以及按键映射。
+
+*** 编程
+
+终于到了这个我最喜欢的环节了。职业病，没有办法。得益于Emacs 29对~eglot~的内置，我们在这里可以减少了一个第三方包的配置，同时减少了很多的配置代码。但在配置eglot之前，我们先启用几个内置包，来增强我们的编程模式。
+
+#+begin_src text
+(add-hook 'prog-mode-hook 'column-number-mode) ;在ModeLine显示列号
+(add-hook 'prog-mode-hook 'display-line-numbers-mode) ;显示行号
+(add-hook 'prog-mode-hook 'electric-pair-mode) ;括号的配对
+(add-hook 'prog-mode-hook 'flymake-mode) ;错误的提示
+(add-hook 'prog-mode-hook 'hs-minor-mode) ;代码的折叠
+(add-hook 'prog-mode-hook 'prettify-symbols-mode) ;会将lambda等符号美化为λ
+#+end_src
+
+顺便，我们听从flymake的官方建议，给错误跳转绑定两个快捷键（我天天在用）：
+
+#+begin_src text
+(global-set-key (kbd "M-n") #'flymake-goto-next-error)
+(global-set-key (kbd "M-p") #'flymake-goto-prev-error)
+#+end_src
+
+*** treesit
+
+从v29开始，内置了treesit的支持。它是一个解析器生成工具和增量解析库。 它可以为源文件构建一个具体的语法树， 并在源文件被编辑时高效地更新语法树。 这种技术相对于 Emacs 以前基于正则表达式来实现的语法高亮功能， 性能上要快很多， 而且在复杂表达式场景下的语法高亮准确度要高很多。
+
+同时，v29也内置了许多的~-ts-mode~，比如go-ts-mode，rust-ts-mode，typescripe-ts-mode等等。让我们（配合eglot)就不再需要go-mode，rust-mode等这些第三方包了。实在爽快！
+
+#+begin_src text
+(use-package treesit
+  :when (and (fboundp 'treesit-available-p)
+         (treesit-available-p))
+  :config (setq treesit-font-lock-level 4)
+  :init
+  (setq treesit-language-source-alist
+    '((bash       . ("https://github.com/tree-sitter/tree-sitter-bash"))
+      (c          . ("https://github.com/tree-sitter/tree-sitter-c"))
+      (cpp        . ("https://github.com/tree-sitter/tree-sitter-cpp"))
+      (css        . ("https://github.com/tree-sitter/tree-sitter-css"))
+      (cmake      . ("https://github.com/uyha/tree-sitter-cmake"))
+      (csharp     . ("https://github.com/tree-sitter/tree-sitter-c-sharp.git"))
+      (dockerfile . ("https://github.com/camdencheek/tree-sitter-dockerfile"))
+      (elisp      . ("https://github.com/Wilfred/tree-sitter-elisp"))
+      (go         . ("https://github.com/tree-sitter/tree-sitter-go"))
+      (gomod      . ("https://github.com/camdencheek/tree-sitter-go-mod.git"))
+      (html       . ("https://github.com/tree-sitter/tree-sitter-html"))
+      (java       . ("https://github.com/tree-sitter/tree-sitter-java.git"))
+      (javascript . ("https://github.com/tree-sitter/tree-sitter-javascript"))
+      (json       . ("https://github.com/tree-sitter/tree-sitter-json"))
+      (lua        . ("https://github.com/Azganoth/tree-sitter-lua"))
+      (make       . ("https://github.com/alemuller/tree-sitter-make"))
+      (markdown   . ("https://github.com/MDeiml/tree-sitter-markdown" nil "tree-sitter-markdown/src"))
+      (ocaml      . ("https://github.com/tree-sitter/tree-sitter-ocaml" nil "ocaml/src"))
+      (org        . ("https://github.com/milisims/tree-sitter-org"))
+      (python     . ("https://github.com/tree-sitter/tree-sitter-python"))
+      (php        . ("https://github.com/tree-sitter/tree-sitter-php"))
+      (typescript . ("https://github.com/tree-sitter/tree-sitter-typescript" nil "typescript/src"))
+      (tsx        . ("https://github.com/tree-sitter/tree-sitter-typescript" nil "tsx/src"))
+      (ruby       . ("https://github.com/tree-sitter/tree-sitter-ruby"))
+      (rust       . ("https://github.com/tree-sitter/tree-sitter-rust"))
+      (sql        . ("https://github.com/m-novikov/tree-sitter-sql"))
+      (vue        . ("https://github.com/merico-dev/tree-sitter-vue"))
+      (yaml       . ("https://github.com/ikatyang/tree-sitter-yaml"))
+      (toml       . ("https://github.com/tree-sitter/tree-sitter-toml"))
+      (zig        . ("https://github.com/GrayJack/tree-sitter-zig"))))
+  (add-to-list 'major-mode-remap-alist '(sh-mode         . bash-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c-mode          . c-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c++-mode        . c++-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c-or-c++-mode   . c-or-c++-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(css-mode        . css-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(js-mode         . js-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(java-mode       . java-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(js-json-mode    . json-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(makefile-mode   . cmake-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(python-mode     . python-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(ruby-mode       . ruby-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(conf-toml-mode  . toml-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\(?:Dockerfile\\(?:\\..*\\)?\\|\\.[Dd]ockerfile\\)\\'" . dockerfile-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
+  (add-to-list 'auto-mode-alist '("/go\\.mod\\'" . go-mod-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.y[a]?ml\\'" . yaml-ts-mode)))
+#+end_src
+
+其实~treesit-language-source-alist~里面不需要配置这么多，但这样显得标准而且很专业的样子，所以我就都保留了。而且说不准，谁会用到比如zig这样的语言。
+
+*** eglot
+
+内置了之后，最大的好处就是〔足够少的配置，开箱即用〕，看，代码已经这么少了：
+
+#+begin_src text
+(use-package eglot
+  :hook (prog-mode . eglot-ensure)
+  :bind ("C-c e f" . eglot-format))
+#+end_src
+
+bind那一行是绑定了一个格式化的快捷键，如果你还记得我前面提到的~format-all~的话，这个快捷键就不是那么必须了。
+
+*** 可选第三方包
+
+如果你像我一样有些特殊的需求的话，比如显示protobuf或者quickrun等，你可以在这里配置（也可以在~custom.el~中配置）。
+
+#+begin_src text
+(use-package protobuf-mode :ensure t :defer t)
+(use-package quickrun :ensure t :defer t)
+(use-package restclient :ensure t :defer t
+  :mode (("\\.http\\'" . restclient-mode)))
+#+end_src
+
+*** custom.el
+
+前面有提到这个自定义的配置，这里的配置会因人/平台而异。所以这个文件不建议添加到git管理中。要想加载这个文件，我们需要在我们的~init.el~文件中写入这样的加载代码：
+
+#+begin_src text
+(setq custom-file (locate-user-emacs-file "custom.el"))
+(when (file-exists-p custom-file)
+  (load custom-file))
+#+end_src
+
+*** 结束语
+
+这就是我全部的配置了。可能随着时间的变化，我会再有一些不一样的想法。如果你想看到我最新的想法，可以star我的配置：[https://github.com/cabins/emacs.d](https://link.zhihu.com/?target=https%3A//github.com/cabins/emacs.d)
+
+另外，文中提到的一些教程/课程（全都是免费的），可以关注我的B站观看（ID：第253页图灵笔记），或我的掘金频道阅读。

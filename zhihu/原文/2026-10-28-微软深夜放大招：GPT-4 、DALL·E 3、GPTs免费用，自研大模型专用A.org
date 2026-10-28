@@ -1,0 +1,120 @@
+#+TITLE: 微软深夜放大招：GPT-4 、DALL·E 3、GPTs免费用，自研大模型专用AI芯片
+#+LINK: https://zhuanlan.zhihu.com/p/667177632
+#+AUTHOR: 机器之心
+#+TYPE: article
+#+DATE: 2026-10-28
+
+机器之心报道。
+
+今天凌晨，微软公司召开最新一场 Ignite 大会，CEO 萨提亚・纳德拉在大会上介绍了 100 多项产品和技术的发布与更新，涉及范围非常广泛，包括应用、生产力以及安全性等多个方面。
+
+https://pic4.zhimg.com/v2-0336707d4e87ca160ca4b0a02435a567_r.jpg
+
+
+Microsoft Ignite 是该公司为开发人员和 IT 专业人士举办的年度会议，而生成式 AI 的一切无疑是本年度的最大热点。不出意外，在本次大会上，我们看到了来自 Bing Chat、专用 AI 芯片、Windows、Microsoft 365 和 Azure 等业务的最新动态。
+
+大会现场还请来了英伟达创始人黄仁勋，之后微软会将 AMD 、英伟达最新的处理器纳入 Azure 云服务。
+
+https://picx.zhimg.com/v2-501b7b2b576fbd1563c9d979085d396d_r.jpg
+
+
+大会有哪些值得关注的亮点，我们继续往下看。
+
+*Bing Chat 更名为「Copilot」GPT-4 、DALL・E 3、GPTs 免费用*
+
+大会上，微软宣布了将 Bing Chat 和 Bing Chat Enterprise 全部更名为「Copilot」。
+
+品牌重塑的动作意味着 Copilot 正在变成更独立的一种体验，用户无需先导航到 Bing 即可访问。Copilot 的免费版本仍然可以在 Bing 和 Windows 中访问，但也会拥有专用域名「[http://copilot.microsoft.com](https://link.zhihu.com/?target=http%3A//copilot.microsoft.com)」。
+
+https://pic4.zhimg.com/v2-98171a0e3c4c1f905c1cf411608d6bab_r.jpg
+
+
+在此之前，在微软内部有十几种产品共享「Copilot」这一品牌，一度让人感到迷茫。该品牌标识始于 2021 年的 GitHub Copilot，今年 微软又推出 Dynamics 365 Copilot、Windows 中的 Copilot、Microsoft Security Copilot 和 Microsoft 365 Copilot，似乎每一项业务都有自己的「Copilot」。
+
+至于为什么要在这个 Copilot 矩阵中再加两名成员，微软解释说是希望为消费者和企业客户创造统一的 Copilot 体验。
+
+所以现在，Bing Chat 变成了微软的第六个「Copilot」，但也可以理解为最通用的一个 Copilot。
+
+今后，Bing 将是为其提供支持的一部分。此外，Copilot 基于最新的 OpenAI 模型，包括 GPT-4 和 DALL・E 3，在统一的体验中提供文本和图像生成功能。
+
+https://pic4.zhimg.com/v2-86c8060d2cad4d1fff29234cb38329a3_r.jpg
+
+
+但也有可能是，Bing Chat 并没有为 Bing 本身带来太多收益，因此微软希望将这一产品从搜索引擎中剥离出来。
+
+此时剥离是一件有趣的事情，因为微软曾经投入了大量精力在自家的搜索引擎中推出 AI 产品，并将其视为从谷歌手中抢夺市场份额的一种方式。就比如今年初，微软 CEO 纳德拉曾称「谷歌是搜索领域 800 磅重的大猩猩」，而微软会让它「跳舞」。
+
+但后来的谷歌并没有像微软那样急于将生成式 AI 产品整合到其搜索结果中。从目前来看，这种「不变」没有带来什么坏影响：根据 StatCounter 的数据，在 Bing Chat 推出近 10 个月后，Google 搜索引擎的市场份额仍然超过 91% 。
+
+微软特别提到，从 12 月 1 日起，使用 Microsoft Entra ID 登录时，在 Bing、Edge 和 Windows 中使用 Copilot 的客户将享受商业数据保护功能。Copilot 不会保存用户使用过程中的 prompt 和回复，微软无法直接访问，也不会将其用于训练底层模型。
+
+此外，微软还推出了另外一些「Copilot」：Microsoft Copilot Studio、Copilot for Azure、Copilot for Service 和 Copilot in Dynamics 365 Guides。
+
+其中，Microsoft Copilot Studio 这一产品对标的是上周 OpenAI 推出的 GPTs，这个新平台提供将微软所发布 AI 应用与第三方数据连接起来的工具，同样可以让企业创建自定义 Copilot 或集成自定义 ChatGPT AI 聊天机器人。该产品已向现有 Copilot for Microsoft 365 订阅者提供公测版本。
+
+借助基于 Web 的 Copilot Studio，企业可以让 Copilot for Microsoft 365 和 Copilot for Service 访问其 CRM、企业资源管理系统和其他数据库中的数据，使用预构建的连接器或它自己构建的连接器进行数据存储。
+
+https://pic3.zhimg.com/v2-ebff2e7e35dfa63c928db72e9396ad9c_r.jpg
+
+
+「作为 OpenAI 和 Microsoft 战略合作伙伴关系的一部分，我们可以轻松地将 OpenAI 的服务无缝集成到 Microsoft 现有的生态系统中，」微软副总裁 Jared Spataro 说道。
+
+*首款 5nm AI 芯片面向 LLM 训练和推理*
+
+在将 Bing Chat 更名 Copilot 之外，微软备受观众的自研芯片也终于露出庐山真面目了。
+
+微软发布了两款为其云基础设施设计的高端定制芯片，分别是 Azure Maia 100 AI 芯片和 Cobalt 100 CPU。这两款芯片均由微软内部构建，并面向整个云服务器堆栈进行了深度改造以优化性能、功耗和成本，预计将于 2024 年推出。
+
+https://pic3.zhimg.com/v2-93b8bf1e74d6df09ad41e7fff0dfbec4_r.jpg
+
+
+先看 Maia 100，这是微软首个定制的内部 AI 加速器系列的首款产品，以一颗明亮的蓝星命名，专为运行和优化云 AI 工作负载而设计，例如 GPT 3.5 Turbo 和 GPT-4 等大型语言模型的训练和推理。
+
+Maia 100 将为微软 Azure 上最大的 AI 工作负载提供支持，包括为 OpenAI 所有工作负载提供支持的部分。微软表示其在 Maia 的设计和测试阶段一直与 OpenAI 展开合作。
+
+https://pic1.zhimg.com/v2-d2221d23ca6fc1e49e7ad5dcbfa91320_r.jpg
+
+
+在具体规格上，Maia 100 采用台积电 5nm 制程工艺，拥有 1050 亿个晶体管，只比 AMD MI300 AI GPU 芯片的 1530 亿晶体管少了约 30％。Maia 100 首次支持实现 8-bit 以下的数据类型（MX 数据类型），以便共同设计软硬件。这有助于支持更快的模型训练和推理时间。
+
+https://picx.zhimg.com/v2-f96a30dd2db4f660df9d1bff1543727d_r.jpg
+*
+
+**纳德拉展示 Maia 100 的服务器机架和冷却系统*
+
+Cobalt 100 以蓝色颜料命名，是一款 128 核芯片，基于 Arm Neoverse CSS 设计构建，为微软定制。Cobalt 100 旨在为微软 Azure 上的通用云服务提供支持。关于这款芯片，微软不仅保证它具有高性能，还特别注意电源管理。同时在芯片设计时有意控制每个核心以及每个虚拟机的性能和功耗。
+
+微软目前正在 Microsoft Teams 和 SQL Server 等工作负载上测试 Cobalt 100，并计划明年为客户提供虚拟机以处理各种工作负载。与微软 Azure 目前使用的 Arm 服务器相比，Cobalt 100 有一些明显的性能提升。
+
+微软初步测试表明，Cobalt 100 的性能比目前使用商用 Arm 服务器的数据中心的性能提升了 40%。不过微软没有透露完整的系统规格或基准测试。
+
+https://picx.zhimg.com/v2-37a21074241fba32156138f4ab3ac355_r.jpg
+*
+
+**用于测试微软 Azure Cobalt 片上系统的探针台*
+
+不过，微软也表示，Maia 100 和 Cobalt 100 两者都将优先满足自用，支持自己的 Azure 云服务。
+
+*Phi-2 模型发布在 Azure AI 服务中可以使用*
+
+微软宣布新的 Phi-2 模型将完全开源，该模型具有 27 亿参数，与 Phi-1-5 相比，其推理能力和安全措施有了显着提高，但与业内其他 Transformer 相比，它仍然相对较小。
+
+https://picx.zhimg.com/v2-8b18d0869560fd1c09e8663c0b19765b_r.jpg
+
+
+Phi-2 更加稳健，数学推理能力提高了 50%，不仅如此，在其他任务上的推理能力提高也非常大，微调起来很方便。现在可以在 Azure AI 服务中使用。
+
+https://pic4.zhimg.com/v2-5438873461d659b7c6e71fcbf49a6083_r.jpg
+
+
+今年 6 月，微软在一篇题为《Textbooks Are All You Need》的论文中，用规模仅为 7B token 的「教科书质量」数据训练了一个 1.3B 参数的模型 ——phi-1。尽管在数据集和模型大小方面比竞品模型小几个数量级，但 phi-1 在 HumanEval 的 pass@1 上达到了 50.6% 的准确率，在 MBPP 上达到了 55.5%。phi-1 证明高质量的「小数据」能够让模型具备良好的性能。
+
+随后，今年 9 月，微软又发表了论文《Textbooks Are All You Need II: phi-1.5 technical report》，对高质量「小数据」的潜力做了进一步研究。文中提出了 Phi-1.5，参数 13 亿，适用于 QA 问答、代码等场景。
+
+直到今天，Phi-2 正式发布，可以看出微软对模型的更新迭代速度还是非常快的。
+
+前面我们已经提到 Phi-2 在 Azure AI 服务中可用。不仅如此，OpenAI 的语音识别模型 Whisper-Large-V3 ；Salesforce 的能够执行各种多模态任务的 BLIP 系列模型；OpenAI 的 CLIP 系列模型；Meta 的 Code Llama、SAM  ；阿布扎比技术创新研究所（TII）开发的大型开源语言模型 Falcon；Stability AI 的 Stable Diffusion 等新模型都已经被收录进来。
+
+*参考链接：[https://www.theverge.com/2023/11/15/23960345/microsoft-cpu-gpu-ai-chips-azure-maia-cobalt-specifications-cloud-infrastructure](https://link.zhihu.com/?target=https%3A//www.theverge.com/2023/11/15/23960345/microsoft-cpu-gpu-ai-chips-azure-maia-cobalt-specifications-cloud-infrastructure)*
+
+*[https://www.youtube.com/watch?v=wBdS3omKlqU](https://link.zhihu.com/?target=https%3A//www.youtube.com/watch%3Fv%3DwBdS3omKlqU)*

@@ -1,0 +1,53 @@
+#+TITLE: Emacs之org-roam配置
+#+LINK: https://zhuanlan.zhihu.com/p/432223086
+#+AUTHOR: Jousimies
+#+TYPE: article
+#+DATE: 2026-10-28
+
+** Update: 2022-12-03
+
+附上我的配置文件地址：
+
+[https://github.com/Jousimies/.emacs.d/blob/master/lisp/init-roam.el](https://link.zhihu.com/?target=https%3A//github.com/Jousimies/.emacs.d/blob/master/lisp/init-roam.el)## 简介
+
+这部份是关于org-roam的配置。org-roam是基于Emacs中org-mode 实现的Zettelkasten笔记的 package 。
+
+Zettelkasten 是目前比较火的记录笔记的方法，Roam-research 、Obsidian 、Remnote 、 logseq 等等都是类似的软体实现。
+
+在此之前的笔记软件有 onenote 、印象笔记、 notion 等。
+
+所列举的几个软件，我都有尝试过。简单介绍下这几个软件的使用感受，纯个人体验。
+
+Zettelkasten 笔记法就不细说了，想知道可以自己看下《How to take smart notes》这本书。但是卡片式笔记法有没有用，或者怎么用，就各人各想法了，取决于个人怎么看待笔记这个东西。
+
+这些笔记中Roam research 、Remnote 都是收费的。Roam Research 只能付费用户才能使用。Roam Research 和 notion 的服务器都是在国外，你的笔记内容你得上传到他们的服务器中，个人不喜欢这种体验，自己的东西当然要放在自己的手中才可靠。 notion 使用需要你能科学上网。Remnote 有免费版本可用，但是高级功能是收费用户才能使用。Roam Research 、 notion 、Remnote 的功能都很强大，具体的使用请善用搜索引擎。Logseq 的颜值很高，目前处于密集开发中，开发者有承诺前端功能不收费，可以放心使用。
+
+我个人的使用体验是 Emacs 在纯文本编辑这一块是很强大的，通过安装不同的包，可以实现多个软件的功能。比如进行时间管理，任务管理，财务管理，文献管理，笔记管理。笔记除了记，还需要实现笔记的检索，可视化等，这些在 emacs 中都能实现。
+
+此处给出我关于进行笔记管理，文献管理的配置，需要用的软件包有org-roam,org-roam-bibtex,org-roam-ui,org-roam-timestamps,org-transclusion. 这些包都托管在的 github 上，也可以通过 melpa 安装。
+
+Emacs 在 Linux 上的安装很方便。在 windows 上的安装就。。。比较容易小白劝退。 Windows 上的安装可以使用 scoop,win10 上还可以使用 wsl 。目前就只推荐这两种方式，比较容易解决 org-roam 的包依赖（主要是 sqlite3）。
+
+[D04PH.D：Scoop 助力 windows 进行软件管理](https://zhuanlan.zhihu.com/p/426775599)## 界面展示
+
+Emacs配置了根据sunrise,sunset自动变换主题。晚上用深色，白天用浅色。
+
+https://pic1.zhimg.com/v2-7841bc377b57d016d7d795805037cfaa_r.jpg
+
+
+Org-roam-ui展示笔记之间的连接
+
+https://pic2.zhimg.com/v2-ac8277aa046b57a299af1d86e1afa2d3_r.jpg
+
+
+org-roam-ui 文件预览
+
+https://picx.zhimg.com/v2-9f0ea0d0a8dc917584a4b18a9d641ed3_r.jpg
+
+
+笔记的检索，通过拼音字母检索中文
+
+https://picx.zhimg.com/v2-89225e40a67bf76e05571f237f9914e7_r.jpg
+
+
+单独检索文献笔记

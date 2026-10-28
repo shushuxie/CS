@@ -1,0 +1,109 @@
+#+TITLE: Vim与Markdown，实现键不离手
+#+LINK: https://zhuanlan.zhihu.com/p/26388262
+#+AUTHOR: tamlok
+#+TYPE: article
+#+DATE: 2026-10-28
+
+本文首发于简书（
+
+[Vim与Markdown，实现键不离手](https://link.zhihu.com/?target=http%3A//www.jianshu.com/p/fa8c56e1aa52)）。
+
+Vim作为坊间流传的编辑器之神，能在双手不离开键盘的情况下实现各种高效的文本编辑操作以及帮助乌干达的可怜儿童；Markdown作为一种非常简单的标记语言，能在不需要鼠标指指点点的情况下就完成一篇漂亮的排版文章。那么，结合Vim和Markdown，基本就可以达到传说中的"键"不离手了！
+
+笔者作为一个Vimer，使用Vim来写Markdown笔记也有一段时间。下面总结了一些自己的经验，希望能帮助同样需要Vim和Markdown的你！
+
+* 语法高亮
+
+作为纯文本格式，如何在Markdown文档中快速找到所需要的内容，是影响Markdown编辑体验的一个关键因素。作为最佳的状态，如果编辑时能提供和阅读时一样的排版或样式，那么Markdown的编写就可以既高效又简洁美观了。因此，一个好的Markdown编辑器应该能尽可能地减小Markdown作为标记语言与生俱来的 编辑与阅读之间的割裂感。
+
+语法高亮是一个比较好的折中的解决方案。试想，如果加粗、斜体等都使用粗体和斜体来高亮，代码块、链接等都使用和渲染时差不多的样式来高亮，那么其实编辑和阅读也就差不多都是那么回事了。至于说“折中”，是因为有部分流行的Markdown编辑器完全采用 *所见即所得* 的方式，编辑时，输入一个文本后马上渲染为对应的HTML显示；对于这种做法，见仁见智，但是我觉得和Markdown的设计理念背道而驰，可以说是另一个极端。
+
+Vim本来也支持Markdown的语法高亮，但是做得还不够好。我使用gabrielelana/vim-markdown 插件来增强高亮。另外， 为了满足其他一些需要，我Fork了该插件进行了一些改进[tamlok/vim-markdown](https://link.zhihu.com/?target=https%3A//github.com/tamlok/vim-markdown)。
+
+另外，使用的配色方案是[tamlok/detorte](https://link.zhihu.com/?target=https%3A//github.com/tamlok/detorte).该配色方案支持亮色和暗色两个主题，相对比较柔和。对上面提到的vim-markdown插件专门适配过。
+
+先上图再说话：
+
+https://picx.zhimg.com/v2-7f382ddd9bff64fa3f90fda69f9095f3_r.jpg
+
+
+可以看到：
+
+1. 文中的*normal mode*和*insert mode*都是粗体显示，*组合命令*则是斜体显示；这样，既没有***号标记干扰视线，也能一目了然地抓住重点。
+2. 标题根据不同的层级，也有区分，且以粗体显示；醒目地将一篇文章划分为多个小节，凸显文章的整个结构脉络。
+3. 对于Markdown中的行内代码，如*N<command>*，则使用类似阅读时的样式来显示（灰底）。
+4. 文中的列表的头部、表格、链接等都通过高亮来体现出非常好的区分度。
+5. 利用Vim的 *Conceal* 特性，适当地隐藏了一些标记，如粗体的***、斜体的**、行内代码的标记和链接的URL部分等。如此一来，就能避免大量的标记喧宾夺主。
+
+总的来说，通过语法高亮， 基本就让我们很容易在视觉上抓住文章的骨架和结构了。
+
+** 代码高亮
+
+代码块的代码高亮也是可以有的。推荐一个插件[joker1007/vim-markdown-quote-syntax](https://link.zhihu.com/?target=https%3A//github.com/joker1007/vim-markdown-quote-syntax)，支持代码块内的代码语法高亮。如下图：
+
+https://pic4.zhimg.com/v2-d68ce908becefc597a572637cc6e5389_r.jpg
+
+
+* 大纲
+
+大纲有助于写文章时能时刻抓住文章的结构，对文章有一个整体的控制。
+
+对于Vimer来说，提到大纲，估计第一反应就是大名鼎鼎的[majutsushi/tagbar](https://link.zhihu.com/?target=https%3A//github.com/majutsushi/tagbar) (什么？并没有想到tagbar？你是不是emacs的卧底？）但是，该插件默认是不支持Markdown的。
+
+其实，主要产生ctags格式的输出，tagbar就能渲染。网上已经有很多教程，例如只要添加[markdown2ctags.py](https://link.zhihu.com/?target=https%3A//github.com/tamlok/vimconf/raw/master/markdown2ctags.py)就可以实现在tagbar
+中显示Markdown的大纲目录了。
+
+效果如下：
+
+https://pic2.zhimg.com/v2-416c83ff32aa0fee62b982b74494f1bf_1440w.png
+
+
+* 渲染阅读
+
+因为经常需要在Windows和Linux上工作，因此需要一个同时支持这两个平台的渲染插件。
+
+[iamcco/markdown-preview.vim](https://link.zhihu.com/?target=https%3A//github.com/iamcco/markdown-preview.vim) 是一个同时支持Windows, Linux和MacOS的Markdown预览插件。通过以下配置，基本就可以做到一个按键预览当前笔记了。
+
+#+begin_src text
+let g:mkdp_path_to_chrome="chrome"
+let g:mkdp_auto_close=0
+nmap <F7> <Plug>MarkdownPreview
+nmap <F8> <Plug>StopMarkdownPreview
+#+end_src
+
+* 笔记管理
+
+笔记管理直接使用插件[scrooloose/nerdtree](https://link.zhihu.com/?target=https%3A//github.com/scrooloose/nerdtree)即可。该插件还支持收藏夹，可以对应到笔记本的概念。
+
+https://pic2.zhimg.com/v2-0f74431e88451e44e715c1a072da392d_1440w.png
+
+
+* 查找
+
+Vim有着强大的查找、搜索功能，所以对于纯文本的Markdown来说，完全可以拿过来用。这里就不多啰嗦了，比如*:vimgrep*, [ggreer/the_silver_searcher](https://link.zhihu.com/?target=https%3A//github.com/ggreer/the_silver_searcher)等。
+
+* 结语
+
+折腾下来，Vim下编辑Markdown笔记完全是没有任何问题的，特别是语法高亮和Conceal特性，可以尽可能地减小Markdown与生俱来的割裂感。
+
+不过，实在遗憾的是GVim也不支持显示图片，否则，如果能在编辑的时候就预览图片链接，将会是多么美好呀？另外，对于图片，也是需要手动管理，这也是一个缺憾。
+
+工作中，我使用这套解决方案来记录Markdown笔记大概差不多两个月。后来，实在忍不住，基于Vim的这些优点折腾了一个Markdown笔记软件[VNote](https://link.zhihu.com/?target=https%3A//tamlok.github.io/vnote/)，结合网盘同步，在工作中完全取代了某云某知了啦！
+
+* [VNote](https://link.zhihu.com/?target=https%3A//tamlok.github.io/vnote/)
+
+如果你认同以上几点Markdown编辑理念，那么你绝对需要下载[VNote](https://link.zhihu.com/?target=https%3A//pan.baidu.com/s/1jI5HROq%23list/path%3D/)来尝试尝试。
+
+广告时间～[VNote: 一个舒适的Markdown笔记软件](https://link.zhihu.com/?target=http%3A//www.jianshu.com/p/c57bb900b322)。这篇介绍文章写于两个月前。经过两个月的开发，目前VNote已经基本可以算是麻雀虽小五脏俱全了。借助于Vim的一些优点，也能做到“键”不离手，比如：
+
+- 舰长模式
+借助前导键*Ctrl+E*，进入舰长模式。在该模式中，我们有26个字母可以分配快捷键，实现如单面板、退出、显示工具面板等操作。
+- 高效的标签页跳转
+*Ctrl+E 1* 跳转到第1个标签页；*Ctrl+E 9*跳转到第9个标签页；*Ctrl+E 0*在当前标签页和前一个标签页之间轮换！在需要参考多个笔记的时候，特别方便使用！
+- 导航模式
+*Ctrl+E W*进入导航模式。该模式类似于Vim下的插件*easy-motion*，在一些主要部件上显示两个字母，键入这两个字母即可跳转到对应部件上。
+
+VNote虽然一直都在努力完善，包括不断借鉴Vim的优点和使用经验。但是有一个很严重的问题，就是不能帮助乌干达的可怜儿童！~~
+
+https://pic2.zhimg.com/v2-91b6f3a0a1e4b7987487fa9f58740ef1_r.jpg
+
