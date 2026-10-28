@@ -1,0 +1,76 @@
+#+TITLE: Neovim/Vim基础教程（面向萌新&推荐&感想）
+#+LINK: https://zhuanlan.zhihu.com/p/301008305
+#+AUTHOR: Geometryolife
+#+TYPE: article
+#+DATE: 2026-10-28
+
+*》》》前情提要：*
+
+https://pic2.zhimg.com/v2-a0da569726f73d99d0d74b75d2f9a82b_r.jpg
+
+
+我刚开始接触Linux系统时，接触的第一个编辑器就是Vi和Vim。用了很久Linux，我一直把Vim当作平时改改配置文件的“普通”编辑器。完全没有感受到Vim的强大，没能理解它被许多程序员奉为“编辑器之神”的美誉。
+
+在Vim成为我的主力编辑器之前，所有的编程都是在IDE或其它现代编辑器上完成的。随着我写程序的代码量增多，我越来越明显感到“够鼠标”的疲惫感，我的手不想离开键盘。另一个原因是，我当时买了iPad，想把一部分编程工作转移到iPad上。尝试过远程协助、在服务器搭建Jupyter Lab，但是实现并不理想。
+
+机缘巧合，让我遇见了Vim的真正启蒙人，是他让我看到什么才是真正的Vim。没错，他就是*TheCW*。从那时候起，我才知道原来Vim可以这么漂亮，操作可以一气呵成，真正领会了“编辑器之神”。
+
+[哔哩哔哩 ( ゜- ゜)つロ 乾杯~ Bilibili](https://link.zhihu.com/?target=https%3A//space.bilibili.com/13081489%3Ffrom%3Dsearch%26seid%3D1645583038611096956)他让我学习到的并不仅仅是Vim，还有很多很多。很多是课堂、学校给不了的，上面是他的B站主页，很推荐大家关注他。
+
+在他开始在B站分享Linux技术之前，像他这类视频无论是在B站还是国内真的比较少，也许一些热爱Linux社区的朋友受到了TheCW的影响，也开始在B站发布类似的视频，真的挺感谢这些热爱Linux的朋友们，让中国的Linux社区慢慢壮大。我十分记得TheCW在一个视频中说过：“我也想为国内Linux社区贡献一下”。这是他在第一个Linux技术分享的视频中说的，这句话给我的印象特别深刻。
+
+真正开始学Vim是跟着TheCW的三期Vim基础视频来学的，那时候才知道原来*Vim这个丑丑的命令行编辑器*也是有配置文件的，也是可以安装配色的，也是可以改键位的，甚至可以装插件！（我想跟Vim说：“抱歉，之前用了一年多Linux，我把你当成了Windows的记事本。”）
+
+我跟TheCW一起捣鼓Vim时，因为他的键盘布局跟我的不一样，他用Colemak，我用QWERTY，他的很多键位都修改过了，方向键是“neui”，就相当于我们常见的键盘中的“jkil”这几个键。感觉这个键位好舒服，说实话，每个开始学习Vim的第一步就是适应hjkl，当时我适应不了，所以把jkil映射成了方向键。
+
+不过我现在用的就是hjkl，原因是Linux中很多应用的默认键位通常都是Vim或Emacs，这意味着，我每接触一个新的软件，我就要修改部分键位，以适应jkil。为了免去这些步骤，我想还是用hjkl吧，写了两天程序，发现hjkl也并非那么难。至于使用什么样的方式都可以，毕竟Vim可以高度定制，要成什么样就成什么样。
+
+刚好我也放寒假了，总感觉Vim的一些基础问题也不应该总是去问TheWC，所以我就系统性地学习了Vim，下载了Vim的用户手册学习。当时在B站刷到老王 [@PegasusWang](https://www.zhihu.com/people/a552436535aaff6df7edd7700b59f80b) 的Vim教程，他说在慕课网发布有“玩转Vim 从放弃到爱不释手”的免费教程。所以我就学了一遍，真的很不错，时长5个小时，我当时边学边操作。两天就搞完了。下面是老王的B站主页，大家也可以关注：
+
+[哔哩哔哩 ( ゜- ゜)つロ 乾杯~ Bilibili](https://link.zhihu.com/?target=https%3A//space.bilibili.com/288339968%3Ffrom%3Dsearch%26seid%3D10530281213131485348)自此之后，我就深深地爱上了Vim，也成为我编程的主力工具。由于疫情，这个漫长的寒假，无聊时我也简单学习了下Emacs，虽然很强大，但是我目前觉得NeoVim更适合我。
+
+从Vim转到Neovim是因为我一直在iPad上使用服务器编程，在termius使用Vim快速移动光标时，总是会卡色块，总会延迟刷新。然后我就试了一下Neovim，发现使用Neovim时完全没有卡色块、延迟刷新等问题（这些问题只在iPad出现，电脑上没有）。当时我看到TheCW也换了，正好出了期关于使用Neovim的教程，所以就重新配置了Neovim，开始用起来了。到现在差不多使用了1年，Neovim依旧是我的主力编程工具。
+
+*》》》教程开始：*
+
+我本来想着自己出一个Vim教程的，但是我想了想，还是算了，网上关于Vim的基础教程浩如烟海，真的没必要重复劳动，而且消耗精力。所以，我决定推荐我学习过的认为有价值的Vim教程。
+
+*初学者必看：*
+
+这是老王的“玩转Vim 从放弃到爱不释手”免费教程，手把手如何使用Vim，其中也讲到Tmux，Tmux是我在iPad上编程必不可少的一个工具，之后我再出一片文章介绍一下Tmux。
+
+https://pic2.zhimg.com/v2-1643b524515112c6614a2b470e05cc05_r.jpg
+[玩转Vim 从放弃到爱不释手-Vim入门-慕课网](https://link.zhihu.com/?target=https%3A//www.imooc.com/learn/1129)
+
+https://pic1.zhimg.com/v2-4603ce840970a8ce09b7f3adc76ae528_r.jpg
+
+
+https://pic2.zhimg.com/v2-524657f24a4b7ded366603f02394efc7_r.jpg
+
+
+https://pica.zhimg.com/v2-571075e71b1024e1e3e792ccaa21557a_r.jpg
+
+
+总共6章，内容虽然不少，但是也只能达到系统初识Vim而已，Vim还有很多强大的功能和好用的插件，这时候我就推荐你去看*TheCW的视频*了。当然他的视频不仅仅是关于Vim的，还有很多关于Linux的，绝对会让你更加热爱Linux。
+
+*》》》进阶必看：*
+
+想系统学习Vim，深入了解Vim，并且想开发Vim插件，为Linux社区贡献你的一份力，那么我推荐你要好好学习官方的教程。
+
+官方的PDF手册3000多页，有空可以慢慢看，也有一个300多页的用户手册，我当时看的就是300多页这个。下面附上下载地址：
+
+https://pic4.zhimg.com/v2-69ea1880d1e61eb42cf789063cef505b_r.jpg
+[http://vimdoc.sourceforge.net/](https://link.zhihu.com/?target=http%3A//vimdoc.sourceforge.net/)[the online source for Vim documentation](https://link.zhihu.com/?target=http%3A//vimdoc.sourceforge.net/)[the online source for Vim documentation](https://link.zhihu.com/?target=http%3A//vimdoc.sourceforge.net/)
+
+https://pic2.zhimg.com/v2-86637ad25448f4828f962bac294d8721_r.jpg
+[https://sourceforge.net/projects/vimcdoc/](https://link.zhihu.com/?target=https%3A//sourceforge.net/projects/vimcdoc/)
+
+第一个是3000页的，第三个是300多页的。其实安装好Neovim、Vim后，输入help命令也是看的，初学者建议还是先看看第3个pdf文件，较为系统。
+
+推荐两个Linux交流群，是TheCW的一个朋友（美味的樱桃菌）创建的：
+
+[哔哩哔哩 ( ゜- ゜)つロ 乾杯~ Bilibili](https://link.zhihu.com/?target=https%3A//space.bilibili.com/27137545%3Ffrom%3Dsearch%26seid%3D15861129514610472599)823167016
+
+466898428
+
+欢迎大家分享交流Linux技术！

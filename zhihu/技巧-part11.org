@@ -1,0 +1,214 @@
+
+
+* VIM学习笔记 文本排序(sort)  :技巧:Vim:sort:文本处理:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/110650001
+  :作者:  YYQ
+  :原文:  [[file:原文/2026-10-28-VIM学习笔记 文本排序(sort).org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-VIM学习笔记 文本排序(sort).org][打开本地归档]]
+  - 一句话概括：把 Vim 内置 :sort 的行排序、去重、倒序、数字排序，以及「按文本块排序」的四步操作讲清楚；值得收是因为块排序那套「合并行→排序→拆行」的通用套路，可以迁移到日志、配置块、代码段等任何需要保持结构的场景。
+  【方法/论点要点】
+  - 行范围排序：:3,16sort 排第 3 到 16 行；可视模式下选中后 :'<,'>sort。
+  - 去重：:%sort u 排序并删除重复行，只保留第一行。
+  - 倒序：:%sort!；按数字排序：:%sort n；数字倒序：:%sort! n。
+  - 注意 Vim 的 :sort 与 Linux 的 sort 命令并不完全一致，别混用参数。
+  - 块排序（以 troff 的 .KS/.KE 块为例）：① 用 :g/^\.KS/,/^\.KE/-1s/$/@@/ 给块内每行行尾加 @@；② 用 :g/^\.KS/,/^\.KE/j 合并块；③ :%sort 排序；④ 用 :%s/@@ /^M/g 把 @@ 加空格换回换行。
+  - 细节：合并行时 Vim 会自动插入一个空格，所以第 ④ 步要匹配「@@ 加一个空格」；^M 用 Ctrl-V Ctrl-M 输入，Ctrl-V 被占用时可用 Ctrl-Q 代替。
+  - 这套方法的核心是「先把多行结构压成一行，让排序键落在行首，排完再还原」，并不依赖插件。
+  【原文摘录】
+  #+begin_quote
+  Vim内置了针对文本进行排序的 :sort 命令。你可以使用 :help :sort 命令，查看详细的帮助信息。
+  #+end_quote
+  #+begin_quote
+  使用以下命令，将在排序时去除重复的行。对于重复的多行，将仅仅保留第一行，而其它的行将被删除。
+  #+end_quote
+  #+begin_quote
+  如果我们希望按术语进行排序，那么可以通过合并行将文本块整合为一个整体，然后进行排序；稍后再重新拆分行，来恢复原有的文本格式。
+  #+end_quote
+  #+begin_quote
+  在第2步使用 j 命令合并行时，自动新增了一个空格；所以在第3步的替换命令中，需要查找「@@」字符以及紧随其后的一个空格。
+  #+end_quote
+  【我的想法】
+  这篇短小但很实用，价值全在块排序那四步。它其实是一个通用模式：只要「一条记录的字段跨多行」，就可以用哨兵字符把记录压平、排序、再还原；同样的思路也能用 :g/pattern/ 加外部命令（如 sort -k）实现，但纯 Vim 方案不需要离开编辑器，也不依赖 Unix 工具。真正容易踩坑的是第 ④ 步的 ^M 输入和「@@ 后那个自动空格」，照抄命令时如果少了空格就会替换不干净。另外 :sort 默认按字节序，中文和带数字的混合文本最好显式加 n 或指定 locale；原文没展开这一点，实际用的时候要自己试。
+
+
+
+* 精通 vim ,插件基础篇  :技巧:Vim:插件:vim-plug:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/139847548
+  :作者:  zempty
+  :原文:  [[file:原文/2026-10-28-精通 vim ,插件基础篇.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-精通 vim ,插件基础篇.org][打开本地归档]]
+  - 一句话概括：以 vim-plug 为入口，手把手演示怎么找、装、配、更新、卸载 Vim 插件，并用 nerdtree、startify、interestingwords、fugitive 四个例子覆盖目录树、启动页、单词高亮和 Git 操作；值得收是因为它给了一条从零到「插件能用」的最短路径。
+  【方法/论点要点】
+  - 找插件：Google 提炼关键词、vimawesome.com、GitHub、知乎；作者的习惯是找到后先读 README，再实操。
+  - 安装 vim-plug（Unix）：curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim；Windows/Neovim 看官方文档。
+  - 在 ~/.vimrc 里用 call plug#begin('~/.vim/plugged') … Plug '作者/仓库' … call plug#end() 声明插件，地址用「作者名/仓库名」即可。
+  - 常用命令：:PlugInstall 安装、:PlugUpdate 更新、:PlugUpgrade 升级 vim-plug 自身、:PlugClean 删除配置里已移除的插件；插件窗口按 q 关闭。
+  - nerdtree：let mapleader = "," 加 nnoremap <silent> <leader>n :NERDTreeToggle<CR>，用 ,n 开关；在树里按 shift+? 看帮助。
+  - vim-startify：启动时列出最近文件，按数字键直接打开。
+  - vim-interestingwords：默认 ,k 高亮光标下单词，n/N 跳转，,K 取消全部高亮；可用 g:interestingWordsGUIColors / TermColors / RandomiseColors 配置多色。
+  - vim-fugitive：零配置，:Git status/add/commit/log/push 直接用，另有 :GWrite/:GRead/:GRemove/:GCommit 等简写，:help GCommit 查细节。
+  【原文摘录】
+  #+begin_quote
+  有时会收到小伙伴的私信问我 vim 的插件怎么用？关于这篇文章主要就是向大家介绍一下 vim 的插件应该怎么用，怎么可以快速的上手插件。
+  #+end_quote
+  #+begin_quote
+  无论是使用插件还是插件管理器我们都是需要配置一下 ～/.vimrc 文件的，这是 vim 中很重要的一个配置文件。
+  #+end_quote
+  #+begin_quote
+  以上就是告诉插件管理器插件的地址（以上地址均是来自 github，地址使用作者名/仓库名即可），你去帮我下载下来使用吧。
+  #+end_quote
+  #+begin_quote
+  vim 的插件太多，可以根据自己的需求去寻找，然后使用，就像本文一样在 github 上按需查找，然后安装，浏览一下 github 仓库中插件的详细说明。
+  #+end_quote
+  【我的想法】
+  这篇是合格的「第一篇插件教程」：它没有堆插件清单，而是把 vim-plug 的声明式配置讲清楚——插件写在 vimrc 里、用命令同步状态，这个心智模型比手动 git clone 到 ~/.vim 里健康得多。四个例子里 nerdtree 和 fugitive 仍然常用，startify 现在多半被 dashboard/telescope 取代，interestingwords 则更像玩具。真正的短板是没讲延迟加载（plug#begin 的 on/for 参数）和 Neovim 的 init.lua 生态，插件一多启动就会明显变慢；另外 nerdtree 在新项目里通常让位给 netrw/oil.nvim/telescope。把它当 vim-plug 的语法入门，插件选型再另找清单。
+
+
+
+* 高效做笔记:vim + markdown  :技巧:Vim:Markdown:笔记:UltiSnips:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/84773275
+  :作者:  无火老大哥
+  :原文:  [[file:原文/2026-10-28-高效做笔记:vim + markdown.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-高效做笔记:vim + markdown.org][打开本地归档]]
+  - 一句话概括：一位大学生把「纸笔→OneNote→Vim+Markdown」的踩坑过程写成完整配置教程，覆盖图片粘贴、状态栏/大纲、Markdown 高亮与预览、UltiSnips 片段和 LaTeX 公式；值得收是因为它给出一套可直接照抄的「键盘不离手」笔记工作流，而不是只讲工具多好。
+  【方法/论点要点】
+  - 需求定义：好的笔记要录入快、整理不额外费时、可电子化、事后可检索；纸笔和 Word/OneNote 分别卡在检索与公式/格式上。
+  - Why Markdown：轻量、可读、允许内嵌 HTML 与 LaTeX（$$…$$），足够覆盖课堂笔记；Why Vim/Neovim：命令组合、可高度定制，Neovim 还解决 Markdown 预览插件的兼容问题。
+  - 配置文件：Vim 用 vimrc，Neovim 用 init.vim；插件管理器 vim-plug，Plug 声明后 :PlugInstall。
+  - 图片粘贴：md-img-paste.vim（ferrine/md-img-paste.vim），配置 g:mdip_imgdir='pic'、g:mdip_imgname='image'，绑定 Ctrl+p；作者改源码把 ![](...) 换成居中的 <div><img style="zoom:%"></div>，方便调大小。
+  - 状态栏与大纲：vim-airline + Tagbar，Tagbar 依赖 ctags；在 ~/.ctags 里加 markdown 的 langdef 与三级标题正则，再让 airline 的 section_c 显示 tagbar。
+  - Markdown 套件：vim-markdown（高亮/折叠/目录/段间跳转）、vim-markdown-toc（生成目录）、markdown-preview.nvim（实时预览）。
+  - UltiSnips：自定义 .snippets，支持 Python 插值；作者写了数学模式下自动加下标、按输入生成 Markdown 表格、行内/独立公式（mk/dm）等片段。
+  - 公式：行内与独立公式都用 LaTeX 语法，配合片段减少重复输入。
+  【原文摘录】
+  #+begin_quote
+  理想状态的笔记方式应当保证录入准确快速，整理总结时不额外浪费时间，可电子化，事后查找方便。
+  #+end_quote
+  #+begin_quote
+  使用Markdown可以方便快速且专注地处理文字，不受格式、版式的干扰。
+  #+end_quote
+  #+begin_quote
+  vim的设计理念是命令的组合。用户学习了各种各样的文本间移动/跳转的命令和其他的普通模式的编辑命令，并且能够灵活组合使用的话，能够比那些没有模式的编辑器更加高效的进行文本编辑。
+  #+end_quote
+  #+begin_quote
+  由于某几个插件的特殊性（Markdown Perview），我最终还是选择了Neovim作为我的主力编辑器。
+  #+end_quote
+  【我的想法】
+  这篇的含金量在「配置」而不在「观点」：图片粘贴后自动居中并跳到 zoom 值、Tagbar 借 ctags 把标题变成大纲、UltiSnips 用 Python 生成表格和公式，这些都是真用过才会写的细节。它暴露的代价也很真实——为了记笔记，你要先维护一套 Vim/Neovim 配置、ctags 正则和 snippets，这套东西本身就是一个项目；作者是「每天折腾」的类型，所以不觉得贵。对多数人更划算的路径可能是：先用 Typora/Obsidian 把「Markdown + LaTeX + 图片目录」的习惯跑通，确认自己真的需要键盘流，再迁移到 Vim。另外文中不少插件已停止维护（markdown-preview.vim 一代、旧版 Tagbar 配置），照抄前先看仓库最后提交时间。
+
+
+
+* Vim命令记不住？可能是姿势不太对[视频]  :技巧:Vim:记忆法:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/66166188
+  :作者:  PegasusWang
+  :原文:  [[file:原文/2026-10-28-Vim命令记不住？可能是姿势不太对（视频）.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-Vim命令记不住？可能是姿势不太对（视频）.org][打开本地归档]]
+  - 一句话概括：一条很短的经验帖：别死背 Vim 命令，先看它对应的英文单词（a=append、i=insert、c=change、d=delete），再靠重复形成肌肉记忆；值得收是因为它点破了「记不住」多半是记忆方式错了，而不是记性差。
+  【方法/论点要点】
+  - 把命令还原成英文单词：a/append、i/insert、c/change、d/delete，理解语义后记忆负担会小很多。
+  - 最终目标是肌肉记忆——不用过脑子就能操作，而不是在脑子里做中英翻译。
+  - 配套资源：作者在慕课网的《玩转 Vim 从放弃到爱不释手》入门课，以及文中嵌入的演示视频。
+  - 隐含方法：先记高频命令的语义，再在真实编辑任务里反复用；低频命令用到时查 :help 即可。
+  【原文摘录】
+  #+begin_quote
+  看到有些朋友说 vim 命令记不住，其实很多都是有英文单词的。
+  #+end_quote
+  #+begin_quote
+  记住这些就比较容易记忆了。当然重要的形成肌肉记忆，不用过脑子就能快速操作。
+  #+end_quote
+  【我的想法】
+  这条只有两句话，但它说的正是 Vim 学习的第一个分水岭：把命令当「符号串」背，几天就忘；把命令当「动词+名词」理解（d 删除、c 修改、y 复制，配合 i 内文、a 参数、t 到某字符），就能组合出没背过的命令。真正要补的是「文本对象」和「动作+操作符」这套语法，比如 diw、ci(、ya}，理解了就不用记几百条。视频课适合入门，但肌肉记忆只能靠每天真实编辑，建议先强制自己两周不用方向键和鼠标。
+
+
+
+* 你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文  :技巧:IDEA:快捷键:效率:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/47365808
+  :作者:  Dawmzhang
+  :原文:  [[file:原文/2026-10-28-你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文.org][打开本地归档]]
+  - 一句话概括：把 IntelliJ IDEA 的常用快捷键按「视图、定位、Alt+Enter、模板、postfix、重构、抽取」七类整理成一张可背的清单；值得收是因为它覆盖了日常编码 80% 的高频动作，尤其是 Ctrl+F12、Ctrl+Shift+Alt+U 和 Alt+Enter 的多用途。
+  【方法/论点要点】
+  - 视图：Ctrl+F12 看文件/方法/类继承结构；Ctrl+Shift+Alt+U 看 Maven 依赖图或类图；Ctrl+Alt+H 看方法调用层次。
+  - 定位：Ctrl+E 最近文件、Ctrl+Shift+E 最近修改、Ctrl+Shift+Backspace 回上次修改处、Ctrl+Alt+B 跳到实现、Ctrl+H 类继承层次、Ctrl+Q 看注释文档、Alt+1 开关工程面板、F2/Shift+F2 错误间跳转。
+  - 搜索：Ctrl+N 搜类、Ctrl+Shift+N 搜文件、Ctrl+Alt+Shift+N 搜函数（都可勾 Include non-project items 连 jar 一起搜）、Ctrl+Shift+F 全局搜字符串、Alt+F1 定位文件所在位置、Ctrl+B/Ctrl+Click 跳定义。
+  - Alt+Enter 是万能键：给修复建议、自动创建函数、把 for 循环改成 list replace、在接口名上生成实现、单词拼写纠错、自动导包。
+  - Live Templates：输入缩写回车展开常用代码（main、for、public static final 等），也可自定义。
+  - Postfix：写完表达式再打点触发模板，例如 100. 回车生成 for 循环，比 Live Templates 更贴近书写顺序。
+  - 重构：Shift+F6 重命名（所有引用同步改）、Ctrl+F6 改函数签名（参数/返回值/实现一起改）。
+  - 抽取：Ctrl+Alt+V 抽变量、Ctrl+Alt+C 抽静态常量、Ctrl+Alt+F 抽成员变量、Ctrl+Alt+P 抽方法参数、Ctrl+Alt+M 抽方法；Ctrl+Alt+L 一键格式化。
+  【原文摘录】
+  #+begin_quote
+  「工欲善其事必先利其器」，IntelliJ IDEA 作为一个非常好用的工具，他的神奇之处真的很多很多，掌握了这款 idea 的技巧之后，开发效率至少提升两倍以上。
+  #+end_quote
+  #+begin_quote
+  虽然只用一个组合按键，但是它的作用非常大。
+  #+end_quote
+  #+begin_quote
+  这是定义了大量的模板，只用敲出小小的几个字母提示，就可以回车使用模板生成大量的代码。
+  #+end_quote
+  #+begin_quote
+  所有的文件，类名，函数名，属性名都可以重命名，值得点赞的是，只要你使用 Shift+F6 重命名，所有使用过这个名称的地方都会跟着改变。
+  #+end_quote
+  【我的想法】
+  这份清单的骨架是对的，但它是 2018 年的 Windows 键位，直接照搬到 macOS 会全部错位（Cmd 替代 Ctrl、Option 替代 Alt），而且新版 IDEA 的 Search Everywhere（双击 Shift）、Find Action（Ctrl+Shift+A）比文中逐个记 Ctrl+N/Ctrl+Shift+N 更省事。真正值得先练的只有三个：Alt+Enter（修复与意图）、Ctrl+E（最近文件）、Ctrl+Alt+L（格式化），其余用到再查。另外「效率提升两倍」是营销话术，快捷键的收益取决于你是否长期写 Java；写 Python/Go 的话，同类操作在各自 IDE 里键位不同，别把肌肉记忆绑死在一个产品上。
+
+
+
+* 精通 vim 你应该理解的几个名词  :技巧:Vim:缓冲区:寄存器:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/96801314
+  :作者:  zempty
+  :原文:  [[file:原文/2026-10-28-精通 vim 你应该理解的几个名词.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-精通 vim 你应该理解的几个名词.org][打开本地归档]]
+  - 一句话概括：把 Vim 里最容易混的七个概念——buffer、window、tab、mark、register、plugin、VimScript——逐个用类比和命令讲清；值得收是因为 buffer/window/tab 三者的关系一旦理清，多文件编辑就不会再乱开标签页。
+  【方法/论点要点】
+  - Buffer：打开文件时 Vim 在内存里创建的内容副本，打开几个就有几个；vim a b c 只显示第一个，其余在缓冲区里。:ls 列出、:bn/:bp 前后切换、:b N 按编号、:b name 按文件名（支持部分匹配/正则）。
+  - Window：查看 buffer 的视口；多个 window 可以看同一个 buffer，也可以看不同 buffer。分屏操作是 window 层面的。
+  - Tab：类似浏览器标签页，但一个 tab 可以包含多个 window；:tabnew [name]、:tabc、:tabn、:tabp、:tabs，normal 下 gt 下一个、1gt 跳到第 1 个。
+  - 三者关系：buffer 存内容，window 负责显示，tab 是 window 的容器；日常多文件优先用 buffer + window，别把 tab 当文件列表。
+  - Mark：m + 字母打标记；'a 跳到标记行首，`a 跳到标记时光标位置；小写字母文件内有效，大写字母可跨文件；:marks 查看、:delmarks a b 删除、:delmarks! 删除所有小写标记。
+  - Register：y 复制进无名寄存器，p 从无名寄存器粘贴；"a 前缀指定命名寄存器（"ayy 复制当前行到 a，"ap 粘贴）；:reg / :reg a 查看；"" 是无名寄存器。
+  - Plugin：用插件管理器（推荐 vim-plug）安装/更新/卸载，解决 IDE 类需求；找插件去 vimawesome、GitHub、Google。
+  - VimScript：Vim 的脚本语言，很多插件由它实现；入门资源见 w3cschool 的 Vimscript 教程与《Learn Vimscript the Hard Way》。
+  【原文摘录】
+  #+begin_quote
+  我们用 vim 一次性打开多个文件，界面可以看到，只会显示 test1 文件，其他俩个呢？其实都打开了，vim 把这三个文件都缓存起来了，只是显示出来的是第一个文件 test1 的内容而已。
+  #+end_quote
+  #+begin_quote
+  窗口是用来展示 Buffer 的信息的，vim 之所以有 Buffer 的概念，大概就是窗口显示文件内容的时候，可以快速显示出来。
+  #+end_quote
+  #+begin_quote
+  Tab 可以想象成浏览器中的标签页，不同之处是 vim 中的一个 Tab 可以有很多个窗口，每个窗口用来展示文件的内容信息。
+  #+end_quote
+  #+begin_quote
+  小写字母通常用来单个文件坐标记，大写字母通常是用来文件间坐标记。
+  #+end_quote
+  #+begin_quote
+  当我们使用 y 复制内容的时候，vim 默认把内容寄存到一个无名寄存器，当使用黏贴功能 p 的时候，就会默认从无名寄存器中取出内容。
+  #+end_quote
+  【我的想法】
+  这篇是「概念纠偏」而不是「命令大全」，最大的贡献是把 buffer/window/tab 讲成三层：内容、视口、容器。很多人把 tab 当文件标签用，结果开了一排 tab 却找不到文件，其实就是没分清这三层；正确习惯是用 :ls/:b 管文件、用 split/vsplit 管视口、tab 只在「任务切换」时用。mark 和 register 部分够用但偏浅：没讲大写标记的跨文件持久性依赖 viminfo、没讲寄存器 0-9/+/%/# 的区别，也没提 macro 录制（q）其实是往寄存器里写。想再进一步，直接看 :help registers 和 :help marks，比继续读二手教程快。
+

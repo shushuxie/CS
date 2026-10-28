@@ -1,0 +1,518 @@
+#+TITLE: 高效做笔记:vim + markdown
+#+LINK: https://zhuanlan.zhihu.com/p/84773275
+#+AUTHOR: 无火老大哥
+#+TYPE: article
+#+DATE: 2026-10-28
+
+4月2日更新：
+
+距离发布文章已经8个月了，期间基本每天都会使用Vim 来做（瞎）笔（折）记（腾）。现在我有研究了几个比较好用的插件，推荐大家。
+
+*** 1. md-img-paste.vim 将剪切板中的图片插入为Markdown 代码
+
+很多Markdown的编辑软件都带有复制剪切板内图片的功能。Vim拥有数量众多且喜欢折腾的用户，因此这种插件在GitHub上也可以找到。我个人尝试之后使用的是 '*ferrine/md-img-paste.vim*'。这个插件可以设置储存图片的默认文件夹，图片默认名，快捷键等等。设置方法如下：
+
+#+begin_src text
+"安装插件
+Plug 'ferrine/md-img-paste.vim'
+"设置默认储存文件夹。这里表示储存在当前文档所在文件夹下的'pic'文件夹下，相当于 ./pic/
+let g:mdip_imgdir = 'pic'
+"设置默认图片名称。当图片名称没有给出时，使用默认图片名称
+let g:mdip_imgname = 'image'
+"设置快捷键，个人喜欢 Ctrl+p 的方式，比较直观
+autocmd FileType markdown nnoremap <silent> <C-p> :call mdip#MarkdownClipboardImage()<CR>F%i
+#+end_src
+
+pic/image1.png
+img/image1.png
+可以看见，在快捷键设置这里我在末尾加了 ~F%i~。因为这个插件初始设置插入的格式为标准Markdown格式，即 ~~。但是这个格式有一个缺点，就是无法该改变图片位置和大小。因此我改动了一下这个插件的源代码，把 ~~改为了 ~<div align="center"><img src="pic/image.png" alt="Image" style="zoom:%;" /></div>~ 。这个时候就可以让插入的图片居中，并且光标跳到大小设置的位置，方便我修改图片的大小。效果如下
+
+https://pic1.zhimg.com/v2-b64e46394fca218d8f41e27d4ec5a8e2_r.jpg
+
+
+修改方法为：
+
+打开 ~~/vim/plugged/md-img-paste.vim/plugin/mdip.vim~ ，修改第134行
+
+".relpath."
+~execute"normal!i"~
+
+改成 ~execute "normal! a<div align=\"center\"><img src=\"" . relpath . "\" alt=\"Image\" style=\"zoom:%;\" /><\/div>"~
+
+*** 2.  vim-airline + Tagbar
+
+vim-airline是一个编辑修改状态栏的插件，它最主要的功能就是让状态栏变得**好看并且实用！ **可以根据需求在状态栏显示各种你需要的信息，比如文件名，当前行号列号，日期，时间等等。。。当然，如果只是这样的话也没什么。但是！如果配合Tagbar使用，事情就变得有趣了起来。Tagbar是一个检索代码或者文章中固定表达的插件。用在编程的话就是可以找到所有的变量，方法并且总结出一个表。在这里我主要用Tagbar来查找markdown的各级标题，并且检索出来的标题显示在状态栏中。
+
+#+begin_quote
+注意！Tagbar需要 ctags 支持，下载地址[在这里](https://link.zhihu.com/?target=http%3A//ctags.sourceforge.net/)。
+#+end_quote
+
+https://pic2.zhimg.com/v2-ec7cb7caee9f195f6c4a0d143445f62f_r.jpg
+
+
+效果图
+
+设置如下
+
+#+begin_src text
+"安装插件
+Plug 'vim-airline/vim-airline'
+Plug 'majutsushi/tagbar'
+"不显示文档总字数
+let g:airline#extensions#wordcount#enabled = 0
+"不显示文件编码（Windows系统）
+let g:airline#parts#ffenc#skip_expected_string='utf-8[dos]'
+"设置tagber对于markdown的支持
+let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+        \ 'h:Chapter',
+        \ 'i:Section',
+        \ 'k:Paragraph',
+        \ 'j:Subparagraph'
+    \ ]
+\ }
+"取消显示warning部分
+let g:airline_section_warning = ''
+"取消显示section_b
+let g:airline_section_b = ''
+"section_c显示为tagbar检索出来的标题
+let g:airline_section_c = airline#section#create(['tagbar'])
+"section_x显示文件名
+let g:airline_section_x = '%{expand("%")}'
+"section_y显示时间
+let g:airline_section_y = airline#section#create(['%{strftime("%D")}'])
+"section_z显示日期
+let g:airline_section_z = airline#section#create(['%{strftime("%H:%M")}'])
+"激活tagbar扩展
+let g:airline#extensions#tagbar#enabled = 1
+#+end_src
+
+另外，还需要在 ~~/.ctags~中加入如下代码（没有这个文件的可以新建一个命令为：~:vi ~/.ctags~)：
+
+#+begin_src text
+--langdef=markdown
+--langmap=markdown:.mkd
+--regex-markdown=/^#[ \t]+(.*)/\1/h,Heading_L1/
+--regex-markdown=/^##[ \t]+(.*)/\1/i,Heading_L2/
+--regex-markdown=/^###[ \t]+(.*)/\1/k,Heading_L3/
+#+end_src
+
+以下为原文：
+
+https://pic4.zhimg.com/v2-7766e4ac9b9d3b08fca1ce0e61f9f1dd_r.jpg
+
+
+https://pic3.zhimg.com/v2-2f1ba079e18dfc1ba85ecef6f5e92a38_1440w.jpg
+
+
+NERV镇楼
+
+作为一个在校大学生, 我常常苦恼于如何有效记笔记一事。理想状态的笔记方式应当保证录入准确快速，整理总结时不额外浪费时间，可电子化，事后查找方便。
+
+曾经一度使用纸笔记录，发现效率不高且难以寻找知识点。在学习完一门课之后总会留下大堆笔记，导致下次再想复习曾经学过的知识点时难以寻找，费时费力。而且课程与课程之间存在关联，在总结复习时，总是需要把大堆的笔记和书本摊开，整个桌面十分混乱不说，还容易错漏。 因此将笔记电子化成为一大刚需。而如果使用word或者其他文字编辑软件，又难以正确打出数学公式和图表。 于是我便考虑使用Surface记录手写电子笔记。 Surface Pro结合Onenote基本可以满足手写笔记，数学公式的记录也基本可以满足。*然而*还是存在笔记难以被搜索到，格式不规范的问题。 复习时往往需要花更多的时间重新整理笔记。 这个时候，[这篇文章](https://link.zhihu.com/?target=https%3A//castel.dev/post/lecture-notes-1/) 出现在了我的视野。 作者使用vim+Latex的方式， 达到了速记带数学公式的笔记的目的，给了我很大启发。于是乎，通过不断地尝试，我也逐步摸索出使用vim+Markdown记笔记的方法。
+
+** Why Markdown
+
+Markdown 是一种轻量级的标记语言，由John Gruber和Aaron Swartz创建，使其成为可读性最大并可再发行的可输入输出的格式。这种语言创建灵感来自于已经存在的带标记的电子邮件文本。Markdown 允许 HTML 语法, 所以使用者如果需要可以直接用 HTML来表示是可以的。
+
+使用Markdown可以方便快速且专注地处理文字，不受格式，版式的干扰。与Latex不同之处在于，Markdown简洁的语法，容易上手的特性以及对于Latex和html的兼容性。使用Markdown时，可以简单的使用关键词 “$$” 或者一对 “$$” 插入Latex语法的数学公式。比如：
+
+#+begin_src text
+$$
+-(\frac{\hbar^2}{2m}) \cdot  \frac{\delta \Phi ^2}{\delta x^2}+ V \Phi
+= i\hbar \frac{\delta \Phi}{\delta t}
+$$
+#+end_src
+
+https://www.zhihu.com/equation?tex=-%28%5Cfrac%7B%5Chbar%5E2%7D%7B2m%7D%29+%5Ccdot++%5Cfrac%7B%5Cdelta+%5CPhi+%5E2%7D%7B%5Cdelta+x%5E2%7D%2B+V+%5CPhi+%3D+i%5Chbar+%5Cfrac%7B%5Cdelta+%5CPhi%7D%7B%5Cdelta+t%7D+
+
+
+除此以外，Markdown还支持html语法。在Markdown中，可以使用诸如
+
+#+begin_src text
+<div class="solid">
+&emsp;This is a Box
+
+&emsp;Math:
+$$
+\int_{-\infty}^{\infty} \frac{1}{x^2}dx
+$$
+
+</div>
+#+end_src
+
+https://pic3.zhimg.com/v2-985e632fc80da538ad19c833124565a0_r.jpg
+
+
+的方式加入一些我们所需要的元素。因此我认为，在大部分情况下，使用Markdown做笔记足矣。
+
+** Why Vim or Neovim
+
+[welcome home : vim online](https://link.zhihu.com/?target=https%3A//www.vim.org/)Vim 是从 vi 发展出来的一个文本编辑器。代码补全、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用，和Emacs并列成为类Unix系统用户最喜欢的文本编辑器。由于Vi设计之初，鼠标还非电脑标配，控制台与格式命令还是当时操控电脑的唯一方式，因此造就了Vi独特的使用方式。而Vim诞生之初是面向Amiga这一系列电脑的vi移植，随后才移植回Unix。大家可以看下Amiga最初的键盘设计：
+
+https://pic2.zhimg.com/v2-e47fce22264c2d6472446477971223e7_r.jpg
+
+
+Amiga 键盘
+
+vim的设计理念是命令的组合。用户学习了各种各样的文本间移动/跳转的命令和其他的普通模式的编辑命令，并且能够灵活组合使用的话，能够比那些没有模式的编辑器更加高效的进行文本编辑。通过安装各类插件，vim可以实现从码字到撸代码各种不同的需求。同时用户可以自定义快捷键，自定义方程，自定义命令。。。强大的自定义编辑使得Vim可被用户随意揉捏，打造自己独特的编辑器。
+
+[Home - Neovim](https://link.zhihu.com/?target=https%3A//neovim.io/)Neovim 是Vim的重构版本，是Vim在这个时代的重生。其完美继承了Vim的操作方式。由于Vim本身开发时间较早，代码维护困难，使得bug的修复愈发困难。当时Neovim的作者曾向Vim提交过两大补丁，包含大量改动，不幸被Vim的作者拒绝，理由是风险太大。因此Neovim的作者干脆另起炉灶，发布了Neovim。Neovim相比Vim有很多优秀的改动与变化。例如多线程（Vim 8.0 之后也有了），悬浮窗口，支持任何语言编写插件等等。。。当然，对于普通的使用者来说，我是察觉不出两者区别有多大的。但是由于某几个插件的特殊性（Markdown Perview），我最终还是选择了Neovim作为我的主力编辑器。
+
+接下来我将详细介绍Vim+Markdown的详细配置。
+
+---
+
+** Vim 配置文件：vimrc/ init.vim (Neovim)
+
+如前文所提，vim可以通过配置文件自定义插件，快捷键和命令。如果使用的是Vim，可以在vim的安装文件夹中查看有没有名为 *vimrc*的文件。若没有可以在vim中使用
+
+#+begin_src text
+:vi vimrc
+#+end_src
+
+来新建vim配置文件。如果使用的是Neovim，则可以新建 *init.vim* 作为Neovim的配置文件。具体方法请参考 [Vim 官网](https://link.zhihu.com/?target=https%3A//www.vim.org/) 和 [Neovim 官网](https://link.zhihu.com/?target=https%3A//www.neovim.io/) 以及其他教程。
+
+** 插件管理器：vim-plug
+
+Vim—plug ([Github](https://link.zhihu.com/?target=https%3A//github.com/junegunn/vim-plug))是一个适用于vim或者Neovim的插件管理器。具有安装简单，使用简单，多线程平行安装，支持Branch/Tag/Commit等等功能。将Vim-plug下载下来后，把文件**plug.vim** 复制粘贴到*vim*安装路径下的*vimfiles/autoload/* 下面或者*Neovim*安装路径下的*share/nvim/runtime/autoload*下面即可。
+
+vim-plug安装成功后就可以在*vimrc*或者*init.vim*中安装插件了。
+
+#+begin_src text
+call plug#begin('~/.vim/plugged') "Vim 插件的安装路径，可以自定义。
+"~ 表示系统路径，在windows下为 C:/User/username/
+
+Plug 'path/of-plugin'
+Plug '...'
+"将所有插件安装在这里
+
+call plug#end()
+#+end_src
+
+配置完成后，重启vim。在命令模式下输入
+
+#+begin_src text
+:PlugInstall
+#+end_src
+
+就可以自动安装所有插件了。
+
+---
+
+** Markdown 插件
+
+*** 1. Vim-markdown
+
+[vim-markdown](https://link.zhihu.com/?target=https%3A//github.com/plasticboy/vim-markdown) 是一个Markdown语法高亮插件。其提供了针对Markdown的语法高亮，段落折叠，查看目录，段间跳转等功能，相当好用。
+
+https://picx.zhimg.com/v2-46ae8192968c156c0c67069c0c27bc35_r.jpg
+
+
+*** 安装与命令
+
+#+begin_src text
+"安装插件
+Plug 'godlygeek/tabular' "必要插件，安装在vim-markdown前面
+Plug 'plasticboy/vim-markdown'
+"查看所有配置建议
+:help vim-markdwon
+[[ "跳转上一个标题
+]] "跳转下一个标题
+]c "跳转到当前标题
+]u "跳转到副标题
+zr "打开下一级折叠
+zR "打开所有折叠
+zm "折叠当前段落
+zM "折叠所有段落
+:Toc "显示目录
+#+end_src
+
+由于我们还会使用到Latex数学公式，所以可以在配置文件中加上
+
+#+begin_src text
+let g:vim_markdown_math = 1
+#+end_src
+
+来高亮数学公式。
+
+*** 2. Vim-markdown-toc
+
+[vim-markdown-toc](https://link.zhihu.com/?target=https%3A//github.com/mzlogin/vim-markdown-toc) 是一个自动在当前光标生成目录的插件。
+
+*** 安装与命令
+
+#+begin_src text
+"安装插件
+Plug 'mzlogin/vim-markdown-toc'
+"在当前光标后生成目录
+:GenTocMarked
+"更新目录
+:UpdateToc
+"取消储存时自动更新目录
+let g:vmt_auto_update_on_save = 0
+#+end_src
+
+由于自动生成的目录层级太多，因此我在配置文件中写了一个方程，自动找到较低的目录层级，然后删除之：
+
+#+begin_src text
+function RToc()
+    exe "/-toc .* -->"
+    let lstart=line('.')
+    exe "/-toc -->"
+    let lnum=line('.')
+    execute lstart.",".lnum."g/           /d"
+endfunction
+#+end_src
+
+效果大概如下：
+
+https://pic2.zhimg.com/v2-aba70ccb65e29941551150540af6e443_r.jpg
+
+
+左：自动生成的目录            右：删除较低层级后
+
+*** 3. Markdown-preview.nvim/ markdown-preview.vim
+
+[markdonw-preview.nvim](https://link.zhihu.com/?target=https%3A//github.com/iamcco/markdown-preview.nvim)（Neovim）和 [markdown-preview.vim](https://link.zhihu.com/?target=https%3A//github.com/iamcco/markdown-preview.vim) (Vim) 可以通过浏览器实时预览Markdown 文件。并可以借助浏览器的打印功能导出PDF文档。两个插件为同一个作者的作品，但是Neovim版本较新，更加完善，附带了Latex预览，Mermaid甘特图，Plantuml UML图等等一系列功能。Vim版本较旧，且已不再维护。所以我推荐大家使用Neovim而非Vim。
+
+#+begin_src text
+注：如果使用Vim并且想预览数学公式，还需要安装 mathjax-support-for-mkdp。
+详情见 github.com/iamcco/markdown-preview.vim
+#+end_src
+
+*** 安装与命令
+
+#+begin_src text
+" 安装插件
+Plug 'iamcco/markdown-preview.nvim'
+" 打开/关闭预览
+:MarkdownPreviewToggel
+" 指定浏览器路径
+let g:mkdp_path_to_chrome = "path/of/chrome"
+" 指定预览主题，默认Github
+let g:mkdp_markdown_css=''
+#+end_src
+
+https://picx.zhimg.com/v2-be7e4752954035d302d97d8d50b051d7_r.jpg
+
+
+Markdown 预览效果
+
+---
+
+** Ultisnips 片段
+
+[ultisnips](https://link.zhihu.com/?target=https%3A//github.com/SirVer/ultisnips) 是一个非常实用的Vim插件。*Snippets*译为片段，在这里表示可被某一段关键词触发并替换的一段短小的，可重复利用的文本块。比如我输入 *title* 然后按 *Tab*键，那么就会出现如下图：
+
+https://pic2.zhimg.com/v2-89f2dcdadaea46b9d5afd1fc839cb083_r.jpg
+
+
+snippet 例子
+
+Ultisnips还支持嵌套使用，例如：
+
+https://pic1.zhimg.com/v2-a414cd3b33539d0860a87c338d0746d6_r.jpg
+
+
+#+begin_src text
+注意！！！：ultisnips 需要python支持。
+
+1. 如果使用的是vim，则需要在电脑安装相同编码，指定版本的python。
+如果Vim是32位的，那么一定安装32位的python，否则vim无法识别。
+
+2. 如果使用的是Neovim，那么只要确保安装了python，然后在控制台使用
+
+>> pip install neovim
+
+就可以使用了。
+#+end_src
+
+*** ultisnippet 安装与命令
+
+#+begin_src text
+"安装插件
+Plug 'SirVer/ultisnips'
+
+"设置tab键为触发键
+let g:UltiSnipsExpandTrigger = '<tab>'
+"设置向后跳转键
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+"设置向前跳转键
+let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
+"设置文件目录
+let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
+"设置打开配置文件时为垂直打开
+let g:UltiSnipsEditSplit="vertical"
+#+end_src
+
+*** .snippets 文件
+
+在使用 **vim-plug** 安装完 **ultisnips** 之后，可以在插件安装路径下找到文件夹 *ultisnips*。在该文件夹下新建一个 *.snippets* 的文本文件 （例如 **markdown.snippets**），就可以在文件里面自定义片段了。
+
+一个片段的格式一般为：
+
+#+begin_src text
+snippet triggerWord "Comment" iAwrb
+your snippets
+endsnippet
+#+end_src
+
+其中 *triggerWord* 为关键词，*your snippets* 为自动输出的文本片段。
+
+*iAwrb* 为snippet的选项。
+
+- **i** 表示片段可在句中被触发。默认是只有在前面有多个空格或者在行首时才会被触发。
+
+- **A** 表示片段会被自动触发
+
+- **w** 表示片段只会在关键词为单独单词的情况下被触发。若关键词为 *mk*, 那么只有在 *html mk* 时会被触发，*htmlmk* 不会被触发。
+
+- **r** 表示关键词使用正则表达式。正则表达式必须用 两个引号' '包围。比如 **\'([1-9])day\'**。
+
+- **b** 表示只有在一行的开头才会被触发。
+
+*** Python 支持
+
+使用 **ultisnips** 时最为方便的就是可以在片段中加入python脚本。用 ~!p ~ 包围脚本，并使用 **snip.rv **返回计算结果。加入了python可以使得输入更加智能便捷，并实现一些骚操作。例如
+
+#+begin_src text
+# 在数学模式下自动加下标
+context "math()"
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+#+end_src
+
+https://pic2.zhimg.com/v2-d639860a1eb036358c16d647a9af5635_r.jpg
+
+
+自动加下标
+
+https://www.zhihu.com/equation?tex=A_1%2C+B_2%2C+c_3
+
+
+或者
+
+#+begin_src text
+# 根据用户输入新建一个Markdown格式的表格
+snippet '(?<!\\)([0-9])([0-9])tb' "new table" r
+$1`!p
+x=match.group(1)
+y=match.group(2)
+row1=""
+row2=""
+for i in range(int(x)):
+    row1+="| "
+    row2+="|:-:"
+row1+="|\n"
+row2+="|\n"
+out=row1+row2+int(y)*row1
+snip.rv=out
+`$0
+endsnippet
+#+end_src
+
+https://pic4.zhimg.com/v2-60102175aa38c9c18b0b191e1a8ec187_r.jpg
+
+
+生成4x4（不算表头）的表格
+
+https://pica.zhimg.com/v2-655fafb0648c4831dfa55089e02a9d2c_r.jpg
+
+
+表格效果
+
+*** Latex数学公式
+
+*** **♣** Inline & Display
+
+在Markdown中，Latex数学公式可分为 inline 模式和 Display 模式。inline 模式关键词为 $$, Display 模式关键词为一对$$。因此，沿袭 [Gilles Castel](https://link.zhihu.com/?target=https%3A//castel.dev/) 大佬的习惯，有如下snippets：
+
+#+begin_src text
+# mk 表示 make Ketax
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
+endsnippet
+
+# dm 表示 Display math
+snippet dm "Math" wA
+$$
+${1:${VISUAL}}
+$$ $0
+endsnippet
+#+end_src
+
+https://pic4.zhimg.com/v2-7ad457a81ff0e9c20393c4a900ef2e23_r.jpg
+
+
+*** **♣**  分数，希腊字母
+
+Latex语法下的分数为 *\frac{}{}* , 输入较为费劲。使用 snippets 能使这个过程简便很多。使用正则表达式与python可以很好的识别出是否为数字，是否被括号包裹等等。类似的应用还有诸如希腊字母的快速输入，快速输入上下标，快速输入积分、级数等等。例如：
+
+#+begin_src text
+# 若输入 ‘/’，则检查符号前的字符是否为数字或者字母，
+# 将数字或字母作为分子扩展为Latex分数形式然后在分母部分等待输入
+context "math()"
+priority 1000
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+#+end_src
+
+https://pica.zhimg.com/v2-1869eeee4ddd35c4fdfdd246636f49b4_r.jpg
+
+
+https://pic4.zhimg.com/v2-a1b4c2ed2199ebe8512bf714e2958b93_1440w.jpg
+
+
+效果图
+
+---
+
+熟练使用Ultisnips可以大大加快输入速度，在输入Latex时可以缩减输入时间，让人更加专注于数学公式，而不是去思考Latex这个语言。
+
+---
+
+** 其它插件
+
+1. [vim-auto-save](https://link.zhihu.com/?target=https%3A//github.com/907th/vim-auto-save): 自动保存插件
+2. [nerdtree](https://link.zhihu.com/?target=https%3A//github.com/scrooloose/nerdtree)：文件查看器
+3. [vim-startify](https://link.zhihu.com/?target=https%3A//github.com/mhinz/vim-startify)：Vim欢迎页修改
+
+这三个插件我就不一一介绍了。感兴趣的朋友可以自己上网查看。
+
+另外，推荐一个制作字符画的网站：[GlassGiant.com](https://link.zhihu.com/?target=http%3A//glassgiant.com/ascii/)。可以设置大小，字符数等等。。只需要把图片上传就行。
+
+https://pica.zhimg.com/v2-4a5ac73a49b2ed2b11a9219b59277ce6_r.jpg
+
+
+使用GlassGiant网站生成的字符画结合Startify设置出的欢迎界面
+
+** 附：使用到的插件清单（Neovim）
+
+#+begin_src text
+"General{{{
+Plug '907th/vim-auto-save'
+Plug 'scrooloose/nerdtree'
+Plug 'mhinz/vim-startify'
+"}}}
+"
+"Markdown{{{
+Plug 'godlygeek/tabular'
+Plug 'SirVer/ultisnips',{'for':'markdown'}
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim'
+"}}}
+#+end_src
+
+---
+
+第一次在知乎发文章，有任何错漏欢迎告知，一定改正。有任何问题欢迎私信，谢谢大家~

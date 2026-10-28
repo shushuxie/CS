@@ -1,0 +1,52 @@
+#+TITLE: 我的 Vim 文集整理
+#+LINK: https://zhuanlan.zhihu.com/p/347281664
+#+AUTHOR: 韦易笑
+#+TYPE: article
+#+DATE: 2026-10-28
+
+鉴于知乎专栏改版，基本原有专栏的核心功能是废了，我这个专栏主要是整理一下我自己的 Vim 文集，但是自己太早的文章似乎没法收录，因此专门做一个索引：
+
+使用技巧：
+
+- [韦易笑：Linux 下如何使用 Vim 8 搭建 C/C++ 开发环境?](https://www.zhihu.com/question/47691414/answer/373700711)
+- [韦易笑：Vim 8 中的 C/C++ 编译运行：类 vscode 的任务系统](https://zhuanlan.zhihu.com/p/106788219)
+- [韦易笑：Vim 8 中 C/C++ 符号索引：GTags 篇](https://zhuanlan.zhihu.com/p/36279445)
+- [韦易笑：Vim 8 中 C/C++ 符号索引：LSP 篇](https://zhuanlan.zhihu.com/p/37290578)
+- [韦易笑：Vim 内置终端调教记](https://zhuanlan.zhihu.com/p/102287909)
+- [韦易笑：VimScript 五分钟入门（翻译）](https://zhuanlan.zhihu.com/p/37352209)
+- [韦易笑：YouCompleteMe 中容易忽略的配置](https://zhuanlan.zhihu.com/p/33046090)
+
+杂文：
+
+- [韦易笑：用 vim被人说装逼，怎么办?](https://www.zhihu.com/question/58488056/answer/175828246)
+- [韦易笑：Vim 和 Emacs 深度比较](https://www.zhihu.com/question/21393299/answer/137479868)
+
+站外文集：
+
+- [面向中高级用户的 Vim 中文速查表](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/awesome-cheatsheets/blob/master/editors/vim.txt)
+- [Vim 中正确使用 Alt映射 - Skywind Inside](https://link.zhihu.com/?target=http%3A//www.skywind.me/blog/archives/1846)
+- [终端里正确设置 ALT 键和 BS 键 - Skywind Inside](https://link.zhihu.com/?target=http%3A//www.skywind.me/blog/archives/2021)
+- [Vim 里如何映射 CTRL-h 为 left ? - Skywind Inside](https://link.zhihu.com/?target=http%3A//www.skywind.me/blog/archives/1857)
+
+我的插件：
+
+- [asyncrun.vim](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/asyncrun.vim)：异步运行 shell 命令，并把结果实时输出到下方的 quickfix 窗口。
+- [asynctasks.vim](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/asynctasks.vim)：给 Vim 引入类似 vscode 的任务系统。
+- [vim-quickui](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim-quickui)：给 Vim 8.2 / NeoVim 0.4 及以上增加版本一系列基础 ui 控件。
+- [vim-auto-popmenu](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim-auto-popmenu)：170行小脚本提供类似 YCM 的补全体验（字典/buffer补全）。
+- [vim-dict](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim-dict)：比较丰富的各种语言的词典数据，以及自动加载词典，包含英文 c40k 单词表。
+- [vim-terminal-help](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim-terminal-help)：终端使用小助手，更方便的使用内置终端。
+- [vim-cppman](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim-cppman)：在 Vim 中直接查看 cppman/man pages，支持 windows。
+- [vim-preview](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/quickmenu.vim)：快速预览函数定义/原型，并且方便的再多个定义中切换预览。
+- [vim-keysound](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim-keysound)：在 Vim 中打字时播放音效，让你编程充满节奏感。
+- [vim-init](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim-init)：轻量级 Vim 配置框架，全中文注释，教学用。
+- [asyncrun.extra](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/asyncrun.extra)：为 asyncrun 提供额外 runner。
+- [gutentags-plus](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/gutentags_plus)：提供其他编辑器没有的 GNU Global 使用体验。
+- [quickmenu.vim](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/quickmenu.vim)：给 Vim 添加一个功能目录，解决很多快捷键容易被遗忘的问题。
+
+修改别人的插件：
+
+- [argtextobj](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim/blob/master/site/opt/argtextobj.vim)：给 Vim 添加 “函数参数” 文本对象，使用 via 选中参数，cia 改写当前参数，dia 删除参数。（这个项目是 fork 别人的，我修了一堆 bug）。
+- [indent-object](https://link.zhihu.com/?target=https%3A//github.com/skywind3000/vim/blob/master/site/opt/indent-object.vim)：给 Vim 添加 “缩进” 文本对象，使用 vii 选中同一层缩进层次的代码，这个项目也是在别人的基础上进行优化的。
+
+--

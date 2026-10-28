@@ -1,0 +1,21 @@
+#+TITLE: Vim命令记不住？可能是姿势不太对[视频]
+#+LINK: https://zhuanlan.zhihu.com/p/66166188
+#+AUTHOR: PegasusWang
+#+TYPE: article
+#+DATE: 2026-10-28
+
+看到有些朋友说 vim 命令记不住，其实很多都是有英文单词的。比如:
+
+- a (append)
+- i (insert)
+- c (change)
+- d (delete)
+
+等，记住这些就比较容易记忆了。当然重要的形成肌肉记忆，不用过脑子就能快速操作。
+
+[
+
+https://pic2.zhimg.com/v2-d2e24a385d8c3a7d8b4b7c28857819c6.png
+
+
+记不住 Vim 命令？姿势不对https://www.zhihu.com/video/1112839923442343936](https://link.zhihu.com/?target=https%3A//www.zhihu.com/video/1112839923442343936)[玩转Vim 从放弃到爱不释手-Vim入门-慕课网](https://link.zhihu.com/?target=https%3A//www.imooc.com/learn/1129)

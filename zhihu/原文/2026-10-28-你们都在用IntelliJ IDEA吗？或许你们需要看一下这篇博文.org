@@ -1,0 +1,208 @@
+#+TITLE: 你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文
+#+LINK: https://zhuanlan.zhihu.com/p/47365808
+#+AUTHOR: Dawmzhang
+#+TYPE: article
+#+DATE: 2026-10-28
+
+[你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/clwydjgs/p/9390488.html)
+
+*写在前面*
+以前一直用的elipce，如今入坑IntelliJ IDEA，没想到啊。深深的爱上了它，强大到无所不能；
+"工欲善其事必先利其器"，IntelliJ IDEA作为一个非常好用的工具，他的神奇之处真的很多很多，掌握了这款idea的技巧之后，开发效率至少提升两倍以上，而且对一些英语不好的学习者也是非常友好，这篇文章详细的介绍了常用快捷键以及一些非常实用的小工具，感兴趣的小伙伴们赶快来学习；
+熟练掌握这些操作，编码速度与质量一定能得到一个质的飞跃；
+
+** 一、视图查看
+
+Ctrl+F12 查看file，method结构图、类继承机构图
+（不知道方法结构，Ctrl+F12一下，方法，参数，返回值，一清二楚的展现出来）
+Ctrl+shift+Alt+U   查看maven依赖，类图
+使用maven做项目时，依赖往往非常多，在配置依赖的文件中只需要Ctrl+shift+Alt+U，所有依赖都以拓扑图的方式展现出来，所有的关系和位置都能找到；
+如下图（抱歉，项目依赖太多，具体的依赖需要放大）
+
+https://pic2.zhimg.com/v2-2e98eda298d99159f68871a278a99241_r.jpg
+
+
+类图：我们阅读源码的时候，想知道各个类之间的关系怎么办，Ctrl+shift+Alt+U，所有依赖都以拓扑图的方式展现出来，所有的关系和位置都能找到，以ArrayList为例：
+
+https://pic1.zhimg.com/v2-9755b75fdfc472d1fe4ddead67efefbe_r.jpg
+
+
+Ctrl＋Alt+H   查看方法调用层次；
+
+** 二、定位
+
+1.项目之间的跳转
+Ctrl+Alt+[　　跳转到下一个项目
+Ctrl+Alt+]　　跳转到上一个项目
+
+2.文件之间的跳转
+Ctrl+E　　 定位到最近浏览过的文件
+Ctrl+Shift+E　　最近更改的文件
+Shift+Click　　可以关闭文件
+
+3.位置的跳转
+Ctrl+Shift+Backspace　　 跳转上一次修改的地方
+Ctrl+Alt+B　　跳转到方法实现处
+Ctrl+Shift+左箭头　　上一个浏览的地方
+Ctrl+Shift+右箭头　　下一个浏览的地方
+
+4.其他的跳转
+Ctrl+H　　显示类结构图（类的继承层次）
+Ctrl+Q　　显示注释文档
+Alt+1　　快速打开或隐藏工程面板
+Alt+left/right　　切换代码视图
+F2 或 Shift+F2　　高亮错误或警告快速定位
+Tab　　代码标签输入完成后，按 Tab，生成代码
+Ctrl+Shift+F7　　高亮显示所有该文本，按 Esc 高亮消失
+
+5.搜索
+Ctrl＋N　　快速搜索类
+Ctrl＋Shift＋N　　快速搜索文件
+Ctrl＋Alt+Shift＋N　　快速搜索函数
+三个里面都有Include non-porjecct items选项,勾选则表示非当前文件中的jar里面所有的类也会被查找；
+
+https://pic2.zhimg.com/v2-40ef41c44d56d496e5b245f79ecc40e7_r.jpg
+
+
+Ctrl+Shift+F　　快速搜索字符串
+
+https://picx.zhimg.com/v2-d45daf84b5eed513ed78eb48153b6fe1_r.jpg
+
+
+Alt+F1　　查找代码所在位置
+Alt+F3　　逐个往下查找相同文本，并高亮显示
+
+6.光标移动和选中
+Ctrl＋Alt+Shift＋J 选中所有相应的目标
+Alt+Up/Down　　在方法间快速移动定位
+Ctrl+Shift+Up/Down　　向上/下移动语句
+*Ctrl+Up/Down　　光标中转到第一行或最后一行下*
+*Ctrl+B/Ctrl+Click　　快速打开光标处的类或方法（跳转到定义处）*
+
+** 三、Alt+Enter
+
+虽然只用一个组合按键，但是它的作用非常大
+1.提供代码提示
+
+https://pic1.zhimg.com/v2-75391e38299171d6b185028f5edb1dd4_r.jpg
+
+
+代码报错只要alt+Enter一下，他就为我们提供了好了解决方案；
+
+2.自动创建函数
+
+https://pic4.zhimg.com/v2-c6e98b70bd0ac5c0e0808d19ee05eee1_r.jpg
+
+
+只要写好函数名称，Alt+Enter一下，它就能帮我们自动创建好函数；
+
+3.list replace
+写完一个list用for遍历；Alt+Enter一下，他就告诉你还有更好的重构方法：
+
+https://pic3.zhimg.com/v2-5631b09bad1367d66489b806a5039488_r.jpg
+
+
+回车它就能帮你重构好；
+
+4.实现接口
+当我们需要实现接口的时候，只需要在接口的名称上Alt+Enter就能做到
+
+https://pic2.zhimg.com/v2-d6de7d656cbaa38fdef378873d4f3055_r.jpg
+
+
+5.单词拼写
+程序员好多都英语不好，Alt+Enter简直是他们的福音；
+当我们拿不准一个单词拼写对不对的时候不放，Alt+Enter一下。
+
+https://picx.zhimg.com/v2-8538521da8efe04a8fb49a8113b5fb19_r.jpg
+
+
+回车以后它能把相似的单词都列出来，
+
+https://pic1.zhimg.com/v2-e0bcc0c283935556d57c14670734ba14_r.jpg
+
+
+我们只需要找到对的那个就ok，是不是很好用。
+
+6.导包
+当你需要使用某个包时，只需要把光标移动到想导包的名称上，Alt+Enter导入完成；
+四、live Templates（模板）
+
+https://pic2.zhimg.com/v2-10835ed370a853b629a549a11d8e5e97_r.jpg
+
+
+这是定义了大量的模板，只用敲出小小的几个字母提示，就可以回车使用模板生成大量的代码；
+大家也可以在这里把常用的代码定义成模板，像main方法，for循环等等，方便快捷；
+例如public static final int可以定义成下图所示：
+
+https://pic4.zhimg.com/v2-1005ac0838f640ee105fd0bca4f383d9_r.jpg
+
+
+不会自定义的点击查看：[创建模板的教程](https://link.zhihu.com/?target=https%3A//www.imooc.com/video/16219)
+
+** *五、postfix*
+
+*大家在写代码的时候，写完代码会用点来提示我们，例如，100. 敲完回车会生成一个for循环，用到的就是postfix，这是一种比 live Templates还快的小助手，当然它也是不可编辑的，里面定义了大量常见的函数和模板，熟练使用能提高我们很多的编码效率；*
+*例如：*
+
+https://picx.zhimg.com/v2-2c3e4d72cfb0962c34e0774ee1fb9fe7_r.jpg
+
+
+回车以后结果如下
+1  List<String> strings = new ArrayList(); 2 for (int i = 0; i < strings.size(); i++) { 3 4         }
+
+** 六、重构
+
+Shift+F6  重命名
+所有的文件，类名，函数名，属性名都可以重命名，
+值得点赞的是，只要你使用Shift+F6重命名，所有使用过这个名称的地方都会跟着改变；
+函数的重构
+Ctrl+F6 重构函数
+当你需要重构方法时，无论是增加参数，修改返回值，还是更改函数实现，只需要Ctrl+F6，就可以把所有用到此函数的地方一起重构，界面如下
+
+https://pica.zhimg.com/v2-24ab7b02c8d0ae749f3e4ebca74b2012_r.jpg
+
+
+** 七、抽取
+
+https://pica.zhimg.com/v2-a5ccfe3875af3900bdf9573a1b4fe4ac_r.jpg
+
+
+1.抽取变量
+
+https://pic4.zhimg.com/v2-061fe38473cea5af62aa9456cec568cb_r.jpg
+
+
+类似于图中这样，很多地方都用到了“aaaaaa”这个字符串，很明显我们把“aaaaaa”抽取出来会更好；
+对着它Ctrl+Alt+v
+
+https://pic4.zhimg.com/v2-d12928769fabea19fad52478bcb4bf69_r.jpg
+
+
+我们按照自己的需求，选择抽取一个还是抽取所有；
+Ctrl+Alt+C    抽取静态变量
+Ctrl+Alt+F    抽取成员变量
+使用方法和抽取变量类似
+Ctrl+Alt+P　　抽取方法参数
+Ctrl+Alt+M　　抽取方法
+当一个方法长度过长的时候，只需要把代码分离成多个模块，选中各个模块只要Ctrl+Alt+M就能抽取为一个新的方法，我们只需要引用就好；
+
+* 其他的一些小技巧：*
+1.每次写完代码都  Ctrl＋Alt+L 一下，代码美观又符合规范；
+
+*IntelliJ IDEA的功能真的是强大到爆裂，这只是总结了很少的一部分，欢迎大家在评论区补充；*
+
+相关文章：
+[intellij idea 2018 激活](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/clwydjgs/p/9352988.html)
+[IDEA 代码规范插件](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/clwydjgs/p/9243122.html)
+[使用IntelliJ IDEA 配置Maven（转）](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/clwydjgs/p/9770681.html)
+
+[Visual Studio Code（VS code）你们都在用吗？或许你们需要看一下这篇博文](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/clwydjgs/p/10078065.html)
+
+[http://weixin.qq.com/r/Ex1pcUbEtxvIrQIS90gB](https://link.zhihu.com/?target=http%3A//weixin.qq.com/r/Ex1pcUbEtxvIrQIS90gB) (二维码自动识别)
+
+欢迎大家关注公众号Dawnzhang，不定时干货，只做有价值的输出
+作者：[Dawnzhang](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/clwydjgs/)
+出处：[https://www.cnblogs.com/clwydjgs/p/9390488.html](https://link.zhihu.com/?target=https%3A//www.cnblogs.com/clwydjgs/p/9390488.html)
+版权：本文版权归作者
+转载：欢迎转载，但未经作者同意，必须保留此段声明；必须在文章中给出原文连接；

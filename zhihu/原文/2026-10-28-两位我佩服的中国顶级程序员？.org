@@ -1,0 +1,84 @@
+#+TITLE: 两位我佩服的中国顶级程序员？
+#+LINK: https://zhuanlan.zhihu.com/p/421833269
+#+AUTHOR: 张小方
+#+TYPE: article
+#+DATE: 2026-10-28
+
+我读书的时候，特别仰慕两位大神：
+
+一位是*云风*——吴云洋，这是一位水平非常高的前辈，当年他一毕业就被网易 CEO 的丁磊一张机票接到网易去了，担任梦幻西游的主程序，这个游戏后来成了经典，也成就了网易。我那会儿读他写的游戏库代码以及他去网易的前后的故事、他如何招人、如何创业，非常钦佩。虽然现在很多优秀的大学生被大厂录取，但是被 CEO 直接点名，买好飞机票请到公司后无来者。
+
+我上学的时候阅读风魂的代码，深有感慨，虽然代码的风格和变量命名如今看来略有稚嫩，但一个大学生可以熟练的用 C/C++ 和汇编写出流畅的程序，并且这个程序还能被商业公司使用的事迹，已经超过现在 99% 的计算机相关专业的大学生了。
+
+https://pic3.zhimg.com/v2-33a704a002679cbfbd91b2f54b86fd4c_r.jpg
+
+
+*风魂源码下载：*
+
+#+begin_quote
+链接: [https://pan.baidu.com/s/1248AP-njuXoRMlc6aHPcew](https://link.zhihu.com/?target=https%3A//pan.baidu.com/s/1248AP-njuXoRMlc6aHPcew)
+提取码: dp5v
+#+end_quote
+
+他的个人博客[云风的 BLOG](https://link.zhihu.com/?target=https%3A//blog.codingnow.com/)。
+
+https://pic3.zhimg.com/v2-49cb6b326c84966e354432e22e1b4416_r.jpg
+
+
+大神就是大神，连发型和我们都不一样～～
+
+云风写了一本书叫《*游戏之旅——我的编程感悟*》，讲述了他学习编程的经历和成长的思考思考，书中学习技术的思路和见解值得学习。
+
+#+begin_quote
+**《游戏之旅——我的编程感悟》下载链接**（链接收集于网络，侵删）
+链接: [https://pan.baidu.com/s/16e9xH1aoohCNVgjibDNWww](https://link.zhihu.com/?target=https%3A//pan.baidu.com/s/16e9xH1aoohCNVgjibDNWww) 提取码: pfta
+#+end_quote
+
+https://pica.zhimg.com/v2-80946d546c606f91d89a7d6fa71e8066_r.jpg
+
+
+另外一位是*梁肇新*，超级解霸的作者。可能新一代的同学不知道超级解霸当年在国内作为媒体播放的地位，曾几何时，超级解霸就是媒体播放工具的代名词，是 PC 用户桌面的必备软件。
+
+梁肇新也是那个年代的技术偏执狂和 IT 传奇英雄。超级解霸及暴风影音是国内唯一能与微软Windows Media Player、Real Player 展开争夺的桌面播放器。
+
+https://pic1.zhimg.com/v2-1a0b02cc64af313b1a90478b8fc144ea_r.jpg
+
+
+大神笑容可掬
+
+老前辈也写了一本书，叫《*编程高手箴言*》，一听这个书名就很霸气，现在没人敢说自己是“编程高手”。
+
+#+begin_quote
+**《编程高手箴言》下载链接**（链接收集于网络，侵删）
+（链接: [https://pan.baidu.com/s/1xY0_go6wOV3Qggj9ZfUwHA](https://link.zhihu.com/?target=https%3A//pan.baidu.com/s/1xY0_go6wOV3Qggj9ZfUwHA) 提取码: dwh5 ）
+#+end_quote
+
+https://pic4.zhimg.com/v2-82126c64e7e585eef3f2ba41d3af7239_r.jpg
+
+
+我学生时代开始学的是 Web 开发，后来学 PHP、ActionScript，看了这两位前辈的图书之后，坚定了我把底层原理好好学好的信念。
+
+用一句话勉励后来想进入软件开发的学弟学妹：
+
+#+begin_quote
+不读洛阳纸贵之书，不赴争相参观之地，不信喧嚣一时之论。以是，大器初成。
+#+end_quote
+
+*当然，作为一个 IT 从业老鸟，除了认真学习前辈大神的精神，我们自己也要努力学习，这里我分享下我的学习书单吧：*
+
+https://pic1.zhimg.com/v2-c6e2b054c7c5cfd0f02ec86a203c4ba8_r.jpg
+
+
+*获取链接*：
+
+[计算机必看经典书籍（含下载方式）](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/JcaLLTBWiRKlfzZIyilNIQ)### CppGuide
+
+我学习 C/C++ 十多年了，目前在大厂做架构，深知新手学习 C/C++ 和基础原理知识的重要性，因此特地给 C/C++ 开发的同学精心准备了一份优质学习资料————*CppGuide*，内容从 C/C++ 语言、网络编程、操作系统原理到完整的项目源码分析，同时这份资料也包括 C/C++ 学习方法、推荐的阅读书籍、简历指导和求职技巧等。
+
+https://pic4.zhimg.com/v2-a88f8d49ee1b11920d2a724fb79e244f_r.jpg
+[CppGuide 学习资料](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/Oej6y-pYcv20YGo6cCyLwg)
+
+https://pic2.zhimg.com/v2-9589af106ff206d153bf658365594c45_r.jpg
+
+
+原创不易，如果觉得有用，请给 [@张小方](https://www.zhihu.com/people/11275cdedcdc7011d17004765b515b0f) 点个赞吧～

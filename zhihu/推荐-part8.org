@@ -437,3 +437,189 @@ Keigo，平时是普通的上班族，脑洞上线后，则是猛戳你笑点的
   #+end_quote
     【我的想法】
 
+
+
+* 我的 Vim 文集整理  :推荐:Vim:资源索引:工具链:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/347281664
+  :作者:  韦易笑
+  :原文:  [[file:原文/2026-10-28-我的 Vim 文集整理.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-我的 Vim 文集整理.org][打开本地归档]]
+  - 一句话概括：韦易笑（skywind3000）把自己写过的 Vim 文章、站外速查表和十几个自研插件收成一页索引；值得收是因为它等于一份「中高级 Vim 用户工具链清单」，尤其 asyncrun/asynctasks 和 vim-init 这两条线，比零散搜教程省事。
+  【方法/论点要点】
+  - 使用技巧线：Linux 下用 Vim 8 搭 C/C++ 环境、类 vscode 的任务系统、GTags 与 LSP 两种符号索引、内置终端调教、VimScript 五分钟入门、YouCompleteMe 配置。
+  - 杂文线：回应「用 Vim 被说装逼」、Vim 与 Emacs 的深度比较。
+  - 站外资源：面向中高级用户的 Vim 中文速查表、Alt 键映射、终端里 ALT/BS 键设置、把 CTRL-h 映射为左方向键。
+  - 自研插件：asyncrun.vim（异步跑 shell 并输出到 quickfix）、asynctasks.vim（类 vscode 任务系统）、vim-quickui（基础 UI 控件）、vim-auto-popmenu（约 170 行实现字典/buffer 补全）、vim-dict（多语言词典）、vim-terminal-help、vim-cppman、vim-preview、vim-keysound、vim-init（全中文注释的轻量配置框架）、asyncrun.extra、gutentags-plus、quickmenu.vim。
+  - 还列出两个改造过的文本对象插件：argtextobj（via/cia/dia 操作函数参数）与 indent-object（vii 选中同缩进层代码）。
+  - 背景：知乎专栏改版后旧文难以收录，所以作者用一篇索引来补链接。
+  【原文摘录】
+  #+begin_quote
+  鉴于知乎专栏改版，基本原有专栏的核心功能是废了，我这个专栏主要是整理一下我自己的 Vim 文集，但是自己太早的文章似乎没法收录，因此专门做一个索引。
+  #+end_quote
+  #+begin_quote
+  asyncrun.vim：异步运行 shell 命令，并把结果实时输出到下方的 quickfix 窗口。
+  #+end_quote
+  #+begin_quote
+  vim-init：轻量级 Vim 配置框架，全中文注释，教学用。
+  #+end_quote
+  【我的想法】
+  这页的价值取决于你是否认可作者的取向：他要的是「把 Vim 当 IDE 用，但保留模态编辑的手感」，所以 asyncrun + asynctasks + gutentags-plus + cppman 是一条完整的 C/C++ 工作流，而不是一堆孤立插件。真正值得先试的是 asyncrun/asynctasks（异步编译不卡界面）和 vim-auto-popmenu（不想上 YCM/LSP 时的轻量补全）；vim-keysound 属于玩票，可以跳过。缺点是索引本身没有难度标注和先后顺序，新手照着全装会过载；另外部分插件面向 Vim 8.2/Neovim 0.4 以上，老环境要先确认版本。把它当「选型菜单」而不是「安装清单」更合适。
+
+
+
+* 汇编语言--x86汇编指令集大全  :推荐:x86:汇编:速查表:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/53394807
+  :作者:  愛是等待是细水长流
+  :原文:  [[file:原文/2026-10-28-汇编语言--x86汇编指令集大全.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-汇编语言--x86汇编指令集大全.org][打开本地归档]]
+  - 一句话概括：把 Intel x86/x87 常用指令按功能分类整理成一张带中文注释的速查表；值得收是因为它适合放在手边查「这条指令到底改哪个标志、操作数能不能是内存」，比翻几百页手册快。
+  【方法/论点要点】
+  - 数据传输：MOV/MOVSX/MOVZX、PUSH/POP/PUSHA/POPA/PUSHAD/POPAD、BSWAP、XCHG、CMPXCHG、XADD、XLAT；I/O 端口用 IN/OUT（立即数端口 0-255，DX 端口 0-65535）。
+  - 地址传送：LEA 取有效地址，LDS/LES/LFS/LGS/LSS 装 far pointer 到对应段寄存器。
+  - 标志传送：LAHF/SAHF、PUSHF/POPF、PUSHD/POPD。
+  - 算术与逻辑：ADD/ADC/INC、SUB/SBB/DEC、CMP、NEG、MUL/IMUL、DIV/IDIV，以及 AND/OR/XOR/NOT/TEST。
+  - 移位与循环：SHL/SHR/SAL/SAR、ROL/ROR/RCL/RCR，以及 LOOP/LOOPE/LOOPNE。
+  - 串操作：MOVS/CMPS/SCAS/LODS/STOS，配合 REP/REPE/REPNE 前缀。
+  - 控制转移：JMP、条件跳转 Jcc、CALL/RET、INT/IRET；处理器控制：CLC/STC/CLI/STI/CLD/STD、NOP/HLT/WAIT。
+  - 浮点 x87：FLD/FST/FSTP、FADD/FSUB/FMUL/FDIV、FCOM/FCOMP、FXCH 等，单独一节列出。
+  - 用法建议：把它当索引，遇到不确定的指令再查 Intel SDM 或 :help，不要指望靠背表学会汇编。
+  【原文摘录】
+  #+begin_quote
+  汇编指令集太多，如果不用就会忘记，所以将 intel 处理器官方的指令集整理一下，有需要的人可以参考一下！
+  #+end_quote
+  #+begin_quote
+  它们在存贮器和寄存器、寄存器和输入输出端口之间传送数据。
+  #+end_quote
+  #+begin_quote
+  LEA 装入有效地址.例: LEA DX,string ;把偏移地址存到DX.
+  #+end_quote
+  #+begin_quote
+  XLAT 字节查表转换.----BX指向一张256字节的表的起点, AL为表的索引值(0-255,即0-FFH); 返回AL为查表结果.
+  #+end_quote
+  【我的想法】
+  这是一份典型的「复制粘贴型资料」：分类框架来自老式汇编教材，注释简短，覆盖的是 16/32 位时代的常用指令，x86-64 特有的指令（如 MOVSXD、SYSCALL、SSE/AVX 系列）基本没有。所以它的正确用法是「查 32 位汇编课设和逆向入门题」，不是「查现代编译器输出」——看 GCC/Clang 的 -S 结果时，你会大量遇到 SSE/AVX 和 REX 前缀，这张表帮不上忙。另外它只列指令不列编码格式和标志位细节，真调试时还是得开 Intel SDM。优点是中文注释密度高、按功能分组清楚，打印一页放桌上比开网页顺手。
+
+
+
+* 计算机专业必读的经典书籍 (必看)  :推荐:书单:计算机基础:编程语言:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/268199124
+  :作者:  知乎用户39FLt3
+  :原文:  [[file:原文/2026-10-28-计算机专业必读的经典书籍 (必看).org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-计算机专业必读的经典书籍 (必看).org][打开本地归档]]
+  - 一句话概括：一份按「计算机思维→基础→语言」三层组织的精简书单，每格只留一两本公认经典；值得收是因为它没有堆几十本，而是给了初学者一条可以按顺序走的路线，且明确主张「书不在多，在经典」。
+  【方法/论点要点】
+  - 总原则：书不在于多，而在于经典；读经典是站在巨人的肩膀上。读书要和写代码交替，「看书、实践、看书」循环迭代。
+  - 计算机思维：《数学之美》《程序员的数学》系列、《编码》。
+  - 计算机基础·操作系统：《现代操作系统》《深入理解计算机系统》《自己动手写操作系统》《操作系统真象还原》。
+  - 计算机网络：《网络是怎么连接的》《计算机网络：自顶向下方法》《图解HTTP》。
+  - 编译原理：《编译器设计（第二版）》《编译原理》（龙书）。
+  - 算法与数据结构：《算法（第四版）》《算法导论》。
+  - 编程语言·C/C++：《C程序设计语言》《C++ Primer》《C和指针》《STL源码解析》《Effective C++》《深度探索C++对象模型》；作者认为看完后四本 C++ 才算入门。
+  - 书单还在更新，网络编程与 Java 系留了空位；文末附百度网盘打包链接（提取码 b6mw）。
+  - 作者的读书习惯：大部分书找 PDF 先筛选，确认值得反复读再买纸质版。
+  【原文摘录】
+  #+begin_quote
+  大学期间，我买了很多书，也看了很多技术书，发现书不在于多，而在于经典。
+  #+end_quote
+  #+begin_quote
+  读经典的书是站在巨人的肩膀上。
+  #+end_quote
+  #+begin_quote
+  推荐大家看书的时候保持 看书、实践、看书.... 这样不断的循环迭代，不要只看书也不要只写代码。理论结合实践才能进步最快！
+  #+end_quote
+  #+begin_quote
+  在这里也只推荐我觉得比较好的书，宁缺毋滥。
+  #+end_quote
+  【我的想法】
+  这份书单的优点是「少而硬」：操作系统没有塞一堆 Linux 内核书，算法只留 Sedgewick 和 CLRS，C++ 直接跳到 STL/Effective/对象模型，说明作者知道哪些是绕不过去的。但它默认读者是「科班、有课程配合」，所以《现代操作系统》和《编译原理》这种教材式大部头对自学者并不友好，先看《操作系统真象还原》或《编码》更容易建立手感。另一个问题是版本与时效：CSAPP 已出到第三版、C++ Primer 已到第五版，网盘链接里的 PDF 版本不明，建议按书名自己找最新版。真正该补的是它留空的「网络编程」和「Java 系」，以及一本讲调试/工具链的实践书——这些比再加一本理论书更能提升日常产出。
+
+
+
+* Neovim/Vim基础教程（面向萌新&推荐&感想）  :推荐:Vim:Neovim:学习路径:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/301008305
+  :作者:  Geometryolife
+  :原文:  [[file:原文/2026-10-28-Neovim_Vim基础教程（面向萌新&推荐&感想）.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-Neovim_Vim基础教程（面向萌新&推荐&感想）.org][打开本地归档]]
+  - 一句话概括：一位用 Vim/Neovim 一年的学生写的学习路径：从「把 Vim 当记事本」到跟 TheCW、老王入门，再到为 iPad 远程编程转 Neovim；值得收是因为它给的是「看什么、按什么顺序看」的清单，而不是又一份键位表。
+  【方法/论点要点】
+  - 起点：长期只用 vi/Vim 改配置文件，没体会到「编辑器之神」；真正启蒙来自 B 站 TheCW 的三期 Vim 基础视频——原来 Vim 有配置、配色、键位和插件。
+  - 键位选择：作者最初把 jkil 映射成方向键（因为 TheCW 用 Colemak），后来改回 hjkl，理由是 Linux 上大量工具默认 Vim/Emacs 键位，改来改去成本更高。
+  - 系统入门：老王（PegasusWang）在慕课网的免费课《玩转 Vim 从放弃到爱不释手》，约 5 小时，边看边操作，两天可过一遍，还会带到 Tmux。
+  - 进阶：官方文档。完整 PDF 手册 3000 多页，用户手册 300 多页；新手先看 300 页那本，装好 Vim/Neovim 后 :help 也是同一套内容。
+  - 转 Neovim 的直接原因：在 iPad + Termius 上用 Vim 快速移动光标会卡色块、刷新延迟，Neovim 没有这个问题；电脑上两者差别不大。
+  - 资源入口：vimdoc.sourceforge.net、vimcdoc（中文文档）、TheCW 与老王的 B 站主页、两个 Linux 交流群。
+  - 作者态度：网上基础教程已经很多，不必重复造轮子，直接推荐自己验证过的。
+  【原文摘录】
+  #+begin_quote
+  在 Vim 成为我的主力编辑器之前，所有的编程都是在 IDE 或其它现代编辑器上完成的。随着我写程序的代码量增多，我越来越明显感到「够鼠标」的疲惫感，我的手不想离开键盘。
+  #+end_quote
+  #+begin_quote
+  真正开始学 Vim 是跟着 TheCW 的三期 Vim 基础视频来学的，那时候才知道原来 Vim 这个丑丑的命令行编辑器也是有配置文件的，也是可以安装配色的，也是可以改键位的，甚至可以装插件！
+  #+end_quote
+  #+begin_quote
+  为了免去这些步骤，我想还是用 hjkl 吧，写了两天程序，发现 hjkl 也并非那么难。
+  #+end_quote
+  #+begin_quote
+  官方的 PDF 手册 3000 多页，有空可以慢慢看，也有一个 300 多页的用户手册。
+  #+end_quote
+  【我的想法】
+  这篇的价值是「路径」而不是「知识」：TheCW 建立兴趣、老王补系统操作、官方用户手册补完整性，三步各有明确产出，比一上来啃 3000 页手册现实得多。它也很诚实地记录了选型理由——不是「Neovim 更先进」，而是「iPad 上不卡色块」，这种具体到设备与场景的理由比参数对比可信。需要提醒的是文章写于 2020 年前后，如今入门还可以直接上 Neovim 的 :Tutor、kickstart.nvim 或 LazyVim，不必从零手写 vimrc；另外「hjkl 适应两天」因人而异，如果主要工作在浏览器/IDE 里，改键位或装 Vim 插件可能比全量迁移更划算。
+
+
+
+* 你一定会用的18个linux网络监控工具  :推荐:Linux:网络监控:运维:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/406473161
+  :作者:  微思网络
+  :原文:  [[file:原文/2026-10-28-你一定会用的18个linux网络监控工具.org][本地原文]]
+  :抓取:  2026-10-28
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-28-你一定会用的18个linux网络监控工具.org][打开本地归档]]
+  - 一句话概括：按「总带宽、批量输出、按连接、按进程」四类整理 18 个 Linux 网络监控命令行工具，并给出各自的适用场景与安装方式；值得收是因为它帮你按问题选工具，而不是背命令。
+  【方法/论点要点】
+  - 先分类再选型：总体带宽（nload、bmon、slurm、bwm-ng、cbm、speedometer、netload）、批量/可记录输出（vnstat、ifstat、dstat、collectl）、按套接字连接（iftop、iptraf、tcptrack、pktstat、netwatch、trafshow）、按进程（nethogs）。
+  - 实现机制不同：nload 等读 /proc/net/dev 拿统计；iftop/tcptrack/trafshow 用 pcap 抓包再汇总，因此能过滤流量但更重。
+  - nload：分入站/出站显示并画图，选项少，适合快速看总带宽。
+  - iftop：按连接显示带宽，可用 -n 禁止反解主机名（反解本身会产生流量），支持 pcap 过滤。
+  - iptraf：交互式、彩色，显示连接与主机间数据量。
+  - nethogs：按进程排序显示带宽，能定位「是谁把带宽吃满」，给出 PID、用户、路径。
+  - bmon：显示所有接口的负载、图表与包级信息。
+  - slurm：ASCII 图形接口负载，c/s/l 切换图形类型，功能简单。
+  - vnstat：后台守护进程持续记录，适合出历史报表（日/月），不是严格实时工具。
+  - bwm-ng、cbm、speedometer、netload：都是轻量实时总览，差别在输出形式（条形图/仪表/简短报告）。
+  - pktstat、netwatch、trafshow：按活动连接显示协议与速率，trafshow 仅 TCP、支持 pcap 过滤。
+  - ifstat、dstat、collectl：批处理输出，便于写日志或用其他程序分析；dstat/collectl 还能同时看 CPU、内存、磁盘。
+  - 安装：多数在发行版默认源，CentOS 常需 EPEL/RepoForge；文末提醒还有 ntop、darkstat 等 Web 方案与 Nagios 等企业级监控。
+  【原文摘录】
+  #+begin_quote
+  本文介绍了一些可以用来监控网络使用情况的 Linux 命令行工具。这些工具可以监控通过网络接口传输的数据，并测量目前哪些数据所传输的速度。
+  #+end_quote
+  #+begin_quote
+  一些命令可以显示单个进程所使用的带宽。这样一来，用户很容易发现过度使用网络带宽的某个进程。
+  #+end_quote
+  #+begin_quote
+  nload 等一些工具可以读取「proc/net/dev」文件，以获得流量统计信息；而一些工具使用 pcap 库来捕获所有数据包，然后计算总数据量，从而估计流量负载。
+  #+end_quote
+  #+begin_quote
+  vnstat 更像是一款制作历史报告的工具，显示每天或过去一个月使用了多少带宽。它并不是严格意义上的实时监控网络的工具。
+  #+end_quote
+  【我的想法】
+  这篇是典型的「工具清单文」，价值在分类维度而不是每条介绍：先问「我要看总量、看连接、还是看进程」，再选工具，就不会在十几个命令里乱试。实际运维里最常用的其实是三个组合：nload/iftop 做即时排查、nethogs 抓进程、vnstat 做月度流量对账；dstat/collectl 更适合长期采样。需要注意它写于 2021 年，部分工具已少维护（iptraf-ng 取代 iptraf、cbm 基本停更），而现代环境更常用 nload + ss + tcpdump + Prometheus/node_exporter；容器里则要先解决「看的是宿主机还是 namespace」的问题，这些原文都没涉及。把它当「知道有这类工具」的索引，具体命令还是 man 一下最稳。
+

@@ -1,0 +1,140 @@
+#+TITLE: 计算机专业必读的经典书籍 (必看)
+#+LINK: https://zhuanlan.zhihu.com/p/268199124
+#+AUTHOR: 知乎用户39FLt3
+#+TYPE: article
+#+DATE: 2026-10-28
+
+大学期间，我买了很多书，也看了很多技术书，发现书不在于多，而在于经典。
+
+读经典的书是站在巨人的肩膀上。
+
+所以我在这里列出我认为经典的书，尽量保持少，精简。
+
+推荐大家看书的时候保持 看书、实践、看书.... 这样不断的循环迭代，不要只看书也不要只写代码。理论结合实践才能进步最快！
+
+这是我大学买过看过的一些书。。。毕业的时候大部分都卖了，因为实在是太重了，现在我看书大部分也都是在网上找 PDF，这样一方面是携带方便，我一个电脑就可以随便存几百本书，另一方面是可以方便我快速筛选一些书，如果确实有特别好的书就会去购买纸质版的。
+
+https://pic3.zhimg.com/v2-cd1224960982f598cec4e10029bde90e_r.jpg
+
+
+在这里也只推荐我觉得比较好的书,宁缺毋滥。
+
+** **书单推荐**
+
+*** **一、计算机思维**
+
+- 《数学之美》
+
+https://pic4.zhimg.com/v2-118e14d84845206a09677658c6cacbbd_1440w.jpg
+
+
+- *《程序员的数学》系列*
+
+https://pic3.zhimg.com/v2-c7d5c7762f3d819c63a65b7c805fd238_1440w.jpg
+
+
+- 《编码》
+
+https://pic1.zhimg.com/v2-502c247c9fb0f849bffdfab06c6e4336_1440w.jpg
+
+
+*** **二、计算机基础**
+
+*** **2.1 操作系统**
+
+- 《现代操作系统》
+
+https://pica.zhimg.com/v2-3b2b197fbf961d545668a6cf3af24892_1440w.jpg
+
+
+- 《深入理解计算机系统》
+
+https://pica.zhimg.com/v2-45f9c10197efddffa1797080c3030e8c_1440w.jpg
+
+
+- 《自己动手写操作系统》
+
+https://pic1.zhimg.com/v2-9f2e369df9894ad0c45e7ba629c8eb54_1440w.jpg
+
+
+- 《操作系统真象还原》
+
+https://pic3.zhimg.com/v2-bbcf8ebb369cbd22650f9e813ea38d38_1440w.jpg
+
+
+*** **2.2 计算机网络**
+
+- 《网络是怎么连接的》
+
+https://picx.zhimg.com/v2-e6e9f9d6c9d50411eba70a05181e5d3f_r.jpg
+
+
+- 《计算机网络-自顶向下方法》
+
+https://picx.zhimg.com/v2-2db757b67e99e46786785d906b8ea6e9_1440w.jpg
+
+
+- 《图解HTTP》
+
+https://pic4.zhimg.com/v2-77b14795e6d86059261c657d12b43131_1440w.jpg
+
+
+*** **2.3 编译原理**
+
+- 《编译器设计-第二版》
+
+https://pic2.zhimg.com/v2-da19813f69bb80e69c423870b7f302c5_1440w.jpg
+
+
+- 《编译原理》
+
+https://picx.zhimg.com/v2-60b84c2312b9bb9e6e2acd27b50d2eff_1440w.jpg
+
+
+*** **2.4 算法与数据结构**
+
+- 《算法-第四版》
+
+https://pica.zhimg.com/v2-3efad8e68f45ff6139e080b584599d9c_1440w.jpg
+
+
+- 《算法导论》
+
+https://pic2.zhimg.com/v2-9ca2d3412b7e7e2fea135ffae89334c3_1440w.jpg
+
+
+** **三、编程语言学习**
+
+*** **C/C++：**
+
+- 《C程序设计语言》
+
+https://pic3.zhimg.com/v2-3a005f50b3647fae7f1379e75c2c9a9a_1440w.jpg
+
+
+- 《C++ primer》
+
+https://pic1.zhimg.com/v2-47744b90876767bca2bbc0b7406ebf44_1440w.jpg
+
+
+- 《C和指针》
+
+https://pic2.zhimg.com/v2-905337484b570ab72b6a613d364072c7_1440w.jpg
+
+
+- 《C++ primer》
+- 《STL源码解析》
+- 《Effective C++》
+- 《深度探索C++对象模型》
+- 看完上面 四本，C++算入门了，接下来靠你自己去进阶~
+- 网络编程：
+
+- Java系：
+
+持续更新中。。。
+
+上面的书籍链接:
+
+[https://pan.baidu.com/s/1-944EqDz3WslYSFc5o5xjQ#list/path=%2F](https://link.zhihu.com/?target=https%3A//pan.baidu.com/s/1-944EqDz3WslYSFc5o5xjQ%23list/path%3D%252F)
+
+提取码: b6mw
