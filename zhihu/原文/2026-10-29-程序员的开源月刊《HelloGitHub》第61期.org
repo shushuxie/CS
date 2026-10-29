@@ -1,0 +1,266 @@
+#+TITLE: 程序员的开源月刊《HelloGitHub》第61期
+#+LINK: https://zhuanlan.zhihu.com/p/368339940
+#+AUTHOR: HelloGitHub
+#+TYPE: article
+#+DATE: 2026-10-29
+
+#+begin_quote
+兴趣是最好的老师， *HelloGitHub* 让你对编程感兴趣！
+#+end_quote
+
+[[https://pic3.zhimg.com/v2-74e71f93e53267330c93e092618a3aa8_1440w.jpg]]
+
+** *简介*
+
+分享 GitHub 上有趣、入门级的开源项目。
+
+内容包括：有趣、入门级的开源项目、开源书籍、实战项目、企业级项目等，让你在短时间内感受到开源的魅力，对开源和编程产生兴趣！
+
+-----
+
+#+begin_quote
+*以下为本期内容* ｜每个月 *28* 号更新
+#+end_quote
+
+*** *C 项目*
+
+1、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/DoctorWkt/acwj][acwj]] ：教你写 C 语言编译器的实战教程。教程注重实战循序渐进，一步步教你如何用 C 语言写一个可以自己编译自己（自举）、能够在真正的硬件上运行的 C 语言编译器
+
+[[https://picx.zhimg.com/v2-1e3daa557063425bc301ed522597cacf_1440w.jpg]]
+
+2、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/facebook/zstd][zstd]] ：快速、无损的数据压缩算法 Zstandard 的实现。Zstd 的压缩比接近 lzma、lzham 和 ppmx，并且比 lza 或 bzip2 性能更好。在相似的压缩比情况下，它解压缩的速度比其他的算法都要快。很多知名项目和游戏都有这个算法的身影，示例代码：
+
+#+begin_src text
+static void compress_orDie(const char* fname, const char* oname)
+{
+    size_t fSize;
+    void* const fBuff = mallocAndLoadFile_orDie(fname, &fSize);
+    size_t const cBuffSize = ZSTD_compressBound(fSize);
+    void* const cBuff = malloc_orDie(cBuffSize);
+
+    /* Compress.
+     * If you are doing many compressions, you may want to reuse the context.
+     * See the multiple_simple_compression.c example.
+     */
+    size_t const cSize = ZSTD_compress(cBuff, cBuffSize, fBuff, fSize, 1);
+    CHECK_ZSTD(cSize);
+
+    saveFile_orDie(oname, cBuff, cSize);
+
+    /* success */
+    printf("%25s : %6u -> %7u - %s \n", fname, (unsigned)fSize, (unsigned)cSize, oname);
+
+    free(fBuff);
+    free(cBuff);
+}
+#+end_src
+
+[[https://pic2.zhimg.com/v2-2ad7d443c4ac32604091a522d6e3658f_1440w.jpg]]
+
+*** *C# 项目*
+
+3、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/ravendb/ravendb][ravendb]] ：一款快速、可靠的开源 NoSQL 数据库
+
+[[https://picx.zhimg.com/v2-66da37b1a365968bcbc617abdb3c008f_1440w.jpg]]
+
+4、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/files-community/Files][Files]] ：一个全新的文件管理器。采用 Fluent Design 和 Windows 平台最新的 API 实现，简约但不简单
+
+[[https://pica.zhimg.com/v2-a4c609124c5ef24413ce343c4f1ab610_1440w.jpg]]
+
+*** *Go 项目*
+
+5、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/cube2222/jql][jql]] ：用 Go 写的 JSON 数据查询工具。该工具安装方便，语法简单容易上手，实用示例代码很多比如：
+
+#+begin_src text
+# 查询 test.json 文件中，所有国家的名称
+cat test.json | jql '(elem "countries" (elem (keys) (elem "name")))'
+[
+  "Poland",
+  "United States",
+  "Germany"
+]
+#+end_src
+
+6、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/chanify/chanify][chanify]] ：基于 Go 实现的向 iOS 设备推送消息的服务。手机上安装好配套的 iOS 应用，然后以 Docker 的方式部署完服务，就可以通过一条命令推送指定消息到 APP 上，是不是很方便吖
+
+#+begin_src text
+# 发送文本消息
+$ curl --form-string "text=hello" "http://<address>:<port>/v1/sender/<token>"
+
+# 发送文本文件
+$ cat message.txt | curl -H "Content-Type: text/plain" --data-binary @- "http://<address>:<port>/v1/sender/<token>"
+#+end_src
+
+[[https://picx.zhimg.com/v2-45a4fe9e5d0861e554a3e09bc40155e7_1440w.jpg]]
+
+7、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/greyireland/algorithm-pattern][algorithm-pattern]] ：LeetCode 刷题集合项目。项目从 Go 语言入门讲起，总结了一套刷题模板和解题套路，示例代码为 Go 语言
+
+8、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/disintegration/imaging][imaging]] ：Go 语言的图像处理库。支持：调整大小、旋转、剪切、亮度调整等功能，示例代码：
+
+#+begin_src text
+// 调整
+dstImage128 := imaging.Resize(srcImage, 128, 128, imaging.Lanczos)
+// 锐化
+dstImage := imaging.Sharpen(srcImage, 0.5)
+#+end_src
+
+[[https://pica.zhimg.com/v2-7348084990dffca8de920e9873d4afc8_1440w.jpg]]
+
+9、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/hajimehoshi/ebiten][ebiten]] ：Go 语言的 2D 游戏引擎库。通过它可以轻松地用 Go 语言制作出支持多平台的 2D 游戏，项目中还包含很多示例代码，帮助你快速上手
+
+[[https://pic1.zhimg.com/v2-0eb79e21dc5b32e1fd32a5da121ccd32_1440w.jpg]]
+
+*** *Java 项目*
+
+10、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/CheckChe0803/flink-recommandSystem-demo][flink-recommandSystem-demo]] ：一个基于 Flink 实现的商品实时推荐系统。可以通过这个项目了解和学习推荐系统的设计和流程，该系统是通过 Flink 处理日志和统计商品热度，将处理好的数据放入 Redis 缓存。然后再将画像标签和实时记录放入 HBase。在用户请求获取推荐时，根据用户画像生成商品热度榜，并结合协同过滤和标签两个推荐模块，返回最终生成的商品推荐列表
+
+[[https://picx.zhimg.com/v2-8fc3d31ed142483d1d3827866768fd6b_1440w.jpg]]
+
+11、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/OpenRefine/OpenRefine][OpenRefine]] ：一款用于清理数据的桌面工具。通过可视化的方式分析、整理数据，支持 Windows、Linux、Mac 操作系统。拥有查询、过滤、去重、分析等功能，可以把杂乱的数据变成“整洁”的电子表格，还能够将结果导出成多种格式的文件。不会编程和 SQL 的小伙伴们，也可以轻松分析海量数据啦！
+
+[[https://pic4.zhimg.com/v2-e965dff1a145dc665ed6fe067939e76f_1440w.jpg]]
+
+12、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/jacoco/jacoco][jacoco]] ：Java 代码测试覆盖率库
+
+[[https://pic1.zhimg.com/v2-a26b959fc2ba9862539ab0b528ef2382_1440w.jpg]]
+
+13、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/oschina/kooder][kooder]] ：一个开源的代码搜索服务。为包括 GitLab、Gitea 的代码托管系统提供源码、仓库、Issue 的搜索服务
+
+[[https://pica.zhimg.com/v2-f03d184c65913ec6926ecd1abd904e04_1440w.jpg]]
+
+*** *JavaScript 项目*
+
+14、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Cloud9c/taro][taro]] ：一款 Web 轻量级的 3D 游戏引擎。底层基于 three.js 和 cannon-es 支持 3D 刚体物理引擎
+
+[[https://pica.zhimg.com/v2-f8c160a556560254c76e57de666f34de_1440w.gif]]
+
+15、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/thedevs-network/kutt][kutt]] ：免费开源的短链接服务。服务基于 Node.js+Express+React 实现，支持管理链接、自定义短链接、设置链接密码、访问统计等功能
+
+[[https://pic4.zhimg.com/v2-b6514fefff9b801efd6232bdc4baf37d_1440w.jpg]]
+
+16、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/xjh22222228/nav][nav]] ：一个支持 SEO 的静态导航网站。不依赖后端的纯前端项目开箱即用，简单清爽
+
+[[https://pica.zhimg.com/v2-14fcc49cc69e45e691a8f0792b631fc6_1440w.jpg]]
+
+17、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/jgraph/drawio][drawio]] ：一款简洁强大的绘图工具。免费开源可以自行部署也可以 [[https://app.diagrams.net/][在线使用]] ，功能上直追 Microsoft Visio。支持流程图、序列图、网络拓扑图、甘特图、思维导图、模型图等，还能导出多种格式类型比如 png、svg、PDF、HTML 和 VSDX 格式（Microsoft Visio 图形格式）
+
+[[https://pic1.zhimg.com/v2-46473c29e67e5f657958e97eade59fe2_1440w.jpg]]
+
+18、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/voidcosmos/npkill][npkill]] ：快速查找和轻松删除 node_modules 文件夹的工具。还在为 node_modules 占了很多磁盘空间而烦恼吗？还在手动找用不到的 node_modules 目录吗？快来试试 npkill 吧！轻松地删除 node_modules 目录
+
+[[https://pica.zhimg.com/v2-95f41eb068e74d437ccfdfee6460e8cc_1440w.gif]]
+
+*** *PHP 项目*
+
+19、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/q2a/question2answer][question2answer]] ：采用 PHP+MySQL 实现的免费开源的问答平台。基本上问答平台该有的功能它都有，那么问题来了是做个知乎还是 Stack Overflow 呢？
+
+- 支持回答投票、评论、最佳回答、关注和关闭问题
+- 完备的用户和权限管理
+- 多语言支持
+- 搜索时的相似问题匹配
+- 等等
+
+[[https://pic1.zhimg.com/v2-fe57ea1fa35491aa8e84ad65502efa3c_1440w.jpg]]
+
+*** *Python 项目*
+
+20、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/coolcode/tomato-clock][tomato-clock]] ：Python 写的命令行番茄工作法定时器。代码仅有 100 多行，不依赖其它第三方库
+
+#+begin_src text
+  tomato 25 minutes. Ctrl+C to exit
+   ---------------------------------------------- [8%] 23:4 ⏰ 
+#+end_src
+
+21、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/CCExtractor/vardbg][vardbg]] ：一款能够把 Python 程序执行过程，导出成视频或动图的代码调试工具。可用于动画学算法、制作代码讲解视频等场景
+
+[[https://pic2.zhimg.com/v2-703708100eb60bc48982cb0c738448ed_1440w.gif]]
+
+22、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/dwisiswant0/apkleaks][apkleaks]] ：扫描 APK 文件是否包含敏感信息的命令行工具
+
+#+begin_src text
+// custom-rules.json
+{
+  "Amazon AWS Access Key ID": "AKIA[0-9A-Z]{16}",
+  ...
+}
+$ apkleaks -f /path/to/file.apk -p rules.json -o ~/Documents/apkleaks-results.txt
+#+end_src
+
+[[https://pica.zhimg.com/v2-17fba8169561a689410525fbeff54664_1440w.jpg]]
+
+23、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/graphql-python/graphene-django][graphene-django]] ：让你轻松地将 GraphQL 整合到 Django 项目的库
+
+*** *Rust 项目*
+
+24、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/jhspetersson/fselect][fselect]] ：用类 SQL 的命令查找文件的命令行工具
+
+#+begin_src text
+fselect size, path from /home/user where name = '*.cfg' or name = '*.tmp'
+fselect size, abspath from ./tmp where size gt 2g
+fselect hsize, abspath from ./tmp where size lt 8k
+#+end_src
+
+*** *Swift 项目*
+
+25、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/vsouza/awesome-ios][awesome-ios]] ：超棒的 iOS 开源项目集合。它非常全面包含 Objective-C、Swift 语言的项目，拥有网络、UI、JSON、数据库、音视频等分类，iOS 初学者寻找开源项目的好地方
+
+[[https://pic3.zhimg.com/v2-0d034e585afe772ff6c1f0f25fae6a3e_1440w.jpg]]
+
+26、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/Lojii/Knot][Knot]] ：一款 iOS 抓包工具。实现了 HTTP(S) 解析、流量解析、多格式导出、证书管理以及过程分析等
+
+[[https://pic1.zhimg.com/v2-24acaf62aec5a7ee7edf86227e01a4ba_1440w.jpg]]
+
+27、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/devxoul/SwiftUITodo][SwiftUITodo]] ：用 SwiftUI 做的 Todo 工具。这是一个示例项目帮助新手掌握 SwiftUI
+
+[[https://pic2.zhimg.com/v2-2d7fd6a5b83de8433934832bd70d0189_1440w.jpg]]
+
+*** *其它*
+
+28、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/aliakseis/LIII][LIII]] ：免费开源的 BT 下载工具。如果你厌倦了广告、购买 VIP 才能提速，只想要一个简单好用的下载工具，那你可以试试这个开源项目
+
+[[https://pic1.zhimg.com/v2-ca6c7b9fe4e43cd100997d6c742cf60c_1440w.jpg]]
+
+29、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/YXL76/cloudmusic-vscode][cloudmusic-vscode]] ：网易云音乐 VS Code 插件。基于网易云网页 API 实现，支持：
+
+- 歌曲播放、收藏、喜欢
+- 心动模式、私人 FM
+- 评论（单曲、歌单...）
+- 歌词显示
+- 搜索（热搜/单曲/专辑/歌手...）
+- 等等
+
+[[https://pic1.zhimg.com/v2-fb812e68757c8d58ce7f8c92200f89d6_1440w.jpg]]
+
+30、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/tobspr/shapez.io][shapez.io]] ：一款 Steam 上的模拟建造游戏《异形工厂》的源码。游戏是在无边的地图上开采资源、放置设施、组合图形、相互搭配，扩建自己的异形工厂。游戏轻松但也很有挑战性，快去试一试吧
+
+[[https://picx.zhimg.com/v2-0e468c9343ff837dc8c0a98cc4622649_1440w.jpg]]
+
+*** *开源书籍*
+
+31、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers][Probabilistic-Programming-and-Bayesian-Methods-for-Hackers]] ：《黑客的贝叶斯方法：以 Python 为例》
+
+[[https://pic2.zhimg.com/v2-dde15598db8129b71171e0702d4b531b_1440w.jpg]]
+
+32、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/yifengyou/The-design-and-implementation-of-a-64-bit-os][The-design-and-implementation-of-a-64-bit-os]] ：《一个 64 位操作系统的设计与实现》
+
+33、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/snowkylin/tensorflow-handbook][tensorflow-handbook]] ：《简明的 TensorFlow 2》， [[https://tf.wiki/zh_hans/][在线阅读]]
+
+*** *机器学习*
+
+34、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/jasonmayes/Real-Time-Person-Removal][Real-Time-Person-Removal]] ：在 Web 浏览器中实时移除人像。该项目采用 JavaScript+TensorFlow.js 实现“凭空消失”
+
+[[https://picx.zhimg.com/v2-4a3ba18180aea92e395df007428befb5_1440w.jpg]]
+
+35、 [[https://hellogithub.com/periodical/statistics/click/?target=https://github.com/AMAI-GmbH/AI-Expert-Roadmap][AI-Expert-Roadmap]] ：人工智能学习路线图
+
+[[https://pic1.zhimg.com/v2-ac475d4e7a5d0ff85775a8d322939b0a_1440w.jpg]]
+
+** *最后*
+
+如果你发现了 GitHub 上有趣的项目，就 [[https://github.com/521xueweihan/HelloGitHub/issues/new][分享]] 给大家伙吧。
+
+以上就是本期的所有内容了，看完还不过瘾？
+
+关注 *HelloGitHub* 公众号不仅可以收到第一时间的更新。 *点击菜单栏->往期->月刊*
+
+往期月刊所有的内容尽收眼底一次看过瘾！还有更多开源项目的介绍和宝藏项目等待你的发现。

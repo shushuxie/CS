@@ -1,0 +1,66 @@
+#+TITLE: 首个 64 位版本！Visual Studio 2022 Preview 1 来了 | NET 6 Preview 5 正式发布！
+#+LINK: https://zhuanlan.zhihu.com/p/381769588
+#+AUTHOR: OS之家
+#+TYPE: article
+#+DATE: 2026-10-29
+
+#+begin_quote
+dotNET跨平台 | 张善友
+#+end_quote
+
+具有里程碑意义的Visual Studio 2022 Preview 1正式发布，重点是64位，而没有增加新功能，并且同时也发布了.NET 6 Preview 5。
+
+- [[https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/][https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/]]
+- [[https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-5/][https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-5/]]
+- [[https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-5/][https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-5/]]
+
+微软在4月份在官方的博客文章 宣布了VS2022 将是将他的宇宙IDE 第一次支持64位，不再局限于4gb 的内存限制，通过Windows上的64位的Visual Studio，你可以打开，编辑、运行和调试最大、最复杂的解决方案。
+
+微软通过一个Gif视频展示64位的优势，VS 可以轻松打开包含约1600个项目和大约300000个文件的解决方案（ *点击图像查看更大的动画 GIF 视图，来自微软官方博客文章* ）：
+
+[[https://pic1.zhimg.com/v2-02685df9596d7dfcc1c918e040a2dc90_1440w.jpg]]
+
+微软在6月17日的文章 Visual Studio 2022 Preview 1 now available!，关键目标是测试和调整新 64 位平台的可扩展性！这是一个巨大的变化，影响到IDE的每一个部分。微软呼吁早期采用者开发者帮助开展这项工作，称"我们需要您的反馈"。VS 2019 功能不包括在预览 1：
+
+- Web实时预览
+- 仪器分析仪
+- Azure 云服务项目支持
+- T-SQL 调试器
+- Web负载测试和测试控制器/测试代理
+- Azure数据湖
+- Coded界面测试
+- DotFuscator
+- 内置 IDE 集成
+- 智能提示的代码查找并替换
+
+64 位版本Visual Studio 2022 Preview 1 三个版本的早期版本（社区、专业版和企业版） ，现在已经可以下载了：
+
+#+begin_quote
+[[https://visualstudio.microsoft.com/zh-hans/vs/preview/vs2022/][https://visualstudio.microsoft.com/zh-hans/vs/preview/vs2022/]]
+#+end_quote
+
+[[https://pica.zhimg.com/v2-90aa95ce7c416d347c299db95bb9633a_1440w.jpg]]
+
+它还附带 .NET 6 SDK（预览版），包括.NET MAUI 项目的基本支持，后者需要单独安装，参考文章 ：
+
+#+begin_quote
+[[https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-5/][https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-5/]]
+#+end_quote
+
+.NET 6 Preview5主要对它进行了一小部分新功能和性能的改进。.现在，大多数的功能都已经包含在里面，但是有许多功能还未到最终状态。预计这个版本在Preview 7中完善。
+
+具体可以看冯辉翻译的文章：
+
+#+begin_quote
+[[https://www.cnblogs.com/yyfh/p/13091131.html][https://www.cnblogs.com/yyfh/p/13091131.html]]
+#+end_quote
+
+[[https://picx.zhimg.com/v2-714ccf770afe197c48a4180987b66b0f_1440w.jpg]]
+
+NET MAUI代表 .NET 多平台应用 UI，微软将其描述为构建跨越移动、平板电脑和桌面的本地设备应用程序的框架。
+
+至于哪些新功能将在 Preview 2 中首次亮相，微软没有明确说明，根据发布说明 2019 v16.11 -现在也在预览- 将是VS 2019年系列的最后一个， 新的64位版本被称为Visual Studio 2022 v17.0
+
+#+begin_quote
+来源： [[https://mp.weixin.qq.com/s?__biz=MzAwNTMxMzg1MA==&mid=2654084456&idx=1&sn=7789714ee090d082947cf38a645f29b6&chksm=80d8393db7afb02bc37388afdde90589cadcf9d7127d706606cc0b6c204702fecccee43303cd&mpshare=1&scene=23&srcid=0618LVEgU8MSfdfICo3hHkyr&sharer_sharetime=1623981951892&sharer_shareid=6c47f01aa7bf607504b1a7c03c44d915#rd][dotNET跨平台]] | 经授权发布
+#+end_quote

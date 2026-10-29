@@ -1,0 +1,260 @@
+#+TITLE: 设计师必备地图合集（附高清地图下载工具）
+#+LINK: https://zhuanlan.zhihu.com/p/38076305
+#+AUTHOR: 于子小样
+#+TYPE: article
+#+DATE: 2026-10-29
+
+我一直对地图网站&应用比较感兴趣。通过地图，我们可以更直观、更全局性的了解一片区域，现在地图的功能已经不仅仅局限于在户外辅助我们找路or辨别方向，而是与互联网、大数据等等结合，开拓出了各种新方向。
+
+高端点的地图应用在本文中间部分，大家常用或者了解的地图都有哪些？在本文没有列举到的也可以在评论区回复。另外我打算组建个地图+大数据的兴趣群，加群方式见文末
+
+*现在都有什么地图？*
+
+*基础地图服务平台* （也就是大家可以在线看看，简单操作的地图）：谷歌地图、谷歌地球、百度地图、搜狗地图、腾讯地图、高德地图，搜搜地图、图吧、地球在线、城市吧、E都市、必应地图、苹果地图、维基地图等等。
+
+Zoom Earth，可切换多种地图浏览，比如NASA、夜景等等。
+
+[[https://pic4.zhimg.com/v2-3c17b916af53f437ec06ca4e0a5f4e0f_1440w.jpg]]
+
+[[https://pic2.zhimg.com/v2-ce4e82306860520ed7018495a6ef7d71_1440w.jpg]]
+
+HERE（诺基亚地图服务，可查看世界多个城市的3D模型和街景）
+
+[[https://pic3.zhimg.com/v2-925d7f00c0334df248b0ba148628d140_1440w.jpg]]
+
+有时候我们的需求还不只是随便看看那么简单，比如我们经常需要看谷歌地图，但是他是在墙外的，这时候我们可以借助奥维互动；又比如我们做设计经常需要 *下载高清地图* 作为底图，这里给大家推荐下面几个工具，尤其推荐全能电子地图下载器（堪称神器，过些天我们会有单独的文章来介绍此下载器，在我们的公众号yizhoudesign后台 *回复“高清地图下载工具”可获取此神器* ）
+
+*地图浏览+高清地图下载工具：* 奥维互动地图浏览器、全能电子地图下载器、稻歌Google Map截获器、google earth pro (免费)、水经注等等
+
+*可以浏览下载谷歌地图、百度地图、必应地图等各种地图*
+
+[[https://pic3.zhimg.com/v2-adeb0e70dbbcbdb6e85b92f868324326_1440w.jpg]]
+
+*可以叠加等高线*
+
+[[https://pic2.zhimg.com/v2-3e33ed54f5e6821fab817cbc38df9f6d_1440w.jpg]]
+
+*还可以做一个断面或者一个路径的高程分析* （公众号yizhoudesign后台回复“高清地图下载工具”即可获取此神器）
+
+[[https://pic1.zhimg.com/v2-2daae83a9bd885d4fed457b87276ac7a_1440w.jpg]]
+
+*除了上面说的功能，我们可以用地图做什么？*
+
+*对规划师、建筑师、景观设计师来说最基础的用途当然还是辅助调研、辅助分析。* 辅助调研的地图工具，这里给大家推荐非常实用的奥维互动下图为软件截图，可以实时记录我们的调研轨迹，还可以加点或者块的标注，更重要的是这个轨迹是可以导出的，这就能产生非常多的扩展用法。
+
+[[https://pica.zhimg.com/v2-0bbe65ca1b9350847c14f7283c832ab8_1440w.jpg]]
+
+其他一些地图分析功能，大家可以先看看之前设计e周发过的几篇文章
+
+<u>*[[http://mp.weixin.qq.com/s?__biz=MzA5NzExOTIyMw==&mid=2652303529&idx=1&sn=8741d3018c8df8da7e7511bf0d7370cd&scene=21#wechat_redirect][哇！这个神器Map可以在线生成场地SU模型]]*</u>
+
+*[[https://cadmapper.com/][https://cadmapper.com/]]*
+
+[[https://pic3.zhimg.com/v2-aaa2aa160e369bcd4085f58f04d930ec_1440w.gif]]
+
+[[https://pic1.zhimg.com/v2-3c52879807dfc4e19d2dcea0a200cca8_1440w.jpg]]
+
+*<u>[[http://mp.weixin.qq.com/s?__biz=MzA5NzExOTIyMw==&mid=2652304204&idx=1&sn=883f5fb0fcc38b5405bfc5036b4383b5&chksm=8b47edd4bc3064c24a869aad061bee515468d32b7dee8f786269644e42c3d7b1d36aca369dec&scene=21#wechat_redirect][一个让你get到CAD底图的神技能:Openstreetmap+GlobalMapper]]</u>*
+
+[[https://pic3.zhimg.com/v2-d4cb1e07d30685754b1844aac39b9fd8_1440w.gif]]
+
+*<u>[[http://mp.weixin.qq.com/s?__biz=MzA5NzExOTIyMw==&mid=2652304201&idx=1&sn=267838d701fb36479155e54e704161b4&chksm=8b47edd1bc3064c7a14672f110074012a0bcfcabb0f795d1fcaa76d50c87a19f0ac8032a2ebf&scene=21#wechat_redirect][如此强大的Power Map你竟然没用过！大牛教你用Excel做数据可视化分析]]</u>*
+
+[[https://pic2.zhimg.com/v2-88a63f79fe002808303c5510f700ef23_1440w.gif]]
+
+*[[http://mp.weixin.qq.com/s?__biz=MzA5NzExOTIyMw==&mid=2652304901&idx=2&sn=2861ab7209c22964b752c0e584f04b2e&chksm=8b47e89dbc30618b7ef7052a289af55203d85dc4d07bd9cfb6c435f33edb235a571879179bed&scene=21#wechat_redirect][教你玩转大数据可视化，让你的分析图有颜有逻辑]]*
+
+*<u>[[http://mp.weixin.qq.com/s?__biz=MzA5NzExOTIyMw==&mid=209607326&idx=1&sn=6ac2fac3c1509d2baf194b8c0a910a8a&scene=21#wechat_redirect][地形制作+速成场地分析,给那些不想深入学gh的一个捷径/阿牛哥]]</u>*
+
+[[https://pica.zhimg.com/v2-1e94f08f59e9c1e4a5de3113834ba9c4_1440w.jpg]]
+
+[[https://picx.zhimg.com/v2-8d70bc2412e57033be54c8bd6b4ed01d_1440w.jpg]]
+
+*[[https://mp.weixin.qq.com/s?__biz=MzA5NzExOTIyMw==&mid=2652313523&idx=4&sn=558f1a9ede8ff83e99ccd3768244ad8e&chksm=8b46092bbc31803dcb1ed175f45c8b021dc35c68985a29b3f4e608322b72cd845616201311d1#rd][大数据分析+空间句法+GIS实战 +分析方法论等国际前沿技能来袭！]]*
+
+[[https://www.zhihu.com/video/990583457512247296][https://www.zhihu.com/video/990583457512247296]]
+
+*做上述面几个教程的地图*
+
+Google maps api，需FQ
+
+*[[http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html][http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html]]*
+
+[[https://pic2.zhimg.com/v2-f57cdecc5ff4442533ea4d5f29f2875f_1440w.jpg]]
+
+还有大家比较熟悉的 *openstreetmap*
+
+*[[http://www.openstreetmap.org/][http://www.openstreetmap.org/]]*
+
+[[https://pic4.zhimg.com/v2-3452a275361c8ce3f69b603cc5f1cb1b_1440w.jpg]]
+
+*越来越酷炫的mapbox*
+
+*[[https://www.mapbox.com/][https://www.mapbox.com/]]*
+
+[[https://pic4.zhimg.com/v2-245771e9e78c98f81b9d3698f7e09471_1440w.jpg]]
+
+[[https://pic3.zhimg.com/v2-5cea214e4393050c935fd4b84509006e_1440w.jpg]]
+
+Digimap，国外教育机构的学生能免费下载到大量的地图源文件，包括dwg格式的线稿： *[[http://digimap.edina.ac.uk/][http://digimap.edina.ac.uk/]]*
+
+-----
+
+最强大的地图编辑软件，非GIS莫属，它是专业的地理信息系统应用软件，可以做各种高大上+实用的分析，当然学起来还是需要点耐心。
+
+[[https://pic1.zhimg.com/v2-c4a7ea5f5b868530026a472280f664b6_1440w.jpg]]
+
+[[https://pic2.zhimg.com/v2-484649c0c1815df92c612755cc3da59f_1440w.jpg]]
+
+*另外一款地图软件Global Mapper，* 拥有强大的地图绘制功能，能够为用户编辑、转换、打印、跟踪记录GPS以及对数据运用GIS地图信息功能，软件能够将数据转换为光栅地图、海拔地图、矢量地图等功能。同时还支持浏览、合成、输入、输出上面上主流的扫描点阵图、矢量数据等信息。
+
+*网址： [[http://www.bluemarblegeo.m][http://www.bluemarblegeo.m]]*
+
+[[https://pica.zhimg.com/v2-cc881e3b8047d0ba9f04a2f0c23b9560_1440w.jpg]]
+
+用GIS或者其他可视化分析软件的时候当然我们经常最缺的还是数据，像手机信令数据，出租车轨迹数据，微博签到数据等等，这个需要找相关的部门合作了，这里给大家先推荐四个数据获取平台。
+
+*地理空间数据云 [[http://www.gscloud.cn/][http://www.gscloud.cn/]]*
+
+[[https://pic2.zhimg.com/v2-e29d73965b101cc01727b1974a131795_1440w.jpg]]
+
+*国家数据共享平台 [[http://www.chinageoss.org/dsp/home/index.jsp][http://www.chinageoss.org/dsp/home/index.jsp]]*
+
+[[https://pic1.zhimg.com/v2-f585d2be7a7c054f52e1188075aa0110_1440w.jpg]]
+
+国家测绘局的全国地理信息资源目录服务系统，有适量地图、高程地图、模拟地形图等等，不过貌似要付费。
+
+*[[http://www.webmap.cn/][http://www.webmap.cn/]]*
+
+[[https://pic4.zhimg.com/v2-bf80d33b6689782534701185261e60f7_1440w.jpg]]
+
+*DIVA-GIS [[http://www.diva-gis.org/Data][http://www.diva-gis.org/Data]]*
+
+[[https://pic3.zhimg.com/v2-ecfcd357fe264f5035cd269e92f394fa_1440w.jpg]]
+
+目前发现做的比较好的关于地图、大数据平台是 *beijing city lab 北京城市实验室，* 这个可以多多膜拜学习。
+
+有很多自己研究的地图，非常有意思，对大数据感兴趣的，可以多看看哦。
+
+[[https://picx.zhimg.com/v2-deb285da78c1851df4036f8604e79823_1440w.jpg]]
+
+[[https://pic3.zhimg.com/v2-858aa3da208ce4917e8f73d75e30f6c8_1440w.jpg]]
+
+哦，对了还有 *UrbanDashboard 北京城市空间画像* 也不错，不过内容还比较少
+
+*[[http://www.urbandataview.com][http://www.urbandataview.com]]*
+
+[[https://pic2.zhimg.com/v2-a4a341d51cc87d7bbfaf8c427acd9447_1440w.jpg]]
+
+[[https://pic2.zhimg.com/v2-6747c24061eed6673ac22a47ebe2e20d_1440w.jpg]]
+
+除了上述可以供我们直接看的普通地图，以及我们可以用来做分析的软件、数据平台，还有很多现成的分析成果平台,我们就可以直接拿来查数据、出结果了。
+
+*国家测绘局开发的天地图* ，有很多实用的图层，还有时间对比条，基础地理、地理单元与科学测站、人口统计、社会经济、历史、居民生活、自然环境、灾害、资源等
+
+*[[http://map.tianditu.com][http://map.tianditu.com]]*
+
+[[https://pic1.zhimg.com/v2-1d35440972995a9c09bdc198f1c23688_1440w.jpg]]
+
+*5A 、4A 、3A级景区的分布地图*
+
+[[https://pica.zhimg.com/v2-59b707ce07f40a0af79795f5dd092482_1440w.jpg]]
+
+*各地区、各城市国营、私营、大中型工业企业分布统计，还可以按年份对比*
+
+[[https://pic4.zhimg.com/v2-dc3d7ec0d4314885455f80733effd81b_1440w.jpg]]
+
+*各种地表覆盖的分布：人造地表、森林、耕地、湿地——点选对应图层即可展示*
+
+[[https://picx.zhimg.com/v2-64877dfa806d489514af48c8a3dd1513_1440w.jpg]]
+
+哈佛大学开发的研究型地图： *Worldmap*
+
+*[[http://worldmap.harvard.edu/][http://worldmap.harvard.edu/]]*
+
+哈佛大学开发的研究型地图： *Chinamap*
+
+*[[http://worldmap.harvard.edu/maps/79][http://worldmap.harvard.edu/maps/79]]*
+
+和天地图一样，分的图层也很多，上面也很全面资源分布、历史地图应有尽有
+
+[[https://pic2.zhimg.com/v2-e25280bac9a21a1f8d81891da863724f_1440w.jpg]]
+
+[[https://pic3.zhimg.com/v2-4783cd9ec32360efa3ce2b4ef674b062_1440w.jpg]]
+
+[[https://pic3.zhimg.com/v2-a5933cf68c66478c7ac8ca2e53ea9154_1440w.jpg]]
+
+*targetmap打造属地图，可以在线创建、定制、分享数据地图*
+
+[[https://pic1.zhimg.com/v2-9663383fb1ae52bbb41bbf264118623e_1440w.jpg]]
+
+*地图慧 [[http://c.dituhui.com/][http://c.dituhui.com/]]*
+
+[[https://pic4.zhimg.com/v2-1785deb46867d875afdbcb9700222797_1440w.jpg]]
+
+Topoview（可查看历史地图1880-2010）
+
+*[[http://ngmdb.usgs.gov/maps/topoview/viewer/#5/39.690/-98.064][http://ngmdb.usgs.gov/maps/topoview/viewer/#5/39.690/-98.064]]*
+
+[[https://picx.zhimg.com/v2-8d20c8d9589f928efa7f16d0f8a6c86f_1440w.jpg]]
+
+*百度人气地图 [[http://renqi.map.baidu.com/][http://renqi.map.baidu.com/]]*
+
+[[https://pic4.zhimg.com/v2-1c00fe02ea90f0f8cbb50cd0714bba13_1440w.jpg]]
+
+*百度通勤图 [[http://renqi.map.baidu.com/traffic/][http://renqi.map.baidu.com/traffic/]]*
+
+[[https://pic4.zhimg.com/v2-c2118cb088e7996cfae27d22e86276bd_1440w.jpg]]
+
+*百度热力地图 [[http://map.baidu.com/heatmap/index/index/][http://map.baidu.com/heatmap/index/index/]]*
+
+[[https://pica.zhimg.com/v2-b450ddaf2eec4799d0cfabfcdcd487e4_1440w.jpg]]
+
+*百度迁徙 [[http://qianxi.baidu.com/][http://qianxi.baidu.com/]]*
+
+*腾讯迁徙地图 [[http://hot.qq.com/qianxi/][http://hot.qq.com/qianxi/]]*
+
+[[https://pica.zhimg.com/v2-7dc2839180457616304716601232988a_1440w.jpg]]
+
+*百度预测 [[http://trends.baidu.com/][http://trends.baidu.com/]]*
+
+[[https://pica.zhimg.com/v2-04bd759a074d76e2aacd5b6bf6e76f7e_1440w.jpg]]
+
+*百度天眼（已经停用）*
+
+[[https://picx.zhimg.com/v2-91ef53c4a9959b0de2e82ec006d3419f_1440w.jpg]]
+
+*百度慧眼 [[http://huiyan.baidu.com/product][http://huiyan.baidu.com/product]]*
+
+[[https://pica.zhimg.com/v2-9f3413aa8089df10cd9c94310433a552_1440w.jpg]]
+
+*其他地图应用*
+
+*谷歌星空（Google Sky Map）*
+
+[[https://pic1.zhimg.com/v2-16b2eec7690970481586908d6f3be7e8_1440w.jpg]]
+
+*上帝之眼*
+ *[[http://www.godeyes.cn/][http://www.godeyes.cn/]]*
+
+以上数据来源
+
+作者经验+参考网络
+
+[[https://mp.weixin.qq.com/s?__biz=MzA5NzExOTIyMw==&mid=2652313523&idx=4&sn=558f1a9ede8ff83e99ccd3768244ad8e&chksm=8b46092bbc31803dcb1ed175f45c8b021dc35c68985a29b3f4e608322b72cd845616201311d1#rd][大数据分析+空间句法+GIS实战 +分析方法论等国际前沿技能来袭！]]
+
+地址： [[http://www.zhihu.com/question/21530085][http://www.zhihu.com/question/21530085]]
+
+40 Maps That Will Help You Make Sense of the World
+
+地址： [[http://twistedsifter.com/2013/08/maps-that-will-help-you-make-sense-of-the-world/][http://twistedsifter.com/2013/08/maps-that-will-help-you-make-sense-of-the-world/]]
+
+-----
+
+打算组建个 *地图+大数据的兴趣群* 可以加我WX号iedayq邀请
+
+（备注地图兴趣群，进群请备注行业+城市+单位/学校）
+
+[[https://mp.weixin.qq.com/s?__biz=MzA5NzExOTIyMw==&mid=2652313523&idx=4&sn=558f1a9ede8ff83e99ccd3768244ad8e&chksm=8b46092bbc31803dcb1ed175f45c8b021dc35c68985a29b3f4e608322b72cd845616201311d1#rd][大数据分析+空间句法+GIS实战 +分析方法论等国际前沿技能来袭！]]
+
+[[http://v.ieday.cn/][意周教育 - 设计教程|留学作品集与文书|一对一辅导课|设计知识库]]

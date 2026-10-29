@@ -1,0 +1,158 @@
+#+TITLE: 城市大数据及开放数据索引
+#+LINK: https://zhuanlan.zhihu.com/p/170520125
+#+AUTHOR: 樊川
+#+TYPE: article
+#+DATE: 2026-10-29
+
+** 1.地理、生态环境数据
+
+*** 1.1地理观测及遥感数据
+
+以遥感影像卫星与资源卫星的数据为主，包括标准产品与合成产品等多个加工程度。涉及的数据内容主要包括高清影像卫星获得的地物影像（以我国高分卫星为例，不免费开放），多波段资源卫星获得的地表覆盖、反射率、温度、初级生产率等（MODIS、LANDSAT等为主）以及气象卫星获得的气象信息和空气污染信息等。
+
+数据获取方法：
+
+1. *地理空间数据云* ： [[http://www.gscloud.cn/][http://www.gscloud.cn/]]
+ 包含大多数免费及商用卫星数据和二次数据，可通过高级检索进行下载
+
+2. *资源环境数据云平台* ： [[http://www.resdc.cn/][http://www.resdc.cn/]]
+ 除遥感数据外还包括我国大多数大尺度环境和经济数据
+
+3. *国家自然资源和地理空间基础信息库* ： [[http://www.geodata.gov.cn/][http://www.geodata.gov.cn/]]
+ 自然资源部下辖国家地理信息中心管理维护的国家级基础信息库，还在建设初期数据全面程度不及资源环境云平台，但其中有数据标准化较高的全国范围地表覆盖等处理后的数据集
+
+4. *高分辨率卫星图下载方法* ：通过google earth pro可下载相对高清的卫星图，如果需要带地理信息且更高清的地图可采用imap等地图下载软件批量下载百度、高德等地图服务商的底图（这些底图一般是某一时间高分卫星的高清卫星图，但缺点在时间不可考且非建成区基本没有数据）。
+
+5. *历史卫星地图下载方法* ：google earth提供了大概20年前的卫星图像可供下载，各个地区所有的时间节点和范围不同。如需更早的卫星图，可以使用USGS公开的冷战时期美国卫星数据集下载50年前全球各地的卫星图，详见： [[https://zhuanlan.zhihu.com/p/30953275][https://zhuanlan.zhihu.com/p/30953275]]
+
+6. *全球夜间灯光数据* ： [[https://ngdc.noaa.gov/eog/][https://ngdc.noaa.gov/eog/]]
+
+*** 1.2生态环境数据
+
+以生态观测站点为主要单位的生态信息数据，主要包括了站点的动态检测数据（包括水环境、土壤环境、大气环境、生物环境等），气象栅格数据（包括辐射、温度、降水、湿度等），水碳通量数据以及生物多样性数据等。在我国以国家生态系统观测研究网络（CERN）所管理维护的数据为主。
+
+数据获取方法：
+
+1. *国家生态科学数据中心资源共享服务平台* ： [[http://www.cnern.org.cn/][http://www.cnern.org.cn/]]
+ 包括我国主要生态系统观测站点的台站数据以及数据中心合成的长期生态系统观测数据。
+
+2. *中国科学数据* ： [[http://www.csdata.org/][http://www.csdata.org/]]
+ 科学数据出版的学术期刊，由中国科学院主管，中国科学院计算机网络信息中心和ICSU CODATA中国全国委员会合办。
+
+3. *全球变化科学研究数据出版系统* ： [[http://www.geodoi.ac.cn/][http://www.geodoi.ac.cn/]]
+ 全球变化数据学报科学数据出版期刊，由中国科学院地理科学与资源研究所和中国地理学会主办
+
+4. *Earth System Science Data :* [[https://www.earth-system-science-data.net/][https://www.earth-system-science-data.net/]]
+ 地球系统科学数据（ESSD）科学数据出版期刊
+
+5. *环境云环境大数据开放平台* ： [[http://www.envicloud.cn/][http://www.envicloud.cn/]]
+
+6. *再分析气象数据* ： [[https://www.ecmwf.int/][https://www.ecmwf.int/]]
+
+** 2.城市数据
+
+*** 2.1城市宏观数据
+
+城市宏观数据以我国统计局以及各地方统计局进行的与地区、城市发展基础信息及发展相关的调查数据为主，主要发布方式为国家及各地区统计年鉴以及专题年鉴。城市级的统计年鉴主要包括城市基础数据、人口数据、经济发展数据、城市建设数据、社会保障数据、各产业发展数据等。
+
+数据获取方式：
+
+1. *中国知网：* [[https://www.cnki.net/][https://www.cnki.net/]]
+ 可通过检索年鉴数据下载全本年鉴
+
+2. *国家数据* ： [[http://data.stats.gov.cn/][http://data.stats.gov.cn/]]
+ 国家统计局的开放数局平台，包括各地区和部门的经济发展数据
+
+3. *中国经济社会大数据研究平台* ： [[http://data.cnki.net/][http://data.cnki.net/]]
+ CNKI旗下经济社会数据平台，可通过关键词检索的方式直接搜索指标项而不需要下载年鉴全本
+
+*** 2.2城市基础物质环境数据
+
+为进行城市内建成环境相关研究所必要的城市建筑、道路交通、规划用地等相关数据。
+
+数据获取方式：
+
+1. *Open Street Map:* [[https://www.openstreetmap.org/][https://www.openstreetmap.org/]]
+ 著名的开源众包定制化地图，由世界各地的使用者上传地图数据，数据丰富的地区几乎包括了所有你想要的基础物质环境数据，但对于我国大多数城市支持不太理想，数据有限。可以通过官网下载，也可以通过QGIS或者ArcGIS插件下载。
+
+2. *中国主要城市建筑轮廓数据* ：公众号 *让学术变得更简单的环哥万事屋*
+ 哈尔滨工业大学在读博士刘俊环的公众号，致力于分享用于城市建成环境研究的基础数据，以建筑轮廓数据为主，或通过刘俊环开发的矢量地图截取器对百度地图图形文件进行提取。
+
+3. *土地利用及建筑功能数据*
+ 主要为地方规划主管部门进行管理，难以公开获取。现有城市大数据研究通过地块内的设施等数据可以完成对土地利用情况的反演。
+
+4. *交通基础设施数据：交通运输部出行云平台* [[https://transportdata.cn/][https://transportdata.cn/]]
+ 提供不完全的公共交通设施数据，但定位数据一般不公开。公共交通线路数据也可以通过API对百度地图或高德地图进行调用获取。
+
+5. *交通分析数据：高德地图交通大数据* [[https://report.amap.com/index.do][https://report.amap.com/index.do]]
+ 高德地图提供的城市级交通数据报告，主要包括交通拥堵、交通预测、人口迁徙等方面的内容。
+
+6. *公交打卡数据*
+ 各城市的公共交通刷卡数据，一般不公开或条件公开。
+
+7. *城市开放数据平台*
+ 各个城市通过开放数据平台公开一部分城市基础数据，各部门政务数据以及相关经济发展数据等。相对来说大都停留在政务文件数据水平，没有更深度的数据处理，空间数据较少。
+ *中国城市政务公开网站索引* ： [[http://www.tanmer.com/blog/451][http://www.tanmer.com/blog/451]]
+ *哈尔滨* ： [[http://data.harbin.gov.cn/odweb/][http://data.harbin.gov.cn/odweb/]]
+ *深圳* ： [[https://opendata.sz.gov.cn/][https://opendata.sz.gov.cn/]]
+ *上海* ： [[https://data.sh.gov.cn/][https://data.sh.gov.cn/]]
+
+8. *北京城市实验室BCL开放数据集：* [[https://www.beijingcitylab.com/data-released/][https://www.beijingcitylab.com/data-released/]]
+ 清华大学龙瀛团队主理并开放的数据集，主要包括以北京市为主的各类基础信息以及其他研究相关的数据集。
+
+*** 2.3城市（互联网）大数据
+
+自步入互联网社会以来各个互联网公司运营过程中收集的数据，由于与实际商业模型相关，大多数数据经处理后都可以有空间信息，对于城市研究具有重要价值，但因开放程度不同和获取难度，有部分数据难以广泛应用到研究和实践中。面对这种数据困境，亟待由政府牵头建设智慧城市基础数据收集和处理平台。
+
+数据分项及获取方式：
+
+1. *兴趣点（POI）数据* 地图服务商标注的地理点信息数据，包括各类型地物、商业设施、交通设施等。可通过百度或高德的开放API下载，小范围内也可通过地图矢量下载器下载。但一般来说地图服务商不会提供历史的POI数据，此类数据需要在第三方获取。
+ *百度地图开放平台* ： [[https://lbsyun.baidu.com/index.php][https://lbsyun.baidu.com/index.php]]
+ *高德地图开放平台* ： [[https://lbs.amap.com/][https://lbs.amap.com/]]
+ *极海云（提供了分类POI的在线地图平台）* ： [[https://geohey.com/][https://geohey.com/]]
+
+2. *LBS（基于位置服务）数据* 主要由各大互联网地图服务商提供的以人的位置信息为主的数据，包括人流、迁移、热力图等，前面的交通大数据与地图开放平台也涉及此类数据。
+ *腾讯位置大数据* ： [[https://heat.qq.com/index.php][https://heat.qq.com/index.php]]
+
+3. *街景数据* 百度、谷歌等地图服务商提供的街景图像数据，可通过调用API下载。
+ *百度街景* ： [[https://lbsyun.baidu.com/index.php?title=viewstatic][https://lbsyun.baidu.com/index.php?title=viewstatic]]
+ *腾讯街景* ： [[https://lbs.qq.com/panostatic_v1/index.html][https://lbs.qq.com/panostatic_v1/index.html]]
+
+4. *手机信令数据* 由手机电信服务商提供的大规模移动数据，需购买。
+ *联通智慧足迹* ： [[http://www.smartsteps.com/][http://www.smartsteps.com/]]
+
+5. *住房信息与房价数据*
+ 可通过对地方售房网站进行结构化网页数据爬取获得，具体方式可以查看《大数据与城市规划》MOOC或者网络上其他教程。
+
+6. *微博等社交媒体数据*
+ 包括微博图文内容，定位地点以及评论等数据，可通过API调用限制获取。
+ *微博API* ： [[https://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI][https://open.weibo.com/wiki/微博API]]
+
+7. *指数/热点数据* 由各大互联网服务提供商开放的搜索、观看、流量等相关的指数报告。
+ *阿里指数* ： [[https://alizs.taobao.com/][https://alizs.taobao.com/]]
+ *百度指数* ： [[http://index.baidu.com/v2/index.html#/][http://index.baidu.com/v2/index.html#/]]
+ *爱奇艺指数* ： [[http://index.iqiyi.com/][http://index.iqiyi.com/]]
+ *微博微热点* ： [[https://www.wrd.cn/login.shtml][https://www.wrd.cn/login.shtml]]
+
+** 3.微观社会调研数据
+
+微观社会调研数据多为国家或相关科研机构组织进行的社会调查数据，以问卷调研为主要形式，完善的数据集包括了连续年份的测度。我国现有国家级社会调研项目并不多，现在有很多数据开放网站使用众包等形式拓展数据获取的边界。
+
+数据获取方式：
+
+1. *中国国家调查数据库* ： [[http://www.cnsda.org/index.php][http://www.cnsda.org/index.php]]
+ 中国国家调查与数据中心主理的国家级社会调查项目数据库，其中最主要的调查项目为中国综合社会调查（Chinese General Social Survey，CGSS）始于2003年，是我国最早的全国性、综合性、连续性的学术调查项目。
+
+2. *北京大学开放研究数据平台* ： [[https://opendata.pku.edu.cn/][https://opendata.pku.edu.cn]]
+ 由北京大学图书馆、国家自然科学基金-北京大学管理科学数据中心、北京大学科研部、北京大学社科部联合主办和推出的社会调查数据平台。其中最主要国家级调查项目包括：中国家庭追踪调查（CFPS）、中国健康与养老追踪调查（CHARLS）、中国老年健康影响因素跟踪调查（CLHLS）、北京社会经济发展年度调查（BAS）。
+
+3. *NYU SHANGHAI* ： [[https://datascience.shanghai.nyu.edu/datasets][https://datascience.shanghai.nyu.edu/datasets]]
+
+-----
+
+** Share Sheet
+
+1. 城市数据师手册： [[http://www.dashuju123.com/][http://www.dashuju123.com]]
+2. 生态信息学原理 第三讲-刘敏： [[https://www.icourse163.org/course/ECNU-1206861804][https://www.icourse163.org/course/ECNU-1206861804]]
+3. 大数据与城市规划-龙瀛： [[https://next.xuetangx.com/course/THU08281001132/1515564][https://next.xuetangx.com/course/THU08281001132/1515564]]
+4. Github上的公共数据集索引项目： [[https://github.com/awesomedata/awesome-public-datasets][https://github.com/awesomedata/awesome-public-datasets]]

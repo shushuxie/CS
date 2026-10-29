@@ -212,3 +212,419 @@
   【我的想法】
   这篇是「概念纠偏」而不是「命令大全」，最大的贡献是把 buffer/window/tab 讲成三层：内容、视口、容器。很多人把 tab 当文件标签用，结果开了一排 tab 却找不到文件，其实就是没分清这三层；正确习惯是用 :ls/:b 管文件、用 split/vsplit 管视口、tab 只在「任务切换」时用。mark 和 register 部分够用但偏浅：没讲大写标记的跨文件持久性依赖 viminfo、没讲寄存器 0-9/+/%/# 的区别，也没提 macro 录制（q）其实是往寄存器里写。想再进一步，直接看 :help registers 和 :help marks，比继续读二手教程快。
 
+
+* 打造一款高逼格的Vim神器  :技巧:Vim:插件:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/335036599
+  :作者:  小侠AI
+  :原文:  [[file:原文/2026-10-29-打造一款高逼格的Vim神器.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-打造一款高逼格的Vim神器.org][打开本地归档]]
+  - 一句话概括：从安装、键位到 .vimrc 与 vim-plug 插件清单的一份 Vim 速查手册，配置可直接照抄。
+  【方法/论点要点】
+  - 装好先跑教程，别急着装插件：
+
+    #+begin_src text
+    sudo apt-get install vim  // Ubuntu
+    vimtutor  // vim 教程
+    #+end_src
+
+  - 光标移动与编辑的核心键位（数字是前缀，可组合）：
+
+    #+begin_src text
+    # hjkl
+    # 2w 向前移动两个单词
+    # 3e 向前移动到第 3 个单词的末尾
+    # 0 移动到行首
+    # $ 当前行的末尾
+    # gg 文件第一行
+    # G 文件最后一行
+    # 行号+G 指定行
+    # <ctrl>+o 跳转回之前的位置
+    # <ctrl>+i 返回跳转之前的位置
+
+    # <esc> 进入正常模式
+    # :q! 不保存退出
+    # :wq 保存后退出
+
+    # x 删除当前字符
+    # dw 删除至当前单词末尾
+    # de 删除至当前单词末尾，包括当前字符
+    # d$ 删除至当前行尾
+    # dd 删除整行
+    # 2dd 删除两行
+
+    # i 插入文本
+    # A 当前行末尾添加
+    # r 替换当前字符
+    # o 打开新的一行并进入插入模式
+
+    # u 撤销
+    # <ctrl>+r 取消撤销
+
+    # v 进入可视模式
+    # y 复制
+    # p 粘贴
+    # yy 复制当前行
+    # dd 剪切当前行
+
+    # :e! 强制刷新该文件
+    # <ctrl>+g 显示当前行以及文件信息
+    #+end_src
+
+  - 查找与替换：正向用 ~/~，反向用 ~?~，~n~ 继续、~N~ 反向继续，~%~ 跳转到配对的 ~{~、~[~、~(~；~:set ic~ / ~:set noic~ 开关忽略大小写，~:set hls~ 高亮匹配，~:set is~ 显示部分匹配。替换三档：~:s/old/new~ 只换本行第一个，~:s/old/new/g~ 换整行，~:%s/old/new/g~ 换整个文件。
+  - 折叠与外部命令：~zc~ 折叠、~zC~ 折叠所有嵌套、~zo~ 展开、~zO~ 展开所有嵌套；~:!shell~ 执行外部命令。
+  - 分屏操作（前缀都是 ~Ctrl+W~）：
+
+    #+begin_src text
+    $ Ctrl+W v  // 左右
+    $ Ctrl+W s  // 上下
+
+    # 移动光标
+    $ Ctrl+W h/j/k/l  // 左/上/下/右
+
+    # 移动分屏
+    $ Ctrl+W H/J/K/L  // 左/上/下/右
+
+    # 修改屏幕尺寸
+    $ Ctrl+W =/+/-
+    #+end_src
+
+  - 配置文件要自己建：~cd~ 回家目录后 ~touch .vimrc~，再逐项写入。作者给出的基本配置（备份、编码、查找、行号、缩进、折叠、主题一次配齐）：
+
+    #+begin_src text
+    set nobackup
+    set noswapfile
+
+    set encoding=utf-8
+
+    set ic
+    set hls
+    set is
+
+    set number
+
+    set ruler
+
+    set cindent
+
+    set tabstop=2
+    set shiftwidth=2
+
+    set cursorline
+
+    set showmode
+
+    set nofoldenable
+
+    syntax enable
+    set background=dark
+    colorscheme solarized
+    #+end_src
+
+    主题配套安装 ~vim-colors-solarized~ 与 ~gnome-terminal-colors-solarized~ 两个仓库。
+  - 插件统一交给 ~vim-plug~ 管理，配置直接写在 ~.vimrc~ 里；重载后执行 ~:PlugInstall~。树形目录用 NERDTree 三件套：
+
+    #+begin_src text
+    Plug 'scrooloose/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+
+    autocmd vimenter * NERDTree
+    map <C-n> :NERDTreeToggle<CR>
+    let NERDTreeMinimalUI = 1
+    let NERDTreeShowHidden = 1
+
+    let g:nerdtree_tabs_open_on_console_startup = 1
+    let g:nerdtree_tabs_focus_on_files = 1
+    #+end_src
+
+    NERDTree 内常用键：~o~ 打开/关闭文件或目录、~e~ 以文件管理方式打开目录、~t~ 标签页打开、~T~ 标签页打开但光标留在树中、~r~ 刷新当前目录、~R~ 刷新根路径、~X~ 收起所有目录、~p~ / ~P~ 跳到上一级 / 根路径、~J~ / ~K~ 到第一个 / 最后一个节点、~I~ 显示隐藏文件、~m~ 文件操作菜单、~C~ 把光标所在目录设为根、~u~ 上级目录设为根；标签页用 ~:tabc~、~:tabo~、~:tabp~、~:tabn~、~gT~、~gt~。
+  - 其余插件按用途铺开：补全用 ~Valloric/YouCompleteMe~、~Raimondi/delimitMate~、~Shougo/deoplete.nvim~（需 ~:UpdateRemotePlugins~）；高亮与检查用 ~sheerun/vim-polyglot~ + ~w0rp/ale~（保存自动修复，~<C-k>~ / ~<C-j>~ 跳错误）；搜索用 ~rking/ag.vim~（~:Ag! content~）、~kien/ctrlp.vim~（~<c-p>~ 呼出，~<c-r>~ 切换匹配模式）、~vim-scripts/mru.vim~（~:MRU~）；状态栏用 ~itchyny/lightline.vim~。
+  - 注释、Git、Markdown 与前端：~scrooloose/nerdcommenter~（~<leader>c<space>~ 注释/取消，~<leader>cc~、~<leader>cm~、~<leader>cA~、~<leader>c$~、~<leader>cy~、~<leader>ca~、~<leader>cu~）；~airblade/vim-gitgutter~ + ~tpope/vim-fugitive~；~suan/vim-instant-markdown~（~:InstantMarkdownPreview~）、~junegunn/goyo.vim~（~:Goyo~）；~mattn/emmet-vim~（leader 键设为 ~<C-Z>~）、~othree/html5.vim~、~hail2u/vim-css3-syntax~ + ~ap/vim-css-color~、~pangloss/vim-javascript~、~mxw/vim-jsx~、~maksimr/vim-jsbeautify~、~prettier/vim-prettier~（保存时异步格式化）、~hotoo/pangu.vim~（~:Pangu~ 规范中文排版）。
+  【原文摘录】
+  #+begin_quote
+  Vim 是一个上古神器，本篇文章主要持续总结使用 Vim 的过程中不得不了解的一些指令和注意事项，以及持续分享一个开发者不得不安装的一些插件，而关于 Vim 的简介，主题的选择，以及为何使用 vim-plug 来管理插件等内容，有兴趣的同学下来可以自己了解和对比下。
+  #+end_quote
+
+  #+begin_quote
+  ~.vimrc~ 是 ~Vim~ 的配置文件，需要我们自己创建
+  #+end_quote
+
+  #+begin_quote
+  使用 ~vim-plug~ 管理插件
+  #+end_quote
+
+  #+begin_quote
+  最后，提供 to-vim-tmux-zsh 仓库可供参考，其中，除包含 ~vim~ 的配置，还有 ~tmux~ 和 ~zsh~ 的分享
+  #+end_quote
+  【我的想法】
+  这是一篇典型的“配置清单式”教程：价值不在于讲解原理，而在于把常用键位、.vimrc 与插件仓库地址一次性摆好，照着抄就能用。要注意的是文中配置偏老，YouCompleteMe 和 deoplete 如今大多被 coc.nvim 或 LSP 方案替代，ale 也常与 prettier 职责重叠。真正值得保留的是它的分层思路：先掌握原生键位和寄存器，再按“目录、搜索、补全、检查、Git”逐个加插件，这样换配置时不会连编辑手感一起丢掉。
+
+* 我写CSS的常用套路(附demo的效果实现与源码）  :技巧:CSS:动画:特效:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/107741668
+  :作者:  动力节点
+  :原文:  [[file:原文/2026-10-29-我写CSS的常用套路(附demo的效果实现与源码）.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-我写CSS的常用套路(附demo的效果实现与源码）.org][打开本地归档]]
+  - 一句话概括：把写 CSS 特效的 27 个套路逐条拆开讲，从交错动画、伪元素到渐变滤镜，每条都配 demo 源码。
+  【方法/论点要点】
+  - 交错动画：同批元素依次加大延迟（第二个比第一个晚 0.5 秒），起落便错开。
+  - 中间扩散：延时取 ~delay + Math.abs(i - middle) * step~，~middle = letters.filter(e => e !== "").length / 2~。
+  - JS 把句子拆成字母、逐个加延时；几百个随机延时与随机位置大小的粒子，纯 CSS 即可下雪。
+  - 伪类：~:hover~ 最常用，~:nth-child~ 选子元素，~:focus~、~:focus-within~ 管焦点。
+  - 伪元素：每个元素有 ~::before~、~::after~ 共三个矩形可画，配 ~clip-path~ 几乎任意形状；绝对定位加 ~padding~ 叠多重边框。
+  - ~attr()~ 取 ~data-*~ 值写进 ~content~ 复制文本，再用 ~overflow: hidden~ 遮溢出，配合动画成文字飞舞。
+  - 障眼法：渐变模拟光、~translateX()~ 平移、~overflow: hidden~ 裁掉按钮外部分；勾选框与饼图度量计同理。
+  - 表单：~input~ 放进 ~label~，用 ~appearance: none~ 或 ~opacity: 0~ 抹掉原生样式，再用 ~+~ 或通用兄弟选择符定制相邻元素，伪元素画框、~:checked~ 表勾选。
+  - 阴影：~box-shadow~ 多层叠加更顺滑，扩张半径够大可当遮罩，~inset~ 做内发光；~text-shadow~ 叠出发光、霓虹、伪 3D 字。
+  - 背景渐变：~background-clip: text~ 配 ~color: transparent~ 出渐变字；~radial-gradient~ 叠圆点做微粒；~conic-gradient~ 画饼图，伪元素 ~content~ 由 CSS 变量算成度量计。
+  - 滤镜：~backdrop-filter~ 毛玻璃，~mix-blend-mode: screen~ 做文字视频蒙版，~clip-path~ 裁形，~-webkit-box-reflect~ 投影。
+  - JS 补位：鼠标坐标用 ~e.clientX~、~e.clientY~，监听 ~mouseenter~、~mouseleave~、~mousemove~ 做跟随；渐变要动需 ~CSS.registerProperty()~ 注册变量，~syntax~ 声明为 ~<color>~ 或 ~<length-percentage>~，把 ~--pos~ 从 ~0~ 推到 ~100%~。
+  【原文摘录】
+  #+begin_quote
+  注意到CSS动画有延迟（ ~delay~ ）这一属性。举个栗子，比如有十个元素播放十个动画，将第二个元素的动画播放时间设定为比第一个元素晚0.5秒（也就是将延迟设为0.5秒），其他元素以此类推，这样它们就会错开来，形成一种独特的视觉效果。
+  #+end_quote
+  #+begin_quote
+  简而言之，伪元素就是在原先的元素基础上插入额外的元素，而且这个元素不充当HTML的标签，这样就能保持HTML结构的整洁。我们知道每个元素都有 ~::before~ 和 ~::after~ 这两个伪元素，也就是说每个元素都提供了3个矩形（元素本身1个，伪元素2个）来供我们进行形状的绘制。
+  #+end_quote
+  #+begin_quote
+  但这样明显不对啊，这光为啥能被看见呢？不应该把它给“挡”起来吗？于是乎，给按钮加上 ~overflow: hidden~ ，光在按钮外的位置时就被隐藏起来了。
+  #+end_quote
+  【我的想法】
+  亮点是把“交错”“障眼法”这类手法命名，遇到新需求时能主动调用，而不是从零试错。真正稀缺的是把 ~overflow~、~box-shadow~ 用到出奇的想象力。跟练时精读交错动画与兄弟选择符两节即可，其余当目录查。
+
+* git常用指令整理及说明(详细)  :技巧:Git:命令速查:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/22276984
+  :作者:  Evelyn Shen
+  :原文:  [[file:原文/2026-10-29-git常用指令整理及说明(详细).org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-git常用指令整理及说明(详细).org][打开本地归档]]
+  - 一句话概括：按建库、查看、修改、分支四类场景归纳 Git 常用指令，逐条说明参数与用法，适合当速查清单。
+  【方法/论点要点】
+  - 分区：工作区是能看到的目录，.git 是版本库，暂存区（stage/index）与自动创建的 master、HEAD 都在版本库里。
+  - 两步提交：~git add~ 把修改放进暂存区，~git commit~ 把暂存区全部内容提交到当前分支。
+  - 建远程库：远程库先留空（加 README.md 会推不上去）→ 本地 ~git init~（.git 勿手改）→ ~git remote add origin git@github.com:michaelliao/learngit.git~ → ~git push -u origin master~，~-u~ 兼做推送与关联，之后用 ~git push origin master~；本地与远程仓库名可不同。
+  - 克隆：~git clone git@github.com:michaelliao/gitskills.git~ 生成同名目录 → ~cd gitskills~ → ~git push origin master~。
+  - 查看：~git status~；~git diff 文件名~；~git diff 版本号1 版本号2 --stat~ 看差异文件与增删行数，换成 ~--name-status~ 显示 A/M 等状态；~git log~、~git log --pretty=oneline~；~git reflog~ 记录每次命令后的版本号前七位；~git branch~ 列出分支（当前分支带 *）；~git log --graph --pretty=oneline --abbrev-commit~ 看合并图；~git remote~ 与 ~git remote -v~。
+  - 修改：~git add readme.txt~ 只添加不提交；~git commit -m "提交描述"~；“改文件→add→再改→提交”时第二次修改不会被提交。
+  - 撤销：未 add 的改动用 ~git checkout -- 文件名~ 丢弃；已 add 的先 ~git reset HEAD 文件名~ 取消暂存，再 ~git checkout -- 文件名~。
+  - 回退：~git reset --hard HEAD^~ 回上一版本；~git reset --hard 某版本号前几位~ 回指定版本，写前 7、8 位即可。
+  - 分支：~git checkout -b dev~ 等于 ~git branch dev~ 加 ~git checkout dev~；~git checkout master~ 切回；~git merge dev~ 在 master 上合并；~git branch -d dev~ 删已合并分支，未合并需 ~git branch -D dev~ 强删；~git rebase master~ 变基，历史比 merge 干净。
+  - 冲突：改完手动提交，~git status~ 可查冲突文件；~git merge --no-ff -m "merge with no-ff" dev~ 禁用快进、强制新 commit 以保留分支信息。
+  - stash：~git stash~ 存现场，~git stash list~ 查看，~git stash apply~ 恢复（~git stash apply stash@{0}~ 指定），~git stash drop~ 删除，~git stash pop~ 恢复并删除。
+  - 远程分支：~git fetch origin~ 抓取并移动 origin/master；~git push origin master~；~git push origin serverfix:awesomebranch~ 推到远程异名分支；~git push origin --delete serverfix~ 或 ~git push origin :remotebranch~ 删除远程分支；~git pull~ 约等于 fetch 加 merge。
+  【原文摘录】
+  #+begin_quote
+  1. 第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；
+  2. 第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+  #+end_quote
+  #+begin_quote
+  git reflog 记录你的每一次命令，最先显示的是这个命令执行之后的版本的版本号的前七位，这样就算你清屏了或者重启了，也能找到某个版本的版本号，就可以轻松回退到那个版本
+  #+end_quote
+  #+begin_quote
+  简单来说，没有add过的修改，只需要git checkout -- 文件名即可撤销；add 过的修改，先git reset HEAD 文件名变成没add 过的修改，再git checkout -- 文件名撤销。
+  #+end_quote
+  #+begin_quote
+  合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息
+  #+end_quote
+  【我的想法】
+  清单式文章的价值在覆盖面与准确性：~-u~、~--no-ff~、~stash pop~、~push origin :branch~ 这些易混点都收到了，做速查够用。但它只讲怎么敲、不讲为什么，最好配合讲 objects 与引用原理的文章一起看。个别句子有笔误，照抄命令前先在测试仓库跑一遍。
+
+* 还不会使用 GitHub ？ GitHub 教程来了！万字图文详解  :技巧:GitHub:Git:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/369486197
+  :作者:  吴师兄学算法
+  :原文:  [[file:原文/2026-10-29-还不会使用 GitHub ？ GitHub 教程来了！万字图文详解.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-还不会使用 GitHub ？ GitHub 教程来了！万字图文详解.org][打开本地归档]]
+  - 一句话概括：从注册账号、建仓库、装 Git，到十个常用命令、配 SSH、把代码 push 上 GitHub 的一条龙图文教程；值得收是因为它把“界面操作”和“命令行操作”两条线缝在了一起，新手照做即可跑通第一次提交，也适合当命令速查表。
+  【方法/论点要点】
+  - 平台认知：GitHub 2008 年 4 月 10 日上线，只托管 Git 仓库，靠“Fork 一份 → 改完 → Pull Request 请求合并”把协作成本压到极低；仓库分 public（免费）与 private（付费），个人练手选 public 即可。
+  - 注册：官网点 ~Sign up~，填 Username（有标识性，日后博客默认域名就是 ~username.github.io~）、Email、Password，点 ~Create an account~；第二步选免费仓库；第三步问卷可 ~skip this step~。
+  - 主页与资料：右上角头像 → ~Your profile~ → ~Edit profile~，可填 Name、Bio、URL、Company、Location、头像；~Settings~ 里的 ~SSH and GPG keys~ 是后面免密提交的关键。
+  - 建仓库：~Repositories~ → 绿色 ~New~ → 填 Repository name、可选 Description、选 Public、勾选 ~Initialize this repository with a README~ → ~Create repository~。建完仓库即有 1 个 commit、1 个 master 分支、1 个 contributor。
+  - 术语：Repository（仓库）、Issues（问题/bug 反馈）、Star（点赞收藏）、Fork（复制一份到自己的账号）、Pull Request（请求原作者合并你的修改）、Merge（合并）、Watch（订阅更新）、Gist（代码片段分享）。
+  - 装 Git：官网点 ~Downloads~ → 选 Windows → 下载安装包 → 一路 ~Next~；关键一步选“Use Git from the Windows Command Prompt”（既可用 Git Bash，也可用 CMD），不要选会把 Unix 工具覆盖进 Windows 的那项；其余传输后端、行结束符、终端模拟器均默认；完成后 ~Launch Git Bash~，输入 ~git~ 能出版本即成功。
+  - 前置铁律：任何 git 操作前都要先切到仓库最顶层目录，再在该目录右键 ~Git Bash Here~，让命令行自动定位到仓库根。
+  - 十个命令的完整流程（以 ~demo~ 目录、~hit.txt~ 为例）：
+    1. ~git status~ 查看状态，此时会提示 not a git repository；
+    2. ~git init~ 初始化仓库，默认落在 ~master~ 分支；
+    3. ~git add hit.txt~ 把文件加入暂存区，再 ~git status~ 可见 Untracked files 消失；
+    4. ~git commit -m "text commit"~ 提交，~-m~ 后双引号内写提交信息，成功后 status 显示 ~nothing to commit, working tree clean~；
+    5. ~git log~ 打印提交日志（Author、Date、提交信息）；
+    6. ~git branch~ 看分支，~*~ 表示当前分支；~git branch a~ 新建分支 a 但不切换；
+    7. ~git checkout a~ 切到 a 分支；~git checkout -b b~ 新建并立即切换到 b（b 是 a 的子分支）；
+    8. 切回 ~master~ 后 ~git merge a~ 把 a 合并进来，有冲突须先解决；
+    9. ~git branch -d a~ 删除已合并分支，未合并会删不掉，改用 ~git branch -D a~ 强制删除；
+    10. ~git tag v1.0~ 打标签，~git tag~ 查看，~git checkout v1.0~ 回到该标签的代码状态。
+  - 配 SSH：在 Git Bash 输入 ~ssh-keygen -t rsa~，连敲三次回车（不设密码），生成 ~id_rsa~ 与 ~id_rsa.pub~，默认在 ~/.ssh~（Windows 为 ~C:\Users\用户名\.ssh~）；把 ~id_rsa.pub~ 全文粘到 GitHub 的 ~Settings~ → ~SSH and GPG Keys~ → ~New SSH key~ → ~Add SSH key~；再用 ~ssh -T git@github.com~ 验证，出现成功提示即绑定完成。
+  - 同步命令：~git push origin master~ 推送本地更新，~git pull origin master~ 拉取远程更新；push 前先 pull，避免不同步导致冲突。
+  - 提交的两种情况：①本地无仓库——~git clone https://github.com/guobinhit/mybatis-tutorial.git~，clone 下来自带仓库与远程关联，改完 add/commit 后 ~git push origin master~（首次需输账号密码）；②本地已有仓库且多次 commit——~git init~ 后 ~git remote add origin https://github.com/guobinhit/springmvc-tutorial.git~，再 ~git pull origin master~ 同步，然后 ~git add~ / ~git commit~ / ~git push origin master~。
+  【原文摘录】
+  #+begin_quote
+  GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。
+  #+end_quote
+  #+begin_quote
+  此外，在这里还要强调一点，那就是：在我们进行任何的git操作之前，我们都得先切换到 Git 的仓库目录。
+  #+end_quote
+  #+begin_quote
+  在这里，需要声明一点，那就是：git add命令并没有把文件提交到 Git 仓库，而是把文件添加到了「临时缓冲区」，这个命令有效防止了我们错误提交的可能性。
+  #+end_quote
+  #+begin_quote
+  一般情况下，我们在push操作之前都会先进行pull操作，这样不容易造成冲突。
+  #+end_quote
+  #+begin_quote
+  此外，在这个例子中，我们将远程仓库命名为origin，本地仓库名为springmvc-tutorial，其实两者的名字咱们可以随意取，一般来说，我们习惯性将远程仓库命名为origin，不过在需要关联多个远程仓库的时候，就需要我们再取别的名字啦！
+  #+end_quote
+  【我的想法】
+  这篇的价值在“完整流程”而非“深度”：它老老实实把注册—建仓—装 Git—十条命令—SSH—push 串成一条可复现的路径，新手最容易卡住的几个点（必须先 cd 到仓库根、add 只进暂存区、push 前先 pull）都点了名。缺点是截图式的叙述把概念稀释了，比如 ~git merge~ 的冲突处理只有一句“需要先解决冲突”，真正干活还得补 ~git rebase~、~.gitignore~ 和分支模型。另外文中“私有库付费”的说法已经过时，GitHub 早就开放了免费私有仓库，读时要注意时效。
+
+* 不用装双系统，直接在 Windows 上体验 Linux：Windows Subsystem for Linux  :技巧:WSL:Linux:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/34950508
+  :作者:  少数派
+  :原文:  [[file:原文/2026-10-29-不用装双系统，直接在 Windows 上体验 Linux：Windows Subsystem for Linux.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-不用装双系统，直接在 Windows 上体验 Linux：Windows Subsystem for Linux.org][打开本地归档]]
+  - 一句话概括：手把手在 Windows 10 上开启 WSL、装 Ubuntu、换阿里云源、配 SSH/SFTP、装 MATE 桌面并用 Apache 部署静态站；值得收是因为它把“不发虚拟机、不装双系统也能有原生 Linux”这条路走通了，每个环节的命令都能直接照抄。
+  【方法/论点要点】
+  - 前提：WSL 从 Windows 10 周年更新（build 14393）开始内置，但本文方法要求秋季创意者更新（build 16299）以上，且必须是 64 位系统；更早版本只能搜「Bash on Windows」另找办法。
+  - 开启组件：控制面板 → 程序和功能 → 左侧「启用或关闭 Windows 功能」→ 勾选「适用于 Linux 的 Windows 子系统」→ 确定（可能需要重启）。
+  - 安装发行版：打开 Microsoft Store，搜索并安装 Ubuntu（也可选 Debian、Suse、Kali），装完在开始菜单出现「Ubuntu」应用。初学者建议 Ubuntu/Debian 系，包管理完善。
+  - 首次启动：等待初始化，设置 Linux 用户名与密码（与 Windows 账号不通用，密码盲打不回显，建议用复杂密码）。
+  - 查版本：~uname -r~ 显示内核（如 4.4.0-43-Microsoft）；~sudo lsb_release -a~ 显示发行版（如 Ubuntu 16.04 LTS）。
+  - 换国内源（以阿里云为例）：
+    1. ~sudo -i~ 提权并输入密码；
+    2. 备份：~cp /etc/apt/sources.list /etc/apt/sources.list.old~；
+    3. 编辑：~vim /etc/apt/sources.list~，按 ~i~ 进入编辑模式，粘贴阿里云 xenial 全套源（含 main/restricted/universe/multiverse 及 updates、backports、security、partner），按 ~Esc~ 后输入 ~:wq~ 保存退出；
+    4. 生效并升级：~apt-get update~ 后 ~apt-get upgrade~。
+  - 启用 SSH（便于用 Xshell/Xftp 操作）：
+    1. ~sudo passwd root~ 给 root 设密码，之后可直接以 root 登录；
+    2. 备份配置：~sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak~；
+    3. ~sudo vim /etc/ssh/sshd_config~，按 ~i~ 后修改：~Port 8022~（Windows 侧 22 端口已被占用）、去掉注释的 ~ListenAddress 0.0.0.0~、~UsePrivilegeSeparation no~、~PermitRootLogin yes~、注释掉 ~StrictModes yes~、~PasswordAuthentication yes~，~Esc~ 后 ~:wq~；
+    4. 启动：~service ssh start~。
+  - 客户端连接：Xshell 新建会话，协议 SSH、主机 ~127.0.0.1~、端口 ~8022~、认证方式 Password、用户名 root；文件管理用 Xftp，协议选 SFTP，端口同样 8022。
+  - 图形界面：~sudo apt-get install mate-desktop-environment~ 装轻量桌面 MATE（xfce 亦可）；~sudo apt-get install vnc4server~ 装 VNC 服务端；执行 =sed -i 's$x-window-manager$mate-session$' ~/.vnc/xstartup= 把默认窗口管理器换成 mate-session；~vncserver~ 首次启动设密码；本机装 RealVNC（可用 Chrome 应用版），连 ~127.0.0.1:1~ 即可看到桌面，再 ~sudo apt-get install firefox~ 装浏览器。
+  - 实战部署静态站：~apt-get install apache2~ 安装，~service apache2 start~ 启动，浏览器访问 ~http://127.0.0.1~ 见到默认页即成功；用 Xftp 把项目目录传到 =/var/www/html= 下（如 xuyi），访问 ~http://127.0.0.1/xuyi~ 即可。
+  【原文摘录】
+  #+begin_quote
+  其实在云计算领域，微软很早之前就让其 Azure 支持多个流行的 Linux 发行版，但对于普通消费者而言，真正的变化发生在后面的 Windows 10：微软宣布将会在 Windows 10 内置 Linux，而采用的技术上并非是所谓的「虚拟化」技术——也就是说，这个子系统的 Linux 完全是原生运行在 Windows 10 上的。
+  #+end_quote
+  #+begin_quote
+  在开始菜单中打开 Ubuntu 后，Ubuntu 会进行较长时间的安装和初始化，之后会提示你设置 Linux 的用户名和密码，需要注意的是这个用户名和密码和 Windows 并不通用。
+  #+end_quote
+  #+begin_quote
+  微软从 Windows 10 周年更新（build 14393）开始内置 Windows Subsystem for Linux 组件框架，只不过这项功能当时还只能称作是 Beta 版，而在 Windows 秋季创意者更新中，安装 Linux 子系统变的更为简单——可以直接通过 Microsoft Store 来下载子系统，而可选择的发行版也从最初的只有 Ubuntu 变成可以选择 Suse、Ubuntu、Debian、甚至是用来进行网络安全工作 Kail Linux。
+  #+end_quote
+  #+begin_quote
+  虽说通过 App 或者应用的形式在 Windows 10 上体验 Linux 是一个不赖的选择，但对于很多软件开发的朋友而言，使用 Windows 内置的 CMD 或者 PowerShell 来操作Linux 依旧有着很多不习惯。
+  #+end_quote
+  #+begin_quote
+  其实对于很多开发者而言，WSL 最大的好处在于更接近项目生产环境，虽说 Windows 本身有 IIS 网页服务器可供选择。但目前大部分网站服务器系统都采用的是 Linux，而网页服务器也多是使用 Apache，所以在 WSL 在本机完成部署调试后可能会接近实际一些。
+  #+end_quote
+  【我的想法】
+  2018 年前后 WSL 还是“Beta 味”很重的东西，要手动开组件、手动换源、手动配 SSH，这篇把每一步都拍下来了，所以今天读仍然能当操作手册用。不过如今 WSL2 已是默认，内核是真虚拟机、文件系统跨盘访问要小心，文中 ~Port 8022~、~UsePrivilegeSeparation~ 这类细节也已随 OpenSSH 版本变化而过时。它真正留下的启示是那句“更接近生产环境”——本地跑 Apache 调试、直接对接 Linux 工具链，才是 WSL 对开发者最大的价值，图形桌面反而只是玩具。
+
+* 这样读源码，不牛X也难  :技巧:读源码:程序员成长:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/27228893
+  :作者:  安晓辉
+  :原文:  [[file:原文/2026-10-29-这样读源码，不牛X也难.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-这样读源码，不牛X也难.org][打开本地归档]]
+  - 一句话概括：写了十来年 Qt、CEF 的老程序员，把“读别人代码”拆成目的、工具、知识准备、环境、笔记、经验六段的可执行流程；值得收是因为它给的不是鸡汤，而是一套能照着干的读码作业规范。
+  【方法/论点要点】
+  - 先定目的，无非四种：纯粹学习、添加新功能、重构旧代码、修复他人的 Bug。学习型最放松，但“设定可检验的目标才会有收获”；修别人的 Bug 最耗心气，要先做心理建设再动手。
+  - 工具清单：~SourceInsight~（维护符号库、动态显示上下文、绘制调用关系图，作者称“最好的，没有之一”）；纸质笔记本加中性笔（随手画类图、时序图、框图，比 UML 工具和 Visio 都快）；~Notepad++~、有道云笔记、为知笔记记录关键点与分析过程；~Visio~ 画模块划分和层次框图；~StarUML~ 最后画规范类图、时序图用于交流；扫描全能王（CamScanner）把手绘稿拍照转成电子档分享。
+  - 知识准备四项：业务基础（先对业务有概念）、技术基础（语言、框架、第三方模块）、文档（业务、需求、概要、详细；找不到就认“源码是最好的文档”）、人（问清谁维护过这份代码，不懂时请教，人家点一下顶自己琢磨一天）。
+  - 环境两套：开发环境用于调试，“按着F5、F10、F11、F9，一切都搞定了”；运行环境用于以用户视角体验软件，从外面揣摩内部逻辑。
+  - 笔记四原则：载体要顺手，用软件记录必须切屏、会打断阅读，所以紧张时先用笔写断句残章，告一段落再整理进笔记；间隔性记录，只在弄懂子模块逻辑、某个类的作用、某些函数的调用关系时才写；每天收工记下已弄懂的部分、遗留疑问、第二天要弄懂什么，让工作状态“入栈”以便次日快速“出栈”；顺手记下看到的优秀设计。
+  - 沧海遗珠：理清业务如何映射到代码执行流程；理清模块间业务关系与调用关系；调试是弄清调用流程最快的方式之一；找出关键类（代表实际对象的类、衔接不同模块的类、代表业务关键节点的类）；用日志反推执行流程；先玩可运行的产品再猜实现；阅读围绕目的，有期限时先交付再优化方案；对着设计文档、接口文档或测试用例看代码；一条路走不通就换——读不行就调试，调试不行就运行，运行不行就看日志；每啃下一块奖励自己休息 5~10 分钟。
+  【原文摘录】
+  #+begin_quote
+  写代码是从模仿开始的，提高也是从观摩别人的优秀设计和代码开始的。所以阅读源码至关重要
+  #+end_quote
+  #+begin_quote
+  因为代码不是自己写的，很难很快在脑子里刻下印记，经常是看着这里忘了那里，早上觉得弄懂了数据流向，中午吃个饭就忘了。所以，笔记就显得尤为重要。
+  #+end_quote
+  #+begin_quote
+  要知道，任何一份代码，都有一条隐形的线串着，耐心点，总会找到。这样不行就那样，多换换角度，多换换方法，读不行，就调试，调试不行，就运行，运行不行，就研究日志
+  #+end_quote
+  #+begin_quote
+  读不懂才要读，想不明白才要想，这是进步和成长的开始。那些阻挡你的蹂躏你的而又杀不死你的，终将帮助你成长让你变得更强大。
+  #+end_quote
+  【我的想法】
+  这篇的可贵处在于把“读源码”从玄学降格成了流程：定目的、配工具、补背景、搭环境、写笔记，每一步都能当天执行。作者反复强调的“设定可检验的目标”其实是最容易被忽略的一条——没有具体要改的 Bug 或要加的功能，读源码很容易变成翻小说式的自我感动。另外他推荐纸质笔记本而非一切电子工具，看似土气，却是对“切换窗口即中断思路”这个真实成本的准确判断，值得照抄。
+
+* 史上最全vscode配置使用教程  :技巧:VSCode:配置:插件:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/113222681
+  :作者:  灰蓝宇墨
+  :原文:  [[file:原文/2026-10-29-史上最全vscode配置使用教程.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-史上最全vscode配置使用教程.org][打开本地归档]]
+  - 一句话概括：一份从装软件、切中文、改 settings.json、记快捷键到装插件、同步配置、起本地服务的完整 VSCode 上手流程，步骤可直接照着做，适合新机配置时逐条对照。
+  【方法/论点要点】
+  - 下载：官网 ~https://code.visualstudio.com/~。
+  - 设置中文：1. ~Ctrl+Shift+P~；2. 顶部出现搜索框；3. 输入 ~configure language~ 回车；4. 打开语言配置文件；5. ~en-us~ 改成 ~zh-cn~；6. ~Ctrl+S~ 保存；7. 关闭重开。也可直接装中文插件。
+  - 用户设置：文件 → 首选项 → 设置，可改界面也可编辑 settings.json。常改项：~editor.fontSize~（字号）、~files.autoSave~（推荐 ~onFocusChange~，失焦即存）、~editor.tabCompletion~（推荐 ~on~）、~source.organizeImports: true~（保存时按字母序整理 import）、~editor.lineNumbers: true~。
+  - 原文配置还用 ~search.exclude~、~files.exclude~ 把 node_modules、.git、.DS_Store 等排除在搜索与工作区之外；常用片段如下：
+  #+begin_src json
+  {
+    "files.associations": { "*.vue": "vue", "*.wxml": "html", "*.wxss": "css" },
+    "editor.fontSize": 14,
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": { "source.organizeImports": true },
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "emmet.triggerExpansionOnTab": true,
+    "vetur.format.defaultFormatter.js": "prettier"
+  }
+  #+end_src
+  - 想用 json 而不是 UI：文件 > 首选项 > 设置 > 搜 ~workbench.settings.editor~，选中 json。
+  - 禁用自动更新：文件 > 首选项 > 设置（macOS 为 代码 > 首选项 > 设置），搜 ~update mode~，改为 ~none~。
+  - 开启代码提示：第一步点左下角设置图标 → setting；第二步在搜索框搜 ~prevent~，取消该项勾选。
+  - 行操作：光标在行尾回车即重开一行；~Ctrl+Enter~ 向下重开一行，~Ctrl+Shift+Enter~ 向上重开；无选中时 ~Ctrl+X~ 剪切一行，~Ctrl+Shift+K~ 直接删除一行；~Alt+↑/↓~ 上下移动行；~Shift+Alt+↓/↑~ 向下/向上复制行；~Ctrl+Z~ 回退。
+  - 词与搜索：~Ctrl+D~ 选中一个词；~Ctrl+F~ 搜索，~Ctrl+Alt+F~ 替换，~Ctrl+Shift+F~ 项目内搜索。
+  - 其它快捷键：开关终端用 Ctrl 加反引号键，~Ctrl+P~ 打开最近文件，~Ctrl+Shift+N~ 新窗口，~Ctrl+Shift+W~ 关闭编辑器，~Home/End~ 行头行尾，~Ctrl+Home/End~ 页头页尾，~Ctrl+Shift+[/]~ 折叠/展开，~Ctrl+/~ 行注释，~Shift+Alt+A~ 块注释（mac 下 Ctrl 换 Command）。
+  - 装插件：扩展搜索框输入名称点安装，无效就重启。必备九个：open in browser（跑 html，View In Browser 已弃用）、vscode-icons（文件图标）、Auto Rename Tag（同步改闭合标签）、Path Intellisense（路径提示）、Markdown Preview（md 预览）、stylelint（CSS/SCSS/Less 检查）、Import Cost（包体积）、Prettier（格式化，可配 .prettierc.js 并配合 eslint、git hooks）、code runner（右上角三角直接跑 js）。
+  - Vue：vue2 用 vetur（高亮、智能感知、Emmet）配 VueHelper（代码片段）；vue3 改用 volar，装前须禁用或卸载 vetur，可再配 TypeScript Vue Plugin (Volar)，支持代码分块显示与 vite 快速预览。
+  - 其它插件：CSScomb（项目根目录建 csscomb.json 或写进 package.json 的 ~csscombConfig~，~sort-order~ 可换腾讯 AlloyTeam 规范）、Turbo Console Log（~Ctrl+Alt+L~ 生成，~Alt+Shift+C/U/D~ 注释/启用/删除全部）、GitLens（行级 blame，防背锅）、css-auto-prefix、change-case、CSS Peek、vscode-json、Regex Previewer、韭菜盒子（边写码边看股票）。
+  - 配置同步 Settings Sync（快捷键：~CTRL+SHIFT+P~ 命令面板、~ALT+SHIFT+D~ 下载、~ALT+SHIFT+U~ 上传）：1. 装 Settings Sync；2. GitHub → settings → Developer settings → personal access tokens → generate new token，勾选 Gist 提交；3. 保存 Token；4. 命令框输入 sync → 高级设置 → 编辑本地扩展设置 → 填 token；5. 输入 sync → update/upload settings 上传，返回 Gist ID 并保存；6. 设置里搜 Sync 可查 gist id；7. 新机器输入 sync → Download settings，按提示 regenerate token、填 Token 与 Gist ID 即可还原。
+  - 起本地服务，方式一：装 Debugger for Chrome，用 Ctrl 加反引号开终端，执行 ~npm install -g live-server~，再执行 ~live-server~。
+  - 起本地服务，方式二：~npm install http-server -g~；进入目标文件夹执行 ~http-server -c-1~（只输 ~http-server~ 的话改了代码页面不会同步更新）；按 ~CTRL-C~ 关闭。
+  【原文摘录】
+  #+begin_quote
+  工欲善其事，必先利其器。想要优雅且高效的编写代码，必须熟练使用一款前端开发工具。但前端开发工具数不胜数，像HBuilder、Sublime Text、WebStorm、Visual Studio Code......等等,其中VSCode以其轻量且强大的代码编辑功能和丰富的插件生态系统，独受前端工师的青睐。
+  #+end_quote
+  #+begin_quote
+  新版的vscode设置默认为UI的设置，而非之前的json设置。如果你想复制我上面这段代码进行配置，可以进行下面的修改
+  #+end_quote
+  #+begin_quote
+  在写前端页面中，经常会在浏览器运行HTML页面，从本地文件夹中直接打开的一般都是file协议，当代码中存在http或https的链接时，HTML页面就无法正常打开，为了解决这种情况，需要在在本地开启一个本地的服务器。
+  #+end_quote
+  #+begin_quote
+  花了一天终于把vscode配置成自己满意的样子，如果每换一次电脑就要重新来一次，大家一定会手撕了我。放心，早就帮大家准备好了。Settings Sync，在不同电脑间同步你的插件。
+  #+end_quote
+  【我的想法】
+  优点是按“能跑起来”的顺序组织：先能用（中文、提示、快捷键），再好用（插件），最后可持续（同步、本地服务）。但 2019 年的写法有时代痕迹：中文现在装语言包即可，Settings Sync 已内置并改用 GitHub 登录，volar 也并入了 Vue 官方插件，照抄反而绕远；长期保值的是配置项和快捷键肌肉记忆。

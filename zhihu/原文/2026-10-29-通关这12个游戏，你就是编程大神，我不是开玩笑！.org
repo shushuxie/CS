@@ -1,0 +1,123 @@
+#+TITLE: 通关这12个游戏，你就是编程大神，我不是开玩笑！
+#+LINK: https://zhuanlan.zhihu.com/p/28144861
+#+AUTHOR: 地球的外星人君
+#+TYPE: article
+#+DATE: 2026-10-29
+
+#+begin_quote
+原文名称：12 Free Games to Learn Programming.
+原文链接： [[https://medium.mybridge.co/12-free-resources-learn-to-code-while-playing-games-f7333043de11][https://medium.mybridge.co/12-free-resources-learn-to-code-while-playing-games-f7333043de11]]
+原作者： [[https://medium.mybridge.co/@Mybridge][@Mybridge]]
+#+end_quote
+
+为了评选出将游戏和编程结合的最好的网站，我们对比了200多家类似站点。最终我们不负众望，精选出了12个最好的可以让你一边玩游戏一遍学编程的网站。
+
+Mybridge A.I. 综合了多种因素对内容的价值进行判定，从而决定到底这些网站对程序员的帮助有多大。
+
+最终，我们找到了内容层次覆盖初中高阶程序员、语言类型包涵JS、Java、Python、PHP、C#同时真正开源、免费的这些网站。
+
+** *[[https://www.codingame.com/start][Coding Games]]*
+
+一边玩游戏，一边挑战变成难题，同时还支持所有语言，你还要啥自行车？
+
+（译者注：原文提供了首页截图，我将其替换为官网首页展示的游戏内容，更加直观。视频大小约5M）
+
+[[https://www.zhihu.com/video/873925156509208576][https://www.zhihu.com/video/873925156509208576]]
+
+** *[[https://cn.codecombat.com/play][CodeCombat]]*
+
+CodeCombat是一个面向学生的游戏和CS学习平台。这是一个社区项目，有数百玩家自愿提供支持。支持语言包括Java、JS、Python、Lua、CoffeeScript。
+
+（译者注：支持中文哟~同时还按照不同等级提供了不同的练习项目）
+
+[[https://pica.zhimg.com/v2-e39e2093e96abcc9626554147c8c05f2_1440w.png]]
+
+** *[[https://screeps.com/][Screeps]]*
+
+在游戏中学习JavaScript。世界上第一款针对程序员的MMO沙盒游戏（自称）。
+
+（译者注：同样是官网首页的游戏内容，视频大小约7M）
+
+[[https://www.zhihu.com/video/873929644171227136][https://www.zhihu.com/video/873929644171227136]]
+
+** *[[https://checkio.org/][CheckiO]]*
+
+Check iO是一款基于浏览器的游戏，你需要在游戏不断解决Python问题进行通关。（需要登录）
+
+（译者注：原文发表时未提及JavaScript，目前官网显示同时支持Python和JavaScript语言，图片为最新官网截图。）
+
+[[https://pic4.zhimg.com/v2-8c002541f9fa6f51f802c2ebcd627663_1440w.png]]
+
+** *[[https://vim-adventures.com/][VIM Adventures]]*
+
+玩游戏的时候学VIM。（看名字就知道咯...）
+
+[[https://pic2.zhimg.com/v2-91a9f6441448c7f0407a0247505281b3_1440w.png]]
+
+** *[[http://www.cyber-dojo.org/][Cyber-Dojo]]*
+
+Cyber-dojo是一个提供给程序员们练习写程序的地方。支持语言包括JavaScript、Java、Python、PHP、Ruby和很多其他语言。
+
+源码： [[https://github.com/cyber-dojo/cyber-dojo][cyber-dojo]]
+
+（支持语言名单：Asm、BCPL、Bash、C (clang)、C (gcc)、C#、C++ (clang++)、C++ (g++)、Chapel、Clojure、CoffeeScript、D、Elixir、Elm、Erlang、F#、Fortran、Go、Groovy、Haskell、Java、Javascript、Kotlin、PHP、Perl、Python、R、Ruby、Rust、Scala、Swift、VHDL、VisualBasic）
+
+[[https://pica.zhimg.com/v2-a4085e8f627ea4396cb726a52e37ea42_1440w.png]]
+
+** *[[https://www.playcodemonkey.com/][CodeMonkey]]*
+
+在帮小猴子捡香蕉的同时学习编程。这款游戏通常被用于教学当中，由老师带领孩子学习。
+
+[[https://pic3.zhimg.com/v2-3bb31a2bfefc6d6fed0d1ece5c21d528_1440w.jpg]]
+
+** *[[http://play.elevatorsaga.com/][the elevator programming game]]*
+
+电梯编程游戏，跟随关卡解决所有挑站。以第一关为例，在60秒以内运送15个人。（使用语言为JavaScript）
+
+项目源码： [[https://github.com/magwo/elevatorsaga][elevatorsaga]]
+
+[[https://pic1.zhimg.com/v2-a5fe3544aaf91283959ebaa2ad972f8a_1440w.png]]
+
+** *[[https://www.codewars.com/][Codewars]]*
+
+在战斗中进行学习。和其他人一起在真实的代码挑战中提升技巧，支持语言包括JavaScript、Python、C#、Java、Python和其他。
+
+（支持很多语言，详见截图）
+
+[[https://pic4.zhimg.com/v2-0a27e40e275617e171158e722fc28533_1440w.png]]
+
+** *[[http://rubyquiz.com/][Ruby Quiz]]*
+
+Ruby Quiz是一个Ruby程序员提供的每周编程挑战项目，目前有156个测验项目。
+
+[[https://pic1.zhimg.com/v2-8b047acc265a90f61fde97fe92b59364_1440w.png]]
+
+** *[[https://www.git-game.com/][Git-Game]]*
+
+Git-gam是一款基于终端的游戏，该游戏将会教授一些炫酷的代码管理技能。游戏的主题是解密，通过git命令来获取线索。
+
+[[https://pica.zhimg.com/v2-0a0fc17110270e661e3bddcbadff532c_1440w.png]]
+
+** *[[http://www.hacker.org/][hacker.org]]*
+
+这项挑战由一系列本设计来强化你黑客技巧的解密、诡计、测试、烧脑环节组成。想要通关本系列，你必须学会解密、编码、渗透。
+
+[[https://pic4.zhimg.com/v2-8aac1609341b07cae10de607d89df8f3_1440w.png]]
+
+-----
+
+你想更深入了解学习Python知识体系，你可以看一下我们花费了一个多月整理了上百小时的几百个知识点体系内容：
+
+[[https://apprhkaai3v6603.h5.xiaoeknow.com/v1/course/text/i_5ef85d786e5f7_iHDka6sJ?type=2&pro_id=p_5fe2fb75e4b04db7c0969ffb][2020Python高薪实战学习大合集]]
+
+往期精彩文章，欢迎点赞收藏！
+
+[[https://zhuanlan.zhihu.com/p/225866345][一份超全的Python学习资料汇总！]]
+
+[[https://zhuanlan.zhihu.com/p/339009072][这是我见过最全的《MySQL笔记》，涵盖MySQL所有高级知识点！]]
+
+[[https://zhuanlan.zhihu.com/p/338448408][一份超全的Linux自学资源整理合集！]]
+
+[[https://zhuanlan.zhihu.com/p/328172459][不用怀疑！Kubernetes决定弃用Docker]]
+
+[[https://zhuanlan.zhihu.com/p/326406890][一键申请多个证书 shell 脚本]]

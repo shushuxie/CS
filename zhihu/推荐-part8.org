@@ -623,3 +623,191 @@ Keigo，平时是普通的上班族，脑洞上线后，则是猛戳你笑点的
   【我的想法】
   这篇是典型的「工具清单文」，价值在分类维度而不是每条介绍：先问「我要看总量、看连接、还是看进程」，再选工具，就不会在十几个命令里乱试。实际运维里最常用的其实是三个组合：nload/iftop 做即时排查、nethogs 抓进程、vnstat 做月度流量对账；dstat/collectl 更适合长期采样。需要注意它写于 2021 年，部分工具已少维护（iptraf-ng 取代 iptraf、cbm 基本停更），而现代环境更常用 nload + ss + tcpdump + Prometheus/node_exporter；容器里则要先解决「看的是宿主机还是 namespace」的问题，这些原文都没涉及。把它当「知道有这类工具」的索引，具体命令还是 man 一下最稳。
 
+
+* 12 个令人惊叹的 CSS 项目  :推荐:CSS:前端:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/58424141
+  :作者:  IT程序狮子烨
+  :原文:  [[file:原文/2026-10-29-12 个令人惊叹的 CSS 项目.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-12 个令人惊叹的 CSS 项目.org][打开本地归档]]
+  - 一句话概括：12 个纯 CSS 开源项目清单，从太阳系动画到 CSS 油画，附 CodePen 源码，适合找灵感练手。
+  【方法/论点要点】
+  - Solar System：参照真实轨道周期设计，每颗行星按相对地球年的时间绕太阳公转。https://codepen.io/kowlor/pen/ZYYQoy
+  - Gradient Background Animation：动画常是性能杀手，这个渐变动画却相当轻量，易编辑且支持自定义颜色。https://codepen.io/P1N2O/pen/pyBNzX
+  - Stack Game：不借助 JS，纯 CSS 做出界面漂亮的堆叠小游戏，看似容易、背后设计并不简单。https://codepen.io/finnhvman/pen/xJRMJp
+  - 3D Progress Bars：漂亮、轻量、易定制的 3D 进度条，稍作改造可当迷你 3D 图表。https://codepen.io/rgg/pen/QbRyOq
+  - Glitched Text：纯 CSS 的故障风文字效果，适合给页面加一点赛博味。https://codepen.io/lbebber/pen/ypgql
+  - Francine：用纯 CSS 画出 18 世纪风格肖像，逼真程度足以颠覆“CSS 只能排版”的印象。https://github.com/cyanharlow/purecss-francine
+  - Mobile Phone：仅用 CSS 和 HTML 还原手机界面，效果可与产品照片媲美，适合做落地页展示。https://codepen.io/Wujek_Greg/pen/LmrweG
+  - Map Creator：不用 JS 也能生成简单 3D 地图。https://codepen.io/onediv/pen/NrNebj
+  - Instagram.css：灵感来自 CSSgram 的纯 CSS 滤镜库，引入即得 Instagram 风格滤镜。https://picturepan2.github.io/instagram.css/
+  - Animated Gradient Ghost Button：带流动渐变的幽灵按钮，风格百搭，容易嵌进任何站点。https://codepen.io/ARS/pen/vEwEPP
+  - Devices.css：以现代设备为模板，纯 CSS 画出 iPhone X、iPhone 8 等机身，适合包装产品截图。https://picturepan2.github.io/devices.css/
+  - Dynamic Image Colorizing：调用系统取色器就能实时替换图片颜色，交互思路很巧。https://codepen.io/noahblon/pen/ZbjmbK
+  【原文摘录】
+  #+begin_quote
+  或许，你认为 CSS 只能用来控制网页的结构与样式，但它的功能和应用却超乎你的想象。从逼真的图像到特效动画，优秀的开发者利用它已创造了无数种可能。
+  #+end_quote
+
+  #+begin_quote
+  CSS 的能量超乎你想象，你甚至还可以利用它制作出艺术品效果。Francine 就是一个纯 CSS 制作、展示的 18 世纪风格的绘画作品。
+  #+end_quote
+
+  #+begin_quote
+  利用 JS，我们能实现各种让人惊叹的页面/动画效果，但 JS 并不是最轻量的解决方案。如果合理使用 CSS，你依然可以实现一些炫酷的效果，并且它对性能的影响会小得多。
+  #+end_quote
+  【我的想法】
+  这份清单更像一次“CSS 能力边界”的展览：油画、手机外壳、3D 地图分别对应绘制、拟物和空间变换三条路线，挑一个拆源码，比看十篇属性教程都管用。放到今天，纯 CSS 做游戏或整幅插画多半是炫技，但渐变按钮、设备外壳、滤镜库仍能直接进生产环境。收藏它的正确方式是当练手题目：先自己写，再对照 CodePen 看别人怎么省 DOM、怎么用伪元素和渐变偷懒。
+
+* 程序员的开源月刊《HelloGitHub》第61期  :推荐:开源项目:GitHub:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/368339940
+  :作者:  HelloGitHub
+  :原文:  [[file:原文/2026-10-29-程序员的开源月刊《HelloGitHub》第61期.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-程序员的开源月刊《HelloGitHub》第61期.org][打开本地归档]]
+  - 一句话概括：HelloGitHub 第 61 期，按语言分栏推荐 35 个开源项目，从教你写 C 编译器的教程到删 node_modules 的小工具都有；值得收是因为它像一份“按需取用”的月度清单，几乎每条都能直接点开就用。
+  【方法/论点要点】
+  - 定位：只挑“有趣、入门级”的项目，覆盖实战项目、企业级项目、开源书籍与机器学习，每月 28 号更新，目的是让人短时间内感受到开源的魅力。
+  - C 向：~acwj~ 是从零写 C 编译器的实战教程，最终产物能自举、能在真机运行；~zstd~ 是 Zstandard 无损压缩的实现，压缩比接近 lzma，解压速度更快，很多知名项目和游戏在用。
+  - 系统与工具向：~Files~ 是 Fluent Design 风格的新文件管理器；~OpenRefine~ 用可视化方式清洗杂乱数据、可导出多种格式，不会编程和 SQL 也能用；~drawio~ 是免费开源的绘图工具，可自部署可在线用，功能直追 Visio；~npkill~ 专治 node_modules 占地；~fselect~ 用类 SQL 语句找文件，例如 ~fselect size, path from /home/user where name = '*.cfg'~；~LIII~ 是无广告的 BT 下载工具。
+  - 开发与后端向：~jql~ 用一行命令查 JSON；~chanify~ 以 Docker 部署后用 ~curl~ 推消息到 iOS；~algorithm-pattern~ 是 Go 版刷题模板；~kooder~ 为 GitLab/Gitea 提供代码、仓库、Issue 搜索；~jacoco~ 做 Java 覆盖率；~kutt~ 是 Node.js+Express+React 的短链服务；~flink-recommandSystem-demo~ 演示 Flink+Redis+HBase 的实时商品推荐链路；~question2answer~ 是 PHP+MySQL 的问答平台。
+  - 语言与学习向：Go 有图像库 ~imaging~（~imaging.Resize~、~imaging.Sharpen~）和 2D 引擎 ~ebiten~；JS 有 3D 引擎 ~taro~ 和纯前端静态导航 ~nav~；Python 有 100 多行的命令行番茄钟 ~tomato-clock~、把执行过程导出成视频的 ~vardbg~、扫 APK 敏感信息的 ~apkleaks~；Swift 有 ~awesome-ios~、抓包工具 ~Knot~、SwiftUI 练手项目 ~SwiftUITodo~。
+  - 书籍与机器学习：开源书包括《黑客的贝叶斯方法：以 Python 为例》《一个 64 位操作系统的设计与实现》《简明的 TensorFlow 2》；ML 方面有浏览器内实时移除人像的 ~Real-Time-Person-Removal~ 和 ~AI-Expert-Roadmap~ 学习路线图。
+  - 彩蛋：~shapez.io~ 是 Steam 游戏《异形工厂》的完整源码；~cloudmusic-vscode~ 把网易云音乐搬进 VS Code。
+  【原文摘录】
+  #+begin_quote
+  分享 GitHub 上有趣、入门级的开源项目。内容包括：有趣、入门级的开源项目、开源书籍、实战项目、企业级项目等，让你在短时间内感受到开源的魅力，对开源和编程产生兴趣！
+  #+end_quote
+  #+begin_quote
+  教程注重实战循序渐进，一步步教你如何用 C 语言写一个可以自己编译自己（自举）、能够在真正的硬件上运行的 C 语言编译器
+  #+end_quote
+  #+begin_quote
+  一款用于清理数据的桌面工具。通过可视化的方式分析、整理数据，支持 Windows、Linux、Mac 操作系统。拥有查询、过滤、去重、分析等功能，可以把杂乱的数据变成“整洁”的电子表格
+  #+end_quote
+  #+begin_quote
+  免费开源可以自行部署也可以在线使用，功能上直追 Microsoft Visio。支持流程图、序列图、网络拓扑图、甘特图、思维导图、模型图等
+  #+end_quote
+  #+begin_quote
+  快速查找和轻松删除 node_modules 文件夹的工具。还在为 node_modules 占了很多磁盘空间而烦恼吗？
+  #+end_quote
+  【我的想法】
+  这类月刊的正确用法不是通读，而是当索引：先扫自己主语言那一栏，再挑一两个“跨语言但解决通用痛点”的工具试用，比如 npkill、drawio、OpenRefine 都属于一次安装长期受益的类型。缺点是每条只有一两句介绍，看不出维护活跃度和实际质量，真要选型还得点进仓库看 commit 与 issue。也正因为描述短，它很适合当作灵感清单定期回翻。
+
+* 城市大数据及开放数据索引  :推荐:数据源:城市研究:开放数据:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/170520125
+  :作者:  樊川
+  :原文:  [[file:原文/2026-10-29-城市大数据及开放数据索引.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-城市大数据及开放数据索引.org][打开本地归档]]
+  - 一句话概括：按“地理生态—城市—微观调研”分层整理的城市研究数据源索引，从遥感影像、统计年鉴列到 POI、手机信令和 CGSS，每个来源都注明获取方式与可用边界，做规划或数据新闻时能当检索地图。
+  【方法/论点要点】
+  - 分层框架：先按空间尺度分为地理/生态观测、城市宏观与物质环境、微观社会调研，再把互联网公司运营数据单列为“城市（互联网）大数据”。
+  - 遥感：~http://www.gscloud.cn~（地理空间数据云，多数免费及商用卫星数据，可高级检索下载）；~http://www.resdc.cn~（资源环境数据云平台，另含大尺度环境与经济数据）；~http://www.geodata.gov.cn~（自然资源部基础库，标准化高但覆盖不如前者）。
+  - 高清与历史影像：google earth pro 可下相对高清卫星图；要带地理信息且更高清用 imap 一类工具批量下百度/高德底图，代价是“时间不可考且非建成区基本没有数据”；更早影像用 USGS 冷战卫星数据集，夜间灯光在 ~https://ngdc.noaa.gov/eog/~。
+  - 生态与气象：~http://www.cnern.org.cn~（CERN 台站与长期观测合成数据）、~http://www.csdata.org~、~http://www.geodoi.ac.cn~、ESSD 期刊、~http://www.envicloud.cn~；再分析气象用 ECMWF。
+  - 宏观统计：知网可下年鉴全本；~http://data.stats.gov.cn~ 为国家统计局开放平台；~http://data.cnki.net~ 支持按指标项检索，不必下整本。
+  - 物质环境：OSM 国内支持不理想，可走官网或 QGIS/ArcGIS 插件；建筑轮廓看公众号“让学术变得更简单的环哥万事屋”（哈工大刘俊环）；土地利用与建筑功能多在规划部门手里，研究上靠地块内设施数据反演。
+  - 交通：出行云 ~https://transportdata.cn~ 提供不完整的公共交通设施数据，线路可调百度/高德 API；高德交通大数据 ~https://report.amap.com~ 有拥堵、预测、迁徙；公交刷卡“一般不公开或条件公开”。
+  - 城市开放平台：哈尔滨、深圳、上海等平台“大都停留在政务文件数据水平，没有更深度的数据处理，空间数据较少”；北京城市实验室 BCL 数据集是少见的成品数据。
+  - 互联网大数据：POI 走百度/高德开放平台 API 或极海云，但服务商不提供历史 POI，须找第三方；LBS 看腾讯位置大数据；街景走百度/腾讯 API；手机信令须向联通智慧足迹购买；房价可爬售房网站；微博走开放 API。
+  - 微观调研：CNSDA（~http://www.cnsda.org~）主推 2003 年起的 CGSS；北大开放研究数据平台有 CFPS、CHARLS、CLHLS、BAS；另有 NYU Shanghai 数据集与 awesome-public-datasets 索引可查。
+  【原文摘录】
+  #+begin_quote
+  以遥感影像卫星与资源卫星的数据为主，包括标准产品与合成产品等多个加工程度。涉及的数据内容主要包括高清影像卫星获得的地物影像（以我国高分卫星为例，不免费开放），多波段资源卫星获得的地表覆盖、反射率、温度、初级生产率等（MODIS、LANDSAT等为主）以及气象卫星获得的气象信息和空气污染信息等。
+  #+end_quote
+  #+begin_quote
+  自步入互联网社会以来各个互联网公司运营过程中收集的数据，由于与实际商业模型相关，大多数数据经处理后都可以有空间信息，对于城市研究具有重要价值，但因开放程度不同和获取难度，有部分数据难以广泛应用到研究和实践中。面对这种数据困境，亟待由政府牵头建设智慧城市基础数据收集和处理平台。
+  #+end_quote
+  #+begin_quote
+  微观社会调研数据多为国家或相关科研机构组织进行的社会调查数据，以问卷调研为主要形式，完善的数据集包括了连续年份的测度。我国现有国家级社会调研项目并不多，现在有很多数据开放网站使用众包等形式拓展数据获取的边界。
+  #+end_quote
+  【我的想法】
+  清单里不少链接已经失效，保值的是它给每条数据标的成色——免费还是付费、公开还是条件公开、原始还是反演。真正卡人的也不是入口，而是空间粒度和时间连续性，所以“历史 POI 要向第三方买”这类提示最省时间。
+
+* 设计师必备地图合集（附高清地图下载工具）  :推荐:地图:数据可视化:设计素材:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/38076305
+  :作者:  于子小样
+  :原文:  [[file:原文/2026-10-29-设计师必备地图合集（附高清地图下载工具）.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-设计师必备地图合集（附高清地图下载工具）.org][打开本地归档]]
+  - 一句话概括：把“看地图”这件事拆成浏览、下载底图、调研记录、空间分析、找数据、看现成成果六层，逐层给工具和网址，规划/建筑/景观方向做前期调研和分析图时可直接照单取用。
+  【方法/论点要点】
+  - 基础浏览平台：谷歌地图、谷歌地球、百度、搜狗、腾讯、高德、必应、苹果、维基地图等；Zoom Earth 可切 NASA、夜景等多种图层；HERE（诺基亚地图服务）能看多个城市的 3D 模型和街景。
+  - 高清底图下载工具：奥维互动地图浏览器、全能电子地图下载器、稻歌 Google Map 截获器、google earth pro（免费）、水经注。作者尤其推荐全能电子地图下载器，可浏览下载谷歌/百度/必应等多源地图、叠加等高线、做一条断面或一条路径的高程分析。
+  - 看谷歌的办法：谷歌地图在墙外，可以借助奥维互动间接访问。
+  - 调研记录：奥维可实时记录调研轨迹，加点或块标注，轨迹能导出，因此可衍生出很多扩展用法。
+  - 场地建模与 CAD 底图：cadmapper.com 可在线生成场地 SU 模型；OpenStreetMap 配合 Global Mapper 可拿到 CAD 底图；Digimap 让国外教育机构学生免费下载地图源文件，包括 dwg 格式线稿。
+  - 自定义底图：Google Maps API 的 styled maps wizard（需翻墙）、OpenStreetMap、Mapbox。
+  - 分析软件：GIS 是功能最强的一档，能做各类空间分析，但上手要耐心；Global Mapper 支持编辑、转换、打印、跟踪记录 GPS，可输出光栅地图、海拔地图、矢量地图；轻量一点的还有 Excel 的 Power Map。
+  - 数据获取平台四个：地理空间数据云、国家数据共享平台（chinageoss）、国家测绘局全国地理信息资源目录服务系统（有矢量地图、高程地图、模拟地形图，貌似要付费）、DIVA-GIS。
+  - 现成成果平台：天地图（基础地理、地理单元与科学测站、人口统计、社会经济、历史、居民生活、自然环境、灾害、资源等图层，还有时间对比条；可直接看 5A/4A/3A 景区分布、各城市工业企业分布、地表覆盖）；哈佛 Worldmap 与 Chinamap；targetmap 可在线创建定制分享数据地图；地图慧；Topoview 可看 1880—2010 历史地形图。
+  - 百度和腾讯系列：百度人气图、通勤图、热力图、迁徙、预测、慧眼（天眼已停用），腾讯迁徙地图；另类还有谷歌星空、上帝之眼。
+  - 研究型平台：北京城市实验室 BCL 有大量自制研究地图，值得长期围观；UrbanDashboard 北京城市空间画像也不错但内容还少。
+  - 缺口提醒：手机信令、出租车轨迹、微博签到这类数据平台不给，需要找相关部门合作。
+  【原文摘录】
+  #+begin_quote
+  我一直对地图网站&应用比较感兴趣。通过地图，我们可以更直观、更全局性的了解一片区域，现在地图的功能已经不仅仅局限于在户外辅助我们找路or辨别方向，而是与互联网、大数据等等结合，开拓出了各种新方向。
+  #+end_quote
+  #+begin_quote
+  辅助调研的地图工具，这里给大家推荐非常实用的奥维互动下图为软件截图，可以实时记录我们的调研轨迹，还可以加点或者块的标注，更重要的是这个轨迹是可以导出的，这就能产生非常多的扩展用法。
+  #+end_quote
+  #+begin_quote
+  最强大的地图编辑软件，非GIS莫属，它是专业的地理信息系统应用软件，可以做各种高大上+实用的分析，当然学起来还是需要点耐心。
+  #+end_quote
+  #+begin_quote
+  用GIS或者其他可视化分析软件的时候当然我们经常最缺的还是数据，像手机信令数据，出租车轨迹数据，微博签到数据等等，这个需要找相关的部门合作了，这里给大家先推荐四个数据获取平台。
+  #+end_quote
+  #+begin_quote
+  除了上述可以供我们直接看的普通地图，以及我们可以用来做分析的软件、数据平台，还有很多现成的分析成果平台,我们就可以直接拿来查数据、出结果了。
+  #+end_quote
+  【我的想法】
+  这篇的骨架比清单更有用：它按“看图—取图—用图—造图”的工作流排列，找工具时不会乱。可惜成文较早，奥维、水经注的授权方式、天地图图层和百度几个产品的状态都已变化，动手前要先点开验证。对设计岗来说收益最高的是两条冷门路径——奥维的轨迹导出和 cadmapper 直接出 SU 场地模型，能省掉大量描图时间。
+
+* 通关这12个游戏，你就是编程大神，我不是开玩笑！  :推荐:编程:游戏:学习资源:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/28144861
+  :作者:  地球的外星人君
+  :原文:  [[file:原文/2026-10-29-通关这12个游戏，你就是编程大神，我不是开玩笑！.org][本地原文]]
+  :抓取:  2026-10-29
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-29-通关这12个游戏，你就是编程大神，我不是开玩笑！.org][打开本地归档]]
+  - 一句话概括：从 200 多个站点里筛出的 12 个“边玩边学编程”的免费开源网站，覆盖多语言与初中高阶，适合当刷题倦怠期的替代入口。
+  【方法/论点要点】
+  - 筛选口径：转译 Mybridge 榜单，要求内容覆盖初中高阶、语言含 JS/Java/Python/PHP/C#，且真正开源免费；译文补了中文支持与截图。
+  - Coding Games（~https://www.codingame.com/start~）：边玩边解编程难题，支持所有语言。
+  - CodeCombat（~https://cn.codecombat.com/play~）：面向学生的游戏化 CS 平台，社区项目，支持 Java、JS、Python、Lua、CoffeeScript，有中文并按等级分练习。
+  - Screeps（~https://screeps.com/~）：在游戏中学 JavaScript，自称首款面向程序员的 MMO 沙盒游戏。
+  - CheckiO（~https://checkio.org/~）：浏览器内解 Python 题通关，需登录，现兼支持 JavaScript。
+  - VIM Adventures（~https://vim-adventures.com/~）：玩游戏的同时学 Vim。
+  - Cyber-Dojo（~http://www.cyber-dojo.org/~）：练习写程序，支持 Asm、Bash、C/C++、Go、Java、JS、Kotlin、PHP、Python、R、Ruby、Rust、Scala、Swift 等三十余种语言。
+  - CodeMonkey（~https://www.playcodemonkey.com/~）：帮小猴子捡香蕉学编程，多用于课堂。
+  - the elevator programming game（~http://play.elevatorsaga.com/~）：用 JS 写电梯调度，第一关 60 秒运 15 人，源码开源。
+  - Codewars（~https://www.codewars.com/~）：在真实代码挑战中与他人比拼升级，支持 JS、Python、C#、Java 等。
+  - Ruby Quiz（~http://rubyquiz.com/~）：Ruby 每周挑战，累计 156 个题目。
+  - Git-Game（~https://www.git-game.com/~）：终端解谜，用 git 命令拿线索，顺带练代码管理。
+  - hacker.org（~http://www.hacker.org/~）：解密、诡计、测试、烧脑关卡串联，通关需会解密、编码、渗透。
+  【原文摘录】
+  #+begin_quote
+  为了评选出将游戏和编程结合的最好的网站，我们对比了200多家类似站点。最终我们不负众望，精选出了12个最好的可以让你一边玩游戏一遍学编程的网站。
+  #+end_quote
+  #+begin_quote
+  最终，我们找到了内容层次覆盖初中高阶程序员、语言类型包涵JS、Java、Python、PHP、C#同时真正开源、免费的这些网站。
+  #+end_quote
+  #+begin_quote
+  Git-gam是一款基于终端的游戏，该游戏将会教授一些炫酷的代码管理技能。游戏的主题是解密，通过git命令来获取线索。
+  #+end_quote
+  【我的想法】
+  榜单的价值在分档：CodeMonkey、CodeCombat 给零基础，CheckiO、Codewars 给会语法的人，Screeps 和电梯游戏则逼你处理状态与调度。它成文于 2017 年，Ruby Quiz 早已停更、CodeCombat 也有付费墙，得挑着用。想练“看得见的反馈”就选电梯游戏，练工具肌肉记忆则选 VIM Adventures 和 Git-Game。
