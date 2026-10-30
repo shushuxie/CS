@@ -1,0 +1,28 @@
+* 为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了  :IDEA:Eclipse:Java:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/64815393
+  :作者:  安然
+  :原文:  [[file:原文/2026-10-30-为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了.org][本地原文]]
+  :抓取:  2026-10-30
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-30-为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了.org][打开本地归档]]
+  - 一句话概括：一位十年 Eclipse 用户讲为何转向 IntelliJ IDEA，对比项目模型、配置与调试体验，也列出新 IDE 的坑。
+  【方法/论点要点】
+  - 换的动因是配置不可复现：“同样的配置方式在不同机器却不一定都会生效”，配环境只能几率性成功。
+  - 项目模型更顺：Project 相当于 Eclipse 的 workspace，Module 相当于 project，“有统一的Global Library”，多个 module 可一次提交，避免漏提。
+  - 配置与效率：Settings 分层清晰，tab 设 4 spaces 后“完全按照你配置的预期来”；生成测试类、ZenCoding、调试显示变量值都更顺手。
+  - 坑也不少：“崩溃了就直接界面消失”，此外 Maven 集成弱、Project 视图要逐层展开、社区版功能弱、git push 入口深（~Ctrl+Shift+K~）。
+  - 结论：“想找个IDE来学习Java”，Eclipse 上手更快；“想提升开发效率”，IDEA 值得试。
+  【原文摘录】
+  #+begin_quote
+  这里的Project是类似于eclipse中的workspace，而Module是类似于eclipse中的project。
+  #+end_quote
+  #+begin_quote
+  Eclipse中真的是用尽浑身解数，配置了N处把tab改成4 spaces，但是你会发现在总有地方还是不生效。但是IntelliJ会完全按照你配置的预期来。
+  #+end_quote
+  #+begin_quote
+  超小的默认内存，内存溢出崩溃不提示：启动内存一样要和Eclipse那样修改配置文件，但是崩溃了就直接界面消失，最后加到1.5G才能稳定运行。
+  #+end_quote
+  【我的想法】
+  价值在于把“换 IDE”从口味之争拉回到具体摩擦点：配置复现、多模块提交、调试体验，这些才是长期成本。局限是体验停留在旧版本，部分吐槽今天已过时。

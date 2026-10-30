@@ -1,0 +1,48 @@
+* Java 语法清单  :Java:语法速查:编程:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/25578170
+  :作者:  王下邀月熊
+  :原文:  [[file:原文/2026-10-30-Java 语法清单.org][本地原文]]
+  :抓取:  2026-10-30
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-30-Java 语法清单.org][打开本地归档]]
+  - 一句话概括：把 Java 7 时代最常写、又最容易忘的语法片段按主题编成一张“作弊表”，从字符串、集合、日期一路排到正则、IO、文件和打包，每条都给可直接照抄的写法，适合当案头速查而不是系统教程。
+  【方法/论点要点】
+  - 基础语法：hello world、~if-else~、~for~ / ~while~、~do-while~（先执行后判断，示例里 count 从 0 打到 11）、~switch-case~、一维与二维数组、类与对象、方法定义。IDE 对比图之后作者只给了一句结论：推荐 IntelliJ IDEA，学生可免费申请。
+  - 字符串操作：比较用 ~str1.equals(str2)~ 和 ~equalsIgnoreCase~，不是 ~==~；检索用 ~indexOf~（可带起始下标），截取用 ~substring~；逐字符处理用 ~charAt(i)~ 配合 ~length()~ 循环；整体反转靠 ~new StringBuffer(str).reverse().toString()~，按单词反转则用 ~StringTokenizer~ 逐个压栈再弹出；大小写转换 ~toUpperCase~ / ~toLowerCase~，去首尾空格 ~trim~，去全部空格 ~replace(" ","")~，拆成数组 ~split(",")~。
+  - 数据结构：数组扩容没有现成方法，要新建数组 + ~System.arraycopy~ 再换引用；Map 遍历走 ~entrySet().iterator()~，强转成 ~Map.Entry~ 后取 key / value；数组排序 ~Arrays.sort~ 配 ~Arrays.toString~ 打印，List 排序用 ~Collections.sort~；查找分别用 ~indexOf~、~containsKey~、~containsValue~，已排序数组可用 ~Arrays.binarySearch~；~toArray()~ 把 List 或 Map 的 entrySet 转成数组。
+  - 时间与日期：~Date~ 配 ~SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss")~ 格式化输出；Date 与 Calendar 互转（~cal.setTime(date)~、~cal.getTime()~）；字符串转日期用 ~DateFormat.getDateInstance().parse~；日期加减既可以改毫秒数（原文提醒可能数值溢出），更稳的是 ~Calendar.add(Calendar.DATE,5)~；两日期相差用毫秒相减再除 ~1000*60*60*24~；取年月日周用 ~Calendar.get(Calendar.YEAR)~ 一类常量；计时用两次 ~System.currentTimeMillis()~ 相减。
+  - 正则表达式：~Pattern.compile~ 可带 ~CASE_INSENSITIVE~、~MULTILINE~ 标志，~Matcher~ 用 ~find~ 判断、~group~ 取命中文本；替换有现成的 ~replaceAll~，需要边找边拼时用 ~appendReplacement~ + ~appendTail~ 配合 StringBuffer；逐行扫文件时用 ~matcher.reset(line)~ 复用同一个 Matcher，省去重复编译。元字符速记：~^~ 开头、~$~ 结尾、~?~ 0 或 1 次、~*~ 0 次以上、~+~ 1 次以上、~[...]~ 字符集、~|~ 或、~.~ 任意字符，以及 ~\d~ / ~\D~、~\s~ / ~\S~、~\w~ / ~\W~ 三对互补。
+  - 数字与数学：内建类型按位数列出（byte 8 位、short 16 位、long 64 位、float 32 位等）；判断字符串是否为数字用 ~Integer.parseInt~ 加 ~NumberFormatException~ 兜底；Double 比较用 ~equals~；~Math.round~ 四舍五入（传 double 返 long，传 float 返 int）；~NumberFormat~ 分别做千分位和货币格式化；进制转换用 ~Integer.toBinaryString~ / ~toOctalString~ / ~toHexString~；随机整数是 ~(int)(Math.random()*10)~；三角函数与 ~Math.log~ 直接调 Math 库。
+  - 输入输出：读控制台用 ~BufferedReader(new InputStreamReader(System.in))~ 循环读到输入 quit 为止；~Formatter~ 可把格式化结果写进 StringBuffer；文本读写用 ~BufferedReader/BufferedWriter~ 包 FileReader / FileWriter；二进制用 ~FileInputStream~ 加 ~read(bytes, offset, len)~；随机访问用 ~RandomAccessFile~ 的 ~seek~ 定位；读 jar / zip / rar 用 ~ZipFile~ 遍历 ~ZipEntry~，按 ~isDirectory~ 分支处理。
+  - 文件与目录：~createNewFile~ 建文件、~renameTo~ 同时承担重命名和移动、~delete~ 删除；改属性用 ~setReadOnly~ 与 ~setLastModified~；查大小 ~length~、判存在 ~exists~、取绝对路径 ~getAbsoluteFile~、判目录 ~isDirectory~、列目录 ~list~、建目录 ~mkdir~。
+  - 网络客户端：~new Socket(serverName, 80)~ 建连接；异常要分开捕获 ~UnknownHostException~、~NoRouteToHostException~、~ConnectException~ 和兜底的 ~IOException~，各自打印不同提示。
+  - 包与文档：~package~ 声明包名；~javadoc -d ... -sourcepath ... -subpackages java.net~ 生成文档；~jar cf project.jar *.class~ 打包，~java -jar something.jar~ 运行。
+  - 排序算法：原文只留了五个名字——冒泡、线性查找、二分查找、选择排序、插入排序，具体实现指向作者自己的 GitHub 仓库，正文没有展开。
+  【原文摘录】
+  #+begin_quote
+  时间仓促，笔者只是简单翻译了些标题与内容整理，支持原作者请前往原文点赞。需要注意的是，此文在 Reddit 上也引起了广泛的讨论，此文讲解的语法要点还是以 Java 7 为主，未涉及 Java 8 中内容，略显陈旧，读者可以带着批判的视角去看。
+  #+end_quote
+  #+begin_quote
+  个人推荐 IntelliJ IDEA 并且对于学生免费.
+  #+end_quote
+  #+begin_quote
+  do {
+          System.out.println("Count is: " + count);
+          count++;
+      } while (count < 11);
+  #+end_quote
+  #+begin_quote
+  Calendar today = Calendar.getInstance();
+  today.add(Calendar.DATE,5);
+  #+end_quote
+  #+begin_quote
+  long startTime = System.currentTimeMillis();
+  //times flies by..
+  long finishTime =  System.currentTimeMillis();
+  long timeElapsed = startTime-finishTime;
+  System.out.println(timeElapsed);
+  #+end_quote
+  【我的想法】
+  它的定位很诚实：一张按主题索引的 API 备忘录，写代码时想不起方法名翻一眼比搜文档快。但要清楚这是 Java 7 的切片，Java 8 之后的 Stream、Lambda、Optional、新日期时间 API 全部缺席，集合部分还停留在裸类型和强转的写法。另外原文若干片段本身有笔误（~mDate.getTime()~、~renameto~、~ofset~、计时相减顺序反了），照抄前得先过一遍脑子，这也正好说明速查表只能帮你回忆，不能替你理解。

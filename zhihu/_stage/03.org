@@ -1,0 +1,29 @@
+* Java自学路线总结，已Get腾讯Offer  :Java:自学路线:书单:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/58261716
+  :作者:  五彩驹
+  :原文:  [[file:原文/2026-10-30-Java自学路线总结，已Get腾讯Offer.org][本地原文]]
+  :抓取:  2026-10-30
+  :END:
+
+  - 本地原文：[[file:原文/2026-10-30-Java自学路线总结，已Get腾讯Offer.org][打开本地归档]]
+  - 一句话概括：19 届本科生总结的 Java 后端自学路线与书单，覆盖基础、Web、进阶和加分项，可当校招复习地图。
+  【方法/论点要点】
+  - 总原则：校招“拿不出像样的项目没关系，但是基础万万不可不牢固”；语言只是工具，面试看基础与解题思路。
+  - 基础：读《Java核心技术 卷1》，跳过图形、Swing 等章节，吃力可略过多线程；用 Java 写实验并刻意套设计模式，之后速读查漏。
+  - JavaWeb：学 Servlet/JSP、Tomcat、MVC、MySQL 与 JDBC、HTTP，参考《Head First Servlets and JSP》和 how2j；重点 Servlet 生命周期，做含注册登录、增删改查的小网站并部署上云。
+  - 进阶：读《Java编程思想》（跳过 GUI 章），写 HTTP 服务器、聊天室或 DBMS 级项目；读《Effective Java》；再攻多线程与 JVM，看《Java并发编程的艺术》《深入理解Java虚拟机》，抓内存模型、锁和 GC。
+  - Web 进阶：Linux（TLCL 加学生服务器）、操作系统、数据库（《MySQL必知必会》）、网络（《图解HTTP》）、LeetCode、SSM（重点 IOC 与 DI，别依赖框架）。
+  - 加分项：前端、一门动态语言、大数据，以及 Dubbo、Redis、Nginx、Docker 等工具。
+  【原文摘录】
+  #+begin_quote
+  众所周知，鹅厂后台一直以C++为重，面试官也是做C++开发。但是语言只是工具，对代码的理解才是核心。面试时重点考察的是基础知识，以及解题的思考过程。
+  #+end_quote
+  #+begin_quote
+  练习阶段各种设计模式套上去用，不要怕笨重，即使是滥用特性和设计模式也是一种有效的学习。
+  #+end_quote
+  #+begin_quote
+  SSM框架，Spring+SpringMVC+MyBatis可以说是开发必备了，但框架只是锦上添花，不要太依赖框架进行学习。当我们能不依赖任何框架开发完整项目时，才是真正掌握了它。
+  #+end_quote
+  【我的想法】
+  路线顺序合理，先基础再 Web 再底层，书单也务实。局限是写作时间较早，JSP、SSM、how2j 已显陈旧，分布式、消息队列、云原生基本缺席；可当骨架，技术栈按当下 JD 替换。
