@@ -1,0 +1,92 @@
+#+TITLE: Java源码跟踪阅读技巧
+#+LINK: https://zhuanlan.zhihu.com/p/73832097
+#+AUTHOR: 老刘
+#+TYPE: article
+#+DATE: 2026-10-30
+
+今天跟大家分享一下我平时阅读源码的几个小技巧，对于阅读Java中间件如Spring、Dubbo等框架源码的同学有一定帮助。
+
+本文基于Eclipse IDE，我们每天都使用的IDE其实提供了很多强大的功能，掌握它们，往往能够事半功倍。
+
+*1、Quick Type Hierarchy 快速查看类继承体系。*
+
+快捷键：Ctrl + T
+
+[[https://pica.zhimg.com/v2-0e1da4721e5b6a27069f7863f50f79f6_1440w.jpg]]
+
+查看类很多人可能都知道，可源码阅读的时候更多用来查看方法体系更重要，可以方便快速的定位到方法的实现类。如：
+
+[[https://pica.zhimg.com/v2-5bfd2eaee856dff84b80d419c78b123e_1440w.jpg]]
+
+此时如果想查看getBean()方法如何实现，可能会让你失望。结果如下：
+
+[[https://picx.zhimg.com/v2-bdf4aa2c60219dba6603d62e3d824e33_1440w.jpg]]
+
+进入到了BeanFactory的接口定义方法，什么也没有。
+
+此时我们直接在getBean上 Ctrl+T ：
+
+[[https://pic3.zhimg.com/v2-01adcbb54b8f55f32fb2c579ad2e072c_1440w.jpg]]
+
+可以看到其实现的子类，点击子类进去即可。此方法还适用于框架中非常常见的模板方法模式，在抽象类中定义的模板方法，用这招轻松找到实现类。
+
+当然还有详细的Open Type Hierarchy
+
+[[https://picx.zhimg.com/v2-5a138da02d20bc3dc5911094a58b0a7d_1440w.jpg]]
+
+会在左侧视图里面展示更好的Type View：
+
+[[https://pica.zhimg.com/v2-8ffd22900b1addaf7908ab11a93ba7de_1440w.jpg]]
+
+*2、Open Call Hierachy 打开调用层级*
+
+快捷键：Ctrl+Alt+H
+
+[[https://pic1.zhimg.com/v2-5d7825d6ea2d5f5773e6003e07370038_1440w.jpg]]
+
+*个人认为这是阅读源码最有用的利器，掌握它，可以轻松游走于各种方法调用之间。* 然而从我身边的朋友来看， 很多人都不知道他的存在。
+
+Open Call Hierachy 查看结果如下，调用关系清晰明朗，可以直接定位到调用的地方。
+
+[[https://pic1.zhimg.com/v2-c32003488fe428f69327e746bde866ee_1440w.jpg]]
+
+*3、Debug 断点的灵活使用*
+
+断点调式时，心中必须很清楚F5、F6、F7、F8的作用，不然要么迷失于源码之中，要么什么都没看清就走完了。
+ 重新啰嗦一下它们的作用：
+
+- F5 Step Into，单步进入。进入到某个方法里面；
+- F6 Step Over，单步结束。一行一行的执行代码，入门时很多人只会一行一行走；
+- F7 Step Return，跳出放发。进入到某个方法里面时，如果发现这个方法没有你想看的东西，或者已经看到了你想看的，直接F7，跳出到方法外；
+- F8 Resume，继续往下执行。往下执行，遇到下一个断点时再停下来，没有则一直运行完。
+
+调试时我们可能会经常遇到loadClass的情况：
+
+[[https://pica.zhimg.com/v2-4d23d43c3ae0af3bc4d27b542c5886de_1440w.jpg]]
+
+在40行想进入ClassPathXmlApplicationContext构造方法，F5不料进入了类加载：
+
+[[https://pic4.zhimg.com/v2-49ac7740b930e4f67e879a95b00d95b7_1440w.jpg]]
+
+熟悉类加载的同学会很熟悉，不熟悉类加载机制的也不要慌，这是说明你调试的类第一次被加载，这时候我们F7跳出类加载，回到40行。
+
+[[https://pica.zhimg.com/v2-4d23d43c3ae0af3bc4d27b542c5886de_1440w.jpg]]
+
+这个时候再按F5会真正进入ClassPathXmlApplicationContext构造方法。
+ 当我们断点跟踪Spring这种源码的时候，一定要有节奏，以优先找到整体脉络为准，不要一直的F5进入每一行细看，F5下去，几天都走不完Spring。能熟练在Spring这种框架中F5、F6、F7、F8，就离弄懂他不远了。
+
+Dubug的时候还应该注意debug视图的线程栈：
+
+[[https://pic4.zhimg.com/v2-ac01fb5096ca83716d9ddad8d9246617_1440w.jpg]]
+
+这个视图能够让你在走得比较深的时候，可以一眼看出自己怎么进来的，当前位于什么方法里等信息，还可以点击对应的代码行数进入查看。
+
+*总结，这是我使用IDE跟踪源码的几个小技巧，尤其是第二点，是很实用的，希望对大家在进行源码跟踪时有一定帮助。*
+
+PS：如果觉得我的分享不错，欢迎大家随手点赞。
+
+#+begin_quote
+作者：徐志毅
+链接： [[https://www.jianshu.com/p/ab865109070c][Java源码跟踪阅读技巧]]
+来源：简书
+#+end_quote

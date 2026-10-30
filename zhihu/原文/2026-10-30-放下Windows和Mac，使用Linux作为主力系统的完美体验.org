@@ -1,0 +1,271 @@
+#+TITLE: 放下Windows和Mac，使用Linux作为主力系统的完美体验
+#+LINK: https://zhuanlan.zhihu.com/p/68921091
+#+AUTHOR: trick
+#+TYPE: article
+#+DATE: 2026-10-30
+
+** 放下Windows和Mac OS，使用Linux作为主力系统的完美体验
+
+2023.2.3更新:
+
+微信优麒麟版本，还是wine，微信版本3.2.1.156，目前比较新的了，具体见下文
+
+** 桌面展示
+
+[[https://pica.zhimg.com/v2-3a21fe6f6c73abe8b17380e41045c9f8_1440w.jpg]]
+
+[[https://pic1.zhimg.com/v2-abc20c271ae0aeae3398f1ca0c5e8e78_1440w.jpg]]
+
+*菜单*
+
+对于Ubuntu，从初始界面配置成这个样子只需要几分钟时间，Ubuntu及其他Linux发行版可以自定义出各种自己想要的界面，如果喜欢Windows，也可以将桌面配置成Windows的样子，自由度很高，大家可以尽情“改装”。
+
+2019/6/30更新：很多知友私信、评论或留言如何配置成我的桌面这个样子，周末写了篇文章，十分钟配置Mac OS主题，链接如下：
+
+[[https://zhuanlan.zhihu.com/p/71588449][trick：Ubuntu18.04(Gnome)环境，十分钟配置Mac OS主题]]
+
+** 一、日常应用
+
+*** 1、聊天应用及网盘
+
+(1) *QQ* 2022年底终于更新linux版本了，官网可下载，做的可以。
+
+(2) *微信可安装优麒麟版本* ，步骤如下：
+
+- 第一步浏览器打开下载: [[http://archive.ubuntukylin.com/software/pool/partner/ukylin-wine_70.6.3.25_amd64.deb][http://archive.ubuntukylin.com/software/pool/partner/ukylin-wine_70.6.3.25_amd64.deb]]
+- 第二步浏览器打开下载: [[http://archive.ubuntukylin.com/software/pool/partner/ukylin-wechat_3.0.0_amd64.deb][http://archive.ubuntukylin.com/software/pool/partner/ukylin-wechat_3.0.0_amd64.deb]]
+- 安装：
+
+#+begin_src text
+sudo dpkg -i ukylin-wine_70.6.3.25_amd64.deb
+sudo dpkg -i ukylin-wechat_3.0.0_amd64.deb
+
+# 下面一句为了解决依赖
+sudo apt install -f
+#+end_src
+
+(3) *百度网盘* Linux版发布了，官网可以下载。
+
+[[https://pic3.zhimg.com/v2-61291cb3aa5b86b57d32013c0deb5754_1440w.jpg]]
+
+*** 2、游戏
+
+对于游戏，Linux已经可以原生玩很多游戏甚至3A大作，在Steam上，如果你看到游戏上有steam图标：
+
+[[https://pic3.zhimg.com/v2-7a0880683c44e22a338870875a6e99d2_1440w.jpg]]
+
+*有steam图标的游戏均支持Linux*
+
+说明此游戏支持Linux。Steam客户端有原生Linux版本而且和windows同步更新。
+
+支持的游戏包括但不限于：
+
+- V社所有游戏，包括dota2、求生之路（1和2）、csgo及所有cs系列、所有半条命系列、Team Fortress、传送门（1和2）。另外，为什么没有3呢？
+
+- 独立游戏包括星露谷物语、饥荒、泰拉瑞亚、胡闹厨房、人类一败涂地、火炬之光2、欧卡2 美卡、Insurgency、LIMBO、Inside、机械谜域、战斗砖块剧场、Outlast、Gerry's mod、三国群英传、7 Days to Die、Starbound、The Talos Principle、红管、This war of mine、Besiege、天际线、瘟疫公司等等等
+
+- 3A大作：文明系列（文明5和文明6）、杀手系列、Stellaris、无主之地2、Insurgency、地铁2033、古墓丽影系列、PAYDAY、F1系列、Dying Light、ARK等等等
+
+很多没有说上来，你可以根据steam上的标识去识别是否支持linux，我玩游戏大部分也是在Ubuntu上（GTA5没有办法呀Orz），感觉很不错（这年头，Nvidia都给Linux做驱动了，还有什么不可能）。
+
+2019.7.17更新: ubuntu更新nvidia驱动更方便了，对于常用的老手没什么，对于新人来说更舒适了 : [[https://zhuanlan.zhihu.com/p/73942348][https://zhuanlan.zhihu.com/p/73942348]]
+
+*截至到2019年6月份，Steam上架支持Linux的游戏有11000多款。*
+
+*** 3、音视频软件
+
+音乐视频这方面系统有自带的软件可以用，这里我说一下第三方的音视频软件。
+
+音乐首推网易云音乐！！！原生支持！从网易云音乐官网就能下载，目前是1.2版本。1.2版本修复了1.1版本需要sudo的问题：
+
+[[https://pic3.zhimg.com/v2-1b9e2b51c5668fe9e1a6273c677f57bc_1440w.jpg]]
+
+*网易云音乐*
+
+和Windows一模一样。
+
+看视频首推VLC，用过的都说好。
+
+[[https://pica.zhimg.com/v2-49655d807390ae8c3578be3d2c34bbaa_1440w.jpg]]
+
+*VLC*
+
+至于爱奇艺、腾讯视频，浏览器看就可以了Orz。
+
+*** 4、浏览器
+
+Edge、Chrome、firefox、Opera均可以使用
+
+*** 5、邮箱
+
+自带Thunderbird
+
+** 二、办公软件
+
+*** 1、文档/笔记类
+
+- *WPS*
+
+原生支持，官网直接下载，一直在更新，非常良心。
+
+[[https://pic3.zhimg.com/v2-128c26b5362b819e5d01b13c08d608ea_1440w.jpg]]
+
+*WPS*
+
+- *为知笔记 Wiznote*
+
+国产良心笔记软件，包括记笔记、云服务、markdown原生支持
+
+[[https://pic1.zhimg.com/v2-2919d37e8f55b9f6cbb995d0abcc459c_1440w.jpg]]
+
+*为知笔记 WizNote*
+
+原生支持markdown，文档利器，国产良心。
+
+- *Typora*
+
+本文使用Typora和Wiznote进行编写，Typora目前可以说是最佳的markdown文档软件了。
+
+[[https://picx.zhimg.com/v2-86e7707e313a71cc96a560d8e0c00173_1440w.jpg]]
+
+*Typora*
+
+- *SimpleNote* ，免费的笔记软件，Android、IOS及Linux、Windows、Mac OS皆兼容，强烈推荐
+
+[[https://pica.zhimg.com/v2-f7e4ac8d2740787fc173b38489665362_1440w.jpg]]
+
+*SimpleNote*
+
+- *PDF*
+
+推荐Master PDF或 Foxit Reader
+
+Master PDF简直良心，windows下收费（价格还不低），linux下免费，可以说是最好用的PDF编辑/阅读器了。
+
+[[https://pica.zhimg.com/v2-e90b9195a67737ee7f70281cf27e1d3c_1440w.jpg]]
+
+*Master Pdf*
+
+*** 思维导图XMind、流程图EdrawMax(亿图图示)
+
+Linux版与Windows体验一致：
+
+[[https://pic2.zhimg.com/v2-a39a57e07ab820d0c7b5739beb2cdeb5_1440w.jpg]]
+
+*XMind*
+
+*** 2、设计、视频类
+
+不得不承认，在这方面Linux上的软件确实没有Adobe系列好用，所以这方面我仍然推荐使用Mac OS或Windows。 *事实上，我平常修图也是在Mac上完成的* 。
+
+- *修图*
+
+在设计、摄影修图方面，LInux可以使用gimp，功能上Adobe70%的功能都有，当然却是也没有Adobe的Photoshop、Lightroom好用，不过简单的图像处理没有问题， *Wacom的手写板也可用哦* ：
+
+[[https://picx.zhimg.com/v2-c0bc1f73a166ce455f8e2399bc813319_1440w.jpg]]
+
+*gimp*
+
+- *三维动画制作*
+
+三维动画制作领域Linux有一个大杀器： *Blender* 。使用此软件完成的电影包括《蜘蛛侠2》、《未来机械城》等。在工业领域，Blender也是占有一席之地。由于本人不从事这个行业，所以对此软件也不是很了解，仅作推荐吧。
+
+[[https://pica.zhimg.com/v2-fbfd113f3c57b10fde3090a3d3435626_1440w.jpg]]
+
+*Blender*
+
+- *视频处理软件*
+
+[[http://www.blackmagicdesign.com/cn/products/davinciresolve][DaVinci Resolve]] ，赫赫有名的达芬奇，视频vlog圈还有专业广告公司、电影制片方都很喜欢使用的专业软件，大家喜欢可以尝试，影视飓风TIM也最近做了一套达芬奇使用系列视频(2020年2月份)，有兴趣的同学可以一起学一下。
+
+[[https://pic2.zhimg.com/v2-a64ef2351d836ab9ff2090b33dd111c1_1440w.jpg]]
+
+达芬奇开发针对centos，ubuntu下载安装后，达芬奇无法打开，运行下列命令安装依赖后可正常运行（达芬奇16要求显卡为Nvidia的显卡，因为有图形加速，amd显卡没有试过，根据文档需要从nvidia安装官方linux驱动，所以大家先安装一下驱动哦）
+
+参考： [[https://www.fosslinux.com/24381/how-to-install-davinci-resolve-on-ubuntu.htm][https://www.fosslinux.com/24381/how-to-install-davinci-resolve-on-ubuntu.htm]]
+
+四步安装：
+
+（1）执行
+
+#+begin_src text
+sudo apt install libssl1.0.0 ocl-icd-opencl-dev fakeroot xorriso
+#+end_src
+
+（2）下载达芬奇linux版本并解压
+
+（3）从 [[https://www.danieltufvesson.com/makeresolvedeb][https://www.danieltufvesson.com/makeresolvedeb]] 下载打包deb工具
+
+工具 下载对应版本的deb打包，注意选择和达芬奇版本相对应的版本，解压里面文件和达芬奇.run脚本在同一目录：
+
+[[https://pica.zhimg.com/v2-a2774b86290dcf840869588a6a1f6ee0_1440w.png]]
+
+执行：
+
+#+begin_src text
+./makeresolvedeb_16.1.2-1.sh lite
+#+end_src
+
+（4）安装：
+
+可以看到生成了davinci-resolve_xxx_amd64.deb文件（xxx是版本号，我是16.1.2-1）
+
+执行：
+
+#+begin_src text
+sudo dpkg -i davinci-resolve_16.1.2-1_amd64.deb
+#+end_src
+
+安装成功，可以正常使用，亲测没有问题。
+
+*** 3、编程类
+
+这类我就不再赘述了， *如果Linux不适合编程，那么其他系统就可以统统淘汰了* 。在Linux上编程是那种用了就再也回不去的那种感觉。程序员们都懂的，这里不再赘述。
+
+** 三、个人9年半使用体验
+
+*** 1、为什么使用Linux？
+
+各种Linux发行版都试过，最后桌面（非服务器）端选择了Ubuntu和Deepin，原因很简单，可以用QQ和微信。程序员，用Linux写代码是真的效率高，除此之外，Linux意味这你可以掌握一切，Windows安装即使你软件选在了D盘，它也会在C盘、注册表创建多余文件或操作，永远不可能卸载干净，临时文件这些垃圾甚至都不知道产生在哪，Linux完全不用担心这一点，所有动作都由你来决定，这也是一种“洁癖”吧。
+
+还有操作，在Linux各种发行版面前，Win10才推出的多桌面就是个弟弟，这一点习惯之后是真的回不去了。、
+
+*** 2、不使用其他系统了吗？
+
+No，Windows和Mac OS都是优秀的操作系统，干什么活用什么工具，在修图、做视频方面，我还是用Mac，因为Linux下一个能打的都没有。
+
+我喜欢玩GTA5，但是没有Linux版本，所以玩GTA5还是会用Windows。
+
+*** 3、写这篇文章的目的是什么？
+
+为了向大家推荐Linux系统，希望大家可以尝试，如今的Linux不像十年前软件稀缺，生态一步一步完善，尤其是目前我司如今面临的问题，看到知乎上有人问没有Windows会怎样，看到很多高票答案都说用盗版， *其实咱们还有另外一种选择* 。
+
+*4、显卡驱动问题*
+
+如果你是AMD或 [[http://www.baidu.com/link?url=4Ny_FTxYUD0mMMACwXBX1HJn8srvUKbEZPFBXTqHsW7][NVIDIA]] 的显卡，直接官网下载驱动即可（如果不玩游戏、不做科学计算，自带的开源驱动很不错），我这篇文章很多人私信我，我直接把驱动链接给他们，Deb包直接安装即可，不需要编译什么的。AMD和NVIDIA我看了，这个月又更新了一波Linux驱动。
+
+*5、（补充）言论：“Linux太折腾了，还是Windows、MacOS好用，一般人不适合用Linux”*
+
+这就是说的历史原因了， *首先Windows和MacOS我都使用* ，Windows主要用来玩Linux不支持的游戏比如GTA5，MacOS修图做视频。 *系统是工具，不同工种需求不一样，根据个人习惯做取舍。*
+
+评论里有说Linux不适合日常使用，我也理解，我10年刚开始使用时这也缺那也缺，软件很少，坑也都踩过。不过这都是历史原因了，现在Linux生态真的很不错。
+
+*以前没有游戏可玩儿，现在有Steam*
+
+*以前文档处理只能用LibreOffice、没有好用的文本编辑器，现在有WPS，有为知笔记，有vscode，有simplenote等等各种好用的笔记*
+
+*以前没有国内互联网大厂的支持，现在有网易云音乐、搜狗输入法等*
+
+*以前qq不好用，微信只能用chrome商店里的（需要科学上网）。现在wine很强大，文章开头的链接TIM和微信很不错，没什么BUG。*
+
+*生态都是一点一点建立起来的，没有尝试就没有更多的选择，让大家试试嘛，觉得不好用再换回去嘛。*
+
+为什么我主力系统使用Linux呢（主力系统的意思是大部分时间使用，并不是别的系统完全不用）？
+
+这话题肯定会很挑口水，我只是针对我自己的使用习惯谈感受：
+
+1. Windows配置开发环境太麻烦了，安装软件鼠标点半天还要配置环境变量这些太浪费时间。（当然ubuntu deb包或AppImage包也是点击即用）
+2. Shell，不得不说Windows的PowerShell和Linux的Shell相比，真的是弟中弟，真不是挑口水。
+3. 我的使用习惯（Windows和MacOS的操作逻辑不够高效，但是易用）。针对Ubuntu或Debian系，所有的窗口均可置顶，终端可以设置透明，这一个习惯是提高效率的利器，在查资料时可以不离开Shell。（我使用也是双屏， *终端透明，窗口可置顶这一个习惯属于用了就再也回不去的那种* ）
+
+*以上就是我个人使用Linux发行版（没错，Linux只是内核，以它为基础的发行版才能称作一个完整的操作系统）并作为主力系统的使用感受，多谢各位读者的耐心观看。*

@@ -1,0 +1,177 @@
+#+TITLE: 分清国内版FireFox和国际版FireFox
+#+LINK: https://zhuanlan.zhihu.com/p/104291339
+#+AUTHOR: WireWolf
+#+TYPE: article
+#+DATE: 2026-10-30
+
+FireFox现在成为越来越多人替代Chrome的选择。但与Chrome不同的是， *FireFox无论桌面端还是移动端，都有着『国际』和『国内』版本的区分* 。
+
+** 一、检查方式
+
+*1.1Windows桌面端*
+
+就是到FireFox的“关于”页面，比如同样是最新的73.0版本，国内版“关于”里面会多显示两行字：
+
+[[https://pic2.zhimg.com/v2-7fe32e5299595c7121bdd563094749b9_1440w.jpg]]
+
+*1.2安卓端*
+
+辨别上没有好办法。确认方式是一定要到GooglePlay市场或者Play市场的镜像站点下APK。
+
+[[https://pic4.zhimg.com/v2-3707f4331b1a39f102000740fdf417a5_1440w.jpg]]
+
+*国内某安卓市场的国内版Firefox评分*
+
+*1.3ios端*
+
+国内的ID没越狱下到的都是国内版。想装国际版，除了搞外区ID，没越狱没有好办法，store里就是国内的，除非越狱用安装包。
+
+*二、正确的下载地址*
+
+*2.1国内版的混淆视听：*
+
+看清网址，看清网址，看清网址：
+
+[[https://pic3.zhimg.com/v2-bfad89ebccb47058d24b4419f9561cc4_1440w.jpg]]
+
+*两个版本网址的区别（点击放大）*
+
+#+begin_quote
+国内版官网： [[http://firefox.com.cn/][http://firefox.com.cn]] ，很有中国味道
+国际版官网： [[https://www.mozilla.org/zh-CN/firefox/new/][https://mozilla.org/zh-CN/firefox]] ，时刻注意链接重定向
+#+end_quote
+
+国内版的防不胜防：
+
+- 通过百度搜索“火狐浏览器”、“FireFox”等关键字出现的基本都是国内版
+- 直接访问 [[http://mozilla.org][http://mozilla.org]] 官网，还是会被重定向到 [[http://firefox.com.cn][http://firefox.com.cn]] 网站
+- 使安装国际版，新标签页不知道什么时候被换成国内标签页 [[http://start.firefoxchina.cn/][start.firefoxchina.cn]]
+
+[[https://pic4.zhimg.com/v2-6cf06d13abf3482b85192056f70a90d1_1440w.jpg]]
+
+*使安装国际版，新标签页不知道什么时候被换成国内标签页start.firefoxchina.cn*
+
+[[https://www.zhihu.com/video/1213125281059688448][访问mozilla.org被重定向https://www.zhihu.com/video/1213125281059688448]]
+
+*2.2安全下载到正确国际版的办法*
+
+*2.2.1Windows端*
+
+*2.2.1.1* 请在下面网址下载 *国际中文版* （密切注意连接有没有重定向到cn网址，并在装好后查看关于确认）：
+
+#+begin_src text
+https://www.mozilla.org/zh-CN/firefox/
+#+end_src
+
+*2.2.1.2* 又或者在下面网址下载 *国际英文版，* 然后在选项里面安装中文语言包（密切注意连接有没有重定向到cn网址，并在装好后查看关于确认）
+
+#+begin_src text
+https://www.mozilla.org/en-US/firefox/
+#+end_src
+
+[[https://picx.zhimg.com/v2-1f43224b5864724b35e2469b39f77909_1440w.jpg]]
+
+*搜索中文语言包*
+
+[[https://pica.zhimg.com/v2-d6ce1eddb87b84b490a36d9a7e3d99c0_1440w.jpg]]
+
+*添加后重启浏览器*
+
+*2.2.1.3又或者上 [[https://ftp.mozilla.org/pub/firefox/releases/][https://ftp.mozilla.org/pub/firefox/releases/]]*
+
+里面有所有的版本。但是文件目录不是那么友好，需要有一定基础看懂。而且国内速度非常慢：
+
+[[https://pica.zhimg.com/v2-651700b166d21aaea4c8ca52fe9a8b32_1440w.png]]
+
+*2.2.1.4又或者到我的镜像来下，我标明了版本：*
+
+Windows端的 *73.0.1* 版本，安卓端提供Play市场 *68.5.0* 的版本，都在这里：
+
+#+begin_quote
+t40f
+[[https://pan.baidu.com/s/1LzYdmxZPny6K6z8zlkDCIQ][https://pan.baidu.com/s/1LzYdmxZPny6K6z8zlkDCIQ]]
+#+end_quote
+
+*2.2.2防止链接重定向*
+
+强烈建议把以下代码写入HOST
+
+#+begin_src text
+127.0.0.1	www.firefox.com.cn
+127.0.0.1	firefox.com.cn
+127.0.0.1	download-ssl.firefox.com.cn
+#+end_src
+
+*2.2.3Develeper、Beta、Nightly版本*
+
+经过评论区提醒，FireFox还有绚丽的Develeper、Beta、Nightly版本可供选择，但是注意下载的时候要看清网址，并在安装好后查看关于。
+
+[[https://pica.zhimg.com/v2-c0cd36d5e8baf9e0c1e5413db9424394_1440w.jpg]]
+
+*2.2.2安卓端*
+
+到Google Play市场或者Play市场的镜像站点下。
+
+*三、书签/收藏夹备份*
+
+评论区弃“暗”投明，碍于书签/收藏夹不同步的可以这样操作：
+
+[[https://pica.zhimg.com/v2-6f4ed8802dd6251d7cf10bd2253bec7e_1440w.jpg]]
+
+*右键标签条空白处，打开菜单栏*
+
+[[https://pic3.zhimg.com/v2-c60e7e06df7d7da48d1fcf534309edf8_1440w.png]]
+
+*点开书签，管理所有书签*
+
+[[https://pic1.zhimg.com/v2-a8e064ee61c1d6c5207031bab0a6dadc_1440w.jpg]]
+
+*点击所有书签，导入和备份，备份*
+
+[[https://pica.zhimg.com/v2-a50f9da5341222a9644cacc98b9f03e8_1440w.jpg]]
+
+*保存好json文件*
+
+[[https://picx.zhimg.com/v2-6c822833738ac26995ec2335040d5935_1440w.jpg]]
+
+*在国际版恢复的时候同样操作，选择刚才的JSON文件即可。*
+
+*四、其他*
+
+评论区有同学反应国际版还是会同步缓慢。请把你们网络的首选DNS改为8.8.8.8，而且可以顺带略微解决onedrive同步慢、steam一些页面打不开的问题。
+
+-----
+
+本文触动利益集团，导致被恶意举报，所以删除了一部分内容，虽然这部分内容很有价值，而且添加新内容也会被审核。想深入了解的同学可以去这里看别人写的同样精彩：
+
+[[https://blog.littlefox.me/archives/233][被Firefox中国版坑了一把 - LittleFox]]
+
+[[https://pic4.zhimg.com/v2-1a6be2e30671ed810c69e052c9a44973_1440w.jpg]]
+
+-----
+
+推荐阅读：
+
+[[https://zhuanlan.zhihu.com/p/38207469][WireWolf：浅谈安卓手机的各种"文件传输方式"速度对比]]
+
+[[https://zhuanlan.zhihu.com/p/41189608][WireWolf：三星手机你所不知道的细节（不断更新中）]]
+
+[[https://zhuanlan.zhihu.com/p/42431093][WireWolf：家用宽带实现“一号多拨”进而“带宽叠加”]]
+
+[[https://zhuanlan.zhihu.com/p/42985422][WireWolf：使用中国石化加油卡的朋友，不要浪费这两笔财富]]
+
+[[https://zhuanlan.zhihu.com/p/58759328][WireWolf：不要再被奸商骗了，三星官方手机集中换屏服务攻略]]
+
+[[https://zhuanlan.zhihu.com/p/75883233][WireWolf：有关数据传输的速度单位与带宽单位的说明]]
+
+[[https://zhuanlan.zhihu.com/p/75880470][WireWolf：USB、PCI、SATA等各接口速度/带宽总结]]
+
+[[https://zhuanlan.zhihu.com/p/78015947][WireWolf：没有外网固定IP也能使用Windows远程桌面]]
+
+[[https://zhuanlan.zhihu.com/p/84756165][WireWolf：路由器“各物理网口”与“VLAN”的联系（未完结）]]
+
+[[https://zhuanlan.zhihu.com/p/84884942][WireWolf：有关OSI模型中协议数据单元PDU的易混名词辨析]]
+
+[[https://zhuanlan.zhihu.com/p/94843862][WireWolf：史上最好用的“偷拍神器”我却用来当行车记录仪]]
+
+[[https://zhuanlan.zhihu.com/p/103852581][WireWolf：免费的内网穿透服务SAKURA FRP更新2.0了]]

@@ -1,0 +1,280 @@
+#+TITLE: 简单而实用的CMD命令
+#+LINK: https://zhuanlan.zhihu.com/p/25194940
+#+AUTHOR: Lightman
+#+TYPE: article
+#+DATE: 2026-10-30
+
+CMD是command的缩写，即命令提示符。说起cmd.exe就不得不说起DOS系统。
+
+DOS系统早于Windows系统，DOS系统是命令行界面，比起易于操作的图形界面的Windows系统有着安全、效率高、指令传输快的优点。早期版本的Windows系统是以DOS系统为核心的。当以NT内核为核心的Windows系统出现以后，Windows系统不再包括DOS系统而独立运行。DOS系统由于其优点还被广泛使用，所以微软就在Windows系统里集成了cmd.exe这个应用程序，用户可以通过它来实现本来在DOS系统下才能实现的操作。
+
+本文将会介绍一些简单而实用的cmd命令及其使用方法。
+
+（有的命令需要管理员权限才能运行）
+
+*TREE命令*
+
+在整理文件的时候，有时会遇到文件夹和文件非常多又杂乱的情况，这时就可以使用tree命令。
+
+tree命令能够以分支的形式显示指定目录下的全部子目录和文件。 
+[[https://pic2.zhimg.com/v2-d6af2409c544933e4011b3cf65ab9b21_1440w.png]]
+
+#+begin_src text
+语法为：tree 指定目录 /f
+例如：tree C:\Users\Desktop /f
+若要显示cmd操作目录下的全部子目录和文件则直接使用：tree /f  即可。
+#+end_src
+
+参数/f使tree命令在显示目录信息的同时显示目录中的所有文件。若去掉参数/f，则只会显示文件夹。
+
+有的时候tree命令显示的目录太长，在cmd窗口中无法查看全部目录，这时可以使用|more。 
+[[https://pica.zhimg.com/v2-ad9ccc89415f3cb2529809a0a35707bc_1440w.png]]
+
+#+begin_src text
+使用 tree 指定目录 /f |more 之后，每按一次空格键目录就会翻一页。
+
+#+end_src
+
+在cmd窗口中查看结果有时是不太方便的，我们可以将结果保存并输出。 
+[[https://pic3.zhimg.com/v2-5598b292dfbacf41b8ef2b23fc4a01a2_1440w.png]]
+
+#+begin_src text
+语法：tree 指定目录 /f >1.txt
+我们也可以指定结果的输出目录：tree 指定目录 /f >d:\1.txt
+#+end_src
+
+*CHKDSK命令*
+
+chkdsk即check disk，是用来检测磁盘文件系统错误的命令，它可以列出并纠正磁盘上的错误。由于它对错误的处理方式只有删除，所以有可能使数据丢失，导致文件找不到了，不过多数情况下错误的文件也已经无法打开了，所以也不用担心。
+
+[[https://pica.zhimg.com/v2-551fc911e29c0a7e3a64d3acea380e90_1440w.png]]
+
+#+begin_src text
+chkdsk /f 将检查所有磁盘，并修复磁盘错误。
+chkdsk /r 将查找坏扇区，并恢复可读信息。
+chkdsk 指定盘符 即可检查指定盘符。
+使用 chkdsk /? 来查看更多使用方法。
+#+end_src
+
+[[https://pica.zhimg.com/v2-848b09a56070b6244def9c9c79268602_1440w.png]]
+
+chkdsk命令也可以修复由于直接拔出U盘而导致的“U盘的文件或目录损坏且无法读取”的问题。
+
+**REN命令 
+[[https://picx.zhimg.com/v2-b2a28167ce217e6d11b7c1123412c41d_1440w.png]]
+**
+
+#+begin_src text
+ren d:\旧文件名.txt  新文件名.txt
+ren 旧文件名.txt  新文件名.txt
+#+end_src
+
+配合通配符*和?使用
+
+- *代表任意多个字符
+- ？代表任意一个字符
+
+#+begin_src text
+ren d:\12？.txt  34？.txt 
+把d盘下12开头的文件名有三个字符的txt文件全部改名成了以34开头的文件。
+合理利用通配符可以一下子改动大量文件。
+#+end_src
+
+*SFC命令*
+
+sfc命令会扫描所有保护的系统文件的完整性，并使用正确的 Microsoft 版本替换不正确的版本。 
+[[https://pic2.zhimg.com/v2-efba715e45d55de2075a7b34a5a98389_1440w.png]]
+
+#+begin_src text
+sfc /SCANNOW 会扫描所有保护的系统文件的完整性，并尽可能修复有问题的文件。
+同样也可以输入 sfc /? 来查看更多使用方法。
+
+#+end_src
+
+**IEXPRESS命令 
+[[https://pic3.zhimg.com/v2-0069f73e40361c69bc52e1b98e6eb496_1440w.png]]
+**
+
+#+begin_quote
+IExpress是微软为压缩CAB文件及制作安装程序所开发的小工具。
+IExpress可以方便地制作 CAB 压缩与自解压缩包。
+#+end_quote
+
+**FINDSTR命令 
+[[https://pic1.zhimg.com/v2-bf715405cc2f97364a52c034c14527e8_1440w.png]]
+**
+
+findsrt命令用于在文件中寻找字符串。
+
+#+begin_src text
+findstr "abcd" d:\1.txt
+findstr "abcd" 1.txt
+
+#+end_src
+
+*SHUTDOWN命令*
+
+shutdown命令可以用来关闭计算机，配合参数/t使用，可以定时关闭电脑。 
+[[https://pic3.zhimg.com/v2-e8528c6fc6a42f963a3a8742a4d18d88_1440w.png]]
+
+#+begin_src text
+shutdown /s /t 233（秒数）
+shutdown /a 可以取消定时关机计划。
+#+end_src
+
+**ARP命令 
+[[https://picx.zhimg.com/v2-b9717d97209f314bffb13e2fa8116ca3_1440w.png]]
+**
+
+#+begin_src text
+arp -a 可以查看同一网络下的设备的物理地址，可以用来查看是否有人蹭网。
+
+#+end_src
+
+[[https://pic2.zhimg.com/v2-07e06d0fa50aa0d2cd11b80199c5993b_1440w.png]]
+ *TASKKILL命令*
+
+taskkill命令可以用来关闭程序。
+
+[[https://picx.zhimg.com/v2-c79406f1480c0ddecb4d5f846f9eeb9b_1440w.png]]
+
+#+begin_src text
+taskkill /f /im notepad.exe
+也可以输入 tasklist 查看所有的进程，查看进程对应的PID码
+从而使用 taskkill /pid 4708 来关闭进程
+#+end_src
+
+[[https://picx.zhimg.com/v2-d0ac2ccc718235286453d22d114eecdf_1440w.png]]
+
+[[https://pic3.zhimg.com/v2-01f2dc28d8403fac9c2b1b82b5b1bf20_1440w.png]]
+ *FC命令*
+
+fc命令可以比较文件的异同，并列出差异处。
+
+[[https://pic3.zhimg.com/v2-59c9ab9c16d359e9f7cfcc5e9daf877a_1440w.png]]
+
+*ATTRIB命令*
+
+attrib命令可以修改指定文件的属性。
+
+[[https://pic2.zhimg.com/v2-1fdf2600578c6ddcabc3f3c47de1b33d_1440w.png]]
+
+#+begin_src text
+attrib +r 1.txt
+#+end_src
+
+IPCONFIG命令
+
+ipconfig命令有很多功能，可以使用参数/?查看。
+
+#+begin_src text
+ipconfig /all 可以查看电脑网卡信息，包括mac地址、DNS地址、本地IP地址等。
+#+end_src
+
+*PING命令*
+
+ping命令可以快速检查网络故障。
+
+#+begin_src text
+ping 127.0.0.1 如发现本地址无法ping通，就表明本地机TCP/IP协议不能正常工作。
+Ping 本机IP地址 检查本机的IP地址是否设置有误
+Ping 本网网关或本网IP地址 检查硬件设备是否有问题，也可以检查本机与本地网络连接是否正常(在非局域网中这一步骤可以忽略)
+ping 远程IP地址（www.baidu.com ） 检查本机与互联网连接是否正常
+#+end_src
+
+*系统管理工具和小软件*
+
+Windows系统中自带了很多有用的系统管理工具和一些实用的小软件，我们可以通过cmd命令来打开它们。
+
+#+begin_src text
+打开cmd.exe：Win+R，输入cmd，回车。
+打开计算器：calc
+打开画图：mspaint
+打开放大镜：magnify
+打开屏幕键盘：osk
+打开记事本、写字板：notepad、write
+打开字符映射表：charmap
+打开造字程序（专用字符编辑程序）：eudcedit
+打开远程桌面连接：mstsc
+
+打开服务：services.msc
+打开设备管理器：devmgmt
+打开磁盘管理：diskmgmt
+打开系统信息：msinfo32
+打开系统配置：msconfig
+打开DirectX诊断工具：dxdiag
+打开事件查看器：eventvwr
+打开我的电脑：explorer
+打开注册表编辑器：regedt32
+打开资源监视器：resmon
+打开性能监视器：perfmon
+打开计算机管理：compmgmt
+#+end_src
+
+*cmd.exe的使用小技巧*
+
+cmd窗口中的内容在默认设置下是无法选取并复制的。
+
+我们可以在标题栏单击右键，在属性中勾选“快速编辑模式”，即可复制窗口中的代码。
+
+也可以在属性中改变字体、字体颜色、背景颜色、缓冲区大小等设置。
+
+前景颜色和背景颜色也可以通过代码来指定。
+
+#+begin_src text
+title 标题 可以更改CMD窗口的标题
+color 颜色值1 颜色值2 设置cmd窗口的前景颜色和背景颜色
+0=黑、1=蓝、2=绿、3=浅绿、4=红、5=紫、6=黄、7=白、8=灰、9=淡蓝
+A=淡绿、B=淡浅绿、C=淡红、D=淡紫、E=淡黄、F=亮白
+#+end_src
+
+*cmd.exe的快捷键*
+
+#+begin_quote
+ESC：清除当前命令行。
+F1: 单字符输出上次输入的命令 相当于方向键上的 → 的作用。F2: 可复制字符数量 , 输入上次命令中含有的字符,系统自动删除此字符后的内容。
+F3: 重新输入前一次输入的命令（方向键上也是同样的作用）。F4: 可删除字符数量,同于F2的功能。
+F5：相当于方向键上的↑的作用。F6：相当按键盘上的Ctrl＋z 键。
+F7：显示命令历史记录，以图形列表窗的形式给出所有曾经输入的命令，并可用上下箭头键选择再次执行该命令。F8：搜索命令的历史记录，循环显示所有曾经输入的命令，直到按下回车键为止。
+F9：按编号选择命令，以图形对话框方式要求您输入命令所对应的编号(从0开始)，并将该命令显示在屏幕上。Ctrl+H：删除光标左边的一个字符。
+Ctrl+C 或者Ctrl+Break，强行中止命令执行。Ctrl+M：表示回车确认键。
+Alt+F7：清除所有曾经输入的命令历史记录。Alt+PrintScreen：截取屏幕上当前命令窗里的内容。
+Tab键：在命令提示符状态下，我们可以按下Tab键来选择当前目录下面的文件和文件夹，它的选择是按照一定顺序来进行的，按下Shift+Tab组合键还可以进行反方向选择。ALT+Enter 全屏再按退出。
+#+end_quote
+
+最后附上通过CMD实现仿 *黑客帝国数字雨* 的代码。——引自网络
+
+#+begin_src text
+@echo off  
+:line 
+color 0a
+setlocal ENABLEDELAYEDEXPANSION  
+ 
+for /l %%i in (0) do (  
+set "line="  
+for /l %%j in (1,1,80) do (  
+set /a Down%%j-=2  
+set "x=!Down%%j!"  
+if !x! LSS 0 (  
+set /a Arrow%%j=!random!%%3  
+set /a Down%%j=!random!%%15+10  
+)  
+set "x=!Arrow%%j!"  
+if "!x!" == "2" (  
+set "line=!line!!random:~-1! "  
+) else (set "line=!line! ")  
+)  
+set /p=!line!<nul  
+)  
+goto line
+
+#+end_src
+
+项目联系方式：
+
+- 项目邮箱（ [[https://www.zhihu.com/people/7be7dd0db8c5f693551b4d83487d0b87][@iGuo]] 的邮箱）：zhangguocpp@163.com
+- 项目网站： [[http://www.xmucpp.com][http://www.xmucpp.com/]] （修复中）
+- 项目GitHub： [[https://github.com/xmucpp][China's Prices Project at Xiamen Univerisity (CPP@XMU)]]
+- 项目专栏： [[https://zhuanlan.zhihu.com/xmucpp][China's Prices Project - 知乎专栏]]
+- 项目知乎账户： [[https://www.zhihu.com/people/865c399ef3e6938f961f74aca587deae][@CPP]]
+- 项目公众号：xmucpp2016（XMUCPP）

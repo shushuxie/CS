@@ -1,0 +1,47 @@
+#+TITLE: 非专业人士如何一招稿定配色？
+#+LINK: https://zhuanlan.zhihu.com/p/112458712
+#+AUTHOR: Topbook
+#+TYPE: article
+#+DATE: 2026-10-30
+
+[[https://www.zhihu.com/video/1221099923544039424][https://www.zhihu.com/video/1221099923544039424]]
+
+搞定配色，你的设计将发生质的改变。但你需要掌握色相、明度和彩度，还得理解科学的组合方式。有没有一招鲜的办法呢？有的。
+
+找到和你的设计类似或相近作品，得到它的配色方案，然后直接用于你的设计。比如这两幅作品的配色方案是这样。你可以简单理解为，一幅作品用了这些个颜色（事实上不止）。
+
+[[https://pic4.zhimg.com/v2-20e3ed0bbee66fde2c8bb965a9be7129_1440w.jpg]]
+
+[[https://pica.zhimg.com/v2-60436ad8a996d7e0d7d0c8ececda7e90_1440w.jpg]]
+
+以上原图 © unsplash
+
+如果你认为这幅作品的配色很适合你的某一个 PPT 主题，就可以把它直接用于你的设计，像这样。
+
+[[https://pic2.zhimg.com/v2-38f7b3e1cb1f216ade40a8be61510d77_1440w.jpg]]
+
+图片 © Topbook
+
+我们需要用到一种工具——取色器（拾色器） 。很多常用软件都有，比如 PPT、PPT 插件 [[https://topbook.cc/overview?selectedArticle=1650][iSlide]] ，常用截图神器 [[https://topbook.cc/overview?selectedArticle=1450][Snipaste]] 、设计师伴侣 Photoshop ……
+
+你可以通过取色器创建一份色卡，或者通过像 “ [[https://apps.apple.com/cn/app/%E8%89%B2%E9%87%87-%E9%85%8D%E8%89%B2%E5%8A%A9%E6%89%8B-%E8%89%B2%E5%8D%A1%E5%B7%A5%E5%9D%8A/id1439521846][色采]] ” 这样的配色 APP，一键取色，获得色卡。然后把色卡放在你的设计中，需要某种颜色时，打开取色器，一键取色即可。
+
+[[https://pica.zhimg.com/v2-9d63fe8875cbd6b05b7b12ae3773c6ee_1440w.jpg]]
+
+图片 © Topbook
+
+除了取色器，需要记住的是，每一种颜色都有一个与之对应的色值，在电子设备中，常用的是 RGB 和十六进制两种表示方法。例如，在 PPT 中选中某一主体之后，在选择颜色时点击【其他颜色】，在弹出的对话框中点击【自定义】，可以看到当前颜色 RGB 值是（48，62，159），把这个颜色放在 Photoshop 中，在拾色器中也能看到它的 RGB 值，并且注意到最下方的 16 进制数值为 #303e9f。也就是说，每一种颜色，都有一个与之对应的 RGB 值和十六位进制值。
+
+[[https://picx.zhimg.com/v2-7d141208b1613f90130524d4bcb741d7_1440w.jpg]]
+
+图片 © Topbook
+
+除了取色器，我们也可以通过手动输入数值的方法来取得或应用配色方案。
+
+以我们之前推荐过的 [[https://topbook.cc/overview?selectedArticle=1197][五个渐变配色网站]] 为例。这是其中的 [[https://webgradients.com/][WebGradients]] ，找到你喜欢的配色，把左下方的两个色值分别复制到渐变编辑器中，即可轻松获得一模一样的渐变配色方案。
+
+** *其他相关应用：*
+
+*** **[[https://topbook.cc/overview?selectedArticle=1426][Color Cube | 简单好用的配色神器]]*
+
+*[[https://topbook.cc/overview?selectedArticle=1170][5 个实用的专业配色网站。]]*

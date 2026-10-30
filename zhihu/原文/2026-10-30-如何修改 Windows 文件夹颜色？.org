@@ -1,0 +1,25 @@
+#+TITLE: 如何修改 Windows 文件夹颜色？
+#+LINK: https://zhuanlan.zhihu.com/p/173985482
+#+AUTHOR: Topbook
+#+TYPE: article
+#+DATE: 2026-10-30
+
+[[https://www.zhihu.com/zvideo/1275400734276890624][https://www.zhihu.com/zvideo/1275400734276890624]]
+
+每天打开电脑，看到的文件夹样式都是千篇一律，难免会觉得审美疲劳。如果文件夹外观也能自定义，那我的电脑又会更加有我的独特个性。
+
+[[https://topbook.cc/overview?selectedArticle=1827][Folder Painter]] 就是这么一款工具。有了它，你的文件夹，可以不只是文件夹。
+
+[[https://topbook.cc/overview?selectedArticle=1827][Folder Painter]] 是一款适用于 Windows 设备 ，可以自定义修改文件夹颜色和图标样式的工具 。支持简体中文 ，操作非常简单 。
+
+第一步：下载并解压 [[https://topbook.cc/overview?selectedArticle=1827][Folder Painter]] ；
+
+第二步：启动 [[https://topbook.cc/overview?selectedArticle=1827][Folder Painter]] 激活需要的样式。在这里可以点击 Menu ，找到 Languages ，选择简体中文；
+
+第三步：找到你看不顺眼的文件夹，右键点它，找到【文件夹颜色】选项，选择你喜欢的颜色；
+
+Folder Painter 为我们提供了 14 种文件夹颜色。点击 【打开 Folder Painter】可以快速进入设置页面。勾选文件夹样式和文件夹图标，点击【安装】，即可添加至右键菜单。下次点击右键，就可以进行文件夹样式和图标的自定义设置了。
+
+有了 [[https://topbook.cc/overview?selectedArticle=1827][Folder Painter]] ，你还可以通过文件夹的颜色，对文件进行分类整理，比如将急需完成的任务文件夹设为红色。
+
+*欢迎戳这里获取这款工具： [[https://topbook.cc/overview?selectedArticle=1827][Folder Painter]]*
