@@ -154,3 +154,83 @@
   #+end_quote
   【我的想法】
   方法本身是 IDE 中立的：IntelliJ 里对应的是 ~Ctrl+H~（类型层级）、~Ctrl+Alt+H~（调用层级）、~Ctrl+Alt+B~（跳实现）。最值钱的是那句"以整体脉络为准"——读框架源码的正确姿势是先画调用链、再挑关键节点深入，否则很容易陷在工具类里出不来。类加载那个 F5 陷阱也很真实，能省掉一次"以为自己搞错了"的怀疑。
+
+* 编程路上那些让我效率暴增的学习方法！  :自学方法:项目驱动:笔记:学习规划:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/34418394
+  :作者:  逆袭的二胖
+  :原文:  [[file:原文/2026-10-30-编程路上那些让我效率暴增的学习方法！.org][打开本地归档]]
+  :抓取:  2026-10-31
+  :END:
+
+- 本地原文：[[file:原文/2026-10-30-编程路上那些让我效率暴增的学习方法！.org][打开本地归档]]
+- 一句话概括：一个自学出身的 Linux C++ 工程师，用九个自问自答（选语言、选课、做计划、做笔记、刷 OJ、看书还是看视频）说明「学编程是学一个生态，不是学一门语言」。
+【方法/论点要点】
+- 科班与非科班最大的差别是："科班出身的学生知道去学什么"，知道每门课是干什么的。
+- 选语言别纠结性能与难易：有方向按方向走（算法/机器学习→Python，Web→Java/PHP，底层→C）；在校生先 C 再 C++，"正是它们的难和复杂才能让你更好地理解计算机系统"，向下打通 OS/编译/网络/组成，向上能做应用；上班族时间零碎，先从 Python 入手保住兴趣，但要补《深入理解计算机系统》。
+- "学习编程不是学习编程语言，而是学习一个计算机生态"——只会语言不懂体系，"就像只会写字而写不出好文章"。
+- 课程：本科面向"面"、工作读研面向"点"；采用改良版项目驱动学习——学一段、做个小项目、把遇到的问题记下来、针对性补知识，同时每天抽时间完整读一本书或一个专题，把碎片串成体系。
+- 爬虫案例的树形图：网络（HTTP/HTTPS、登录、GET/POST）→ HTML/DOM → 代理池 → JS 解密 → 分布式抓取与 Redis 队列 → 存储/去重/索引 → 验证码识别与深度学习。
+- 计划：从 2013 年上大学起定期列计划清单，编号入表；"很难完全按照计划去执行，不过制定相应的计划能让你清楚地知道自己应该干什么"。
+- 笔记必须做，博客随意：搜索引擎搜来的是别人的答案，"这些知识并不属于你"；笔记是给自己的定制化表达，作者记了 4 年多、1G 以上。
+- 同一时间段别学太多门课：每天两门、每门两小时，符合艾宾浩斯记忆曲线；"一口吃不成个胖子"。
+- 刷 OJ 是为适应写代码的感觉，不是背代码；刷熟后去 GitHub 找项目跟着写；作者刷 20 多道华为题，在 600 分的笔试里拿了 500。
+- 看视频入门、看书进阶：应用型视频告诉你"这项技术能干什么"，书才系统。
+- 多久能学会：做个小应用 2 个月，学生态无止境。
+【原文摘录】
+#+begin_quote
+我认为科班出身和非科班出身的学生最大的区别在于科班出身的学生知道去学什么，知道每一门课程是干什么的。
+#+end_quote
+#+begin_quote
+学习编程不是学习编程语言，而是学习一个计算机生态，即一个庞大的知识体系。只会编程语言而不理解整个计算机的体系，就像只会写字而写不出好文章。
+#+end_quote
+#+begin_quote
+项目驱动式学习最大的好处是让你知道你应该去学习什么，而不是先学一大堆知识，再去做一个项目。
+#+end_quote
+#+begin_quote
+搜索引擎搜出来的是别人的答案。你照搬过来，也许可以用，但是你没有记住，这些知识并不属于你，之后你可能还会遇到同样的问题，又要再搜索一遍。
+#+end_quote
+#+begin_quote
+看视频入门，看书进阶。
+#+end_quote
+【我的想法】
+九问里最耐用的是"生态"和"改良版项目驱动"两段：项目驱动容易碎片化，作者的补丁是"每天完整读一本书"，这条比任何学习方法都实在。需要打折的是"先 C 再 C++"——对今天多数人，Python/Go 起步更现实，"理解系统"的诉求可以靠 CSAPP 这类书补；另外云环境与 IDE 已让"配环境"不再是门槛，"刷 OJ 适应手感"的价值也随之下降。
+
+* Java 语法清单  :Java:语法速查:cheatsheet:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/25578170
+  :作者:  王下邀月熊
+  :原文:  [[file:原文/2026-10-30-Java 语法清单.org][打开本地归档]]
+  :抓取:  2026-10-31
+  :END:
+
+- 本地原文：[[file:原文/2026-10-30-Java 语法清单.org][打开本地归档]]
+- 一句话概括：一份从 JavaCheatSheet 翻译来的 Java 7 语法速查表，按基础语法、字符串、集合、时间日期、正则、数字、IO、文件目录、网络、打包分块，每块给可直接抄的代码片段。
+【方法/论点要点】
+- 来源与定位：译自 egek92 的 JavaCheatSheet，属于作者的"Java 入门与实践"系列；以 Java 7 为主，未覆盖 Java 8，作者自己也说"略显陈旧"。
+- 基础：hello world、if-else、循环、do-while、switch-case、数组与二维数组、对象、类、方法，外加一张 IDE 对比图（作者推荐 IntelliJ IDEA，学生免费）。
+- 字符串：~equals~ / ~equalsIgnoreCase~、~indexOf~ / ~substring~、~charAt~ 遍历、~StringBuffer.reverse()~、用 ~StringTokenizer~ + ~Stack~ 按词反转、大小写转换、~trim~、~replace~ 去空格、~split~ 转数组。
+- 集合：用 ~System.arraycopy~ 扩容数组、~Iterator~ 遍历 Map、~HashMap~ 存取、~Arrays.sort~ / ~Collections.sort~、~indexOf~ / ~containsValue~ / ~containsKey~、~Arrays.binarySearch~、~toArray~。
+- 时间日期：~SimpleDateFormat~ 格式化、Date 与 Calendar 互转、~DateFormat.parse~、用毫秒做日期加减与求差、~Calendar~ 各字段取值、~currentTimeMillis~ 计时。
+- 正则：~Pattern~ / ~Matcher~ 的 ~find~ / ~group~、~replaceAll~、~appendReplacement~ + ~appendTail~、~MULTILINE~ 匹配行尾，附一份元字符含义表。
+- 数字：用 ~parseInt~ 抛异常判断字符串是否为数字、~Double.equals~、~Math.round~、~NumberFormat~ 格式化数字与货币、二/八/十六进制转换、~Math.random~、三角函数与对数。
+- IO 与文件：~BufferedReader~ 读标准输入、~Formatter~ 格式化输出、~FileReader~ / ~FileWriter~、~InputStream~、~RandomAccessFile~、~ZipFile~ 遍历压缩包；创建、重命名、删除、设只读、取大小、判存在、移动、取绝对路径、列目录、建目录。
+- 网络与打包：~Socket~ 连接与四类异常（UnknownHost、NoRouteToHost、Connect、IOException）；~package~、~javadoc~、~jar cf~、~java -jar~。
+【原文摘录】
+#+begin_quote
+此文讲解的语法要点还是以 Java 7 为主，未涉及 Java 8 中内容，略显陈旧，读者可以带着批判的视角去看。
+#+end_quote
+#+begin_quote
+个人推荐 IntelliJ IDEA 并且对于学生免费。
+#+end_quote
+#+begin_quote
+int[] myArray = new int[10];
+int[] tmp = new int[myArray.length + 10];
+System.arraycopy(myArray, 0, tmp, 0, myArray.length);
+myArray = tmp;
+#+end_quote
+#+begin_quote
+jar cf project.jar *.class
+#+end_quote
+【我的想法】
+典型的"翻译式速查表"，最大价值是覆盖面而不是深度。以今天的 Java 看，一半片段该被替换：~var~、~List.of~、~String.join~、~java.time~（~LocalDate~ / ~DateTimeFormatter~）全面取代 ~Date~ + ~Calendar~，~StringBuilder~ 取代 ~StringBuffer~，~HashMap~ 的裸类型写法也早该加泛型。当面试前扫盲可以，当日常参考不如直接查 IDE 补全与官方 API 文档。

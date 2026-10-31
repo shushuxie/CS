@@ -925,3 +925,112 @@ Keigo，平时是普通的上班族，脑洞上线后，则是猛戳你笑点的
   #+end_quote
   【我的想法】
   这份清单写于 2018 年（原文自己都承认翻译晚了），今天看有两点要打折：Franz/Corebird 这类"聚合客户端"基本已被网页版和官方 App 取代，Atom 也已停止维护。但迁移思路没过时——先按"我每天必须用的软件"列清单，再逐个找 Linux 等价物，找不到的就留在虚拟机或另一台机器上。真正稳定的替代关系是 VLC、GIMP、Inkscape、Blender、VS Code 这几组，十年没变。
+
+* 为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了  :IDEA:Eclipse:Java:开发工具:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/64815393
+  :作者:  安然
+  :原文:  [[file:原文/2026-10-30-为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了.org][打开本地归档]]
+  :抓取:  2026-10-31
+  :END:
+
+- 本地原文：[[file:原文/2026-10-30-为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了.org][打开本地归档]]
+- 一句话概括：一个用了十年 Eclipse 的 Java 老手，用「配置能复现 + 多模块一次提交 + 调试体验」三条理由劝你换 IDEA，同时把 IDEA 自己的七个坑一并列了出来。
+【方法/论点要点】
+- 作者从大学起用 Eclipse 十年，"基本 Eclipse 中我可能会用到的快捷键我都是下意识的就能按出来"；第一次试 IntelliJ 因快捷键全变而放弃。
+- 换的真正理由不是功能，而是配置不可复现："同样的配置方式在不同机器却不一定都会生效"，给同事配机器要耗几十分钟还只是几率性成功；换 IDEA 后"所有机器的配置都用一个配置手册搞定了"。
+- 工程模型：IDEA 的 Project 相当于 Eclipse 的 workspace，Module 相当于 Eclipse 的 project；一个 Project 有统一 Global Library，模块之间能正确相互依赖。
+- 多模块 Git：每个工程是独立 Git project，一个功能要提交 N 个 module，"之前总是会出现忘记提交某个模块的事情"，现在一次提交覆盖该 project 下所有 module。
+- 配置：Settings 与 Project Settings 分层清晰；tab 转 4 spaces 说到做到（默认就是 4，只有 SQL 是 2）；默认深色主题。
+- 效率：能自动生成测试类并放到 test 目录；ZenCoding 写 HTML 用 tab 补全；对 JS/CSS 与插件的支持远好于 Eclipse；调试时"运行过的行，可以立刻在代码界面提示相关的值"，还能在 IDE 里调 JS、代码与界面自动刷新。
+- 坑：Maven 集成一般（新增配置只能改 XML，依赖要去另一个界面看）；Maven 多层目录要逐层展开 src/main/java；默认内存小、崩溃直接闪退不提示（加到 1.5G 才稳定）；社区版功能弱、商业版收费不低；git push 藏得深，只能用 Ctrl+Shift+K；Console 多且分散，新手不知道输出在哪；Tool Buttons 默认不显示。
+- 结论：只想学 Java，Eclipse 上手更快；想提升开发效率，IDEA 值得试。
+【原文摘录】
+#+begin_quote
+但是Eclipse又是这么多年来一直让我爱恨交加的IDE，稍有些复杂的框架就会出现N多不兼容的情况，但最终促使我下决心去找个更好用的IDE就是有时候真的不知道为什么同样的配置方式在不同机器却不一定都会生效。
+#+end_quote
+#+begin_quote
+这里的Project是类似于eclipse中的workspace，而Module是类似于eclipse中的project。
+#+end_quote
+#+begin_quote
+运行过的行，可以立刻在代码界面提示相关的值，也不用一个Debug界面跳来跳去，而且还能在IDE中调试JS，代码和界面的自动刷新同步等等。
+#+end_quote
+#+begin_quote
+如果你只是想找个IDE来学习Java，那么Eclipse会很快让你进入状态。如果你是想找个能提升开发效率的IDE，那么IntelliJ是非常值得尝试的。
+#+end_quote
+【我的想法】
+2018 年的体验文，但"配置能复现"这条今天依然是最硬的理由——IDEA 的 settings 同步、项目级 JDK/Maven 配置，本质上都是在解决作者当年的痛点。要修正两点：社区版如今对 Spring/Web 的支持仍受限，学生可申请免费授权；"Eclipse 只适合学 Java"也已过时，VS Code + 插件把轻量场景吃掉了。
+
+* Java自学路线总结，已Get腾讯Offer  :Java:学习路线:书单:校招:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/58261716
+  :作者:  五彩驹
+  :原文:  [[file:原文/2026-10-30-Java自学路线总结，已Get腾讯Offer.org][打开本地归档]]
+  :抓取:  2026-10-31
+  :END:
+
+- 本地原文：[[file:原文/2026-10-30-Java自学路线总结，已Get腾讯Offer.org][打开本地归档]]
+- 一句话概括：一个 19 届本科生把从 Java 基础到 SSM 的自学路径排成「基础→Web→进阶→Web 进阶→加分项」的书单与项目清单，最后拿到腾讯 WXG 后台 offer。
+【方法/论点要点】
+- 面试重基础：作者面的是 C++ 岗，"语言只是工具，对代码的理解才是核心"，靠对 Java 的理解也能过。
+- Java 基础：《Java 核心技术 卷1》可跳过图形、事件、Swing、applet 与部分日志章节，吃力时先跳多线程；看完必须写代码，"即使是滥用特性和设计模式也是一种有效的学习"；有经验后再速读一遍查漏。
+- JavaWeb 基础：Servlet/JSP、Tomcat、MVC、MySQL+JDBC、HTTP；《Head First Servlets and JSP》轻松好读但厚且部分过时；重点吃透 Servlet 原理与生命周期；做一个带注册登录、增删改查的小网站，最好部署到云上。
+- Java 进阶：《Java 编程思想》跳过 GUI 章节；写一个有复杂度的后台项目（HTTP 服务器、聊天室、DBMS）；《Effective Java》不厚但"涵盖了非常多的面试考点"；再啃多线程与 JVM（《Java 并发编程的艺术》《深入理解 Java 虚拟机》），重点是 JMM、各种锁、GC。
+- JavaWeb 进阶：Linux（《The Linux Command Line》/TLCL，租学生服务器 ssh 练）；操作系统原理；数据库（《MySQL必知必会》入门，《MySQL技术内幕》讲索引、事务、锁、范式）；网络（《图解HTTP》《图解TCP/IP》，深入看 UNP 与 TCP/IP 详解）；数据结构与算法（LeetCode 从 easy 起步）；SSM 框架重点是 Spring 的 IOC/DI，"框架只是锦上添花"。
+- 加分项：前端、动态语言（JS/Python）、大数据、Dubbo/Redis/Nginx/Docker。
+- 常用网站：GitHub、How2J、TLCL、LeetCode、regex101。
+【原文摘录】
+#+begin_quote
+众所周知，鹅厂后台一直以C++为重，面试官也是做C++开发。但是语言只是工具，对代码的理解才是核心。
+#+end_quote
+#+begin_quote
+在校招时最注重的就是基础，拿不出像样的项目没关系，但是基础万万不可不牢固。
+#+end_quote
+#+begin_quote
+练习阶段各种设计模式套上去用，不要怕笨重，即使是滥用特性和设计模式也是一种有效的学习。
+#+end_quote
+#+begin_quote
+Spring+SpringMVC+MyBatis可以说是开发必备了，但框架只是锦上添花，不要太依赖框架进行学习。当我们能不依赖任何框架开发完整项目时，才是真正掌握了它。
+#+end_quote
+#+begin_quote
+最为重要的是理解Spring的两个特性：IOC 反转控制和DI 依赖注入。
+#+end_quote
+【我的想法】
+路线骨架可复用，但技术栈停在 2019：JSP、SSM、无 Spring Boot/容器/K8s，"后端=SSM"这条已经换代。真正值得抄的是顺序——先基础、再 Web 打通全链路、再啃并发与 JVM、最后补框架；多线程与 JVM 那两本书至今仍是校招硬通货，how2j 这类中文教程可以换成官方文档 + Spring Boot 实战。
+
+* 从《深入理解计算机系统》谈一谈编程入门  :书单:计算机系统:CS50:C语言:
+  :PROPERTIES:
+  :链接:  https://zhuanlan.zhihu.com/p/38584767
+  :作者:  逆袭的二胖
+  :原文:  [[file:原文/2026-10-30-从《深入理解计算机系统》谈一谈编程入门.org][打开本地归档]]
+  :抓取:  2026-10-31
+  :END:
+
+- 本地原文：[[file:原文/2026-10-30-从《深入理解计算机系统》谈一谈编程入门.org][打开本地归档]]
+- 一句话概括：一篇"先讲为什么读、再给怎么读"的书单文——用 CSAPP 说明编程入门该先补计算机系统，并给出 CS50 → C → CSAPP → C++ → 数据结构的学习顺序。
+【方法/论点要点】
+- 别人推荐的好书读不下去，作者的解释是："现阶段的你，还不适合看这本书。"
+- CSAPP 第三版豆瓣 9.9，是豆瓣计算机书里评分最高的之一；内容从主板部件、CPU/内存/硬盘的连接，讲到程序如何编译链接成汇编再变成机器码执行，再讲到网络、组成原理、进程线程，"从硬件讲到软件，从里讲到外"。
+- 价值：能让人明确自己某一阶段缺什么，特别适合爱刨根问底、想知道代码为什么能跑、不知道数据结构与操作系统有什么用的人。
+- 门槛：全书建立在会 C 或 Java 的基础上、用了大量 C 例子；作者大二买第二版、后来买第三版，"断断续续看了好几年，每一次读都有新的感受"，到现在也没看完。
+- 先修课：哈佛 CS50，共 20 集，一天一集也就 20 天；它是 CSAPP 的精简版且对新手友好，"Always learn from the best"。
+- 推荐顺序：CS50 →《C Primer Plus》→《深入理解计算机系统（第三版）》→《C++ Primer》→ 邓俊辉《数据结构》（有免费配套视频，且"很多面试题和这本书脱不了干系"）。
+- 不必严格按序：看完 CS50 就可以开始 C，有 C 基础就能开 CSAPP，之后再补 C++ 与数据结构。
+【原文摘录】
+#+begin_quote
+一种可能的原因是：现阶段的你，还不适合看这本书。
+#+end_quote
+#+begin_quote
+它就像一张网，把我们整个计算机生涯中可能遇到的知识给组织起来了。
+#+end_quote
+#+begin_quote
+彻头彻尾地学习计算机的原理后，你会变成一个能去设计程序的人。而那种一上来就直接照葫芦画瓢、不求甚解、还想去编程的同学，最后多半从事重复性的工作。
+#+end_quote
+#+begin_quote
+这门课是上述那本书内容的精简版，简单而有趣，所以在看上面那本书之前，可以先看看这门课。
+#+end_quote
+#+begin_quote
+为了以后能做一个设计程序的人，我们一定要学习计算机相关原理，否则真的很难走远。
+#+end_quote
+【我的想法】
+2018 年的书单，CS50 与 CSAPP 的组合今天依然最稳；可补充的是 CSAPP 的 labs（bomb、malloc、proxy）才是精华，光读不写 lab 收获会减半。邓俊辉的数据结构在学堂在线可免费看，配 CSAPP 的 cache/链接章节正好互补。作者"书读不下去是时机不对"的判断，比任何书单都值钱。
