@@ -1,0 +1,112 @@
+#+TITLE: 这一招，带你的PPT突破天际！
+#+LINK: https://zhuanlan.zhihu.com/p/27779679
+#+AUTHOR: 看山不是山
+#+TYPE: article
+#+DATE: 2026-11-01
+
+最近，Office2016开发者预览版放出了一项炸裂眼球的新功能——3D模型导入。
+
+话不多说，先看效果。
+
+[[https://picx.zhimg.com/v2-b34d0ab414321173b465c9482fcb9ddd_1440w.gif]]
+
+[[https://pica.zhimg.com/v2-b66cc42e451ccfc12802df9b66603676_1440w.gif]]
+
+[[https://pica.zhimg.com/v2-e1375e4e5d7822d43f674ef7093ce146_1440w.gif]]
+
+刚看到这些效果时，我是一副见了鬼的样子，这也是PPT？！
+
+[[https://pic4.zhimg.com/v2-933e09845d11b76994169b148b747aab_1440w.jpg]]
+
+然而，微软的这波更新已将“未来技术”带到了现实，在某种程度上，Powerpoint已经可以做到一些“发布会”级别的效果。
+
+只需要寥寥几步，你也可以掌握简单的3D演示技巧，到底怎么做呢？
+
+*一．	将Office更新至最新的开发者预览版。*
+
+[[https://pic1.zhimg.com/v2-ed738b9950d1be0a60f94d0a265fa0ce_1440w.jpg]]
+
+具体的更新教程可以参考： [[https://products.office.com/zh-CN/office-insider?tab=Windows-Desktop][https://products.office.com/zh-CN/office-insider?tab=Windows-Desktop]]
+
+*二．	建立/寻找3D模型*
+
+目前支持导入的模型格式有fbx/obj/3mf/ply/stl/glb。那么问题来了，这些模型到哪里去找呢？下面推荐几种快速获得模型的方法：
+
+1.	Paint 3D
+
+[[https://pica.zhimg.com/v2-0c6b070942cbb61e220ff36b93230a4e_1440w.jpg]]
+
+这款是微软自家开发的3D建模软件，操作简洁，适合新手入门，也可以用来制作一些简单的PPT模型
+
+[[https://pic2.zhimg.com/v2-95081fc51b4c7dd77e1fc0a81f4bf4bb_1440w.png]]
+
+在建模完成之后，可以选择直接输出fbx或者3mf格式的文件，并且能够直接导入PPT当中
+
+[[https://pic2.zhimg.com/v2-a31fff68cebb4bd547c8d4c70c849ced_1440w.png]]
+
+Paint 3D下载链接： [[https://www.microsoft.com/en-us/store/p/paint-3d-preview/9nblggh5fv99][https://www.microsoft.com/en-us/store/p/paint-3d-preview/9nblggh5fv99]]
+
+2.从素材网站下载
+作为一名爱偷懒设计爱好者，用模板绝对是完成工作省时省力的好方法。平时也收集了一些免费的3D模型网站，今天终于派上了用场，希望对你也有所帮助
+
+[[https://archive3d.net/][https://archive3d.net/]]
+
+[[https://pic3.zhimg.com/v2-f504fb472872d26d7fbd1ff1d443e5be_1440w.png]]
+
+[[http://www.sccnn.com/][www.sccnn.com]]
+
+[[https://pic4.zhimg.com/v2-e4c352fcb357eb85742134c5fa0acfb3_1440w.png]]
+
+[[http://www.top3dmodels.com/products/3d-models/free][Free 3d Models]]
+
+[[https://pic4.zhimg.com/v2-aef9a8c746b26c6cda8392d9f0fd92d5_1440w.png]]
+
+[[http://www.dmi-3d.net/][DMI Car 3D Models]]
+
+[[https://pic1.zhimg.com/v2-660d110e6aff3da5ea1b2976221b51b8_1440w.png]]
+
+[[http://www.scifi3d.com/list.asp?intGenreID=14&intCatID=36][http://www.scifi3d.com/list.asp?intGenreID=14&intCatID=36]]
+
+[[https://picx.zhimg.com/v2-26726d4f09c8243f2ac3e520d311cab1_1440w.jpg]]
+
+[[http://www.model3d.biz/][3D Furniture Models]]
+
+[[https://picx.zhimg.com/v2-697ebe67dd3f46173c51b2e82b5df33d_1440w.png]]
+
+3.	使用专业建模软件制作
+
+在找不到合适模型的时候，可以尝试自己建模，例如Cinema 4D/3ds max/Rhino等，但是使用3D建模软件需要较高的软件技巧，建议有时间有精力的同学尝试
+
+[[https://pica.zhimg.com/v2-25c1f0aed0dabaa5c4f35994eb97c4fe_1440w.jpg]]
+
+*三．	导入PPT实现动画*
+
+在更新到最新版的PPT之后，会在插入一栏出现“3D模型”一项，通过它就可以将兼容格式的模型直接导入
+
+[[https://pic1.zhimg.com/v2-2ffd0ba68db702f5df7e083951a91350_1440w.png]]
+
+导入后的模型如下图所示
+
+[[https://pic1.zhimg.com/v2-676d401bb92ca91647588c4f94a112a4_1440w.png]]
+
+单击模型，会在中央出现旋转按钮，按住它拖动鼠标即可实现图像的任意旋转，如下图所示
+
+[[https://pic2.zhimg.com/v2-c94f62afe5acf9168dcdbd08bda60949_1440w.gif]]
+
+但是，要实现模型在PPT中的变化，只靠这一张页面是不够的，我们需要将它复制一次，然后在第二张上对模型进行大小调整，同时也可以添加文字
+
+[[https://pic1.zhimg.com/v2-b6eca0073011cfa3b2e20813ac041fe2_1440w.png]]
+
+最后一步，在第二张上添加切换效果——平滑，即可大功告成
+
+[[https://pic2.zhimg.com/v2-b97432960a376ae6475c6152c0791345_1440w.png]]
+
+最终效果图如下
+
+[[https://pica.zhimg.com/v2-e1375e4e5d7822d43f674ef7093ce146_1440w.gif]]
+
+需要注意的是，目前PPT的3D处于刚刚起步的阶段，支持的格式还不够丰富。相信经过长时间的版本更迭以后，会有更多的素材与功能会加入到其中
+
+本文首发于知乎专栏：做生活的设计师
+
+新浪微博/微信订阅：观海PPT

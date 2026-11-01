@@ -1,0 +1,71 @@
+#+TITLE: 哪位Excel高人设计出的这3个奇葩公式，太有用了！工作再忙也要学
+#+LINK: https://zhuanlan.zhihu.com/p/60338903
+#+AUTHOR: 蓝婉清
+#+TYPE: article
+#+DATE: 2026-11-01
+
+Excel快捷键中，有的常用比如Ctrl+F查找，这类太简单不再多说。有的可以解决疑难问题，比如Ctrl+E快捷键拆分字符串，这类偶尔用也不多介绍。而下面10个快捷键是工作中最最最常用、最实用的，而且新手不一定知道，你一定要全部掌握。
+
+*1、CtrL+ F1*
+
+一键切换功能区是否显示，几乎每天都要用N次。
+
+[[https://pic1.zhimg.com/v2-18b54b58338bdbef1de9c1873039cccc_1440w.gif]]
+
+*2、Ctrl + N*
+
+一键插入新的工作簿，再不用通过新建 - 空白工作簿来操作了。
+
+[[https://picx.zhimg.com/v2-6e99b72ca7ac6e72603024ae63442bed_1440w.gif]]
+
+*3、Shift + F2*
+
+如果单元格中没有批注会新建，如果有批注则可以快速进入编辑状态。
+
+[[https://pic4.zhimg.com/v2-c9eebf2b0ca2eca4fef0eaa5c9e01d1f_1440w.gif]]
+
+*4、Alt + =*
+
+按它可以添加求和公式，没有比这个更快的了
+
+[[https://pic3.zhimg.com/v2-74f9d1dd4b3420fbca4a2eec767cc500_1440w.gif]]
+
+*5、Alt + Enter*
+
+强制换行，只需要在指定位置按它
+
+[[https://pica.zhimg.com/v2-3dd8bc64f93ce0f8892b021546538e18_1440w.gif]]
+
+*6、F9键*
+
+在编辑公式时，如果想知道公式中局部表达式的结果，你可以按F9键（返回按Ctrl+Z）。不会这个用法你永远也成不了Excel函数高手。
+
+[[https://pic3.zhimg.com/v2-85e00e88ca035d879e2644489a1cf30e_1440w.gif]]
+
+*7、Ctrl+PageDown / PageUp*
+
+可以快速浏览多个工作表，比用鼠标点快太多了。
+
+[[https://pic3.zhimg.com/v2-55627b7387bcda7f032bc4aa15fb0bb8_1440w.gif]]
+
+*8、Alt + ; （分号）*
+
+可以只选取显示的行，隐藏行不选取。
+
+[[https://pica.zhimg.com/v2-7cd4d3d0e0228489cc253561d7f431aa_1440w.gif]]
+
+*9、F2键*
+
+如果不出意料，你是这样修改文件名的，选取文件图标 - 右键 - 重命名 - 修改名称。其实不用这么麻烦，直接按F2就可以让文件名进入修改状态。(也可以连续点击两次修改，不是双击哦)
+
+[[https://pica.zhimg.com/v2-c664a74f8575f8f7c7e9ffa3c57e7fe8_1440w.gif]]
+
+*10、Win + D*
+
+在编辑excel表格时，可以一键切换到桌面
+
+[[https://pic2.zhimg.com/v2-ddd497c97187d6309b1eb784ab47a86f_1440w.gif]]
+
+高顿君说：不同的工作类型常用的快捷键也不尽相同，你工作中最常用、最省力的快捷键是哪个呢？
+
+*附：16G资料包，初级会计、cpa、会计做账、excel技巧应有尽有，传送门放在评论里。*

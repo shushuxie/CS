@@ -1,0 +1,35 @@
+#+TITLE: 小白怎么入门Premiere？pr视频教程（第1至10集）
+#+LINK: https://zhuanlan.zhihu.com/p/110959377
+#+AUTHOR: 知识兔
+#+TYPE: article
+#+DATE: 2026-11-01
+
+*教程领到手，学习不用愁！领 ↑↑↑*
+
+初学者不要过于自己瞎琢磨瞎折腾，很容易走弯路。学以致用，光看不练都是假把式。学完知识兔pr教程后，就是在工作学习中实战多练，必须多练，活学活用！不用等于没学！
+
+*premiere作为Adobe系列的软件之一，在视频剪辑方面非常出色，被业内人士视为专业的视频剪辑软件，再加上Ae的视频效果，是制作视频的两大法宝。这里讲讲简单的入门，尤其是自学的大学生群体。下面视频教程仅供学习参考，在知识兔教程中称不上精品教程，所以需要更优质教程课程的朋友，请看前面第一句话箭头指示，移步去知识兔下载教程课程。*
+
+*第1集至第10集：*
+
+[[https://www.zhihu.com/video/1218704005960232960][知识兔01_跑个流程 导入素材 https://www.zhihu.com/video/1218704005960232960]]
+
+[[https://www.zhihu.com/video/1218704024310304768][知识兔02_视频剪辑_入点出点_https://www.zhihu.com/video/1218704024310304768]]
+
+[[https://www.zhihu.com/video/1218704044313022464][premiere03-录机和放机 时间轴 https://www.zhihu.com/video/1218704044313022464]]
+
+[[https://www.zhihu.com/video/1218704060679225344][premiere04-历史记录-工作区-调https://www.zhihu.com/video/1218704060679225344]]
+
+[[https://www.zhihu.com/video/1218704078488010752][premiere05_工作区 快捷键 界面https://www.zhihu.com/video/1218704078488010752]]
+
+[[https://www.zhihu.com/video/1218704093650292736][premiere06 marker 标记 时间线https://www.zhihu.com/video/1218704093650292736]]
+
+[[https://www.zhihu.com/video/1218704112969240576][premiere07_速度 倒放 持续时间 https://www.zhihu.com/video/1218704112969240576]]
+
+[[https://www.zhihu.com/video/1218704128123314176][premiere08 节奏 序列导入序列 https://www.zhihu.com/video/1218704128123314176]]
+
+[[https://www.zhihu.com/video/1218704148515950592][premiere09 画中画 画面 轨道 添https://www.zhihu.com/video/1218704148515950592]]
+
+[[https://www.zhihu.com/video/1218704167193198592][premiere10 关键帧 keyframe effhttps://www.zhihu.com/video/1218704167193198592]]
+
+[[https://pica.zhimg.com/v2-f2a62e26e57d43fd8614819819e5fcda_1440w.jpg]]

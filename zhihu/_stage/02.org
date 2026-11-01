@@ -1,28 +1,41 @@
-* 为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了  :IDEA:Eclipse:Java:
+#+CAT: 技巧
+* 新建一个账户就能隔离毒瘤应用：Windows 自带权限工具妙用  :Windows:ACL:应用隔离:
   :PROPERTIES:
-  :链接:  https://zhuanlan.zhihu.com/p/64815393
-  :作者:  安然
-  :原文:  [[file:原文/2026-10-30-为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了.org][本地原文]]
-  :抓取:  2026-10-30
+  :链接:  https://zhuanlan.zhihu.com/p/104846174
+  :作者:  Sunbelife
+  :原文:  [[file:原文/2026-11-01-新建一个账户就能隔离毒瘤应用：Windows 自带权限工具妙用.org][打开本地归档]]
+  :抓取:  2026-11-01
   :END:
 
-  - 本地原文：[[file:原文/2026-10-30-为何放弃Eclipse，选择IntelliJ IDEA，看完终于明白了.org][打开本地归档]]
-  - 一句话概括：一位十年 Eclipse 用户讲为何转向 IntelliJ IDEA，对比项目模型、配置与调试体验，也列出新 IDE 的坑。
-  【方法/论点要点】
-  - 换的动因是配置不可复现：“同样的配置方式在不同机器却不一定都会生效”，配环境只能几率性成功。
-  - 项目模型更顺：Project 相当于 Eclipse 的 workspace，Module 相当于 project，“有统一的Global Library”，多个 module 可一次提交，避免漏提。
-  - 配置与效率：Settings 分层清晰，tab 设 4 spaces 后“完全按照你配置的预期来”；生成测试类、ZenCoding、调试显示变量值都更顺手。
-  - 坑也不少：“崩溃了就直接界面消失”，此外 Maven 集成弱、Project 视图要逐层展开、社区版功能弱、git push 入口深（~Ctrl+Shift+K~）。
-  - 结论：“想找个IDE来学习Java”，Eclipse 上手更快；“想提升开发效率”，IDEA 值得试。
-  【原文摘录】
-  #+begin_quote
-  这里的Project是类似于eclipse中的workspace，而Module是类似于eclipse中的project。
-  #+end_quote
-  #+begin_quote
-  Eclipse中真的是用尽浑身解数，配置了N处把tab改成4 spaces，但是你会发现在总有地方还是不生效。但是IntelliJ会完全按照你配置的预期来。
-  #+end_quote
-  #+begin_quote
-  超小的默认内存，内存溢出崩溃不提示：启动内存一样要和Eclipse那样修改配置文件，但是崩溃了就直接界面消失，最后加到1.5G才能稳定运行。
-  #+end_quote
-  【我的想法】
-  价值在于把“换 IDE”从口味之争拉回到具体摩擦点：配置复现、多模块提交、调试体验，这些才是长期成本。局限是体验停留在旧版本，部分吐槽今天已过时。
+- 本地原文：[[file:原文/2026-11-01-新建一个账户就能隔离毒瘤应用：Windows 自带权限工具妙用.org][打开本地归档]]
+- 一句话概括：用 Windows 自带的"受限用户 + ACL 权限"给国产流氓软件圈一块地——建隔离账户装它、用 PowerShell 凭据以该账户身份启动它，成本比虚拟机/沙盒低。
+【方法/论点要点】
+- 起因：博主锁屏被百度云广告占据，追查发现是联想 OEM 后门；国内环境下又不可能完全不用某些软件，虚拟机/沙盒"大材小用"。
+- 原理：ACL（Access Control List）是附在对象上的权限清单，指定哪个用户/进程能访问、能做什么；受限用户默认不能改系统文件、其他用户文件和当前用户设置，于是把毒瘤软件的行为锁在隔离账户里。
+- 好处：不用切换用户或开关虚拟机；被隔离应用只能读写公共位置和隔离账户资料库；只能改隔离账户设置；仍可用剪贴板等会话级对象。
+- 边界：安全性不等同于沙盒，存在 ACL 渗透提权手法，不要用它跑真正有害的软件；方法较复杂，不适合 Windows 零基础用户。
+- 准备：把安装包放到"公共"位置（如 ~C:\Users\Public\Downloads~ 或其他盘根目录），要求 User 组至少有读取与执行权限。
+- 建账户：~Win+R~ → ~netplwiz~ → 添加 → "不使用 Microsoft 账户登录 > 本地账户"，本例账户名 ~IsolatedApps~，并确保它只属于 ~Users~ 组。
+- 装软件：不要从登录界面切过去装；在 PowerShell 里 ~$cred = Get-Credential~ 输入隔离账户凭据，再跑 ~Start-Process powershell -ArgumentList '-Command Start-Process powershell' -Credential $cred -LoadUserProfile~ 打开"窗口 2"。
+- 在窗口 2 中：~$env:__COMPAT_LAYER = 'RunAsInvoker'~ → ~cd ~ 确认提示符变成 C:\Users\IsolatedApps~ → ~& '软件包路径'~ 正常安装；装不上就把安装路径改到其他盘或 Public。
+- 做启动器：在窗口 2 里 ~cd ~/Desktop~ 与 ~ls~ 找快捷方式；为空则用任务管理器按用户名找进程名，再用 Everything 搜完整 exe 路径。
+- 固化密码与启动脚本：~$cred.Password | ConvertFrom-SecureString | Set-Clipboard~ 取加密串，在 PowerShell ISE 里用 ~[pscredential]::new('...', ($password | ConvertTo-SecureString))~ 还原凭据，再用 ~Start-Process powershell -ArgumentList '-Command Invoke-Item ~\Desktop\...' -WorkingDirectory 'C:\' -Credential $cred -LoadUserProfile -WindowStyle Hidden~（或 ~Start-Process ...exe~）静默启动。
+- 建快捷方式：目标写 ~powershell -ExecutionPolicy Unrestricted -File "C:\Users\<你>\Start-xxx.ps1"~，属性里"运行方式"选最小化，可固定到任务栏。
+- 隐藏账户：新建 ~Hide-IsolatedUsers.reg~，在 ~HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList~ 下写 ~"账户名"=dword:00000000~，导入后欢迎屏幕不再显示。
+- 验证与缺陷：软件正常在隔离用户下运行；提权要管理员密码；开机自启在本用户下不生效；访问宿主文件需授权，系统文件默认只读；托盘正常但可能有小卡顿。
+- 怎么选：临时偶尔用 → Win10 原生沙盒用完即走；长期装不安分的应用 → 本方法配置一次更省事；企业设备有更高权限管理员时多数提权操作做不了。
+【原文摘录】
+#+begin_quote
+所以本方法的核心理念就是创建一个受限用户来安装、运行毒瘤应用，将那些可能会对系统设置和系统文件进行恶意修改的行为锁定在受限用户当中。
+#+end_quote
+#+begin_quote
+值得一提的是，该方法与在沙箱中运行应用的安全性不在同一个级别，安全领域也有各种隐秘方法可以进行 ACL 渗透提权，请不要使用该方法运行任何有害软件（和「流氓应用」还是要注意区分）；未来本方法也可能因为应用本身的更新而失效。
+#+end_quote
+#+begin_quote
+Start-Process powershell -ArgumentList '-Command Start-Process powershell' -Credential $cred -LoadUserProfile
+#+end_quote
+#+begin_quote
+如果你仅仅是出于临时需求，偶尔用到一些不太让人放心的毒瘤应用，Windows 10 的沙盒功能简单易用，用完即走，是更好的选择；但如果你需要长时间在系统中安装一些不那么安分的应用，每次使用完毕后都会清除数据的原生沙盒就显得有些麻烦了。
+#+end_quote
+【我的想法】
+这是"用系统自带能力解决国产软件问题"的漂亮案例：核心不是 ACL 本身，而是把"装"和"日常运行"拆到不同账户，让软件连自启和写系统目录都做不到。实际操作里最麻烦的是第 4 步找真实 exe 路径，作者也承认要反复试；更省事的替代是 Sandboxie-Plus 或 Windows 沙盒，但前者收费、后者要专业版，所以这套纯手工方案仍有存在价值。注意它防的是"越权捣乱"，不是"恶意"，作者自己划的这条线要守住。

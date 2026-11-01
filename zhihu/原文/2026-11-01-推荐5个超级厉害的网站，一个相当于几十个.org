@@ -1,0 +1,55 @@
+#+TITLE: 推荐5个超级厉害的网站，一个相当于几十个
+#+LINK: https://zhuanlan.zhihu.com/p/54414041
+#+AUTHOR: 木子淇
+#+TYPE: article
+#+DATE: 2026-11-01
+
+** 1 *：Nicetool*
+
+[[http://www.nicetool.net/][http://www.nicetool.net]]
+
+nicetool是一个高质量工具集合网站，一个网站拥有上百个功能，一个网站相当于几百个网站；强烈安利。
+
+它上面的网站类型包括包括：生活常用，教学学习，办公辅助，图片视频，网络工具，程序开发等等上百个实用工具；并且上面的很多工具都是十分实用，具体工具可以自己慢慢去尝试。
+
+[[https://pic2.zhimg.com/v2-c249e32c40ffe95c8c1022c6dd17a419_1440w.jpg]]
+
+** *2：Hipdf*
+
+[[https://www.hipdf.com/cn/][https://www.hipdf.com/cn/]]
+
+HIPDF是一款Pdf在线处理工具，几乎可以满足你对Pdf的所有需求。
+
+它支持PDF转Word，PPT，Excel，图片，EPUB；Word，PPT，Excel，图片，TXTl转PDF；PDF压缩，加密，解锁，合并，旋转，裁剪等等PDF操作；它还支持OCR识别功能，它还支持各种图片处理工具和视频转换工具。
+
+[[https://pica.zhimg.com/v2-d75a300a321ccff2783e6839e450b818_1440w.jpg]]
+
+** 3 *：Pmgeek*
+
+[[http://pmgeek.net/][http://pmgeek.net]]
+
+Pmgeek是一个质量很高的设计网站导航，提供很多素材网站，设计网站。
+
+它是一个个人十分推荐的设计师导航网站，不仅界面十分简洁，而且分类十分详细，提供的网站的质量也是很高；它拥有灵感采集工具，素材资源网站，学习教程网站，常用工具等等上百个网站，提供了很多高质量精品网站。
+
+[[https://pic2.zhimg.com/v2-eb5946f515fa610080d0152c7b07d9d1_1440w.jpg]]
+
+** 4 *：iloveimg*
+
+[[https://www.iloveimg.com/zh-cn][https://www.iloveimg.com/zh-cn]]
+
+iloveimg是一款图片编辑处理导航工具，提供各种图片编辑处理功能。
+
+它支持包括：压缩图片大小，调整图片尺寸，裁剪图片，给图片加水印，旋转图片，将图片格式转化为JPG，将JPG转换为其它图片格式，搞笑创意图片生成器；它的照片编辑器还支持对图片的高级编辑处理功能。
+
+[[https://pic2.zhimg.com/v2-8ddaa532e84ab3a6843ca0c461fbddf3_1440w.jpg]]
+
+** 5 *：在线文件转换导航*
+
+[[http://www.alltoall.net/][http://www.alltoall.net/]]
+
+在线文件转换导航是一款支持200多种格式的在线转换工具，并且网站所有格式转换操作完全免费。
+
+它支持200多种视频格式，音频格式，图片格式，常见文档，表格格式，演示用文档格式，电子书格式，压缩格式；总之，只有你有文件需要进行格式转换，你都可以打开这个网站试试。
+
+[[https://pic4.zhimg.com/v2-58eaac226adc8041d46b739adf0e22ab_1440w.jpg]]
