@@ -1,0 +1,148 @@
+#+TITLE: Excel中多个工作簿（工作表）如何合并为1个工作簿（工作表）？
+#+LINK: https://zhuanlan.zhihu.com/p/68931729
+#+AUTHOR: 雷一鸣
+#+TYPE: article
+#+DATE: 2026-11-01
+
+看到Excel多表合并，其实常见的有2种场景
+
+*场景一* ：多个Excel文件需要合并为1个Excel文件（多个工作簿合并为1个工作簿）
+
+*场景二* ：1个Excel文件种有多个工作表，需要合并为1个工作表
+
+[[https://pic2.zhimg.com/v2-325a0b3b487d5ff7d8e8814c2a980443_1440w.png]]
+
+首先来看下， *场景一* （多个Excel文件合并为1个文件），都有哪些方法可以实现？
+
+ *场景描述：如图所示，在文件夹中，有4个Excel文件，每个Excel文件的数据格式都一致，需要把4个Excel文件合并到1个Excel文件中。*
+
+[[https://pic3.zhimg.com/v2-6870e49a2439cc0ac1122ef2033ff87e_1440w.jpg]]
+
+[[https://pic2.zhimg.com/v2-8bab0cd6c29845ed85dcfb3127651f19_1440w.jpg]]
+
+每个工作簿中的内容格式都一样，为了区分，我把工作簿1中的 位置 数据，标为了“工作簿1”；工作簿2中的数据标为了“工作簿2”...以此类推。
+
+下面雷哥推荐几种方法来实现多个Excel文件合并为1个文件
+
+** 方法一：PowerQuery
+
+*Step1* ：单击 【数据】- 【新建查询】 - 【从文件】- 【从文件夹】
+
+[[https://pic4.zhimg.com/v2-68bd0b86d38617fe72b5b56655e4837b_1440w.jpg]]
+
+*Step2* ：单击 【浏览】，选择文件夹路径
+
+[[https://pic1.zhimg.com/v2-7353f6513ea02c43831662f6f9a590e2_1440w.jpg]]
+
+*Step3* ：选择【合并并加载】
+
+[[https://pic4.zhimg.com/v2-76302244cc47a30ccfb40c6a0aa60d71_1440w.jpg]]
+
+最终的效果如图所下图所示。自动增加了Source.Name
+
+数据列，可以很方便看到数据来自于哪个工作簿
+
+[[https://pic3.zhimg.com/v2-b7f8502738afbf76fef6b138854097e8_1440w.jpg]]
+
+** 方法二：使用CMD命令，1s搞定合并
+
+*Step1* ：需要把文件格式修改为 csv文件格式。打开文件，另存为csv文件即可
+
+[[https://pica.zhimg.com/v2-28ba128f7abfb14ad77fa1c6c72ddb90_1440w.jpg]]
+
+*Step2：* 在文件所在路径，按【shift】+右键，点击【此处打开命令窗口】，输入
+
+*copy *.csv out.csv* ， 即把该路径下所有的csv文件合并到out.csv文件中。
+
+[[https://pica.zhimg.com/v2-aee8d6dbc34cd806d3b46daf97adfe58_1440w.png]]
+
+下面来看下， *场景二* （多个Excel工作表合并为1个Excel工作簿），都有哪些方法可以实现？
+
+*场景描述* ：如图所示，1个excel文件中，有多个工作表，需要合并到1个工作表中。
+
+[[https://pica.zhimg.com/v2-ac9612a25a1c1e043d1d9b55003a6144_1440w.jpg]]
+
+** 方法1：PowerQuery法
+
+*Step1：* 单击 【数据】- 【新建查询】 - 【从工作簿】
+
+[[https://pica.zhimg.com/v2-9bb40b3c2bcb2b0a8d5268804b64ced0_1440w.jpg]]
+
+*Step2：* 选择需要合并的工作表
+
+[[https://pica.zhimg.com/v2-33b3b26c1f657f0eb2d5ce4e895ed8b6_1440w.jpg]]
+
+*Step3* ：在追加查询中，单击【将查询追加为新查询】
+
+[[https://pic1.zhimg.com/v2-96deaab58ae8a0eb04d9d1c7eb8467b8_1440w.jpg]]
+
+*Step4* ：选择所需的工作表
+
+[[https://picx.zhimg.com/v2-a97cc54d43068a8048d0491fe8046781_1440w.jpg]]
+
+*Step5* ：单击关闭并上载
+
+[[https://picx.zhimg.com/v2-d62427c1ee92b3f7df579f0ad992dbf3_1440w.jpg]]
+
+最终的效果如图所示
+
+[[https://pica.zhimg.com/v2-67338aa40e7e755e34164cf5ed360298_1440w.jpg]]
+
+** 方法2：使用宏
+
+*Step1* ：按【Alt】+【F11】
+
+*Step2* ：输入代码，并单击三角形图标运行
+
+[[https://pic4.zhimg.com/v2-e4c3f6ec9988435953adbb95459664c5_1440w.jpg]]
+
+#+begin_src vba
+Application.ScreenUpdating = False
+For j = 1 To Sheets.Count
+    If Sheets(j).Name <> ActiveSheet.Name Then
+        X = Range("A60000").End(xlUp).Row + 1
+        Sheets(j).UsedRange.Copy Cells(X, 1)
+    End If
+Next
+Range("B1").Select
+Application.ScreenUpdating = True
+MsgBox "小主，数据合并结束啦！", vbInformation, "提示"
+#+end_src
+
+运行效果如下图所示，后续我们删去多余的标题行即可~
+
+[[https://pic3.zhimg.com/v2-7d3fc960323fe5c46ad6244e0e33d4c0_1440w.jpg]]
+
+** 方法三：插件法 - 最简单
+
+Step1：使用【方方格子】插件，单击【合并工作表】
+
+[[https://pic2.zhimg.com/v2-a26c212fe13c3f6984db3bce9d43d08d_1440w.jpg]]
+
+Step2：选择汇总区域后，单击确定
+
+[[https://pic3.zhimg.com/v2-eeee38bf34a11b98ebd93b0fc852a9b6_1440w.jpg]]
+
+最终的效果如下
+
+[[https://pica.zhimg.com/v2-a4ae53cc4c2fdacfb0316165bee418cc_1440w.jpg]]
+
+还是插件最简单，分分钟搞定哈~
+
+【方方格子】插件的具体功能，雷哥写过一篇文章
+
+[[https://www.zhihu.com/question/36546814/answer/227980321][有哪些堪称「神器」，却鲜为人知的软件/网站/互联网服务？]]
+
+[[https://picx.zhimg.com/v2-4cefc50e81f61a77db0c0cf9bfc2fcbd_1440w.png]]
+
+*场景一* ：多个Excel文件需要合并为1个Excel文件（多个工作簿合并为1个工作簿）
+
+*方法* ：PowerQuery法，CMD法
+
+*场景二* ：1个Excel文件种有多个工作表，需要合并为1个工作表
+
+*方法* ：PowerQuery法，VBA法和插件法
+
+创作不易，欢迎大家沟通交流，如果感觉不错，欢迎 *点赞支持雷哥* 。谢谢
+
+更多精彩内容，请关注同名微信公众号【 *雷哥office* 】
