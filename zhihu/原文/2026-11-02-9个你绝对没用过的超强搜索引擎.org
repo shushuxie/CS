@@ -1,0 +1,103 @@
+#+TITLE: 9个你绝对没用过的超强搜索引擎
+#+LINK: https://zhuanlan.zhihu.com/p/26233217
+#+AUTHOR: Kangyoung
+#+TYPE: article
+#+DATE: 2026-11-02
+
+*小仙女推荐几个比较冷门小众的搜索引擎，其中涵盖了学术、设计、图库、药物、影视、工程设计等各个方面；*
+
+*良心推荐，望笑纳！*
+
+*你绝对值得收藏~*
+
+*1、SemanticScholar  免费学术搜索引擎*
+
+速戳：
+
+[[https://www.semanticscholar.org/][Semantic Scholar]]
+
+[[https://pica.zhimg.com/v2-766879bdf0312ef5dc5a4f3598ce6bde_1440w.png]]
+
+[[https://pic4.zhimg.com/v2-ef169290d916312251f85ea7775276c9_1440w.png]]
+
+该网站是由微软联合创始人 Paul Allen 做的免费学术搜索引擎，其检索结果来自于期刊、学术会议资料或者是学术机构的文献。这个搜索引擎能检索到 80% 的免费论文文献，大约有 300 万份，另外它直接提供图表预览，看起来能方便研究人员省下更多筛选的工作。这个搜索引擎覆盖的学科从计算机科学扩展到了脑科学，除了利用作者、出版商标注的关键词这种常用的方式外，还精确到了信息筛选上，例如用计算机视觉等技术搜寻论文发布的会议名称、论文发布的时间，从论文文中筛选出关键词句等，这会让搜索结果的信息看起来更加丰富。
+
+*2、Librestock 免费优质素材搜索引擎*
+
+速戳： [[http://librestock.com/][Search 40+ free stock photo websites in one place]]
+
+[[https://pic3.zhimg.com/v2-d4a44fa8b5bdcad87a899123d95ffbcc_1440w.png]]
+
+[[https://pic2.zhimg.com/v2-d7f1324ec61cc24bf9888c5bf13972f1_1440w.png]]
+
+LibreStock 网站致力于推荐高清、优质的图片，用户可以通过关键词来搜索想要的素材图片，筛选出来的图片列表可以预览，点击下载的时候会直接跳转到目标站点上。这个网站本身并不提供原创的图片素材，而是通过索引其他网站上的图片资源来达到站内搜索查询的目的。当用户点击下载的时候会跳转到目标网站上下载，简单的机制来达到最直接的目标，这种一站式的搜索功能相信能得到不少设计师的青睐！
+
+*3、Searchin  专业运动鞋搜索引擎*
+
+速戳： [[https://searchin.it/][Searchin · The Sneaker Search Engine]]
+
+[[https://pic4.zhimg.com/v2-0934bee4ab67d4fcf53f131b265d9b27_1440w.png]]
+
+[[https://pic3.zhimg.com/v2-6638f08799f6bfe7b73cc5d40af6a1b4_1440w.png]]
+
+Searchin 是一个致力于精准化的运动鞋品牌搜索引擎，支持搜索世界各地的运动鞋品牌和信息，让想要购买运动鞋的用户有一个准确的选择和判断，提供用户购买某一款运动鞋的效率和方便的购物模式。其中主要支持的国家有奥地利、法国、德国、意大利、斯洛伐克、荷兰、英国，所设计的品牌有阿迪达斯、阿西斯、布鲁克斯、Clarks、迪亚多纳、袋鼠、新百伦等。
+
+*4、Gitlogs  在线GitHub项目搜索引擎*
+
+速戳： [[http://www.gitlogs.com/][Discover The Top Trending Repos]]
+
+[[https://pic1.zhimg.com/v2-26fc81f730d21bbab58d6ae4dfa72f72_1440w.png]]
+
+[[https://pic1.zhimg.com/v2-d0cefbd5cc6b497a7fc47f259bdc315c_1440w.png]]
+
+GitLogs 是一个教育GitHub网站的内容搜索引擎，可以帮助工程师们快速的找到相关的项目，及时提供最新的开发项目、开发新闻等资源。
+
+*5、FindIcons  免费图标搜索引擎*
+
+速戳： [[http://findicons.com/][Free Icon & Vector Illustrations]]
+
+[[https://pic2.zhimg.com/v2-fe5fd1b1054123abe9a3c2fc2883173b_1440w.png]]
+
+[[https://picx.zhimg.com/v2-7450878e506255c4c5e822b58db9b2e5_1440w.png]]
+
+FindIcons是一个免费图标搜索引擎，号称拥有全世界最大的图标库。其先进的搜索过滤和匹配算法让用户能够轻松找到每个设计任务中需要的图标，例如设定特定尺寸、颜色、类型、授权方式等等。它完整的输出选项能让使用者轻松将图标转为不同的档案类型，非常方便。你也可以将喜欢的的或者常用的图标加入个人收藏夹，随时随地方便访问~
+
+*6、 Moreflicks  热门电影搜索引擎*
+
+速戳： [[http://www.moreflicks.com/][Movies and TV | Moreflicks.com]]
+
+[[https://picx.zhimg.com/v2-78345d91dc941e5ecfbbc7a02b002f3f_1440w.png]]
+
+[[https://pic2.zhimg.com/v2-50382838582103471617a1e02a294057_1440w.png]]
+
+MoreFlicks 网站是一个汇集了各大优质电影资源网站的最新内容，并帮助电影爱好者一键搜索哪个网站可以在线直播的信息内容，再也不用满世界找片源了~只需输入电影名称或者关键词就可以查询哪个网站可以在线观看。对于电影来说每个人都喜欢第一时间收看，有些电影必须要在电影院观看的，不过只要正规的电影网站出来相关的电影，你不一定会知道，那么你需要有这样一个网站来搜索片源，现在这样的电影在线直播网站的搜索引擎出来了哦！
+
+*7、Niice 设计师视觉搜索引擎*
+
+速戳： [[https://niice.co/][Gather, share and discuss ideas with your team. Niice]]
+
+[[https://pica.zhimg.com/v2-57106fcabae8fa212a1c7bf93b3e743c_1440w.png]]
+
+[[https://picx.zhimg.com/v2-832f9a4db73b71ca57e768fdca6d7459_1440w.png]]
+
+该站点是一个设计师专用的视觉搜索引擎， 内容质量高，而且设计都很美观。 它主要是通过用户输入的颜色来搜索不同的视觉作品，例如只要输入“黑白”，网站会显示搜索出来的黑色内容资源。专注于分享优质的设计内容~
+
+*8、lodine  在线药物搜索引擎*
+
+速戳： [[http://www.iodine.com/][Drug information, side effects, and reviews]]
+
+[[https://pic3.zhimg.com/v2-1cc0ff48200a125a804d130b343b975c_1440w.png]]
+
+[[https://pic1.zhimg.com/v2-b427a4542049db7c02fd1858a7b581dc_1440w.png]]
+
+在线药物搜索引擎是一个在线药物名称、功效、说明书等内容的搜索引擎，收录了成千上万种药物信息。该平台结合临床研究和实际生活经验，汇集更多的药物实用信息，帮助人们了解自己的体质，提供他们对医疗保健药物的选择。它从大量的临床研究和实际使用情况着手，分析药品的使用率和使用效果数据，让你对相关药物有一个全面的认识。
+
+*9、KonaChan  动漫ACG壁纸搜索引擎*
+
+速戳： [[http://konachan.net/][konachan.net - Konachan.com Anime Wallpapers]]
+
+[[https://pic3.zhimg.com/v2-318ca171fed554d65bc9accac9d2d27e_1440w.png]]
+
+[[https://picx.zhimg.com/v2-2343665a696885ce7f0074feaf45f7fb_1440w.png]]
+
+KonaChan 网站是一个致力于动漫、游戏壁纸图片搜索的站点，喜欢动漫的用户可以根据关键词来搜索自己想要的图片壁纸。想要找个性化的动漫壁纸，只有这种专业的动漫图片网站才有的。
