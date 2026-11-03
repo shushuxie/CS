@@ -1,0 +1,115 @@
+#+TITLE: 这十五个网站为你搜PDF书籍加一把力
+#+LINK: https://zhuanlan.zhihu.com/p/61411081
+#+AUTHOR: 王华
+#+TYPE: article
+#+DATE: 2026-11-03
+
+欢迎关注我的微信公众号：万能搜吧。
+
+一个每天分享安卓、iOS、电脑、网站、编程等相关干货资源的公众号，奉行“为人民服务，用心原创，授人以鱼不如授人以渔”的政策，希望大家在嘈杂的互联网环境下获得一些有用的知识。
+
+一款完全免费的文档翻译软件，一分钟翻译上万字： [[https://zhuanlan.zhihu.com/p/72416578][https://zhuanlan.zhihu.com/p/72416578]]
+
+定位的是专业教科书籍的pdf版，其实一般百度书名+pdf一般就能搜到，搜不到就是确实应该没有。
+
+不过有些网站确实汇总比较全，今天就推荐一下。
+
+** 1、烽火研报
+
+[[https://www.fhyanbao.com/?invite_code=zv8WRS][烽火研报 - 专业研报平台丨收录海量行业报告、券商研报丨免费分享行业研报]]
+
+实时全面的研究报告聚合搜索平台，覆盖宏观策略、行业分析、公司研究、财报、招股书、定制报告等内容，为金融从业人员、投资者、市场运营等提供信息获取和整合的专业服务。
+
+[[https://pic1.zhimg.com/v2-b60401a49a1aa5c216dcff2bf8da59ba_1440w.jpg]]
+
+** 2、鸠摩搜书
+
+[[https://www.jiumodiary.com/][Jiumo Search 鸠摩搜索 - 文档搜索引擎]]
+
+一个很出名的网站，资源丰富，下载源头多是各家网盘，书籍网站。
+
+[[https://pic3.zhimg.com/v2-1aa35842158733886d30b57775ee5d06_1440w.jpg]]
+
+** 3、脚本之家
+
+[[https://www.jb51.net/books/][计算机免费书籍,电子书,pdf电子书,电子书籍,网络书籍,电脑书籍下载,编程书籍,编程电子书下载 - 脚本之家]]
+
+这个网站比较杂乱，但其中一个门类，书籍资源很多，非常值得收藏，记得点击普通下载。
+
+[[https://pic3.zhimg.com/v2-f0c4ea32958c0253d3d26ef0bff076b2_1440w.jpg]]
+
+** 4、时宜搜书
+
+[[https://www.shiyisoushu.com/][时宜搜书 - 专业电子书搜索引擎]]
+
+时宜搜书也是个书籍聚合检索站，支持各种格式电子书籍检索，并跳转到原网站下载。 [[https://www.shiyisoushu.com/][时宜搜书 - 专业电子书搜索引擎]] 时宜搜书也是个书籍聚合检索站，支持各种格式电子书籍检索，并跳转到原网站下载。
+
+[[https://pic4.zhimg.com/v2-766c4273525c6f907e2b8db938173b27_1440w.jpg]]
+
+** 5、搬书匠
+
+[[搬书匠] - 电子书(EBook)](http://www.banshujiang.cn/)
+
+搬书匠这个网站主要是提供编程学习类数据下载，免费好用。▼
+
+[[https://pic3.zhimg.com/v2-19317260fc87ca298be648b11784b4b2_1440w.jpg]]
+
+** 6、中国哲学书电子化计划
+
+[[https://ctext.org/zhs][中国哲学书电子化计划]]
+
+中国哲学书电子化计划这个网站汇集几千年来知名著作，并提供免费在线观看，感兴趣的一定不能错过。
+
+[[https://pic2.zhimg.com/v2-72b92402248acb27a6bef6e9d27cb67d_1440w.jpg]]
+
+** 7、书格网
+
+[[https://new.shuge.org/collections/][资源集 - 书格]]
+
+书格网这个网站完全免费，提供大量古籍扫描版，免费下载。
+
+[[https://pic4.zhimg.com/v2-60157caf1d1992b22dad3a114903badb_1440w.jpg]]
+
+** 9和10、电子课本站
+
+好多电子课本网这个网站提供中小学电子课本在线观看，各种出版社相当丰富。
+
+[[http://www.haoduoyun.cc/][电子课本|教材|教科书大全 - 好多电子课本网]]
+
+[[https://pic3.zhimg.com/v2-77623a6797cd9239bb372a8c45660a9a_1440w.jpg]]
+
+** 11、CSDN
+
+CSDN算是国内出名的IT技术交流网站，相信程序员找程序报错原因都能检索到此站，此网站还有一个类似百度文库的功能，众多网友分享的各种书籍，缺点就是好多要积分下载。
+
+[[https://pic3.zhimg.com/v2-5cdde1e95e37c4031da8f8addefc4c88_1440w.jpg]]
+
+** 12、 *Library Genesis*
+
+[[http://libgen.li/][Library Genesis]]
+
+国外一家网站，兼具论文、文献、书籍下载功能，也是免费。
+
+如下网站，界面相对比较专业了，从网站栏目上看主要分 *书籍、文献、杂志* 等，当然大部分都是外文的，且全部免费。
+
+[[https://picx.zhimg.com/v2-2f9b81d273b8f520f5ca589f3d58504f_1440w.jpg]]
+
+比如搜索machine learning，如下搜出一堆书籍、文献， *文献语言众多* ，通过语言排序， *也能看到少量中文书籍* ，免费下载即可。
+
+[[https://pica.zhimg.com/v2-8d46b1549e48e1316a291125ee811326_1440w.jpg]]
+
+** 13、 *BookZZ*
+
+[[https://b-ok.org/][Electronic library. Download books free. Finding books]]
+
+如下网站，也是整洁的一个界面，直接输入想要搜索的即可，号称500多万书籍和7000多万论文也不是吹的，提供免费下载。
+
+[[https://picx.zhimg.com/v2-92a778bf5c8f60aeeb442938a83ea503_1440w.jpg]]
+
+** 15、Online Books
+
+[[https://onlinebooks.library.upenn.edu/search.html][The Online Books Page]]
+
+依然国外站，称免费提供300万本电子书。
+
+[[https://pic1.zhimg.com/v2-5c9c60bce4f5955d7526a92a41ffa536_1440w.jpg]]
