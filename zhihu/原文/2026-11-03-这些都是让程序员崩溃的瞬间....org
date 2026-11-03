@@ -1,0 +1,258 @@
+#+TITLE: 这些都是让程序员崩溃的瞬间...
+#+LINK: https://zhuanlan.zhihu.com/p/88342649
+#+AUTHOR: 皮皮Q
+#+TYPE: article
+#+DATE: 2026-11-03
+
+1. 公司实习生找 Bug
+
+[[https://pic4.zhimg.com/v2-2e8da89fe3774b65e4a97fb2907d46f1_1440w.gif]]
+
+2. 在调试时，将断点设置在错误的位置
+
+[[https://picx.zhimg.com/v2-1b5174842a5421bc656542bd1d49e17d_1440w.gif]]
+
+3. 当我有一个很棒的调试想法时
+
+[[https://pica.zhimg.com/v2-2d221bda4e6e5f45cac130924a59aa20_1440w.gif]]
+
+ 4. 偶然间看到自己多年前写的代码
+
+[[https://pic2.zhimg.com/v2-3b46d962289833f3c5aefb12138fd2af_1440w.gif]]
+
+5. 当我第一次启动我的单元测试时
+
+[[https://pica.zhimg.com/v2-e2a43619104380d1a382ca0356c73f2a_1440w.gif]]
+
+ 6. 数据库的 Delete 语句忘了使用限定词 where...
+
+[[https://pica.zhimg.com/v2-5e85118fcc232b999fa5fae9d15686f8_1440w.gif]]
+
+7. 明明是个小 bug，但就是死活修不好......
+
+[[https://pic2.zhimg.com/v2-75444c90da9df21059148ddb23c5ae4d_1440w.gif]]
+
+8. 当我尝试调整生产数据库中的一些东西时
+
+[[https://pica.zhimg.com/v2-5d06d0cae0a29749bd72541f4438870e_1440w.gif]]
+
+ 9. 好像真的没人发现我产品里的 bug......
+
+[[https://pic4.zhimg.com/v2-23201fe08c690e5a3e571d57c612ea43_1440w.gif]]
+
+ 10. 下班前我还有一项任务没有完成
+
+[[https://pic2.zhimg.com/v2-973a625ee275a9a8fc26d0d64de50fbf_1440w.gif]]
+
+ 11. 产品还没测试直接投入生产时
+
+[[https://pic2.zhimg.com/v2-14c8d08e0bdfbdacc409d2e26e359a7f_1440w.gif]]
+
+12. 调试过多线程的都会懂！
+
+[[https://pic3.zhimg.com/v2-e4628f583b2fa6c05c08320157461b32_1440w.gif]]
+
+ 13. 当我以为已捕获了所有可能的异常...的时候
+
+[[https://pica.zhimg.com/v2-795972a992e3cdf58e7fa83ebd8f1858_1440w.gif]]
+
+ 14. 当我试图清理几行所谓的旧代码的时候
+
+[[https://pic4.zhimg.com/v2-596a9b0255929cd9f47eff176cb02acf_1440w.gif]]
+
+15. 当有人让我帮他调试代码时
+
+[[https://pica.zhimg.com/v2-3e908ed517695c5a1104d452d04d0be2_1440w.gif]]
+
+16. 当程序员第一次向老板演示项目时
+
+[[https://pic1.zhimg.com/v2-e04278d77a6d65665cd2c8eb531cf1aa_1440w.gif]]
+
+17. 结对编程，需要再了解一下吗？
+
+[[https://pic4.zhimg.com/v2-6cde5b3c75b6cdc51b4619f9d8f0044d_1440w.gif]]
+
+ 18. 当你看到你几个月没碰过的代码
+
+[[https://pic3.zhimg.com/v2-757b611af27a7599cc76fe7380df7634_1440w.gif]]
+
+ 19. 接到产品经理电话的我睡意全无！
+
+[[https://pic3.zhimg.com/v2-b6536e28b6e933bcfecc35e9b466eb64_1440w.gif]]
+
+ 20. 测试的时候一切 ok，真正上线的时候……
+
+[[https://picx.zhimg.com/v2-328b0d55e326022bd104a07eab5c6743_1440w.gif]]
+
+21. 作为一个程序员，拷问灵魂的时刻到了！
+
+[[https://pic4.zhimg.com/v2-fa9164e54197252d9c86e6a1179e6385_1440w.gif]]
+
+ 22. 当年学 C 语言的过程
+
+[[https://pica.zhimg.com/v2-7f3f39db566b46c2111e4d1113256de8_1440w.gif]]
+
+ 23. 当前端程序员想改后台代码时，后台程序员的样子
+
+[[https://pica.zhimg.com/v2-a6286cad113f382a8d28b04a0d090c2e_1440w.gif]]
+
+ 24. 调试 bug
+
+[[https://pica.zhimg.com/v2-3672bae7ccdeddeec3c644985254b74e_1440w.gif]]
+
+25. 正在调试，突然内存溢出了
+
+[[https://pic1.zhimg.com/v2-999039945bb6b39bb612807411c41f7c_1440w.gif]]
+
+26. 需求文档又改了
+
+[[https://pica.zhimg.com/v2-c2e3705c810681e078934c3c8f8a88b0_1440w.gif]]
+
+ 27. 苦逼的后端工程师
+
+[[https://picx.zhimg.com/v2-f8ffea4f356b3ad06ade5051afcf76df_1440w.gif]]
+
+28. 后端工程师做 UI 的活
+
+[[https://pic1.zhimg.com/v2-cbec7f86c91e774f5f1e70da55a30c2a_1440w.gif]]
+
+ 29. 前后端分离开发
+
+[[https://pic1.zhimg.com/v2-2484f7ba8038903d18db249a39e6a34a_1440w.gif]]
+
+ 30. 单身互联网狗的一天
+
+[[https://pic1.zhimg.com/v2-1dcbbd7e2074bfd22f1161851bfaccfe_1440w.gif]]
+
+31. 在生产环境做 hotfix
+
+[[https://pic1.zhimg.com/v2-0ef67e40d841fd348b0ad09bb8bb3058_1440w.gif]]
+
+ 32. 刚调稳定的系统，公司叕空降了一位架构师，又双叕要重构现有系统……
+
+[[https://pic4.zhimg.com/v2-dad5a2ba693707e6e205532bff57bae9_1440w.gif]]
+
+33. 当程序员听客户说还在用 IE 时
+
+[[https://pic2.zhimg.com/v2-544803912406715cca5436b771dbc90b_1440w.gif]]
+
+34. 当黑客拿到 root 权限之后
+
+[[https://picx.zhimg.com/v2-50ae81273c836d2c93a85fa7bd1c8a71_1440w.gif]]
+
+35. 代码进入循环分支后
+
+[[https://pic2.zhimg.com/v2-3d741e17ffe58561c262576899ff2a49_1440w.gif]]
+
+ 36. 新手程序员第一次做项目的过程
+
+[[https://pica.zhimg.com/v2-966d545150d92fb9fc4d8c6640622d38_1440w.gif]]
+
+37. 零错误零警告一次编译通过
+
+[[https://pic4.zhimg.com/v2-283186ae62ff9f191208b8d604f575d9_1440w.gif]]
+
+ 38. 春节前后上班写代码状态是这样的
+
+[[https://pic4.zhimg.com/v2-db9e3f0723b5df8b82e35230e9dc3447_1440w.gif]]
+
+39. 自信爆棚地去重构一个看似简单的模块
+
+[[https://picx.zhimg.com/v2-9e5a21846bd14652b0dd14e970532711_1440w.gif]]
+
+40. 被老板委派接手刚刚离职同事的项目...
+
+[[https://pica.zhimg.com/v2-46aa2f7a01ee1d513a98c2eaac0a6fc0_1440w.gif]]
+
+41. 当他们要求我测试所有应用功能时
+
+[[https://pic3.zhimg.com/v2-0f66db7a560c28f743162d98e76c19a6_1440w.gif]]
+
+42. 准备下班的时候,测试又提 bug 过來了…
+
+[[https://pic4.zhimg.com/v2-2a62cd66af36b40838be102182983535_1440w.gif]]
+
+ 43. 使用新框架却忘记阅读文档
+
+[[https://pic4.zhimg.com/v2-2184ccb760594ab5e7fbd01f72c60201_1440w.gif]]
+
+44. 测试实习生的代码
+
+[[https://pica.zhimg.com/v2-007a2195f89ceb7d0c1ca7ba458db376_1440w.gif]]
+
+45. 网络延迟的危害...
+
+[[https://pic2.zhimg.com/v2-222ef63bf17bb448860efb87b5291981_1440w.gif]]
+
+46. 测试刚写完的代码
+
+[[https://pic3.zhimg.com/v2-43341fd40f989a229b878d1ff16575e4_1440w.gif]]
+
+ 47. delete 时，忘记加 where 条件了
+
+[[https://pica.zhimg.com/v2-442cca252b2c921113f5accfcb21bf6a_1440w.gif]]
+
+ 48. 轻量级架构遇到重量级需求
+
+[[https://pic4.zhimg.com/v2-13d58f49d0af9ae3aeb97ae85c0594cf_1440w.gif]]
+
+49. 当我以为我修复了一个 Bug
+
+[[https://pic1.zhimg.com/v2-39cf4d501258ebea95bc162d06a0012c_1440w.gif]]
+
+50. 当我看实习生编码
+
+[[https://pica.zhimg.com/v2-adbaa6366ca457c9df09f15f24b4b760_1440w.gif]]
+
+51. 首次在 IE 中测试我的网站
+
+[[https://pic4.zhimg.com/v2-3695126ae68fc4518979bf1e0da3dd07_1440w.gif]]
+
+ 52. 当我第一次测试我的代码时
+
+[[https://picx.zhimg.com/v2-38667cc9f7cff44ea1c3f2cbeb094e23_1440w.gif]]
+
+53. 新手调试 CSS
+
+[[https://pic2.zhimg.com/v2-dd6dd9bd473f9b511fb7ebd78c4f7777_1440w.gif]]
+
+ 54. 提前交付客户要求
+
+[[https://pica.zhimg.com/v2-01b4d32480d5a4095a73a6ea1f014038_1440w.gif]]
+
+ 55. 我设计的接口和别人调用我的接口 （好疼）
+
+[[https://pic1.zhimg.com/v2-80e202a3e0e6f69a9d09b469716c1e84_1440w.gif]]
+
+56. try-catch 在错误的地方
+
+[[https://pic4.zhimg.com/v2-ad638bcf330fc04313c9712f71c16ae5_1440w.gif]]
+
+57. 修改一个小 bug，却把服务器弄宕机了
+
+[[https://pic2.zhimg.com/v2-49c53a3d06e769a0ac86c8180116fd5d_1440w.gif]]
+
+58. 当我推错了分支
+
+[[https://pic2.zhimg.com/v2-1de4fd4c38c48400fb236e4d7bdcee8d_1440w.gif]]
+
+59. 工作中经常被打断
+
+[[https://pica.zhimg.com/v2-273a1c03ae9b3003fe1f12e2f7e805f0_1440w.gif]]
+
+60. 高级开发人员作为一个团队进行编程时
+
+[[https://pic3.zhimg.com/v2-ce6a68ca8f6da6e4fee6985c2a667448_1440w.gif]]
+
+ 61. 能一个手指完成的绝不用两只手系列
+
+[[https://pic3.zhimg.com/v2-4d3c5074868a814ae27d3321744c1c64_1440w.gif]]
+
+ 62. 高级开发人员重构代码
+
+[[https://pic4.zhimg.com/v2-1406277903c31df6e2fc2acb673d61a3_1440w.gif]]
+
+#+begin_quote
+本文转载自： [[https://zhuanlan.zhihu.com/p/47066521][https://zhuanlan.zhihu.com/p/47066521]]
+来源：知乎
+#+end_quote
