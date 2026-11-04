@@ -1,0 +1,78 @@
+#+TITLE: 联想指纹加密 U 盘被曝拆壳即可明文读取数据，为何硬件加密会形同虚设？
+#+LINK: https://www.zhihu.com/question/2100532447242932373/answer/2100574663252374270
+#+AUTHOR: 赵泠
+#+TYPE: answer
+#+DATE: 2026-11-04
+
+所谓“硬件安全”就是这个样子的。
+
+新闻事实是，2025 年，安全研究员 Xusheng Li 拆解了联想 ThinkPlus FU100“指纹 U 盘”，发现其内部电路板上安装的是一张普通的 microSD 卡，卡里的数据全都是以明文存储的。研究员*没有找到任何加密措施*，该产品宣称的“AES-256 硬件加密”不知所踪，指纹识别器的作用是是控制 U 盘与电脑的 USB 连接的通断，不参与数据加密或解密[1]。这意味着，任何获得物理接触机会的人，只要拆开外壳、取出 SD 卡，就能绕过“指纹验证”获取全部数据。
+
+https://pic1.zhimg.com/50/v2-08f5c4d6e8e4d6d8f0211524e2cf5fcf_720w.jpg?source=2c26e567
+
+
+https://picx.zhimg.com/50/v2-f45b5f1096716a259b63d855d0c17828_720w.jpg?source=2c26e567
+
+
+https://picx.zhimg.com/50/v2-c0db4ee4fd6ee8d553efb7e32f800883_720w.jpg?source=2c26e567
+
+
+https://pic1.zhimg.com/50/v2-9ed713043df50db58544f51619045cfc_720w.jpg?source=2c26e567
+
+
+https://pic1.zhimg.com/50/v2-54298f4879bb5027e234757fe2f62566_720w.jpg?source=2c26e567
+
+
+https://pica.zhimg.com/50/v2-55da5ffa9e53c2cbce731a4ad341d169_720w.jpg?source=2c26e567
+
+
+https://pic1.zhimg.com/50/v2-e1ef0a464180ad91c800ef0849d5ad5b_720w.jpg?source=2c26e567
+
+
+https://pic1.zhimg.com/50/v2-78b489f4956aa211c4393f1a63381c3e_720w.jpg?source=2c26e567
+
+
+https://pic1.zhimg.com/50/v2-fac6725b85e8d5db82d8c3d7b5cbd1bd_720w.jpg?source=2c26e567
+
+
+2025 年 8 月 2 日，Xusheng Li 向联想报告了上述“加密缺失问题”。更好笑的在后面：
+
+- 联想在 2025 年 8 月 27 日给出了临时“修复”方案——*在 SD 卡上覆盖环氧树脂，以增加拆卸难度*。你没有看错，这不是黑色幽默，这是你生活的基底现实：许多草台班子层层叠叠，装成摩天大楼。
+
+https://pica.zhimg.com/50/v2-0c82148b1197071428f689579ca196ff_720w.jpg?source=2c26e567
+
+
+- 联想于 2026 年 1 月 13 日正式发布了安全公告 LEN-210545，将相关“漏洞”评级为高危，涉及三个 CVE 编号，受影响产品包括 FU100、FU200、TU800、TSD303 SSD。正式“修复”要求用户联系联想中国服务热线，将设备寄回更换或由工作人员上门升级固件。
+
+- TSD303 外置 SSD 确实对数据进行了加密，但还有另一个漏洞：电脑端软件请求密码时，硬盘会通过 USB 以明文形式返回正确的密码，这显然很容易被截获。后续修复方案曾使用基于时间戳生成密钥的 SM4 加密，但该密钥仍可从软件中推导出来；再后来，修复方案改为由硬盘自身验证密码。
+
+2026 年 3 月，Xusheng Li 在安全会议上公开披露了相关研究。2026 年 10 月底至 11 月初，包含 AI 辅助调查结果在内的详细报道被媒体广泛转载，引发公众关注。
+
+- Xusheng Li 用 OpenAI Codex 配合逆向工具，在 Netac FileLock、KakaSoft、Nexcopy、SecZure 等产品中快速发现了硬编码的 AES 密钥，还有与用户密码无关的密钥生成逻辑、默认密码后门账户等问题。
+
+- 这些产品的所谓“安全边界”不是被来自神奇的人工智能的高级攻击打穿的，而是*在代码和电路层面根本没有建立起来*。硬编码密钥意味着“加密”只是给不知情的用户的心理安慰，“与用户密码无关的密钥生成逻辑”意味着用户改密码不会改变实际密钥，默认后门账户更是不必多说。
+
+https://picx.zhimg.com/50/v2-73d0f1cba10cbeb7eacc2f8212e250cb_720w.jpg?source=2c26e567
+
+
+https://pic1.zhimg.com/50/v2-5ec52a9bed7a96e073796a5998d4bb89_720w.jpg?source=2c26e567
+
+
+显然，“安全 USB”这个品类很好笑。成本花在外壳、指纹模块、指示灯、包装文案上，工程实现能省则省；宣传讲 AES-256，实现是明文 SD 卡加环氧树脂；售价卖的是安全感，不是安全。
+
+那么，读者不妨想想市场上的其他消费级“安全”产品——例如加密硬盘、指纹锁、安全摄像头、隐私路由器。它们的成本结构、宣传话术、售价、工程实现真的会靠谱吗？
+
+https://pic1.zhimg.com/50/v2-84c0a1903f2b572a0db10d6183b7c3d0_720w.jpg?source=2c26e567
+
+
+https://picx.zhimg.com/50/v2-a860992177c909dfd5eb6cfe31d68ac5_720w.jpg?source=2c26e567
+
+
+https://pica.zhimg.com/50/v2-80a88e0485e5f75a5872f12deddbbff6_720w.jpg?source=2c26e567
+
+
+https://pica.zhimg.com/50/v2-77e179b7fef6c0dd939879612227fe4d_720w.jpg?source=2c26e567
+
+
+https://pica.zhimg.com/50/v2-003dd4b3aadaf86725ff29201ca1b636_720w.jpg?source=2c26e567
+

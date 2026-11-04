@@ -1,0 +1,100 @@
+#+TITLE: zotero-shortdoi + Sci-Hub，让99%的文献都能被免费下载！
+#+LINK: https://zhuanlan.zhihu.com/p/112391476
+#+AUTHOR: 知乎用户iiwR8p
+#+TYPE: article
+#+DATE: 2026-11-04
+
+昨天推送的文章【更新版｜Zotero搭配Sci-Hub，真香！】 ，受到了广泛好评，毕竟好用的工具每个人都需要！
+
+[更新版｜Zotero搭配Sci-Hub，真香！](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/QMSG24tgn4z8ShfE9pVYMg)
+
+简单回顾下：通过将Sci-Hub配置为Zotero的PDF解析器，可以实现在Zotero内免费下载几乎所有文献！不论你在哪里，不论你用的外网还是校园网，统统不受限制！
+
+昨天和大家特别提到过，Sci-Hub下载文献是需要doi的（网页端也是一样），因此在Zotero中调用Sci-Hub PDF解析器同样需要doi。
+
+#+begin_quote
+doi可以看成文献的身份证，是它的唯一标识符，几乎每一篇论文（Journal Article）都有doi。网站[https://www.doi.org](https://link.zhihu.com/?target=https%3A//www.doi.org)可以通过doi解析每一篇文章的网页链接。
+#+end_quote
+
+也就是说，要想免费下载文献，你Zotero文献的DOI栏不能是空缺的。 一旦缺失doi，在右键菜单中是不会有~Find Available PDF~的，相当于没有了输入参数。
+
+https://pica.zhimg.com/v2-aba2cf141e5052682a68bade903360a0_1440w.jpg
+
+
+可是有些时候，用Zotero Connector在网页端保存或者PDF自动抓取得到的文献中，会有个别文献可能会缺失doi，这会给我们通过Sci-Hub下载文献造成不便。（虽然还有很多其他方式可以快速下载，以后介绍）
+
+因此今天就介绍一款可以快速抓取文献doi的插件*zotero-shortdoi[1]*。这款插件我已经使用挺久了，好用又稳定，绝对不会让你失望，而且还支持批量文献的doi抓取。
+
+从GitHub上下载最新版本，如下。
+
+https://pic1.zhimg.com/v2-a7af29866f8e829635473d06325aba8c_1440w.jpg
+
+
+安装到Zotero。（这个大家应该都会，不多说）
+
+在Zotero的插件面板中中，它是以~Zotero DOI Manager~显示的。
+
+https://pic2.zhimg.com/v2-8391fd07946b61c713e24192f367507f_1440w.jpg
+
+
+这里，可能有人好奇了：为什么这款插件为什么叫做shortdoi呢？
+
+有shortdoi，那肯定有longdoi。其实我们平常在使用的doi，都是longdoi。
+
+下面两种常见形式都是longdoi，其实它们是等效的。唯一的区别在于第二个doi添加了[https://www.doi.org](https://link.zhihu.com/?target=https%3A//www.doi.org)域名。我前面说了，[https://www.doi.org](https://link.zhihu.com/?target=https%3A//www.doi.org)是通过doi解析文献的，因此每篇文献的doi前面其实都有这么个相同的域名。既然相同，自然可以省略，从而得到下面第一个doi这样子。
+
+- 10.1016/j.nanoen.2018.11.062
+
+- [https://doi.org/10.1016/j.nanoen.2018.11.062](https://link.zhihu.com/?target=https%3A//doi.org/10.1016/j.nanoen.2018.11.062)
+
+那么，可能有的人觉得这两个doi还是有点长了，特别是在参考文献排版时不够美观，因此就诞生了shortdoi，来缩短doi的字符长度。
+
+任意选中一篇或多篇文献（原本缺失doi的或者有doi的），右键菜单如下。
+
+https://pic1.zhimg.com/v2-98bb1d63b01eb7faf0b8fe80a2af8fac_1440w.jpg
+
+
+可以看到有三项子菜单：
+
+- Get shortDOIs
+
+- Get longDOIs
+
+- Verify and clean DOIs
+
+点击~Get longDOIs~和~Verify and clean DOIs~的效果几乎没有差异，都是抓取文献的longDOIs。
+
+https://picx.zhimg.com/v2-c46c4218a3b25961cf6cf8b7a07fa601_1440w.jpg
+
+
+*而且需要注意的是，只有longDOI才能被Sci-Hub所识别*。因此这里就不用管~Get shortDOIs~了，用不上。
+
+获取到了DOI后，就可以右键文献，点击~Find Available PDF~从Sci-Hub下载文献了！
+
+这里顺便介绍下zotero shortdoi插件的默认设置，还蛮重要。
+
+点击Zotero菜单栏Tools-->DOI Manager Preferences。
+
+https://pic1.zhimg.com/v2-f19f8e5c1371d87b36a49d2783af8cbe_1440w.jpg
+
+
+zotero-shortdoi插件会自动为新添加到Zotero中的文献添加DOI，这里建议大家勾选long DOI作为默认DOI形式。
+
+https://pic1.zhimg.com/v2-61a388daf890ad9469770aa2370a3da0_1440w.jpg
+
+
+从上图还可以看到，对于未找到DOI的文献，zotero-shortdoi会自动分配一些标签，比如~Invalid DOI~、~Multiple DOI~等。一般情况不会发生，所以这里不用管。
+
+到此就介绍完zotero-shortdoi的全部了！
+
+感兴趣的快去把zotero-shortdoi + Sci-Hub这个强大组合搞起来！享受免费下载文献的乐趣吧！
+
+*** **相关链接**
+
+[1]
+
+zotero-shortdoi: [https://github.com/bwiernik/zotero-shortdoi/releases](https://link.zhihu.com/?target=https%3A//github.com/bwiernik/zotero-shortdoi/releases)
+
+*这是尾巴*
+
+读过本文，如果觉得有收获，欢迎*点赞转发*。
