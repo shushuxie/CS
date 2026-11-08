@@ -1,0 +1,44 @@
+#+TITLE: 如何评价如今的 Bilibili？
+#+LINK: https://www.zhihu.com/question/266972664/answer/2102043129893467489
+#+AUTHOR: Vanityelves
+#+TYPE: answer
+#+DATE: 2026-11-08
+
+不太清楚是什么时候上线的东西，就是在 http://www.bilibili.com 域名后面紧跟一个语言缩写，整个网站都会变为对应语言，包括视频标题，弹幕，评论。
+
+比如，这是正常的国内版B站首页
+
+[[https://picx.zhimg.com/50/v2-2474417d82e8710ccc78339baeee3272_720w.jpg?source=2c26e567]]
+
+
+域名路径加上一个语言缩写，比如 [http://www.bilibili.com/ja](http://www.bilibili.com/ja) ，就变成了
+
+[[https://pic1.zhimg.com/50/v2-197ae05351612275906df3934666d39f_720w.jpg?source=2c26e567]]
+
+
+随便点进一个视频
+
+[[https://pic1.zhimg.com/50/v2-78fc2327976aaa6521c31587d6e60ea3_720w.jpg?source=2c26e567]]
+
+
+[[https://picx.zhimg.com/50/v2-29ba5c7e4dedd1abde64a3d78979d126_720w.jpg?source=2c26e567]]
+
+
+或者再换一个语言
+
+[[https://pic1.zhimg.com/50/v2-7911b3a35da18f77465ab5771bbb7531_720w.jpg?source=2c26e567]]
+
+
+内容依旧是国内的，该看不到的还是看不到，但，完全没有了各种必火推广，贴片广告，包括搜索栏的推广，整个页面也清爽多了，也就不清楚会不会继续硬推拉黑UP的商单引战视频。
+
+目前试了一圈，完整支持的语言包括日语(ja)，英语(en)，西班牙语(es)，葡萄牙语(pt)，阿拉伯语(ar)，泰语(th)。
+
+只是网站UI支持，不会翻译标题评论和弹幕的语言有，俄语(ru)，越南语(vi)，马来语(ms)。
+
+不支持的，朝鲜语/韩语(ko)，法语(fr)，德语(de)等其他未列出的。
+
+至于是怎么发现的，那天在bing搜索的时候点进去一个B站链接，结果发现语言不对，还以为出门了，就是不知道会有几个外国人用。
+
+---
+
+补充一下，这玩意的目的是自动翻译啊，虽然完整支持的语言不多，账号数据包括服务器都是国内的，免广告只是顺带的事，靠这个来免广告不是徒增障碍吗。
