@@ -1,0 +1,58 @@
+#+TITLE: 低精力人群如何自救？
+#+LINK: https://www.zhihu.com/question/1897077731667190934/answer/2103743878654342568
+#+AUTHOR: 会飞的女巫
+#+TYPE: answer
+#+DATE: 2026-11-19
+
+有个脑力劳动人群的盲区，你检查一下。
+
+如果你习惯晚上打竞技类游戏，晚上上网和杠精对线、晚上出去健身运动，总之 *高刺激高烈度的活动在晚上做。*
+
+会出现 *低精力大循环。*
+
+学术上这个叫
+
+*皮质醇曲线平坦化（flattening of the cortisol curve ）*
+
+导致莫名其妙陷入慢性压力状态，*睡眠的修复效果削弱*，第二天起来没有精神。
+
+修复这个盲区非常简单。
+
+*你把高刺激高烈度活动改到白天，特别是早上。*
+
+尤其是锻炼，晚上锻炼会导致皮质醇水平大幅升高，这个和喝咖啡一样有唤醒身体的效果。
+
+可能你身体精疲力竭，倒下就睡，但是你的皮质醇还在分泌，第二天早上，精力不够用了。
+
+理想的状态是
+
+** 早上大量皮质醇，晚上大量血清素。
+
+早上锻炼，不能锻炼，活动10分钟也可以，出门接受一会儿阳光的照射，让皮质醇和儿茶酚胺自然分泌。
+
+晚上不接触强光（如果卧室和卫生间的灯光太亮，把它换一换）、热水洗澡、心平气和，让皮质醇自然走低，血清素大量分泌。
+
+睡眠效果会得到最大发挥。
+
+当然，你要说我时间表没法改，只能晚上锻炼，那你锻炼吧，晚上锻炼也远远好过不锻炼。
+
+另外还有一个低精力盲区，就是阳光。
+
+** 长时间处于室内，只接触LED灯光照明，特别容易陷入亚健康状态。脑力劳动人群容易踩这个坑。
+
+外网Andrew Huberman，神经生物学教授，脑科学研究的科普播放量过亿，他也经历过
+
+#+begin_quote
+“*缺乏全谱阳光以及长期使用LED灯，无疑损害细胞健康，伤害我们身体内外*。虽然我无法确定这一切都是室内照明所致，但那时我脱发，下午总是疲倦，关节也疼痛不已”
+The lack of full-spectrum sunlight, and the use of LED light was no doubt directly damaging our bodies, inside and out, by impairing cellular health. Now of course, I can’t be sure it was all due to indoor lighting, but at one point my hair started falling out, I was always tired in the afternoon, and my joints ached
+#+end_quote
+
+解决方法是
+
+早上出门接触阳光，看太阳所在天空，10-30分钟为好，哪怕做5分钟也比不做强。
+
+#+begin_quote
+The timing will vary based on when you wake up, and where you live. Refer to the information below to figure out what’s best for you. Ten to thirty minutes is a good general rule, but even if you can only grab five, do it. Some is better than none.
+#+end_quote
+
+白天接触阳光也是多多益善，至少下午或者傍晚要出门接触阳光。
